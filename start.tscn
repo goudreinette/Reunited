@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://gkc2i8joicnh"]
+[gd_scene load_steps=4 format=3 uid="uid://gkc2i8joicnh"]
 
 [ext_resource type="Texture2D" uid="uid://edgjjkqemh5b" path="res://resolution-test.png" id="1_dbd6i"]
+[ext_resource type="Texture2D" uid="uid://bt07w1d7opbye" path="res://circle.png" id="2_jno5e"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hsgrh"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +13,14 @@
 texture_filter = 1
 position = Vector2(120, 80)
 texture = ExtResource("1_dbd6i")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(124, 67)
+process_material = SubResource("ParticleProcessMaterial_hsgrh")
+
+[node name="Circle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(121, 72)
+scale = Vector2(0.0996094, 0.0996094)
+texture = ExtResource("2_jno5e")
