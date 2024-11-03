@@ -11,5 +11,15 @@ config_version=5
 [application]
 
 config/name="Reunited"
+run/main_scene="res://start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=160
+window/size/window_width_override=1920
+window/size/window_height_override=1280
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
