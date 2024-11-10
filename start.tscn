@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://gkc2i8joicnh"]
+[gd_scene load_steps=8 format=3 uid="uid://gkc2i8joicnh"]
 
 [ext_resource type="Texture2D" uid="uid://edgjjkqemh5b" path="res://resolution-test.png" id="1_dbd6i"]
 [ext_resource type="Texture2D" uid="uid://bt07w1d7opbye" path="res://circle.png" id="2_jno5e"]
+[ext_resource type="Script" path="res://circle.gd" id="3_vskbf"]
 
 [sub_resource type="Animation" id="Animation_b2j2j"]
 resource_name = "enter"
@@ -55,6 +56,7 @@ texture_filter = 1
 position = Vector2(-56, 79)
 scale = Vector2(0.0996094, 0.0996094)
 texture = ExtResource("2_jno5e")
+script = ExtResource("3_vskbf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Circle"]
 root_node = NodePath("../../GPUParticles2D")
