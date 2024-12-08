@@ -1,23 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://gkc2i8joicnh"]
+[gd_scene load_steps=9 format=3 uid="uid://gkc2i8joicnh"]
 
 [ext_resource type="Texture2D" uid="uid://edgjjkqemh5b" path="res://resolution-test.png" id="1_dbd6i"]
 [ext_resource type="Texture2D" uid="uid://bt07w1d7opbye" path="res://circle.png" id="2_jno5e"]
 [ext_resource type="Script" path="res://circle.gd" id="3_vskbf"]
-
-[sub_resource type="Animation" id="Animation_b2j2j"]
-resource_name = "enter"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Circle:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 6.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-56, 79), Vector2(165, 79), Vector2(-56, 79)]
-}
+[ext_resource type="Script" path="res://dialogic_test_node.gd" id="4_sqs46"]
 
 [sub_resource type="Animation" id="Animation_otiuu"]
 length = 0.001
@@ -32,6 +18,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-56, 79)]
+}
+
+[sub_resource type="Animation" id="Animation_b2j2j"]
+resource_name = "enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Circle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 6.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-56, 79), Vector2(165, 79), Vector2(-56, 79)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mlw3s"]
@@ -69,3 +70,6 @@ autoplay = "enter"
 visible = false
 position = Vector2(124, 67)
 process_material = SubResource("ParticleProcessMaterial_hsgrh")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("4_sqs46")

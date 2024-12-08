@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxyxfo6tt0787"
+path="res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-5f1b8c21982c89999d4fd14773e5054d.mp3str"
+
+[deps]
+
+source_file="res://music/Viby floating castle 1 dec 24 2024-12-01 2051.mp3"
+dest_files=["res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-5f1b8c21982c89999d4fd14773e5054d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
