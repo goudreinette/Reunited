@@ -38,8 +38,9 @@ script = ExtResource("1_2p648")
 scene = ExtResource("5_xjj02")
 overrides = {
 "box_margin_bottom": "0.0",
+"box_panel": "\"vn_textbox_default_panel.tres\"",
 "box_size": "Vector2(240, 60)",
-"name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
+"name_label_box_panel": "\"res://characters/panel.tres\"",
 "next_indicator_size": "Vector2(8, 8)"
 }
 
@@ -80,4 +81,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_2p648")]([])
-metadata/_latest_layer = "17"
+metadata/_latest_layer = "13"
