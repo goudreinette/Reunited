@@ -51,6 +51,7 @@ func shoot():
 	var tween = create_tween().set_parallel(false)
 	tween.tween_property($Ship, "position:y", 1, 0.1)
 	tween.tween_property($Ship, "position:y", 0, 0.05)
+	$AudioStreamPlayer.play()
 
 func set_shield(value):
 	shield = min(max_shield, value)

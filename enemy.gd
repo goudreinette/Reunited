@@ -36,6 +36,7 @@ func _process(delta):
 func explode():
 	speed = 0
 	$AnimationPlayer.play("explode")
+	$AudioStreamPlayer2D.play()
 	set_deferred("monitorable", false)
 	died.emit(5)
 	await $AnimationPlayer.animation_finished
