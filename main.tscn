@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b8exv6qda8frv"]
+[gd_scene load_steps=14 format=3 uid="uid://b8exv6qda8frv"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vtt5l"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://player.tscn" id="2_tiq3a"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c58h7js0ganhf" path="res://Sprites/landschap van boven.png" id="5_7eax1"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="7_qw2vk"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="8_lfpwf"]
+[ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="9_0ep3q"]
 
 [sub_resource type="Animation" id="Animation_frim2"]
 length = 0.001
@@ -98,6 +99,10 @@ script = ExtResource("7_qw2vk")
 noise = SubResource("FastNoiseLite_uf0tv")
 
 [node name="EnemyAnchor" type="Node2D" parent="."]
+
+[node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0ep3q")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/CenterContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
