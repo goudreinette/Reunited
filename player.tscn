@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_4pouc"]
-[ext_resource type="Texture2D" uid="uid://c7uwy5ydmq5in" path="res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="1_jhf5r"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="2_6cdot"]
 [ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://bullet.tscn" id="2_6pkbm"]
+[ext_resource type="Texture2D" uid="uid://dbp45q7ir264m" path="res://Sprites/Ship Strafe.png" id="3_1n6y7"]
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="3_n7bvj"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="4_bbrn4"]
 
@@ -75,18 +75,20 @@ script = ExtResource("1_4pouc")
 bullet_scene = ExtResource("2_6pkbm")
 
 [node name="Ship" type="Sprite2D" parent="."]
-texture = ExtResource("1_jhf5r")
+texture_filter = 1
+texture = ExtResource("3_1n6y7")
 hframes = 3
 frame = 1
 
 [node name="Boosters" type="AnimatedSprite2D" parent="Ship"]
-position = Vector2(0, 16)
+position = Vector2(0, 32)
 sprite_frames = SubResource("SpriteFrames_p6f8n")
 animation = &"forward"
 autoplay = "forward"
 frame_progress = 0.710315
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_11ea1")
 
 [node name="GunCooldown" type="Timer" parent="."]

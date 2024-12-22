@@ -82,9 +82,6 @@ region_rect = Rect2(2.08165e-12, 2.08165e-12, 240, 320)
 
 [node name="Player" parent="." instance=ExtResource("2_tiq3a")]
 position = Vector2(120, 120)
-speed = 150
-cooldown = 0.25
-max_shield = 10
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("8_lfpwf")
