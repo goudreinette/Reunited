@@ -1,10 +1,53 @@
-[gd_scene load_steps=7 format=3 uid="uid://brchqmuddmlb4"]
+[gd_scene load_steps=13 format=3 uid="uid://brchqmuddmlb4"]
 
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="1_brvng"]
 [ext_resource type="PackedScene" uid="uid://bgeoyjbaki8r2" path="res://Walking Scenes/Tilemaps/Stratagy tiles.tscn" id="2_pr73x"]
 [ext_resource type="AudioStream" uid="uid://cdsgovxnob4ia" path="res://Walking Scenes/Viby floating castle 1 dec 24 2024-12-01 2051.mp3" id="3_075i3"]
+[ext_resource type="Script" path="res://Walking Scenes/ander_mannetje.gd" id="4_6jmn8"]
 [ext_resource type="Script" path="res://Walking Scenes/LuchtSchipArea.gd" id="4_6mrwg"]
 [ext_resource type="Texture2D" uid="uid://eewa1o6s7nma" path="res://Sprites/Lucht Ship Idee 1.png" id="4_e0im1"]
+[ext_resource type="Texture2D" uid="uid://0wr37i8n6wvj" path="res://Sprites/Ander Mannetje.png" id="6_wxt0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42jva"]
+size = Vector2(7, 10)
+
+[sub_resource type="Animation" id="Animation_2a54e"]
+resource_name = "Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_ue7rm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u3pgk"]
+_data = {
+"Idle": SubResource("Animation_2a54e"),
+"RESET": SubResource("Animation_ue7rm")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a65ka"]
 size = Vector2(49, 38)
@@ -19,8 +62,26 @@ layer_0/tile_data = PackedInt32Array(262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 2
 stream = ExtResource("3_075i3")
 autoplay = true
 
-[node name="Player" parent="." instance=ExtResource("1_brvng")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_brvng")]
 position = Vector2(117, 81)
+
+[node name="Ander_Mannetje" type="Area2D" parent="."]
+position = Vector2(212, 55)
+script = ExtResource("4_6jmn8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ander_Mannetje"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_42jva")
+
+[node name="AnderMannetje" type="Sprite2D" parent="Ander_Mannetje"]
+texture = ExtResource("6_wxt0i")
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ander_Mannetje/AnderMannetje"]
+libraries = {
+"": SubResource("AnimationLibrary_u3pgk")
+}
+autoplay = "Idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(167, 26)
@@ -38,4 +99,6 @@ frame = 1
 position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_a65ka")
 
+[connection signal="body_entered" from="Ander_Mannetje" to="Player" method="_on_ander_mannetje_body_entered"]
+[connection signal="body_entered" from="Ander_Mannetje" to="Ander_Mannetje" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
