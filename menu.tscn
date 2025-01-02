@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0c2vsyq0yy30"]
+[gd_scene load_steps=14 format=3 uid="uid://d0c2vsyq0yy30"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_2bmn5"]
 [ext_resource type="Texture2D" uid="uid://cnuti0i6a54ga" path="res://Sprites/Menu background/Menu layer 3.png" id="2_0uj8j"]
 [ext_resource type="Texture2D" uid="uid://lbp65u1bv2m5" path="res://Sprites/Menu background/Menu layer 2.png" id="3_2ml36"]
 [ext_resource type="Texture2D" uid="uid://yqmgp0nt8vtv" path="res://Sprites/Menu background/Menu layer 1.png" id="4_4aoy1"]
+[ext_resource type="Script" path="res://play_button.gd" id="5_eu8wb"]
 
 [sub_resource type="Theme" id="Theme_ewn18"]
 
@@ -148,6 +149,7 @@ layout_mode = 2
 theme = SubResource("Theme_8wyy7")
 theme_override_font_sizes/font_size = 10
 text = "Play"
+script = ExtResource("5_eu8wb")
 
 [node name="Credits" type="Button" parent="MarginContainer/Hbox"]
 layout_mode = 2
