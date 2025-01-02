@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://byrvt86176nm"]
+
+[ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://characters/ark-pixel-10px-proportional-latin.ttf" id="1_5xles"]
+
+[resource]
+default_font = ExtResource("1_5xles")
+default_font_size = 10
