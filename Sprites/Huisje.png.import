@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lbp65u1bv2m5"
-path="res://.godot/imported/Menu layer 2.png-01bd74710c699f9f7d95badb303a2225.ctex"
+uid="uid://dpigylodufhj0"
+path="res://.godot/imported/Huisje.png-9408acb585e974f71e2e73da90805f00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu background/Menu layer 2.png"
-dest_files=["res://.godot/imported/Menu layer 2.png-01bd74710c699f9f7d95badb303a2225.ctex"]
+source_file="res://Sprites/Huisje.png"
+dest_files=["res://.godot/imported/Huisje.png-9408acb585e974f71e2e73da90805f00.ctex"]
 
 [params]
 

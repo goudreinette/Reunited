@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clihli106doaq"
-path="res://.godot/imported/Menu layer 1.png-33b6d4527b650a49acac5d3f16cd92f9.ctex"
+uid="uid://b0pcy2romxrx"
+path="res://.godot/imported/bg ships.png-66e5c0a3f531624b0a8d5dc84b7f3c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu background/Menu layer 1.png"
-dest_files=["res://.godot/imported/Menu layer 1.png-33b6d4527b650a49acac5d3f16cd92f9.ctex"]
+source_file="res://Sprites/bg ships.png"
+dest_files=["res://.godot/imported/bg ships.png-66e5c0a3f531624b0a8d5dc84b7f3c55.ctex"]
 
 [params]
 

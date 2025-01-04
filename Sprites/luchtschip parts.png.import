@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpigylodufhj0"
-path="res://.godot/imported/Huisje.png-50d562c7a7099ae051bc829548b0e899.ctex"
+uid="uid://crqd1hob6h0d1"
+path="res://.godot/imported/luchtschip parts.png-695a8da26408738b7af793d44533297f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Huisje.png"
-dest_files=["res://.godot/imported/Huisje.png-50d562c7a7099ae051bc829548b0e899.ctex"]
+source_file="res://Sprites/luchtschip parts.png"
+dest_files=["res://.godot/imported/luchtschip parts.png-695a8da26408738b7af793d44533297f.ctex"]
 
 [params]
 
