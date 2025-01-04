@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd2vnmd6nr8nc"]
+
+[ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="1_a0sql"]
+[ext_resource type="Texture2D" uid="uid://d0n4awy53qogp" path="res://Sprites/Characters/Frank.png" id="2_fenl1"]
+[ext_resource type="Texture2D" uid="uid://bpewi1py6h0pl" path="res://Sprites/Characters/Guus.png" id="3_u203l"]
+[ext_resource type="Texture2D" uid="uid://c5i5v5tccwa6p" path="res://Sprites/Characters/Drumkit.png" id="4_j5swv"]
+[ext_resource type="Texture2D" uid="uid://wby0npd61lce" path="res://Sprites/Characters/Igor.png" id="5_gpj73"]
+[ext_resource type="Texture2D" uid="uid://lsoarq1o78my" path="res://Sprites/Characters/Keyboard.png" id="6_jaxlu"]
+[ext_resource type="Texture2D" uid="uid://xa7e0tejyntx" path="res://Sprites/Characters/Koen Test.png" id="7_ax0pt"]
+[ext_resource type="Texture2D" uid="uid://c3d0j0pn6tobx" path="res://Sprites/Characters/Stephan test.png" id="8_8l27a"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+scale = Vector2(20, 20)
+texture = ExtResource("1_a0sql")
+
+[node name="Band" type="Node2D" parent="."]
+position = Vector2(129, 55)
+
+[node name="Frank" type="Sprite2D" parent="Band"]
+position = Vector2(-22, -6)
+texture = ExtResource("2_fenl1")
+vframes = 2
+frame = 1
+
+[node name="Guus" type="Sprite2D" parent="Band"]
+position = Vector2(34, -3)
+texture = ExtResource("3_u203l")
+
+[node name="Drumkit" type="Sprite2D" parent="Band/Guus"]
+position = Vector2(-2, 3)
+texture = ExtResource("4_j5swv")
+
+[node name="Igor" type="Sprite2D" parent="Band"]
+position = Vector2(-46, 4)
+texture = ExtResource("5_gpj73")
+
+[node name="Keyboard" type="Sprite2D" parent="Band/Igor"]
+position = Vector2(2, 7)
+texture = ExtResource("6_jaxlu")
+
+[node name="KoenTest" type="Sprite2D" parent="Band"]
+position = Vector2(5, -12)
+texture = ExtResource("7_ax0pt")
+vframes = 2
+frame = 1
+
+[node name="StephanTest" type="Sprite2D" parent="Band"]
+position = Vector2(2, 13)
+texture = ExtResource("8_8l27a")
+vframes = 2
+frame = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(120, 80)
