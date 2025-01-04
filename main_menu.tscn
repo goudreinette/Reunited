@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0c2vsyq0yy30"]
+[gd_scene load_steps=19 format=3 uid="uid://b5ksjvmaancca"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_vadn3"]
 [ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="2_1eioa"]
 [ext_resource type="Texture2D" uid="uid://b0pcy2romxrx" path="res://Sprites/bg ships.png" id="3_a3bio"]
 [ext_resource type="Texture2D" uid="uid://c6bgcvuaqolw" path="res://Sprites/Menu background/Clouds.png" id="4_0msdu"]
-[ext_resource type="PackedScene" uid="uid://3ckcxe2cc4uw" path="res://booreiland.tscn" id="5_bl7ar"]
+[ext_resource type="PackedScene" path="res://booreiland.tscn" id="5_bl7ar"]
 [ext_resource type="Texture2D" uid="uid://clihli106doaq" path="res://Sprites/Menu background/Menu layer 1.png" id="6_4mr5r"]
 [ext_resource type="Script" path="res://ship/play_button.gd" id="7_bggep"]
 
@@ -142,14 +142,14 @@ script = ExtResource("1_vadn3")
 position = Vector2(120, 80)
 texture = ExtResource("2_1eioa")
 
-[node name="BgShips" type="Sprite2D" parent="Background"]
+[node name="Ships" type="Sprite2D" parent="Background"]
 texture_repeat = 2
 position = Vector2(121, 80)
 texture = ExtResource("3_a3bio")
 region_enabled = true
 region_rect = Rect2(0, 0, 240, 160)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/BgShips"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Ships"]
 libraries = {
 "": SubResource("AnimationLibrary_rxpfn")
 }
@@ -168,15 +168,15 @@ libraries = {
 }
 autoplay = "Clouds"
 
-[node name="Booreiland2" parent="Background" instance=ExtResource("5_bl7ar")]
+[node name="Booreiland" parent="Background" instance=ExtResource("5_bl7ar")]
 position = Vector2(41, 96)
 
-[node name="Foregrounds" type="Sprite2D" parent="Background"]
+[node name="Foreground" type="Sprite2D" parent="Background"]
 position = Vector2(120, 80)
 texture = ExtResource("6_4mr5r")
 vframes = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Foregrounds"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Foreground"]
 libraries = {
 "": SubResource("AnimationLibrary_l5qv0")
 }
@@ -201,6 +201,7 @@ size_flags_horizontal = 0
 theme_override_constants/separation = 7
 
 [node name="Play" type="Button" parent="MarginContainer/Hbox"]
+texture_filter = 1
 layout_mode = 2
 theme = SubResource("Theme_8wyy7")
 theme_override_font_sizes/font_size = 10
@@ -208,6 +209,7 @@ text = "Play"
 script = ExtResource("7_bggep")
 
 [node name="Credits" type="Button" parent="MarginContainer/Hbox"]
+texture_filter = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Credits"
