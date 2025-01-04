@@ -1,0 +1,216 @@
+[gd_scene load_steps=19 format=3 uid="uid://d0c2vsyq0yy30"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_vadn3"]
+[ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="2_1eioa"]
+[ext_resource type="Texture2D" uid="uid://b0pcy2romxrx" path="res://Sprites/bg ships.png" id="3_a3bio"]
+[ext_resource type="Texture2D" uid="uid://c6bgcvuaqolw" path="res://Sprites/Menu background/Clouds.png" id="4_0msdu"]
+[ext_resource type="PackedScene" uid="uid://3ckcxe2cc4uw" path="res://booreiland.tscn" id="5_bl7ar"]
+[ext_resource type="Texture2D" uid="uid://clihli106doaq" path="res://Sprites/Menu background/Menu layer 1.png" id="6_4mr5r"]
+[ext_resource type="Script" path="res://ship/play_button.gd" id="7_bggep"]
+
+[sub_resource type="Theme" id="Theme_ewn18"]
+
+[sub_resource type="Animation" id="Animation_vs554"]
+resource_name = "BG-ships"
+length = 50.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 50),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 240, 160), Rect2(240, 0, 240, 160)]
+}
+
+[sub_resource type="Animation" id="Animation_0qk18"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 240, 160)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rxpfn"]
+_data = {
+"BG-ships": SubResource("Animation_vs554"),
+"RESET": SubResource("Animation_0qk18")
+}
+
+[sub_resource type="Animation" id="Animation_1yywk"]
+resource_name = "Clouds"
+length = 100.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 100),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 240, 160), Rect2(240, 0, 240, 160)]
+}
+
+[sub_resource type="Animation" id="Animation_xo031"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 240, 160)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2hivl"]
+_data = {
+"Clouds": SubResource("Animation_1yywk"),
+"RESET": SubResource("Animation_xo031")
+}
+
+[sub_resource type="Animation" id="Animation_sx3b4"]
+resource_name = "Foreground"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_mxfit"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5qv0"]
+_data = {
+"Foreground": SubResource("Animation_sx3b4"),
+"RESET": SubResource("Animation_mxfit")
+}
+
+[sub_resource type="Theme" id="Theme_8wyy7"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ewn18")
+script = ExtResource("1_vadn3")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background color" type="Sprite2D" parent="Background"]
+position = Vector2(120, 80)
+texture = ExtResource("2_1eioa")
+
+[node name="BgShips" type="Sprite2D" parent="Background"]
+texture_repeat = 2
+position = Vector2(121, 80)
+texture = ExtResource("3_a3bio")
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/BgShips"]
+libraries = {
+"": SubResource("AnimationLibrary_rxpfn")
+}
+autoplay = "BG-ships"
+
+[node name="Clouds" type="Sprite2D" parent="Background"]
+texture_repeat = 2
+position = Vector2(120, 80)
+texture = ExtResource("4_0msdu")
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Clouds"]
+libraries = {
+"": SubResource("AnimationLibrary_2hivl")
+}
+autoplay = "Clouds"
+
+[node name="Booreiland2" parent="Background" instance=ExtResource("5_bl7ar")]
+position = Vector2(41, 96)
+
+[node name="Foregrounds" type="Sprite2D" parent="Background"]
+position = Vector2(120, 80)
+texture = ExtResource("6_4mr5r")
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Foregrounds"]
+libraries = {
+"": SubResource("AnimationLibrary_l5qv0")
+}
+autoplay = "Foreground"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.5
+offset_top = -52.0
+offset_right = 21.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Hbox" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 7
+
+[node name="Play" type="Button" parent="MarginContainer/Hbox"]
+layout_mode = 2
+theme = SubResource("Theme_8wyy7")
+theme_override_font_sizes/font_size = 10
+text = "Play"
+script = ExtResource("7_bggep")
+
+[node name="Credits" type="Button" parent="MarginContainer/Hbox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Credits"
+
+[connection signal="pressed" from="MarginContainer/Hbox/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/Hbox/Credits" to="." method="_on_credits_pressed"]
