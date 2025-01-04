@@ -1,9 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0c2vsyq0yy30"]
+[gd_scene load_steps=19 format=3 uid="uid://bgc2nl40xeed6"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_2bmn5"]
 [ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="2_0uj8j"]
 [ext_resource type="Texture2D" uid="uid://c6bgcvuaqolw" path="res://Sprites/Menu background/Clouds.png" id="3_oo2ba"]
-[ext_resource type="PackedScene" uid="uid://3ckcxe2cc4uw" path="res://booreiland.tscn" id="3_tv2oi"]
+[ext_resource type="PackedScene" path="res://booreiland.tscn" id="3_tv2oi"]
 [ext_resource type="Texture2D" uid="uid://clihli106doaq" path="res://Sprites/Menu background/Menu layer 1.png" id="4_4aoy1"]
 [ext_resource type="Texture2D" uid="uid://b0pcy2romxrx" path="res://Sprites/bg ships.png" id="4_pojes"]
 [ext_resource type="Script" path="res://play_button.gd" id="5_eu8wb"]

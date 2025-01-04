@@ -9,4 +9,3 @@ func _on_play_pressed() -> void:
 
 func _on_credits_pressed() -> void:
 	print("credits")
-	pass # Replace with function body.
