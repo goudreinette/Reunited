@@ -197,12 +197,14 @@ grow_vertical = 0
 
 [node name="Hbox" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 7
 
 [node name="Play" type="Button" parent="MarginContainer/Hbox"]
 texture_filter = 1
 layout_mode = 2
+size_flags_vertical = 4
 theme = SubResource("Theme_8wyy7")
 theme_override_font_sizes/font_size = 10
 text = "Play"
