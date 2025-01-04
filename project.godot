@@ -22,9 +22,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Resources/unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch",
 "ander_mannetje": "res://characters/ander_mannetje.dch",
-"stephan": "res://characters/stephan.dch",
-"unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
+"stephan": "res://characters/stephan.dch"
 }
 directories/dtl_directory={
 "gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
