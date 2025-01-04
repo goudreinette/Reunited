@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://d20tp5ni2u6f6"]
+
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="1_p0bl8"]
+
+[node name="ShipFiringPatterns" type="Node2D"]
+
+[node name="Particle attempts" type="Node2D" parent="."]
+
+[node name="Scattershot?" type="CPUParticles2D" parent="Particle attempts"]
+position = Vector2(34, 43)
+emitting = false
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+
+[node name="Explosive circle" type="CPUParticles2D" parent="Particle attempts"]
+position = Vector2(118, 17)
+amount = 32
+lifetime = 5.0
+explosiveness = 1.0
+fract_delta = false
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+
+[node name="Player" parent="." instance=ExtResource("1_p0bl8")]
+position = Vector2(113, 118)
