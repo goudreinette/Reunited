@@ -72,5 +72,5 @@ func anim_direction() -> String:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("entered")
 	#scene_to_load.instantiate()
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://ship/ship_main.tscn")
 	

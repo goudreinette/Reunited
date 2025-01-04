@@ -5,7 +5,8 @@ signal died
 
 @export var speed = 150
 @export var cooldown = 0.25
-@export var bullet_scene : PackedScene
+var bullet_scene = preload("res://ship/bullet.tscn")
+#@export var bullet_scene : PackedScene
 @export var max_shield = 10
 var shield = max_shield:
 	set = set_shield
@@ -47,6 +48,7 @@ func shoot():
 		return
 	can_shoot = false
 	$GunCooldown.start()
+	print(bullet_scene)
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
 	b.start(position + Vector2(0, -8))

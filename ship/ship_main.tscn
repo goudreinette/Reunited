@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmxq7migvl1hi"]
+[gd_scene load_steps=15 format=3 uid="uid://cmxq7migvl1hi"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_djrgk"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_jus2k"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://o6gwbftsnc8c" path="res://ship/Mini Pixel Pack 3/UI objects/START (48 x 8).png" id="4_i2w7y"]
 [ext_resource type="Texture2D" uid="uid://c58h7js0ganhf" path="res://Sprites/landschap van boven.png" id="5_75xu0"]
 [ext_resource type="PackedScene" uid="uid://dsxrjxembsiad" path="res://player.tscn" id="6_gme7i"]
+[ext_resource type="Script" path="res://ship/player_ship.gd" id="7_dig5n"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_varcu"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="8_b2isx"]
 [ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="9_o1cb4"]
@@ -83,6 +84,7 @@ region_rect = Rect2(2.08165e-12, 2.08165e-12, 240, 320)
 
 [node name="Player" parent="." instance=ExtResource("6_gme7i")]
 position = Vector2(120, 120)
+script = ExtResource("7_dig5n")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("7_varcu")
