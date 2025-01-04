@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd2vnmd6nr8nc"]
+[gd_scene load_steps=8 format=3 uid="uid://hq011qmeiihl"]
 
-[ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="1_a0sql"]
 [ext_resource type="Texture2D" uid="uid://d0n4awy53qogp" path="res://Sprites/Characters/Frank.png" id="2_fenl1"]
 [ext_resource type="Texture2D" uid="uid://bpewi1py6h0pl" path="res://Sprites/Characters/Guus.png" id="3_u203l"]
 [ext_resource type="Texture2D" uid="uid://c5i5v5tccwa6p" path="res://Sprites/Characters/Drumkit.png" id="4_j5swv"]
@@ -10,11 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c3d0j0pn6tobx" path="res://Sprites/Characters/Stephan test.png" id="8_8l27a"]
 
 [node name="Level 1" type="Node2D"]
-
-[node name="BG" type="Sprite2D" parent="."]
-position = Vector2(120, 80)
-scale = Vector2(20, 20)
-texture = ExtResource("1_a0sql")
 
 [node name="Band" type="Node2D" parent="."]
 position = Vector2(129, 55)
