@@ -1,11 +1,11 @@
 [gd_scene load_steps=19 format=3 uid="uid://b5ksjvmaancca"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_vadn3"]
-[ext_resource type="Texture2D" uid="uid://7651vedenhek" path="res://Sprites/Menu background/Menu BG.png" id="2_1eioa"]
 [ext_resource type="Texture2D" uid="uid://b0pcy2romxrx" path="res://Sprites/bg ships.png" id="3_a3bio"]
 [ext_resource type="Texture2D" uid="uid://c6bgcvuaqolw" path="res://Sprites/Menu background/Clouds.png" id="4_0msdu"]
-[ext_resource type="PackedScene" path="res://booreiland.tscn" id="5_bl7ar"]
+[ext_resource type="PackedScene" uid="uid://3ckcxe2cc4uw" path="res://booreiland.tscn" id="5_bl7ar"]
 [ext_resource type="Texture2D" uid="uid://clihli106doaq" path="res://Sprites/Menu background/Menu layer 1.png" id="6_4mr5r"]
+[ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://characters/ark-pixel-10px-proportional-latin.ttf" id="6_6475q"]
 [ext_resource type="Script" path="res://ship/play_button.gd" id="7_bggep"]
 
 [sub_resource type="Theme" id="Theme_ewn18"]
@@ -138,10 +138,6 @@ script = ExtResource("1_vadn3")
 
 [node name="Background" type="Node2D" parent="."]
 
-[node name="Background color" type="Sprite2D" parent="Background"]
-position = Vector2(120, 80)
-texture = ExtResource("2_1eioa")
-
 [node name="Ships" type="Sprite2D" parent="Background"]
 texture_repeat = 2
 position = Vector2(121, 80)
@@ -206,6 +202,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
 theme = SubResource("Theme_8wyy7")
+theme_override_fonts/font = ExtResource("6_6475q")
 theme_override_font_sizes/font_size = 10
 text = "Play"
 script = ExtResource("7_bggep")
@@ -213,6 +210,7 @@ script = ExtResource("7_bggep")
 [node name="Credits" type="Button" parent="MarginContainer/Hbox"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("6_6475q")
 theme_override_font_sizes/font_size = 10
 text = "Credits"
 
