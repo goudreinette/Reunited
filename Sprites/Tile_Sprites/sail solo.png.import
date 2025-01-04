@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0pcy2romxrx"
-path="res://.godot/imported/bg ships.png-66e5c0a3f531624b0a8d5dc84b7f3c55.ctex"
+uid="uid://6f25lfceiapq"
+path="res://.godot/imported/sail solo.png-4504f7806b4567b63f44d5a036d7e835.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bg ships.png"
-dest_files=["res://.godot/imported/bg ships.png-66e5c0a3f531624b0a8d5dc84b7f3c55.ctex"]
+source_file="res://Sprites/Tile_Sprites/sail solo.png"
+dest_files=["res://.godot/imported/sail solo.png-4504f7806b4567b63f44d5a036d7e835.ctex"]
 
 [params]
 
