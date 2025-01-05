@@ -104,6 +104,7 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 16
 script = ExtResource("1_n8ajk")
+move_speed = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ni5tt")
@@ -119,3 +120,4 @@ frame = 3
 libraries = {
 "": SubResource("AnimationLibrary_5qsau")
 }
+speed_scale = 1.9

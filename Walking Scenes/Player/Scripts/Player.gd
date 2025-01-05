@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
-var move_speed : float = 20.0
+@export var move_speed : float = 20.0
 var state : String = "idle" 
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer

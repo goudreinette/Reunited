@@ -98,13 +98,12 @@ position = Vector2(218, 207)
 texture = ExtResource("12_qgotw")
 
 [node name="SailSolo" type="Sprite2D" parent="."]
-position = Vector2(-17, 120)
-rotation = 2.35619
+position = Vector2(-17, 115)
+rotation = 1.5708
 texture = ExtResource("14_6gw61")
 
 [node name="Clouds" type="Sprite2D" parent="."]
-position = Vector2(-22, 149)
-scale = Vector2(0.877551, 0.877551)
+position = Vector2(-33, 147)
 texture = ExtResource("1_o23tv")
 
 [node name="SailWithPole3" type="Sprite2D" parent="."]
