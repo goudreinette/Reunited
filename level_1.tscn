@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://hq011qmeiihl"]
+[gd_scene load_steps=18 format=3 uid="uid://hq011qmeiihl"]
 
 [ext_resource type="TileSet" uid="uid://c481tvwmhidax" path="res://Walking Scenes/Tilemaps/Stage_tiles.tres" id="1_1qn5b"]
 [ext_resource type="Texture2D" uid="uid://dfvmk685m4xuj" path="res://Sprites/Tile_Sprites/clouds.png" id="1_o23tv"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b2dwnp3twrykk" path="res://Sprites/Tile_Sprites/luchtschip sloep.png" id="12_qgotw"]
 [ext_resource type="Texture2D" uid="uid://6f25lfceiapq" path="res://Sprites/Tile_Sprites/sail solo.png" id="14_6gw61"]
 [ext_resource type="Texture2D" uid="uid://4farufrl7eyk" path="res://Sprites/Tile_Sprites/sail with pole.png" id="15_flnlg"]
+[ext_resource type="Texture2D" uid="uid://bqvix7eyd81nn" path="res://Sprites/Tile_Sprites/flag.png" id="16_0ifqt"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="16_nobk4"]
 
 [node name="Level 1" type="Node2D"]
@@ -107,26 +108,27 @@ scale = Vector2(0.877551, 0.877551)
 texture = ExtResource("1_o23tv")
 
 [node name="SailWithPole3" type="Sprite2D" parent="."]
-position = Vector2(142, 0)
-texture = ExtResource("15_flnlg")
-
-[node name="SailWithPole2" type="Sprite2D" parent="."]
 position = Vector2(81, 0)
 texture = ExtResource("15_flnlg")
 
-[node name="SailWithPole" type="Sprite2D" parent="."]
+[node name="SailWithPole2" type="Sprite2D" parent="."]
 position = Vector2(197, 0)
 texture = ExtResource("15_flnlg")
 
-[node name="Flag" type="Sprite2D" parent="."]
-position = Vector2(128, -31)
-texture = ExtResource("16_0ifqt")
+[node name="SailWithPole" type="Sprite2D" parent="."]
+position = Vector2(140, 0)
+texture = ExtResource("15_flnlg")
 
-[node name="Flag2" type="Sprite2D" parent="."]
-position = Vector2(261, 117)
-texture = ExtResource("16_0ifqt")
 [node name="Player" parent="." instance=ExtResource("16_nobk4")]
 position = Vector2(88, 137)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_speed = 20.0
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(126, -38)
+texture = ExtResource("16_0ifqt")
+
+[node name="Flag2" type="Sprite2D" parent="."]
+position = Vector2(261, 117)
+texture = ExtResource("16_0ifqt")
