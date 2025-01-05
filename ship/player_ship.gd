@@ -3,8 +3,12 @@ extends Area2D
 signal shield_changed
 signal died
 
+enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
+
 @export var speed = 150
 @export var cooldown = 0.25
+@export var gatling_cooldown = 0.025
+
 var bullet_scene = preload("res://ship/bullet.tscn")
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
@@ -12,6 +16,7 @@ var shield = max_shield:
 	set = set_shield
 	
 var can_shoot = true
+@export var current_weapon_type = WeaponTypes.SCATTER
 
 @onready var screensize = get_viewport_rect().size
 
@@ -47,15 +52,56 @@ func shoot():
 	if not can_shoot:
 		return
 	can_shoot = false
-	$GunCooldown.start()
-	print(bullet_scene)
-	var b = bullet_scene.instantiate()
-	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8))
+	
+	if current_weapon_type == WeaponTypes.DEFAULT:
+		shoot_default()
+	elif current_weapon_type == WeaponTypes.SCATTER:
+		shoot_scatter()
+	elif current_weapon_type == WeaponTypes.GATTLING:
+		shoot_gattling()
+	
 	var tween = create_tween().set_parallel(false)
 	tween.tween_property($Ship, "position:y", 1, 0.1)
 	tween.tween_property($Ship, "position:y", 0, 0.05)
 	$AudioStreamPlayer.play()
+
+func shoot_default():
+	$GunCooldown.wait_time = cooldown
+	$GunCooldown.start()
+	print(bullet_scene)
+	var b = bullet_scene.instantiate()
+	get_tree().root.add_child(b)
+	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	pass
+	
+func shoot_scatter():
+	$GunCooldown.wait_time = cooldown
+	$GunCooldown.start()
+	print(bullet_scene)
+	var b = bullet_scene.instantiate()
+	get_tree().root.add_child(b)
+	b.start(position + Vector2(0, -8), deg_to_rad(rotation+15))
+	
+	b = bullet_scene.instantiate()
+	get_tree().root.add_child(b)
+	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	
+	b = bullet_scene.instantiate()
+	get_tree().root.add_child(b)
+	b.start(position + Vector2(0, -8), deg_to_rad(rotation-15))
+	pass
+	
+func shoot_gattling():
+	$GunCooldown.wait_time = gatling_cooldown
+	$GunCooldown.start()
+	print(bullet_scene)
+	var b = bullet_scene.instantiate()
+	get_tree().root.add_child(b)
+	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	pass
+	
+
+
 
 func set_shield(value):
 	shield = min(max_shield, value)

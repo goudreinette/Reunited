@@ -66,9 +66,6 @@ texture = ExtResource("8_8l27a")
 vframes = 2
 frame = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(120, 80)
-
 [node name="Speaker left" type="Sprite2D" parent="."]
 position = Vector2(41, 75)
 texture = ExtResource("9_u5gw6")
@@ -115,3 +112,6 @@ texture = ExtResource("15_flnlg")
 
 [node name="Player" parent="." instance=ExtResource("16_nobk4")]
 position = Vector2(88, 137)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_speed = 20.0
