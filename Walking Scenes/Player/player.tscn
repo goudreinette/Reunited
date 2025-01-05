@@ -102,7 +102,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 16
+collision_mask = 17
 script = ExtResource("1_n8ajk")
 move_speed = 40.0
 
