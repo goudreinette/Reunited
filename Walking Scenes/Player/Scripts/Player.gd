@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
-var move_speed : float = 30.0
+var move_speed : float = 20.0
 var state : String = "idle" 
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -60,7 +60,8 @@ func update_animation() -> bool:
 	return true
 	
 func anim_direction() -> String:
-	if cardinal_direction == Vector2.DOWN:
+	
+	if cardinal_direction == Vector2.DOWN or direction == Vector2.ZERO:
 		return "down"
 	elif cardinal_direction == Vector2.UP:
 		return "up"

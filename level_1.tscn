@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hq011qmeiihl"]
+[gd_scene load_steps=17 format=3 uid="uid://hq011qmeiihl"]
 
 [ext_resource type="TileSet" uid="uid://c481tvwmhidax" path="res://Walking Scenes/Tilemaps/Stage_tiles.tres" id="1_1qn5b"]
 [ext_resource type="Texture2D" uid="uid://dfvmk685m4xuj" path="res://Sprites/Tile_Sprites/clouds.png" id="1_o23tv"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b2dwnp3twrykk" path="res://Sprites/Tile_Sprites/luchtschip sloep.png" id="12_qgotw"]
 [ext_resource type="Texture2D" uid="uid://6f25lfceiapq" path="res://Sprites/Tile_Sprites/sail solo.png" id="14_6gw61"]
 [ext_resource type="Texture2D" uid="uid://4farufrl7eyk" path="res://Sprites/Tile_Sprites/sail with pole.png" id="15_flnlg"]
+[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="16_nobk4"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -111,3 +112,6 @@ texture = ExtResource("1_o23tv")
 [node name="SailWithPole" type="Sprite2D" parent="."]
 position = Vector2(273, 97)
 texture = ExtResource("15_flnlg")
+
+[node name="Player" parent="." instance=ExtResource("16_nobk4")]
+position = Vector2(88, 137)
