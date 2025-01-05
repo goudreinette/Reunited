@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bm557jmvjgxhc"]
+
+[ext_resource type="Texture2D" uid="uid://cen1xrt1fhec5" path="res://Sprites/Tile_Sprites/thruster.png" id="1_56vta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rd6sx"]
+atlas = ExtResource("1_56vta")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa6dq"]
+atlas = ExtResource("1_56vta")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay41y"]
+atlas = ExtResource("1_56vta")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkqne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rd6sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa6dq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay41y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Thruster3" type="AnimatedSprite2D"]
+position = Vector2(-17, 167)
+rotation = -1.57079
+sprite_frames = SubResource("SpriteFrames_pkqne")
+frame_progress = 0.07272

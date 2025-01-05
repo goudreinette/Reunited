@@ -120,4 +120,5 @@ frame = 3
 libraries = {
 "": SubResource("AnimationLibrary_5qsau")
 }
+autoplay = "idle_down"
 speed_scale = 1.9

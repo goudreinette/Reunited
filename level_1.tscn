@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://xa7e0tejyntx" path="res://Sprites/Characters/Koen.png" id="7_ax0pt"]
 [ext_resource type="Texture2D" uid="uid://c3d0j0pn6tobx" path="res://Sprites/Characters/Stephan.png" id="8_8l27a"]
 [ext_resource type="Texture2D" uid="uid://ddstrm155cmmt" path="res://Sprites/Tile_Sprites/speaker.png" id="9_u5gw6"]
-[ext_resource type="Texture2D" uid="uid://cen1xrt1fhec5" path="res://Sprites/Tile_Sprites/thruster.png" id="10_faewa"]
+[ext_resource type="PackedScene" uid="uid://bm557jmvjgxhc" path="res://Sprites/Tile_Sprites/thruster.tscn" id="11_pyc84"]
 [ext_resource type="Texture2D" uid="uid://g0vjjv0gblhs" path="res://Sprites/Tile_Sprites/big sails.png" id="11_whjsy"]
 [ext_resource type="Texture2D" uid="uid://b2dwnp3twrykk" path="res://Sprites/Tile_Sprites/luchtschip sloep.png" id="12_qgotw"]
 [ext_resource type="Texture2D" uid="uid://6f25lfceiapq" path="res://Sprites/Tile_Sprites/sail solo.png" id="14_6gw61"]
@@ -75,15 +75,13 @@ texture = ExtResource("9_u5gw6")
 position = Vector2(199, 75)
 texture = ExtResource("9_u5gw6")
 
-[node name="Thruster" type="Sprite2D" parent="."]
-position = Vector2(-17, 167)
-rotation = -1.57079
-texture = ExtResource("10_faewa")
+[node name="Thruster" parent="." instance=ExtResource("11_pyc84")]
+autoplay = "default"
+frame_progress = 0.841017
 
-[node name="Thruster2" type="Sprite2D" parent="."]
+[node name="Thruster2" parent="." instance=ExtResource("11_pyc84")]
 position = Vector2(255, 167)
-rotation = -1.57079
-texture = ExtResource("10_faewa")
+autoplay = "default"
 
 [node name="BigSails2" type="Sprite2D" parent="."]
 position = Vector2(-10, -10)
