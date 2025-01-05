@@ -25,6 +25,7 @@ func start(pos):
 	$MoveTimer.start()
 	$ShootTimer.wait_time = randf_range(4, 20)
 	$ShootTimer.start()
+	$AnimationPlayer.play("Idle")
 	
 func _process(delta):
 	if follow_anchor:

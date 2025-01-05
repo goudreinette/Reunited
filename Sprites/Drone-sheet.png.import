@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8dii24h8dc13"
-path="res://.godot/imported/Drone.png-2a6af8911740da566d2346806e793bdd.ctex"
+uid="uid://dsrbcmaje2uwx"
+path="res://.godot/imported/Drone-sheet.png-90c37bec17a430335e2bf7375d834ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ship/Mini Pixel Pack 3/Enemies/Drone.png"
-dest_files=["res://.godot/imported/Drone.png-2a6af8911740da566d2346806e793bdd.ctex"]
+source_file="res://Sprites/Drone-sheet.png"
+dest_files=["res://.godot/imported/Drone-sheet.png-90c37bec17a430335e2bf7375d834ff3.ctex"]
 
 [params]
 
