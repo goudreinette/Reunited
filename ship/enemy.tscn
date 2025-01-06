@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://buv1055nhydxp"]
 
 [ext_resource type="Script" path="res://ship/enemy.gd" id="1_d3jfa"]
-[ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="3_n0ho7"]
+[ext_resource type="Texture2D" uid="uid://7ltkhmklen0w" path="res://Sprites/Effects/Explosion/explosion.png" id="3_vso54"]
 [ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_45wny"]
 [ext_resource type="Texture2D" uid="uid://dsrbcmaje2uwx" path="res://Sprites/Drone-sheet.png" id="4_tc6cv"]
 
@@ -88,10 +88,21 @@ tracks/2/keys = {
 "update": 1,
 "values": [6]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D2:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="Animation" id="Animation_jorl6"]
 resource_name = "explode"
-length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -99,10 +110,10 @@ tracks/0/path = NodePath("Sprite2D2:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("3_n0ho7"), ExtResource("3_n0ho7")]
+"values": [ExtResource("3_vso54")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -111,10 +122,10 @@ tracks/1/path = NodePath("Sprite2D2:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0, 4]
+"values": [0, 58]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -126,7 +137,19 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D2:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [59]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rfrsa"]
