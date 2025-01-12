@@ -7,7 +7,7 @@
 
 [node name="Turret" parent="." instance=ExtResource("1_uw2ou")]
 position = Vector2(59, 50)
-rate_of_fire = 2.0
+rate_of_fire = 0.05
 
 [node name="Player" parent="." instance=ExtResource("2_808f7")]
 position = Vector2(136, 106)
