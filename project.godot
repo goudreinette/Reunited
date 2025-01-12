@@ -73,6 +73,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 [global_group]
 
 Player=""
+enemies=""
 
 [gui]
 
