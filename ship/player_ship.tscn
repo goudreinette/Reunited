@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b32476hejmrnj"]
+[gd_scene load_steps=15 format=3 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" path="res://ship/player_ship.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="2_6cdot"]
 [ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://Sprites/Tiny player ship.png" id="2_e5sdr"]
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="3_n7bvj"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="4_bbrn4"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="6_8bd83"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbfoc"]
 atlas = ExtResource("2_6cdot")
@@ -91,6 +92,9 @@ shape = SubResource("RectangleShape2D_11ea1")
 
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_8bd83")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

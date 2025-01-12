@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgcsjb12gfvmk"]
+
+[ext_resource type="Script" path="res://rocket.gd" id="1_n4ir4"]
+[ext_resource type="Texture2D" uid="uid://bogavg3c4n2iv" path="res://Sprites/Rocket.png" id="2_le00s"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="3_5rduu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74hye"]
+atlas = ExtResource("2_le00s")
+region = Rect2(0, 0, 4, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixw7g"]
+atlas = ExtResource("2_le00s")
+region = Rect2(4, 0, 4, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6tuy"]
+atlas = ExtResource("2_le00s")
+region = Rect2(8, 0, 4, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_62xdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74hye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixw7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6tuy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uots1"]
+size = Vector2(1.75, 10)
+
+[node name="Rocket" type="Area2D" groups=["enemies"]]
+script = ExtResource("1_n4ir4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_62xdr")
+frame_progress = 0.734613
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_uots1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5rduu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

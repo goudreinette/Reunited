@@ -44,8 +44,9 @@ func _process(delta):
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
 
 	if Input.is_action_pressed("shoot"):
-		if not $"..".playing:
-			$".."._on_start_pressed()
+		#if get_parent():
+			#if not $"..".playing:
+				#$".."._on_start_pressed()
 		shoot()
 
 func shoot():
