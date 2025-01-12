@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://sboq8omi1aii"]
+
+[ext_resource type="Script" path="res://turret.gd" id="1_tgbef"]
+[ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
+size = Vector2(24, 23.5)
+
+[node name="Turret" type="Area2D"]
+script = ExtResource("1_tgbef")
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("2_wmswj")
+hframes = 2
+
+[node name="Canon" type="Sprite2D" parent="."]
+texture = ExtResource("2_wmswj")
+hframes = 2
+frame = 1
+
+[node name="ShootPos" type="Node2D" parent="Canon"]
+position = Vector2(0, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_x6a30")
+
+[node name="ShootTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

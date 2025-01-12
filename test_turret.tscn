@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs6iq4ddli6i2"]
+
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://turret.tscn" id="1_uw2ou"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="2_808f7"]
+
+[node name="Test Turret" type="Node2D"]
+
+[node name="Turret" parent="." instance=ExtResource("1_uw2ou")]
+position = Vector2(59, 50)
+rate_of_fire = 2.0
+
+[node name="Player" parent="." instance=ExtResource("2_808f7")]
+position = Vector2(136, 106)

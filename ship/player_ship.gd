@@ -1,4 +1,4 @@
-extends Area2D
+class_name ShipPlayer extends Area2D
 
 signal shield_changed
 signal died

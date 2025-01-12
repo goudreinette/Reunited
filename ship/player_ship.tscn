@@ -69,7 +69,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11ea1"]
 size = Vector2(14, 14)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_4pouc")
 current_weapon_type = 2
 
@@ -80,7 +80,7 @@ hframes = 3
 frame = 1
 
 [node name="Boosters" type="AnimatedSprite2D" parent="Ship"]
-position = Vector2(0, 32)
+position = Vector2(0, 16)
 sprite_frames = SubResource("SpriteFrames_p6f8n")
 animation = &"forward"
 autoplay = "forward"
