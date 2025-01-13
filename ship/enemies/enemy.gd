@@ -7,6 +7,7 @@ var speed = 0
 var bullet_scene = preload("res://ship/enemy_bullet.tscn")
 var explode_scene = preload("res://explosion.tscn")
 #@export var bullet_scene : PackedScene
+#@export var bullet_scene : PackedScene
 var anchor
 var follow_anchor = false
 
