@@ -2,11 +2,23 @@ extends Area2D
 
 signal died 
 
+
+enum FiringPatterns {
+	Continuous,
+	Burst, 
+	Sine,
+	Rotate360
+}
+
+@export var firing_pattern = FiringPatterns.Burst
+
 @export var burst_time = 2.0
 @export var cooldown_time = 2.0
 @export var rate_of_fire = 0.25
 @export var aim_speed = 16
 var player : ShipPlayer
+
+
 
 # var bullet_scene = preload("res://ship/enemies/enemy_bullet.tscn")
 @export var bullet_scene : PackedScene
