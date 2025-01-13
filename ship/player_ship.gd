@@ -3,20 +3,21 @@ class_name ShipPlayer extends Area2D
 signal shield_changed
 signal died
 
+var explode_scene = preload("res://explosion.tscn")
+
 enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 
 @export var speed = 150
 @export var cooldown = 0.25
 @export var gatling_cooldown = 0.025
+@export var current_weapon_type = WeaponTypes.SCATTER
 
 var bullet_scene = preload("res://ship/bullet.tscn")
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
 var shield = max_shield:
 	set = set_shield
-	
 var can_shoot = true
-@export var current_weapon_type = WeaponTypes.SCATTER
 
 @onready var screensize = get_viewport_rect().size
 
@@ -31,6 +32,9 @@ func start():
 	
 func _process(delta):
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	position += input * speed * delta
+	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
+	
 	if input.x > 0:
 		$Ship.frame = 2
 		$Ship/Boosters.animation = "right"
@@ -40,8 +44,7 @@ func _process(delta):
 	else:
 		$Ship.frame = 1
 		$Ship/Boosters.animation = "forward"
-	position += input * speed * delta
-	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
+	
 
 	if Input.is_action_pressed("shoot"):
 		#if get_parent():
@@ -108,6 +111,7 @@ func set_shield(value):
 	shield = min(max_shield, value)
 	shield_changed.emit(max_shield, shield)
 	if shield <= 0:
+		
 		hide()
 		died.emit()
 		

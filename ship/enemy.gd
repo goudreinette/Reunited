@@ -5,6 +5,7 @@ signal died
 var start_pos = Vector2.ZERO
 var speed = 0
 var bullet_scene = preload("res://ship/enemy_bullet.tscn")
+var explode_scene = preload("res://explosion.tscn")
 var anchor
 var follow_anchor = false
 
@@ -35,13 +36,19 @@ func _process(delta):
 		start(start_pos)
 
 func explode():
-	speed = 0
-	$AnimationPlayer.play("explode")
-	$AudioStreamPlayer2D.play()
-	set_deferred("monitorable", false)
+	#speed = 0
+	#$AnimationPlayer.play("explode")
+	#$AudioStreamPlayer2D.play()
+	#set_deferred("monitorable", false)
+	#await $AnimationPlayer.animation_finished
+	
+	
 	died.emit(5)
-	await $AnimationPlayer.animation_finished
+	var e = explode_scene.instantiate()
+	get_tree().root.add_child(e)
+	e.start(global_position)
 	queue_free()
+	
 
 func _on_timer_timeout():
 	speed = randf_range(75, 100)
@@ -50,6 +57,6 @@ func _on_timer_timeout():
 func _on_shoot_timer_timeout():
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position)
+	b.start(position,0) 
 	$ShootTimer.wait_time = randf_range(4, 20)
 	$ShootTimer.start()

@@ -86,7 +86,7 @@ region_rect = Rect2(2.08165e-12, 2.08165e-12, 240, 320)
 position = Vector2(120, 120)
 current_weapon_type = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("7_varcu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

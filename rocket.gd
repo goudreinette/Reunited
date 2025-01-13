@@ -1,11 +1,18 @@
 extends Area2D
 
+signal died 
+
+var explode_scene = preload("res://explosion.tscn")
+
 @export var speed = -50
 @export var aim_speed = 16
+
 var player : ShipPlayer
 
 
 func _ready():
+	##find the player if it exists
+	##so it doesnt crash while testing only the turret
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]
@@ -14,14 +21,11 @@ func _ready():
 func start(pos,rot):
 	position = pos
 	rotation = rot
-	#find the player if it exists
-	#so it doesnt crash while testing only the turret
-	
 	
 	
 func _process(delta):
-	#position +=  Vector2(cos(_rot) ,sin(_rot) ) * 
 	position += Vector2(0, speed * delta).rotated(rotation)
+	
 	if player:
 		rotation += (get_angle_to(player.position) + deg_to_rad(90)) / aim_speed
 	
@@ -35,11 +39,14 @@ func _on_area_entered(area):
 		area.shield -= 1
 
 func explode():
-	speed = 0
+	#speed = 0
 	#$AnimationPlayer.play("explode")
-	$AudioStreamPlayer2D.play()
 	#set_deferred("monitorable", false)
-	#died.emit(5)
 	#await $AnimationPlayer.animation_finished
-	await $AudioStreamPlayer2D.finished
+	died.emit(5)
+	##spawn explosion
+	var e = explode_scene.instantiate()
+	get_tree().root.add_child(e)
+	e.start(position)
+	##delete itself
 	queue_free()
