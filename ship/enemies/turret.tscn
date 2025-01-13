@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://sboq8omi1aii"]
+[gd_scene load_steps=5 format=3 uid="uid://sboq8omi1aii"]
 
-[ext_resource type="Script" path="res://turret.gd" id="1_tgbef"]
+[ext_resource type="Script" path="res://ship/enemies/turret.gd" id="1_tgbef"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="2_kjxed"]
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
@@ -8,6 +9,8 @@ size = Vector2(24, 23.5)
 
 [node name="Turret" type="Area2D"]
 script = ExtResource("1_tgbef")
+rate_of_fire = 0.125
+bullet_scene = ExtResource("2_kjxed")
 
 [node name="Base" type="Sprite2D" parent="."]
 texture = ExtResource("2_wmswj")

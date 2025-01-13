@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://iqys12s5srvb"]
 
-[ext_resource type="Script" path="res://ship/enemy_bullet.gd" id="1_gk4vk"]
+[ext_resource type="Script" path="res://ship/enemies/enemy_bullet.gd" id="1_gk4vk"]
 [ext_resource type="Texture2D" uid="uid://ctqixvff0dqtq" path="res://ship/Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png" id="1_iqbiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ua1nk"]

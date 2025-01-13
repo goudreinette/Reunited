@@ -8,9 +8,11 @@ signal died
 @export var aim_speed = 16
 var player : ShipPlayer
 
-var bullet_scene = preload("res://ship/enemy_bullet.tscn")
+# var bullet_scene = preload("res://ship/enemies/enemy_bullet.tscn")
+@export var bullet_scene : PackedScene
 
 var is_cooling_down: bool = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +24,6 @@ func _ready() -> void:
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]
-	
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,15 +32,12 @@ func _process(delta: float) -> void:
 	if player:
 		$Canon.rotation += ($Canon.get_angle_to(player.position) - deg_to_rad(90)) / aim_speed
 	
-	print("burst:    ", $BurstTimer.time_left)
-	print("cooldown: ", $CooldownTimer.time_left)
-	print("shoot:    ", $ShootTimer.time_left)
+	#print("burst:    ", $BurstTimer.time_left)
+	#print("cooldown: ", $CooldownTimer.time_left)
+	#print("shoot:    ", $ShootTimer.time_left)
 	#$Canon.rotation += 0.1*delta
-	
 	#$Canon.look_at(player.position) 
-	#$Canon.rotation -= deg_to_rad(90)
-	pass
-	
+	#$Canon.rotation -= deg_to_rad(90)	
 	
 func explode():
 	#$AnimationPlayer.play("explode")

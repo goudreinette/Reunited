@@ -1,6 +1,6 @@
 extends Node2D
 
-var enemy = preload("res://ship/enemy.tscn")
+var enemy = preload("res://ship/enemies/enemy.tscn")
 var score = 0
 var playing = false
 

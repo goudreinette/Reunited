@@ -1,9 +1,101 @@
 [gd_scene load_steps=11 format=3 uid="uid://j4wmogsu4mdb"]
 
-[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://Sprites/Enemy fixed wing drone.png" id="1_7t6ak"]
-[ext_resource type="Script" path="res://fw_drone.gd" id="1_pt7aw"]
-[ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="3_kx1ba"]
-[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_b5vw4"]
+[ext_resource type="Script" path="res://ship/enemies/fw_drone.gd" id="1_s8bkg"]
+[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://Sprites/Enemy fixed wing drone.png" id="2_f2qes"]
+[ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="3_fid53"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_lg58s"]
+
+[sub_resource type="Animation" id="Animation_lon5t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyFixedWingDrone:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EnemyFixedWingDrone:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f2qes")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EnemyFixedWingDrone:hframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("EnemyFixedWingDrone:vframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_r42qd"]
+resource_name = "Strafe"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyFixedWingDrone:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_gnnqf"]
 resource_name = "Straight"
@@ -67,99 +159,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_7t6ak")]
-}
-
-[sub_resource type="Animation" id="Animation_lon5t"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("EnemyFixedWingDrone:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("EnemyFixedWingDrone:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_7t6ak")]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("EnemyFixedWingDrone:hframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("EnemyFixedWingDrone:vframes")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-
-[sub_resource type="Animation" id="Animation_r42qd"]
-resource_name = "Strafe"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("EnemyFixedWingDrone:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"values": [ExtResource("2_f2qes")]
 }
 
 [sub_resource type="Animation" id="Animation_uasbv"]
@@ -175,7 +175,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_kx1ba")]
+"values": [ExtResource("3_fid53")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -226,10 +226,10 @@ _data = {
 size = Vector2(16, 14)
 
 [node name="FW_Drone" type="Area2D" groups=["enemies"]]
-script = ExtResource("1_pt7aw")
+script = ExtResource("1_s8bkg")
 
 [node name="EnemyFixedWingDrone" type="Sprite2D" parent="."]
-texture = ExtResource("1_7t6ak")
+texture = ExtResource("2_f2qes")
 hframes = 3
 vframes = 2
 
@@ -243,4 +243,4 @@ autoplay = "Straight"
 shape = SubResource("RectangleShape2D_adis6")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_b5vw4")
+stream = ExtResource("4_lg58s")
