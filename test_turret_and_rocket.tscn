@@ -10,7 +10,13 @@
 position = Vector2(136, 106)
 
 [node name="Turret" parent="." instance=ExtResource("1_uw2ou")]
-position = Vector2(67, 42)
+position = Vector2(45, 40)
+rate_of_fire = 0.25
+bullet_scene = ExtResource("3_oaw5c")
 
 [node name="Rocket" parent="." instance=ExtResource("3_oaw5c")]
 position = Vector2(52, 120)
+
+[node name="Turret2" parent="." instance=ExtResource("1_uw2ou")]
+position = Vector2(204, 28)
+rate_of_fire = 0.05
