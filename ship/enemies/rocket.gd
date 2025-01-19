@@ -33,7 +33,7 @@ func _process(delta):
 		explode()
 	
 	if player:
-		rotation += (get_angle_to(player.position) + deg_to_rad(90)) / aim_speed
+		rotation += (get_angle_to(player.global_position) + deg_to_rad(90)) / aim_speed
 	
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():

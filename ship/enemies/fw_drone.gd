@@ -1,7 +1,20 @@
 extends Area2D
 
+
 signal died
+@export var health : int = 2
 var explode_scene = preload("res://explosion.tscn")
+
+func reduce_health(amount):
+	health -= amount
+	if health<=0 :
+		explode()
+		
+	
+func _process(delta: float) -> void:
+	
+	print(health)
+	
 
 # Called when the node enters the scene tree for the first time.
 func explode():
@@ -19,5 +32,3 @@ func explode():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
