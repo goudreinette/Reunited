@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
 size = Vector2(24, 23.5)
 
-[node name="Turret" type="Area2D"]
+[node name="Turret" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_tgbef")
 rate_of_fire = 0.125
 bullet_scene = ExtResource("2_kjxed")

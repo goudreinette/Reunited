@@ -7,6 +7,9 @@ var explode_scene = preload("res://explosion.tscn")
 @export var speed = -50
 @export var aim_speed = 16
 
+@export var health : int = 1 
+
+
 var player : ShipPlayer
 
 
@@ -26,6 +29,9 @@ func start(pos,rot):
 func _process(delta):
 	position += Vector2(0, speed * delta).rotated(rotation)
 	
+	if health <=0:
+		explode()
+	
 	if player:
 		rotation += (get_angle_to(player.position) + deg_to_rad(90)) / aim_speed
 	
@@ -37,6 +43,9 @@ func _on_area_entered(area):
 	if area.name == "Player":
 		explode()
 		area.shield -= 1
+
+func reduce_health(amount):
+	health -= amount
 
 func explode():
 	#speed = 0
