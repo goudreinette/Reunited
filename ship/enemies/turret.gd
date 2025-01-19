@@ -9,9 +9,9 @@ enum FiringPatterns {
 	Sine,
 	Rotate360
 }
+@export var turret_range : int = 200
 
 @export var firing_pattern = FiringPatterns.Burst
-
 @export var burst_time = 2.0
 @export var cooldown_time = 2.0
 @export var rate_of_fire = 0.25
@@ -38,25 +38,19 @@ func _ready() -> void:
 		player = nodes_in_player_group[0]
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	# var look_at_angle = $Canon.get_angle_to(player.position) - deg_to_rad(90)	
 	if player:
-		$Canon.rotation += ($Canon.get_angle_to(player.position) - deg_to_rad(90)) / aim_speed
+		$Canon.rotation += ($Canon.get_angle_to(player.global_position) - deg_to_rad(90)) / aim_speed
 	
-	#print("burst:    ", $BurstTimer.time_left)
-	#print("cooldown: ", $CooldownTimer.time_left)
-	#print("shoot:    ", $ShootTimer.time_left)
-	#$Canon.rotation += 0.1*delta
-	#$Canon.look_at(player.position) 
-	#$Canon.rotation -= deg_to_rad(90)	
 	
 func explode():
 	#$AnimationPlayer.play("explode")
 	#$AudioStreamPlayer2D.play()
 	set_deferred("monitorable", false)
 	died.emit(5)
-	##await $AnimationPlayer.animation_finished
+	#await $AnimationPlayer.animation_finished
 	queue_free()
 
 func shoot():
@@ -66,9 +60,15 @@ func shoot():
 	
 
 func _on_shoot_timer_timeout():
-	if not is_cooling_down:
-		shoot()
-		$ShootTimer.start()
+	if abs(player.global_position.y - global_position.y) < turret_range:
+		if firing_pattern == FiringPatterns.Continuous:
+			shoot()
+			$ShootTimer.start()
+		elif firing_pattern == FiringPatterns.Burst:
+			if not is_cooling_down:
+				shoot()
+				$ShootTimer.start()
+	
 #	$ShootTimer.wait_time = rate_of_fire
 
 

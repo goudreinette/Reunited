@@ -1,47 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://de2yqg8kfinie"]
+[gd_scene load_steps=5 format=3 uid="uid://de2yqg8kfinie"]
 
-[ext_resource type="PackedScene" uid="uid://cclj1rct6aop4" path="res://drone_parent.tscn" id="1_4bgao"]
-[ext_resource type="PackedScene" uid="uid://j4wmogsu4mdb" path="res://fw_drone.tscn" id="2_okvvo"]
+[ext_resource type="PackedScene" uid="uid://cclj1rct6aop4" path="res://ship/enemies/drone_parent.tscn" id="1_4bgao"]
+[ext_resource type="Script" path="res://formation.gd" id="1_nbf32"]
+[ext_resource type="PackedScene" uid="uid://j4wmogsu4mdb" path="res://ship/enemies/fw_drone.tscn" id="2_okvvo"]
 
 [sub_resource type="Curve2D" id="Curve2D_pe3ur"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 23.9518, 204.226, -3.42555, 12.5469, 3.42555, -12.5469, 24, 24, -15.2247, 4.27734, 15.2247, -4.27734, 53.4123, 3.24665, -19.0308, -2.5664, 19.0308, 2.5664, 94.6665, 2.56351, -8.37356, -12.5469, 8.37356, 12.5469, 120.899, 17.9445, 0, 0, 0, 0, 130.024, 169.191)
+"points": PackedVector2Array(0, 0, 0, 0, 20.5301, 234.989, -3.42555, 12.5469, 3.42555, -12.5469, 24, 24, -15.2247, 4.27734, 15.2247, -4.27734, 53.4123, 3.24665, -19.0308, -2.5664, 19.0308, 2.5664, 94.6665, 2.56351, -8.37356, -12.5469, 8.37356, 12.5469, 120.899, 17.9445, 0, 0, 0, 0, 130.024, 169.191)
 }
 point_count = 6
 
 [node name="Formation Test" type="Path2D"]
-position = Vector2(12, 18)
-scale = Vector2(0.876762, 1.17027)
+position = Vector2(-2.62498, 21.6348)
+scale = Vector2(1.00462, 1.0782)
 curve = SubResource("Curve2D_pe3ur")
+script = ExtResource("1_nbf32")
+testing = true
 
 [node name="Drone parent" parent="." instance=ExtResource("1_4bgao")]
-position = Vector2(23.9518, 204.226)
-rotation = -1.57053
+position = Vector2(20.5301, 234.989)
+rotation = -1.55435
+loop = false
 
 [node name="FW_Drone2" parent="Drone parent" instance=ExtResource("2_okvvo")]
 position = Vector2(0.0464829, -0.0482254)
 rotation = 1.5708
 
 [node name="Drone parent2" parent="." instance=ExtResource("1_4bgao")]
-position = Vector2(23.5283, 180.869)
-rotation = -1.58763
+position = Vector2(20.5685, 211.644)
+rotation = -1.56825
 progress = 23.364
+loop = false
 
 [node name="FW_Drone2" parent="Drone parent2" instance=ExtResource("2_okvvo")]
 rotation = 1.5708
 
 [node name="Drone parent3" parent="." instance=ExtResource("1_4bgao")]
-position = Vector2(23.1624, 157.509)
-rotation = -1.58526
+position = Vector2(20.6462, 188.265)
+rotation = -1.56669
 progress = 46.728
+loop = false
 
 [node name="FW_Drone2" parent="Drone parent3" instance=ExtResource("2_okvvo")]
 rotation = 1.5708
 
 [node name="Drone parent4" parent="." instance=ExtResource("1_4bgao")]
-position = Vector2(22.8033, 129.618)
-rotation = -1.58194
+position = Vector2(20.7887, 160.376)
+rotation = -1.56462
 progress = 74.6207
+loop = false
 
 [node name="FW_Drone2" parent="Drone parent4" instance=ExtResource("2_okvvo")]
 position = Vector2(0.0464829, -0.0482254)

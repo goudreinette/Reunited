@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://0l50mndc6jc0"]
+
+[ext_resource type="Script" path="res://ship/ship_main.gd" id="1_pfl5e"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_1fxkv"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://ship/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="3_nq2xq"]
+[ext_resource type="Texture2D" uid="uid://bcrb5e5h7wpg0" path="res://Sprites/Test Level.png" id="4_ot2dt"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="6_jxoki"]
+[ext_resource type="Script" path="res://ship/level_position.gd" id="7_2gwrw"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_755m4"]
+[ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="8_f04s7"]
+[ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="9_rrnls"]
+[ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="10_011ej"]
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_ba0ju"]
+[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_ahees"]
+[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_g1iey"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pfl5e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_1fxkv")]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_nq2xq")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(120, -480)
+texture = ExtResource("4_ot2dt")
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="EnemyAnchor" type="Node2D" parent="."]
+
+[node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rrnls")
+autoplay = true
+
+[node name="Formation Test2" parent="." instance=ExtResource("10_011ej")]
+position = Vector2(0, -160)
+
+[node name="LevelPosition" type="Node2D" parent="."]
+script = ExtResource("7_2gwrw")
+
+[node name="Player" parent="LevelPosition" instance=ExtResource("6_jxoki")]
+position = Vector2(120, 120)
+current_weapon_type = 0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
+stream = ExtResource("7_755m4")
+
+[node name="Camera2D" type="Camera2D" parent="LevelPosition"]
+position = Vector2(120, 80)
+script = ExtResource("8_f04s7")
+noise = SubResource("FastNoiseLite_uf0tv")
+
+[node name="Turret" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(42, -294)
+firing_pattern = 0
+rate_of_fire = 1.0
+
+[node name="Turret2" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(216, -270)
+firing_pattern = 0
+rate_of_fire = 1.0
+
+[node name="Turret3" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(49, -652)
+turret_range = 160
+firing_pattern = 0
+
+[node name="Turret4" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(133, -604)
+
+[node name="Turret5" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(201, -656)
+
+[node name="Formation Test3" parent="." instance=ExtResource("12_ahees")]
+position = Vector2(18.375, -854)
+
+[node name="Formation Test" parent="." instance=ExtResource("13_g1iey")]
+position = Vector2(-3.625, -521)
+
+[node name="Formation Test4" parent="." instance=ExtResource("12_ahees")]
+position = Vector2(21.375, -1169)
+
+[node name="Turret6" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(46, -903)
+
+[node name="Turret7" parent="." instance=ExtResource("11_ba0ju")]
+position = Vector2(193, -960)
+
+[connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
+[connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]

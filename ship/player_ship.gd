@@ -21,6 +21,7 @@ var can_shoot = true
 
 @onready var screensize = get_viewport_rect().size
 
+
 func _ready():
 	start()
 
@@ -75,7 +76,7 @@ func shoot_default():
 	print(bullet_scene)
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
 	pass
 	
 func shoot_scatter():

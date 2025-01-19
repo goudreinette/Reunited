@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_varcu"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="8_b2isx"]
 [ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="9_o1cb4"]
-[ext_resource type="PackedScene" path="res://formation_test.tscn" id="10_6vkug"]
+[ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="10_6vkug"]
 
 [sub_resource type="Animation" id="Animation_frim2"]
 length = 0.001
