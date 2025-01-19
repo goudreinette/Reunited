@@ -2,6 +2,9 @@ extends Area2D
 
 signal died 
 
+@export var maxhealth : float = 5 
+var health : float  
+var healthratio : float 
 
 enum FiringPatterns {
 	Continuous,
@@ -36,15 +39,24 @@ func _ready() -> void:
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]
-
+	health = maxhealth
 
 
 func _process(delta: float) -> void:
 	# var look_at_angle = $Canon.get_angle_to(player.position) - deg_to_rad(90)	
+	##Look at Player if he exists
 	if player:
 		$Canon.rotation += ($Canon.get_angle_to(player.global_position) - deg_to_rad(90)) / aim_speed
 	
+	healthratio = health/maxhealth
 	
+	if health <=0:
+		explode()
+	
+	print(healthratio)
+	
+func reduce_health(amount):
+	health -= amount
 func explode():
 	#$AnimationPlayer.play("explode")
 	#$AudioStreamPlayer2D.play()

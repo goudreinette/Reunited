@@ -8,15 +8,18 @@
 
 [node name="Player" parent="." instance=ExtResource("2_808f7")]
 position = Vector2(136, 106)
+current_weapon_type = 0
 
 [node name="Turret" parent="." instance=ExtResource("1_uw2ou")]
 position = Vector2(45, 40)
-rate_of_fire = 0.25
+firing_pattern = 0
+rate_of_fire = 10.0
 bullet_scene = ExtResource("3_oaw5c")
 
 [node name="Rocket" parent="." instance=ExtResource("3_oaw5c")]
 position = Vector2(52, 120)
 
 [node name="Turret2" parent="." instance=ExtResource("1_uw2ou")]
+process_mode = 4
 position = Vector2(204, 28)
 rate_of_fire = 0.05
