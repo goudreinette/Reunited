@@ -14,12 +14,12 @@ bullet_scene = ExtResource("2_kjxed")
 
 [node name="Base" type="Sprite2D" parent="."]
 texture = ExtResource("2_wmswj")
-hframes = 2
+hframes = 7
+frame = 3
 
 [node name="Canon" type="Sprite2D" parent="."]
 texture = ExtResource("2_wmswj")
-hframes = 2
-frame = 1
+hframes = 7
 
 [node name="ShootPos" type="Node2D" parent="Canon"]
 position = Vector2(0, 10)
