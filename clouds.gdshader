@@ -79,16 +79,16 @@ float noise(vec3 v){
 
 
 
-uniform int OCTAVES = 2;
+uniform int OCTAVES: hint_range(0, 6, .5) = 2;
 uniform float AMPLITUDE = 1.75;
 uniform float FREQ = 1.0;
 uniform float LACUNARITY = 2.0;
-uniform float GAIN = .75;
+uniform float GAIN: hint_range(0, 1.0, .05) = .75;
 uniform int pixelation_amount = 100;
-uniform float OPACITY = .25;
+uniform float OPACITY: hint_range(0.0, 1.0, 0.025) = .25;
 uniform float SCROLL_SPEED = .25;
 
-uniform float Y_STRETCH = 1.0;
+uniform float Y_STRETCH: hint_range(0.0, 8.0, .5) = 1.0;
 
 
 
