@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=37 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
 [ext_resource type="Shader" path="res://water.gdshader" id="2_16fhy"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="11_bvno7"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_vlxys"]
 [ext_resource type="PackedScene" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
+[ext_resource type="Texture2D" uid="uid://c5np1h332wf80" path="res://Sprites/parasol.png" id="13_0bsmn"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
 [ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
@@ -22,16 +23,102 @@
 [ext_resource type="Script" path="res://ship/wolk.gd" id="16_nafb6"]
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://Sprites/Wolk 2.png" id="17_7mw55"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Sprites/Wolk 3.png" id="18_gb61i"]
+[ext_resource type="Texture2D" uid="uid://cw23oebbua8p1" path="res://Sprites/buoy.png" id="20_pbauq"]
+[ext_resource type="Script" path="res://buoyancy.gd" id="21_3l65o"]
+[ext_resource type="Shader" path="res://water_lake.gdshader" id="23_8f262"]
+[ext_resource type="Texture2D" uid="uid://uwbusy5ytjma" path="res://Sprites/zandkasteel.png" id="24_p2nqn"]
+[ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://Sprites/raft.png" id="25_55w1p"]
+[ext_resource type="Texture2D" uid="uid://h573t5ikovdp" path="res://Sprites/lake.png" id="28_mvndr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
+shader = ExtResource("23_8f262")
+shader_parameter/DISTORTION_SPEED = 2.0
+shader_parameter/DISTORTION_STRENGTH = 0.17
+shader_parameter/SCALE = 20.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nbg31"]
 shader = ExtResource("2_16fhy")
 shader_parameter/DISTORTION_SPEED = 5.0
 shader_parameter/DISTORTION_STRENGTH = 0.08
+shader_parameter/SCALE = 30.0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 
+[sub_resource type="Animation" id="Animation_2aja5"]
+resource_name = "buoyancy"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.833333, 2.13333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_usyx3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Raft:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wrv3t"]
+resource_name = "raft"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Raft:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.02, 1.73333, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wrskd"]
+_data = {
+"RESET": SubResource("Animation_usyx3"),
+"buoyancy": SubResource("Animation_2aja5"),
+"raft": SubResource("Animation_wrv3t")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xct61")
+
+[node name="Lake" type="Sprite2D" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_7oejd")
+position = Vector2(121, -627)
+texture = ExtResource("28_mvndr")
 
 [node name="SEA2" type="Sprite2D" parent="."]
 z_index = -3
@@ -43,7 +130,7 @@ texture = ExtResource("3_qbsuj")
 [node name="SEA" type="Sprite2D" parent="."]
 z_index = -1
 material = SubResource("ShaderMaterial_nbg31")
-position = Vector2(120, 31)
+position = Vector2(119, 30)
 scale = Vector2(1.88281, 2.02386)
 texture = ExtResource("3_qbsuj")
 
@@ -74,6 +161,10 @@ region_rect = Rect2(0, 0, 240, 160)
 [node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rr64a")
 autoplay = true
+
+[node name="Parasol" type="Sprite2D" parent="."]
+position = Vector2(73, -121)
+texture = ExtResource("13_0bsmn")
 
 [node name="LevelPosition" type="Node2D" parent="."]
 script = ExtResource("7_002rr")
@@ -140,20 +231,40 @@ position = Vector2(23.375, -937)
 [node name="Formation Test5" parent="." instance=ExtResource("12_4u0pq")]
 position = Vector2(18.375, -1156)
 
+[node name="Buoy" type="Sprite2D" parent="."]
+position = Vector2(52, -6)
+texture = ExtResource("20_pbauq")
+script = ExtResource("21_3l65o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buoy"]
+libraries = {
+"": SubResource("AnimationLibrary_wrskd")
+}
+autoplay = "buoyancy"
+
+[node name="Raft" type="Sprite2D" parent="."]
+position = Vector2(183, 49)
+texture = ExtResource("25_55w1p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Raft"]
+root_node = NodePath("../../Buoy")
+libraries = {
+"": SubResource("AnimationLibrary_wrskd")
+}
+autoplay = "raft"
+
 [node name="Wolk1" type="Sprite2D" parent="."]
 position = Vector2(67, 33)
 texture = ExtResource("15_0lia8")
 script = ExtResource("16_nafb6")
 
 [node name="Wolk5" type="Sprite2D" parent="."]
-z_index = -1
 position = Vector2(198, -727)
 texture = ExtResource("17_7mw55")
 script = ExtResource("16_nafb6")
 speed = 5.0
 
 [node name="Wolk6" type="Sprite2D" parent="."]
-z_index = -1
 position = Vector2(208, -534)
 texture = ExtResource("17_7mw55")
 script = ExtResource("16_nafb6")
@@ -203,6 +314,10 @@ position = Vector2(84, -942)
 texture = ExtResource("18_gb61i")
 script = ExtResource("16_nafb6")
 speed = 20.0
+
+[node name="Zandkasteel" type="Sprite2D" parent="."]
+position = Vector2(180, -120)
+texture = ExtResource("24_p2nqn")
 
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]

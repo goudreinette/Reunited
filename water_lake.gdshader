@@ -33,6 +33,7 @@ void fragment() {
 	// Pixelate it :D                             // This vector moves the water, to hide a certain issue
     vec2 uv = UV.xy;
 
+	COLOR = texture(TEXTURE, UV);
 
     // More vibrant than the original!
     vec3 mainBlue = vec3(91.0 / 255.0, 110.0 / 255.0, 225.0 / 255.0);
@@ -72,7 +73,7 @@ void fragment() {
 
     e *= 0.1 + 1.0 - edge1Halo * 0.1;
 
-    COLOR = vec4(vec3(e), smoothstep(0, 0.5, UV.y));
+    COLOR = vec4(vec3(e), step(0.5, COLOR.a));
 }
 
 //void light() {

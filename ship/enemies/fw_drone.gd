@@ -3,7 +3,7 @@ extends Area2D
 
 signal died
 @export var health : int = 2
-var explode_scene = preload("res://explosion.tscn")
+var explode_scene = preload("res://Smal explosion.tscn")
 
 func reduce_health(amount):
 	health -= amount
