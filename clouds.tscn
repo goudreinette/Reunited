@@ -5,12 +5,18 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s1n6"]
 shader = ExtResource("1_giycn")
-shader_parameter/OCTAVES = 4
-shader_parameter/pixelation_amount = 150
+shader_parameter/OCTAVES = 5
+shader_parameter/AMPLITUDE = 2.0
+shader_parameter/FREQ = 2.5
+shader_parameter/LACUNARITY = 2.0
+shader_parameter/GAIN = -0.25
+shader_parameter/pixelation_amount = 99
+shader_parameter/OPACITY = 0.125
+shader_parameter/SCROLL_SPEED = 0.125
+shader_parameter/Y_STRETCH = 4.0
+shader_parameter/intensity = 0.45
 
-[node name="Clouds" type="Node2D"]
-
-[node name="IconBig" type="Sprite2D" parent="."]
+[node name="Clouds" type="Sprite2D"]
 material = SubResource("ShaderMaterial_8s1n6")
 position = Vector2(120, 80)
 scale = Vector2(1.875, 1.25)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=25 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
+[ext_resource type="Shader" path="res://water.gdshader" id="2_16fhy"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_b57pp"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://ship/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="3_4m7a4"]
+[ext_resource type="Texture2D" uid="uid://c5etavhissrlr" path="res://icon big.png" id="3_qbsuj"]
 [ext_resource type="Texture2D" uid="uid://bcrb5e5h7wpg0" path="res://Sprites/Test Level.png" id="4_f7ubc"]
 [ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="5_rr64a"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="6_4hywx"]
@@ -16,18 +18,32 @@
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
 [ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
-[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
-[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_a6pr8"]
-[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Sprites/Wolk 1.png" id="15_0lia8"]
 [ext_resource type="Script" path="res://ship/wolk.gd" id="16_nafb6"]
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://Sprites/Wolk 2.png" id="17_7mw55"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Sprites/Wolk 3.png" id="18_gb61i"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbg31"]
+shader = ExtResource("2_16fhy")
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_xct61")
+
+[node name="SEA2" type="Sprite2D" parent="."]
+z_index = -3
+material = SubResource("ShaderMaterial_nbg31")
+position = Vector2(125, -664)
+scale = Vector2(0.65185, 0.544986)
+texture = ExtResource("3_qbsuj")
+
+[node name="SEA" type="Sprite2D" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_nbg31")
+position = Vector2(120, 31)
+scale = Vector2(1.88281, 2.02386)
+texture = ExtResource("3_qbsuj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -64,7 +80,6 @@ levelspeed = 15.0
 [node name="Player" parent="LevelPosition" instance=ExtResource("8_sb0o7")]
 position = Vector2(120, 120)
 speed = 151
-current_weapon_type = 0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
 stream = ExtResource("9_n2h18")
@@ -75,6 +90,7 @@ script = ExtResource("10_d2x54")
 noise = SubResource("FastNoiseLite_uf0tv")
 
 [node name="Clouds" parent="LevelPosition" instance=ExtResource("14_w4r5u")]
+scale = Vector2(2, 2)
 
 [node name="Turret" parent="." instance=ExtResource("11_vlxys")]
 position = Vector2(42, -294)
