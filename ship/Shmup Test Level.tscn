@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=22 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_b57pp"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_vlxys"]
 [ext_resource type="PackedScene" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
+[ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
 [ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
 [ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_a6pr8"]

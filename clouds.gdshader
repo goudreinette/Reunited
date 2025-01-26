@@ -45,7 +45,7 @@ void fragment() {
     }
 
 	// Called for every pixel the material is visible on.
-	vec4 col = vec4(fbm(vec2(grid_uv.x * 10.0, grid_uv.y * 2.0 - TIME)));
+	vec4 col = vec4(fbm(vec2(grid_uv.x * 10.0, grid_uv.y * 2.0 - TIME / 2.0)));
 	float gray = (col.r + col.g + col.b) / 3.0;
 	float quantised = step(0.6, gray);
 	COLOR = vec4(1.0, 1.0, 1.0, quantised * .3);
