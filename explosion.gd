@@ -7,5 +7,7 @@ func start(pos):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$AudioStreamPlayer2D.finished.connect(queue_free)
+	
+	#$AudioStreamPlayer2D.finished.connect(queue_free)
+	animation_finished.connect(queue_free)	
 	pass

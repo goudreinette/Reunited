@@ -5,27 +5,32 @@
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
-size = Vector2(24, 23.5)
+size = Vector2(19, 20)
 
 [node name="Turret" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_tgbef")
+health = 1
 rate_of_fire = 0.125
 bullet_scene = ExtResource("2_kjxed")
 
 [node name="Base" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("2_wmswj")
-hframes = 7
-frame = 3
+hframes = 5
+vframes = 2
+frame = 9
 
 [node name="Canon" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("2_wmswj")
-hframes = 7
+hframes = 5
+vframes = 2
 
 [node name="ShootPos" type="Node2D" parent="Canon"]
 position = Vector2(0, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.25)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_x6a30")
 
 [node name="BurstTimer" type="Timer" parent="."]

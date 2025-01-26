@@ -2,9 +2,11 @@ extends Area2D
 
 signal died 
 
-@export var maxhealth : float = 5 
-var health : float  
+@export var maxhealth : int = 5 
+@export var health : int  
 var healthratio : float 
+var explode_scene = preload("res://big Explosion.tscn")
+var isdead : bool = false
 
 enum FiringPatterns {
 	Continuous,
@@ -40,30 +42,44 @@ func _ready() -> void:
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]
 	health = maxhealth
+	
+	
 
 
 func _process(delta: float) -> void:
+
 	# var look_at_angle = $Canon.get_angle_to(player.position) - deg_to_rad(90)	
 	##Look at Player if he exists
-	if player:
+	if player and not isdead:
 		$Canon.rotation += ($Canon.get_angle_to(player.global_position) - deg_to_rad(90)) / aim_speed
 	
-	healthratio = health/maxhealth
+	healthratio =  float(health) / float(maxhealth)
 	
-	if health <=0:
+	if health <=0 and not isdead:
 		explode()
 	
-	print(healthratio)
+	##Set frame to health
+	##base
+	$Base.frame = remap(healthratio, 1, 0, 5, 9)
+	##Turret
+	$Canon.frame = remap(healthratio, 1, 0, 0, 4)
 	
 func reduce_health(amount):
 	health -= amount
+	
 func explode():
+	isdead = true
 	#$AnimationPlayer.play("explode")
 	#$AudioStreamPlayer2D.play()
 	set_deferred("monitorable", false)
+	var e = explode_scene.instantiate()
+	get_tree().root.add_child(e)
+	e.start(global_position)
+	
 	died.emit(5)
+	process_mode = Node.PROCESS_MODE_DISABLED
 	#await $AnimationPlayer.animation_finished
-	queue_free()
+	#queue_free()
 
 func shoot():
 	var b = bullet_scene.instantiate()
@@ -72,7 +88,7 @@ func shoot():
 	
 
 func _on_shoot_timer_timeout():
-	if abs(player.global_position.y - global_position.y) < turret_range:
+	if abs(player.global_position.y - global_position.y) < turret_range and not isdead:
 		if firing_pattern == FiringPatterns.Continuous:
 			shoot()
 			$ShootTimer.start()

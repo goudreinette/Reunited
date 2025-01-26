@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=21 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_b57pp"]
@@ -10,10 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="8_sb0o7"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="9_n2h18"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="10_d2x54"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="11_bvno7"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_vlxys"]
 [ext_resource type="PackedScene" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
+[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
+[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_a6pr8"]
+[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="13_tql8d"]
+[ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Sprites/Wolk 1.png" id="15_0lia8"]
+[ext_resource type="Script" path="res://ship/wolk.gd" id="16_nafb6"]
+[ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://Sprites/Wolk 2.png" id="17_7mw55"]
+[ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Sprites/Wolk 3.png" id="18_gb61i"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 
@@ -36,6 +44,7 @@ layout_mode = 2
 texture = ExtResource("3_4m7a4")
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -5
 texture_repeat = 2
 position = Vector2(120, -480)
 texture = ExtResource("4_f7ubc")
@@ -47,14 +56,13 @@ region_rect = Rect2(0, 0, 240, 160)
 stream = ExtResource("5_rr64a")
 autoplay = true
 
-[node name="Formation Test2" parent="." instance=ExtResource("6_4hywx")]
-position = Vector2(0, -160)
-
 [node name="LevelPosition" type="Node2D" parent="."]
 script = ExtResource("7_002rr")
+levelspeed = 15.0
 
 [node name="Player" parent="LevelPosition" instance=ExtResource("8_sb0o7")]
 position = Vector2(120, 120)
+speed = 151
 current_weapon_type = 0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
@@ -88,20 +96,94 @@ position = Vector2(133, -604)
 [node name="Turret5" parent="." instance=ExtResource("11_vlxys")]
 position = Vector2(201, -656)
 
-[node name="Formation Test3" parent="." instance=ExtResource("12_4u0pq")]
-position = Vector2(18.375, -854)
-
-[node name="Formation Test" parent="." instance=ExtResource("13_a6pr8")]
-position = Vector2(-3.625, -521)
-
-[node name="Formation Test4" parent="." instance=ExtResource("12_4u0pq")]
-position = Vector2(21.375, -1169)
-
 [node name="Turret6" parent="." instance=ExtResource("11_vlxys")]
 position = Vector2(46, -903)
+burst_time = 0.25
+bullet_scene = ExtResource("11_bvno7")
 
 [node name="Turret7" parent="." instance=ExtResource("11_vlxys")]
-position = Vector2(193, -960)
+position = Vector2(192, -959)
+burst_time = 0.25
+bullet_scene = ExtResource("11_bvno7")
+
+[node name="Formation Test" parent="." instance=ExtResource("6_4hywx")]
+position = Vector2(12, -39)
+
+[node name="Formation Test2" parent="." instance=ExtResource("13_a6pr8")]
+position = Vector2(-11.625, -514)
+
+[node name="Formation Test3" parent="." instance=ExtResource("13_tql8d")]
+position = Vector2(39.375, -823)
+
+[node name="Formation Test4" parent="." instance=ExtResource("13_tql8d")]
+position = Vector2(23.375, -937)
+
+[node name="Formation Test5" parent="." instance=ExtResource("12_4u0pq")]
+position = Vector2(18.375, -1156)
+
+[node name="Wolk1" type="Sprite2D" parent="."]
+position = Vector2(67, 33)
+texture = ExtResource("15_0lia8")
+script = ExtResource("16_nafb6")
+
+[node name="Wolk5" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(198, -727)
+texture = ExtResource("17_7mw55")
+script = ExtResource("16_nafb6")
+speed = 5.0
+
+[node name="Wolk6" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(208, -534)
+texture = ExtResource("17_7mw55")
+script = ExtResource("16_nafb6")
+speed = 5.0
+
+[node name="Wolk7" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(230, -278)
+texture = ExtResource("17_7mw55")
+script = ExtResource("16_nafb6")
+speed = 5.0
+
+[node name="Wolk8" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(227, -957)
+texture = ExtResource("17_7mw55")
+script = ExtResource("16_nafb6")
+speed = 5.0
+
+[node name="Wolk2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(168, -18)
+texture = ExtResource("17_7mw55")
+script = ExtResource("16_nafb6")
+speed = 5.0
+
+[node name="Wolk3" type="Sprite2D" parent="."]
+position = Vector2(167, -53)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
+
+[node name="Wolk10" type="Sprite2D" parent="."]
+position = Vector2(0, -483)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
+
+[node name="Wolk9" type="Sprite2D" parent="."]
+position = Vector2(227, -593)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
+
+[node name="Wolk4" type="Sprite2D" parent="."]
+position = Vector2(84, -942)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
 
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]

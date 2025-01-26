@@ -20,6 +20,6 @@ bullet_scene = ExtResource("3_oaw5c")
 position = Vector2(52, 120)
 
 [node name="Turret2" parent="." instance=ExtResource("1_uw2ou")]
-process_mode = 4
 position = Vector2(204, 28)
 rate_of_fire = 0.05
+bullet_scene = ExtResource("3_oaw5c")

@@ -2,7 +2,7 @@ extends Area2D
 
 signal died 
 
-var explode_scene = preload("res://explosion.tscn")
+var explode_scene = preload("res://smal explosion.tscn")
 
 @export var speed = -50
 @export var aim_speed = 16
@@ -33,7 +33,7 @@ func _process(delta):
 		explode()
 	
 	if player:
-		rotation += (get_angle_to(player.position) + deg_to_rad(90)) / aim_speed
+		rotation += (get_angle_to(player.global_position) + deg_to_rad(90)) / aim_speed
 	
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():
@@ -59,3 +59,8 @@ func explode():
 	e.start(position)
 	##delete itself
 	queue_free()
+
+
+func _on_deathtimer_timeout() -> void:
+	explode()
+	pass # Replace with function body.

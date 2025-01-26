@@ -21,7 +21,6 @@ var can_shoot = true
 
 @onready var screensize = get_viewport_rect().size
 
-
 func _ready():
 	start()
 
@@ -73,7 +72,7 @@ func shoot():
 func shoot_default():
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
@@ -82,32 +81,29 @@ func shoot_default():
 func shoot_scatter():
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8), deg_to_rad(rotation+15))
+	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation+15))
 	
 	b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
 	
 	b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8), deg_to_rad(rotation-15))
+	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation-15))
 	pass
 	
 func shoot_gattling():
 	$GunCooldown.wait_time = gatling_cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -8), deg_to_rad(rotation))
+	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
 	pass
 	
-
-
-
 func set_shield(value):
 	shield = min(max_shield, value)
 	shield_changed.emit(max_shield, shield)
@@ -119,8 +115,7 @@ func set_shield(value):
 func _on_gun_cooldown_timeout():
 	can_shoot = true
 
-
 func _on_area_entered(area):
 	if area.is_in_group("enemies"):
-		area.explode() 
-		shield -= max_shield / 2.0
+		area.reduce_health(4) 
+		shield -= 4
