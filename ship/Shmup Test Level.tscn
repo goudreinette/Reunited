@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=55 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
 [ext_resource type="Shader" path="res://water.gdshader" id="2_16fhy"]
@@ -8,16 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://bcrb5e5h7wpg0" path="res://Sprites/Test Level.png" id="4_f7ubc"]
 [ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="5_rr64a"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="6_4hywx"]
+[ext_resource type="Texture2D" uid="uid://c1sd4b0hfb3w7" path="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png" id="6_cjmkl"]
 [ext_resource type="Script" path="res://ship/level_position.gd" id="7_002rr"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="8_sb0o7"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="9_n2h18"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="10_d2x54"]
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="11_bvno7"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_vlxys"]
-[ext_resource type="PackedScene" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
+[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
 [ext_resource type="Texture2D" uid="uid://c5np1h332wf80" path="res://Sprites/parasol.png" id="13_0bsmn"]
-[ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
-[ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="13_tql8d"]
+[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_a6pr8"]
+[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
 [ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Sprites/Wolk 1.png" id="15_0lia8"]
 [ext_resource type="Script" path="res://ship/wolk.gd" id="16_nafb6"]
@@ -42,24 +43,127 @@ shader_parameter/DISTORTION_SPEED = 5.0
 shader_parameter/DISTORTION_STRENGTH = 0.08
 shader_parameter/SCALE = 30.0
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rd3d"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 0, 96, 80)
 
-[sub_resource type="Animation" id="Animation_2aja5"]
-resource_name = "buoyancy"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.833333, 2.13333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 2), Vector2(0, 0)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aads"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 80, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vysrq"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 160, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elbs6"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 240, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4guq2"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 320, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3npyf"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 400, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ncxu"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 480, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvl1g"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 560, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lrr2"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 640, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vguo2"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 720, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrule"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 800, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utaio"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 880, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rgs2"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 960, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl3jh"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 1040, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pe1w"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 1120, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmidt"]
+atlas = ExtResource("6_cjmkl")
+region = Rect2(0, 1200, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5gv2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rd3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aads")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vysrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elbs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4guq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3npyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ncxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvl1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lrr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vguo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrule")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utaio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rgs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl3jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pe1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmidt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 
 [sub_resource type="Animation" id="Animation_usyx3"]
 length = 0.001
@@ -86,6 +190,23 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2aja5"]
+resource_name = "buoyancy"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.833333, 2.13333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wrv3t"]
@@ -134,6 +255,33 @@ position = Vector2(119, 30)
 scale = Vector2(1.88281, 2.02386)
 texture = ExtResource("3_qbsuj")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(48, -81)
+texture = ExtResource("6_cjmkl")
+vframes = 16
+
+[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(48, -65)
+sprite_frames = SubResource("SpriteFrames_j5gv2")
+autoplay = "default"
+frame_progress = 0.903798
+
+[node name="BeachHorizontalAnim-asepritePallet3" type="AnimatedSprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(240, -65)
+sprite_frames = SubResource("SpriteFrames_j5gv2")
+autoplay = "default"
+frame_progress = 0.903798
+
+[node name="BeachHorizontalAnim-asepritePallet2" type="AnimatedSprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(144, -65)
+sprite_frames = SubResource("SpriteFrames_j5gv2")
+autoplay = "default"
+frame_progress = 0.903798
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("2_b57pp")]
@@ -152,7 +300,7 @@ texture = ExtResource("3_4m7a4")
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -5
 texture_repeat = 2
-position = Vector2(120, -480)
+position = Vector2(120, -482)
 texture = ExtResource("4_f7ubc")
 region_rect = Rect2(0, 0, 240, 160)
 
