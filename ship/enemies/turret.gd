@@ -5,7 +5,7 @@ signal died
 @export var maxhealth : int = 5 
 @export var health : int  
 var healthratio : float 
-var explode_scene = preload("res://explosion 2.tscn")
+var explode_scene = preload("res://big Explosion.tscn")
 var isdead : bool = false
 
 enum FiringPatterns {
@@ -47,7 +47,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	print(health)
+
 	# var look_at_angle = $Canon.get_angle_to(player.position) - deg_to_rad(90)	
 	##Look at Player if he exists
 	if player and not isdead:

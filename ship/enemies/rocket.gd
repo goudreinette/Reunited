@@ -2,7 +2,7 @@ extends Area2D
 
 signal died 
 
-var explode_scene = preload("res://explosion.tscn")
+var explode_scene = preload("res://smal explosion.tscn")
 
 @export var speed = -50
 @export var aim_speed = 16
@@ -59,3 +59,8 @@ func explode():
 	e.start(position)
 	##delete itself
 	queue_free()
+
+
+func _on_deathtimer_timeout() -> void:
+	explode()
+	pass # Replace with function body.

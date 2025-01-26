@@ -12,8 +12,8 @@ func reduce_health(amount):
 		
 	
 func _process(delta: float) -> void:
+	pass
 	
-	print(health)
 	
 
 # Called when the node enters the scene tree for the first time.

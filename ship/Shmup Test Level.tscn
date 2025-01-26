@@ -162,6 +162,18 @@ texture = ExtResource("18_gb61i")
 script = ExtResource("16_nafb6")
 speed = 20.0
 
+[node name="Wolk10" type="Sprite2D" parent="."]
+position = Vector2(0, -483)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
+
+[node name="Wolk9" type="Sprite2D" parent="."]
+position = Vector2(227, -593)
+texture = ExtResource("18_gb61i")
+script = ExtResource("16_nafb6")
+speed = 20.0
+
 [node name="Wolk4" type="Sprite2D" parent="."]
 position = Vector2(84, -942)
 texture = ExtResource("18_gb61i")

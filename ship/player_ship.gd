@@ -72,7 +72,7 @@ func shoot():
 func shoot_default():
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
@@ -81,7 +81,7 @@ func shoot_default():
 func shoot_scatter():
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation+15))
@@ -98,7 +98,7 @@ func shoot_scatter():
 func shoot_gattling():
 	$GunCooldown.wait_time = gatling_cooldown
 	$GunCooldown.start()
-	print(bullet_scene)
+	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
