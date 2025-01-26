@@ -25,6 +25,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nbg31"]
 shader = ExtResource("2_16fhy")
+shader_parameter/DISTORTION_SPEED = 5.0
+shader_parameter/DISTORTION_STRENGTH = 0.08
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 

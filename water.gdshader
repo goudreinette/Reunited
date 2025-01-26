@@ -24,6 +24,8 @@ float voronoi(vec2 uv) {
 }
 
 
+uniform float DISTORTION_SPEED: hint_range(0.0, 5.0, .1) = 2.0;
+uniform float DISTORTION_STRENGTH: hint_range(0.0, 1.0, .01) = 0.17;
 
 
 void fragment() {
@@ -39,9 +41,9 @@ void fragment() {
     
     // I decided to use the second color, to fade the foam a bit more, which is why they'll share the same UV :)
     float scale1 = 20.0;
-    float distortion1Strength = 0.12;
+    float distortion1Strength = DISTORTION_STRENGTH;
     float distortion1Frequency = 6.0;
-    float distortion1Speed = 1.6;
+    float distortion1Speed = DISTORTION_SPEED;
     float edge1ThresholdMin = 0.01;
     float edge1ThresholdMax = 0.18;
     float edge2ThresholdMin = 0.1;
