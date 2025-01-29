@@ -117,5 +117,6 @@ func _on_gun_cooldown_timeout():
 
 func _on_area_entered(area):
 	if area.is_in_group("enemies"):
-		area.reduce_health(4) 
+		area.reduce_health(4)
+		$Hit.play()
 		shield -= 4
