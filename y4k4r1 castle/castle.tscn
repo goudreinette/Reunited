@@ -66,15 +66,15 @@ position = Vector2(124, 132)
 cooldown = 0.05
 current_weapon_type = 1
 
-[node name="Blink test" type="Sprite2D" parent="."]
+[node name="Hit test" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_qa4i3")
-position = Vector2(186, 102)
+position = Vector2(198, 60)
 scale = Vector2(0.565789, 0.565789)
 texture = ExtResource("4_6jy7c")
 hframes = 3
 frame = 1
 
-[node name="HitAnimation" type="AnimationPlayer" parent="Blink test"]
+[node name="HitAnimation" type="AnimationPlayer" parent="Hit test"]
 libraries = {
 "": SubResource("AnimationLibrary_ogk8m")
 }

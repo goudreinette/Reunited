@@ -55,6 +55,8 @@ func _process(delta: float) -> void:
 	
 	healthratio =  float(health) / float(maxhealth)
 	
+	print($CooldownTimer.time_left)
+	
 	if health <=0 and not isdead:
 		explode()
 	
@@ -91,14 +93,15 @@ func shoot():
 	
 
 func _on_shoot_timer_timeout():
-	if abs(player.global_position.y - global_position.y) < turret_range and not isdead:
-		if firing_pattern == FiringPatterns.Continuous:
-			shoot()
-			$ShootTimer.start()
-		elif firing_pattern == FiringPatterns.Burst:
-			if not is_cooling_down:
+	if player:
+		if abs(player.global_position.y - global_position.y) < turret_range and not isdead:
+			if firing_pattern == FiringPatterns.Continuous:
 				shoot()
 				$ShootTimer.start()
+			elif firing_pattern == FiringPatterns.Burst:
+				if not is_cooling_down:
+					shoot()
+					$ShootTimer.start()
 	
 #	$ShootTimer.wait_time = rate_of_fire
 

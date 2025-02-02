@@ -93,7 +93,7 @@ material = SubResource("ShaderMaterial_qrvj6")
 texture = ExtResource("2_wmswj")
 hframes = 5
 vframes = 2
-frame = 9
+frame = 5
 
 [node name="Canon" type="Sprite2D" parent="."]
 z_index = -1

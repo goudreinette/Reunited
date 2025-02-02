@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://0l50mndc6jc0"]
+[gd_scene load_steps=57 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="2_16fhy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c1sd4b0hfb3w7" path="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png" id="6_cjmkl"]
 [ext_resource type="Script" path="res://ship/level_position.gd" id="7_002rr"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="8_sb0o7"]
+[ext_resource type="Shader" path="res://shaders/vhs.gdshader" id="9_kweht"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="9_n2h18"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="10_d2x54"]
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="11_bvno7"]
@@ -163,6 +164,30 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
+shader = ExtResource("9_kweht")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.213
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 54.597
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = -0.00999995
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.396
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.6
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
 
 [sub_resource type="Animation" id="Animation_usyx3"]
@@ -296,6 +321,12 @@ grow_vertical = 2
 [node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
 layout_mode = 2
 texture = ExtResource("3_4m7a4")
+
+[node name="Special FX" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_820i1")
+offset_right = 241.0
+offset_bottom = 160.0
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -5
