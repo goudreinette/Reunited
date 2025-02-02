@@ -1,11 +1,85 @@
-[gd_scene load_steps=5 format=3 uid="uid://sboq8omi1aii"]
+[gd_scene load_steps=11 format=3 uid="uid://sboq8omi1aii"]
 
 [ext_resource type="Script" path="res://ship/enemies/turret.gd" id="1_tgbef"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="2_kjxed"]
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
+[ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_f7h8c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrvj6"]
+resource_local_to_scene = true
+shader = ExtResource("3_f7h8c")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mfnu6"]
+resource_local_to_scene = true
+shader = ExtResource("3_f7h8c")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
 size = Vector2(19, 20)
+
+[sub_resource type="Animation" id="Animation_uevv7"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Base:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Canon:material:shader_parameter/active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_63hha"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Base:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Canon:material:shader_parameter/active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sxlcj"]
+_data = {
+"RESET": SubResource("Animation_63hha"),
+"hit": SubResource("Animation_uevv7")
+}
 
 [node name="Turret" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_tgbef")
@@ -15,6 +89,7 @@ bullet_scene = ExtResource("2_kjxed")
 
 [node name="Base" type="Sprite2D" parent="."]
 z_index = -1
+material = SubResource("ShaderMaterial_qrvj6")
 texture = ExtResource("2_wmswj")
 hframes = 5
 vframes = 2
@@ -22,6 +97,7 @@ frame = 9
 
 [node name="Canon" type="Sprite2D" parent="."]
 z_index = -1
+material = SubResource("ShaderMaterial_mfnu6")
 texture = ExtResource("2_wmswj")
 hframes = 5
 vframes = 2
@@ -43,6 +119,11 @@ one_shot = true
 [node name="ShootTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="HitAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sxlcj")
+}
 
 [connection signal="timeout" from="BurstTimer" to="." method="_on_burst_timer_timeout"]
 [connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

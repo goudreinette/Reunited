@@ -7,6 +7,7 @@ var explode_scene = preload("res://Smal explosion.tscn")
 
 func reduce_health(amount):
 	health -= amount
+	$HitAnimation.play("hit")
 	if health<=0 :
 		explode()
 		
@@ -23,6 +24,7 @@ func explode():
 	#$AudioStreamPlayer2D.play()
 	#set_deferred("monitorable", false)
 	#await $AnimationPlayer.animation_finished
+	$HitAnimation.play("RESET")
 	died.emit(5)
 	##spawn explosion
 	var e = explode_scene.instantiate()

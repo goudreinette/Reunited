@@ -66,6 +66,8 @@ func _process(delta: float) -> void:
 	
 func reduce_health(amount):
 	health -= amount
+	#if health > 0:
+	$HitAnimation.play("hit")
 	
 func explode():
 	isdead = true
@@ -77,8 +79,9 @@ func explode():
 	e.start(global_position)
 	
 	died.emit(5)
+	await $HitAnimation.animation_finished
 	process_mode = Node.PROCESS_MODE_DISABLED
-	#await $AnimationPlayer.animation_finished
+	
 	#queue_free()
 
 func shoot():
