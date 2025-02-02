@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dottkyqrvagt3"
-path="res://.godot/imported/Beach_Corner_Outlet_Anim.png-d5ec6b0e5e287d6b9cfdd620180e4a4e.ctex"
+uid="uid://bhnwa5btw4bwp"
+path="res://.godot/imported/charging.png-eab19f8eb5000c5689bba010d81b9025.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Corner_Outlet_Anim.png"
-dest_files=["res://.godot/imported/Beach_Corner_Outlet_Anim.png-d5ec6b0e5e287d6b9cfdd620180e4a4e.ctex"]
+source_file="res://Sprites/Effects/charging.png"
+dest_files=["res://.godot/imported/charging.png-eab19f8eb5000c5689bba010d81b9025.ctex"]
 
 [params]
 
