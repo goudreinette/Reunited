@@ -160,7 +160,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 12.0
+"speed": 6.0
 }]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]

@@ -136,6 +136,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ewn18")
 script = ExtResource("1_vadn3")
+metadata/_edit_lock_ = true
 
 [node name="VibyFloatingCastle1Dec242024-12-012051" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_eoyf3")
