@@ -1,0 +1,22 @@
+# Blender 4.2.0 MTL File: 'heart.blend'
+# www.blender.org
+
+newmtl Material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd /Users/Rein/Documents/Code/Permacomputing/DS/ds-vjing/y4k4r1/graphics/mp3.png
+
+newmtl Material_30
+Ns 159.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.423529 0.019608 0.019608
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2

@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://0l50mndc6jc0"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_xct61"]
-[ext_resource type="Shader" path="res://water.gdshader" id="2_16fhy"]
+[ext_resource type="Shader" path="res://shaders/water.gdshader" id="2_16fhy"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_b57pp"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://ship/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="3_4m7a4"]
 [ext_resource type="Texture2D" uid="uid://c5etavhissrlr" path="res://icon big.png" id="3_qbsuj"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Sprites/Wolk 3.png" id="18_gb61i"]
 [ext_resource type="Texture2D" uid="uid://cw23oebbua8p1" path="res://Sprites/buoy.png" id="20_pbauq"]
 [ext_resource type="Script" path="res://buoyancy.gd" id="21_3l65o"]
-[ext_resource type="Shader" path="res://water_lake.gdshader" id="23_8f262"]
+[ext_resource type="Shader" path="res://shaders/water_lake.gdshader" id="23_8f262"]
 [ext_resource type="Texture2D" uid="uid://uwbusy5ytjma" path="res://Sprites/zandkasteel.png" id="24_p2nqn"]
 [ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://Sprites/raft.png" id="25_55w1p"]
 [ext_resource type="Texture2D" uid="uid://h573t5ikovdp" path="res://Sprites/lake.png" id="28_mvndr"]
@@ -273,7 +273,7 @@ texture_repeat = 2
 position = Vector2(240, -65)
 sprite_frames = SubResource("SpriteFrames_j5gv2")
 autoplay = "default"
-frame_progress = 0.747018
+frame_progress = 0.399718
 
 [node name="BeachHorizontalAnim-asepritePallet2" type="AnimatedSprite2D" parent="."]
 texture_repeat = 2

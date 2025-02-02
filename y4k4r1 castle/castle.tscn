@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://f8kieb5rigli"]
+
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="1_2naho"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="2_umu6l"]
+[ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_tbvte"]
+[ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://Sprites/Tiny player ship.png" id="4_6jy7c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2dhyy"]
+shader = ExtResource("3_tbvte")
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qa4i3"]
+shader = ExtResource("3_tbvte")
+shader_parameter/active = false
+
+[node name="Castle" type="Node2D"]
+
+[node name="Turret" parent="." instance=ExtResource("1_2naho")]
+position = Vector2(123, 18)
+burst_time = 1.0
+cooldown_time = 1.0
+rate_of_fire = 0.013
+
+[node name="Player" parent="." instance=ExtResource("2_umu6l")]
+material = SubResource("ShaderMaterial_2dhyy")
+position = Vector2(124, 132)
+cooldown = 0.05
+current_weapon_type = 1
+
+[node name="Blink test" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qa4i3")
+position = Vector2(186, 102)
+scale = Vector2(0.565789, 0.565789)
+texture = ExtResource("4_6jy7c")
+hframes = 3
+frame = 1
+
+[node name="Blink timer" type="Timer" parent="Blink test"]
+wait_time = 0.125
+autostart = true
