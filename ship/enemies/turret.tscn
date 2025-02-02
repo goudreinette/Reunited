@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://sboq8omi1aii"]
+[gd_scene load_steps=28 format=3 uid="uid://sboq8omi1aii"]
 
 [ext_resource type="Script" path="res://ship/enemies/turret.gd" id="1_tgbef"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="2_kjxed"]
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
 [ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_f7h8c"]
+[ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://Sprites/Effects/charging.png" id="5_ibv0s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qrvj6"]
 resource_local_to_scene = true
@@ -16,6 +17,105 @@ resource_local_to_scene = true
 shader = ExtResource("3_f7h8c")
 shader_parameter/active = false
 shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkm51"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkb5s"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy48l"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owc24"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8qn2"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vq7k"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js2m0"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2yna"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mserk"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ua0c"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc2m8"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8hdd"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq6s1"]
+atlas = ExtResource("5_ibv0s")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcn1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkm51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkb5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy48l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owc24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8qn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vq7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js2m0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2yna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mserk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ua0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc2m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8hdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq6s1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6a30"]
 size = Vector2(19, 20)
@@ -81,6 +181,14 @@ _data = {
 "hit": SubResource("Animation_uevv7")
 }
 
+[sub_resource type="Animation" id="Animation_y7y66"]
+resource_name = "charge"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vdvs"]
+_data = {
+"charge": SubResource("Animation_y7y66")
+}
+
 [node name="Turret" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_tgbef")
 health = 1
@@ -105,6 +213,12 @@ vframes = 2
 [node name="ShootPos" type="Node2D" parent="Canon"]
 position = Vector2(0, 10)
 
+[node name="ChargeAnimation" type="AnimatedSprite2D" parent="Canon"]
+position = Vector2(0, 7)
+sprite_frames = SubResource("SpriteFrames_fcn1x")
+frame = 12
+frame_progress = 1.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_x6a30")
@@ -123,6 +237,12 @@ autostart = true
 [node name="HitAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_sxlcj")
+}
+
+[node name="ChargeAnimation-" type="AnimationPlayer" parent="."]
+root_node = NodePath("../HitAnimation")
+libraries = {
+"": SubResource("AnimationLibrary_6vdvs")
 }
 
 [connection signal="timeout" from="BurstTimer" to="." method="_on_burst_timer_timeout"]

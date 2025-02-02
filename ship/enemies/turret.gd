@@ -55,15 +55,18 @@ func _process(delta: float) -> void:
 	
 	healthratio =  float(health) / float(maxhealth)
 	
-	print($CooldownTimer.time_left)
+#	# Charging!
+	#print($BurstTimer.time_left)
+	#if not $BurstTimer.is_stopped() and $BurstTimer.time_left < 2 and not $Canon/ChargeAnimation.is_playing():
+		#$Canon/ChargeAnimation.play()
 	
 	if health <=0 and not isdead:
 		explode()
 	
-	##Set frame to health
-	##base
+	# Set frame to health
+	# base
 	$Base.frame = remap(healthratio, 1, 0, 5, 9)
-	##Turret
+	# Turret
 	$Canon.frame = remap(healthratio, 1, 0, 0, 4)
 	
 func reduce_health(amount):
@@ -81,7 +84,8 @@ func explode():
 	e.start(global_position)
 	
 	died.emit(5)
-	await $HitAnimation.animation_finished
+	await $HitAnimation.animation_finished # Needed to 
+	await $Canon/ChargeAnimation.animation_finished
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
 	#queue_free()
@@ -102,16 +106,18 @@ func _on_shoot_timer_timeout():
 				if not is_cooling_down:
 					shoot()
 					$ShootTimer.start()
-	
+
 #	$ShootTimer.wait_time = rate_of_fire
 
 
 func _on_burst_timer_timeout() -> void:
 	is_cooling_down = true
 	$CooldownTimer.start()
-
+	if firing_pattern == FiringPatterns.Burst:
+		$Canon/ChargeAnimation.play()
 
 func _on_cooldown_timer_timeout() -> void:
 	is_cooling_down = false
 	$BurstTimer.start()
 	$ShootTimer.start()
+	
