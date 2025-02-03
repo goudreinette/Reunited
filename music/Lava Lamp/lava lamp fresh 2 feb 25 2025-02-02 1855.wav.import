@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5emvmotegpw8"
+path="res://.godot/imported/lava lamp fresh 2 feb 25 2025-02-02 1855.wav-6f3c709a95e7117b6fd13d6dfe7ba230.sample"
+
+[deps]
+
+source_file="res://music/Lava Lamp/lava lamp fresh 2 feb 25 2025-02-02 1855.wav"
+dest_files=["res://.godot/imported/lava lamp fresh 2 feb 25 2025-02-02 1855.wav-6f3c709a95e7117b6fd13d6dfe7ba230.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

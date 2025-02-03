@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0w6q8vy7m8bg"
+path="res://.godot/imported/Audio 8-3.wav-98c52e749552d3b2c8ea1aa26e3b5534.sample"
+
+[deps]
+
+source_file="res://music/Chill Wasteland/Relaxed in t midden neo-soul/samples/Audio 8-3.wav"
+dest_files=["res://.godot/imported/Audio 8-3.wav-98c52e749552d3b2c8ea1aa26e3b5534.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

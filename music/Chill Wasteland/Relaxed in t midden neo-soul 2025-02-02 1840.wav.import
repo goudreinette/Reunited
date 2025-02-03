@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmao6k1v8lc6l"
+path="res://.godot/imported/Relaxed in t midden neo-soul 2025-02-02 1840.wav-0830089685d335aff60a2f8756de0566.sample"
+
+[deps]
+
+source_file="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav"
+dest_files=["res://.godot/imported/Relaxed in t midden neo-soul 2025-02-02 1840.wav-0830089685d335aff60a2f8756de0566.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

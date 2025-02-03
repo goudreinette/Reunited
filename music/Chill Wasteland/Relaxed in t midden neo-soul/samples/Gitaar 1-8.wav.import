@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsh6pdaoilqpb"
+path="res://.godot/imported/Gitaar 1-8.wav-19d8d6558fd97f4e30f7f44ee452d045.sample"
+
+[deps]
+
+source_file="res://music/Chill Wasteland/Relaxed in t midden neo-soul/samples/Gitaar 1-8.wav"
+dest_files=["res://.godot/imported/Gitaar 1-8.wav-19d8d6558fd97f4e30f7f44ee452d045.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
