@@ -16,10 +16,10 @@
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="10_d2x54"]
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="11_bvno7"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="11_vlxys"]
-[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
+[ext_resource type="PackedScene" path="res://formation_diagonal_Double.tscn" id="12_4u0pq"]
 [ext_resource type="Texture2D" uid="uid://c5np1h332wf80" path="res://Sprites/parasol.png" id="13_0bsmn"]
-[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="13_a6pr8"]
-[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="13_tql8d"]
+[ext_resource type="PackedScene" path="res://formation_loop.tscn" id="13_a6pr8"]
+[ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="13_tql8d"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="14_w4r5u"]
 [ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Sprites/Wolk 1.png" id="15_0lia8"]
 [ext_resource type="Script" path="res://ship/wolk.gd" id="16_nafb6"]
@@ -293,16 +293,16 @@ sprite_frames = SubResource("SpriteFrames_j5gv2")
 autoplay = "default"
 frame_progress = 0.903798
 
-[node name="BeachHorizontalAnim-asepritePallet3" type="AnimatedSprite2D" parent="."]
-texture_repeat = 2
-position = Vector2(240, -65)
-sprite_frames = SubResource("SpriteFrames_j5gv2")
-autoplay = "default"
-frame_progress = 0.399718
-
 [node name="BeachHorizontalAnim-asepritePallet2" type="AnimatedSprite2D" parent="."]
 texture_repeat = 2
 position = Vector2(144, -65)
+sprite_frames = SubResource("SpriteFrames_j5gv2")
+autoplay = "default"
+frame_progress = 0.903798
+
+[node name="BeachHorizontalAnim-asepritePallet3" type="AnimatedSprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(240, -65)
 sprite_frames = SubResource("SpriteFrames_j5gv2")
 autoplay = "default"
 frame_progress = 0.903798
