@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://b32476hejmrnj"]
+[gd_scene load_steps=16 format=3 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" path="res://ship/player_ship.gd" id="1_4pouc"]
-[ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="2_6cdot"]
-[ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://Sprites/Tiny player ship.png" id="2_e5sdr"]
+[ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/Boosters (16 x 16).png" id="2_6cdot"]
+[ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://sprites/Tiny player ship.png" id="2_e5sdr"]
+[ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://ship/bullet.tscn" id="2_kqyt4"]
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="3_n7bvj"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="4_bbrn4"]
 [ext_resource type="AudioStream" uid="uid://wiwbctp75u5d" path="res://sounds/blast new.wav" id="6_k3t33"]
@@ -71,6 +72,7 @@ animations = [{
 [node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_4pouc")
 current_weapon_type = 2
+bullet_scene = ExtResource("2_kqyt4")
 
 [node name="Ship" type="Sprite2D" parent="."]
 texture_filter = 1

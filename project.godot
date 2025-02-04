@@ -29,7 +29,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
 "test_timeline": "res://characters/test_timeline.dtl",
-"timeline": "res://Walking Scenes/timeline.dtl"
+"timeline": "res://walking scenes/timeline.dtl"
 }
 layout/style_list=["res://characters/new_style.tres"]
 layout/default_style="res://characters/new_style.tres"

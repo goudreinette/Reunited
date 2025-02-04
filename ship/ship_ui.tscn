@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://ship/ship_ui.gd" id="1_2ifyw"]
 [ext_resource type="Texture2D" uid="uid://cj6xormygja1x" path="res://ship/Mini Pixel Pack 3/UI objects/Item_held_box (16 x 16).png" id="1_nnhfv"]
-[ext_resource type="Texture2D" uid="uid://c1qtmgu2gu1ss" path="res://Sprites/bar_background.png" id="2_4c7md"]
+[ext_resource type="Texture2D" uid="uid://c1qtmgu2gu1ss" path="res://sprites/bar_background.png" id="2_4c7md"]
 [ext_resource type="PackedScene" uid="uid://crr2gxtgxt1cm" path="res://ship/score_counter.tscn" id="2_hbnwe"]
-[ext_resource type="Texture2D" uid="uid://ct0lgoiryohfr" path="res://Sprites/bar_foreground.png" id="3_vcqhw"]
+[ext_resource type="Texture2D" uid="uid://ct0lgoiryohfr" path="res://sprites/bar_foreground.png" id="3_vcqhw"]
 [ext_resource type="Texture2D" uid="uid://bd1m1f6xdmltw" path="res://ship/Mini Pixel Pack 3/Items/Circle_+_Square_+_Missile_pick-ups (16 x 16).png" id="4_1s16x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn21l"]

@@ -12,7 +12,7 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var gatling_cooldown = 0.025
 @export var current_weapon_type = WeaponTypes.SCATTER
 
-var bullet_scene = preload("res://ship/bullet.tscn")
+@export var bullet_scene: PackedScene
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
 var shield = max_shield:

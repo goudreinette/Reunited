@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="2_0uobw"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://ship/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="3_v1qd5"]
 [ext_resource type="Texture2D" uid="uid://o6gwbftsnc8c" path="res://ship/Mini Pixel Pack 3/UI objects/START (48 x 8).png" id="4_qm3bp"]
-[ext_resource type="Texture2D" uid="uid://c58h7js0ganhf" path="res://Sprites/landschap van boven.png" id="5_i2brr"]
+[ext_resource type="Texture2D" uid="uid://c58h7js0ganhf" path="res://sprites/landschap van boven.png" id="5_i2brr"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="6_3anf6"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_kg5dh"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="8_6xgag"]

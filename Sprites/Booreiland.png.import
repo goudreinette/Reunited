@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpchtv0i5gtml"
-path="res://.godot/imported/Booreiland.png-403c625db7de03c5c13693a3147209c9.ctex"
+path="res://.godot/imported/Booreiland.png-24dd55aba6f5a7330e119aff2fb8d808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Booreiland.png"
-dest_files=["res://.godot/imported/Booreiland.png-403c625db7de03c5c13693a3147209c9.ctex"]
+source_file="res://sprites/Booreiland.png"
+dest_files=["res://.godot/imported/Booreiland.png-24dd55aba6f5a7330e119aff2fb8d808.ctex"]
 
 [params]
 

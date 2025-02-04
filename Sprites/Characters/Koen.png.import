@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xa7e0tejyntx"
-path="res://.godot/imported/Koen.png-2aaa69ef0f72116ca97c6a5be147afd5.ctex"
+path="res://.godot/imported/Koen.png-12185f49bace65c8afa9409d90de90b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/Koen.png"
-dest_files=["res://.godot/imported/Koen.png-2aaa69ef0f72116ca97c6a5be147afd5.ctex"]
+source_file="res://sprites/Characters/Koen.png"
+dest_files=["res://.godot/imported/Koen.png-12185f49bace65c8afa9409d90de90b4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccaggb3urcv2f"
-path="res://.godot/imported/Enemy fixed wing drone.png-1e97e3ec87b13d7358bd57b437f63127.ctex"
+path="res://.godot/imported/Enemy fixed wing drone.png-43c32ccaf53cc40f104988552c4265fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy fixed wing drone.png"
-dest_files=["res://.godot/imported/Enemy fixed wing drone.png-1e97e3ec87b13d7358bd57b437f63127.ctex"]
+source_file="res://sprites/Enemy fixed wing drone.png"
+dest_files=["res://.godot/imported/Enemy fixed wing drone.png-43c32ccaf53cc40f104988552c4265fc.ctex"]
 
 [params]
 

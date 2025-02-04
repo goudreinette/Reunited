@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbp45q7ir264m"
-path="res://.godot/imported/Ship Strafe.png-9753bd46fe52639d3351e54e23859511.ctex"
+path="res://.godot/imported/Ship Strafe.png-6128a95f140e1333a9ed17f3aaf3f706.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ship Strafe.png"
-dest_files=["res://.godot/imported/Ship Strafe.png-9753bd46fe52639d3351e54e23859511.ctex"]
+source_file="res://sprites/Ship Strafe.png"
+dest_files=["res://.godot/imported/Ship Strafe.png-6128a95f140e1333a9ed17f3aaf3f706.ctex"]
 
 [params]
 

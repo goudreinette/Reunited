@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://ship/enemies/turret.gd" id="1_tgbef"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="2_kjxed"]
-[ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Sprites/turret.png" id="2_wmswj"]
+[ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://sprites/turret.png" id="2_wmswj"]
 [ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_f7h8c"]
-[ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://Sprites/Effects/charging.png" id="5_ibv0s"]
+[ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://sprites/Effects/charging.png" id="5_ibv0s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qrvj6"]
 resource_local_to_scene = true

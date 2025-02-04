@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1sd4b0hfb3w7"
-path="res://.godot/imported/Beach_Horizontal_Anim-aseprite_pallet.png-4b830f247e30e7aba7f1973cc4893c97.ctex"
+path="res://.godot/imported/Beach_Horizontal_Anim-aseprite_pallet.png-115f51f854aaca9f6040e65c85621cce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png"
-dest_files=["res://.godot/imported/Beach_Horizontal_Anim-aseprite_pallet.png-4b830f247e30e7aba7f1973cc4893c97.ctex"]
+source_file="res://sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png"
+dest_files=["res://.godot/imported/Beach_Horizontal_Anim-aseprite_pallet.png-115f51f854aaca9f6040e65c85621cce.ctex"]
 
 [params]
 
