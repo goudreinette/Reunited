@@ -60,8 +60,8 @@ text/autopauses={}
 
 window/size/viewport_width=240
 window/size/viewport_height=160
-window/size/window_width_override=960
-window/size/window_height_override=640
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
@@ -129,6 +129,6 @@ down={
 textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
-environment/defaults/default_clear_color=Color(0.372549, 0.8, 0.894118, 1)
+environment/defaults/default_clear_color=Color(0.0969384, 0.0939963, 0.1087, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

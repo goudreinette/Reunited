@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddh1g1oyr301q"]
+
+[ext_resource type="PackedScene" uid="uid://cee4yu2d6icjv" path="res://y4k4r1 castle/castle level.tscn" id="1_lxotg"]
+[ext_resource type="Shader" path="res://y4k4r1 castle/glow.gdshader" id="2_bt4fm"]
+[ext_resource type="Texture2D" uid="uid://dp6ism52t55cj" path="res://y4k4r1 castle/sprites/screenshot_2.png" id="2_k73o5"]
+[ext_resource type="Texture2D" uid="uid://d46knhj2mfn6" path="res://y4k4r1 castle/0020.png" id="2_ouxmp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5f2x"]
+shader = ExtResource("2_bt4fm")
+shader_parameter/bloomRadius = 50.0
+shader_parameter/bloomThreshold = 0.25
+shader_parameter/bloomIntensity = 1.0
+
+[node name="CastleHires" type="Node"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 1118.0
+offset_right = 1318.0
+offset_bottom = 270.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(200, 270)
+render_target_update_mode = 4
+
+[node name="Main" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_lxotg")]
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_k73o5")
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b5f2x")
+position = Vector2(1401, 89)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ouxmp")

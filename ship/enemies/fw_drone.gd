@@ -4,6 +4,7 @@ extends Area2D
 signal died
 @export var health : int = 2
 var explode_scene = preload("res://Smal explosion.tscn")
+@export var main: Node
 
 func reduce_health(amount):
 	health -= amount
@@ -28,7 +29,7 @@ func explode():
 	died.emit(5)
 	##spawn explosion
 	var e = explode_scene.instantiate()
-	get_tree().root.add_child(e)
+	get_parent().get_parent().get_parent().add_child(e)
 	e.start(global_position)
 	queue_free()
 

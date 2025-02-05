@@ -74,7 +74,7 @@ func shoot_default():
 	$GunCooldown.start()
 	
 	var b = bullet_scene.instantiate()
-	get_tree().root.add_child(b)
+	get_parent().get_parent().add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
 	pass
 	
@@ -100,7 +100,7 @@ func shoot_gattling():
 	$GunCooldown.start()
 	
 	var b = bullet_scene.instantiate()
-	get_tree().root.add_child(b)
+	get_parent().get_parent().add_child(b)
 	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
 	pass
 	

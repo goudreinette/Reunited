@@ -25,6 +25,7 @@ script = ExtResource("1_2ifyw")
 layout_mode = 2
 
 [node name="ShieldBar" type="TextureProgressBar" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(80, 16)
 layout_mode = 2
 size_flags_vertical = 4

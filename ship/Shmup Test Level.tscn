@@ -29,7 +29,7 @@
 [ext_resource type="Script" path="res://buoyancy.gd" id="21_3l65o"]
 [ext_resource type="Shader" path="res://shaders/water_lake.gdshader" id="23_8f262"]
 [ext_resource type="Texture2D" uid="uid://uwbusy5ytjma" path="res://sprites/zandkasteel.png" id="24_p2nqn"]
-[ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://sprites/raft.png" id="25_55w1p"]
+[ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://y4k4r1 castle/sprites/raft.png" id="25_55w1p"]
 [ext_resource type="Texture2D" uid="uid://h573t5ikovdp" path="res://sprites/lake.png" id="28_mvndr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
