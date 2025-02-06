@@ -15,6 +15,10 @@ run/main_scene="res://y4k4r1 castle/castle level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.png"
 
+[aseprite_importers]
+
+aseprite_executable_path="/Applications/Aseprite.app/Contents/MacOS/aseprite"
+
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -67,7 +71,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/nklbdev.aseprite_importers/plugin.cfg")
 
 [global_group]
 
