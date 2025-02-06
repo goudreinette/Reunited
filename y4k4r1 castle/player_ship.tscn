@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://2o4tjflot8db"]
 
 [ext_resource type="Script" path="res://ship/player_ship.gd" id="1_6mwg8"]
-[ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://ship/bullet.tscn" id="2_h0clt"]
+[ext_resource type="PackedScene" uid="uid://b4cnu1flkfk3m" path="res://y4k4r1 castle/bullet.tscn" id="2_ueemr"]
 [ext_resource type="Texture2D" uid="uid://rg5e1y2hp1d4" path="res://y4k4r1 castle/sprites/ship.png" id="3_c0gl4"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/Boosters (16 x 16).png" id="4_cehf7"]
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="5_olidp"]
@@ -72,7 +72,7 @@ animations = [{
 [node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_6mwg8")
 current_weapon_type = 2
-bullet_scene = ExtResource("2_h0clt")
+bullet_scene = ExtResource("2_ueemr")
 
 [node name="Ship" type="Sprite2D" parent="."]
 texture_filter = 1
