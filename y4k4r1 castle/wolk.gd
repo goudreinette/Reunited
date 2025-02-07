@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @export var speed : float = 10
-@export var range : int = 60
+@export var range : int = 100
 var player : Wendla
 
 func _ready() -> void:
