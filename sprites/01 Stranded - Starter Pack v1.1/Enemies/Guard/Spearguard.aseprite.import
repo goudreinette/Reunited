@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu30fkltswkdh"
-valid=false
+path="res://.godot/imported/Spearguard.aseprite-6ce57c40358081a4216dd0fc6e8e037c.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/01 Stranded - Starter Pack v1.1/Enemies/Guard/Spearguard.aseprite"
+dest_files=["res://.godot/imported/Spearguard.aseprite-6ce57c40358081a4216dd0fc6e8e037c.ctex"]
 
 [params]
 

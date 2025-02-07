@@ -84,11 +84,10 @@ func explode():
 	e.start(global_position)
 	
 	died.emit(5)
-	await $HitAnimation.animation_finished # Needed to 
-	await $Canon/ChargeAnimation.animation_finished
-	process_mode = Node.PROCESS_MODE_DISABLED
-	
-	#queue_free()
+	#await $HitAnimation.animation_finished # Needed to 
+	#await $Canon/ChargeAnimation.animation_finished
+	#process_mode = Node.PROCESS_MODE_DISABLED
+	queue_free()
 
 func shoot():
 	var b = bullet_scene.instantiate()

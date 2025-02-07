@@ -77,8 +77,12 @@ func shoot_default():
 	
 	var b = bullet_scene.instantiate()
 	get_parent().get_parent().add_child(b)
-	b.start(global_position + Vector2(0, -8), deg_to_rad(rotation))
-	pass
+	b.start(global_position + $Ship/BallLeft.position + Vector2(0,-8), deg_to_rad(rotation))
+	
+	b = bullet_scene.instantiate()
+	get_parent().get_parent().add_child(b)
+	b.start(global_position + $Ship/BallRight.position + Vector2(0,-8), deg_to_rad(rotation))
+	
 	
 func shoot_scatter():
 	$GunCooldown.wait_time = cooldown

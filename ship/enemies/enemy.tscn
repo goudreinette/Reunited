@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://buv1055nhydxp"]
 
-[ext_resource type="Script" path="res://ship/enemies/enemy.gd" id="1_d3jfa"]
+[ext_resource type="Script" uid="uid://bakwt5fvjdq7e" path="res://ship/enemies/enemy.gd" id="1_d3jfa"]
 [ext_resource type="Texture2D" uid="uid://7ltkhmklen0w" path="res://sprites/Effects/Explosion/explosion.png" id="3_vso54"]
 [ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_45wny"]
 [ext_resource type="Texture2D" uid="uid://dsrbcmaje2uwx" path="res://sprites/Drone-sheet.png" id="4_tc6cv"]
@@ -154,9 +154,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rfrsa"]
 _data = {
-"Idle": SubResource("Animation_30mqq"),
-"RESET": SubResource("Animation_suct1"),
-"explode": SubResource("Animation_jorl6")
+&"Idle": SubResource("Animation_30mqq"),
+&"RESET": SubResource("Animation_suct1"),
+&"explode": SubResource("Animation_jorl6")
 }
 
 [node name="Enemy" type="Area2D" groups=["enemies"]]

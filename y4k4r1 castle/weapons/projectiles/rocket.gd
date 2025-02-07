@@ -4,7 +4,9 @@ signal died
 
 var explode_scene = preload("res://smal explosion.tscn")
 
-@export var speed = 100
+@export var speed : float  = 100
+@export var acceleration : float = 0.25
+@export var max_speed : float = 100
 @export var aim_speed = 16
 
 @export var health : int = 1 
@@ -16,18 +18,19 @@ var target : Node2D
 func _ready():
 	##find the player if it exists
 	##so it doesnt crash while testing only the turret
-	var nodes_in_player_group = get_tree().get_nodes_in_group("enemies")
-	var closest_enemy = nodes_in_player_group.pick_random()
-	var closest_distance = 10000
-	for enemy in nodes_in_player_group:
-		var distance = abs(position.distance_to(enemy.position))
-		if position.y > enemy.position.y and distance < closest_distance:
-			closest_distance = distance
-			closest_enemy = enemy
-			
-	target = closest_enemy
-	#if nodes_in_player_group.size() > 0:
-		#player = nodes_in_player_group[0]
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	 # get spawn nodes
+	# assume the first spawn node is closest
+	if enemies.size() > 0:
+		var nearest_enemy = enemies[0]
+
+		# look through spawn nodes to see if any are closer
+		for enemy in enemies:
+			if enemy.global_position.distance_to(global_position) < nearest_enemy.global_position.distance_to(global_position):
+				if enemy.process_mode != PROCESS_MODE_DISABLED:
+					nearest_enemy = enemy
+
+		target = nearest_enemy
 		
 
 func start(pos,rot):
@@ -36,7 +39,8 @@ func start(pos,rot):
 	
 	
 func _process(delta):
-	position += Vector2(0, speed * delta).rotated(rotation)
+	speed = lerp(speed, max_speed, acceleration)
+	position -= Vector2(0, speed * delta).rotated(rotation)
 	
 	if health <=0:
 		explode()

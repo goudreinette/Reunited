@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b54c7ad6cogrm"]
 
-[ext_resource type="Script" path="res://ship/ship_ui.gd" id="1_2ifyw"]
+[ext_resource type="Script" uid="uid://cujukpgaoavpd" path="res://ship/ship_ui.gd" id="1_2ifyw"]
 [ext_resource type="Texture2D" uid="uid://cj6xormygja1x" path="res://ship/Mini Pixel Pack 3/UI objects/Item_held_box (16 x 16).png" id="1_nnhfv"]
 [ext_resource type="Texture2D" uid="uid://c1qtmgu2gu1ss" path="res://sprites/bar_background.png" id="2_4c7md"]
 [ext_resource type="PackedScene" uid="uid://crr2gxtgxt1cm" path="res://ship/score_counter.tscn" id="2_hbnwe"]

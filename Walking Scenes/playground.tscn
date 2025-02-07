@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://walking scenes/Player/player.tscn" id="1_brvng"]
 [ext_resource type="PackedScene" uid="uid://bgeoyjbaki8r2" path="res://walking scenes/Tilemaps/Stratagy tiles.tscn" id="2_pr73x"]
 [ext_resource type="AudioStream" uid="uid://cdsgovxnob4ia" path="res://walking scenes/Viby floating castle 1 dec 24 2024-12-01 2051.mp3" id="3_075i3"]
-[ext_resource type="Script" path="res://walking scenes/ander_mannetje.gd" id="4_6jmn8"]
-[ext_resource type="Script" path="res://walking scenes/LuchtSchipArea.gd" id="4_6mrwg"]
+[ext_resource type="Script" uid="uid://dmtenyxvdfii4" path="res://walking scenes/ander_mannetje.gd" id="4_6jmn8"]
+[ext_resource type="Script" uid="uid://bo77jfdl737bg" path="res://walking scenes/LuchtSchipArea.gd" id="4_6mrwg"]
 [ext_resource type="Texture2D" uid="uid://eewa1o6s7nma" path="res://sprites/Lucht Ship Idee 1.png" id="4_e0im1"]
 [ext_resource type="Texture2D" uid="uid://0wr37i8n6wvj" path="res://sprites/Ander Mannetje.png" id="6_wxt0i"]
 
@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u3pgk"]
 _data = {
-"Idle": SubResource("Animation_2a54e"),
-"RESET": SubResource("Animation_ue7rm")
+&"Idle": SubResource("Animation_2a54e"),
+&"RESET": SubResource("Animation_ue7rm")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a65ka"]

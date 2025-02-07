@@ -1,8 +1,8 @@
 [gd_scene load_steps=28 format=3 uid="uid://sboq8omi1aii"]
 
-[ext_resource type="Script" path="res://ship/enemies/turret.gd" id="1_tgbef"]
+[ext_resource type="Script" uid="uid://bo116ym7ll5wq" path="res://ship/enemies/turret.gd" id="1_tgbef"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="2_kjxed"]
-[ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_f7h8c"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_f7h8c"]
 [ext_resource type="Texture2D" uid="uid://e73rahljp7bt" path="res://y4k4r1 castle/sprites/turret.png" id="4_4nbwc"]
 [ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://sprites/Effects/charging.png" id="5_ibv0s"]
 
@@ -243,8 +243,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sxlcj"]
 _data = {
-"RESET": SubResource("Animation_63hha"),
-"hit": SubResource("Animation_uevv7")
+&"RESET": SubResource("Animation_63hha"),
+&"hit": SubResource("Animation_uevv7")
 }
 
 [sub_resource type="Animation" id="Animation_y7y66"]
@@ -252,7 +252,7 @@ resource_name = "charge"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6vdvs"]
 _data = {
-"charge": SubResource("Animation_y7y66")
+&"charge": SubResource("Animation_y7y66")
 }
 
 [node name="Turret" type="Area2D" groups=["enemies"]]
@@ -302,13 +302,13 @@ autostart = true
 
 [node name="HitAnimation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_sxlcj")
+&"": SubResource("AnimationLibrary_sxlcj")
 }
 
 [node name="ChargeAnimation-" type="AnimationPlayer" parent="."]
 root_node = NodePath("../HitAnimation")
 libraries = {
-"": SubResource("AnimationLibrary_6vdvs")
+&"": SubResource("AnimationLibrary_6vdvs")
 }
 
 [connection signal="timeout" from="BurstTimer" to="." method="_on_burst_timer_timeout"]

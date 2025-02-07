@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddh1g1oyr301q"]
 
 [ext_resource type="PackedScene" uid="uid://cee4yu2d6icjv" path="res://y4k4r1 castle/castle level.tscn" id="1_lxotg"]
-[ext_resource type="Shader" path="res://y4k4r1 castle/glow.gdshader" id="2_bt4fm"]
+[ext_resource type="Shader" uid="uid://bb3064sb8psi7" path="res://y4k4r1 castle/glow.gdshader" id="2_bt4fm"]
 [ext_resource type="Texture2D" uid="uid://dp6ism52t55cj" path="res://y4k4r1 castle/sprites/screenshot_2.png" id="2_k73o5"]
 [ext_resource type="Texture2D" uid="uid://d46knhj2mfn6" path="res://y4k4r1 castle/0020.png" id="2_ouxmp"]
 

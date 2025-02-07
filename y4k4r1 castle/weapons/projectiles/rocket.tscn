@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b4lgqlrbrapil"]
 
-[ext_resource type="Script" path="res://y4k4r1 castle/weapons/projectiles/rocket.gd" id="1_u2ber"]
+[ext_resource type="Script" uid="uid://dgshososoruk6" path="res://y4k4r1 castle/weapons/projectiles/rocket.gd" id="1_u2ber"]
 [ext_resource type="Texture2D" uid="uid://bk348k3ur3mku" path="res://y4k4r1 castle/sprites/Rocket.png" id="2_ix231"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7h67"]
@@ -45,8 +45,10 @@ colors = PackedColorArray(0.844209, 0.624863, 0.932724, 1, 0.337688, 0.81995, 1,
 
 [node name="Rocket" type="Area2D"]
 script = ExtResource("1_u2ber")
-speed = -350
-aim_speed = 36
+speed = 10.0
+acceleration = 0.025
+max_speed = 1000.0
+aim_speed = 12
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_62xdr")
@@ -74,7 +76,6 @@ scale_amount_curve = SubResource("Curve_xghrf")
 color_ramp = SubResource("Gradient_6utk5")
 
 [node name="Deathtimer" type="Timer" parent="."]
-wait_time = 4.0
 one_shot = true
 autostart = true
 

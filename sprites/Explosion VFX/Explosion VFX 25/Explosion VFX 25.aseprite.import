@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4jcyopkq5w6w"
-valid=false
+path="res://.godot/imported/Explosion VFX 25.aseprite-f57acc0492b2ff64206f6df6cd9a3fbc.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/Explosion VFX/Explosion VFX 25/Explosion VFX 25.aseprite"
+dest_files=["res://.godot/imported/Explosion VFX 25.aseprite-f57acc0492b2ff64206f6df6cd9a3fbc.ctex"]
 
 [params]
 

@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://emkns0ar1nuf"
-valid=false
+path="res://.godot/imported/Beach_Horizontal_Anim.ase-1c60ccc20b782dbeaa7c7e1945a17783.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim.ase"
+dest_files=["res://.godot/imported/Beach_Horizontal_Anim.ase-1c60ccc20b782dbeaa7c7e1945a17783.ctex"]
 
 [params]
 

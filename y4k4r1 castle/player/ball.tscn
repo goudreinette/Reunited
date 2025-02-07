@@ -61,7 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://ydcso4517l4g" path="res://y4k4r1 castle/sprites/wendla/balletje/0058.png" id="59_6d7a2"]
 [ext_resource type="Texture2D" uid="uid://dq24w5dgjid45" path="res://y4k4r1 castle/sprites/wendla/balletje/0059.png" id="60_26lss"]
 [ext_resource type="Texture2D" uid="uid://o5k0yoowwqe" path="res://y4k4r1 castle/sprites/wendla/balletje/0060.png" id="61_g341v"]
-[ext_resource type="Script" path="res://y4k4r1 castle/player/ball.gd" id="62_woswr"]
+[ext_resource type="Script" uid="uid://etsyp0835vio" path="res://y4k4r1 castle/player/ball.gd" id="62_woswr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yr418"]
 animations = [{

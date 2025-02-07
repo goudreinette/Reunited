@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c80567mxn42ap"]
 
-[ext_resource type="Script" path="res://y4k4r1 castle/enemies/formation.gd" id="1_klyvp"]
+[ext_resource type="Script" uid="uid://dt0c18ex05ns3" path="res://y4k4r1 castle/enemies/formation.gd" id="1_klyvp"]
 [ext_resource type="PackedScene" uid="uid://cclj1rct6aop4" path="res://ship/enemies/drone_parent.tscn" id="2_rljjw"]
 [ext_resource type="PackedScene" uid="uid://j4wmogsu4mdb" path="res://ship/enemies/fw_drone.tscn" id="3_xdfth"]
 

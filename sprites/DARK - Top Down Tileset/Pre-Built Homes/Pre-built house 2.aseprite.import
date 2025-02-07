@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsavh75jciath"
-valid=false
+path="res://.godot/imported/Pre-built house 2.aseprite-a9fc98919f67533932cdec76d9370fb2.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/DARK - Top Down Tileset/Pre-Built Homes/Pre-built house 2.aseprite"
+dest_files=["res://.godot/imported/Pre-built house 2.aseprite-a9fc98919f67533932cdec76d9370fb2.ctex"]
 
 [params]
 

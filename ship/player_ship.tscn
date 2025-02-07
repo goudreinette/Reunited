@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://b32476hejmrnj"]
 
-[ext_resource type="Script" path="res://ship/player_ship.gd" id="1_4pouc"]
+[ext_resource type="Script" uid="uid://vhgoafd1ywqm" path="res://ship/player_ship.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/boosters.png" id="2_6cdot"]
 [ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://sprites/Tiny player ship.png" id="2_e5sdr"]
 [ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://ship/bullet.tscn" id="2_kqyt4"]

@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd6v52sbnyyyo"
-valid=false
+path="res://.godot/imported/thruster.ase-f76fe98a454802a2920c59e1087f6662.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/Tile_Sprites/thruster.ase"
+dest_files=["res://.godot/imported/thruster.ase-f76fe98a454802a2920c59e1087f6662.ctex"]
 
 [params]
 

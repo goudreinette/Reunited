@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n630j77mb4m8"
-valid=false
+path="res://.godot/imported/explosion.ase-fb42886d7ab38be8e59f53e1cbfb29b9.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/Effects/Explosion/explosion.ase"
+dest_files=["res://.godot/imported/explosion.ase-fb42886d7ab38be8e59f53e1cbfb29b9.ctex"]
 
 [params]
 

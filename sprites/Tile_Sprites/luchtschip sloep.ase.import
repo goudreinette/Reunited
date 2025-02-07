@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byg4k16wtttrl"
-valid=false
+path="res://.godot/imported/luchtschip sloep.ase-89317c2f508d67807886d85bf19740db.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://sprites/Tile_Sprites/luchtschip sloep.ase"
+dest_files=["res://.godot/imported/luchtschip sloep.ase-89317c2f508d67807886d85bf19740db.ctex"]
 
 [params]
 

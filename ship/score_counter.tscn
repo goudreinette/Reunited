@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://crr2gxtgxt1cm"]
 
 [ext_resource type="Texture2D" uid="uid://c0lmfobnrs7br" path="res://ship/Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png" id="1_15uan"]
-[ext_resource type="Script" path="res://ship/score_counter.gd" id="1_wr850"]
+[ext_resource type="Script" uid="uid://cboq81sbe0cy" path="res://ship/score_counter.gd" id="1_wr850"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6f7n"]
 atlas = ExtResource("1_15uan")

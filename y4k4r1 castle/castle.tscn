@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="1_2naho"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="2_umu6l"]
-[ext_resource type="Shader" path="res://shaders/hit.gdshader" id="3_tbvte"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_tbvte"]
 [ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://sprites/Tiny player ship.png" id="4_6jy7c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2dhyy"]
@@ -48,8 +48,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ogk8m"]
 _data = {
-"RESET": SubResource("Animation_2fu8s"),
-"blink": SubResource("Animation_q6pbx")
+&"RESET": SubResource("Animation_2fu8s"),
+&"blink": SubResource("Animation_q6pbx")
 }
 
 [node name="Castle" type="Node2D"]
