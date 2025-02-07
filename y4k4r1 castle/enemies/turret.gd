@@ -21,7 +21,7 @@ enum FiringPatterns {
 @export var cooldown_time = 2.0
 @export var rate_of_fire = 0.25
 @export var aim_speed = 16
-var player : ShipPlayer
+var player : Wendla
 
 
 

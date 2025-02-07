@@ -17,9 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cpeoh3ov7opxe" path="res://y4k4r1 castle/sprites/parasol.png" id="14_qva1n"]
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="16_repr1"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
-[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="18_disdk"]
 [ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/player_ship.tscn" id="18_vioh1"]
-[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="19_7bt0x"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="21_5gh8r"]
 [ext_resource type="PackedScene" path="res://formation_diagonal.tscn" id="22_hphrm"]
@@ -31,6 +29,8 @@
 [ext_resource type="Script" path="res://y4k4r1 castle/wolk.gd" id="29_2n3r6"]
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://sprites/Wolk 2.png" id="29_e3c5y"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://sprites/Wolk 3.png" id="30_nmxpl"]
+[ext_resource type="PackedScene" uid="uid://b7ydf4vp5k7xh" path="res://y4k4r1 castle/enemies/turret.tscn" id="31_cqnwo"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="32_n06b0"]
 [ext_resource type="Texture2D" uid="uid://cf5ld11s11rl5" path="res://y4k4r1 castle/sprites/zandkasteel.png" id="33_6o0ew"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
@@ -493,52 +493,21 @@ scale = Vector2(2.90152, 2.90152)
 position = Vector2(123, 200)
 gatling_cooldown = 0.1
 
-[node name="Turret" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(43, -92)
-firing_pattern = 0
-rate_of_fire = 1.0
-
-[node name="Turret2" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(217, -68)
-firing_pattern = 0
-rate_of_fire = 1.0
-
-[node name="Turret3" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(50, -450)
-turret_range = 160
-firing_pattern = 0
-
-[node name="Turret4" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(134, -402)
-
-[node name="Turret5" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(202, -454)
-
-[node name="Turret6" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(47, -701)
-burst_time = 0.25
-bullet_scene = ExtResource("19_7bt0x")
-
-[node name="Turret7" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(192, -959)
-burst_time = 0.25
-bullet_scene = ExtResource("19_7bt0x")
-
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)
 rotation = 0.00074637
 
 [node name="Formation Test2" parent="." instance=ExtResource("21_5gh8r")]
-position = Vector2(23, -297)
+position = Vector2(60, -210)
 
 [node name="Formation Test3" parent="." instance=ExtResource("22_hphrm")]
-position = Vector2(37, -667)
+position = Vector2(-16, -359)
 
 [node name="Formation Test4" parent="." instance=ExtResource("22_hphrm")]
-position = Vector2(23.375, -869)
+position = Vector2(-38, -481)
 
 [node name="Formation Test5" parent="." instance=ExtResource("23_easw4")]
-position = Vector2(18.375, -1088)
+position = Vector2(-5, -271)
 
 [node name="Parasol" type="Sprite2D" parent="."]
 position = Vector2(73, -61)
@@ -636,3 +605,31 @@ speed = 20.0
 visible = false
 position = Vector2(180, 79)
 texture = ExtResource("33_6o0ew")
+
+[node name="Turret" parent="." instance=ExtResource("31_cqnwo")]
+position = Vector2(217, -189)
+cooldown_time = 1.0
+rate_of_fire = 0.013
+bullet_scene = ExtResource("32_n06b0")
+
+[node name="Turret2" parent="." instance=ExtResource("31_cqnwo")]
+position = Vector2(45, -216)
+cooldown_time = 1.0
+rate_of_fire = 0.013
+bullet_scene = ExtResource("32_n06b0")
+
+[node name="Turret3" parent="." instance=ExtResource("31_cqnwo")]
+position = Vector2(148, -350)
+cooldown_time = 1.0
+bullet_scene = ExtResource("32_n06b0")
+
+[node name="Turret4" parent="." instance=ExtResource("31_cqnwo")]
+position = Vector2(67, -439)
+cooldown_time = 1.0
+rate_of_fire = 0.013
+bullet_scene = ExtResource("32_n06b0")
+
+[node name="Turret5" parent="." instance=ExtResource("31_cqnwo")]
+position = Vector2(169, -108)
+rate_of_fire = 0.013
+bullet_scene = ExtResource("32_n06b0")
