@@ -17,14 +17,19 @@ func _ready():
 
 
 
+
+func random_position_just_outside_frame():
+	return Vector2(
+		randf_range(0, get_viewport_rect().size.x), 
+		$LevelPosition/Wendla.global_position.y - get_viewport_rect().size.y
+	)
+	
+
 func _process(delta):
 	if randi_range(0, 200) == 1:
 		var r = ring_pickup.instantiate()
 		add_child(r)
-		r.global_position = Vector2(
-			randf_range(0, get_viewport_rect().size.x), 
-			$LevelPosition/Wendla.global_position.y - get_viewport_rect().size.y
-		)
+		r.global_position = random_position_just_outside_frame()
 
 func _on_enemy_died(value):
 	score += value

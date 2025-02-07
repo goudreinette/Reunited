@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=76 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" uid="uid://w7rusoaqhu5r" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -32,7 +32,6 @@
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://sprites/Wolk 2.png" id="29_e3c5y"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://sprites/Wolk 3.png" id="30_nmxpl"]
 [ext_resource type="PackedScene" uid="uid://b7ydf4vp5k7xh" path="res://y4k4r1 castle/enemies/turret.tscn" id="31_cqnwo"]
-[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://ship/enemies/enemy_bullet.tscn" id="32_n06b0"]
 [ext_resource type="Texture2D" uid="uid://cf5ld11s11rl5" path="res://y4k4r1 castle/sprites/zandkasteel.png" id="33_6o0ew"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
@@ -646,27 +645,22 @@ texture = ExtResource("33_6o0ew")
 position = Vector2(217, -189)
 cooldown_time = 1.0
 rate_of_fire = 0.05
-bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret2" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(45, -216)
 cooldown_time = 1.0
 rate_of_fire = 0.05
-bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret3" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(148, -350)
 cooldown_time = 1.0
 rate_of_fire = 0.05
-bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret4" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(67, -439)
 cooldown_time = 1.0
 rate_of_fire = 0.05
-bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret5" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(169, -108)
 rate_of_fire = 0.05
-bullet_scene = ExtResource("32_n06b0")

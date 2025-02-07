@@ -13,6 +13,8 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var current_weapon_type = WeaponTypes.SCATTER
 
 @export var bullet_scene: PackedScene
+@export var bullet_scene_special: PackedScene
+
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
 
@@ -55,6 +57,31 @@ func _process(delta):
 			#if not $"..".playing:
 				#$".."._on_start_pressed()
 		shoot()
+		
+	if Input.is_action_pressed("shoot special"):
+		#if get_parent():
+			#if not $"..".playing:
+				#$".."._on_start_pressed()
+		shoot_special()
+		
+		
+func shoot_special():
+	if not can_shoot:
+		return
+	can_shoot = false
+	
+	$Ship/BallAnimationPlayer.play("fire")
+	$GunCooldown.wait_time = cooldown
+	$GunCooldown.start()
+	
+	var b = bullet_scene_special.instantiate()
+	get_parent().get_parent().add_child(b)
+	b.start(global_position + $Ship/BallLeft.position + Vector2(0,-8), deg_to_rad(rotation))
+	
+	b = bullet_scene_special.instantiate()
+	get_parent().get_parent().add_child(b)
+	b.start(global_position + $Ship/BallRight.position + Vector2(0,-8), deg_to_rad(rotation))
+	
 
 func shoot():
 	if not can_shoot:
