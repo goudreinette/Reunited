@@ -17,11 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://cpeoh3ov7opxe" path="res://y4k4r1 castle/sprites/parasol.png" id="14_qva1n"]
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://ship/ship_Camera2D.gd" id="16_repr1"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
-[ext_resource type="PackedScene" uid="uid://b4lgqlrbrapil" path="res://y4k4r1 castle/weapons/projectiles/rocket.tscn" id="18_06oqx"]
-[ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/player_ship.tscn" id="18_vioh1"]
+[ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/wendla.tscn" id="18_vioh1"]
 [ext_resource type="PackedScene" uid="uid://dvvcrlw6v5g1d" path="res://y4k4r1 castle/powerups/sonic_ring.tscn" id="19_xb83t"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
 [ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="21_5gh8r"]
+[ext_resource type="Script" uid="uid://dt0c18ex05ns3" path="res://y4k4r1 castle/enemies/formation.gd" id="21_jr0lg"]
 [ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="22_hphrm"]
 [ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="23_easw4"]
 [ext_resource type="Texture2D" uid="uid://cw23oebbua8p1" path="res://sprites/buoy.png" id="24_b4tl1"]
@@ -384,6 +384,7 @@ _data = {
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ykqqd")
+ring_pickup = ExtResource("19_xb83t")
 
 [node name="Lake" type="Sprite2D" parent="."]
 z_index = -1
@@ -495,7 +496,6 @@ position = Vector2(134, -135)
 [node name="LevelPosition" type="Node2D" parent="."]
 position = Vector2(0, 100)
 script = ExtResource("13_tm1yw")
-levelspeed = 20.0
 
 [node name="Camera2D" type="Camera2D" parent="LevelPosition"]
 position = Vector2(120, 80)
@@ -506,11 +506,9 @@ noise = SubResource("FastNoiseLite_uf0tv")
 position = Vector2(120, 77)
 scale = Vector2(2.90152, 2.90152)
 
-[node name="Player" parent="LevelPosition" instance=ExtResource("18_vioh1")]
+[node name="Wendla" parent="LevelPosition" instance=ExtResource("18_vioh1")]
 position = Vector2(123, 200)
 gatling_cooldown = 0.1
-current_weapon_type = 0
-bullet_scene = ExtResource("18_06oqx")
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)
@@ -518,15 +516,19 @@ rotation = 0.00074637
 
 [node name="Formation Test2" parent="." instance=ExtResource("21_5gh8r")]
 position = Vector2(60, -210)
+script = ExtResource("21_jr0lg")
 
 [node name="Formation Test3" parent="." instance=ExtResource("22_hphrm")]
 position = Vector2(-16, -359)
+script = ExtResource("21_jr0lg")
 
 [node name="Formation Test4" parent="." instance=ExtResource("22_hphrm")]
 position = Vector2(-38, -481)
+script = ExtResource("21_jr0lg")
 
 [node name="Formation Test5" parent="." instance=ExtResource("23_easw4")]
 position = Vector2(-5, -271)
+script = ExtResource("21_jr0lg")
 
 [node name="Parasol" type="Sprite2D" parent="."]
 position = Vector2(73, -61)
@@ -628,27 +630,28 @@ texture = ExtResource("33_6o0ew")
 [node name="Turret" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(217, -189)
 cooldown_time = 1.0
-rate_of_fire = 0.013
+rate_of_fire = 0.05
 bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret2" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(45, -216)
 cooldown_time = 1.0
-rate_of_fire = 0.013
+rate_of_fire = 0.05
 bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret3" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(148, -350)
 cooldown_time = 1.0
+rate_of_fire = 0.05
 bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret4" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(67, -439)
 cooldown_time = 1.0
-rate_of_fire = 0.013
+rate_of_fire = 0.05
 bullet_scene = ExtResource("32_n06b0")
 
 [node name="Turret5" parent="." instance=ExtResource("31_cqnwo")]
 position = Vector2(169, -108)
-rate_of_fire = 0.013
+rate_of_fire = 0.05
 bullet_scene = ExtResource("32_n06b0")

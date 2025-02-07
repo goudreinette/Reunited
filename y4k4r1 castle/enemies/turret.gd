@@ -8,6 +8,8 @@ var healthratio : float
 var explode_scene = preload("res://big Explosion.tscn")
 var isdead : bool = false
 
+@export var pickup_on_death: PackedScene
+
 enum FiringPatterns {
 	Continuous,
 	Burst, 
@@ -76,6 +78,12 @@ func reduce_health(amount):
 	
 func explode():
 	isdead = true
+	
+	# Pickup
+	var c = pickup_on_death.instantiate()
+	get_tree().root.add_child(c)
+	(c as Node2D).global_position = global_position
+	
 	#$AnimationPlayer.play("explode")
 	#$AudioStreamPlayer2D.play()
 	set_deferred("monitorable", false)

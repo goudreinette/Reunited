@@ -9,12 +9,22 @@ var score = 0
 #@onready var mission_start = $CanvasLayer/CenterContainer/GameOver
 
 # Implement here: spawning logic
-
+@export var ring_pickup : PackedScene
 
 func _ready():
 	game_over.hide()
 #	spawn_enemies()	
-	
+
+
+
+func _process(delta):
+	if randi_range(0, 200) == 1:
+		var r = ring_pickup.instantiate()
+		add_child(r)
+		r.global_position = Vector2(
+			randf_range(0, get_viewport_rect().size.x), 
+			$LevelPosition/Wendla.global_position.y - get_viewport_rect().size.y
+		)
 
 func _on_enemy_died(value):
 	score += value

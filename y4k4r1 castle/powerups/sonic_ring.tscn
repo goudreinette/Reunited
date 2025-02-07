@@ -111,7 +111,7 @@ _data = {
 [node name="SonicRing" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_t3rfc")
 autoplay = "default"
-frame_progress = 0.307007
+frame_progress = 0.870549
 script = ExtResource("2_u1m3c")
 
 [node name="Ring" type="AudioStreamPlayer" parent="."]

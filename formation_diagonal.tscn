@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hi4sydodxk1d" path="res://formation.gd" id="1_n8c7x"]
 [ext_resource type="PackedScene" uid="uid://cclj1rct6aop4" path="res://ship/enemies/drone_parent.tscn" id="2_fs6f2"]
-[ext_resource type="PackedScene" uid="uid://j4wmogsu4mdb" path="res://ship/enemies/fw_drone.tscn" id="3_6w27g"]
+[ext_resource type="PackedScene" uid="uid://dahn02lnq6grb" path="res://y4k4r1 castle/enemies/fw_drone.tscn" id="3_b6l2k"]
 
 [sub_resource type="Curve2D" id="Curve2D_pe3ur"]
 _data = {
@@ -22,8 +22,7 @@ position = Vector2(350.008, -64.923)
 rotation = 2.59455
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent" instance=ExtResource("3_6w27g")]
-position = Vector2(0.0464829, -0.0482254)
+[node name="FW_Drone" parent="Drone parent" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708
 
 [node name="Drone parent2" parent="." instance=ExtResource("2_fs6f2")]
@@ -32,7 +31,7 @@ rotation = 2.59455
 progress = 20.0
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent2" instance=ExtResource("3_6w27g")]
+[node name="FW_Drone" parent="Drone parent2" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708
 
 [node name="Drone parent3" parent="." instance=ExtResource("2_fs6f2")]
@@ -41,7 +40,7 @@ rotation = 2.59455
 progress = 40.0
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent3" instance=ExtResource("3_6w27g")]
+[node name="FW_Drone" parent="Drone parent3" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708
 
 [node name="Drone parent4" parent="." instance=ExtResource("2_fs6f2")]
@@ -50,8 +49,7 @@ rotation = 2.59455
 progress = 60.0
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent4" instance=ExtResource("3_6w27g")]
-position = Vector2(0.0464829, -0.0482254)
+[node name="FW_Drone" parent="Drone parent4" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708
 
 [node name="Drone parent5" parent="." instance=ExtResource("2_fs6f2")]
@@ -60,8 +58,7 @@ rotation = 2.59455
 progress = 80.0
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent5" instance=ExtResource("3_6w27g")]
-position = Vector2(0.0464829, -0.0482254)
+[node name="FW_Drone" parent="Drone parent5" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708
 
 [node name="Drone parent6" parent="." instance=ExtResource("2_fs6f2")]
@@ -70,6 +67,5 @@ rotation = 2.59455
 progress = 100.0
 loop = false
 
-[node name="FW_Drone2" parent="Drone parent6" instance=ExtResource("3_6w27g")]
-position = Vector2(0.0464829, -0.0482254)
+[node name="FW_Drone" parent="Drone parent6" instance=ExtResource("3_b6l2k")]
 rotation = 1.5708

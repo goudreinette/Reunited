@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://j4wmogsu4mdb"]
+[gd_scene load_steps=17 format=3 uid="uid://dahn02lnq6grb"]
 
-[ext_resource type="Script" uid="uid://b25hcsc7rrnwl" path="res://ship/enemies/fw_drone.gd" id="1_s8bkg"]
-[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://sprites/Enemy fixed wing drone.png" id="2_f2qes"]
-[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_h12e6"]
-[ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="3_fid53"]
-[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_lg58s"]
+[ext_resource type="Script" uid="uid://dybvghc5qp1ot" path="res://y4k4r1 castle/enemies/fw_drone.gd" id="1_esae4"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_i04i2"]
+[ext_resource type="PackedScene" uid="uid://dvvcrlw6v5g1d" path="res://y4k4r1 castle/powerups/sonic_ring.tscn" id="2_x2vw8"]
+[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://sprites/Enemy fixed wing drone.png" id="3_x2vw8"]
+[ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="4_fsacu"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="5_udsst"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skvdi"]
 resource_local_to_scene = true
-shader = ExtResource("2_h12e6")
+shader = ExtResource("2_i04i2")
 shader_parameter/active = false
 shader_parameter/hit_color = Color(1, 1, 1, 1)
 
@@ -48,7 +49,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_f2qes")]
+"values": [ExtResource("3_x2vw8")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -166,7 +167,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_f2qes")]
+"values": [ExtResource("3_x2vw8")]
 }
 
 [sub_resource type="Animation" id="Animation_uasbv"]
@@ -182,7 +183,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_fid53")]
+"values": [ExtResource("4_fsacu")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -270,11 +271,12 @@ _data = {
 }
 
 [node name="FW_Drone" type="Area2D" groups=["enemies"]]
-script = ExtResource("1_s8bkg")
+script = ExtResource("1_esae4")
+pickup_on_death = ExtResource("2_x2vw8")
 
 [node name="EnemyFixedWingDrone" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_skvdi")
-texture = ExtResource("2_f2qes")
+texture = ExtResource("3_x2vw8")
 hframes = 3
 vframes = 2
 
@@ -288,7 +290,7 @@ autoplay = "Straight"
 shape = SubResource("RectangleShape2D_adis6")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_lg58s")
+stream = ExtResource("5_udsst")
 
 [node name="HitAnimation" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://b7ydf4vp5k7xh"]
+[gd_scene load_steps=28 format=3 uid="uid://b7ydf4vp5k7xh"]
 
 [ext_resource type="Script" uid="uid://cd1gf0jue268p" path="res://y4k4r1 castle/enemies/turret.gd" id="1_1qx56"]
+[ext_resource type="PackedScene" uid="uid://dvvcrlw6v5g1d" path="res://y4k4r1 castle/powerups/sonic_ring.tscn" id="2_nb672"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_0mtb2"]
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://sprites/turret.png" id="4_5inl4"]
 [ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://sprites/Effects/charging.png" id="5_jrssr"]
@@ -257,7 +258,9 @@ _data = {
 [node name="Turret" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_1qx56")
 health = 1
-rate_of_fire = 0.125
+pickup_on_death = ExtResource("2_nb672")
+burst_time = 5.0
+rate_of_fire = 1.0
 
 [node name="Base" type="Sprite2D" parent="."]
 z_index = -1
