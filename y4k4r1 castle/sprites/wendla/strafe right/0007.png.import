@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1huvnyjwjxyr"
-path="res://.godot/imported/Boosters (16 x 16).png-90000586eccdb268dd87fcbabf9fc776.ctex"
+uid="uid://cw3nm7gli2fv2"
+path="res://.godot/imported/0007.png-94cb13dbbcc6b666dbbc9228b2911f52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://y4k4r1 castle/sprites/Boosters (16 x 16).png"
-dest_files=["res://.godot/imported/Boosters (16 x 16).png-90000586eccdb268dd87fcbabf9fc776.ctex"]
+source_file="res://y4k4r1 castle/sprites/wendla/strafe right/0007.png"
+dest_files=["res://.godot/imported/0007.png-94cb13dbbcc6b666dbbc9228b2911f52.ctex"]
 
 [params]
 

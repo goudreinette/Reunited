@@ -62,10 +62,11 @@ text/autopauses={}
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=240
-window/size/window_width_override=1920
-window/size/window_height_override=1080
+window/size/viewport_width=240
+window/size/viewport_height=360
+window/size/mode=2
+window/size/window_width_override=960
+window/size/window_height_override=1440
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 

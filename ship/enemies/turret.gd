@@ -39,8 +39,8 @@ func _ready() -> void:
 	#find the player if it exists
 	#so it doesnt crash while testing only the turret
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
-	if nodes_in_player_group.size() > 0:
-		player = nodes_in_player_group[0]
+	#if nodes_in_player_group.size() > 0:
+		#player = nodes_in_player_group[0]
 	health = maxhealth
 	
 	

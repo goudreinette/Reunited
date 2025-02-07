@@ -12,7 +12,7 @@ shader_parameter/LACUNARITY = 2.0
 shader_parameter/GAIN = 0.3
 shader_parameter/pixelation_amount = 99
 shader_parameter/OPACITY = 0.075
-shader_parameter/SCROLL_SPEED = 0.125
+shader_parameter/SCROLL_SPEED = 0.25
 shader_parameter/Y_STRETCH = 3.0
 shader_parameter/intensity = 0.45
 

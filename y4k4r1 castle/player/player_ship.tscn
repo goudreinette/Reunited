@@ -1,0 +1,289 @@
+[gd_scene load_steps=56 format=3 uid="uid://2o4tjflot8db"]
+
+[ext_resource type="Script" path="res://y4k4r1 castle/player/player_ship.gd" id="1_l3ulw"]
+[ext_resource type="PackedScene" uid="uid://b4cnu1flkfk3m" path="res://y4k4r1 castle/weapons/projectiles/bullet.tscn" id="2_8huye"]
+[ext_resource type="Texture2D" uid="uid://blony7olc3stj" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0000.png" id="3_icena"]
+[ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/boosters.png" id="3_y34t5"]
+[ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="4_1bc4n"]
+[ext_resource type="Texture2D" uid="uid://dvwhsu0xky0t0" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0001.png" id="4_ne1un"]
+[ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://ship/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="5_43ym6"]
+[ext_resource type="Texture2D" uid="uid://csum4wtv5drdc" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0002.png" id="5_s7om6"]
+[ext_resource type="Texture2D" uid="uid://b0usthyhiu4kh" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0003.png" id="6_kgg83"]
+[ext_resource type="AudioStream" uid="uid://wiwbctp75u5d" path="res://sounds/blast new.wav" id="6_r5mw6"]
+[ext_resource type="Texture2D" uid="uid://bfki5l7mlkcbd" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0004.png" id="7_8r71o"]
+[ext_resource type="AudioStream" uid="uid://deudjeyrwefb1" path="res://sounds/hit.wav" id="7_ptg0t"]
+[ext_resource type="Texture2D" uid="uid://qgyx05okt5hb" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0005.png" id="8_eeouq"]
+[ext_resource type="Texture2D" uid="uid://bgrw26joixwya" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0006.png" id="9_vqowe"]
+[ext_resource type="Texture2D" uid="uid://bf5l12iys0gvy" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0007.png" id="10_h5xrr"]
+[ext_resource type="Texture2D" uid="uid://bn3vfhn3dpb4o" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0008.png" id="11_iy30a"]
+[ext_resource type="Texture2D" uid="uid://7ubdh1v1u0xy" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0009.png" id="12_b7ipl"]
+[ext_resource type="Texture2D" uid="uid://qxrby34428j3" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0010.png" id="13_f2apm"]
+[ext_resource type="Texture2D" uid="uid://bioge3hi5ojh4" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0011.png" id="14_kypj0"]
+[ext_resource type="Texture2D" uid="uid://dcvklpfsdqafu" path="res://y4k4r1 castle/sprites/wendla/neutral idle/0012.png" id="15_o2ffn"]
+[ext_resource type="Texture2D" uid="uid://d08lem0smp4p4" path="res://y4k4r1 castle/sprites/wendla/strafe left/0000.png" id="16_3y8c1"]
+[ext_resource type="Texture2D" uid="uid://crmx5wc0y3jiv" path="res://y4k4r1 castle/sprites/wendla/strafe left/0001.png" id="17_1q3jd"]
+[ext_resource type="Texture2D" uid="uid://du447o3rxpndl" path="res://y4k4r1 castle/sprites/wendla/strafe left/0002.png" id="18_mwyfb"]
+[ext_resource type="Texture2D" uid="uid://cnk1jpvgyctmr" path="res://y4k4r1 castle/sprites/wendla/strafe left/0003.png" id="19_p84gt"]
+[ext_resource type="Texture2D" uid="uid://bostcea8cvgf" path="res://y4k4r1 castle/sprites/wendla/strafe left/0004.png" id="20_xuoj1"]
+[ext_resource type="Texture2D" uid="uid://olyb8c2lh365" path="res://y4k4r1 castle/sprites/wendla/strafe left/0005.png" id="21_8gvre"]
+[ext_resource type="Texture2D" uid="uid://blwkd1n13imep" path="res://y4k4r1 castle/sprites/wendla/strafe left/0006.png" id="22_1q8xr"]
+[ext_resource type="Texture2D" uid="uid://byw3h4sqc42ct" path="res://y4k4r1 castle/sprites/wendla/strafe left/0007.png" id="23_dk2ek"]
+[ext_resource type="Texture2D" uid="uid://dv72l6q4h67x2" path="res://y4k4r1 castle/sprites/wendla/strafe left/0008.png" id="24_lw1jf"]
+[ext_resource type="Texture2D" uid="uid://qarja6nxy505" path="res://y4k4r1 castle/sprites/wendla/strafe left/0009.png" id="25_kyxet"]
+[ext_resource type="Texture2D" uid="uid://cdnyp4t7y3ixr" path="res://y4k4r1 castle/sprites/wendla/strafe left/0010.png" id="26_vajyp"]
+[ext_resource type="Texture2D" uid="uid://bftpc3xr528jl" path="res://y4k4r1 castle/sprites/wendla/strafe left/0011.png" id="27_2vjku"]
+[ext_resource type="Texture2D" uid="uid://pgr6150a0r62" path="res://y4k4r1 castle/sprites/wendla/strafe left/0012.png" id="28_pf41t"]
+[ext_resource type="Texture2D" uid="uid://dfd8vnreqkyl8" path="res://y4k4r1 castle/sprites/wendla/strafe right/0000.png" id="29_rt0c2"]
+[ext_resource type="Texture2D" uid="uid://kavamamsgdm2" path="res://y4k4r1 castle/sprites/wendla/strafe right/0001.png" id="30_a6q5m"]
+[ext_resource type="Texture2D" uid="uid://dgx70de6e4wir" path="res://y4k4r1 castle/sprites/wendla/strafe right/0002.png" id="31_rj8h0"]
+[ext_resource type="Texture2D" uid="uid://st7165cdpm1q" path="res://y4k4r1 castle/sprites/wendla/strafe right/0003.png" id="32_rw7h4"]
+[ext_resource type="Texture2D" uid="uid://dlu16802h4dae" path="res://y4k4r1 castle/sprites/wendla/strafe right/0004.png" id="33_p4bns"]
+[ext_resource type="Texture2D" uid="uid://dvtaym40vdb57" path="res://y4k4r1 castle/sprites/wendla/strafe right/0005.png" id="34_2dafl"]
+[ext_resource type="Texture2D" uid="uid://ddniuq5mthtuq" path="res://y4k4r1 castle/sprites/wendla/strafe right/0006.png" id="35_yrd6p"]
+[ext_resource type="Texture2D" uid="uid://cw3nm7gli2fv2" path="res://y4k4r1 castle/sprites/wendla/strafe right/0007.png" id="36_jjc2d"]
+[ext_resource type="Texture2D" uid="uid://d3jpod0bm7hat" path="res://y4k4r1 castle/sprites/wendla/strafe right/0008.png" id="37_a3l25"]
+[ext_resource type="Texture2D" uid="uid://o410h3t4m07d" path="res://y4k4r1 castle/sprites/wendla/strafe right/0009.png" id="38_ldcfa"]
+[ext_resource type="Texture2D" uid="uid://cngsm5prwc77u" path="res://y4k4r1 castle/sprites/wendla/strafe right/0010.png" id="39_qqlf4"]
+[ext_resource type="Texture2D" uid="uid://bg6e2eeho7p3c" path="res://y4k4r1 castle/sprites/wendla/strafe right/0011.png" id="40_hqb3p"]
+[ext_resource type="Texture2D" uid="uid://1601np2hub0c" path="res://y4k4r1 castle/sprites/wendla/strafe right/0012.png" id="41_i8qci"]
+[ext_resource type="PackedScene" uid="uid://16mtpr3dxuw6" path="res://y4k4r1 castle/player/ball.tscn" id="45_a5yay"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmmmo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_icena")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ne1un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s7om6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kgg83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8r71o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eeouq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vqowe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h5xrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iy30a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b7ipl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f2apm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kypj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o2ffn")
+}],
+"loop": true,
+"name": &"neutral idle",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_3y8c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1q3jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mwyfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p84gt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xuoj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8gvre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1q8xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dk2ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lw1jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kyxet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vajyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2vjku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pf41t")
+}],
+"loop": true,
+"name": &"strafe_left",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_rt0c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a6q5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rj8h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rw7h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_p4bns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2dafl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_yrd6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jjc2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_a3l25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ldcfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qqlf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hqb3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_i8qci")
+}],
+"loop": true,
+"name": &"strafe_right",
+"speed": 24.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbfoc"]
+atlas = ExtResource("3_y34t5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqk0y"]
+atlas = ExtResource("3_y34t5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvhhs"]
+atlas = ExtResource("4_1bc4n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nji5"]
+atlas = ExtResource("4_1bc4n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ido4s"]
+atlas = ExtResource("5_43ym6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7ed7"]
+atlas = ExtResource("5_43ym6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6f8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbfoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqk0y")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvhhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nji5")
+}],
+"loop": true,
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ido4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7ed7")
+}],
+"loop": true,
+"name": &"right",
+"speed": 10.0
+}]
+
+[node name="Player" type="Area2D" groups=["Player"]]
+script = ExtResource("1_l3ulw")
+gatling_cooldown = 0.035
+current_weapon_type = 2
+bullet_scene = ExtResource("2_8huye")
+
+[node name="Ship" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_kmmmo")
+animation = &"neutral idle"
+autoplay = "neutral idle"
+frame_progress = 0.427419
+
+[node name="Boosters" type="AnimatedSprite2D" parent="Ship"]
+visible = false
+position = Vector2(0, 37)
+sprite_frames = SubResource("SpriteFrames_p6f8n")
+animation = &"forward"
+autoplay = "forward"
+
+[node name="BallLeft" parent="Ship" instance=ExtResource("45_a5yay")]
+position = Vector2(-17, -1)
+autoplay = "default"
+
+[node name="BallRight" parent="Ship" instance=ExtResource("45_a5yay")]
+position = Vector2(17, -1)
+autoplay = "default"
+
+[node name="GunCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_r5mw6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(-6, 0, -2, -2, -2, -7, 2, -7, 2, -2, 6, 0, 6, 2, 2, 4, 2, 6, 3, 8, -3, 8, -2, 6, -2, 4, -6, 2)
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ptg0t")
+volume_db = 24.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

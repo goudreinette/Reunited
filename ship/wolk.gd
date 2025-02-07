@@ -19,6 +19,6 @@ func _process(delta: float) -> void:
 			
 func check_for_player():
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
-	if nodes_in_player_group.size() > 0:
-		player = nodes_in_player_group[0]
+	#if nodes_in_player_group.size() > 0:
+		#player = nodes_in_player_group[0]
 	

@@ -28,6 +28,9 @@ uniform float DISTORTION_SPEED: hint_range(0.0, 5.0, .1) = 2.0;
 uniform float DISTORTION_STRENGTH: hint_range(0.0, 1.0, .01) = 0.17;
 uniform float SCALE: hint_range(0.0, 30.0, .5) = 20.0;
 
+uniform vec4 mainBlue: source_color = vec4(0.3568627451, 0.431372549, 0.8823529412, 1.0);
+uniform vec4 lightBlue: source_color = vec4(0.3568627451, 0.431372549, 0.8823529412, 1.0);
+uniform vec4 foamColor: source_color = vec4(0.3764705882, 0.4509803922, 0.8901960784, 1.0); // vec3(99.0 / 255.0, 155.0 / 255.0, 255.0 / 255.0); //vec3(203.0 / 255.0, 219.0 / 255.0, 252.0 / 255.0);
 
 void fragment() {
 	// Pixelate it :D                             // This vector moves the water, to hide a certain issue
@@ -35,10 +38,7 @@ void fragment() {
 
 
     // More vibrant than the original!
-    vec3 mainBlue = vec3(91.0 / 255.0, 110.0 / 255.0, 225.0 / 255.0);
-    vec3 lightBlue = vec3(91.0 / 255.0, 110.0 / 255.0, 225.0 / 255.0); //vec3(99.0 / 255.0, 155.0 / 255.0, 255.0 / 255.0);
     //vec3 lightBlue = vec3(99.0 / 255.0, 155.0 / 255.0, 255.0 / 255.0);
-    vec3 foamColor = vec3(96.0 / 255.0, 115.0 / 255.0, 227.0 / 255.0); // vec3(99.0 / 255.0, 155.0 / 255.0, 255.0 / 255.0); //vec3(203.0 / 255.0, 219.0 / 255.0, 252.0 / 255.0);
 
     // I decided to use the second color, to fade the foam a bit more, which is why they'll share the same UV :)
     float scale1 = SCALE;
@@ -66,8 +66,8 @@ void fragment() {
     float edges2 = smoothstep(edge2ThresholdMin, edge2ThresholdMax, edgeDist1);
 
 
-    vec3 e = mix(lightBlue, mainBlue, step(0.5, edges2));
-    e = mix(foamColor, e, step(0.5, edges1));
+    vec3 e = mix(lightBlue.rgb, mainBlue.rgb, step(0.5, edges2));
+    e = mix(foamColor.rgb, e, step(0.5, edges1));
 
 
     e *= 0.1 + 1.0 - edge1Halo * 0.1;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=76 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -18,7 +18,8 @@
 [ext_resource type="Script" path="res://ship/ship_Camera2D.gd" id="16_repr1"]
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="18_disdk"]
-[ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player_ship.tscn" id="18_vioh1"]
+[ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/player_ship.tscn" id="18_vioh1"]
+[ext_resource type="PackedScene" uid="uid://b4lgqlrbrapil" path="res://y4k4r1 castle/weapons/projectiles/rocket.tscn" id="18_y41h4"]
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="19_7bt0x"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="21_5gh8r"]
@@ -44,6 +45,9 @@ shader = ExtResource("4_b3o7v")
 shader_parameter/DISTORTION_SPEED = 5.0
 shader_parameter/DISTORTION_STRENGTH = 0.08
 shader_parameter/SCALE = 30.0
+shader_parameter/mainBlue = Color(0.0705882, 0.0901961, 0.239216, 1)
+shader_parameter/lightBlue = Color(0.0705882, 0.0901961, 0.239216, 1)
+shader_parameter/foamColor = Color(0.160784, 0.196078, 0.407843, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rd3d"]
 atlas = ExtResource("6_mkohf")
@@ -375,6 +379,8 @@ _data = {
 "raft": SubResource("Animation_wrv3t")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_25pjb"]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ykqqd")
 
@@ -392,30 +398,22 @@ position = Vector2(125, -664)
 scale = Vector2(0.65185, 0.544986)
 texture = ExtResource("5_7ylqf")
 
-[node name="SEA" type="Sprite2D" parent="."]
-visible = false
-z_index = -1
-material = SubResource("ShaderMaterial_nbg31")
-position = Vector2(119, 30)
-scale = Vector2(1.88281, 2.02386)
-texture = ExtResource("5_7ylqf")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(48, -81)
 texture = ExtResource("6_mkohf")
 vframes = 16
 
-[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="."]
-z_index = -1
+[node name="Beach" type="AnimatedSprite2D" parent="."]
+z_index = -3
 texture_repeat = 2
-position = Vector2(48, -63)
+position = Vector2(48, 8)
 sprite_frames = SubResource("SpriteFrames_j5gv2")
 animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.17478
 
-[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="BeachHorizontalAnim-asepritePallet"]
+[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="Beach"]
 texture_repeat = 2
 position = Vector2(96, 0)
 sprite_frames = SubResource("SpriteFrames_j5gv2")
@@ -423,13 +421,27 @@ animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.17478
 
-[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="BeachHorizontalAnim-asepritePallet/BeachHorizontalAnim-asepritePallet"]
+[node name="BeachHorizontalAnim-asepritePallet" type="AnimatedSprite2D" parent="Beach/BeachHorizontalAnim-asepritePallet"]
 texture_repeat = 2
 position = Vector2(96, 0)
 sprite_frames = SubResource("SpriteFrames_j5gv2")
 animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.17478
+
+[node name="SEA" type="Sprite2D" parent="."]
+z_index = -3
+material = SubResource("ShaderMaterial_nbg31")
+position = Vector2(123, 199)
+scale = Vector2(2.32281, 2.49683)
+texture = ExtResource("5_7ylqf")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+texture_repeat = 2
+position = Vector2(119, -400)
+texture = ExtResource("10_a1xek")
+region_rect = Rect2(0, 0, 240, 160)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -459,26 +471,15 @@ material = SubResource("ShaderMaterial_820i1")
 offset_right = 241.0
 offset_bottom = 160.0
 
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -5
-texture_repeat = 2
-position = Vector2(120, -482)
-texture = ExtResource("10_a1xek")
-region_rect = Rect2(0, 0, 240, 160)
-
 [node name="EnemyAnchor" type="Node2D" parent="."]
 
 [node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_y4r7p")
-autoplay = true
-
-[node name="Parasol" type="Sprite2D" parent="."]
-position = Vector2(73, -121)
-texture = ExtResource("14_qva1n")
 
 [node name="LevelPosition" type="Node2D" parent="."]
+position = Vector2(0, 100)
 script = ExtResource("13_tm1yw")
-levelspeed = 15.0
+levelspeed = 20.0
 
 [node name="Camera2D" type="Camera2D" parent="LevelPosition"]
 position = Vector2(120, 80)
@@ -486,35 +487,37 @@ script = ExtResource("16_repr1")
 noise = SubResource("FastNoiseLite_uf0tv")
 
 [node name="Clouds" parent="LevelPosition" instance=ExtResource("17_ul8j3")]
-scale = Vector2(2, 2)
+position = Vector2(120, 77)
+scale = Vector2(2.90152, 2.90152)
 
 [node name="Player" parent="LevelPosition" instance=ExtResource("18_vioh1")]
-position = Vector2(140, 120)
+position = Vector2(123, 200)
 gatling_cooldown = 0.1
+bullet_scene = ExtResource("18_y41h4")
 
 [node name="Turret" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(42, -294)
+position = Vector2(43, -92)
 firing_pattern = 0
 rate_of_fire = 1.0
 
 [node name="Turret2" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(216, -270)
+position = Vector2(217, -68)
 firing_pattern = 0
 rate_of_fire = 1.0
 
 [node name="Turret3" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(49, -652)
+position = Vector2(50, -450)
 turret_range = 160
 firing_pattern = 0
 
 [node name="Turret4" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(133, -604)
+position = Vector2(134, -402)
 
 [node name="Turret5" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(201, -656)
+position = Vector2(202, -454)
 
 [node name="Turret6" parent="." instance=ExtResource("18_disdk")]
-position = Vector2(46, -903)
+position = Vector2(47, -701)
 burst_time = 0.25
 bullet_scene = ExtResource("19_7bt0x")
 
@@ -524,22 +527,26 @@ burst_time = 0.25
 bullet_scene = ExtResource("19_7bt0x")
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
-position = Vector2(12, -39)
+position = Vector2(12, 29)
 
 [node name="Formation Test2" parent="." instance=ExtResource("21_5gh8r")]
-position = Vector2(-11.625, -514)
+position = Vector2(23, -297)
 
 [node name="Formation Test3" parent="." instance=ExtResource("22_hphrm")]
-position = Vector2(39.375, -823)
+position = Vector2(37, -667)
 
 [node name="Formation Test4" parent="." instance=ExtResource("22_hphrm")]
-position = Vector2(23.375, -937)
+position = Vector2(23.375, -869)
 
 [node name="Formation Test5" parent="." instance=ExtResource("23_easw4")]
-position = Vector2(18.375, -1156)
+position = Vector2(18.375, -1088)
+
+[node name="Parasol" type="Sprite2D" parent="."]
+position = Vector2(73, -61)
+texture = ExtResource("14_qva1n")
 
 [node name="Buoy" type="Sprite2D" parent="."]
-position = Vector2(52, -6)
+position = Vector2(52, 208)
 texture = ExtResource("24_b4tl1")
 script = ExtResource("25_20gni")
 
@@ -550,7 +557,8 @@ libraries = {
 autoplay = "buoyancy"
 
 [node name="Raft" type="Sprite2D" parent="."]
-position = Vector2(183, 49)
+visible = false
+position = Vector2(183, 263)
 texture = ExtResource("26_mbatw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Raft"]
@@ -561,68 +569,71 @@ libraries = {
 autoplay = "raft"
 
 [node name="Wolk1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.662745)
 texture_filter = 1
-position = Vector2(67, 33)
+material = SubResource("ShaderMaterial_25pjb")
+position = Vector2(67, 172)
 texture = ExtResource("27_eb4hl")
 script = ExtResource("28_jf1t1")
 
 [node name="Wolk5" type="Sprite2D" parent="."]
-position = Vector2(198, -727)
+position = Vector2(198, -664)
 texture = ExtResource("29_e3c5y")
 script = ExtResource("28_jf1t1")
 speed = 5.0
 
 [node name="Wolk6" type="Sprite2D" parent="."]
-position = Vector2(208, -534)
+position = Vector2(208, -471)
 texture = ExtResource("29_e3c5y")
 script = ExtResource("28_jf1t1")
 speed = 5.0
 
 [node name="Wolk7" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(230, -278)
+position = Vector2(230, -215)
 texture = ExtResource("29_e3c5y")
 script = ExtResource("28_jf1t1")
 speed = 5.0
 
 [node name="Wolk8" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(227, -957)
+position = Vector2(227, -894)
 texture = ExtResource("29_e3c5y")
 script = ExtResource("28_jf1t1")
 speed = 5.0
 
 [node name="Wolk2" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(168, -18)
+position = Vector2(168, 45)
 texture = ExtResource("29_e3c5y")
 script = ExtResource("28_jf1t1")
 speed = 5.0
 
 [node name="Wolk3" type="Sprite2D" parent="."]
-position = Vector2(167, -53)
+position = Vector2(173, -56)
 texture = ExtResource("30_nmxpl")
 script = ExtResource("28_jf1t1")
 speed = 20.0
 
 [node name="Wolk10" type="Sprite2D" parent="."]
-position = Vector2(0, -483)
+position = Vector2(0, -420)
 texture = ExtResource("30_nmxpl")
 script = ExtResource("28_jf1t1")
 speed = 20.0
 
 [node name="Wolk9" type="Sprite2D" parent="."]
-position = Vector2(227, -593)
+position = Vector2(227, -530)
 texture = ExtResource("30_nmxpl")
 script = ExtResource("28_jf1t1")
 speed = 20.0
 
 [node name="Wolk4" type="Sprite2D" parent="."]
-position = Vector2(84, -942)
+position = Vector2(84, -879)
 texture = ExtResource("30_nmxpl")
 script = ExtResource("28_jf1t1")
 speed = 20.0
 
 [node name="Zandkasteel" type="Sprite2D" parent="."]
-position = Vector2(180, -120)
+visible = false
+position = Vector2(180, 79)
 texture = ExtResource("33_6o0ew")

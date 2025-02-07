@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4lgqlrbrapil"]
+
+[ext_resource type="Script" path="res://y4k4r1 castle/weapons/projectiles/rocket.gd" id="1_u2ber"]
+[ext_resource type="Texture2D" uid="uid://bk348k3ur3mku" path="res://y4k4r1 castle/sprites/Rocket.png" id="2_ix231"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7h67"]
+atlas = ExtResource("2_ix231")
+region = Rect2(0, 0, 6, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q78sx"]
+atlas = ExtResource("2_ix231")
+region = Rect2(6, 0, 6, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0167"]
+atlas = ExtResource("2_ix231")
+region = Rect2(12, 0, 6, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_62xdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7h67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q78sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0167")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uots1"]
+size = Vector2(1.75, 10)
+
+[sub_resource type="Curve" id="Curve_xghrf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.520064), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Rocket" type="Area2D"]
+script = ExtResource("1_u2ber")
+speed = -150
+aim_speed = 36
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_62xdr")
+autoplay = "default"
+frame_progress = 0.0172677
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_uots1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, 4)
+amount = 160
+lifetime = 60.0
+speed_scale = 5.0
+randomness = 0.9
+lifetime_randomness = 0.4
+direction = Vector2(0, 1)
+spread = 4.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_xghrf")
+
+[node name="Deathtimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Deathtimer" to="." method="_on_deathtimer_timeout"]

@@ -2,7 +2,7 @@ class_name Formation extends Path2D
 
 @export var testing : bool = false
 
-var player : ShipPlayer
+var player : Wendla
 var following : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		
 		
 func check_for_player():
+	#pass
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]

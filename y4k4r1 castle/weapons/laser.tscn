@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://boj7rpc0eun8h"]
+
+[node name="Laser" type="Node2D"]
