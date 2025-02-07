@@ -15,6 +15,8 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var bullet_scene: PackedScene
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
+
+
 var shield = max_shield:
 	set = set_shield
 var can_shoot = true
@@ -72,6 +74,7 @@ func shoot():
 	$AudioStreamPlayer.play()
 
 func shoot_default():
+	$Ship/BallAnimationPlayer.play("fire")
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
 	
@@ -85,8 +88,10 @@ func shoot_default():
 	
 	
 func shoot_scatter():
+	$Ship/BallAnimationPlayer.play("fire")
 	$GunCooldown.wait_time = cooldown
 	$GunCooldown.start()
+	
 	
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
@@ -102,8 +107,10 @@ func shoot_scatter():
 	pass
 	
 func shoot_gattling():
+	$Ship/BallAnimationPlayer.play("fire")
 	$GunCooldown.wait_time = gatling_cooldown
 	$GunCooldown.start()
+	
 	
 	var b = bullet_scene.instantiate()
 	get_parent().get_parent().add_child(b)

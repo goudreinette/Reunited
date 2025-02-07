@@ -522,6 +522,21 @@ script = ExtResource("21_jr0lg")
 position = Vector2(-16, -359)
 script = ExtResource("21_jr0lg")
 
+[node name="Formation Test6" parent="." instance=ExtResource("22_hphrm")]
+position = Vector2(-32, -647)
+scale = Vector2(1.00926, 1.16252)
+script = ExtResource("21_jr0lg")
+
+[node name="Formation Test7" parent="." instance=ExtResource("22_hphrm")]
+position = Vector2(-66, -1226)
+scale = Vector2(1.01861, 1.35144)
+script = ExtResource("21_jr0lg")
+
+[node name="Formation Test8" parent="." instance=ExtResource("22_hphrm")]
+position = Vector2(-49, -980)
+scale = Vector2(1.01392, 1.25342)
+script = ExtResource("21_jr0lg")
+
 [node name="Formation Test4" parent="." instance=ExtResource("22_hphrm")]
 position = Vector2(-38, -481)
 script = ExtResource("21_jr0lg")

@@ -6,9 +6,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_pe3ur"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 350.008, -64.923, 0, 0, 0, 0, -58.1066, 183.639)
+"points": PackedVector2Array(0, 0, 0, 0, 350.008, -64.923, 0, 0, 0, 0, 255.687, -3.40674, 0, 0, 0, 0, -58.1066, 183.639)
 }
-point_count = 2
+point_count = 3
 
 [node name="Formation Test" type="Path2D"]
 position = Vector2(-2.625, 0)
