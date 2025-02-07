@@ -1,0 +1,25 @@
+[remap]
+
+importer="Aseprite SpriteFrames Import"
+type="SpriteFrames"
+uid="uid://cwu4sg3vn7d41"
+path="res://.godot/imported/coin.ase-81c7ff6d9ed7f2e82e192b3cad137c18.res"
+
+[deps]
+
+source_file="res://y4k4r1 castle/sprites/coin.ase"
+dest_files=["res://.godot/imported/coin.ase-81c7ff6d9ed7f2e82e192b3cad137c18.res"]
+
+[params]
+
+spritesheet/layout=0
+spritesheet/fixed_rows_count=1
+spritesheet/fixed_columns_count=1
+spritesheet/border_type=0
+spritesheet/trim=false
+spritesheet/ignore_empty=false
+spritesheet/merge_duplicates=false
+animation/default/name="default"
+animation/default/direction=0
+animation/default/repeat_count=0
+animation/autoplay=""

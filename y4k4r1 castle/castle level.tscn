@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=77 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" uid="uid://w7rusoaqhu5r" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
 [ext_resource type="PackedScene" uid="uid://b4lgqlrbrapil" path="res://y4k4r1 castle/weapons/projectiles/rocket.tscn" id="18_06oqx"]
 [ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/player_ship.tscn" id="18_vioh1"]
+[ext_resource type="PackedScene" uid="uid://dvvcrlw6v5g1d" path="res://y4k4r1 castle/powerups/sonic_ring.tscn" id="19_xb83t"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
 [ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="21_5gh8r"]
 [ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="22_hphrm"]
@@ -475,6 +476,21 @@ offset_bottom = 160.0
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_y4r7p")
+
+[node name="SonicRing" parent="." instance=ExtResource("19_xb83t")]
+position = Vector2(193, 128)
+
+[node name="SonicRing2" parent="." instance=ExtResource("19_xb83t")]
+position = Vector2(75, 65)
+
+[node name="SonicRing3" parent="." instance=ExtResource("19_xb83t")]
+position = Vector2(199, 10)
+
+[node name="SonicRing4" parent="." instance=ExtResource("19_xb83t")]
+position = Vector2(38, -42)
+
+[node name="SonicRing5" parent="." instance=ExtResource("19_xb83t")]
+position = Vector2(134, -135)
 
 [node name="LevelPosition" type="Node2D" parent="."]
 position = Vector2(0, 100)

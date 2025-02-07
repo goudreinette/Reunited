@@ -1,3 +1,131 @@
-[gd_scene format=3 uid="uid://dvvcrlw6v5g1d"]
+[gd_scene load_steps=17 format=3 uid="uid://dvvcrlw6v5g1d"]
 
-[node name="SonicRing" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dtdrrcf6kck21" path="res://y4k4r1 castle/sprites/coin.png" id="1_c4jw4"]
+[ext_resource type="Script" uid="uid://bixek4fv65n0e" path="res://y4k4r1 castle/powerups/sonic_ring.gd" id="2_u1m3c"]
+[ext_resource type="AudioStream" uid="uid://ck1lk6qg3u4xn" path="res://sounds/ring.wav" id="3_k4jie"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1m3c"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4jie"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gefi8"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12iqs"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f484a"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbkv0"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys4m5"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1ybd"]
+atlas = ExtResource("1_c4jw4")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3rfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1m3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4jie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gefi8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12iqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f484a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbkv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys4m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1ybd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4jie"]
+radius = 7.0
+
+[sub_resource type="Animation" id="Animation_k4jie"]
+resource_name = "shrink"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 1.5, 1.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gefi8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12iqs"]
+_data = {
+&"RESET": SubResource("Animation_gefi8"),
+&"shrink": SubResource("Animation_k4jie")
+}
+
+[node name="SonicRing" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_t3rfc")
+autoplay = "default"
+frame_progress = 0.307007
+script = ExtResource("2_u1m3c")
+
+[node name="Ring" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_k4jie")
+volume_db = 9.011
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_k4jie")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_12iqs")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
