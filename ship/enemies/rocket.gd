@@ -10,7 +10,7 @@ var explode_scene = preload("res://smal explosion.tscn")
 @export var health : int = 1 
 
 
-var player : ShipPlayer
+var player : Wendla
 
 
 func _ready():

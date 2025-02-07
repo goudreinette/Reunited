@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=75 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="18_disdk"]
 [ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player/player_ship.tscn" id="18_vioh1"]
-[ext_resource type="PackedScene" uid="uid://b4lgqlrbrapil" path="res://y4k4r1 castle/weapons/projectiles/rocket.tscn" id="18_y41h4"]
 [ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="19_7bt0x"]
 [ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
 [ext_resource type="PackedScene" path="res://formation_loop.tscn" id="21_5gh8r"]
@@ -29,7 +28,7 @@
 [ext_resource type="Script" path="res://buoyancy.gd" id="25_20gni"]
 [ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://y4k4r1 castle/sprites/raft.png" id="26_mbatw"]
 [ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://sprites/Wolk 1.png" id="27_eb4hl"]
-[ext_resource type="Script" path="res://ship/wolk.gd" id="28_jf1t1"]
+[ext_resource type="Script" path="res://y4k4r1 castle/wolk.gd" id="29_2n3r6"]
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://sprites/Wolk 2.png" id="29_e3c5y"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://sprites/Wolk 3.png" id="30_nmxpl"]
 [ext_resource type="Texture2D" uid="uid://cf5ld11s11rl5" path="res://y4k4r1 castle/sprites/zandkasteel.png" id="33_6o0ew"]
@@ -493,7 +492,6 @@ scale = Vector2(2.90152, 2.90152)
 [node name="Player" parent="LevelPosition" instance=ExtResource("18_vioh1")]
 position = Vector2(123, 200)
 gatling_cooldown = 0.1
-bullet_scene = ExtResource("18_y41h4")
 
 [node name="Turret" parent="." instance=ExtResource("18_disdk")]
 position = Vector2(43, -92)
@@ -528,6 +526,7 @@ bullet_scene = ExtResource("19_7bt0x")
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)
+rotation = 0.00074637
 
 [node name="Formation Test2" parent="." instance=ExtResource("21_5gh8r")]
 position = Vector2(23, -297)
@@ -574,63 +573,63 @@ texture_filter = 1
 material = SubResource("ShaderMaterial_25pjb")
 position = Vector2(67, 172)
 texture = ExtResource("27_eb4hl")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 
 [node name="Wolk5" type="Sprite2D" parent="."]
 position = Vector2(198, -664)
 texture = ExtResource("29_e3c5y")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 5.0
 
 [node name="Wolk6" type="Sprite2D" parent="."]
 position = Vector2(208, -471)
 texture = ExtResource("29_e3c5y")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 5.0
 
 [node name="Wolk7" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(230, -215)
 texture = ExtResource("29_e3c5y")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 5.0
 
 [node name="Wolk8" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(227, -894)
 texture = ExtResource("29_e3c5y")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 5.0
 
 [node name="Wolk2" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(168, 45)
 texture = ExtResource("29_e3c5y")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 5.0
 
 [node name="Wolk3" type="Sprite2D" parent="."]
 position = Vector2(173, -56)
 texture = ExtResource("30_nmxpl")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 20.0
 
 [node name="Wolk10" type="Sprite2D" parent="."]
 position = Vector2(0, -420)
 texture = ExtResource("30_nmxpl")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 20.0
 
 [node name="Wolk9" type="Sprite2D" parent="."]
 position = Vector2(227, -530)
 texture = ExtResource("30_nmxpl")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 20.0
 
 [node name="Wolk4" type="Sprite2D" parent="."]
 position = Vector2(84, -879)
 texture = ExtResource("30_nmxpl")
-script = ExtResource("28_jf1t1")
+script = ExtResource("29_2n3r6")
 speed = 20.0
 
 [node name="Zandkasteel" type="Sprite2D" parent="."]

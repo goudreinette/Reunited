@@ -1,4 +1,4 @@
-class_name Formation extends Path2D
+extends Path2D
 
 @export var testing : bool = false
 

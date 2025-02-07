@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4lgqlrbrapil"]
+[gd_scene load_steps=10 format=3 uid="uid://b4lgqlrbrapil"]
 
 [ext_resource type="Script" path="res://y4k4r1 castle/weapons/projectiles/rocket.gd" id="1_u2ber"]
 [ext_resource type="Texture2D" uid="uid://bk348k3ur3mku" path="res://y4k4r1 castle/sprites/Rocket.png" id="2_ix231"]
@@ -39,9 +39,13 @@ size = Vector2(1.75, 10)
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.520064), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Gradient" id="Gradient_6utk5"]
+offsets = PackedFloat32Array(0.00694444, 0.729167)
+colors = PackedColorArray(0.844209, 0.624863, 0.932724, 1, 0.337688, 0.81995, 1, 0.443137)
+
 [node name="Rocket" type="Area2D"]
 script = ExtResource("1_u2ber")
-speed = -150
+speed = -350
 aim_speed = 36
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -55,8 +59,8 @@ shape = SubResource("RectangleShape2D_uots1")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(0, 4)
-amount = 160
-lifetime = 60.0
+amount = 500
+lifetime = 10.0
 speed_scale = 5.0
 randomness = 0.9
 lifetime_randomness = 0.4
@@ -67,6 +71,7 @@ initial_velocity_min = 1.0
 initial_velocity_max = 1.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_xghrf")
+color_ramp = SubResource("Gradient_6utk5")
 
 [node name="Deathtimer" type="Timer" parent="."]
 wait_time = 4.0
