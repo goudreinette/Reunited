@@ -774,6 +774,7 @@ max_shield = 10
 
 [node name="Wilburr" parent="LevelPosition" instance=ExtResource("86_7ok36")]
 process_mode = 4
+visible = false
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)
