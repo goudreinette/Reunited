@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=132 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" uid="uid://w7rusoaqhu5r" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -505,6 +505,43 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="Animation" id="Animation_qtidb"]
+resource_name = "take_damage"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.817629, 0.0474653, 0.0266817, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7ok36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aq2y8"]
+_data = {
+&"RESET": SubResource("Animation_7ok36"),
+&"take_damage": SubResource("Animation_qtidb")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
 shader = ExtResource("9_ghf3q")
 shader_parameter/overlay = true
@@ -671,7 +708,13 @@ region_rect = Rect2(0, 0, 240, 160)
 position = Vector2(58, 21)
 scale = Vector2(0.408807, 0.408807)
 sprite_frames = SubResource("SpriteFrames_fy2fn")
-frame_progress = 0.0091513
+frame = 6
+frame_progress = 0.407291
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UI/Healthbar"]
+libraries = {
+&"": SubResource("AnimationLibrary_aq2y8")
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -726,6 +769,7 @@ scale = Vector2(2.90152, 2.90152)
 [node name="Wendla" parent="LevelPosition" instance=ExtResource("18_vioh1")]
 position = Vector2(123, 200)
 gatling_cooldown = 0.1
+max_shield = 10
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)
