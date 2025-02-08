@@ -1,0 +1,256 @@
+[gd_scene load_steps=62 format=3 uid="uid://f7pi8jlu7lur"]
+
+[ext_resource type="Texture2D" uid="uid://cmivi17d5n0y7" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0001.png" id="1_mywp5"]
+[ext_resource type="Texture2D" uid="uid://81ihssbx7to3" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0002.png" id="2_r6qdg"]
+[ext_resource type="Texture2D" uid="uid://dik3k5xhfml8w" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0003.png" id="3_cpqit"]
+[ext_resource type="Texture2D" uid="uid://bsfbb7tw7qxk5" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0004.png" id="4_1b7hm"]
+[ext_resource type="Texture2D" uid="uid://cuh0mpl0uy5ro" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0005.png" id="5_jwk4s"]
+[ext_resource type="Texture2D" uid="uid://bsjva32tehy5w" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0006.png" id="6_wom5b"]
+[ext_resource type="Texture2D" uid="uid://cerof2j4u33yv" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0007.png" id="7_gijir"]
+[ext_resource type="Texture2D" uid="uid://n4y4ql5xyqkt" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0008.png" id="8_54nfh"]
+[ext_resource type="Texture2D" uid="uid://dda32yxovc4ml" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0009.png" id="9_h3yeu"]
+[ext_resource type="Texture2D" uid="uid://ch0qqbwnsuiqw" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0010.png" id="10_abl1n"]
+[ext_resource type="Texture2D" uid="uid://n7sj2rsj3nud" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0011.png" id="11_qbc1a"]
+[ext_resource type="Texture2D" uid="uid://d1m22o6levwju" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0012.png" id="12_3ry52"]
+[ext_resource type="Texture2D" uid="uid://dnqaotnh84pm7" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0013.png" id="13_j3ckh"]
+[ext_resource type="Texture2D" uid="uid://bhae0y0t5yi8t" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0014.png" id="14_rkhxl"]
+[ext_resource type="Texture2D" uid="uid://bp4vp54e18yel" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0015.png" id="15_7ykga"]
+[ext_resource type="Texture2D" uid="uid://dfrmyuc1wxvt4" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0016.png" id="16_gdhk5"]
+[ext_resource type="Texture2D" uid="uid://d4ar456ml81dh" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0017.png" id="17_ognqv"]
+[ext_resource type="Texture2D" uid="uid://cfhdfhp4elpdi" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0018.png" id="18_50krv"]
+[ext_resource type="Texture2D" uid="uid://dpqi0twfbg0w1" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0019.png" id="19_kflxc"]
+[ext_resource type="Texture2D" uid="uid://coc6qtrhm0k1c" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0020.png" id="20_awic5"]
+[ext_resource type="Texture2D" uid="uid://7q6u2ewmxvqq" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0021.png" id="21_oq1rk"]
+[ext_resource type="Texture2D" uid="uid://baqwjs5qe7hww" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0022.png" id="22_4og4o"]
+[ext_resource type="Texture2D" uid="uid://de0a4ucoiqqmr" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0023.png" id="23_1gw7i"]
+[ext_resource type="Texture2D" uid="uid://dggl65d2dkxf3" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0024.png" id="24_8o63l"]
+[ext_resource type="Texture2D" uid="uid://bs2c23k4anhix" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0025.png" id="25_kr4jn"]
+[ext_resource type="Texture2D" uid="uid://xs1ir2ewndnb" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0026.png" id="26_2wvtd"]
+[ext_resource type="Texture2D" uid="uid://kf5qkxtqbnwp" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0027.png" id="27_pge3v"]
+[ext_resource type="Texture2D" uid="uid://qd1j01jcqk76" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0028.png" id="28_o54cj"]
+[ext_resource type="Texture2D" uid="uid://cw0bpp4tcxn47" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0029.png" id="29_l530b"]
+[ext_resource type="Texture2D" uid="uid://blkmm5m0hamly" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0030.png" id="30_n0058"]
+[ext_resource type="Texture2D" uid="uid://btn0o5645c8eo" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0031.png" id="31_27ss5"]
+[ext_resource type="Texture2D" uid="uid://dv4signn82hwh" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0032.png" id="32_ropv7"]
+[ext_resource type="Texture2D" uid="uid://dik18o5038cfq" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0033.png" id="33_p344v"]
+[ext_resource type="Texture2D" uid="uid://eb56237isrc2" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0034.png" id="34_x25jn"]
+[ext_resource type="Texture2D" uid="uid://bytg5r0hcklgx" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0035.png" id="35_yj4jp"]
+[ext_resource type="Texture2D" uid="uid://bh2u0x6rv2s77" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0036.png" id="36_137a4"]
+[ext_resource type="Texture2D" uid="uid://beswbgg3i572r" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0037.png" id="37_mr57r"]
+[ext_resource type="Texture2D" uid="uid://byf2bmianhw1c" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0038.png" id="38_cu10r"]
+[ext_resource type="Texture2D" uid="uid://4duffmxuawqf" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0039.png" id="39_oit5k"]
+[ext_resource type="Texture2D" uid="uid://bdj1siu5fqllj" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0040.png" id="40_f4s37"]
+[ext_resource type="Texture2D" uid="uid://6qne47dd74y1" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0041.png" id="41_wib4k"]
+[ext_resource type="Texture2D" uid="uid://de7eehbgerg6y" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0042.png" id="42_dhhl3"]
+[ext_resource type="Texture2D" uid="uid://b8rjojypd0qeq" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0043.png" id="43_1m2fn"]
+[ext_resource type="Texture2D" uid="uid://ba2jsfcefqtj0" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0044.png" id="44_w3thh"]
+[ext_resource type="Texture2D" uid="uid://d4dli8b4yvc5j" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0045.png" id="45_yhdcg"]
+[ext_resource type="Texture2D" uid="uid://dkrimuvmuuiku" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0046.png" id="46_srpd0"]
+[ext_resource type="Texture2D" uid="uid://bx6qfihvw61u1" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0047.png" id="47_sbn1b"]
+[ext_resource type="Texture2D" uid="uid://bvb6x4xask5ho" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0048.png" id="48_y55e4"]
+[ext_resource type="Texture2D" uid="uid://mc0helrd220p" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0049.png" id="49_4nxh1"]
+[ext_resource type="Texture2D" uid="uid://yeq3sk1vukhc" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0050.png" id="50_nxyrm"]
+[ext_resource type="Texture2D" uid="uid://4sw52v3a1f67" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0051.png" id="51_ucnm7"]
+[ext_resource type="Texture2D" uid="uid://clgd64nvcxbm5" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0052.png" id="52_wdehq"]
+[ext_resource type="Texture2D" uid="uid://cor4y0jmic8y0" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0053.png" id="53_ds7a6"]
+[ext_resource type="Texture2D" uid="uid://dmwxue1i7wgnf" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0054.png" id="54_abvx1"]
+[ext_resource type="Texture2D" uid="uid://dkc8fujlf42e4" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0055.png" id="55_q18w6"]
+[ext_resource type="Texture2D" uid="uid://gq7sucda5xwg" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0056.png" id="56_l2560"]
+[ext_resource type="Texture2D" uid="uid://clv7y3c0j4eip" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0057.png" id="57_ciml6"]
+[ext_resource type="Texture2D" uid="uid://bpd72mnphfrkp" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0058.png" id="58_dnyr4"]
+[ext_resource type="Texture2D" uid="uid://dr4h40grj0dyg" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0059.png" id="59_c8gjm"]
+[ext_resource type="Texture2D" uid="uid://cni0dvlcg0wj0" path="res://y4k4r1 castle/sprites/crates/rockets/crate rockets0060.png" id="60_3tfxx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nkvi6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mywp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r6qdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cpqit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1b7hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jwk4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wom5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gijir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_54nfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h3yeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_abl1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qbc1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3ry52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j3ckh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rkhxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7ykga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gdhk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ognqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_50krv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kflxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_awic5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oq1rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4og4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1gw7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8o63l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kr4jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2wvtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pge3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_o54cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_l530b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_n0058")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_27ss5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ropv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_p344v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x25jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_yj4jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_137a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mr57r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_cu10r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_oit5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_f4s37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_wib4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_dhhl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_1m2fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_w3thh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_yhdcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_srpd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_sbn1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_y55e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4nxh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_nxyrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ucnm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_wdehq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ds7a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_abvx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_q18w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_l2560")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ciml6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_dnyr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_c8gjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_3tfxx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="CrateRockets" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nkvi6")
+frame_progress = 0.688429

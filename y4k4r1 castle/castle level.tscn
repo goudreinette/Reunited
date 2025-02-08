@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=133 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" uid="uid://w7rusoaqhu5r" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -84,6 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://dpdx3ygkmrshw" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar55.png" id="65_hqh2b"]
 [ext_resource type="Texture2D" uid="uid://cktavm6e15511" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar56.png" id="66_ckmfy"]
 [ext_resource type="Texture2D" uid="uid://bl58878pedk3h" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar57.png" id="67_x10ec"]
+[ext_resource type="PackedScene" uid="uid://dejyspu5pg37t" path="res://y4k4r1 castle/enemies/bosses/wilburr.tscn" id="86_7ok36"]
 [ext_resource type="Texture2D" uid="uid://bi6b1lb1wq2rc" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar95.png" id="105_fa3cl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
@@ -770,6 +771,9 @@ scale = Vector2(2.90152, 2.90152)
 position = Vector2(123, 200)
 gatling_cooldown = 0.1
 max_shield = 10
+
+[node name="Wilburr" parent="LevelPosition" instance=ExtResource("86_7ok36")]
+process_mode = 4
 
 [node name="Formation Test" parent="." instance=ExtResource("20_5jlxt")]
 position = Vector2(12, 29)

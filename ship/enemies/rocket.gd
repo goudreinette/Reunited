@@ -13,6 +13,7 @@ var explode_scene = preload("res://smal explosion.tscn")
 var player : Wendla
 
 
+
 func _ready():
 	##find the player if it exists
 	##so it doesnt crash while testing only the turret

@@ -3,29 +3,29 @@
 [ext_resource type="Script" uid="uid://dgshososoruk6" path="res://y4k4r1 castle/weapons/projectiles/rocket.gd" id="1_u2ber"]
 [ext_resource type="Texture2D" uid="uid://bk348k3ur3mku" path="res://y4k4r1 castle/sprites/Rocket.png" id="2_ix231"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x7h67"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpqwu"]
 atlas = ExtResource("2_ix231")
-region = Rect2(0, 0, 6, 18)
+region = Rect2(0, 0, 4, 11)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q78sx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oukan"]
 atlas = ExtResource("2_ix231")
-region = Rect2(6, 0, 6, 18)
+region = Rect2(4, 0, 4, 11)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e0167"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1wwe"]
 atlas = ExtResource("2_ix231")
-region = Rect2(12, 0, 6, 18)
+region = Rect2(8, 0, 4, 11)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_62xdr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x7h67")
+"texture": SubResource("AtlasTexture_dpqwu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q78sx")
+"texture": SubResource("AtlasTexture_oukan")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e0167")
+"texture": SubResource("AtlasTexture_n1wwe")
 }],
 "loop": true,
 "name": &"default",

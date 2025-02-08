@@ -26,10 +26,16 @@ func random_position_just_outside_frame():
 	
 
 func _process(delta):
+	# Spawning logic
 	if randi_range(0, 200) == 1:
 		var r = ring_pickup.instantiate()
 		add_child(r)
 		r.global_position = random_position_just_outside_frame()
+		
+	# Boss battle 
+	if Input.is_action_pressed("wilburr") and $LevelPosition/Wilburr.process_mode == PROCESS_MODE_DISABLED:
+		$LevelPosition/Wilburr.process_mode = Node.PROCESS_MODE_ALWAYS
+		$LevelPosition/Wilburr/AnimatedSprite/AnimationPlayer.play("wilburr in")
 
 func _on_enemy_died(value):
 	score += value

@@ -24,7 +24,7 @@ func _process(delta):
 	display_shield = lerp(display_shield, target_shield, 0.05)
 	#shield_bar.max_value = max_value
 	#shield_bar.value = value
-	print(display_shield)
+	#print(display_shield)
 	$Healthbar.frame = remap(display_shield, 0, max_shield, 0, 52)
 
 	
