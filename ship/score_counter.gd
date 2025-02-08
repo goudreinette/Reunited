@@ -25,8 +25,7 @@ func _process(delta):
 	var s = "%08d" % round(displayed_score)
 	for i in 8:
 		get_child(i).texture.region = Rect2(digit_coords[int(s[i])], Vector2(8, 8))
-	
-	print(target_score, displayed_score)
+	#print(target_score, displayed_score)
 	if abs(target_score - displayed_score) > 2:
 		modulate = Color.GOLD
 	else:

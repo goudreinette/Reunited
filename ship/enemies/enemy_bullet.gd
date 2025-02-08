@@ -27,3 +27,8 @@ func _on_play_death_animation_timer_timeout():
 
 func _on_death_timer_timeout():
 	queue_free()
+
+
+# FIXME
+func explode():
+	pass

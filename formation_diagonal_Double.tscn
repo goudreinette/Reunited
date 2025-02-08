@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1m6m0dvwp8tx"]
+[gd_scene load_steps=7 format=3 uid="uid://b1m6m0dvwp8tx"]
 
 [ext_resource type="Script" uid="uid://hi4sydodxk1d" path="res://formation.gd" id="1_xoa87"]
 [ext_resource type="PackedScene" uid="uid://cclj1rct6aop4" path="res://ship/enemies/drone_parent.tscn" id="2_cf11l"]
 [ext_resource type="PackedScene" uid="uid://j4wmogsu4mdb" path="res://ship/enemies/fw_drone.tscn" id="3_gidbv"]
+[ext_resource type="Script" uid="uid://dybvghc5qp1ot" path="res://y4k4r1 castle/enemies/fw_drone.gd" id="4_5odkh"]
+[ext_resource type="PackedScene" uid="uid://dvvcrlw6v5g1d" path="res://y4k4r1 castle/powerups/sonic_ring.tscn" id="5_7s4ba"]
 
 [sub_resource type="Curve2D" id="Curve2D_pe3ur"]
 _data = {
@@ -25,10 +27,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent7" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(247.523, -2.50453)
@@ -39,10 +45,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent7" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent7" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent6" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(264.608, -12.9101)
@@ -53,10 +63,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent6" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent6" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent5" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(281.69, -23.3137)
@@ -67,10 +81,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent5" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent5" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent4" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(298.774, -33.7188)
@@ -81,10 +99,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent4" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent4" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent3" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(315.854, -44.1215)
@@ -95,10 +117,14 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent3" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent3" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="Drone parent2" parent="." instance=ExtResource("2_cf11l")]
 position = Vector2(332.848, -54.4717)
@@ -109,7 +135,11 @@ loop = false
 [node name="FW_Drone2" parent="Drone parent2" instance=ExtResource("3_gidbv")]
 position = Vector2(0, -10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")
 
 [node name="FW_Drone3" parent="Drone parent2" instance=ExtResource("3_gidbv")]
 position = Vector2(0.046, 10)
 rotation = 1.5708
+script = ExtResource("4_5odkh")
+pickup_on_death = ExtResource("5_7s4ba")

@@ -81,7 +81,7 @@ _data = {
 &"blink": SubResource("Animation_5t2ul")
 }
 
-[node name="EnemyBullet" type="Area2D" groups=["enemies"]]
+[node name="EnemyBullet" type="Area2D"]
 script = ExtResource("1_5t2ul")
 speed = 30
 
