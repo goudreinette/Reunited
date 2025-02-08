@@ -16,8 +16,8 @@ enum FiringPatterns {
 	Sine,
 	Rotate360
 }
-@export var turret_range : int = 200
 
+@export var turret_range : int = 200
 @export var firing_pattern = FiringPatterns.Burst
 @export var burst_time = 2.0
 @export var cooldown_time = 2.0

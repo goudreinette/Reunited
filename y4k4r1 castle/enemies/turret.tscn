@@ -261,7 +261,6 @@ script = ExtResource("1_1qx56")
 health = 1
 pickup_on_death = ExtResource("2_nb672")
 burst_time = 5.0
-rate_of_fire = 1.0
 bullet_scene = ExtResource("3_gta0x")
 
 [node name="Base" type="Sprite2D" parent="."]

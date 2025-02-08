@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cth3n3jn2wso6"]
 
-[ext_resource type="Script" uid="uid://vml2sw8r7l03" path="res://ship/enemies/enemy_bullet.gd" id="1_5t2ul"]
+[ext_resource type="Script" uid="uid://403clkh3d26v" path="res://y4k4r1 castle/enemies/enemy_bullet.gd" id="1_5t2ul"]
 [ext_resource type="Texture2D" uid="uid://ctqixvff0dqtq" path="res://ship/Mini Pixel Pack 3/Projectiles/Enemy_projectile (16 x 16).png" id="2_grr08"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ua1nk"]
@@ -42,6 +42,21 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruvs5"]
 size = Vector2(4, 4)
 
+[sub_resource type="Animation" id="Animation_grr08"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_5t2ul"]
 resource_name = "blink"
 length = 0.15
@@ -60,28 +75,13 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_grr08"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_grr08"]
 _data = {
 &"RESET": SubResource("Animation_grr08"),
 &"blink": SubResource("Animation_5t2ul")
 }
 
-[node name="EnemyBullet" type="Area2D"]
+[node name="EnemyBullet" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_5t2ul")
 speed = 30
 

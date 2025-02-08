@@ -54,3 +54,8 @@ func new_game():
 func _on_start_pressed():
 	#start_button.hide()
 	new_game()
+
+
+func add_score(amount):
+	score += amount
+	$CanvasLayer/UI.update_score(score)

@@ -15,6 +15,10 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 
 func _on_area_entered(area):
-	if area.name == "Player":
+	if area.is_in_group("Player"):
 		queue_free()
 		area.shield -= 1
+
+
+func reduce_health(amount):
+	queue_free()

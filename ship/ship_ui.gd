@@ -10,3 +10,5 @@ func update_score(value):
 func update_shield(max_value, value):
 	shield_bar.max_value = max_value
 	shield_bar.value = value
+	print(value, max_value)
+	$Healthbar.frame = remap(value, 0, max_value, 0, 52)

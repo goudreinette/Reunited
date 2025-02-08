@@ -14,9 +14,25 @@ var digit_coords = {
 }
 
 func _ready():
-	display_digits(123)
+	display_digits(000)
 
-func display_digits(n):
-	var s = "%08d" % n
+
+var displayed_score: float = 0
+var target_score: float = 0
+
+func _process(delta):
+	displayed_score = lerp(displayed_score, target_score, 0.1)
+	var s = "%08d" % round(displayed_score)
 	for i in 8:
 		get_child(i).texture.region = Rect2(digit_coords[int(s[i])], Vector2(8, 8))
+	
+	print(target_score, displayed_score)
+	if abs(target_score - displayed_score) > 2:
+		modulate = Color.GOLD
+	else:
+		modulate = Color.WHITE
+	
+
+func display_digits(n):
+	#$AnimationPlayer.play("highlight")
+	target_score = n

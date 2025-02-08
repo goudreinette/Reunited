@@ -258,6 +258,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BallRight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_o5yhx"]
 resource_name = "fire"
@@ -300,6 +312,7 @@ gatling_cooldown = 0.035
 current_weapon_type = 2
 bullet_scene = ExtResource("2_8huye")
 bullet_scene_special = ExtResource("3_35u5s")
+max_shield = 50
 
 [node name="Ship" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -320,7 +333,6 @@ position = Vector2(-17, -1)
 autoplay = "default"
 
 [node name="BallRight" parent="Ship" instance=ExtResource("45_a5yay")]
-modulate = Color(100, 100, 100, 1)
 position = Vector2(17, -1)
 autoplay = "default"
 

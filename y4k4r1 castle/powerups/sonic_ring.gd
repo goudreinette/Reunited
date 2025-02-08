@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 
 
-@export var magnet_range = 120
+@export var magnet_range = 200
 
 var player: Wendla
 
@@ -22,6 +22,7 @@ func _process(delta):
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player") and not collected:
 		collected = true
+		get_node("/root/Main").add_score(10)
 		$AnimationPlayer.play("shrink")
 		$Ring.play()
 		await $Ring.finished
