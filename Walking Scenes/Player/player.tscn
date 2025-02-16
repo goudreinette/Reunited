@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bhl5ng17x1lny"]
 
-[ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://Walking Scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
-[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
+[ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://walking scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
+[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni5tt"]
 radius = 4.0

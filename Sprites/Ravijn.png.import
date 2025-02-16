@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5sp0n4wt6o1o"
-path="res://.godot/imported/Ravijn.png-644fa91566cb1f685ac0ef75c0b387e9.ctex"
+path="res://.godot/imported/Ravijn.png-09ee1822fef3dfb11b2e8445f9737aeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ravijn.png"
-dest_files=["res://.godot/imported/Ravijn.png-644fa91566cb1f685ac0ef75c0b387e9.ctex"]
+source_file="res://sprites/Ravijn.png"
+dest_files=["res://.godot/imported/Ravijn.png-09ee1822fef3dfb11b2e8445f9737aeb.ctex"]
 
 [params]
 
