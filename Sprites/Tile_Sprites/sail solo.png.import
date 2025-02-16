@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6f25lfceiapq"
-path="res://.godot/imported/sail solo.png-4504f7806b4567b63f44d5a036d7e835.ctex"
+path="res://.godot/imported/sail solo.png-293a50a0cc4d9615b2ff116566cf9b60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tile_Sprites/sail solo.png"
-dest_files=["res://.godot/imported/sail solo.png-4504f7806b4567b63f44d5a036d7e835.ctex"]
+source_file="res://sprites/Tile_Sprites/sail solo.png"
+dest_files=["res://.godot/imported/sail solo.png-293a50a0cc4d9615b2ff116566cf9b60.ctex"]
 
 [params]
 

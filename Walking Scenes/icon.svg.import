@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cirn4xnu0n0ta"
-path="res://.godot/imported/icon.svg-899afd06400e45c02b8eda32908985c1.ctex"
+path="res://.godot/imported/icon.svg-d7f316ea881cb44fe34105ec40cf7e34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Walking Scenes/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-899afd06400e45c02b8eda32908985c1.ctex"]
+source_file="res://walking scenes/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-d7f316ea881cb44fe34105ec40cf7e34.ctex"]
 
 [params]
 

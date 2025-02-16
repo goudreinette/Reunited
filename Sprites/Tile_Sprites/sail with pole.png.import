@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4farufrl7eyk"
-path="res://.godot/imported/sail with pole.png-638c1e1fb91b373954008bb05cdae297.ctex"
+path="res://.godot/imported/sail with pole.png-5c9302265e5775160efd30913c36a5d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tile_Sprites/sail with pole.png"
-dest_files=["res://.godot/imported/sail with pole.png-638c1e1fb91b373954008bb05cdae297.ctex"]
+source_file="res://sprites/Tile_Sprites/sail with pole.png"
+dest_files=["res://.godot/imported/sail with pole.png-5c9302265e5775160efd30913c36a5d7.ctex"]
 
 [params]
 

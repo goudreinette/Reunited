@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvwk3me78bhbu"
-path="res://.godot/imported/Beach_Horizontal_Anim.png-85102943063afc52530bb70a8a75f099.ctex"
+path="res://.godot/imported/Beach_Horizontal_Anim.png-432a4eee4f4dc66536c5fc910cd8579d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim.png"
-dest_files=["res://.godot/imported/Beach_Horizontal_Anim.png-85102943063afc52530bb70a8a75f099.ctex"]
+source_file="res://sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim.png"
+dest_files=["res://.godot/imported/Beach_Horizontal_Anim.png-432a4eee4f4dc66536c5fc910cd8579d.ctex"]
 
 [params]
 

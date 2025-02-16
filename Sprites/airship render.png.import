@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnodimj8220lw"
-path="res://.godot/imported/airship render.png-bb81084a8688f88f4637c71aa275b510.ctex"
+path="res://.godot/imported/airship render.png-f0f137d758b6a143c166b725632359af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/airship render.png"
-dest_files=["res://.godot/imported/airship render.png-bb81084a8688f88f4637c71aa275b510.ctex"]
+source_file="res://sprites/airship render.png"
+dest_files=["res://.godot/imported/airship render.png-f0f137d758b6a143c166b725632359af.ctex"]
 
 [params]
 

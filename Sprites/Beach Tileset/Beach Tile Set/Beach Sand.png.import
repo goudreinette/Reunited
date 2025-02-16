@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://casubc40n8v0y"
-path="res://.godot/imported/Beach Sand.png-cc9babc6160afba64394f3f0992f6c79.ctex"
+path="res://.godot/imported/Beach Sand.png-d772ce6f6fb20aced1d27bee14199d63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Beach Tileset/Beach Tile Set/Beach Sand.png"
-dest_files=["res://.godot/imported/Beach Sand.png-cc9babc6160afba64394f3f0992f6c79.ctex"]
+source_file="res://sprites/Beach Tileset/Beach Tile Set/Beach Sand.png"
+dest_files=["res://.godot/imported/Beach Sand.png-d772ce6f6fb20aced1d27bee14199d63.ctex"]
 
 [params]
 

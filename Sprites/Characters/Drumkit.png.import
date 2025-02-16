@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5i5v5tccwa6p"
-path="res://.godot/imported/Drumkit.png-d94affec44d0c604d5e49a452083b7fd.ctex"
+path="res://.godot/imported/Drumkit.png-deece42555e7a9f6b4a9e0a2562b19ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/Drumkit.png"
-dest_files=["res://.godot/imported/Drumkit.png-d94affec44d0c604d5e49a452083b7fd.ctex"]
+source_file="res://sprites/Characters/Drumkit.png"
+dest_files=["res://.godot/imported/Drumkit.png-deece42555e7a9f6b4a9e0a2562b19ba.ctex"]
 
 [params]
 

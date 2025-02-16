@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cui0kfbbf21e2"
-path="res://.godot/imported/Archer spritesheet with shadow.png-0313467e9ff73087ff3d42ddf279e32d.ctex"
+path="res://.godot/imported/Archer spritesheet with shadow.png-469c61b69e48c6e6217d28d8a5079ffc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Enemies/Archer/Archer spritesheet with shadow.png"
-dest_files=["res://.godot/imported/Archer spritesheet with shadow.png-0313467e9ff73087ff3d42ddf279e32d.ctex"]
+source_file="res://sprites/01 Stranded - Starter Pack v1.1/Enemies/Archer/Archer spritesheet with shadow.png"
+dest_files=["res://.godot/imported/Archer spritesheet with shadow.png-469c61b69e48c6e6217d28d8a5079ffc.ctex"]
 
 [params]
 

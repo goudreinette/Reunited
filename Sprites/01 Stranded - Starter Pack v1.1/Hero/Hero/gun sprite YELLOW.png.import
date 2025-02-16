@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkgb0eq3uwsqb"
-path="res://.godot/imported/gun sprite YELLOW.png-c3c325848055c5f6ba7122618b04a478.ctex"
+path="res://.godot/imported/gun sprite YELLOW.png-90fb7ed7fdf6821f28a876fff1e78a12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Hero/Hero/gun sprite YELLOW.png"
-dest_files=["res://.godot/imported/gun sprite YELLOW.png-c3c325848055c5f6ba7122618b04a478.ctex"]
+source_file="res://sprites/01 Stranded - Starter Pack v1.1/Hero/Hero/gun sprite YELLOW.png"
+dest_files=["res://.godot/imported/gun sprite YELLOW.png-90fb7ed7fdf6821f28a876fff1e78a12.ctex"]
 
 [params]
 

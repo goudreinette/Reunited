@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpigylodufhj0"
-path="res://.godot/imported/Huisje.png-9408acb585e974f71e2e73da90805f00.ctex"
+path="res://.godot/imported/Huisje.png-9aafa9e2a0b4e5c02c6f666d851f6830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Huisje.png"
-dest_files=["res://.godot/imported/Huisje.png-9408acb585e974f71e2e73da90805f00.ctex"]
+source_file="res://sprites/Huisje.png"
+dest_files=["res://.godot/imported/Huisje.png-9aafa9e2a0b4e5c02c6f666d851f6830.ctex"]
 
 [params]
 
