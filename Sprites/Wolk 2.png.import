@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceirn0ynm16s7"
-path="res://.godot/imported/Wolk 2.png-d494979175e5233e15184ffd1b35e786.ctex"
+path="res://.godot/imported/Wolk 2.png-86a0af01e97820401a3c81897c59e27e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Wolk 2.png"
-dest_files=["res://.godot/imported/Wolk 2.png-d494979175e5233e15184ffd1b35e786.ctex"]
+source_file="res://Sprites/Wolk 2.png"
+dest_files=["res://.godot/imported/Wolk 2.png-86a0af01e97820401a3c81897c59e27e.ctex"]
 
 [params]
 

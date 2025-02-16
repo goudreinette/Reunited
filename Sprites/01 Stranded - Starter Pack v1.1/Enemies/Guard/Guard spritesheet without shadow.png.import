@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv7x12foyxa3b"
-path="res://.godot/imported/Guard spritesheet without shadow.png-dd25e49ce9563c205357821e1fc161c2.ctex"
+path="res://.godot/imported/Guard spritesheet without shadow.png-302715075b2b4f895e1d3d48dc6c812c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/01 Stranded - Starter Pack v1.1/Enemies/Guard/Guard spritesheet without shadow.png"
-dest_files=["res://.godot/imported/Guard spritesheet without shadow.png-dd25e49ce9563c205357821e1fc161c2.ctex"]
+source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Enemies/Guard/Guard spritesheet without shadow.png"
+dest_files=["res://.godot/imported/Guard spritesheet without shadow.png-302715075b2b4f895e1d3d48dc6c812c.ctex"]
 
 [params]
 

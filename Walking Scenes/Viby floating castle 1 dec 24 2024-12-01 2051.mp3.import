@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cdsgovxnob4ia"
-path="res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-8fe195406f99b8affbe399b82a3d5e7c.mp3str"
+path="res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-ebb3d69306e6a00dd72de40b9a764d54.mp3str"
 
 [deps]
 
-source_file="res://walking scenes/Viby floating castle 1 dec 24 2024-12-01 2051.mp3"
-dest_files=["res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-8fe195406f99b8affbe399b82a3d5e7c.mp3str"]
+source_file="res://Walking Scenes/Viby floating castle 1 dec 24 2024-12-01 2051.mp3"
+dest_files=["res://.godot/imported/Viby floating castle 1 dec 24 2024-12-01 2051.mp3-ebb3d69306e6a00dd72de40b9a764d54.mp3str"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bywbcgmaolyqj"
-path="res://.godot/imported/Pre-built house 2.png-ba51083e089fc6cd89f0484b6575c11d.ctex"
+path="res://.godot/imported/Pre-built house 2.png-6ca416f740afc867e7c7af285271230e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/DARK - Top Down Tileset/Pre-Built Homes/Pre-built house 2.png"
-dest_files=["res://.godot/imported/Pre-built house 2.png-ba51083e089fc6cd89f0484b6575c11d.ctex"]
+source_file="res://Sprites/DARK - Top Down Tileset/Pre-Built Homes/Pre-built house 2.png"
+dest_files=["res://.godot/imported/Pre-built house 2.png-6ca416f740afc867e7c7af285271230e.ctex"]
 
 [params]
 

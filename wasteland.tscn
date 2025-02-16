@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://byo7134utnix0"]
+
+[ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
+[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
+
+[node name="Wasteland" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_pvpmv")
+format = 2
+layer_0/tile_data = PackedInt32Array(327684, 655360, 6, 327685, 524288, 6, 262149, 524288, 6, 262150, 589824, 6, 262151, 524288, 6, 327687, 589824, 6, 327688, 655360, 6, 393224, 589824, 6, 393225, 655360, 6, 524298, 720896, 6, 458761, 720896, 6, 458762, 720896, 6, 196610, 720896, 6, 262147, 720896, 6, 131072, 720896, 6, 196609, 720896, 6, 327680, 196608, 3, 393216, 196608, 4, 327681, 262144, 3, 393217, 262144, 4, 327677, 65536, 1, 393213, 65536, 2, 327678, 131072, 1, 393214, 131072, 2, 0, 65536, 1, 65536, 65536, 2, 1, 131072, 1, 65537, 131072, 2, 65541, 65536, 1, 131077, 65536, 2, 65542, 131072, 1, 131078, 131072, 2, 589823, 655360, 5, 393223, 786432, 5, 393220, 786432, 5, 524291, 786432, 5, 589833, 786432, 5, 720905, 786432, 5, 786442, 786432, 5, 589830, 0, 14, 589831, 65536, 14, 655367, 65536, 15, 720903, 65536, 16, 786439, 65536, 17)
+
+[node name="Player" parent="." instance=ExtResource("2_vxok5")]
+position = Vector2(88, 137)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_speed = 20.0
+
+[node name="Backgroundcolor" type="ColorRect" parent="Player"]
+z_index = -10
+offset_left = -381.0
+offset_top = -249.0
+offset_right = 4619.0
+offset_bottom = 4751.0
+color = Color(0.317647, 0.227451, 0.239216, 1)

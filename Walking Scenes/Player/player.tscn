@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bhl5ng17x1lny"]
 
-[ext_resource type="Script" path="res://walking scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
-[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
+[ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://walking scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
+[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni5tt"]
 radius = 4.0
@@ -94,11 +94,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5qsau"]
 _data = {
-"RESET": SubResource("Animation_28lxq"),
-"idle_down": SubResource("Animation_hcm8a"),
-"walk_down": SubResource("Animation_wak08"),
-"walk_side": SubResource("Animation_4ml6r"),
-"walk_up": SubResource("Animation_y8k58")
+&"RESET": SubResource("Animation_28lxq"),
+&"idle_down": SubResource("Animation_hcm8a"),
+&"walk_down": SubResource("Animation_wak08"),
+&"walk_side": SubResource("Animation_4ml6r"),
+&"walk_up": SubResource("Animation_y8k58")
 }
 
 [node name="Player" type="CharacterBody2D"]

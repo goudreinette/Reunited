@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chk8qhxgwp7p1"
-path="res://.godot/imported/Companion YELLOW with shadow.png-c9af3ddd9fa9dadae4b37a1348f137a7.ctex"
+path="res://.godot/imported/Companion YELLOW with shadow.png-04890d25dc69059aa75b4e71a8f5850a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/01 Stranded - Starter Pack v1.1/Hero/Companion/Companion YELLOW with shadow.png"
-dest_files=["res://.godot/imported/Companion YELLOW with shadow.png-c9af3ddd9fa9dadae4b37a1348f137a7.ctex"]
+source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Hero/Companion/Companion YELLOW with shadow.png"
+dest_files=["res://.godot/imported/Companion YELLOW with shadow.png-04890d25dc69059aa75b4e71a8f5850a.ctex"]
 
 [params]
 

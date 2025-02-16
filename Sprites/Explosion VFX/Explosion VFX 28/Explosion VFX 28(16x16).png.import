@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bovacgpcemvg0"
-path="res://.godot/imported/Explosion VFX 28(16x16).png-974e37562a93ecc1e74523c21b44b9d7.ctex"
+path="res://.godot/imported/Explosion VFX 28(16x16).png-28ee95e770d41d54b8f79646ac2426e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Explosion VFX/Explosion VFX 28/Explosion VFX 28(16x16).png"
-dest_files=["res://.godot/imported/Explosion VFX 28(16x16).png-974e37562a93ecc1e74523c21b44b9d7.ctex"]
+source_file="res://Sprites/Explosion VFX/Explosion VFX 28/Explosion VFX 28(16x16).png"
+dest_files=["res://.godot/imported/Explosion VFX 28(16x16).png-28ee95e770d41d54b8f79646ac2426e6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8aaowi0ycpg0"
-path="res://.godot/imported/Warrior spritesheet with shadow.png-433851f4c324b2dbb12c9e97ac2350ed.ctex"
+path="res://.godot/imported/Warrior spritesheet with shadow.png-5d2790e851ee0558c122f2db2678e63f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/01 Stranded - Starter Pack v1.1/Enemies/Warrior/Warrior spritesheet with shadow.png"
-dest_files=["res://.godot/imported/Warrior spritesheet with shadow.png-433851f4c324b2dbb12c9e97ac2350ed.ctex"]
+source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Enemies/Warrior/Warrior spritesheet with shadow.png"
+dest_files=["res://.godot/imported/Warrior spritesheet with shadow.png-5d2790e851ee0558c122f2db2678e63f.ctex"]
 
 [params]
 

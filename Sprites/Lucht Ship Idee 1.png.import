@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eewa1o6s7nma"
-path="res://.godot/imported/Lucht Ship Idee 1.png-19697de92c016d0bb27e627df1483fc5.ctex"
+path="res://.godot/imported/Lucht Ship Idee 1.png-9923dc2cf0a3055799ee4b9df2ae754f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Lucht Ship Idee 1.png"
-dest_files=["res://.godot/imported/Lucht Ship Idee 1.png-19697de92c016d0bb27e627df1483fc5.ctex"]
+source_file="res://Sprites/Lucht Ship Idee 1.png"
+dest_files=["res://.godot/imported/Lucht Ship Idee 1.png-9923dc2cf0a3055799ee4b9df2ae754f.ctex"]
 
 [params]
 

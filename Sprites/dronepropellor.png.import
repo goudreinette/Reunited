@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpxeh4tj8acc5"
-path="res://.godot/imported/dronepropellor.png-25b5ae8139aff84173525d28a274125d.ctex"
+path="res://.godot/imported/dronepropellor.png-b511a83e3d7b1d40a855622ab6586833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dronepropellor.png"
-dest_files=["res://.godot/imported/dronepropellor.png-25b5ae8139aff84173525d28a274125d.ctex"]
+source_file="res://Sprites/dronepropellor.png"
+dest_files=["res://.godot/imported/dronepropellor.png-b511a83e3d7b1d40a855622ab6586833.ctex"]
 
 [params]
 

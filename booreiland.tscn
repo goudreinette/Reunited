@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3ckcxe2cc4uw"]
 
-[ext_resource type="Texture2D" uid="uid://bpchtv0i5gtml" path="res://sprites/Booreiland.png" id="1_ftqdb"]
+[ext_resource type="Texture2D" uid="uid://bpchtv0i5gtml" path="res://Sprites/Booreiland.png" id="1_ftqdb"]
 
 [sub_resource type="Curve" id="Curve_fbeee"]
 _data = [Vector2(0, 0.260243), 0.0, 0.0, 0, 0, Vector2(0.9631, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]

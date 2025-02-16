@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6w02mdhssni4"
-path="res://.godot/imported/Hero spritesheet YELLOW with shadow.png-abde8fa4d1faec684d7c06b0b68ca67b.ctex"
+path="res://.godot/imported/Hero spritesheet YELLOW with shadow.png-4a000e664bb25142c3f4438845c0d4fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/01 Stranded - Starter Pack v1.1/Hero/Hero/Hero spritesheet YELLOW with shadow.png"
-dest_files=["res://.godot/imported/Hero spritesheet YELLOW with shadow.png-abde8fa4d1faec684d7c06b0b68ca67b.ctex"]
+source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Hero/Hero/Hero spritesheet YELLOW with shadow.png"
+dest_files=["res://.godot/imported/Hero spritesheet YELLOW with shadow.png-4a000e664bb25142c3f4438845c0d4fb.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmvou7ox8smcr"
-path="res://.godot/imported/explosion.png_25.png-5d49c6c2f7a7c2d4600ecc20a3adf1d3.ctex"
+path="res://.godot/imported/explosion.png_25.png-5b92a021fc26c44a00e668f5bfbb04d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Effects/Explosion/explosion.png_25.png"
-dest_files=["res://.godot/imported/explosion.png_25.png-5d49c6c2f7a7c2d4600ecc20a3adf1d3.ctex"]
+source_file="res://Sprites/Effects/Explosion/explosion.png_25.png"
+dest_files=["res://.godot/imported/explosion.png_25.png-5b92a021fc26c44a00e668f5bfbb04d8.ctex"]
 
 [params]
 

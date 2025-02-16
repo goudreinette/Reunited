@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dottkyqrvagt3"
-path="res://.godot/imported/Beach_Corner_Outlet_Anim.png-bc61665e8a05dc53606aa6f006c59d91.ctex"
+path="res://.godot/imported/Beach_Corner_Outlet_Anim.png-d5ec6b0e5e287d6b9cfdd620180e4a4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Beach Tileset/Beach Tile Set/Beach_Corner_Outlet_Anim.png"
-dest_files=["res://.godot/imported/Beach_Corner_Outlet_Anim.png-bc61665e8a05dc53606aa6f006c59d91.ctex"]
+source_file="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Corner_Outlet_Anim.png"
+dest_files=["res://.godot/imported/Beach_Corner_Outlet_Anim.png-d5ec6b0e5e287d6b9cfdd620180e4a4e.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cgcsjb12gfvmk"]
 
-[ext_resource type="Script" path="res://ship/enemies/rocket.gd" id="1_n4ir4"]
-[ext_resource type="Texture2D" uid="uid://bogavg3c4n2iv" path="res://sprites/Rocket.png" id="2_le00s"]
+[ext_resource type="Script" uid="uid://gb4xu3oscb56" path="res://ship/enemies/rocket.gd" id="1_n4ir4"]
+[ext_resource type="Texture2D" uid="uid://bogavg3c4n2iv" path="res://Sprites/Rocket.png" id="2_le00s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74hye"]
 atlas = ExtResource("2_le00s")

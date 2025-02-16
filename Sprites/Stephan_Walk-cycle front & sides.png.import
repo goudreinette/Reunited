@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj8uibotctv5v"
-path="res://.godot/imported/Stephan_Walk-cycle front & sides.png-097f2a09158e5c782f0e7acc68b3e953.ctex"
+path="res://.godot/imported/Stephan_Walk-cycle front & sides.png-8a8d5b15be0afe455b70ee6a97b0aef1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Stephan_Walk-cycle front & sides.png"
-dest_files=["res://.godot/imported/Stephan_Walk-cycle front & sides.png-097f2a09158e5c782f0e7acc68b3e953.ctex"]
+source_file="res://Sprites/Stephan_Walk-cycle front & sides.png"
+dest_files=["res://.godot/imported/Stephan_Walk-cycle front & sides.png-8a8d5b15be0afe455b70ee6a97b0aef1.ctex"]
 
 [params]
 

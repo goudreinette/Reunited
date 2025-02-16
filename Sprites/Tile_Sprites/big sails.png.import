@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g0vjjv0gblhs"
-path="res://.godot/imported/big sails.png-9099aa33863fb2506c818d1913aa4f8a.ctex"
+path="res://.godot/imported/big sails.png-29bcdbf447ac033a45a2cb89f6b87c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tile_Sprites/big sails.png"
-dest_files=["res://.godot/imported/big sails.png-9099aa33863fb2506c818d1913aa4f8a.ctex"]
+source_file="res://Sprites/Tile_Sprites/big sails.png"
+dest_files=["res://.godot/imported/big sails.png-29bcdbf447ac033a45a2cb89f6b87c01.ctex"]
 
 [params]
 

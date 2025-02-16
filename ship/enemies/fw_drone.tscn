@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://j4wmogsu4mdb"]
 
-[ext_resource type="Script" path="res://ship/enemies/fw_drone.gd" id="1_s8bkg"]
-[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://sprites/Enemy fixed wing drone.png" id="2_f2qes"]
-[ext_resource type="Shader" path="res://shaders/hit.gdshader" id="2_h12e6"]
+[ext_resource type="Script" uid="uid://b25hcsc7rrnwl" path="res://ship/enemies/fw_drone.gd" id="1_s8bkg"]
+[ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://Sprites/Enemy fixed wing drone.png" id="2_f2qes"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_h12e6"]
 [ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="3_fid53"]
 [ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_lg58s"]
 
@@ -223,10 +223,10 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nmc7n"]
 _data = {
-"RESET": SubResource("Animation_lon5t"),
-"Strafe": SubResource("Animation_r42qd"),
-"Straight": SubResource("Animation_gnnqf"),
-"explode": SubResource("Animation_uasbv")
+&"RESET": SubResource("Animation_lon5t"),
+&"Strafe": SubResource("Animation_r42qd"),
+&"Straight": SubResource("Animation_gnnqf"),
+&"explode": SubResource("Animation_uasbv")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adis6"]
@@ -265,8 +265,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_02tj8"]
 _data = {
-"RESET": SubResource("Animation_iqs3q"),
-"hit": SubResource("Animation_g3nya")
+&"RESET": SubResource("Animation_iqs3q"),
+&"hit": SubResource("Animation_g3nya")
 }
 
 [node name="FW_Drone" type="Area2D" groups=["enemies"]]

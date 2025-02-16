@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h573t5ikovdp"
-path="res://.godot/imported/lake.png-896caa1df1e098378af709bf0dac4c8c.ctex"
+path="res://.godot/imported/lake.png-1952a42ecfb223bf6677575dfc4156f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lake.png"
-dest_files=["res://.godot/imported/lake.png-896caa1df1e098378af709bf0dac4c8c.ctex"]
+source_file="res://Sprites/lake.png"
+dest_files=["res://.godot/imported/lake.png-1952a42ecfb223bf6677575dfc4156f9.ctex"]
 
 [params]
 

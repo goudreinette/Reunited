@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs1vsqni32ufj"
-path="res://.godot/imported/mannetje-spr-sheet-export.png-cff801cb2a40c6871f0852e077e84ee7.ctex"
+path="res://.godot/imported/mannetje-spr-sheet-export.png-1e0512e8749ebf52b7108ae52977a0b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://walking scenes/Player/sprites/mannetje-spr-sheet-export.png"
-dest_files=["res://.godot/imported/mannetje-spr-sheet-export.png-cff801cb2a40c6871f0852e077e84ee7.ctex"]
+source_file="res://Walking Scenes/Player/sprites/mannetje-spr-sheet-export.png"
+dest_files=["res://.godot/imported/mannetje-spr-sheet-export.png-1e0512e8749ebf52b7108ae52977a0b2.ctex"]
 
 [params]
 

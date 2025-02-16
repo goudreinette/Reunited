@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bogavg3c4n2iv"
-path="res://.godot/imported/Rocket.png-288c27faae8ba0c54cf77a7d9a180c96.ctex"
+path="res://.godot/imported/Rocket.png-22184e4a345bcc31617c15c2d745a593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Rocket.png"
-dest_files=["res://.godot/imported/Rocket.png-288c27faae8ba0c54cf77a7d9a180c96.ctex"]
+source_file="res://Sprites/Rocket.png"
+dest_files=["res://.godot/imported/Rocket.png-22184e4a345bcc31617c15c2d745a593.ctex"]
 
 [params]
 

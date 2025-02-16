@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0wr37i8n6wvj"
-path="res://.godot/imported/Ander Mannetje.png-67b0dc0dd5f234e4179358b392eaa979.ctex"
+path="res://.godot/imported/Ander Mannetje.png-120fdd76df9a3d5c14e4ab0c24b09555.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ander Mannetje.png"
-dest_files=["res://.godot/imported/Ander Mannetje.png-67b0dc0dd5f234e4179358b392eaa979.ctex"]
+source_file="res://Sprites/Ander Mannetje.png"
+dest_files=["res://.godot/imported/Ander Mannetje.png-120fdd76df9a3d5c14e4ab0c24b09555.ctex"]
 
 [params]
 

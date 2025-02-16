@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://82aoxfvtijt1"
-path="res://.godot/imported/Companion PINK without shadow.png-5a54a3526e8001921faf42abed3097f8.ctex"
+path="res://.godot/imported/Companion PINK without shadow.png-6dc9cb673ed04d34acc2be425807bbb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/01 Stranded - Starter Pack v1.1/Hero/Companion/Companion PINK without shadow.png"
-dest_files=["res://.godot/imported/Companion PINK without shadow.png-5a54a3526e8001921faf42abed3097f8.ctex"]
+source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Hero/Companion/Companion PINK without shadow.png"
+dest_files=["res://.godot/imported/Companion PINK without shadow.png-6dc9cb673ed04d34acc2be425807bbb1.ctex"]
 
 [params]
 
