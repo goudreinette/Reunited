@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=3 uid="uid://cee4yu2d6icjv"]
+[gd_scene load_steps=134 format=3 uid="uid://cee4yu2d6icjv"]
 
 [ext_resource type="Script" uid="uid://w7rusoaqhu5r" path="res://ship/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
@@ -42,7 +42,6 @@
 [ext_resource type="Texture2D" uid="uid://bwsxs6rxe5ucr" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar15.png" id="25_djvff"]
 [ext_resource type="Texture2D" uid="uid://bn80p08cgh4qe" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar16.png" id="26_5mie6"]
 [ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://y4k4r1 castle/sprites/raft.png" id="26_mbatw"]
-[ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://sprites/Wolk 1.png" id="27_eb4hl"]
 [ext_resource type="Texture2D" uid="uid://blnoplo4ojufr" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar17.png" id="27_ygj3s"]
 [ext_resource type="Texture2D" uid="uid://cdjprrsdow41t" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar18.png" id="28_w8c3s"]
 [ext_resource type="Script" uid="uid://bh8c4i3hrlncr" path="res://y4k4r1 castle/wolk.gd" id="29_2n3r6"]
@@ -84,7 +83,10 @@
 [ext_resource type="Texture2D" uid="uid://dpdx3ygkmrshw" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar55.png" id="65_hqh2b"]
 [ext_resource type="Texture2D" uid="uid://cktavm6e15511" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar56.png" id="66_ckmfy"]
 [ext_resource type="Texture2D" uid="uid://bl58878pedk3h" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar57.png" id="67_x10ec"]
+[ext_resource type="PackedScene" uid="uid://xjbx4bxf15du" path="res://y4k4r1 castle/wolk_1.tscn" id="82_jayb2"]
+[ext_resource type="PackedScene" uid="uid://pxyutqanov1m" path="res://y4k4r1 castle/wolk_6.tscn" id="85_d7vk5"]
 [ext_resource type="PackedScene" uid="uid://dejyspu5pg37t" path="res://y4k4r1 castle/enemies/bosses/wilburr.tscn" id="86_7ok36"]
+[ext_resource type="PackedScene" uid="uid://loo5wpyutd46" path="res://y4k4r1 castle/wolk_3.tscn" id="86_smmhl"]
 [ext_resource type="Texture2D" uid="uid://bi6b1lb1wq2rc" path="res://y4k4r1 castle/interface/healthbar/sprites/healthbar95.png" id="105_fa3cl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
@@ -506,6 +508,21 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="Animation" id="Animation_7ok36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_qtidb"]
 resource_name = "take_damage"
 length = 0.15
@@ -520,21 +537,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.817629, 0.0474653, 0.0266817, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_7ok36"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aq2y8"]
@@ -636,10 +638,16 @@ _data = {
 &"raft": SubResource("Animation_wrv3t")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_25pjb"]
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ykqqd")
+formation_1 = ExtResource("20_5jlxt")
+formation_2 = ExtResource("21_5gh8r")
+formation_3 = ExtResource("23_easw4")
+formation_4 = ExtResource("22_hphrm")
+turret = ExtResource("31_cqnwo")
+cloud1 = ExtResource("82_jayb2")
+cloud2 = ExtResource("86_smmhl")
+cloud3 = ExtResource("85_d7vk5")
 ring_pickup = ExtResource("19_xb83t")
 
 [node name="Lake" type="Sprite2D" parent="."]
@@ -838,13 +846,8 @@ libraries = {
 }
 autoplay = "raft"
 
-[node name="Wolk1" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.662745)
-texture_filter = 1
-material = SubResource("ShaderMaterial_25pjb")
+[node name="Wolk1" parent="." instance=ExtResource("82_jayb2")]
 position = Vector2(67, 172)
-texture = ExtResource("27_eb4hl")
-script = ExtResource("29_2n3r6")
 
 [node name="Wolk5" type="Sprite2D" parent="."]
 position = Vector2(198, -664)
@@ -852,11 +855,8 @@ texture = ExtResource("29_e3c5y")
 script = ExtResource("29_2n3r6")
 speed = 5.0
 
-[node name="Wolk6" type="Sprite2D" parent="."]
+[node name="Wolk6" parent="." instance=ExtResource("85_d7vk5")]
 position = Vector2(208, -471)
-texture = ExtResource("29_e3c5y")
-script = ExtResource("29_2n3r6")
-speed = 5.0
 
 [node name="Wolk7" type="Sprite2D" parent="."]
 z_index = -1
@@ -879,11 +879,8 @@ texture = ExtResource("29_e3c5y")
 script = ExtResource("29_2n3r6")
 speed = 5.0
 
-[node name="Wolk3" type="Sprite2D" parent="."]
+[node name="Wolk3" parent="." instance=ExtResource("86_smmhl")]
 position = Vector2(173, -56)
-texture = ExtResource("30_nmxpl")
-script = ExtResource("29_2n3r6")
-speed = 20.0
 
 [node name="Wolk10" type="Sprite2D" parent="."]
 position = Vector2(0, -420)

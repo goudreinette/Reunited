@@ -6,6 +6,17 @@ var score = 0
 
 #@onready var start_button = $CanvasLayer/CenterContainer/Start
 @onready var game_over = $CanvasLayer/CenterContainer/GameOver
+
+@export var formation_1 : PackedScene
+@export var formation_2 : PackedScene
+@export var formation_3 : PackedScene
+@export var formation_4 : PackedScene
+@export var turret : PackedScene
+
+@export var cloud1 : PackedScene
+@export var cloud2 : PackedScene
+@export var cloud3 : PackedScene
+
 #@onready var mission_start = $CanvasLayer/CenterContainer/GameOver
 
 # Implement here: spawning logic
@@ -27,8 +38,52 @@ func random_position_just_outside_frame():
 
 func _process(delta):
 	# Spawning logic
-	if randi_range(0, 200) == 1:
+	if randi_range(0, 125) == 1:
 		var r = ring_pickup.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		
+	if randi_range(0, 10000) == 1:
+		var r = cloud1.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+	
+	if randi_range(0, 10000) == 1:
+		var r = cloud2.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		
+	if randi_range(0, 10000) == 1:
+		var r = cloud3.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+	
+	if randi_range(0, 5000) == 1:
+		var r = formation_1.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		(r as Node2D).rotation = randi_range(0, 360)
+	
+	if randi_range(0, 5000) == 1:
+		var r = formation_2.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		(r as Node2D).rotation = randi_range(0, 360)
+		
+	if randi_range(0, 5000) == 1:
+		var r = formation_3.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		(r as Node2D).rotation = randi_range(0, 360)
+		
+	if randi_range(0, 5000) == 1:
+		var r = formation_4.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		(r as Node2D).rotation = randi_range(0, 360)
+		
+	if randi_range(0, 2000) == 1:
+		var r = turret.instantiate()
 		add_child(r)
 		r.global_position = random_position_just_outside_frame()
 		

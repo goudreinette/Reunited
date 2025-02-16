@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://loo5wpyutd46"]
+
+[ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://sprites/Wolk 3.png" id="1_xaytk"]
+[ext_resource type="Script" uid="uid://bh8c4i3hrlncr" path="res://y4k4r1 castle/wolk.gd" id="2_e4w61"]
+
+[node name="Wolk3" type="Sprite2D"]
+texture = ExtResource("1_xaytk")
+script = ExtResource("2_e4w61")
+speed = 20.0

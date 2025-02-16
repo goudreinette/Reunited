@@ -25,6 +25,8 @@ var can_shoot = true
 
 @onready var screensize = get_viewport_rect().size
 
+var dead: bool = false
+
 func _ready():
 	start()
 
@@ -150,9 +152,14 @@ func shoot_gattling():
 func set_shield(value):
 	shield = min(max_shield, value)
 	shield_changed.emit(max_shield, shield)
-	if shield <= 0:
-		hide()
-		died.emit()
+	
+	
+	if shield <= 0 and not dead:
+		$BlinkTimer.start()
+		$Ship/BallAnimationPlayer.play("blink")
+		dead = true
+		#hide()
+		#died.emit()
 		
 func _on_gun_cooldown_timeout():
 	can_shoot = true
@@ -162,3 +169,11 @@ func _on_area_entered(area):
 		area.reduce_health(4)
 		$Hit.play()
 		shield -= 4
+
+
+func _on_blink_timer_timeout():
+	shield = max_shield
+	shield_changed.emit(max_shield, shield)
+	$Ship/BallAnimationPlayer.stop()
+	show()
+	dead = false

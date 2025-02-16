@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://2o4tjflot8db"]
+[gd_scene load_steps=61 format=3 uid="uid://2o4tjflot8db"]
 
 [ext_resource type="Script" uid="uid://c1igo5kr1m5dw" path="res://y4k4r1 castle/player/wendla.gd" id="1_l3ulw"]
 [ext_resource type="PackedScene" uid="uid://b4cnu1flkfk3m" path="res://y4k4r1 castle/weapons/projectiles/bullet.tscn" id="2_8huye"]
@@ -270,6 +270,35 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_u7k8u"]
+resource_name = "blink"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_o5yhx"]
 resource_name = "fire"
@@ -302,6 +331,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_35u5s"]
 _data = {
 &"RESET": SubResource("Animation_35u5s"),
+&"blink": SubResource("Animation_u7k8u"),
 &"fire": SubResource("Animation_o5yhx")
 }
 
@@ -341,6 +371,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_35u5s")
 }
 
+[node name="BlinkTimer" type="Timer" parent="."]
+wait_time = 5.0
+
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
 
@@ -356,4 +389,5 @@ stream = ExtResource("7_ptg0t")
 volume_db = 24.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="BlinkTimer" to="." method="_on_blink_timer_timeout"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
