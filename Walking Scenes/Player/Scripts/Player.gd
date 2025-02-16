@@ -5,6 +5,8 @@ var direction : Vector2 = Vector2.ZERO
 @export var move_speed : float = 20.0
 var state : String = "idle" 
 
+
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
@@ -47,15 +49,19 @@ func SetDirection() -> bool:
 	
 func SetState() -> bool:
 	var new_state : String = "idle" if direction == Vector2.ZERO else "walk"
+	## if player is in collider layer 2 new_state = "falling"
+	
 	if new_state == state:
 		return false
+	
 	state =	new_state
 	return true
 	
 	
 func update_animation() -> bool:
+	if state != "falling" :
+		animation_player.play(state + "_" + anim_direction())
 	
-	animation_player.play(state + "_" + anim_direction())
 	
 	return true
 	
@@ -68,6 +74,11 @@ func anim_direction() -> String:
 	else: 
 		return "side"
 	
+
+func falling() :
+	
+	
+	pass
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
