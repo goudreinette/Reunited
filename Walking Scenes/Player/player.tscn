@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhl5ng17x1lny"]
+[gd_scene load_steps=12 format=3 uid="uid://bhl5ng17x1lny"]
 
 [ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://Walking Scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
 [ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
+[ext_resource type="Texture2D" uid="uid://17wbobtvnie8" path="res://Sprites/Dashing Lines.png" id="3_ohg2k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni5tt"]
 radius = 4.0
 
 [sub_resource type="Animation" id="Animation_28lxq"]
 length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -206,8 +208,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5qsau"]
 _data = {
-&"Falling": SubResource("Animation_36l6j"),
 &"RESET": SubResource("Animation_28lxq"),
+&"falling": SubResource("Animation_36l6j"),
 &"idle_down": SubResource("Animation_hcm8a"),
 &"walk_down": SubResource("Animation_wak08"),
 &"walk_side": SubResource("Animation_4ml6r"),
@@ -217,7 +219,6 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
 script = ExtResource("1_n8ajk")
-move_speed = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ni5tt")
@@ -244,3 +245,25 @@ offset_bottom = 3.0
 pivot_offset = Vector2(4, 1)
 localize_numeral_system = false
 color = Color(0, 0, 0, 0.317647)
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="DashRegenTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="DashingLines" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(0, -7)
+texture = ExtResource("3_ohg2k")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="DashRegenTimer" to="." method="_on_dash_regen_timer_timeout"]
