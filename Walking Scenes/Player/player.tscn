@@ -191,7 +191,8 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_36l6j"]
-resource_name = "Falling"
+resource_name = "falling"
+length = 1.2
 step = 0.025
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -200,7 +201,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.625, 0.75, 0.85),
+"times": PackedFloat32Array(0, 0.475, 0.625, 0.75, 0.875, 0.975),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [32, 33, 34, 35, 36, 37]
@@ -251,7 +252,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="DashTimer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.3
 one_shot = true
 
 [node name="DashRegenTimer" type="Timer" parent="."]
@@ -263,7 +264,11 @@ z_index = 2
 position = Vector2(0, -7)
 texture = ExtResource("3_ohg2k")
 
+[node name="FallTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashRegenTimer" to="." method="_on_dash_regen_timer_timeout"]
+[connection signal="timeout" from="FallTimer" to="." method="_on_fall_timer_timeout"]

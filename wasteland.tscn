@@ -35,8 +35,6 @@ color = Color(0.317647, 0.227451, 0.239216, 1)
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_vxok5")]
 position = Vector2(88, 137)
 collision_mask = 19
-move_speed = 40.0
-dash_speed = 120.0
 respawnnode = NodePath("../Respawn Point")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -67,3 +65,4 @@ position = Vector2(88, 124)
 
 [connection signal="area_entered" from="Pits" to="Player" method="_on_pit_area_entered"]
 [connection signal="body_entered" from="Pits" to="Player" method="_on_pit_body_entered"]
+[connection signal="body_exited" from="Pits" to="Player" method="_on_pits_body_exited"]
