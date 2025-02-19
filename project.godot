@@ -22,11 +22,17 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Koen": "res://dialogue/Koen.dch",
 "ander_mannetje": "res://characters/ander_mannetje.dch",
 "stephan": "res://characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Koen_Dialogue 1": "res://Sprites/Characters/Koen_Dialogue 1.dtl",
+"Koen_Dialogue_1": "res://Sprites/Characters/Koen_Dialogue_1.dtl",
+"Koen_Dialogue_2": "res://Sprites/Characters/Koen_Dialogue_2.dtl",
+"Koen_Dialogue_3": "res://Sprites/Characters/Koen_Dialogue_3.dtl",
+"Koen_Dialogue_4": "res://Sprites/Characters/Koen_Dialogue_4.dtl",
 "Walking Scenes/timeline": "res://Walking Scenes/timeline.dtl",
 "gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
 "test_timeline": "res://characters/test_timeline.dtl",

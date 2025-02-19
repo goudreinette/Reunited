@@ -218,7 +218,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohg2k"]
-radius = 4.0
+radius = 1.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
@@ -255,7 +255,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="DashTimer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.25
 one_shot = true
 
 [node name="DashRegenTimer" type="Timer" parent="."]

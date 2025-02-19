@@ -104,21 +104,12 @@ func anim_direction() -> String:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	#scene_to_load.instantiate()
 	get_tree().change_scene_to_file("res://ship/ship_main.tscn")
-	
-	
-
-#func _on_pit_body_entered(body: Node2D) -> void:
-	#above_pit = true
-	
-#func _on_pits_body_exited(body: Node2D) -> void:
-#	above_pit = false
-
-
 
 func dead() :
 	is_dead = true
 	visible = false
 	$DeathTimer.start()
+	respawnpoint = respawnnode.position 
 	pass
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
@@ -141,13 +132,6 @@ func _on_dash_timer_timeout() -> void:
 	
 func _on_dash_regen_timer_timeout() -> void:
 	can_dash = true
-
-
-
-			
-
-
-
 
 func _on_pit_detect_body_entered(body: Node2D) -> void:
 	above_pit = true
