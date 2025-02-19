@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhl5ng17x1lny"]
+[gd_scene load_steps=13 format=3 uid="uid://bhl5ng17x1lny"]
 
 [ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://Walking Scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
 [ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
@@ -217,6 +217,9 @@ _data = {
 &"walk_up": SubResource("Animation_y8k58")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohg2k"]
+radius = 4.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
 script = ExtResource("1_n8ajk")
@@ -267,8 +270,17 @@ texture = ExtResource("3_ohg2k")
 [node name="FallTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Pit detect" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pit detect"]
+shape = SubResource("CircleShape2D_ohg2k")
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashRegenTimer" to="." method="_on_dash_regen_timer_timeout"]
 [connection signal="timeout" from="FallTimer" to="." method="_on_fall_timer_timeout"]
+[connection signal="body_entered" from="Pit detect" to="." method="_on_pit_detect_body_entered"]
+[connection signal="body_exited" from="Pit detect" to="." method="_on_pit_detect_body_exited"]
