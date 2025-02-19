@@ -3,9 +3,9 @@
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
 [ext_resource type="AudioStream" uid="uid://bmao6k1v8lc6l" path="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav" id="3_vxok5"]
-[ext_resource type="Script" uid="uid://dxaqy3abwcopg" path="res://music.gd" id="4_0js5l"]
+[ext_resource type="Script" path="res://music.gd" id="4_0js5l"]
 [ext_resource type="PackedScene" uid="uid://ciobmqppsmx11" path="res://Sprites/carnivorous plant/carnivorous_plant.tscn" id="4_h54js"]
-[ext_resource type="Script" uid="uid://ccdq8qg6yvkvx" path="res://respawn_point_2.gd" id="4_xual3"]
+[ext_resource type="Script" path="res://respawn_point_2.gd" id="4_xual3"]
 [ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Sprites/Bordje.png" id="5_4exxo"]
 [ext_resource type="Script" uid="uid://b6b821aevw3bx" path="res://wasteland/ravijn_warning_bordje.gd" id="6_ro6m5"]
 [ext_resource type="Texture2D" uid="uid://by84ln23rrixv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-1.png" id="7_33yxv"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
 [ext_resource type="Texture2D" uid="uid://lsoarq1o78my" path="res://Sprites/Characters/Keyboard.png" id="21_a3eta"]
 [ext_resource type="Texture2D" uid="uid://c5i5v5tccwa6p" path="res://Sprites/Characters/Drumkit.png" id="22_xq33t"]
+[ext_resource type="PackedScene" uid="uid://cieyshawee333" path="res://wasteland/Smoke.tscn" id="22_ex66f"]
 [ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
 [ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
 [ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
@@ -634,11 +635,16 @@ sprite_frames = SubResource("SpriteFrames_drwr1")
 autoplay = "default"
 frame_progress = 0.123479
 
+[node name="CPUParticles2D" parent="Fire4-2" instance=ExtResource("22_ex66f")]
+position = Vector2(0, 2)
+
 [node name="Fire4-1" type="AnimatedSprite2D" parent="."]
 position = Vector2(52, 77)
 sprite_frames = SubResource("SpriteFrames_33yxv")
 autoplay = "default"
 frame_progress = 0.592613
+
+[node name="CPUParticles2D" parent="Fire4-1" instance=ExtResource("22_ex66f")]
 
 [node name="Fire4-3" type="AnimatedSprite2D" parent="."]
 z_index = 1
@@ -647,12 +653,16 @@ sprite_frames = SubResource("SpriteFrames_n08g8")
 autoplay = "default"
 frame_progress = 0.490941
 
+[node name="CPUParticles2D" parent="Fire4-3" instance=ExtResource("22_ex66f")]
+
 [node name="Fire4-4" type="AnimatedSprite2D" parent="."]
 z_index = 1
 position = Vector2(49, 103)
 sprite_frames = SubResource("SpriteFrames_n08g8")
 autoplay = "default"
 frame_progress = 0.490941
+
+[node name="CPUParticles2D" parent="Fire4-4" instance=ExtResource("22_ex66f")]
 
 [node name="Gloopy-plant-1" type="AnimatedSprite2D" parent="."]
 position = Vector2(98, -20)
