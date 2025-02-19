@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=85 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="13_si3j6"]
 [ext_resource type="Texture2D" uid="uid://7u1yxd365knt" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-8.png" id="14_ahu5d"]
 [ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
+[ext_resource type="PackedScene" uid="uid://cieyshawee333" path="res://wasteland/Smoke.tscn" id="22_ex66f"]
 [ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
 [ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
 [ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
@@ -512,11 +513,16 @@ sprite_frames = SubResource("SpriteFrames_drwr1")
 autoplay = "default"
 frame_progress = 0.123479
 
+[node name="CPUParticles2D" parent="Fire4-2" instance=ExtResource("22_ex66f")]
+position = Vector2(0, 2)
+
 [node name="Fire4-1" type="AnimatedSprite2D" parent="."]
 position = Vector2(52, 77)
 sprite_frames = SubResource("SpriteFrames_33yxv")
 autoplay = "default"
 frame_progress = 0.592613
+
+[node name="CPUParticles2D" parent="Fire4-1" instance=ExtResource("22_ex66f")]
 
 [node name="Fire4-3" type="AnimatedSprite2D" parent="."]
 z_index = 1
@@ -525,12 +531,16 @@ sprite_frames = SubResource("SpriteFrames_n08g8")
 autoplay = "default"
 frame_progress = 0.490941
 
+[node name="CPUParticles2D" parent="Fire4-3" instance=ExtResource("22_ex66f")]
+
 [node name="Fire4-4" type="AnimatedSprite2D" parent="."]
 z_index = 1
 position = Vector2(49, 103)
 sprite_frames = SubResource("SpriteFrames_n08g8")
 autoplay = "default"
 frame_progress = 0.490941
+
+[node name="CPUParticles2D" parent="Fire4-4" instance=ExtResource("22_ex66f")]
 
 [node name="Gloopy-plant-1" type="AnimatedSprite2D" parent="."]
 position = Vector2(98, -20)
