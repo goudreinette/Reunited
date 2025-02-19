@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=36 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
@@ -7,9 +7,132 @@
 [ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Sprites/Bordje.png" id="5_4exxo"]
 [ext_resource type="Script" uid="uid://b6b821aevw3bx" path="res://wasteland/ravijn_warning_bordje.gd" id="6_ro6m5"]
 [ext_resource type="Texture2D" uid="uid://xa7e0tejyntx" path="res://Sprites/Characters/Koen.png" id="7_ro6m5"]
+[ext_resource type="Texture2D" uid="uid://by84ln23rrixv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-1.png" id="7_33yxv"]
+[ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="7_ja4h2"]
+[ext_resource type="Texture2D" uid="uid://bxf722bi6nv1t" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-2.png" id="8_q0fgc"]
+[ext_resource type="Texture2D" uid="uid://c3biik8k82mkq" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-2.png" id="8_u250a"]
+[ext_resource type="Texture2D" uid="uid://co86d8feexdsc" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-3.png" id="9_f5rg5"]
+[ext_resource type="Texture2D" uid="uid://cojqv10pdecju" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-3.png" id="9_um4kq"]
+[ext_resource type="Texture2D" uid="uid://bclf00ul0i1m7" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-4.png" id="10_1itvy"]
+[ext_resource type="Texture2D" uid="uid://f1uttkbvpi4m" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-4.png" id="10_mey7r"]
+[ext_resource type="Texture2D" uid="uid://k5hu5ipi2ekv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-5.png" id="11_kq7t4"]
+[ext_resource type="Texture2D" uid="uid://cpmygj6q4dy7e" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-5.png" id="11_qcf3n"]
+[ext_resource type="Texture2D" uid="uid://jfjeqstiprhh" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-6.png" id="12_7l8cb"]
+[ext_resource type="Texture2D" uid="uid://trxpjw6v4rqn" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-6.png" id="12_umrwo"]
+[ext_resource type="Texture2D" uid="uid://ctr5fhte1cavq" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-7.png" id="13_is34y"]
+[ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="13_si3j6"]
+[ext_resource type="Texture2D" uid="uid://7u1yxd365knt" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-8.png" id="14_ahu5d"]
+[ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
+[ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
+[ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
+[ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
+[ext_resource type="Texture2D" uid="uid://rcye3ftx4j38" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-4.png" id="26_xual3"]
+[ext_resource type="Texture2D" uid="uid://dcuv7khky7vnp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-5.png" id="27_co6og"]
+[ext_resource type="Texture2D" uid="uid://u12l2udyhp2a" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-6.png" id="28_0js5l"]
+[ext_resource type="Texture2D" uid="uid://cqbd2nreaxgx0" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-7.png" id="29_n8ot3"]
+[ext_resource type="Texture2D" uid="uid://dpsjbldr60mmb" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-8.png" id="30_ullcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvpmv"]
+size = Vector2(8, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4exxo"]
 size = Vector2(14, 7.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_drwr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_33yxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u250a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_um4kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mey7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qcf3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_umrwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_si3j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nxom5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33yxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ja4h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q0fgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f5rg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1itvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kq7t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7l8cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_is34y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ahu5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n08g8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_drwr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_yc5fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_161k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xual3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_co6og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0js5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n8ot3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ullcj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="Wasteland" type="Node2D"]
 
@@ -61,4 +184,24 @@ position = Vector2(169, -74)
 texture = ExtResource("7_ro6m5")
 vframes = 2
 
+[node name="Fire4-2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-74, 93)
+sprite_frames = SubResource("SpriteFrames_drwr1")
+autoplay = "default"
+frame_progress = 0.825038
+
+[node name="Fire4-1" type="AnimatedSprite2D" parent="."]
+position = Vector2(-134, 111)
+sprite_frames = SubResource("SpriteFrames_33yxv")
+autoplay = "default"
+
+[node name="Fire4-3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-124, 46)
+sprite_frames = SubResource("SpriteFrames_n08g8")
+autoplay = "default"
+frame_progress = 0.192492
+
+[connection signal="area_entered" from="Pits" to="Player" method="_on_pit_area_entered"]
+[connection signal="body_entered" from="Pits" to="Player" method="_on_pit_body_entered"]
+[connection signal="body_exited" from="Pits" to="Player" method="_on_pits_body_exited"]
 [connection signal="body_entered" from="Bordje/Area2D" to="Bordje" method="_on_area_2d_body_entered"]
