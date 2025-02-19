@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=78 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
