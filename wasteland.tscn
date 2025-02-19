@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cqbd2nreaxgx0" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-7.png" id="29_n8ot3"]
 [ext_resource type="Texture2D" uid="uid://dpsjbldr60mmb" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-8.png" id="30_ullcj"]
 [ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://wasteland/plants/gloopy-plant-1.png" id="31_yc5fr"]
+[ext_resource type="Texture2D" uid="uid://ptc8jv5cvbji" path="res://Sprites/ship concept test (side).png" id="33_xual3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co6og"]
 size = Vector2(159, 20)
@@ -441,6 +442,9 @@ shape = SubResource("RectangleShape2D_co6og")
 [node name="Respawn Point 1" type="Node2D" parent="."]
 position = Vector2(88, 124)
 
+[node name="Plant2" parent="." instance=ExtResource("4_h54js")]
+position = Vector2(230, -74)
+
 [node name="Plant" parent="." instance=ExtResource("4_h54js")]
 position = Vector2(38, 209)
 
@@ -503,19 +507,27 @@ texture = ExtResource("13_ex66f")
 vframes = 2
 
 [node name="Fire4-2" type="AnimatedSprite2D" parent="."]
-position = Vector2(-74, 93)
+position = Vector2(12, 71)
 sprite_frames = SubResource("SpriteFrames_drwr1")
 autoplay = "default"
 frame_progress = 0.123479
 
 [node name="Fire4-1" type="AnimatedSprite2D" parent="."]
-position = Vector2(-134, 111)
+position = Vector2(52, 77)
 sprite_frames = SubResource("SpriteFrames_33yxv")
 autoplay = "default"
 frame_progress = 0.592613
 
 [node name="Fire4-3" type="AnimatedSprite2D" parent="."]
-position = Vector2(-124, 46)
+z_index = 1
+position = Vector2(-20, 86)
+sprite_frames = SubResource("SpriteFrames_n08g8")
+autoplay = "default"
+frame_progress = 0.490941
+
+[node name="Fire4-4" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(49, 103)
 sprite_frames = SubResource("SpriteFrames_n08g8")
 autoplay = "default"
 frame_progress = 0.490941
@@ -525,6 +537,10 @@ position = Vector2(98, -20)
 sprite_frames = SubResource("SpriteFrames_e0we5")
 autoplay = "default"
 frame_progress = 0.109199
+
+[node name="ShipConceptTest(side)" type="Sprite2D" parent="."]
+position = Vector2(2, 87)
+texture = ExtResource("33_xual3")
 
 [connection signal="body_entered" from="Respawn Point 2" to="Respawn Point 2" method="_on_body_entered"]
 [connection signal="body_entered" from="Bordje/Area2D" to="Bordje" method="_on_area_2d_body_entered"]
