@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=9 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
 [ext_resource type="AudioStream" uid="uid://bmao6k1v8lc6l" path="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav" id="3_vxok5"]
 [ext_resource type="PackedScene" uid="uid://ciobmqppsmx11" path="res://Sprites/carnivorous plant/carnivorous_plant.tscn" id="4_h54js"]
+[ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Sprites/Bordje.png" id="5_4exxo"]
+[ext_resource type="Script" uid="uid://b6b821aevw3bx" path="res://wasteland/ravijn_warning_bordje.gd" id="6_ro6m5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvpmv"]
 size = Vector2(8, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4exxo"]
+size = Vector2(14, 7.75)
 
 [node name="Wasteland" type="Node2D"]
 
@@ -49,6 +54,19 @@ position = Vector2(88, 124)
 [node name="Plant" parent="." instance=ExtResource("4_h54js")]
 position = Vector2(38, 209)
 
+[node name="Bordje" type="Sprite2D" parent="."]
+position = Vector2(71, 8)
+texture = ExtResource("5_4exxo")
+script = ExtResource("6_ro6m5")
+
+[node name="Area2D" type="Area2D" parent="Bordje"]
+position = Vector2(-71, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordje/Area2D"]
+position = Vector2(71, 15.125)
+shape = SubResource("RectangleShape2D_4exxo")
+
 [connection signal="area_entered" from="Pits" to="Player" method="_on_pit_area_entered"]
 [connection signal="body_entered" from="Pits" to="Player" method="_on_pit_body_entered"]
 [connection signal="body_exited" from="Pits" to="Player" method="_on_pits_body_exited"]
+[connection signal="body_entered" from="Bordje/Area2D" to="Bordje" method="_on_area_2d_body_entered"]

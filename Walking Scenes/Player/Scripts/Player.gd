@@ -1,4 +1,5 @@
 class_name Player extends CharacterBody2D
+
 ##movement
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
