@@ -107,11 +107,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	
 
-func _on_pit_body_entered(body: Node2D) -> void:
-	above_pit = true
+#func _on_pit_body_entered(body: Node2D) -> void:
+	#above_pit = true
 	
-func _on_pits_body_exited(body: Node2D) -> void:
-	above_pit = false
+#func _on_pits_body_exited(body: Node2D) -> void:
+#	above_pit = false
 
 
 
@@ -145,3 +145,11 @@ func _on_dash_regen_timer_timeout() -> void:
 
 
 			
+
+
+
+
+func _on_pit_detect_body_entered(body: Node2D) -> void:
+	above_pit = true
+func _on_pit_detect_body_exited(body: Node2D) -> void:
+	above_pit = false
