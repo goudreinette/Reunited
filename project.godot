@@ -30,7 +30,8 @@ directories/dtl_directory={
 "Walking Scenes/timeline": "res://Walking Scenes/timeline.dtl",
 "gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
 "test_timeline": "res://characters/test_timeline.dtl",
-"timeline": "res://walking scenes/timeline.dtl"
+"timeline": "res://walking scenes/timeline.dtl",
+"wasteland_cave_warning ": "res://dialogue/wasteland_cave_warning.dtl"
 }
 layout/style_list=["res://characters/new_style.tres"]
 layout/default_style="res://characters/new_style.tres"
