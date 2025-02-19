@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=99 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
@@ -21,27 +21,37 @@
 [ext_resource type="Texture2D" uid="uid://k5hu5ipi2ekv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-5.png" id="11_kq7t4"]
 [ext_resource type="Texture2D" uid="uid://bpewi1py6h0pl" path="res://Sprites/Characters/Guus.png" id="11_n08g8"]
 [ext_resource type="Texture2D" uid="uid://cpmygj6q4dy7e" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-5.png" id="11_qcf3n"]
+[ext_resource type="Script" uid="uid://mdh8nu1h1hcx" path="res://guus_en_igor.gd" id="11_xq33t"]
 [ext_resource type="Texture2D" uid="uid://jfjeqstiprhh" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-6.png" id="12_7l8cb"]
 [ext_resource type="Texture2D" uid="uid://wby0npd61lce" path="res://Sprites/Characters/Igor.png" id="12_exl75"]
 [ext_resource type="Texture2D" uid="uid://trxpjw6v4rqn" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-6.png" id="12_umrwo"]
+[ext_resource type="Script" uid="uid://5ijskpp43iof" path="res://frank.gd" id="12_vlksy"]
 [ext_resource type="Texture2D" uid="uid://d0n4awy53qogp" path="res://Sprites/Characters/Frank.png" id="13_ex66f"]
 [ext_resource type="Texture2D" uid="uid://ctr5fhte1cavq" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-7.png" id="13_is34y"]
 [ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="13_si3j6"]
 [ext_resource type="Texture2D" uid="uid://7u1yxd365knt" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-8.png" id="14_ahu5d"]
 [ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
+[ext_resource type="Texture2D" uid="uid://lsoarq1o78my" path="res://Sprites/Characters/Keyboard.png" id="21_a3eta"]
+[ext_resource type="Texture2D" uid="uid://c5i5v5tccwa6p" path="res://Sprites/Characters/Drumkit.png" id="22_xq33t"]
 [ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
 [ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
 [ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
 [ext_resource type="Texture2D" uid="uid://rcye3ftx4j38" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-4.png" id="26_xual3"]
 [ext_resource type="Texture2D" uid="uid://dcuv7khky7vnp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-5.png" id="27_co6og"]
+[ext_resource type="Texture2D" uid="uid://cayrl3demeaxb" path="res://Sprites/Crashed_Engine_Room_BG.png" id="27_thi0a"]
 [ext_resource type="Texture2D" uid="uid://u12l2udyhp2a" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-6.png" id="28_0js5l"]
+[ext_resource type="Texture2D" uid="uid://1tg65x2u4fj4" path="res://Sprites/Engine Room.png" id="28_eu0id"]
 [ext_resource type="Texture2D" uid="uid://cqbd2nreaxgx0" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-7.png" id="29_n8ot3"]
 [ext_resource type="Texture2D" uid="uid://dpsjbldr60mmb" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-8.png" id="30_ullcj"]
 [ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://wasteland/plants/gloopy-plant-1.png" id="31_yc5fr"]
 [ext_resource type="Texture2D" uid="uid://ptc8jv5cvbji" path="res://Sprites/ship concept test (side).png" id="33_xual3"]
+[ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Sprites/Campfire_base.png" id="42_bdfwn"]
+[ext_resource type="Texture2D" uid="uid://btsjpabkrhv7u" path="res://Sprites/Tentje.png" id="43_thi0a"]
+[ext_resource type="Texture2D" uid="uid://c8ngsdap606rr" path="res://Sprites/Card.png" id="48_7pp34"]
+[ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://card.gd" id="49_7pp34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co6og"]
-size = Vector2(159, 20)
+size = Vector2(67, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4exxo"]
 size = Vector2(14, 7.75)
@@ -51,6 +61,49 @@ size = Vector2(42, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xual3"]
 size = Vector2(20, 27)
+
+[sub_resource type="Animation" id="Animation_vlksy"]
+resource_name = "Door opens"
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_7pp34"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hn1bu"]
+_data = {
+&"Door opens": SubResource("Animation_vlksy"),
+&"RESET": SubResource("Animation_7pp34")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlksy"]
+size = Vector2(31, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n08g8"]
+size = Vector2(119, 60)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_drwr1"]
 animations = [{
@@ -83,9 +136,6 @@ animations = [{
 "name": &"default",
 "speed": 15.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n08g8"]
-size = Vector2(71, 41)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_33yxv"]
 animations = [{
@@ -404,6 +454,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vlksy"]
+radius = 5.0
+
 [node name="Wasteland" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -413,10 +466,10 @@ layer_0/tile_data = PackedInt32Array(262151, 524288, 6, 327687, 589824, 6, 32768
 
 [node name="Backgroundcolor" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -25025.0
-offset_top = -25032.0
-offset_right = 24975.0
-offset_bottom = 24968.0
+offset_left = -25042.0
+offset_top = -25014.0
+offset_right = 24958.0
+offset_bottom = 24986.0
 color = Color(0.317647, 0.227451, 0.239216, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -424,12 +477,20 @@ stream = ExtResource("3_vxok5")
 script = ExtResource("4_0js5l")
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_vxok5")]
-position = Vector2(88, 137)
+position = Vector2(-75, -210)
 collision_mask = 19
 respawnnode = NodePath("../Respawn Point 1")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_speed = 100.0
+
+[node name="Respawn Point 3" type="Area2D" parent="."]
+position = Vector2(136, -58)
+script = ExtResource("4_xual3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Respawn Point 3"]
+position = Vector2(8.5, -13.5)
+shape = SubResource("RectangleShape2D_co6og")
 
 [node name="Respawn Point 2" type="Area2D" parent="."]
 position = Vector2(96, 38)
@@ -444,6 +505,12 @@ position = Vector2(88, 124)
 
 [node name="Plant2" parent="." instance=ExtResource("4_h54js")]
 position = Vector2(230, -74)
+
+[node name="Plant3" parent="." instance=ExtResource("4_h54js")]
+position = Vector2(97, -122)
+
+[node name="Plant4" parent="." instance=ExtResource("4_h54js")]
+position = Vector2(34, -159)
 
 [node name="Plant" parent="." instance=ExtResource("4_h54js")]
 position = Vector2(38, 209)
@@ -479,16 +546,59 @@ shape = SubResource("RectangleShape2D_yc5fr")
 position = Vector2(2, -5.5)
 shape = SubResource("RectangleShape2D_xual3")
 
-[node name="Guus en Igor" type="Area2D" parent="."]
-position = Vector2(-66, -163)
+[node name="Frank" type="Sprite2D" parent="."]
+position = Vector2(-132, -252)
+texture = ExtResource("13_ex66f")
+vframes = 2
+script = ExtResource("12_vlksy")
 
-[node name="Igor" type="Sprite2D" parent="Guus en Igor"]
+[node name="CrashedEngineRoomBg" type="Sprite2D" parent="Frank"]
+z_index = -2
+position = Vector2(1, 1)
+texture = ExtResource("27_thi0a")
+
+[node name="EngineRoom" type="Sprite2D" parent="Frank"]
+position = Vector2(1, 0)
+texture = ExtResource("28_eu0id")
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Frank/EngineRoom"]
+libraries = {
+&"": SubResource("AnimationLibrary_hn1bu")
+}
+
+[node name="Talkbox" type="Area2D" parent="Frank"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frank/Talkbox"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_vlksy")
+
+[node name="Guus en Igor" type="Area2D" parent="."]
+position = Vector2(-46, -163)
+script = ExtResource("11_xq33t")
+
+[node name="Talkbox" type="CollisionShape2D" parent="Guus en Igor"]
+position = Vector2(-29, 13)
+shape = SubResource("RectangleShape2D_n08g8")
+
+[node name="Igor pos 1" type="Sprite2D" parent="Guus en Igor"]
 position = Vector2(-28, 0)
 texture = ExtResource("12_exl75")
 
-[node name="Guus" type="Sprite2D" parent="Guus en Igor"]
+[node name="Guus pos 1" type="Sprite2D" parent="Guus en Igor"]
 texture = ExtResource("11_n08g8")
 flip_h = true
+
+[node name="Guus pos 2" type="Sprite2D" parent="Guus en Igor"]
+visible = false
+position = Vector2(-28, 16)
+texture = ExtResource("11_n08g8")
+flip_h = true
+
+[node name="Igor pos 2" type="Sprite2D" parent="Guus en Igor"]
+visible = false
+position = Vector2(-66, 13)
+texture = ExtResource("12_exl75")
 
 [node name="Fire4-4" type="AnimatedSprite2D" parent="Guus en Igor"]
 position = Vector2(-13, -2)
@@ -497,14 +607,26 @@ sprite_frames = SubResource("SpriteFrames_drwr1")
 autoplay = "default"
 frame_progress = 0.123479
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Guus en Igor"]
-position = Vector2(-5.5, 3.5)
-shape = SubResource("RectangleShape2D_n08g8")
+[node name="Keyboard" type="Sprite2D" parent="Guus en Igor"]
+position = Vector2(-65, 21)
+texture = ExtResource("21_a3eta")
 
-[node name="Frank" type="Sprite2D" parent="."]
-position = Vector2(-143, -65)
-texture = ExtResource("13_ex66f")
-vframes = 2
+[node name="Drumkit" type="Sprite2D" parent="Guus en Igor"]
+position = Vector2(-30, 21)
+texture = ExtResource("22_xq33t")
+
+[node name="Tentje2" type="Sprite2D" parent="Guus en Igor"]
+position = Vector2(-73, -16)
+texture = ExtResource("43_thi0a")
+
+[node name="Tentje" type="Sprite2D" parent="Guus en Igor"]
+position = Vector2(-106, -14)
+texture = ExtResource("43_thi0a")
+
+[node name="CampfireBase" type="Sprite2D" parent="Guus en Igor"]
+z_index = -2
+position = Vector2(-13, 4)
+texture = ExtResource("42_bdfwn")
 
 [node name="Fire4-2" type="AnimatedSprite2D" parent="."]
 position = Vector2(12, 71)
@@ -542,7 +664,22 @@ frame_progress = 0.109199
 position = Vector2(2, 87)
 texture = ExtResource("33_xual3")
 
+[node name="Card" type="Sprite2D" parent="."]
+position = Vector2(-76, -256)
+texture = ExtResource("48_7pp34")
+script = ExtResource("49_7pp34")
+
+[node name="CardArea" type="Area2D" parent="Card"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card/CardArea"]
+shape = SubResource("CircleShape2D_vlksy")
+
+[connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 2" to="Respawn Point 2" method="_on_body_entered"]
 [connection signal="body_entered" from="Bordje/Area2D" to="Bordje" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Koen/Koen Dialoog 1 en 2" to="Koen" method="_on_koen_dialoog_1_body_entered"]
 [connection signal="body_entered" from="Koen/Koen Dialoog 3" to="Koen" method="_on_koen_dialoog_3_body_entered"]
+[connection signal="body_entered" from="Frank/Talkbox" to="Frank" method="_on_talkbox_body_entered"]
+[connection signal="body_entered" from="Guus en Igor" to="Guus en Igor" method="_on_body_entered"]
+[connection signal="body_entered" from="Card/CardArea" to="Player" method="_on_card_area_body_entered"]
+[connection signal="body_entered" from="Card/CardArea" to="Card" method="_on_card_area_body_entered"]

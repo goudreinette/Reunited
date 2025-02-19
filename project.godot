@@ -22,22 +22,32 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Frank": "res://Sprites/Characters/Frank.dch",
+"Guus": "res://Sprites/Characters/Guus.dch",
+"Guus_en_Igor_2": "res://Sprites/Characters/Guus_en_Igor_2.dch",
+"Igor": "res://Sprites/Characters/Igor.dch",
 "Koen": "res://dialogue/Koen.dch",
 "ander_mannetje": "res://characters/ander_mannetje.dch",
 "stephan": "res://characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Frank_vrij_1": "res://Sprites/Characters/Frank_vrij_1.dtl",
+"Guus_en_Igor_1": "res://Sprites/Characters/Guus_en_Igor_1.dtl",
+"Guus_en_Igor_2": "res://Sprites/Characters/Guus_en_Igor_2.dtl",
 "Koen_Dialogue 1": "res://Sprites/Characters/Koen_Dialogue 1.dtl",
 "Koen_Dialogue_1": "res://Sprites/Characters/Koen_Dialogue_1.dtl",
 "Koen_Dialogue_2": "res://Sprites/Characters/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://Sprites/Characters/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://Sprites/Characters/Koen_Dialogue_4.dtl",
 "Walking Scenes/timeline": "res://Walking Scenes/timeline.dtl",
+"frank 2": "res://Sprites/Characters/frank 2.dtl",
+"frank_1": "res://Sprites/Characters/frank_1.dtl",
+"frank_vrij_2": "res://Sprites/Characters/frank_vrij_2.dtl",
 "gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
 "test_timeline": "res://characters/test_timeline.dtl",
 "timeline": "res://walking scenes/timeline.dtl",
-"wasteland_cave_warning ": "res://dialogue/wasteland_cave_warning.dtl"
+"wasteland_cave_warning": "res://dialogue/wasteland_cave_warning.dtl"
 }
 layout/style_list=["res://characters/new_style.tres"]
 layout/default_style="res://characters/new_style.tres"

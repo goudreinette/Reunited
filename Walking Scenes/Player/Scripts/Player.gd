@@ -21,6 +21,9 @@ var is_dead: bool = false
 @export var respawnnode : Node2D
 var respawnpoint: Vector2
 
+##getting the keycard
+var has_card: bool = false
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 ##setting the next scene to load.
@@ -137,3 +140,8 @@ func _on_pit_detect_body_entered(body: Node2D) -> void:
 	above_pit = true
 func _on_pit_detect_body_exited(body: Node2D) -> void:
 	above_pit = false
+
+
+#func _on_card_area_body_entered(body: Node2D) -> void:
+#	has_card = true
+	
