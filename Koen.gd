@@ -16,6 +16,8 @@ func _on_koen_dialoog_3_body_entered(body: Node2D) -> void:
 			if not has_entered_2 :
 				Dialogic.start("Koen_Dialogue_3")
 				has_entered_2 = true
+				##he starts playin
+				frame = 1
 			else :
 				Dialogic.start("Koen_Dialogue_4")
 
