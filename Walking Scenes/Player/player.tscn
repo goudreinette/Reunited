@@ -221,7 +221,7 @@ _data = {
 radius = 1.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 17
+collision_mask = 19
 script = ExtResource("1_n8ajk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -50,6 +50,7 @@ func _process(delta: float) -> void:
 	if SetState() || SetDirection()== true:
 		update_animation()
 	
+	##DASH INPUT
 	if Input.is_action_just_pressed("dash") and can_dash: 
 		is_dashing = true 
 		$"DashingLines".visible = true

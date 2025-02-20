@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciobmqppsmx11"]
+[gd_scene load_steps=10 format=3 uid="uid://ciobmqppsmx11"]
 
 [ext_resource type="Texture2D" uid="uid://da0scgdlmj6dx" path="res://Sprites/carnivorous plant/plant.png" id="1_055h5"]
 [ext_resource type="Script" uid="uid://cmm0djbnwpcy0" path="res://Sprites/carnivorous plant/carnivorous_plant.gd" id="2_bgmqw"]
@@ -94,12 +94,18 @@ _data = {
 &"RESET": SubResource("Animation_bgmqw")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vg2k"]
+radius = 1.0
+
 [node name="Plant" type="Sprite2D"]
+position = Vector2(-31, 19)
 texture = ExtResource("1_055h5")
+offset = Vector2(31, -19)
 hframes = 15
 script = ExtResource("2_bgmqw")
 
 [node name="TrapArea" type="Area2D" parent="."]
+position = Vector2(40, -19)
 
 [node name="Triggerbox" type="CollisionShape2D" parent="TrapArea"]
 position = Vector2(1, 18)
@@ -107,11 +113,12 @@ shape = SubResource("RectangleShape2D_jisbi")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 z_index = -2
+position = Vector2(40, -19)
 texture = ExtResource("3_sd5p6")
 hframes = 15
 
 [node name="KillArea" type="Area2D" parent="."]
-position = Vector2(-15, 18)
+position = Vector2(25, -1)
 
 [node name="KillBox" type="CollisionShape2D" parent="KillArea"]
 position = Vector2(0, -0.5)
@@ -121,6 +128,13 @@ shape = SubResource("RectangleShape2D_4vg2k")
 libraries = {
 &"": SubResource("AnimationLibrary_sd5p6")
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_4vg2k")
 
 [connection signal="body_entered" from="TrapArea" to="." method="_on_trap_area_body_entered"]
 [connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]
