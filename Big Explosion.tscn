@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dn16xy7juu10v"]
 
 [ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://ship/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="1_u0q8q"]
-[ext_resource type="Texture2D" uid="uid://bmnb2rk76wp87" path="res://Sprites/Explosion VFX/Explosion VFX 1/Explosion VFX 1(32x32).png" id="2_0o4my"]
+[ext_resource type="Texture2D" uid="uid://bmnb2rk76wp87" path="res://Sprites/Effects/Explosion VFX/Explosion VFX 1/Explosion VFX 1(32x32).png" id="2_0o4my"]
 [ext_resource type="Script" uid="uid://crqy8ofoj1bg8" path="res://explosion.gd" id="2_fojq7"]
 [ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="3_pjq5o"]
 

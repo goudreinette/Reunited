@@ -24,8 +24,10 @@ func _process(delta: float) -> void:
 	
 	
 func _on_timeline_ended():
-	$end_of_convo_timer.start()
-	if next_convo < convos.size()-1: next_convo += 1
+	## To check if it is OUR timeline
+	if is_talking :
+		$end_of_convo_timer.start()
+		if next_convo < convos.size()-1: next_convo += 1
 func _on_end_of_convo_timer_timeout() -> void:
 	is_talking = false
 	

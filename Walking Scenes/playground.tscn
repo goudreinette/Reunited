@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="1_brvng"]
 [ext_resource type="PackedScene" uid="uid://bgeoyjbaki8r2" path="res://Walking Scenes/Tilemaps/Stratagy tiles.tscn" id="2_pr73x"]
 [ext_resource type="AudioStream" uid="uid://cdsgovxnob4ia" path="res://Walking Scenes/Viby floating castle 1 dec 24 2024-12-01 2051.mp3" id="3_075i3"]
-[ext_resource type="Script" uid="uid://dmtenyxvdfii4" path="res://walking scenes/ander_mannetje.gd" id="4_6jmn8"]
-[ext_resource type="Script" uid="uid://bo77jfdl737bg" path="res://walking scenes/LuchtSchipArea.gd" id="4_6mrwg"]
+[ext_resource type="Script" uid="uid://dmtenyxvdfii4" path="res://Walking Scenes/ander_mannetje.gd" id="4_6jmn8"]
+[ext_resource type="Script" uid="uid://bo77jfdl737bg" path="res://Walking Scenes/LuchtSchipArea.gd" id="4_6mrwg"]
 [ext_resource type="Texture2D" uid="uid://eewa1o6s7nma" path="res://Sprites/Lucht Ship Idee 1.png" id="4_e0im1"]
-[ext_resource type="Texture2D" uid="uid://0wr37i8n6wvj" path="res://Sprites/Ander Mannetje.png" id="6_wxt0i"]
+[ext_resource type="Texture2D" uid="uid://0wr37i8n6wvj" path="res://Sprites/Niet in gebruik/Ander Mannetje.png" id="6_wxt0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42jva"]
 size = Vector2(7, 10)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=108 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="TileSet" uid="uid://bushe53aegxr" path="res://Sprites/Wasteland.tres" id="1_pvpmv"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes/Player/player.tscn" id="2_vxok5"]
@@ -6,50 +6,52 @@
 [ext_resource type="Script" uid="uid://dxaqy3abwcopg" path="res://music.gd" id="4_0js5l"]
 [ext_resource type="PackedScene" uid="uid://ciobmqppsmx11" path="res://Sprites/carnivorous plant/carnivorous_plant.tscn" id="4_h54js"]
 [ext_resource type="Script" uid="uid://ccdq8qg6yvkvx" path="res://respawn_point_2.gd" id="4_xual3"]
-[ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Sprites/Bordje.png" id="5_4exxo"]
-[ext_resource type="Texture2D" uid="uid://by84ln23rrixv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-1.png" id="7_33yxv"]
-[ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="7_ja4h2"]
+[ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Sprites/Level_2_wasteland/Bordje.png" id="5_4exxo"]
+[ext_resource type="Texture2D" uid="uid://by84ln23rrixv" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-1.png" id="7_33yxv"]
+[ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="7_ja4h2"]
 [ext_resource type="Texture2D" uid="uid://xa7e0tejyntx" path="res://Sprites/Characters/Koen.png" id="7_ro6m5"]
-[ext_resource type="Texture2D" uid="uid://bxf722bi6nv1t" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-2.png" id="8_q0fgc"]
-[ext_resource type="Texture2D" uid="uid://c3biik8k82mkq" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-2.png" id="8_u250a"]
-[ext_resource type="Texture2D" uid="uid://co86d8feexdsc" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-3.png" id="9_f5rg5"]
-[ext_resource type="Texture2D" uid="uid://cojqv10pdecju" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-3.png" id="9_um4kq"]
-[ext_resource type="Texture2D" uid="uid://bclf00ul0i1m7" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-4.png" id="10_1itvy"]
-[ext_resource type="Texture2D" uid="uid://f1uttkbvpi4m" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-4.png" id="10_mey7r"]
-[ext_resource type="Texture2D" uid="uid://k5hu5ipi2ekv" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-5.png" id="11_kq7t4"]
+[ext_resource type="Script" uid="uid://ckou11wnxn13e" path="res://Koen.gd" id="8_161k1"]
+[ext_resource type="Texture2D" uid="uid://bxf722bi6nv1t" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-2.png" id="8_q0fgc"]
+[ext_resource type="Texture2D" uid="uid://c3biik8k82mkq" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-2.png" id="8_u250a"]
+[ext_resource type="Texture2D" uid="uid://co86d8feexdsc" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-3.png" id="9_f5rg5"]
+[ext_resource type="Texture2D" uid="uid://cojqv10pdecju" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-3.png" id="9_um4kq"]
+[ext_resource type="Texture2D" uid="uid://bclf00ul0i1m7" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-4.png" id="10_1itvy"]
+[ext_resource type="Texture2D" uid="uid://f1uttkbvpi4m" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-4.png" id="10_mey7r"]
+[ext_resource type="Texture2D" uid="uid://k5hu5ipi2ekv" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-5.png" id="11_kq7t4"]
 [ext_resource type="Texture2D" uid="uid://bpewi1py6h0pl" path="res://Sprites/Characters/Guus.png" id="11_n08g8"]
-[ext_resource type="Texture2D" uid="uid://cpmygj6q4dy7e" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-5.png" id="11_qcf3n"]
+[ext_resource type="Texture2D" uid="uid://cpmygj6q4dy7e" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-5.png" id="11_qcf3n"]
 [ext_resource type="Script" uid="uid://mdh8nu1h1hcx" path="res://guus_en_igor.gd" id="11_xq33t"]
-[ext_resource type="Texture2D" uid="uid://jfjeqstiprhh" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-6.png" id="12_7l8cb"]
+[ext_resource type="Texture2D" uid="uid://jfjeqstiprhh" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-6.png" id="12_7l8cb"]
 [ext_resource type="Texture2D" uid="uid://wby0npd61lce" path="res://Sprites/Characters/Igor.png" id="12_exl75"]
-[ext_resource type="Texture2D" uid="uid://trxpjw6v4rqn" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-6.png" id="12_umrwo"]
+[ext_resource type="Texture2D" uid="uid://trxpjw6v4rqn" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-6.png" id="12_umrwo"]
 [ext_resource type="Texture2D" uid="uid://d0n4awy53qogp" path="res://Sprites/Characters/Frank.png" id="13_ex66f"]
 [ext_resource type="Script" uid="uid://vg35qwkwtutj" path="res://TalkboxFrank.gd" id="13_hl4sg"]
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://talkbox.tscn" id="13_ien2l"]
-[ext_resource type="Texture2D" uid="uid://ctr5fhte1cavq" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-7.png" id="13_is34y"]
-[ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="13_si3j6"]
-[ext_resource type="Texture2D" uid="uid://7u1yxd365knt" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-8.png" id="14_ahu5d"]
-[ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
+[ext_resource type="Texture2D" uid="uid://ctr5fhte1cavq" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-7.png" id="13_is34y"]
+[ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="13_si3j6"]
+[ext_resource type="Texture2D" uid="uid://7u1yxd365knt" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-8.png" id="14_ahu5d"]
+[ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="14_nxom5"]
 [ext_resource type="Texture2D" uid="uid://lsoarq1o78my" path="res://Sprites/Characters/Keyboard.png" id="21_a3eta"]
 [ext_resource type="PackedScene" uid="uid://cieyshawee333" path="res://wasteland/Smoke.tscn" id="22_ex66f"]
 [ext_resource type="Texture2D" uid="uid://c5i5v5tccwa6p" path="res://Sprites/Characters/Drumkit.png" id="22_xq33t"]
-[ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
-[ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
-[ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
-[ext_resource type="Texture2D" uid="uid://rcye3ftx4j38" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-4.png" id="26_xual3"]
-[ext_resource type="Texture2D" uid="uid://dcuv7khky7vnp" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-5.png" id="27_co6og"]
-[ext_resource type="Texture2D" uid="uid://cayrl3demeaxb" path="res://Sprites/Crashed_Engine_Room_BG.png" id="27_thi0a"]
-[ext_resource type="Texture2D" uid="uid://u12l2udyhp2a" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-6.png" id="28_0js5l"]
-[ext_resource type="Texture2D" uid="uid://1tg65x2u4fj4" path="res://Sprites/Engine Room.png" id="28_eu0id"]
-[ext_resource type="Texture2D" uid="uid://cqbd2nreaxgx0" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-7.png" id="29_n8ot3"]
-[ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Sprites/PressX.png" id="30_ien2l"]
-[ext_resource type="Texture2D" uid="uid://dpsjbldr60mmb" path="res://Sprites/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-8.png" id="30_ullcj"]
+[ext_resource type="Texture2D" uid="uid://5j0jst6c5qhp" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-1.png" id="23_drwr1"]
+[ext_resource type="Texture2D" uid="uid://cdxtvk8hac7jf" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-2.png" id="24_yc5fr"]
+[ext_resource type="Texture2D" uid="uid://tl41xrjarko" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-3.png" id="25_161k1"]
+[ext_resource type="Texture2D" uid="uid://rcye3ftx4j38" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-4.png" id="26_xual3"]
+[ext_resource type="Texture2D" uid="uid://dcuv7khky7vnp" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-5.png" id="27_co6og"]
+[ext_resource type="Texture2D" uid="uid://cayrl3demeaxb" path="res://Sprites/Level_2_wasteland/Crashed_Engine_Room_BG.png" id="27_thi0a"]
+[ext_resource type="Texture2D" uid="uid://u12l2udyhp2a" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-6.png" id="28_0js5l"]
+[ext_resource type="Texture2D" uid="uid://1tg65x2u4fj4" path="res://Sprites/Level_2_wasteland/Engine Room.png" id="28_eu0id"]
+[ext_resource type="Texture2D" uid="uid://cqbd2nreaxgx0" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-7.png" id="29_n8ot3"]
+[ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Sprites/Level_2_wasteland/PressX.png" id="30_ien2l"]
+[ext_resource type="Texture2D" uid="uid://dpsjbldr60mmb" path="res://Sprites/Effects/Pixel Fire Asset Pack V1/Fire 7 - 1/Fire 7_1-8.png" id="30_ullcj"]
 [ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://wasteland/plants/gloopy-plant-1.png" id="31_yc5fr"]
 [ext_resource type="Texture2D" uid="uid://ptc8jv5cvbji" path="res://Sprites/ship concept test (side).png" id="33_xual3"]
-[ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Sprites/Campfire_base.png" id="42_bdfwn"]
-[ext_resource type="Texture2D" uid="uid://btsjpabkrhv7u" path="res://Sprites/Tentje.png" id="43_thi0a"]
-[ext_resource type="Texture2D" uid="uid://c8ngsdap606rr" path="res://Sprites/Card.png" id="48_7pp34"]
+[ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Sprites/Level_2_wasteland/Campfire_base.png" id="42_bdfwn"]
+[ext_resource type="Texture2D" uid="uid://btsjpabkrhv7u" path="res://Sprites/Level_2_wasteland/Tentje.png" id="43_thi0a"]
+[ext_resource type="Texture2D" uid="uid://c8ngsdap606rr" path="res://Sprites/Level_2_wasteland/Card.png" id="48_7pp34"]
 [ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://card.gd" id="49_7pp34"]
+[ext_resource type="PackedScene" uid="uid://bucppmtn2uka" path="res://moving_platform.tscn" id="52_hl4sg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co6og"]
 size = Vector2(113, 47)
@@ -498,7 +500,7 @@ stream = ExtResource("3_vxok5")
 script = ExtResource("4_0js5l")
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_vxok5")]
-position = Vector2(91, 84)
+position = Vector2(203, -243)
 respawnnode = NodePath("../Respawn Point 1")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -547,14 +549,14 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bordje/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ien2l")
 
-[node name="Talkbox" parent="Bordje" instance=ExtResource("13_ien2l")]
+[node name="TalkboxBordje" parent="Bordje" instance=ExtResource("13_ien2l")]
 convos = ["wasteland_cave_warning", "Wasteland_cave_warning 2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordje/Talkbox"]
+[node name="CollisionShapeBordje" type="CollisionShape2D" parent="Bordje/TalkboxBordje"]
 position = Vector2(0, -1.5625)
 shape = SubResource("RectangleShape2D_4exxo")
 
-[node name="PressX" type="Sprite2D" parent="Bordje/Talkbox"]
+[node name="PressX" type="Sprite2D" parent="Bordje/TalkboxBordje"]
 position = Vector2(0, 7)
 texture = ExtResource("30_ien2l")
 
@@ -563,6 +565,7 @@ position = Vector2(153, -51)
 texture = ExtResource("7_ro6m5")
 offset = Vector2(1, -8)
 vframes = 2
+script = ExtResource("8_161k1")
 
 [node name="Talkbox dialoog 1 en 2" parent="Koen" instance=ExtResource("13_ien2l")]
 position = Vector2(0, -5)
@@ -593,8 +596,13 @@ texture = ExtResource("30_ien2l")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_lo8ub")
 
+[node name="CrashedEngineRoomBg" type="Sprite2D" parent="."]
+position = Vector2(-171, -254)
+texture = ExtResource("27_thi0a")
+offset = Vector2(1, -3)
+
 [node name="Frank" type="Sprite2D" parent="."]
-position = Vector2(-133, -244)
+position = Vector2(-172, -252)
 texture = ExtResource("13_ex66f")
 offset = Vector2(1, -8)
 vframes = 2
@@ -630,11 +638,6 @@ shape = SubResource("RectangleShape2D_1vxuc")
 [node name="PressX" type="Sprite2D" parent="Frank/TalkboxFrank"]
 position = Vector2(3, -3)
 texture = ExtResource("30_ien2l")
-
-[node name="CrashedEngineRoomBg" type="Sprite2D" parent="."]
-position = Vector2(-132, -246)
-texture = ExtResource("27_thi0a")
-offset = Vector2(1, -3)
 
 [node name="Guus en Igor" type="Area2D" parent="."]
 position = Vector2(-46, -163)
@@ -813,7 +816,7 @@ position = Vector2(-4, 10)
 polygon = PackedVector2Array(-33, -22, 30, -6, 36, 2, 33, 9, 8, 6, -27, -6, -38, -8)
 
 [node name="Card" type="Sprite2D" parent="."]
-position = Vector2(-76, -256)
+position = Vector2(-92, -308)
 texture = ExtResource("48_7pp34")
 script = ExtResource("49_7pp34")
 
@@ -821,6 +824,9 @@ script = ExtResource("49_7pp34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Card/CardArea"]
 shape = SubResource("CircleShape2D_vlksy")
+
+[node name="moving platform" parent="." instance=ExtResource("52_hl4sg")]
+position = Vector2(248, -282)
 
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 2" to="Respawn Point 2" method="_on_body_entered"]

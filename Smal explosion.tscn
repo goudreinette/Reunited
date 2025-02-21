@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://c86radmxegrq5"]
 
-[ext_resource type="Texture2D" uid="uid://bovacgpcemvg0" path="res://Sprites/Explosion VFX/Explosion VFX 28/Explosion VFX 28(16x16).png" id="1_lgfe1"]
+[ext_resource type="Texture2D" uid="uid://bovacgpcemvg0" path="res://Sprites/Effects/Explosion VFX/Explosion VFX 28/Explosion VFX 28(16x16).png" id="1_lgfe1"]
 [ext_resource type="Script" uid="uid://crqy8ofoj1bg8" path="res://explosion.gd" id="2_8ocsa"]
 [ext_resource type="AudioStream" uid="uid://d4a5j6jp0p2b6" path="res://sounds/explosion.wav" id="3_0b3wn"]
 

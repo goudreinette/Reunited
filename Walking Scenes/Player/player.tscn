@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://bhl5ng17x1lny"]
 
 [ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://Walking Scenes/Player/Scripts/Player.gd" id="1_n8ajk"]
-[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
-[ext_resource type="Texture2D" uid="uid://17wbobtvnie8" path="res://Sprites/Dashing Lines.png" id="3_ohg2k"]
+[ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Sprites/Level_2_wasteland/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
+[ext_resource type="Texture2D" uid="uid://17wbobtvnie8" path="res://Sprites/Level_2_wasteland/Dashing Lines.png" id="3_ohg2k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni5tt"]
 radius = 4.0

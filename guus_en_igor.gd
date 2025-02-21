@@ -27,7 +27,9 @@ func _process(delta: float) -> void:
 	else: $PressX.visible = false
 		
 func _on_timeline_ended():
-	$EndOfConvoTimer.start()
+	if is_talking:
+		$EndOfConvoTimer.start()
+		if next_convo < convos.size() : next_convo += 1 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player :
 		player_inside = true
@@ -37,4 +39,4 @@ func _on_body_exited(body: Node2D) -> void:
 		player_inside = false 
 func _on_end_of_convo_timer_timeout() -> void:
 	is_talking = false
-	next_convo += 1
+	

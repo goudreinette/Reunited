@@ -22,18 +22,19 @@ func _process(delta: float) -> void:
 	if player_inside and not is_talking :
 		$PressX.visible = true
 		if  Input.is_action_just_pressed("dialogic_default_action"):
-				Dialogic.start(convos[0])
+				Dialogic.start(convos[next_convo])
 				is_talking = true
 	else: $PressX.visible = false	
 
 
 func _on_timeline_ended():
-	## Een Timer anders start hij vanzelf de volgende convo
-	$end_of_convo_timer.start()	
-	## Frank is niet vrij
-	if next_convo < 1 : next_convo = 1
-	## frank is vrij
-	elif player_has_card : next_convo = 3
+	if is_talking:
+		## Een Timer anders start hij vanzelf de volgende convo
+		$end_of_convo_timer.start()	
+		## Frank is niet vrij
+		if next_convo < 1 : next_convo = 1
+		## frank is vrij
+		elif player_has_card : next_convo = 3
 func _on_end_of_convo_timer_timeout() -> void:
 	is_talking = false
 

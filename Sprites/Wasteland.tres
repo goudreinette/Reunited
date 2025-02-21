@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bushe53aegxr"]
 
-[ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Sprites/01 Stranded - Starter Pack v1.1/Tileset/Tileset.png" id="1_tsf0j"]
-[ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Sprites/Ravijn.png" id="2_lv2e4"]
+[ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Sprites/Tileset/Tileset.png" id="1_lv2e4"]
+[ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Sprites/Level_2_wasteland/Ravijn.png" id="2_lv2e4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]
-texture = ExtResource("1_tsf0j")
+texture = ExtResource("1_lv2e4")
 0:0/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -217,6 +217,23 @@ texture = ExtResource("2_lv2e4")
 2:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -4.31661, 4.85619, -4.67633, 5.03605, 4.49647, -8, 4.85619)
 3:3/0 = 0
 3:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-4.49647, -5.03604, 4.31661, -5.03604, 4.67633, 4.67633, -4.49647, 4.67633)
+4:0/0 = 0
+4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(3.23746, 8, 8, 2.69788, 8, -8, -8, -8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(3.95689, -8, 4.13675, 8, -8, 8, -8, -8)
+4:2/0 = 0
+4:2/0/physics_layer_1/polygon_0/points = PackedVector2Array(1.70866, -8, 8, -2.33816, 8, 8, -8, 8, -8, -8)
+5:2/0 = 0
+5:2/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -1.43887, 8, -1.43887, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -2.87774, -3.50725, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-3.86696, -8, -4.04682, 8, 8, 8, 8, -8)
+6:0/0 = 0
+6:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, 2.87774, -2.96767, 8, 8, 8, 8, -8, -8, -8)
+5:0/0 = 0
+5:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 2.69788, 0.629505, 3.23746, -8, 2.87774)
+5:1/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 2
