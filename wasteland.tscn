@@ -500,7 +500,7 @@ stream = ExtResource("3_vxok5")
 script = ExtResource("4_0js5l")
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_vxok5")]
-position = Vector2(203, -243)
+position = Vector2(81, 155)
 respawnnode = NodePath("../Respawn Point 1")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -800,6 +800,81 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-1/StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="Gloopy-plant-2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-141, -130)
+sprite_frames = SubResource("SpriteFrames_e0we5")
+autoplay = "default"
+frame_progress = 0.109199
+offset = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gloopy-plant-2"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-2/StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="Gloopy-plant-3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-198, -189)
+sprite_frames = SubResource("SpriteFrames_e0we5")
+autoplay = "default"
+frame_progress = 0.109199
+offset = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gloopy-plant-3"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-3/StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="Gloopy-plant-4" type="AnimatedSprite2D" parent="."]
+position = Vector2(-239, -278)
+sprite_frames = SubResource("SpriteFrames_e0we5")
+autoplay = "default"
+frame_progress = 0.109199
+offset = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gloopy-plant-4"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-4/StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="Gloopy-plant-5" type="AnimatedSprite2D" parent="."]
+position = Vector2(-271, -258)
+sprite_frames = SubResource("SpriteFrames_e0we5")
+autoplay = "default"
+frame_progress = 0.109199
+offset = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gloopy-plant-5"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-5/StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="Gloopy-plant-6" type="AnimatedSprite2D" parent="."]
+position = Vector2(-160, -297)
+sprite_frames = SubResource("SpriteFrames_e0we5")
+autoplay = "default"
+frame_progress = 0.109199
+offset = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gloopy-plant-6"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gloopy-plant-6/StaticBody2D"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_hn1bu")
 
