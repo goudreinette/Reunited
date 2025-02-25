@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bucppmtn2uka"]
+
+[ext_resource type="Script" uid="uid://cb3sbcncpj78j" path="res://Level_2_wasteland/moving_platform.gd" id="1_hrpga"]
+[ext_resource type="Texture2D" uid="uid://b24rn1ktbvdtk" path="res://Level_2_wasteland/Level_2_wasteland_sprites/moving_platform_1.png" id="2_f8lbu"]
+
+[sub_resource type="Curve2D" id="Curve2D_hrpga"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -20, -1, 0, 0, 0, 0, 57, -1)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaxfr"]
+size = Vector2(24, 25)
+
+[sub_resource type="Animation" id="Animation_0kgt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_n0cw3"]
+resource_name = "path"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.5, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1fxty"]
+_data = {
+&"RESET": SubResource("Animation_0kgt5"),
+&"path": SubResource("Animation_n0cw3")
+}
+
+[node name="moving platform" type="Path2D"]
+position = Vector2(-1, 0)
+curve = SubResource("Curve2D_hrpga")
+script = ExtResource("1_hrpga")
+loop = false
+
+[node name="Area 2d" type="AnimatableBody2D" parent="."]
+position = Vector2(-20, -1)
+collision_layer = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Area 2d"]
+z_index = -1
+texture = ExtResource("2_f8lbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 2d"]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_oaxfr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-20, -1)
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+light_mask = 0
+remote_path = NodePath("../../Area 2d")
+update_rotation = false
+update_scale = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1fxty")
+}
+autoplay = "path"

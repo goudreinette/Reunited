@@ -1,36 +1,36 @@
 [gd_scene load_steps=74 format=3 uid="uid://cee4yu2d6icjv"]
 
-[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://ship/ship_main.gd" id="1_ykqqd"]
+[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_ykqqd"]
 [ext_resource type="Shader" uid="uid://boubiv4scxbtw" path="res://shaders/water_lake.gdshader" id="2_5j40c"]
-[ext_resource type="Texture2D" uid="uid://h573t5ikovdp" path="res://Sprites/lake.png" id="3_cq5kt"]
+[ext_resource type="Texture2D" uid="uid://h573t5ikovdp" path="res://Smup Test Level/test_shmup_sprites/lake.png" id="3_cq5kt"]
 [ext_resource type="Shader" uid="uid://dwmhp3c4kwa0i" path="res://shaders/water.gdshader" id="4_b3o7v"]
-[ext_resource type="Texture2D" uid="uid://c5etavhissrlr" path="res://icon big.png" id="5_7ylqf"]
-[ext_resource type="Texture2D" uid="uid://c1sd4b0hfb3w7" path="res://Sprites/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png" id="6_mkohf"]
-[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://ship/ship_ui.tscn" id="7_jy42x"]
+[ext_resource type="Texture2D" uid="uid://c5etavhissrlr" path="res://Sprites Algemeen/icon big.png" id="5_7ylqf"]
+[ext_resource type="Texture2D" uid="uid://c1sd4b0hfb3w7" path="res://Sprites Algemeen/sprite_packs/Beach Tileset/Beach Tile Set/Beach_Horizontal_Anim-aseprite_pallet.png" id="6_mkohf"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="7_jy42x"]
 [ext_resource type="Texture2D" uid="uid://bhhfdt8sx2w5d" path="res://y4k4r1 castle/sprites/beach_anim.png" id="7_pnvkm"]
-[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://ship/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="8_7q2h8"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="8_7q2h8"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="9_ghf3q"]
 [ext_resource type="Texture2D" uid="uid://d46knhj2mfn6" path="res://y4k4r1 castle/0020.png" id="9_ppdbf"]
 [ext_resource type="Texture2D" uid="uid://2fgxasf4yi7s" path="res://y4k4r1 castle/sprites/testlevel.png" id="10_a1xek"]
 [ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="11_y4r7p"]
-[ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://ship/level_position.gd" id="13_tm1yw"]
+[ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://Smup Test Level/level_position.gd" id="13_tm1yw"]
 [ext_resource type="Texture2D" uid="uid://cpeoh3ov7opxe" path="res://y4k4r1 castle/sprites/parasol.png" id="14_qva1n"]
-[ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://ship/ship_Camera2D.gd" id="16_repr1"]
-[ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://clouds.tscn" id="17_ul8j3"]
-[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="18_disdk"]
+[ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://Smup Test Level/ship_Camera2D.gd" id="16_repr1"]
+[ext_resource type="PackedScene" uid="uid://dck33v5ujtmm8" path="res://Smup Test Level/clouds.tscn" id="17_ul8j3"]
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://Smup Test Level/enemies/turret.tscn" id="18_disdk"]
 [ext_resource type="PackedScene" uid="uid://2o4tjflot8db" path="res://y4k4r1 castle/player_ship.tscn" id="18_vioh1"]
-[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://ship/enemies/rocket.tscn" id="19_7bt0x"]
-[ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://formation_test.tscn" id="20_5jlxt"]
-[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://formation_loop.tscn" id="21_5gh8r"]
-[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://formation_diagonal.tscn" id="22_hphrm"]
-[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://formation_diagonal_Double.tscn" id="23_easw4"]
-[ext_resource type="Texture2D" uid="uid://cw23oebbua8p1" path="res://Sprites/buoy.png" id="24_b4tl1"]
-[ext_resource type="Script" uid="uid://c1jn67trvrh0j" path="res://buoyancy.gd" id="25_20gni"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://Smup Test Level/enemies/rocket.tscn" id="19_7bt0x"]
+[ext_resource type="PackedScene" uid="uid://de2yqg8kfinie" path="res://Smup Test Level/formation_test.tscn" id="20_5jlxt"]
+[ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://Smup Test Level/formation_loop.tscn" id="21_5gh8r"]
+[ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://Smup Test Level/formation_diagonal.tscn" id="22_hphrm"]
+[ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://Smup Test Level/formation_diagonal_Double.tscn" id="23_easw4"]
+[ext_resource type="Texture2D" uid="uid://cw23oebbua8p1" path="res://Smup Test Level/test_shmup_sprites/buoy.png" id="24_b4tl1"]
+[ext_resource type="Script" uid="uid://c1jn67trvrh0j" path="res://Smup Test Level/buoyancy.gd" id="25_20gni"]
 [ext_resource type="Texture2D" uid="uid://nhaobrigw2j3" path="res://y4k4r1 castle/sprites/raft.png" id="26_mbatw"]
-[ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Sprites/Wolk 1.png" id="27_eb4hl"]
-[ext_resource type="Script" uid="uid://b054wxrwqetw7" path="res://ship/wolk.gd" id="28_jf1t1"]
-[ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://Sprites/Wolk 2.png" id="29_e3c5y"]
-[ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Sprites/Wolk 3.png" id="30_nmxpl"]
+[ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://Smup Test Level/test_shmup_sprites/Wolk 1.png" id="27_eb4hl"]
+[ext_resource type="Script" uid="uid://b054wxrwqetw7" path="res://Smup Test Level/wolk.gd" id="28_jf1t1"]
+[ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://Smup Test Level/test_shmup_sprites/Wolk 2.png" id="29_e3c5y"]
+[ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://Smup Test Level/test_shmup_sprites/Wolk 3.png" id="30_nmxpl"]
 [ext_resource type="Texture2D" uid="uid://cf5ld11s11rl5" path="res://y4k4r1 castle/sprites/zandkasteel.png" id="33_6o0ew"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7oejd"]
@@ -545,7 +545,7 @@ script = ExtResource("25_20gni")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Buoy"]
 libraries = {
-"": SubResource("AnimationLibrary_wrskd")
+&"": SubResource("AnimationLibrary_wrskd")
 }
 autoplay = "buoyancy"
 
@@ -556,7 +556,7 @@ texture = ExtResource("26_mbatw")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Raft"]
 root_node = NodePath("../../Buoy")
 libraries = {
-"": SubResource("AnimationLibrary_wrskd")
+&"": SubResource("AnimationLibrary_wrskd")
 }
 autoplay = "raft"
 

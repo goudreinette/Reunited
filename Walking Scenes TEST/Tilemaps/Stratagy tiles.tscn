@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgeoyjbaki8r2"]
+
+[ext_resource type="Texture2D" uid="uid://b3t6656oei8gr" path="res://Sprites Algemeen/Walking_Test_Sprites/strategy tiles 2.0.png" id="1_47vh4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6806s"]
+texture = ExtResource("1_47vh4")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.625, -4.375, 4.75, -4, 5.25, 3.375, -3.75, 3.625)
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_36vxx"]
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_6806s")
+
+[node name="StratagyTiles" type="TileMap"]
+z_index = -1
+position = Vector2(-3, 0)
+tile_set = SubResource("TileSet_36vxx")
+format = 2

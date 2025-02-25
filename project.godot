@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Reunited"
-run/main_scene="res://ship/Shmup Test Level.tscn"
+run/main_scene="res://Smup Test Level/Shmup Test Level.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.png"
+config/icon="res://Sprites Algemeen/icon.png"
 
 [autoload]
 
@@ -22,36 +22,35 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Frank": "res://Sprites/Characters/Frank.dch",
-"Guus": "res://Sprites/Characters/Guus.dch",
-"Guus_en_Igor_2": "res://Sprites/Characters/Guus_en_Igor_2.dch",
-"Igor": "res://Sprites/Characters/Igor.dch",
-"Koen": "res://dialogue/Koen.dch",
-"ander_mannetje": "res://characters/ander_mannetje.dch",
-"stephan": "res://characters/stephan.dch",
+"Frank": "res://addons/dialogic/characters/Frank.dch",
+"Guus": "res://addons/dialogic/characters/Guus.dch",
+"Guus_en_Igor_2": "res://addons/dialogic/characters/Guus_en_Igor_2.dch",
+"Igor": "res://addons/dialogic/characters/Igor.dch",
+"Koen": "res://addons/dialogic/characters/Koen.dch",
+"ander_mannetje": "res://addons/dialogic/characters/ander_mannetje.dch",
+"stephan": "res://addons/dialogic/characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Frank_vrij_1": "res://Sprites/Characters/Frank_vrij_1.dtl",
-"Guus_en_Igor_1": "res://Sprites/Characters/Guus_en_Igor_1.dtl",
-"Guus_en_Igor_2": "res://Sprites/Characters/Guus_en_Igor_2.dtl",
-"Koen_Dialogue 1": "res://Sprites/Characters/Koen_Dialogue 1.dtl",
-"Koen_Dialogue_1": "res://Sprites/Characters/Koen_Dialogue_1.dtl",
-"Koen_Dialogue_2": "res://Sprites/Characters/Koen_Dialogue_2.dtl",
-"Koen_Dialogue_3": "res://Sprites/Characters/Koen_Dialogue_3.dtl",
-"Koen_Dialogue_4": "res://Sprites/Characters/Koen_Dialogue_4.dtl",
-"Walking Scenes/timeline": "res://Walking Scenes/timeline.dtl",
-"Wasteland_cave_warning 2": "res://Wasteland_cave_warning 2.dtl",
-"frank 2": "res://Sprites/Characters/frank 2.dtl",
-"frank_1": "res://Sprites/Characters/frank_1.dtl",
-"frank_vrij_2": "res://Sprites/Characters/frank_vrij_2.dtl",
-"gesprek_stephan_andermannetje": "res://characters/gesprek_stephan_andermannetje.dtl",
-"test_timeline": "res://characters/test_timeline.dtl",
-"timeline": "res://walking scenes/timeline.dtl",
-"wasteland_cave_warning": "res://dialogue/wasteland_cave_warning.dtl"
+"Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
+"Guus_en_Igor_1": "res://addons/dialogic/dialogue/Guus_en_Igor_1.dtl",
+"Guus_en_Igor_2": "res://addons/dialogic/dialogue/Guus_en_Igor_2.dtl",
+"Koen_Dialogue 1": "res://addons/dialogic/dialogue/Koen_Dialogue 1.dtl",
+"Koen_Dialogue_1": "res://addons/dialogic/dialogue/Koen_Dialogue_1.dtl",
+"Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
+"Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
+"Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
+"Walking Scenes/timeline": "res://Walking Scenes TEST/timeline.dtl",
+"Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",
+"frank 2": "res://addons/dialogic/dialogue/frank 2.dtl",
+"frank_1": "res://addons/dialogic/dialogue/frank_1.dtl",
+"frank_vrij_2": "res://addons/dialogic/dialogue/frank_vrij_2.dtl",
+"gesprek_stephan_andermannetje": "res://addons/dialogic/dialogue/gesprek_stephan_andermannetje.dtl",
+"test_timeline": "res://addons/dialogic/dialogue/test_timeline.dtl",
+"wasteland_cave_warning": "res://addons/dialogic/dialogue/wasteland_cave_warning.dtl"
 }
-layout/style_list=["res://characters/new_style.tres"]
-layout/default_style="res://characters/new_style.tres"
+layout/style_list=["res://addons/dialogic/Styles/new_style.tres"]
+layout/default_style=""
 variables={}
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
@@ -74,6 +73,7 @@ audio/max_channels=4.0
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/glossary_files=[]
 
 [display]
 
@@ -95,7 +95,7 @@ enemies=""
 
 [gui]
 
-theme/custom_font="res://characters/ark-pixel-10px-proportional-latin.ttf"
+theme/custom_font="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf"
 
 [input]
 

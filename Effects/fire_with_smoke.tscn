@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2yxubepkj848"]
+
+[ext_resource type="Texture2D" uid="uid://by84ln23rrixv" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-1.png" id="1_0xhp7"]
+[ext_resource type="Texture2D" uid="uid://c3biik8k82mkq" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-2.png" id="2_wubof"]
+[ext_resource type="Texture2D" uid="uid://cojqv10pdecju" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-3.png" id="3_lyk7i"]
+[ext_resource type="Texture2D" uid="uid://f1uttkbvpi4m" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-4.png" id="4_mstsc"]
+[ext_resource type="Texture2D" uid="uid://cpmygj6q4dy7e" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-5.png" id="5_fu3mf"]
+[ext_resource type="Texture2D" uid="uid://trxpjw6v4rqn" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-6.png" id="6_gwj40"]
+[ext_resource type="Texture2D" uid="uid://cfqs4yetmpp1b" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-7.png" id="7_02fxl"]
+[ext_resource type="Texture2D" uid="uid://dwd8pwjasvnco" path="res://Effects/Pixel Fire Asset Pack V1/Fire 5 - 3/Fire 5_3-8.png" id="8_twbjd"]
+[ext_resource type="PackedScene" uid="uid://cieyshawee333" path="res://Effects/Smoke.tscn" id="9_yc0rl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_drwr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0xhp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wubof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lyk7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mstsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fu3mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gwj40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_02fxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_twbjd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Fire4-2" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_drwr1")
+autoplay = "default"
+frame_progress = 0.123479
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("9_yc0rl")]
+position = Vector2(0, 2)

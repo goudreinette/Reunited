@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=6 format=3 uid="uid://cjcrxp5ypbg1c"]
+
+[ext_resource type="Script" uid="uid://ddw64ucethu15" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_lu5eu"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="2_1kele"]
+[ext_resource type="Script" uid="uid://dtk3n4f4sqa7s" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_ijvb3"]
+
+[sub_resource type="Resource" id="Resource_qdxsm"]
+script = ExtResource("1_lu5eu")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_20617"]
+script = ExtResource("1_lu5eu")
+scene = ExtResource("2_1kele")
+overrides = {
+"autoadvance_progressbar": "false",
+"bold_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"bold_italics_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"box_color_use_global": "false",
+"box_margin_bottom": "6.0",
+"box_size": "Vector2(220, 66)",
+"italics_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
+"name_label_custom_font_size": "10.0",
+"name_label_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"name_label_use_global_font": "false",
+"name_label_use_global_font_size": "false",
+"next_indicator_size": "Vector2(10, 10)",
+"normal_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"text_size": "10.0",
+"text_use_global_font": "false",
+"text_use_global_size": "false"
+}
+
+[resource]
+script = ExtResource("2_ijvb3")
+name = "new_style"
+layer_list = Array[String](["10"])
+layer_info = {
+"": SubResource("Resource_qdxsm"),
+"10": SubResource("Resource_20617")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_lu5eu")]([])
+metadata/_latest_layer = "10"

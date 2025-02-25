@@ -1,0 +1,19 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.294564, 0.650766, 0.742396, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "new_style"
+},
+&"default_portrait": "",
+&"description": "",
+&"display_name": "Igor",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {},
+&"scale": 1.0
+}

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=6 format=3 uid="uid://mc8mwyba14k8"]
+
+[ext_resource type="Script" uid="uid://ddw64ucethu15" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_s1fgl"]
+[ext_resource type="Script" uid="uid://dtk3n4f4sqa7s" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_60hst"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="2_nujss"]
+
+[sub_resource type="Resource" id="Resource_nujss"]
+script = ExtResource("1_s1fgl")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_sx2bt"]
+script = ExtResource("1_s1fgl")
+scene = ExtResource("2_nujss")
+overrides = {
+"box_panel": "\"default_stylebox.tres\"",
+"custom_normal_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\""
+}
+
+[resource]
+script = ExtResource("2_60hst")
+name = "Wasteland-Style"
+layer_list = Array[String](["10"])
+layer_info = {
+"": SubResource("Resource_nujss"),
+"10": SubResource("Resource_sx2bt")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_s1fgl")]([])
+metadata/_latest_layer = "10"

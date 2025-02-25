@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://3ckcxe2cc4uw"]
+
+[ext_resource type="Texture2D" uid="uid://bpchtv0i5gtml" path="res://MENU/Menu Sprites/Booreiland.png" id="1_ftqdb"]
+
+[sub_resource type="Curve" id="Curve_fbeee"]
+_data = [Vector2(0, 0.260243), 0.0, 0.0, 0, 0, Vector2(0.9631, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Booreiland" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ftqdb")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-29, -38)
+amount = 4
+lifetime = 60.0
+speed_scale = 5.0
+direction = Vector2(0.5, -0.5)
+spread = 24.29
+gravity = Vector2(0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 1.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_fbeee")

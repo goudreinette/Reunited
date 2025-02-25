@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs6iq4ddli6i2"]
+
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://Smup Test Level/enemies/turret.tscn" id="1_uw2ou"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="2_808f7"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://Smup Test Level/enemies/rocket.tscn" id="3_oaw5c"]
+
+[node name="Test Turret" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_808f7")]
+position = Vector2(136, 106)
+current_weapon_type = 0
+
+[node name="Turret" parent="." instance=ExtResource("1_uw2ou")]
+position = Vector2(45, 40)
+firing_pattern = 0
+rate_of_fire = 10.0
+bullet_scene = ExtResource("3_oaw5c")
+
+[node name="Rocket" parent="." instance=ExtResource("3_oaw5c")]
+position = Vector2(52, 120)
+
+[node name="Turret2" parent="." instance=ExtResource("1_uw2ou")]
+position = Vector2(204, 28)
+rate_of_fire = 0.05
+bullet_scene = ExtResource("3_oaw5c")

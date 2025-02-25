@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cclj1rct6aop4"]
-
-[ext_resource type="Script" uid="uid://bqhv0hijthoj5" path="res://ship/enemies/drone_parent.gd" id="1_3jgdf"]
-
-[node name="Drone parent" type="PathFollow2D"]
-position = Vector2(23.7324, 200.973)
-rotation = -1.51564
-script = ExtResource("1_3jgdf")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://f8kieb5rigli"]
 
-[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://ship/enemies/turret.tscn" id="1_2naho"]
-[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://ship/player_ship.tscn" id="2_umu6l"]
+[ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://Smup Test Level/enemies/turret.tscn" id="1_2naho"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="2_umu6l"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_tbvte"]
-[ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://Sprites/Tiny player ship.png" id="4_6jy7c"]
+[ext_resource type="Texture2D" uid="uid://dht2dq3ahctel" path="res://Smup Test Level/test_shmup_sprites/Tiny player ship.png" id="4_6jy7c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2dhyy"]
 shader = ExtResource("3_tbvte")
