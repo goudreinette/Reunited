@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://dgbc31b6g0pmw"]
 
-[ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://plants/gloopy-plant-1.png" id="1_avrft"]
+[ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://Level_2_wasteland/Level_2_wasteland_sprites/gloopy-plant-1.png" id="1_avrft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yc5fr"]
 atlas = ExtResource("1_avrft")
