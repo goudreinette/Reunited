@@ -2,8 +2,8 @@ class_name ShipPlayer extends Area2D
 
 signal shield_changed
 signal died
-
-var explode_scene = preload("res://Effects/Smal explosion.tscn")
+var is_dead = false
+var explode_scene = preload("res://Effects/Big Explosion.tscn")
 
 enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 
@@ -117,9 +117,13 @@ func set_shield(value):
 	shield = min(max_shield, value)
 	shield_changed.emit(max_shield, shield)
 	if shield <= 0:
-		
-		hide()
-		died.emit()
+		if is_dead == false :
+			var e = explode_scene.instantiate()
+			get_tree().root.add_child(e)
+			e.start(global_position)
+			hide()
+			died.emit()
+			is_dead = true
 		
 func _on_gun_cooldown_timeout():
 	can_shoot = true

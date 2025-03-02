@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp6gf3iwl2i5b"]
+
+[ext_resource type="Script" uid="uid://b4dxiodpk0ba6" path="res://Level_1_space_escape/gunship_group.gd" id="1_xuvxg"]
+
+[node name="GunshipGroup" type="Node2D"]
+script = ExtResource("1_xuvxg")

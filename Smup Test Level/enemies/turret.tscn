@@ -302,13 +302,13 @@ autostart = true
 
 [node name="HitAnimation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_sxlcj")
+&"": SubResource("AnimationLibrary_sxlcj")
 }
 
 [node name="ChargeAnimation-" type="AnimationPlayer" parent="."]
 root_node = NodePath("../HitAnimation")
 libraries = {
-"": SubResource("AnimationLibrary_6vdvs")
+&"": SubResource("AnimationLibrary_6vdvs")
 }
 
 [connection signal="timeout" from="BurstTimer" to="." method="_on_burst_timer_timeout"]

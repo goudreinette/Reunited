@@ -19,6 +19,9 @@ func _on_area_entered(area):
 	if area.is_in_group("enemies"):
 		area.reduce_health(1)
 		queue_free()
+	if area.is_in_group("enemy_rocket"):
+		area.reduce_health(1)
+		queue_free()
 	if area.is_in_group("astroids"):
 		area.reduce_health(1)
 		queue_free()

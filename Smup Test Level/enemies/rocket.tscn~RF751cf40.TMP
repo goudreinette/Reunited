@@ -39,9 +39,7 @@ size = Vector2(1.75, 10)
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.520064), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="Rocket" type="Area2D" groups=["enemy_rocket"]]
-collision_layer = 0
-collision_mask = 3
+[node name="Rocket" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_n4ir4")
 speed = -75
 
@@ -70,7 +68,7 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_xghrf")
 
 [node name="Deathtimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 one_shot = true
 autostart = true
 

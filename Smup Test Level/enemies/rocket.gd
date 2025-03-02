@@ -8,6 +8,7 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var aim_speed = 16
 
 @export var health : int = 1 
+@export var damage : int = 2 
 
 
 var player : ShipPlayer
@@ -40,9 +41,9 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
 
 func _on_area_entered(area):
+	explode()
 	if area.name == "Player":
-		explode()
-		area.shield -= 1
+		area.shield -= damage
 
 func reduce_health(amount):
 	health -= amount

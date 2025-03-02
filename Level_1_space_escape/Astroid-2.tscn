@@ -48,6 +48,7 @@ _data = {
 }
 
 [node name="Astroid-2" type="Area2D" groups=["astroids"]]
+collision_layer = 2
 script = ExtResource("1_m74j2")
 maxhealth = 6
 

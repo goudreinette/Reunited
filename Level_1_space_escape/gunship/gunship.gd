@@ -13,7 +13,7 @@ signal died
 var player : ShipPlayer
 var target_pos : Vector2
 var firing : bool
-
+var in_range = false
 
 func _ready():
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
@@ -27,7 +27,8 @@ func _ready():
 func _process(delta):
 	position = lerp(position, target_pos, .03125)
 	if position.distance_to(target_pos) < 2 and $FiringTimer.is_stopped():
-		$FiringTimer.start()
+		if in_range: 
+			$FiringTimer.start()
 
 func _on_new_position_timer_timeout():
 	new_random_position()
@@ -43,10 +44,12 @@ func new_random_position():
 func _on_firing_timer_timeout():
 	var b: Node2D = bullet.instantiate()
 	get_tree().get_root().add_child(b)
+	#player.get_parent().add_child(b)
 	b.rotation = deg_to_rad(180)
 	b.global_position = $FirePositionLeft.global_position
 	
 	b = bullet.instantiate()
+	#player.get_parent().add_child(b)
 	get_tree().get_root().add_child(b)
 	b.rotation = deg_to_rad(180)
 	b.global_position = $FirePositionRight.global_position

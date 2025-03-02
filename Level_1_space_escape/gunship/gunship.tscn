@@ -2,29 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/gunship/Gunship.png" id="1_3x5xb"]
 [ext_resource type="Script" uid="uid://dwq6phtd73l0x" path="res://Level_1_space_escape/gunship/gunship.gd" id="1_t080n"]
-[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_fxcjo"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://Smup Test Level/enemies/rocket.tscn" id="2_j2qot"]
 [ext_resource type="PackedScene" uid="uid://c86radmxegrq5" path="res://Effects/Smal explosion.tscn" id="2_uau5r"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="4_j2qot"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b5b5g"]
+resource_local_to_scene = true
 shader = ExtResource("4_j2qot")
 shader_parameter/active = false
 shader_parameter/hit_color = Color(1, 1, 1, 1)
-
-[sub_resource type="Animation" id="Animation_j2qot"]
-resource_name = "hit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
 
 [sub_resource type="Animation" id="Animation_b5b5g"]
 length = 0.001
@@ -41,6 +27,22 @@ tracks/0/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_j2qot"]
+resource_name = "hit"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ap3f7"]
 _data = {
 &"RESET": SubResource("Animation_b5b5g"),
@@ -48,8 +50,9 @@ _data = {
 }
 
 [node name="Gunship" type="Area2D" groups=["enemies"]]
+collision_layer = 16
 script = ExtResource("1_t080n")
-bullet = ExtResource("2_fxcjo")
+bullet = ExtResource("2_j2qot")
 health = 15
 explosion_scene = ExtResource("2_uau5r")
 
@@ -80,6 +83,7 @@ position = Vector2(14, 2)
 libraries = {
 &"": SubResource("AnimationLibrary_ap3f7")
 }
+autoplay = "RESET"
 
 [connection signal="timeout" from="NewPositionTimer" to="." method="_on_new_position_timer_timeout"]
 [connection signal="timeout" from="FiringTimer" to="." method="_on_firing_timer_timeout"]
