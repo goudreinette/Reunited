@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbyjp0y4vxwsl"]
+
+[ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="1_elxp7"]
+[ext_resource type="Texture2D" uid="uid://cc2mgjh00k36y" path="res://Level_1_space_escape/level_1_space_escape_sprites/ship concept small.png" id="2_85bin"]
+[ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/level_1_space_escape_sprites/Gunship.png" id="3_gitqg"]
+[ext_resource type="Texture2D" uid="uid://btpxkpcah6kgd" path="res://Level_1_space_escape/level_1_space_escape_sprites/Enemy-Space-ship.png" id="4_x37dq"]
+[ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="5_dtryo"]
+[ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="6_np8r2"]
+[ext_resource type="Texture2D" uid="uid://dnvv56ur0yx04" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small.png" id="7_0so0r"]
+
+[node name="SpaceMap" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 3)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_elxp7")
+hframes = 3
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 10)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D2"]
+texture = ExtResource("1_elxp7")
+hframes = 3
+frame = 1
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 20)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("1_elxp7")
+hframes = 3
+frame = 2
+
+[node name="ShipConceptSmall" type="Sprite2D" parent="."]
+position = Vector2(118, 127)
+texture = ExtResource("2_85bin")
+
+[node name="Gunship" type="Sprite2D" parent="."]
+position = Vector2(70, 29)
+texture = ExtResource("3_gitqg")
+hframes = 3
+
+[node name="Gunship2" type="Sprite2D" parent="."]
+position = Vector2(181, 53)
+texture = ExtResource("3_gitqg")
+hframes = 3
+
+[node name="Enemy-space-ship" type="Sprite2D" parent="."]
+position = Vector2(211, 86)
+texture = ExtResource("4_x37dq")
+hframes = 3
+
+[node name="Enemy-space-ship2" type="Sprite2D" parent="."]
+position = Vector2(211, 110)
+texture = ExtResource("4_x37dq")
+hframes = 3
+
+[node name="Enemy-space-ship3" type="Sprite2D" parent="."]
+position = Vector2(211, 133)
+texture = ExtResource("4_x37dq")
+hframes = 3
+
+[node name="Enemy-space-ship4" type="Sprite2D" parent="."]
+position = Vector2(211, 155)
+texture = ExtResource("4_x37dq")
+hframes = 3
+
+[node name="Astroid1" type="Sprite2D" parent="."]
+position = Vector2(146, 4)
+texture = ExtResource("5_dtryo")
+
+[node name="AstroidSmall2" type="Sprite2D" parent="."]
+position = Vector2(5, 91)
+texture = ExtResource("6_np8r2")
+
+[node name="AstroidSmall" type="Sprite2D" parent="."]
+position = Vector2(114, 64)
+texture = ExtResource("7_0so0r")
