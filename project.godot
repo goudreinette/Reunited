@@ -96,6 +96,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 Player=""
 enemies=""
+astroids=""
 
 [gui]
 

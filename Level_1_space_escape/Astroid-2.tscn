@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://blj0d6imf4ndu"]
+[gd_scene load_steps=8 format=3 uid="uid://dvy2vtjncyrel"]
 
-[ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="1_ap84k"]
-[ext_resource type="Script" uid="uid://drjf3fbqjkafl" path="res://Level_1_space_escape/astroid.gd" id="1_iss2k"]
-[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_jnj1s"]
+[ext_resource type="Script" uid="uid://drjf3fbqjkafl" path="res://Level_1_space_escape/astroid.gd" id="1_m74j2"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_i876r"]
+[ext_resource type="Texture2D" uid="uid://c5qxw8cutxmr2" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 2.png" id="3_m74j2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_138us"]
 resource_local_to_scene = true
-shader = ExtResource("2_jnj1s")
+shader = ExtResource("2_i876r")
 shader_parameter/active = false
 shader_parameter/hit_color = Color(1, 1, 1, 1)
 
@@ -59,16 +59,16 @@ _data = {
 &"hit": SubResource("Animation_g3nya")
 }
 
-[node name="Astroid-1" type="Area2D" groups=["astroids"]]
-script = ExtResource("1_iss2k")
+[node name="Astroid-2" type="Area2D" groups=["astroids"]]
+script = ExtResource("1_m74j2")
 maxhealth = 6
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_138us")
-texture = ExtResource("1_ap84k")
+texture = ExtResource("3_m74j2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(4, -9, 16, 1, 12, 9, 6, 13, 2, 11, -8, 12, -11, 8, -9, 6, -14, 1, -13, -6, -8, -13, -1, -14, 3, -14)
+polygon = PackedVector2Array(11, -12, 17, -1, 9, 7, 9, 13, -1, 16, -3, 12, -9, 9, -12, 2, -16, 2, -15, -7, -10, -13, -3, -9, 5, -9)
 
 [node name="HitAnimation" type="AnimationPlayer" parent="."]
 libraries = {

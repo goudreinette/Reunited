@@ -13,7 +13,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if health <=0 and not isdead:
 		explode()
-
+	##set sprite to health ratio
+	#$Sprite2D.frame = remap(healthratio, 1, 0, 5, 9)
 	
 func reduce_health(amount):
 	health -= amount
@@ -33,4 +34,4 @@ func explode():
 	await $HitAnimation.animation_finished # Needed to 
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
-	#queue_free()
+	queue_free()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfm6so3i2xnk5"]
+[gd_scene load_steps=21 format=3 uid="uid://cfm6so3i2xnk5"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
+[ext_resource type="Texture2D" uid="uid://bnrvlasath23p" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 128x.png" id="3_lcmmd"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="7_xq0x3"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="8_pqtwk"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="9_g2ecq"]
@@ -10,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="14_u8xkq"]
 [ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="14_x6pma"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="15_7obxh"]
+[ext_resource type="PackedScene" uid="uid://bo50n707rvom4" path="res://Level_1_space_escape/Small_Astroid-2.tscn" id="15_k8f57"]
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://Smup Test Level/ship_Camera2D.gd" id="16_g0b6g"]
+[ext_resource type="PackedScene" uid="uid://cxnypv2veh8uu" path="res://Level_1_space_escape/Small_Astroid-1.tscn" id="16_lcmmd"]
+[ext_resource type="PackedScene" uid="uid://dvy2vtjncyrel" path="res://Level_1_space_escape/Astroid-2.tscn" id="17_08rlv"]
 [ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://Smup Test Level/formation_loop.tscn" id="21_oqn25"]
 [ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://Smup Test Level/formation_diagonal.tscn" id="22_ql4we"]
 [ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://Smup Test Level/formation_diagonal_Double.tscn" id="23_46uc2"]
@@ -44,8 +48,12 @@ shader_parameter/vignette_opacity = 0.6
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g0tbl")
 
-[node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
-z_index = -1
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+
+[node name="StandaardPlaneet128x" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(21, -287)
+texture = ExtResource("3_lcmmd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -81,13 +89,15 @@ position = Vector2(52.375, -351)
 [node name="Formation Test3" parent="." instance=ExtResource("21_oqn25")]
 position = Vector2(2.375, -387)
 
+[node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
+z_index = -1
+
 [node name="LevelPosition" type="Node2D" parent="."]
 script = ExtResource("13_4j8lc")
-levelspeed = 15.0
+levelspeed = 50.0
 
 [node name="Player" parent="LevelPosition" instance=ExtResource("14_u8xkq")]
 position = Vector2(120, 120)
-speed = 151
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
 stream = ExtResource("15_7obxh")
@@ -98,13 +108,22 @@ script = ExtResource("16_g0b6g")
 noise = SubResource("FastNoiseLite_uf0tv")
 
 [node name="Astroid-1" parent="." instance=ExtResource("14_x6pma")]
-position = Vector2(140, -38)
-
-[node name="Astroid-2" parent="." instance=ExtResource("14_x6pma")]
-position = Vector2(80, -89)
+position = Vector2(157, -39)
 
 [node name="Astroid-3" parent="." instance=ExtResource("14_x6pma")]
-position = Vector2(136, -122)
+position = Vector2(211, -223)
+
+[node name="Small-Astroid-2" parent="." instance=ExtResource("15_k8f57")]
+position = Vector2(54, -57)
+
+[node name="Small-Astroid-1" parent="." instance=ExtResource("16_lcmmd")]
+position = Vector2(205, -144)
+
+[node name="Astroid-2" parent="." instance=ExtResource("17_08rlv")]
+position = Vector2(92, -139)
+
+[node name="Astroid-4" parent="." instance=ExtResource("17_08rlv")]
+position = Vector2(220, -80)
 
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
