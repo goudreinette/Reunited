@@ -71,7 +71,7 @@ animations = [{
 
 [node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_4pouc")
-current_weapon_type = 2
+current_weapon_type = 0
 bullet_scene = ExtResource("2_kqyt4")
 
 [node name="Ship" type="Sprite2D" parent="."]

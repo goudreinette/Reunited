@@ -44,13 +44,13 @@ directories/dtl_directory={
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
-"Walking Scenes/timeline": "res://Walking Scenes TEST/timeline.dtl",
 "Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",
 "frank 2": "res://addons/dialogic/dialogue/frank 2.dtl",
 "frank_1": "res://addons/dialogic/dialogue/frank_1.dtl",
 "frank_vrij_2": "res://addons/dialogic/dialogue/frank_vrij_2.dtl",
 "gesprek_stephan_andermannetje": "res://addons/dialogic/dialogue/gesprek_stephan_andermannetje.dtl",
 "test_timeline": "res://addons/dialogic/dialogue/test_timeline.dtl",
+"timeline": "res://Walking Scenes TEST/timeline.dtl",
 "wasteland_cave_warning": "res://addons/dialogic/dialogue/wasteland_cave_warning.dtl"
 }
 layout/style_list=["res://addons/dialogic/Styles/new_style.tres"]
@@ -176,6 +176,6 @@ wilburr={
 textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
-environment/defaults/default_clear_color=Color(0.388235, 0.709804, 0.905882, 1)
+environment/defaults/default_clear_color=Color(0.235294, 0.168627, 0.172549, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

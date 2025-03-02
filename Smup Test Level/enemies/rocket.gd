@@ -2,7 +2,7 @@ extends Area2D
 
 signal died 
 
-var explode_scene = preload("res://smal explosion.tscn")
+var explode_scene = preload("res://Effects/Smal explosion.tscn")
 
 @export var speed = -50
 @export var aim_speed = 16
