@@ -31,6 +31,7 @@ directories/dch_directory={
 "Guus_en_Igor_2": "res://addons/dialogic/characters/Guus_en_Igor_2.dch",
 "Igor": "res://addons/dialogic/characters/Igor.dch",
 "Koen": "res://addons/dialogic/characters/Koen.dch",
+"Mr Sloppy": "res://addons/dialogic/characters/Mr Sloppy.dch",
 "ander_mannetje": "res://addons/dialogic/characters/ander_mannetje.dch",
 "stephan": "res://addons/dialogic/characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
@@ -44,6 +45,7 @@ directories/dtl_directory={
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
+"Take_this": "res://addons/dialogic/characters/Take_this.dtl",
 "Walking Scenes/timeline": "res://Walking Scenes TEST/timeline.dtl",
 "Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",
 "frank 2": "res://addons/dialogic/dialogue/frank 2.dtl",

@@ -17,9 +17,14 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var max_shield = 10
 var shield = max_shield:
 	set = set_shield
+var in_lazer = false
+
 var can_shoot = true
 
+
 @onready var screensize = get_viewport_rect().size
+
+
 
 func _ready():
 	start()
@@ -51,6 +56,10 @@ func _process(delta):
 			#if not $"..".playing:
 				#$".."._on_start_pressed()
 		shoot()
+	##damage in lazer
+	if in_lazer:
+		$HitAnimation.play("hit")
+		shield -=0.5
 
 func shoot():
 	if not can_shoot:

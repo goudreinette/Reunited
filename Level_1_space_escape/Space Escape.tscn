@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cfm6so3i2xnk5"]
+[gd_scene load_steps=24 format=3 uid="uid://cfm6so3i2xnk5"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -15,7 +15,10 @@
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://Smup Test Level/ship_Camera2D.gd" id="16_g0b6g"]
 [ext_resource type="PackedScene" uid="uid://cxnypv2veh8uu" path="res://Level_1_space_escape/Small_Astroid-1.tscn" id="16_lcmmd"]
 [ext_resource type="PackedScene" uid="uid://dvy2vtjncyrel" path="res://Level_1_space_escape/Astroid-2.tscn" id="17_08rlv"]
+[ext_resource type="PackedScene" uid="uid://cnx1ewly12pjh" path="res://Level_1_space_escape/Big_planet.tscn" id="19_08rlv"]
+[ext_resource type="PackedScene" uid="uid://qmektr0dhq1v" path="res://Level_1_space_escape/Fat_Lazer_Group.tscn" id="20_40mj3"]
 [ext_resource type="PackedScene" uid="uid://diafai4bfcuak" path="res://Smup Test Level/formation_loop.tscn" id="21_oqn25"]
+[ext_resource type="PackedScene" uid="uid://cf37c61r1glsh" path="res://Level_1_space_escape/Fat_Lazer.tscn" id="21_yqnux"]
 [ext_resource type="PackedScene" uid="uid://d10k2oxaamog" path="res://Smup Test Level/formation_diagonal.tscn" id="22_ql4we"]
 [ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://Smup Test Level/formation_diagonal_Double.tscn" id="23_46uc2"]
 
@@ -48,12 +51,28 @@ shader_parameter/vignette_opacity = 0.6
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g0tbl")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.8, 0.8)
+[node name="Parallax2D 0_5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
 
-[node name="StandaardPlaneet128x" type="Sprite2D" parent="Parallax2D"]
+[node name="BigPlanet" parent="Parallax2D 0_5" instance=ExtResource("19_08rlv")]
+position = Vector2(137, -898)
+
+[node name="Parallax2D 0_75" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.75, 0.75)
+
+[node name="StandaardPlaneet128x" type="Sprite2D" parent="Parallax2D 0_75"]
 position = Vector2(21, -287)
 texture = ExtResource("3_lcmmd")
+
+[node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
+z_index = -1
+
+[node name="Parallax2D2 0_50" parent="SpaceBG" index="1"]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="Parallax2D3 0_60" parent="SpaceBG" index="2"]
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(65, -38)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -89,10 +108,8 @@ position = Vector2(52.375, -351)
 [node name="Formation Test3" parent="." instance=ExtResource("21_oqn25")]
 position = Vector2(2.375, -387)
 
-[node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
-z_index = -1
-
 [node name="LevelPosition" type="Node2D" parent="."]
+position = Vector2(0, 473)
 script = ExtResource("13_4j8lc")
 levelspeed = 50.0
 
@@ -125,5 +142,47 @@ position = Vector2(92, -139)
 [node name="Astroid-4" parent="." instance=ExtResource("17_08rlv")]
 position = Vector2(220, -80)
 
+[node name="FatLazerGroup" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(-3, 265)
+
+[node name="FatLazer" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazerGroup2" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(8, -614)
+
+[node name="FatLazer" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
+
+[editable path="SpaceBG"]

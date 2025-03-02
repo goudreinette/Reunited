@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qmektr0dhq1v"]
+
+[ext_resource type="Script" uid="uid://buww8a0kpmmwl" path="res://Level_1_space_escape/fat_lazer_group.gd" id="1_cfkdu"]
+
+[node name="FatLazerGroup" type="Node2D"]
+script = ExtResource("1_cfkdu")

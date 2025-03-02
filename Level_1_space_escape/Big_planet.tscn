@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnx1ewly12pjh"]
+
+[ext_resource type="Texture2D" uid="uid://bgs6lnivs6knk" path="res://Level_1_space_escape/level_1_space_escape_sprites/Very big Red Planet.png" id="1_kejs1"]
+
+[node name="BigPlanet" type="Sprite2D"]
+texture = ExtResource("1_kejs1")
+hframes = 30

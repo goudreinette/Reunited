@@ -6,7 +6,7 @@ signal died
 var start_pos = Vector2.ZERO
 var speed = 0
 var bullet_scene = preload("res://Smup Test Level/enemies/enemy_bullet.tscn")
-var explode_scene = preload("res://explosion.tscn")
+var explode_scene = preload("res://Effects/explosion.tscn")
 #@export var bullet_scene : PackedScene
 
 
