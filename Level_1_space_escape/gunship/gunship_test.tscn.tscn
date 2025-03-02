@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cauhhq48tx2y0"]
+
+[ext_resource type="PackedScene" uid="uid://7403se4cbera" path="res://Level_1_space_escape/gunship/gunship.tscn" id="1_g6blm"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="2_82lbs"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://Smup Test Level/enemies/rocket.tscn" id="2_g3yw0"]
+
+[node name="GunshipTest_tscn" type="Node2D"]
+
+[node name="Gunship" parent="." instance=ExtResource("1_g6blm")]
+position = Vector2(120, 26)
+bullet = ExtResource("2_g3yw0")
+
+[node name="Player" parent="." instance=ExtResource("2_82lbs")]
+position = Vector2(123, 131)

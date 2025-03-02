@@ -99,6 +99,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 Player=""
 enemies=""
 astroids=""
+enemy_rocket=""
 
 [gui]
 
@@ -173,6 +174,7 @@ wilburr={
 2d_physics/layer_2="Object"
 2d_physics/layer_3="Pit"
 2d_physics/layer_4="Talkbox"
+2d_physics/layer_5="Enemy"
 
 [rendering]
 

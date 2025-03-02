@@ -5,9 +5,11 @@ extends AnimatedSprite2D
 func start(pos):
 	position = pos
 
+
+func _ready():
+	animation_finished.connect(queue_free)	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	#$AudioStreamPlayer2D.finished.connect(queue_free)
-	animation_finished.connect(queue_free)	
 	pass

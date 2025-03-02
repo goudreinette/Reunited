@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnfxdvv1bxgdt"
-path="res://.godot/imported/Gunship.png-d9f720b9b03c09d983f927b0e4fe86ba.ctex"
+path="res://.godot/imported/Gunship.png-7b6cbca8a1a84d6f05d8a3a2c0243058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_1_space_escape/level_1_space_escape_sprites/Gunship.png"
-dest_files=["res://.godot/imported/Gunship.png-d9f720b9b03c09d983f927b0e4fe86ba.ctex"]
+source_file="res://Level_1_space_escape/gunship/Gunship.png"
+dest_files=["res://.godot/imported/Gunship.png-7b6cbca8a1a84d6f05d8a3a2c0243058.ctex"]
 
 [params]
 

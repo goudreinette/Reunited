@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://7403se4cbera"]
+
+[ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/gunship/Gunship.png" id="1_3x5xb"]
+[ext_resource type="Script" uid="uid://dwq6phtd73l0x" path="res://Level_1_space_escape/gunship/gunship.gd" id="1_t080n"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_fxcjo"]
+[ext_resource type="PackedScene" uid="uid://c86radmxegrq5" path="res://Effects/Smal explosion.tscn" id="2_uau5r"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="4_j2qot"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5b5g"]
+shader = ExtResource("4_j2qot")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_j2qot"]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_b5b5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ap3f7"]
+_data = {
+&"RESET": SubResource("Animation_b5b5g"),
+&"hit": SubResource("Animation_j2qot")
+}
+
+[node name="Gunship" type="Area2D" groups=["enemies"]]
+script = ExtResource("1_t080n")
+bullet = ExtResource("2_fxcjo")
+health = 15
+explosion_scene = ExtResource("2_uau5r")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b5b5g")
+texture = ExtResource("1_3x5xb")
+hframes = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(1, 0)
+polygon = PackedVector2Array(6, 9, 6, 3, 12, 4, 17, 4, 17, -7, 11, -7, 10, -11, 7, -11, 7, -17, -8, -17, -8, -11, -10, -9, -10, -7, -18, -7, -18, 3, -18, 5, -8, 5, -6, 12, -4, 16, 3, 16, 4, 13)
+
+[node name="NewPositionTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="FiringTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="FirePositionLeft" type="Node2D" parent="."]
+position = Vector2(-14, 2)
+
+[node name="FirePositionRight" type="Node2D" parent="."]
+position = Vector2(14, 2)
+
+[node name="HitAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ap3f7")
+}
+
+[connection signal="timeout" from="NewPositionTimer" to="." method="_on_new_position_timer_timeout"]
+[connection signal="timeout" from="FiringTimer" to="." method="_on_firing_timer_timeout"]
