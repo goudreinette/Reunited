@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv2erjvwdhfm3"]
+
+[ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="1_gux30"]
+
+[node name="SpaceBG" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 3)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_gux30")
+hframes = 3
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 10)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D2"]
+texture = ExtResource("1_gux30")
+hframes = 3
+frame = 1
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_offset = Vector2(121, 0)
+repeat_size = Vector2(0, 540)
+autoscroll = Vector2(0, 20)
+
+[node name="GreenBg240x" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("1_gux30")
+hframes = 3
+frame = 2

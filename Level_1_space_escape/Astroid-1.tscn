@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://blj0d6imf4ndu"]
+
+[ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="1_ap84k"]
+[ext_resource type="Script" uid="uid://drjf3fbqjkafl" path="res://Level_1_space_escape/astroid.gd" id="1_iss2k"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_jnj1s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_138us"]
+shader = ExtResource("2_jnj1s")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_iqs3q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_g3nya"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyFixedWingDrone:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:material:shader_parameter/active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.101166),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_02tj8"]
+_data = {
+&"RESET": SubResource("Animation_iqs3q"),
+&"hit": SubResource("Animation_g3nya")
+}
+
+[node name="Astroid-1" type="Area2D" groups=["enemies"]]
+script = ExtResource("1_iss2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_138us")
+texture = ExtResource("1_ap84k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(4, -9, 16, 1, 12, 9, 6, 13, 2, 11, -8, 12, -11, 8, -9, 6, -14, 1, -13, -6, -8, -13, -1, -14, 3, -14)
+
+[node name="HitAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_02tj8")
+}
+autoplay = "RESET"

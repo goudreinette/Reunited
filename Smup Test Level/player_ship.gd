@@ -3,7 +3,7 @@ class_name ShipPlayer extends Area2D
 signal shield_changed
 signal died
 
-var explode_scene = preload("res://explosion.tscn")
+var explode_scene = preload("res://Effects/Smal explosion.tscn")
 
 enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 
