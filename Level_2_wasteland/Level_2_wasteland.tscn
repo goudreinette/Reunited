@@ -513,7 +513,7 @@ radius = 5.0
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("6_51cn4")]
-position = Vector2(-9, -161)
+position = Vector2(82, 155)
 respawnnode = NodePath("../Respawn Point 1")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -843,6 +843,10 @@ shape = SubResource("CircleShape2D_vlksy")
 [node name="moving platform" parent="." instance=ExtResource("37_hbigv")]
 position = Vector2(248, -282)
 speed = 1.0
+
+[node name="PathFollow2D" parent="moving platform" index="0"]
+position = Vector2(-20, -1)
+progress = 0.0
 
 [node name="Area2D" parent="moving platform" index="2"]
 position = Vector2(-20, -1)
