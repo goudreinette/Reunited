@@ -63,13 +63,12 @@ func _process(delta: float) -> void:
 
 	if above_pit and not is_dashing and not above_platform:
 		if not is_falling and not is_dead :	
-			animation_player.play("falling")
-			print("fall start")
-			is_falling = true
+			fall()
 		
 func  _physics_process(delta ) :
 	move_and_slide()
-
+	
+##Animation functions
 func SetDirection() -> bool:
 	var new_dir : Vector2 = cardinal_direction
 	if direction == Vector2.ZERO:
@@ -99,18 +98,21 @@ func update_animation() -> bool:
 	return true
 
 func anim_direction() -> String:
-	
 	if cardinal_direction == Vector2.DOWN or direction == Vector2.ZERO:
 		return "down"
 	elif cardinal_direction == Vector2.UP:
 		return "up"
 	else: 
 		return "side"
-	
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	#scene_to_load.instantiate()
-	get_tree().change_scene_to_file("res://ship/ship_main.tscn")
 
+## falling and death functions
+func fall():
+	animation_player.play("falling")
+	is_falling = true
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "falling" :
+			is_falling = false
+			dead()
 func dead() :
 	is_dead = true
 	visible = false
@@ -118,10 +120,6 @@ func dead() :
 	respawnpoint = respawnnode.position 
 	pass
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "falling" :
-			is_falling = false
-			dead()
 
 func _on_death_timer_timeout() -> void :
 	if is_dead :
@@ -135,11 +133,10 @@ func _on_death_timer_timeout() -> void :
 func _on_dash_timer_timeout() -> void:
 	$"DashingLines".visible = false
 	is_dashing = false
-	
-func _on_dash_regen_timer_timeout() -> void:
-	can_dash = true
-
 func _on_pit_detect_body_entered(body: Node2D) -> void:
 	above_pit = true
 func _on_pit_detect_body_exited(body: Node2D) -> void:
 	above_pit = false
+
+func _on_dash_regen_timer_timeout() -> void:
+	can_dash = true

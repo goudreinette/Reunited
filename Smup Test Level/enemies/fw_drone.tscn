@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://Smup Test Level/test_shmup_sprites/Enemy fixed wing drone.png" id="2_f2qes"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_h12e6"]
 [ext_resource type="Texture2D" uid="uid://btpxkpcah6kgd" path="res://Level_1_space_escape/level_1_space_escape_sprites/Enemy-Space-ship.png" id="3_wr5qi"]
-[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_lg58s"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/Big explosion.wav" id="4_lg58s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_skvdi"]
 resource_local_to_scene = true

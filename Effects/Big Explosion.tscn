@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="1_ik1is"]
 [ext_resource type="Texture2D" uid="uid://bmnb2rk76wp87" path="res://Effects/Explosion_spritepack_2/Explosion VFX 1/Explosion VFX 1(32x32).png" id="2_t11dg"]
 [ext_resource type="Script" uid="uid://crqy8ofoj1bg8" path="res://Effects/explosion.gd" id="3_vj1cj"]
-[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/snd_se_common_064.wav" id="4_8opf0"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/Big explosion.wav" id="4_8opf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7sx56"]
 atlas = ExtResource("1_ik1is")
