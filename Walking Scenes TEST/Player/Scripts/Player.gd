@@ -17,6 +17,9 @@ var is_falling: bool = false
 var above_pit: bool = false
 var is_dead: bool = false
 
+##vars for moving platforms
+var above_platform: bool = false
+
 ##setting the respawn point
 @export var respawnnode : Node2D
 var respawnpoint: Vector2
@@ -58,12 +61,11 @@ func _process(delta: float) -> void:
 		can_dash = false
 		$DashRegenTimer.start()
 
-	if above_pit and not is_dashing:
+	if above_pit and not is_dashing and not above_platform:
 		if not is_falling and not is_dead :	
 			animation_player.play("falling")
 			print("fall start")
 			is_falling = true
-		
 		
 func  _physics_process(delta ) :
 	move_and_slide()
@@ -141,8 +143,3 @@ func _on_pit_detect_body_entered(body: Node2D) -> void:
 	above_pit = true
 func _on_pit_detect_body_exited(body: Node2D) -> void:
 	above_pit = false
-
-
-#func _on_card_area_body_entered(body: Node2D) -> void:
-#	has_card = true
-	
