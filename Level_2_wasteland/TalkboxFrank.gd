@@ -1,13 +1,19 @@
 extends Area2D
 
+
 var player_inside : bool = false
 var next_convo : int = 0
 var is_talking : bool = false
 var player_has_card : bool
 @export var convos = ["frank_1","frank 2","Frank_vrij_1","frank_vrij_2"]
+
+var player : Player
 ##[0]&[1] = frank gevangen
 ##[2]&[3] = frank gevangen
 func _ready():
+	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
+	if not nodes_in_player_group.is_empty():
+		player = nodes_in_player_group[0]
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	
@@ -24,6 +30,7 @@ func _process(delta: float) -> void:
 		if  Input.is_action_just_pressed("dialogic_default_action"):
 				Dialogic.start(convos[next_convo])
 				is_talking = true
+				if player_has_card: player.ui_card.visible = false
 	else: $PressX.visible = false	
 
 
@@ -33,8 +40,9 @@ func _on_timeline_ended():
 		$end_of_convo_timer.start()	
 		## Frank is niet vrij
 		if next_convo < 1 : next_convo = 1
-		## frank is vrij
+		## Frank is vrij
 		elif player_has_card : next_convo = 3
+		
 func _on_end_of_convo_timer_timeout() -> void:
 	is_talking = false
 

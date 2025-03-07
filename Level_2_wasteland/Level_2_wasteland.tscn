@@ -1,6 +1,7 @@
-[gd_scene load_steps=60 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=64 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tileset.png" id="1_d6lv5"]
+[ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
 [ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Ravijn.png" id="2_mqm2j"]
 [ext_resource type="Texture2D" uid="uid://2nyydriqcu7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tiles_PixelCrawler.png" id="3_0y5bb"]
 [ext_resource type="AudioStream" uid="uid://bmao6k1v8lc6l" path="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav" id="4_0rdyc"]
@@ -34,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Campfire_base.png" id="32_h8mwf"]
 [ext_resource type="PackedScene" uid="uid://dgbc31b6g0pmw" path="res://Level_2_wasteland/gloopy_plant_1.tscn" id="33_ma2wb"]
 [ext_resource type="Texture2D" uid="uid://ptc8jv5cvbji" path="res://Level_2_wasteland/Level_2_wasteland_sprites/ship concept test (side).png" id="34_hyrea"]
-[ext_resource type="Texture2D" uid="uid://c8ngsdap606rr" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card.png" id="35_tqgu4"]
+[ext_resource type="Texture2D" uid="uid://bgaxuqsjod4au" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-sheet.png" id="36_0rdyc"]
 [ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://Level_2_wasteland/card.gd" id="36_yxs4w"]
 [ext_resource type="PackedScene" uid="uid://bucppmtn2uka" path="res://Level_2_wasteland/moving_platform.tscn" id="37_hbigv"]
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="38_g6r0j"]
@@ -462,6 +463,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vxuc"]
 size = Vector2(34, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7c1q"]
+size = Vector2(13, 3)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n08g8"]
 size = Vector2(119, 60)
 
@@ -503,21 +507,63 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7c1q"]
-size = Vector2(13, 3)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_vlksy"]
 radius = 5.0
+
+[sub_resource type="Animation" id="Animation_jlab0"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.70019, 1.80038, 1.90056),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_51cn4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idsa3"]
+_data = {
+&"RESET": SubResource("Animation_51cn4"),
+&"idle": SubResource("Animation_jlab0")
+}
 
 [node name="Wasteland" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("6_51cn4")]
-position = Vector2(82, 155)
+[node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
+position = Vector2(-48, -302)
 respawnnode = NodePath("../Respawn Point 1")
+ui_card = NodePath("UI Card")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_speed = 100.0
+
+[node name="UI Card" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(-106, -70)
+texture = ExtResource("2_0y5bb")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -680,6 +726,31 @@ shape = SubResource("RectangleShape2D_1vxuc")
 position = Vector2(3, -3)
 texture = ExtResource("11_8fg72")
 
+[node name="Keyboard" type="Sprite2D" parent="."]
+position = Vector2(-111, -137)
+texture = ExtResource("29_1w413")
+offset = Vector2(0, -5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Keyboard"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keyboard/StaticBody2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_h7c1q")
+
+[node name="Drumkit" type="Sprite2D" parent="."]
+position = Vector2(-76, -136)
+texture = ExtResource("30_dndjt")
+offset = Vector2(0, -6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Drumkit"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Drumkit/StaticBody2D"]
+polygon = PackedVector2Array(-10, -2, -4, 1, 2, 1, 13, -1)
+
 [node name="Guus en Igor" type="Area2D" parent="."]
 position = Vector2(-46, -163)
 collision_layer = 8
@@ -730,31 +801,6 @@ scale = Vector2(0.8125, 0.75)
 sprite_frames = SubResource("SpriteFrames_drwr1")
 autoplay = "default"
 frame_progress = 0.123479
-
-[node name="Keyboard" type="Sprite2D" parent="Guus en Igor"]
-position = Vector2(-65, 26)
-texture = ExtResource("29_1w413")
-offset = Vector2(0, -5)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Guus en Igor/Keyboard"]
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Guus en Igor/Keyboard/StaticBody2D"]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_h7c1q")
-
-[node name="Drumkit" type="Sprite2D" parent="Guus en Igor"]
-position = Vector2(-30, 27)
-texture = ExtResource("30_dndjt")
-offset = Vector2(0, -6)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Guus en Igor/Drumkit"]
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Guus en Igor/Drumkit/StaticBody2D"]
-polygon = PackedVector2Array(-10, -2, -4, 1, 2, 1, 13, -1)
 
 [node name="Tentje2" type="Sprite2D" parent="Guus en Igor"]
 position = Vector2(-73, -11)
@@ -832,13 +878,20 @@ polygon = PackedVector2Array(-33, -22, 30, -6, 36, 2, 33, 9, 8, 6, -27, -6, -38,
 
 [node name="Card" type="Sprite2D" parent="."]
 position = Vector2(-46, -346)
-texture = ExtResource("35_tqgu4")
+texture = ExtResource("36_0rdyc")
+hframes = 5
 script = ExtResource("36_yxs4w")
 
 [node name="CardArea" type="Area2D" parent="Card"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Card/CardArea"]
 shape = SubResource("CircleShape2D_vlksy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Card"]
+libraries = {
+&"": SubResource("AnimationLibrary_idsa3")
+}
+autoplay = "idle"
 
 [node name="moving platform" parent="." instance=ExtResource("37_hbigv")]
 position = Vector2(248, -282)

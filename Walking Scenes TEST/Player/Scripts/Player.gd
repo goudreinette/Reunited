@@ -26,6 +26,7 @@ var respawnpoint: Vector2
 
 ##getting the keycard
 var has_card: bool = false
+@export var ui_card: Sprite2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
