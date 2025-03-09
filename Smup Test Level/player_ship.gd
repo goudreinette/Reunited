@@ -21,6 +21,8 @@ var in_lazer = false
 
 var can_shoot = true
 
+var barelling = false
+
 
 @onready var screensize = get_viewport_rect().size
 
@@ -40,18 +42,29 @@ func _process(delta):
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
 	
-	if input.x > 0:
-		$Ship.frame = 2
-		$Ship/Boosters.animation = "right"
-	elif input.x < 0:
-		$Ship.frame = 0
-		$Ship/Boosters.animation = "left"
-	else:
-		$Ship.frame = 1
-		$Ship/Boosters.animation = "forward"
 	
-
+	if not barelling:
+		if input.x > 0:
+			#$Ship.frame = 2
+			$AnimatedSprite2D.animation = "right"
+			$Boosters.animation = "right"
+		elif input.x < 0:
+			#$Ship.frame = 0
+			$AnimatedSprite2D.animation = "left"
+			$Boosters.animation = "left"
+		else:
+			#$Ship.frame = 1
+			$AnimatedSprite2D.animation = "normal"
+			$Boosters.animation = "forward"	
+	
+	if Input.is_action_pressed("dodge"):
+		barelling = true
+		$AnimatedSprite2D.play("spin")
+		
+		
 	if Input.is_action_pressed("shoot"):
+		#$AnimatedSprite2D.animation = "barrel roll"
+		
 		#if get_parent():
 			#if not $"..".playing:
 				#$".."._on_start_pressed()
@@ -138,3 +151,11 @@ func _on_area_entered(area):
 		area.explode()
 		$Hit.play()
 		shield -= 8
+		
+		
+
+
+
+func _on_animated_sprite_2d_animation_finished():
+	if barelling:
+		barelling = false

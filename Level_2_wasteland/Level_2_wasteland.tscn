@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Ravijn.png" id="2_mqm2j"]
 [ext_resource type="Texture2D" uid="uid://2nyydriqcu7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tiles_PixelCrawler.png" id="3_0y5bb"]
 [ext_resource type="AudioStream" uid="uid://bmao6k1v8lc6l" path="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav" id="4_0rdyc"]
-[ext_resource type="Script" path="res://Level_2_wasteland/music.gd" id="5_jlab0"]
+[ext_resource type="Script" uid="uid://dxaqy3abwcopg" path="res://Level_2_wasteland/music.gd" id="5_jlab0"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes TEST/Player/player.tscn" id="6_51cn4"]
 [ext_resource type="Script" uid="uid://ccdq8qg6yvkvx" path="res://Level_2_wasteland/respawn_point_2.gd" id="7_idsa3"]
 [ext_resource type="PackedScene" uid="uid://ciobmqppsmx11" path="res://Level_2_wasteland/carnivorous plant/carnivorous_plant.tscn" id="8_cn70h"]
