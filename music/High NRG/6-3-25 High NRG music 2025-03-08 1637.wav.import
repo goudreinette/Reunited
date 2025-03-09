@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1vdrkehevpqo"
+path="res://.godot/imported/6-3-25 High NRG music 2025-03-08 1637.wav-1263e2cdc4886a3e1f939a693e4a9737.sample"
+
+[deps]
+
+source_file="res://music/High NRG/6-3-25 High NRG music 2025-03-08 1637.wav"
+dest_files=["res://.godot/imported/6-3-25 High NRG music 2025-03-08 1637.wav-1263e2cdc4886a3e1f939a693e4a9737.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

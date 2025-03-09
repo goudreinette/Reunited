@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="7_xq0x3"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="8_pqtwk"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="9_g2ecq"]
-[ext_resource type="AudioStream" uid="uid://cdtbx6t5bpfi2" path="res://music/3-11-24 game music 2024-12-22 2105.wav" id="11_m1rvo"]
+[ext_resource type="AudioStream" uid="uid://d1vdrkehevpqo" path="res://music/High NRG/6-3-25 High NRG music 2025-03-08 1637.wav" id="10_oxmdt"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://Smup Test Level/level_position.gd" id="13_4j8lc"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="14_u8xkq"]
 [ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="14_x6pma"]
@@ -60,7 +60,7 @@ script = ExtResource("1_g0tbl")
 scroll_scale = Vector2(0.5, 0.5)
 
 [node name="BigPlanet" parent="Parallax2D 0_5" instance=ExtResource("19_08rlv")]
-position = Vector2(140, -1409)
+position = Vector2(124, -1012)
 
 [node name="IcePlanet100x" type="Sprite2D" parent="Parallax2D 0_5"]
 position = Vector2(226, 338)
@@ -109,7 +109,7 @@ offset_right = 241.0
 offset_bottom = 160.0
 
 [node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_m1rvo")
+stream = ExtResource("10_oxmdt")
 autoplay = true
 
 [node name="Formation Test" parent="." instance=ExtResource("22_ql4we")]
@@ -219,6 +219,9 @@ position = Vector2(162, 114)
 
 [node name="Turret" parent="." instance=ExtResource("25_nk3iq")]
 position = Vector2(92, -136)
+
+[node name="Formation Test4" parent="." instance=ExtResource("21_oqn25")]
+position = Vector2(-24.625, -453)
 
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
