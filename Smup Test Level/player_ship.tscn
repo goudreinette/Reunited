@@ -1,233 +1,15 @@
-[gd_scene load_steps=71 format=3 uid="uid://b32476hejmrnj"]
+[gd_scene load_steps=22 format=3 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" uid="uid://b8o7btpimdaxc" path="res://Smup Test Level/player_ship.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/Boosters (16 x 16).png" id="2_6cdot"]
 [ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://Smup Test Level/bullet.tscn" id="2_kqyt4"]
-[ext_resource type="Texture2D" uid="uid://cmrq44b58nc31" path="res://Sprites Algemeen/ship sprites/ship left.png" id="3_5vemu"]
+[ext_resource type="PackedScene" uid="uid://cgrhhyg53474k" path="res://Sprites Algemeen/ship sprites/player_ship_animated_sprite_2d.tscn" id="3_lbx87"]
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="3_n7bvj"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_ux7ms"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="4_bbrn4"]
-[ext_resource type="Texture2D" uid="uid://ck0fhjufga468" path="res://Sprites Algemeen/ship sprites/ship right.png" id="4_s6nmv"]
 [ext_resource type="Texture2D" uid="uid://dytla7ybrsc1x" path="res://Sprites Algemeen/ship sprites/ship sheet smol.png" id="4_ux7ms"]
-[ext_resource type="Texture2D" uid="uid://gn1d46wcqrdw" path="res://Sprites Algemeen/ship sprites/barrel roll/0001.png" id="5_5p7mw"]
 [ext_resource type="AudioStream" uid="uid://wiwbctp75u5d" path="res://sounds/blast new.wav" id="6_k3t33"]
-[ext_resource type="Texture2D" uid="uid://dwspei628xtk0" path="res://Sprites Algemeen/ship sprites/barrel roll/0002.png" id="6_uuang"]
-[ext_resource type="Texture2D" uid="uid://loa4k5xdqspc" path="res://Sprites Algemeen/ship sprites/barrel roll/0003.png" id="7_7r2ew"]
 [ext_resource type="AudioStream" uid="uid://deudjeyrwefb1" path="res://sounds/hit.wav" id="7_xm18q"]
-[ext_resource type="Texture2D" uid="uid://cgbbc3t54p4tj" path="res://Sprites Algemeen/ship sprites/barrel roll/0004.png" id="8_5vemu"]
-[ext_resource type="Texture2D" uid="uid://cefsxd1218qd5" path="res://Sprites Algemeen/ship sprites/barrel roll/0005.png" id="9_s6nmv"]
-[ext_resource type="Texture2D" uid="uid://bp63kgikvt2pq" path="res://Sprites Algemeen/ship sprites/barrel roll/0006.png" id="10_4t1ea"]
-[ext_resource type="Texture2D" uid="uid://d02bwnf75e7ei" path="res://Sprites Algemeen/ship sprites/barrel roll/0007.png" id="11_kmag8"]
-[ext_resource type="Texture2D" uid="uid://d2oafnc2mryue" path="res://Sprites Algemeen/ship sprites/barrel roll/0008.png" id="12_mwxsu"]
-[ext_resource type="Texture2D" uid="uid://iibdenufaw8v" path="res://Sprites Algemeen/ship sprites/barrel roll/0009.png" id="13_8p1l8"]
-[ext_resource type="Texture2D" uid="uid://ca7cx62gibcuh" path="res://Sprites Algemeen/ship sprites/barrel roll/0010.png" id="14_gi6rm"]
-[ext_resource type="Texture2D" uid="uid://ctq8kn0kheini" path="res://Sprites Algemeen/ship sprites/barrel roll/0011.png" id="15_mjclg"]
-[ext_resource type="Texture2D" uid="uid://cnkyg3oolklun" path="res://Sprites Algemeen/ship sprites/barrel roll/0012.png" id="16_8yhgp"]
-[ext_resource type="Texture2D" uid="uid://bisqv5jrtweqk" path="res://Sprites Algemeen/ship sprites/barrel roll/0013.png" id="17_d8wf8"]
-[ext_resource type="Texture2D" uid="uid://bj8gogix7sgy5" path="res://Sprites Algemeen/ship sprites/barrel roll/0014.png" id="18_oo108"]
-[ext_resource type="Texture2D" uid="uid://c2sb4f1hftul2" path="res://Sprites Algemeen/ship sprites/barrel roll/0015.png" id="19_eu5f7"]
-[ext_resource type="Texture2D" uid="uid://bgrcsj6b5sg6x" path="res://Sprites Algemeen/ship sprites/barrel roll/0016.png" id="20_y71el"]
-[ext_resource type="Texture2D" uid="uid://dw8kh60vq11n7" path="res://Sprites Algemeen/ship sprites/barrel roll/0017.png" id="21_hxrkp"]
-[ext_resource type="Texture2D" uid="uid://dsvlfpan4l46f" path="res://Sprites Algemeen/ship sprites/barrel roll/0018.png" id="22_0pkrt"]
-[ext_resource type="Texture2D" uid="uid://r3ut7i4mqvrf" path="res://Sprites Algemeen/ship sprites/barrel roll/0019.png" id="23_tqq2r"]
-[ext_resource type="Texture2D" uid="uid://o64ok4qtqmrr" path="res://Sprites Algemeen/ship sprites/barrel roll/0020.png" id="24_k1vnl"]
-[ext_resource type="Texture2D" uid="uid://b4dts15jaq28i" path="res://Sprites Algemeen/ship sprites/barrel roll/0021.png" id="25_t75x3"]
-[ext_resource type="Texture2D" uid="uid://csbmkxp61vlo1" path="res://Sprites Algemeen/ship sprites/barrel roll/0022.png" id="26_oevv3"]
-[ext_resource type="Texture2D" uid="uid://d62rq22p2qpf" path="res://Sprites Algemeen/ship sprites/barrel roll/0023.png" id="27_p2rh6"]
-[ext_resource type="Texture2D" uid="uid://lqfjlar6s32j" path="res://Sprites Algemeen/ship sprites/barrel roll/0024.png" id="28_6ddsb"]
-[ext_resource type="Texture2D" uid="uid://emkkga5du0d0" path="res://Sprites Algemeen/ship sprites/barrel roll/0025.png" id="29_yehcw"]
-[ext_resource type="Texture2D" uid="uid://d08oyw71il8v1" path="res://Sprites Algemeen/ship sprites/barrel roll/0026.png" id="30_ysit3"]
-[ext_resource type="Texture2D" uid="uid://cqldy61erbqgi" path="res://Sprites Algemeen/ship sprites/barrel roll/0027.png" id="31_ge6t4"]
-[ext_resource type="Texture2D" uid="uid://26k1ak6oh6kj" path="res://Sprites Algemeen/ship sprites/barrel roll/0028.png" id="32_fgf04"]
-[ext_resource type="Texture2D" uid="uid://dg8jdrm7hvajb" path="res://Sprites Algemeen/ship sprites/barrel roll/0029.png" id="33_8pthy"]
-[ext_resource type="Texture2D" uid="uid://bc00d546qylxe" path="res://Sprites Algemeen/ship sprites/barrel roll/0030.png" id="34_ncw5r"]
-[ext_resource type="Texture2D" uid="uid://dsqmieug1uqq7" path="res://Sprites Algemeen/ship sprites/barrel roll/0031.png" id="35_5qb7o"]
-[ext_resource type="Texture2D" uid="uid://cnyujknfh06tt" path="res://Sprites Algemeen/ship sprites/barrel roll/0032.png" id="36_uyx6p"]
-[ext_resource type="Texture2D" uid="uid://blu7dnr7t4ki1" path="res://Sprites Algemeen/ship sprites/barrel roll/0033.png" id="37_vdjdq"]
-[ext_resource type="Texture2D" uid="uid://c0sx213migvwd" path="res://Sprites Algemeen/ship sprites/barrel roll/0034.png" id="38_6noub"]
-[ext_resource type="Texture2D" uid="uid://oeftpxdsiofg" path="res://Sprites Algemeen/ship sprites/barrel roll/0035.png" id="39_mn218"]
-[ext_resource type="Texture2D" uid="uid://c6nka8ibf5cl1" path="res://Sprites Algemeen/ship sprites/barrel roll/0036.png" id="40_ylb4t"]
-[ext_resource type="Texture2D" uid="uid://clmbbkf8mioev" path="res://Sprites Algemeen/ship sprites/barrel roll/0037.png" id="41_ai2av"]
-[ext_resource type="Texture2D" uid="uid://c1x0hacbb84ao" path="res://Sprites Algemeen/ship sprites/barrel roll/0038.png" id="42_q37uj"]
-[ext_resource type="Texture2D" uid="uid://px0byqxvfimq" path="res://Sprites Algemeen/ship sprites/barrel roll/0039.png" id="43_i8rdu"]
-[ext_resource type="Texture2D" uid="uid://4hw5tiu1dg5m" path="res://Sprites Algemeen/ship sprites/barrel roll/0040.png" id="44_mdhxx"]
-[ext_resource type="Texture2D" uid="uid://bowptdcad22ap" path="res://Sprites Algemeen/ship sprites/barrel roll/0041.png" id="45_5ruib"]
-[ext_resource type="Texture2D" uid="uid://dvbhp6mmpb0jp" path="res://Sprites Algemeen/ship sprites/barrel roll/0042.png" id="46_dtq5a"]
-[ext_resource type="Texture2D" uid="uid://sreicgm1gnn7" path="res://Sprites Algemeen/ship sprites/barrel roll/0043.png" id="47_4c2p5"]
-[ext_resource type="Texture2D" uid="uid://c1sm0ydqaauyc" path="res://Sprites Algemeen/ship sprites/barrel roll/0044.png" id="48_hvla3"]
-[ext_resource type="Texture2D" uid="uid://cjyxevdulg73u" path="res://Sprites Algemeen/ship sprites/barrel roll/0045.png" id="49_lyl5i"]
-[ext_resource type="Texture2D" uid="uid://bta8po8gvnjol" path="res://Sprites Algemeen/ship sprites/barrel roll/0046.png" id="50_mvvpw"]
-[ext_resource type="Texture2D" uid="uid://cnaya3api5jej" path="res://Sprites Algemeen/ship sprites/ship neutral.png" id="65_4t1ea"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_umdk1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_5p7mw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_uuang")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_7r2ew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_5vemu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_s6nmv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_4t1ea")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_kmag8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_mwxsu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_8p1l8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_gi6rm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_mjclg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_8yhgp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_d8wf8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_oo108")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_eu5f7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_y71el")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_hxrkp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_0pkrt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_tqq2r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_k1vnl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_t75x3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_oevv3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_p2rh6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_6ddsb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_yehcw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_ysit3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_ge6t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_fgf04")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_8pthy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_ncw5r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_5qb7o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_uyx6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_vdjdq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_6noub")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_mn218")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_ylb4t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_ai2av")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_q37uj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_i8rdu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_mdhxx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_5ruib")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_dtq5a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_4c2p5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_hvla3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_lyl5i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_mvvpw")
-}],
-"loop": false,
-"name": &"barrel roll",
-"speed": 24.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_5vemu")
-}],
-"loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("65_4t1ea")
-}],
-"loop": true,
-"name": &"normal",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_s6nmv")
-}],
-"loop": true,
-"name": &"right",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbfoc"]
 atlas = ExtResource("2_6cdot")
@@ -338,10 +120,7 @@ script = ExtResource("1_4pouc")
 current_weapon_type = 2
 bullet_scene = ExtResource("2_kqyt4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_umdk1")
-animation = &"barrel roll"
-autoplay = "normal"
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("3_lbx87")]
 
 [node name="Boosters" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 16)
@@ -377,5 +156,4 @@ libraries = {
 autoplay = "RESET"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

@@ -59,7 +59,7 @@ func _process(delta):
 	
 	if Input.is_action_pressed("dodge"):
 		barelling = true
-		$AnimatedSprite2D.play("barrel roll")
+		$AnimatedSprite2D.play("spin")
 		
 		
 	if Input.is_action_pressed("shoot"):
