@@ -13,4 +13,7 @@ func _process(delta):
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	speed += input.y * acceleration * delta
 	speed *= drag
-	position.z += speed
+	
+	translate(Vector3(0, 0, speed))
+	#global_position.z += speed
+	rotation_degrees.y -= input.x * .5

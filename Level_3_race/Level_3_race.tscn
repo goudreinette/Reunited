@@ -44,7 +44,7 @@ texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999865, 0.0164228, 0, -0.0164228, 0.999865, 0.764893, 0.0396363, 0.706528)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.764893, 0.0396363, 0.706528)
 environment = SubResource("Environment_mggcm")
 script = ExtResource("3_x61kf")
 acceleration = 0.08
