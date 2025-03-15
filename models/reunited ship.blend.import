@@ -3,11 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-<<<<<<< HEAD
-uid="uid://dltuvwxirx7jq"
-=======
-uid="uid://bxoc8tvwfxgyv"
->>>>>>> 609652797f5314d7cf261e828090a7573335f7de
+uid="uid://b2ilu5asqo5wq"
 path="res://.godot/imported/reunited ship.blend-647b427d5100dcf26a57a91b3618e2dc.scn"
 
 [deps]

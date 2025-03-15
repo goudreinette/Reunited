@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxmeughkuy0t"
-path.s3tc="res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.s3tc.ctex"
-path.etc2="res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.etc2.ctex"
+uid="uid://dlhkpjyuisu2l"
+path.s3tc="res://.godot/imported/gate.png-c0658ca689a8016988c6e3cd27285a2d.s3tc.ctex"
+path.etc2="res://.godot/imported/gate.png-c0658ca689a8016988c6e3cd27285a2d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png"
-dest_files=["res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.s3tc.ctex", "res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.etc2.ctex"]
+source_file="res://Level_3_race/race sprites/gate.png"
+dest_files=["res://.godot/imported/gate.png-c0658ca689a8016988c6e3cd27285a2d.s3tc.ctex", "res://.godot/imported/gate.png-c0658ca689a8016988c6e3cd27285a2d.etc2.ctex"]
 
 [params]
 

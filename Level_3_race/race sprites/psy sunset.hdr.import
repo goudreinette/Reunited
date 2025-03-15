@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxmeughkuy0t"
-path.s3tc="res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.s3tc.ctex"
-path.etc2="res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.etc2.ctex"
+uid="uid://dry5eocnwvumk"
+path.bptc="res://.godot/imported/psy sunset.hdr-aab6b448e29bd63e6946f2dc562cfa81.bptc.ctex"
+path.astc="res://.godot/imported/psy sunset.hdr-aab6b448e29bd63e6946f2dc562cfa81.astc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png"
-dest_files=["res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.s3tc.ctex", "res://.godot/imported/Monstera.png-b121ab3732c59dbaf8b16d0bb7ca6dd8.etc2.ctex"]
+source_file="res://Level_3_race/race sprites/psy sunset.hdr"
+dest_files=["res://.godot/imported/psy sunset.hdr-aab6b448e29bd63e6946f2dc562cfa81.bptc.ctex", "res://.godot/imported/psy sunset.hdr-aab6b448e29bd63e6946f2dc562cfa81.astc.ctex"]
 
 [params]
 
