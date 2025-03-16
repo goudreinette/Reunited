@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://dham88id4j25"]
+[gd_scene load_steps=28 format=3 uid="uid://dham88id4j25"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
-[ext_resource type="Texture2D" uid="uid://dxvbaa5kgauep" path="res://Level_3_race/race sprites/race map.png" id="1_i4egl"]
+[ext_resource type="Texture2D" uid="uid://blxxep5f331iq" path="res://Level_3_race/race sprites/race map big.png" id="2_pkk10"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="4_neu27"]
@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://c5h22kjw4p1pg" path="res://Level_3_race/race sprites/ship bank right/bank right0004.png" id="13_6ha66"]
 [ext_resource type="Texture2D" uid="uid://cj80jsxga7gq" path="res://Level_3_race/race sprites/ship bank right/bank right0005.png" id="14_0adhr"]
 [ext_resource type="Texture2D" uid="uid://xncrpf4uoekk" path="res://Level_3_race/race sprites/ship bank right/bank right0006.png" id="15_v4uy1"]
+[ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="21_wtnat"]
+[ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="22_2txuc"]
+[ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="23_2txuc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
 animations = [{
@@ -95,16 +98,16 @@ sky_custom_fov = 7.0
 
 [node name="Node3D" type="Node3D"]
 
+[node name="Map" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -18.5273)
+texture_filter = 0
+texture = ExtResource("2_pkk10")
+
 [node name="Plant2" type="Sprite3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911082, 0.0230841, 0.143307)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
-
-[node name="Map" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-texture_filter = 0
-texture = ExtResource("1_i4egl")
 
 [node name="Plant" type="Sprite3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.601815, 0.0259995, 0.33032)
@@ -128,13 +131,13 @@ transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1
 environment = SubResource("Environment_mggcm")
 
 [node name="Rock" type="Sprite3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.945303, 0.0202881, 0.249356)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911816, 0.0202881, -0.598538)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
 
 [node name="Rock2" type="Sprite3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.979147, 0.0200267, -0.145502)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.628911, 0.0200267, -0.832914)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
@@ -168,3 +171,69 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196034, 0.801123, -1.51399
 billboard = 2
 texture_filter = 0
 texture = ExtResource("6_5j82x")
+
+[node name="Plant3" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.585505, 0.0230841, -0.222628)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant4" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821252, 0.0230842, -0.427114)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant5" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.94, 0.0230842, -0.726711)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant6" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.870156, 0.0230842, -0.510856)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Cloud3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206367, 0.801123, -2.86508)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("5_mggcm")
+
+[node name="Cloud4" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.304357, 0.801123, 0.218313)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("5_mggcm")
+
+[node name="Cloud5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.366121, 1.34244, -4.90844)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("5_mggcm")
+
+[node name="Pole1" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821173, 0.0596129, -0.498092)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("21_wtnat")
+
+[node name="Plant7" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821252, 0.0230842, -0.427114)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Pole2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.427276, 0.0596129, -1.88443)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("22_2txuc")
+
+[node name="Plant8" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.387505, 0.0230842, -2.27825)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("23_2txuc")
