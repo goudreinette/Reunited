@@ -1,11 +1,11 @@
-class_name RacePlayer extends Camera3D
+class_name RacePlayer extends AnimatedSprite3D
 
-@export var acceleration: float = 0.2
+@export var acceleration: float = 1
 @export var top_speed: float = 1
 var speed = 0
-@export var drag = 0.9
+@export var drag = 0.95
 
-@export var turn_acceleration: float = 0.5
+@export var turn_acceleration: float = 20
 var turn_speed = 0
 @export var turn_drag = 0.9
 
@@ -13,15 +13,25 @@ var turn_speed = 0
 func _ready():
 	pass
 	
+	
 func _process(delta):
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	speed += input.y * acceleration * delta
 	speed *= drag
+	translate(Vector3(0, 0, speed))
 	
-	turn_speed += input.x * turn_acceleration * delta
+	turn_speed += input.x * remap(-speed, 0, .05, 0, turn_acceleration) * delta
 	turn_speed *= turn_drag
 	
-	translate(Vector3(0, 0, speed))
-	#global_position.z += speed
 	rotation_degrees.y -= turn_speed
+	
+	if turn_speed > .5:
+		animation = "right"
+		frame = remap(abs(turn_speed), 0, 2, 0, 6)
+	elif turn_speed < -.5:
+		animation = "left"
+		frame = remap(abs(turn_speed), 0, 2, 0, 6)
+	else: 
+		animation = "default"
+		frame = 0

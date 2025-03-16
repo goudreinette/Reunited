@@ -1,13 +1,82 @@
-[gd_scene load_steps=12 format=3 uid="uid://w22tae8g2nnp"]
+[gd_scene load_steps=25 format=3 uid="uid://dham88id4j25"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Texture2D" uid="uid://dxvbaa5kgauep" path="res://Level_3_race/race sprites/race map.png" id="1_i4egl"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="4_neu27"]
+[ext_resource type="Texture2D" uid="uid://b3xn3fiqlj86q" path="res://Level_3_race/race sprites/ship bank left/bank right0001.png" id="4_pkk10"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
+[ext_resource type="Texture2D" uid="uid://jy7y30fgn861" path="res://Level_3_race/race sprites/ship bank left/bank right0002.png" id="5_on2dk"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
+[ext_resource type="Texture2D" uid="uid://bu6b3abxiatkc" path="res://Level_3_race/race sprites/ship bank left/bank right0003.png" id="6_wtnat"]
+[ext_resource type="Texture2D" uid="uid://cl60wad4xj0cn" path="res://Level_3_race/race sprites/ship bank left/bank right0004.png" id="7_2txuc"]
 [ext_resource type="Texture2D" uid="uid://dn32p1poxcu6p" path="res://Level_3_race/race sprites/ship back.png" id="7_k3syp"]
+[ext_resource type="Texture2D" uid="uid://gr2g8b5w25e0" path="res://Level_3_race/race sprites/ship bank left/bank right0005.png" id="8_yfltq"]
+[ext_resource type="Texture2D" uid="uid://cmtwvejwovj2u" path="res://Level_3_race/race sprites/ship bank left/bank right0006.png" id="9_kwgqw"]
+[ext_resource type="Texture2D" uid="uid://bnv14ig5usum0" path="res://Level_3_race/race sprites/ship bank right/bank right0001.png" id="10_6fev4"]
+[ext_resource type="Texture2D" uid="uid://u0ijml7uynyl" path="res://Level_3_race/race sprites/ship bank right/bank right0002.png" id="11_62tid"]
+[ext_resource type="Texture2D" uid="uid://bout0rf55to8q" path="res://Level_3_race/race sprites/ship bank right/bank right0003.png" id="12_pp4r8"]
+[ext_resource type="Texture2D" uid="uid://c5h22kjw4p1pg" path="res://Level_3_race/race sprites/ship bank right/bank right0004.png" id="13_6ha66"]
+[ext_resource type="Texture2D" uid="uid://cj80jsxga7gq" path="res://Level_3_race/race sprites/ship bank right/bank right0005.png" id="14_0adhr"]
+[ext_resource type="Texture2D" uid="uid://xncrpf4uoekk" path="res://Level_3_race/race sprites/ship bank right/bank right0006.png" id="15_v4uy1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k3syp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pkk10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_on2dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wtnat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2txuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfltq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kwgqw")
+}],
+"loop": false,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_6fev4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_62tid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pp4r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6ha66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0adhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v4uy1")
+}],
+"loop": false,
+"name": &"right",
+"speed": 5.0
+}]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
 sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
@@ -43,11 +112,13 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
-[node name="Ship" type="Sprite3D" parent="."]
+[node name="Ship" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.764893, 0.0255188, 0.621312)
 billboard = 2
 texture_filter = 0
-texture = ExtResource("7_k3syp")
+sprite_frames = SubResource("SpriteFrames_c5xsm")
+animation = &"left"
+autoplay = "default"
 script = ExtResource("3_x61kf")
 acceleration = 0.5
 drag = 0.96
