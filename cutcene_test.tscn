@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdsxevvc4rl3"]
+
+[ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="1_bf7fn"]
+[ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="2_ajslg"]
+[ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="3_8bxej"]
+[ext_resource type="PackedScene" uid="uid://dadqubsdexqvt" path="res://Sprites Algemeen/Characters/Justin.tscn" id="4_qogwo"]
+[ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="5_u673w"]
+
+[node name="cutcene test" type="Node2D"]
+
+[node name="next_pos" type="Node2D" parent="."]
+position = Vector2(64, 38)
+
+[node name="next_pos2" type="Node2D" parent="."]
+position = Vector2(92, 34)
+
+[node name="next_pos3" type="Node2D" parent="."]
+position = Vector2(107, 60)
+
+[node name="next_pos4" type="Node2D" parent="."]
+position = Vector2(92, 73)
+
+[node name="next_pos5" type="Node2D" parent="."]
+position = Vector2(72, 75)
+
+[node name="Justin" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("4_qogwo")]
+position = Vector2(34, 13)
+next_position = NodePath("../next_pos")
+
+[node name="Koen" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("5_u673w")]
+position = Vector2(95, -6)
+next_position = NodePath("../next_pos2")
+
+[node name="Frank" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("1_bf7fn")]
+position = Vector2(207, 26)
+next_position = NodePath("../next_pos3")
+
+[node name="Guus" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("2_ajslg")]
+position = Vector2(201, 114)
+next_position = NodePath("../next_pos4")
+
+[node name="Igor" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("3_8bxej")]
+position = Vector2(56, 158)
+next_position = NodePath("../next_pos5")

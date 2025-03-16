@@ -244,7 +244,7 @@ speed_scale = 1.9
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
 offset_left = -4.0
-offset_right = 2.0
+offset_right = 3.0
 offset_bottom = 3.0
 pivot_offset = Vector2(4, 1)
 localize_numeral_system = false

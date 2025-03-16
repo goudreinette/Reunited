@@ -27,11 +27,14 @@ func _ready():
 func _process(delta: float) -> void:
 	
 	path.progress += speed
+	
 	pos_dif = $Area2D.global_position- last_pos
+	last_pos = $Area2D.global_position
 	#pos_dif.x = $Area2D.global_position.x - last_pos.x 
 	
-	last_pos = $Area2D.global_position
+	
 #	print(pos_dif)
+
 	if player_on_platform:
 		player.position+=pos_dif
 	

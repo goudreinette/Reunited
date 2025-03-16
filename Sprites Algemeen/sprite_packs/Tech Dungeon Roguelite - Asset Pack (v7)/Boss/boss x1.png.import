@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vtgnp04evjex"
-path="res://.godot/imported/Small fire.png-446b3fc55b5f8001adbf06430d378562.ctex"
+uid="uid://i8ijd660krr1"
+path="res://.godot/imported/boss x1.png-beb18d0136f90f9d277f03209d673426.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/Small fire.png"
-dest_files=["res://.godot/imported/Small fire.png-446b3fc55b5f8001adbf06430d378562.ctex"]
+source_file="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/Boss/boss x1.png"
+dest_files=["res://.godot/imported/boss x1.png-beb18d0136f90f9d277f03209d673426.ctex"]
 
 [params]
 
