@@ -284,6 +284,13 @@ collision_mask = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Detect"]
 shape = SubResource("CircleShape2D_ohg2k")
 
+[node name="Scan Detect" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scan Detect"]
+shape = SubResource("CircleShape2D_ohg2k")
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
@@ -293,3 +300,7 @@ shape = SubResource("CircleShape2D_ohg2k")
 [connection signal="body_exited" from="Pit detect" to="." method="_on_pit_detect_body_exited"]
 [connection signal="body_entered" from="Platform Detect" to="." method="_on_platform_detect_body_entered"]
 [connection signal="body_exited" from="Platform Detect" to="." method="_on_platform_detect_body_exited"]
+[connection signal="area_entered" from="Scan Detect" to="." method="_on_scan_detect_area_entered"]
+[connection signal="area_exited" from="Scan Detect" to="." method="_on_scan_detect_area_exited"]
+[connection signal="body_entered" from="Scan Detect" to="." method="_on_scan_detect_body_entered"]
+[connection signal="body_exited" from="Scan Detect" to="." method="_on_scan_detect_body_exited"]

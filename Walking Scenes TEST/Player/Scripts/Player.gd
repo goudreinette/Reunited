@@ -28,6 +28,10 @@ var respawnpoint: Vector2
 var has_card: bool = false
 @export var ui_card: Sprite2D
 
+##getting detected
+var in_scan: bool = false
+var detected: bool = false
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 ##setting the next scene to load.
@@ -44,13 +48,15 @@ func _process(delta: float) -> void:
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	direction = direction.normalized()
 	
+	##the dash and normal movement
 	if not is_dead and not is_falling:
 		if is_dashing == true: 
 			velocity = cardinal_direction * dash_speed
 		else: 
 			velocity = direction * move_speed
 	else : velocity *= 0.9
-	#if  is_falling : velocity = Vector2(0,0)
+	
+	##Setting the animation state
 	if SetState() || SetDirection()== true:
 		update_animation()
 	
@@ -61,10 +67,14 @@ func _process(delta: float) -> void:
 		$DashTimer.start()
 		can_dash = false
 		$DashRegenTimer.start()
-
+	
+	##falling
 	if above_pit and not is_dashing and not above_platform:
 		if not is_falling and not is_dead :	
 			fall()
+	
+	##beeing detected
+	if in_scan and not is_dashing: detected = true
 		
 func  _physics_process(delta ) :
 	move_and_slide()
@@ -131,13 +141,21 @@ func _on_death_timer_timeout() -> void :
 		animation_player.play("idle_down")
 		state = "idle"
 
+##making sure you cannot keep dashing
 func _on_dash_timer_timeout() -> void:
 	$"DashingLines".visible = false
 	is_dashing = false
+func _on_dash_regen_timer_timeout() -> void:
+	can_dash = true
+	
+##seeing if player is above pit
 func _on_pit_detect_body_entered(body: Node2D) -> void:
 	above_pit = true
 func _on_pit_detect_body_exited(body: Node2D) -> void:
 	above_pit = false
-
-func _on_dash_regen_timer_timeout() -> void:
-	can_dash = true
+	
+##seeing if player is in scan area
+func _on_scan_detect_area_entered(area: Area2D) -> void:
+	in_scan = true
+func _on_scan_detect_area_exited(area: Area2D) -> void:
+	in_scan = false

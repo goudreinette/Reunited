@@ -476,6 +476,16 @@ animations = [{
 [node name="TestLevel1ShrinkCrash" type="Node2D"]
 script = ExtResource("1_n6xjs")
 
+[node name="SpaceBG" parent="." instance=ExtResource("3_n5y7i")]
+z_index = -1
+
+[node name="Parallax2D2 0_50" parent="SpaceBG" index="1"]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="Parallax2D3 0_60" parent="SpaceBG" index="2"]
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(65, -38)
+
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("2_n5y7i")]
 position = Vector2(169, 105)
 
@@ -513,16 +523,6 @@ autoplay = "nothing"
 [node name="IcePlanet100x" type="Sprite2D" parent="."]
 position = Vector2(43, 35)
 texture = ExtResource("4_sk71u")
-
-[node name="SpaceBG" parent="." instance=ExtResource("3_n5y7i")]
-z_index = -1
-
-[node name="Parallax2D2 0_50" parent="SpaceBG" index="1"]
-scroll_scale = Vector2(0.3, 0.3)
-
-[node name="Parallax2D3 0_60" parent="SpaceBG" index="2"]
-scroll_scale = Vector2(0.4, 0.4)
-scroll_offset = Vector2(65, -38)
 
 [node name="EnemyBullet" parent="." instance=ExtResource("18_glpk0")]
 position = Vector2(167, 175)

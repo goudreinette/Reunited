@@ -27,12 +27,7 @@ func _physics_process(delta: float) -> void:
 	#direction = direction.normalized()
 	#velocity = direction * move_speed
 	#move_and_slide()
-	
-	##move to a position
-	var tween = create_tween()
-	if next_position != null:
-		tween.tween_property(self,"position", next_position.position, 1)
-	
+	move_to(next_position.position)
 	
 	pos_dif = position - last_pos
 	last_pos = position
@@ -70,3 +65,11 @@ func get_vel(position : Vector2) -> Vector2:
 	last_pos = position
 	
 	return pos_dif
+
+
+	
+func move_to(next_pos : Vector2):
+	var tween = create_tween()
+	if next_position != null:
+		tween.tween_property(self,"position", next_pos, 1)
+	
