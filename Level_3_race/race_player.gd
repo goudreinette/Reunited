@@ -16,8 +16,14 @@ func _ready():
 	
 func _process(delta):
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var thrust = Input.is_action_pressed("race_thruster")
+	var reverse = Input.is_action_pressed("race_reverse")
 	
-	speed += input.y * acceleration * delta
+	#speed += input.y * acceleration * delta
+	if thrust:
+		speed += acceleration * delta * -1
+	if reverse:
+		speed += acceleration * delta
 	speed *= drag
 	translate(Vector3(0, 0, speed))
 	

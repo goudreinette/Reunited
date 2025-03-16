@@ -125,6 +125,7 @@ autoplay = "default"
 script = ExtResource("3_x61kf")
 acceleration = 0.5
 drag = 0.96
+turn_acceleration = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="Ship"]
 transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
