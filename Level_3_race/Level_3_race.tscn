@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://w22tae8g2nnp"]
+[gd_scene load_steps=13 format=3 uid="uid://w22tae8g2nnp"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Texture2D" uid="uid://dxvbaa5kgauep" path="res://Level_3_race/race sprites/race map.png" id="1_i4egl"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
 [ext_resource type="Texture2D" uid="uid://dn32p1poxcu6p" path="res://Level_3_race/race sprites/ship back.png" id="7_k3syp"]
+[ext_resource type="PackedScene" uid="uid://c6hcvg4np3f8" path="res://models/race/cuba_cars.blend" id="9_v7jaj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
 sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
@@ -55,6 +56,7 @@ drag = 0.96
 [node name="Camera3D" type="Camera3D" parent="Ship"]
 transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
 environment = SubResource("Environment_mggcm")
+current = true
 
 [node name="Rock" type="Sprite3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.945303, 0.0202881, 0.249356)
@@ -97,3 +99,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196034, 0.801123, -1.51399
 billboard = 2
 texture_filter = 0
 texture = ExtResource("6_5j82x")
+
+[node name="cuba_cars" parent="." instance=ExtResource("9_v7jaj")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.561506, 0, 0.481505)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dham88id4j25"]
+[gd_scene load_steps=33 format=3 uid="uid://dham88id4j25"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Texture2D" uid="uid://blxxep5f331iq" path="res://Level_3_race/race sprites/race map big.png" id="2_pkk10"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="23_2txuc"]
 [ext_resource type="Texture2D" uid="uid://dnwcc1u6uw736" path="res://Level_3_race/race sprites/plants/plant3.png" id="24_kwgqw"]
 [ext_resource type="Texture2D" uid="uid://d1s2kqirrohhm" path="res://Level_3_race/race sprites/plants/plant4.png" id="25_6fev4"]
+[ext_resource type="PackedScene" uid="uid://c6hcvg4np3f8" path="res://models/race/cuba_cars.blend" id="26_6fev4"]
+[ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/car_path_follow.gd" id="26_62tid"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
 animations = [{
@@ -98,6 +100,13 @@ background_mode = 2
 sky = SubResource("Sky_neu27")
 sky_custom_fov = 7.0
 
+[sub_resource type="Curve3D" id="Curve3D_6fev4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.0131, 0.0002442, 10.7228, 0.0043664, -0.000219584, 0.257668, -0.0043664, 0.000219584, -0.257668, 1.018, 0, 8.867, -0.655725, 0.0033474, 0.507131, 0.655725, -0.0033474, -0.507131, 1.45155, -0.0682552, 7.15901, 0.307343, -0.000282764, 0.338985, -0.307343, 0.000282764, -0.338985, 2.33634, 0.000357211, 5.01358, 0, 0, 0, 0, 0, 0, 1.90001, 0.000431836, 4.42595, 0, 0, 0, 0, 0, 0, 0.637449, 0.0002442, 3.05855, 0.267613, -0.264258, 0.151059, -0.267613, 0.264258, -0.151059, -0.890815, -0.00134271, 2.03068, -0.158659, -0.671475, 0.524855, 0.158659, 0.671475, -0.524855, -1.63341, 0.0002442, -0.324559, -0.244612, -0.5053, 0.374565, 0.244612, 0.5053, -0.374565, -0.852709, -0.05514, -2.37218, -0.247082, -0.269507, 0.180779, 0.247082, 0.269507, -0.180779, -0.208245, -0.104675, -4.47494, 0, 0, 0, 0, 0, 0, 0.410744, 0.0002442, -6.13944, 0.213267, -0.122435, 0.157623, -0.213267, 0.122435, -0.157623, 0.641377, -0.0245478, -8.33537, 0, 0, 0, 0, 0, 0, -0.388947, 0.0002442, -9.76978, 0, 0, 0, 0, 0, 0, -1.15362, 0.0002442, -10.6735, 0, 0, 0, 0, 0, 0, 0.442767, 0.0002442, -13.6388, 0, 0, 0, 0, 0, 0, 0.296011, 0.0002442, -15.6007, 0, 0, 0, 0, 0, 0, -0.97433, 0.0002442, -19.0984, 0, 0, 0, 0, 0, 0, -2.21017, 0.0002442, -20.311, 0, 0, 0, 0, 0, 0, -3.8467, 0.0002442, -22.0446, 0, 0, 0, 0, 0, 0, -3.8467, 0.0002442, -23.2109, 0, 0, 0, 0, 0, 0, -3.25032, 0.0002442, -26.0471, 0, 0, 0, 0, 0, 0, -3.69058, 0.0002442, -26.9044, 0, 0, 0, 0, 0, 0, -6.44056, 0.0002442, -27.7824, 0, 0, 0, 0, 0, 0, -6.70317, 0.0002442, -29.1573, 0, 0, 0, 0, 0, 0, -6.54097, 0.0002442, -30.3236, 0, 0, 0, 0, 0, 0, -5.01162, 0.0002442, -30.3313, 0, 0, 0, 0, 0, 0, -4.64086, 0.0002442, -30.7639, 0, 0, 0, 0, 0, 0, -2.65422, 0.0002442, -32.977, 0, 0, 0, 0, 0, 0, -1.8123, 0.0002442, -34.4755, 0, 0, 0, 0, 0, 0, -0.0118215, 0.0002442, -36.5247, 0, 0, 0, 0, 0, 0, -1.75745, 0.0002442, -37.6987, 0, 0, 0, 0, 0, 0, -2.03162, 0.0002442, -40.4791, 0, 0, 0, 0, 0, 0, -0.834401, 0.0002442, -41.7999, 0, 0, 0, 0, 0, 0, 0.817124, 0.0002442, -44.3241, 0, 0, 0, 0, 0, 0, 0.747607, 0.0002442, -45.7222, 0, 0, 0, 0, 0, 0, -0.588645, 0.0002442, -47.2747, 0, 0, 0, 0, 0, 0, -0.723619, 0.0002442, -50.8055, 0, 0, 0, 0, 0, 0, -1.27975, 0.0002442, -52.3889, 0, 0, 0, 0, 0, 0, -3.26955, 0.0002442, -53.4348, 0, 0, 0, 0, 0, 0, -4.17404, 0.0002442, -55.8996, 0, 0, 0, 0, 0, 0, -3.81101, 0.0002442, -57.1664, 0, 0, 0, 0, 0, 0, -1.51631, 0.0002442, -58.355, 0, 0, 0, 0, 0, 0, -1.80982, 0.0002442, -59.4363, 0, 0, 0, 0, 0, 0, -3.52455, 0.0002442, -59.9847, 0, 0, 0, 0, 0, 0, -5.24864, 0.0002442, -60.908, 0, 0, 0, 0, 0, 0, -5.46491, 0.0002442, -62.2674, 0, 0, 0, 0, 0, 0, -4.56893, 0.0002442, -62.9548, 0, 0, 0, 0, 0, 0, -3.77335, 0.0002442, -63.4183, 0, 0, 0, 0, 0, 0, -0.924325, 0.0002442, -63.8091, 0, 0, 0, 0, 0, 0, 0.249723, 0.0002442, -63.4847, 0, 0, 0, 0, 0, 0, 1.12254, 0.0002442, -63.4924, 0, 0, 0, 0, 0, 0, 1.47784, 0.0002442, -64.7823, 0, 0, 0, 0, 0, 0, 1.58828, 0.0002442, -68.8974),
+"tilts": PackedFloat32Array(0, 0.422025, 0.929937, -1.38132, -0.04715, 0, 1.31694, 0, 0, 0, -0.897916, -1.61309, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 53
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Map" type="Sprite3D" parent="."]
@@ -118,7 +127,7 @@ texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Ship" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.764893, 0.0255188, 0.621312)
+transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.829251, 0.0255188, 0.621312)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_c5xsm")
@@ -132,6 +141,7 @@ turn_acceleration = 10.0
 [node name="Camera3D" type="Camera3D" parent="Ship"]
 transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
 environment = SubResource("Environment_mggcm")
+near = 0.002
 
 [node name="Rock" type="Sprite3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911816, 0.0202881, -0.598538)
@@ -270,3 +280,32 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.522824, 0.0194702,
 billboard = 2
 texture_filter = 0
 texture = ExtResource("25_6fev4")
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547, -2.0728)
+curve = SubResource("Curve3D_6fev4")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.0799997, 2.77859e-08, -0.000211166, 2.27374e-15, 0.0799998, 1.05267e-05, 0.000211166, -1.05266e-05, 0.0799997, 1.0131, 0.0002442, 10.7228)
+script = ExtResource("26_62tid")
+speed = 0.02
+
+[node name="cuba_cars" parent="Path3D/PathFollow3D" instance=ExtResource("26_6fev4")]
+
+[node name="PathFollow3D2" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.0777374, 0.0188892, -0.000291255, -0.0188893, 0.0777378, 1.45496e-05, 0.000286455, 5.46319e-05, 0.0799995, 1.01784, 7.04391e-06, 9.72284)
+progress = 1.0
+script = ExtResource("26_62tid")
+speed = 0.02
+
+[node name="cuba_cars" parent="Path3D/PathFollow3D2" instance=ExtResource("26_6fev4")]
+transform = Transform3D(1, 0, -2.32831e-10, -3.63798e-12, 1, 0, 0, -9.31323e-10, 1, 0, 0, 0)
+
+[node name="PathFollow3D3" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.0549801, 0.0528166, -0.0242385, -0.0545953, 0.0583775, 0.00336726, 0.0199103, 0.0142273, 0.0761653, 1.05791, -0.0506733, 7.73306)
+progress = 3.0
+script = ExtResource("26_62tid")
+speed = 0.02
+
+[node name="cuba_cars" parent="Path3D/PathFollow3D3" instance=ExtResource("26_6fev4")]
+transform = Transform3D(1, 0, -2.32831e-10, -3.63798e-12, 1, 0, 0, -9.31323e-10, 1, 0, 0, 0)

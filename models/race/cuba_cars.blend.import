@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ju14khh54xsd"
-valid=false
+uid="uid://c6hcvg4np3f8"
+path="res://.godot/imported/cuba_cars.blend-a698f4f2f040d53022eae4618a8414eb.scn"
 
 [deps]
 
-source_file="res://models/wormhole/Hallucigenia.blend"
+source_file="res://models/race/cuba_cars.blend"
+dest_files=["res://.godot/imported/cuba_cars.blend-a698f4f2f040d53022eae4618a8414eb.scn"]
 
 [params]
 
