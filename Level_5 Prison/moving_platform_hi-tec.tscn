@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cilh4epxlw7sx"]
+[gd_scene load_steps=7 format=3 uid="uid://iirungr037sy"]
 
 [ext_resource type="Script" uid="uid://cb3sbcncpj78j" path="res://Level_2_wasteland/moving_platform.gd" id="1_in6sv"]
 [ext_resource type="Texture2D" uid="uid://s1nm65t4amof" path="res://Level_5 Prison/Moving_platform-hi-tec.png" id="2_rw1fr"]

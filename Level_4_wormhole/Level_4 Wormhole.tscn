@@ -105,6 +105,7 @@ position = Vector2(118, 31)
 bullet_speed = 50
 
 [node name="Marella64PxGrey" type="Sprite2D" parent="LevelPosition2"]
+visible = false
 position = Vector2(190, 35)
 texture = ExtResource("13_ircnx")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cfm6so3i2xnk5"]
+[gd_scene load_steps=32 format=3 uid="uid://cfm6so3i2xnk5"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://b1m6m0dvwp8tx" path="res://Smup Test Level/formation_diagonal_Double.tscn" id="23_46uc2"]
 [ext_resource type="PackedScene" uid="uid://7403se4cbera" path="res://Level_1_space_escape/gunship/gunship.tscn" id="23_85ifg"]
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://Smup Test Level/enemies/turret.tscn" id="25_nk3iq"]
-[ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="28_avks8"]
 [ext_resource type="Texture2D" uid="uid://b1olkfqakakq0" path="res://Level_4_wormhole/marella/marella 32px grey.png" id="29_ubutc"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
 
@@ -201,9 +200,6 @@ position = Vector2(120, 80)
 script = ExtResource("16_g0b6g")
 noise = SubResource("FastNoiseLite_uf0tv")
 
-[node name="Hallucigenia" parent="LevelPosition" instance=ExtResource("28_avks8")]
-position = Vector2(118, 31)
-
 [node name="FatLazerGroup2" parent="." instance=ExtResource("20_40mj3")]
 position = Vector2(8, -614)
 
@@ -246,10 +242,12 @@ position = Vector2(92, -136)
 position = Vector2(-24.625, -453)
 
 [node name="Marella64PxGrey" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(211, 1286)
 texture = ExtResource("30_i8h2o")
 
 [node name="Marella32PxGrey" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(165, 1271)
 texture = ExtResource("29_ubutc")
 
