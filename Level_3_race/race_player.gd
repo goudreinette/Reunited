@@ -4,6 +4,7 @@ class_name RacePlayer extends AnimatedSprite3D
 @export var top_speed: float = 1
 var speed = 0
 @export var drag = 0.95
+@export var drag_off_track = 0.85
 
 @export var turn_acceleration: float = 20
 var turn_speed = 0
@@ -15,6 +16,11 @@ func _ready():
 	
 	
 func _process(delta):
+	# check on track
+	var on_track = $OnTrackRaycast3D.is_colliding()
+	
+	print(on_track)
+	
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var thrust = Input.is_action_pressed("race_thruster")
 	var reverse = Input.is_action_pressed("race_reverse")
@@ -24,7 +30,12 @@ func _process(delta):
 		speed += acceleration * delta * -1
 	if reverse:
 		speed += acceleration * delta
-	speed *= drag
+		
+	if on_track:
+		speed *= drag
+	else: 
+		speed *= drag_off_track
+		
 	translate(Vector3(0, 0, speed))
 	
 	turn_speed += input.x * remap(-speed, 0, .05, 0, turn_acceleration) * delta

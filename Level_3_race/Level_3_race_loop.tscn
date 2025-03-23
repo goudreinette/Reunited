@@ -1,0 +1,308 @@
+[gd_scene load_steps=35 format=3 uid="uid://c2ehmics53je3"]
+
+[ext_resource type="Texture2D" uid="uid://b5xivu2xqjn0t" path="res://Level_3_race/race sprites/race map loop.png" id="1_8ouit"]
+[ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="2_hjcqg"]
+[ext_resource type="Texture2D" uid="uid://dn32p1poxcu6p" path="res://Level_3_race/race sprites/ship back.png" id="3_omr42"]
+[ext_resource type="Texture2D" uid="uid://b3xn3fiqlj86q" path="res://Level_3_race/race sprites/ship bank left/bank right0001.png" id="4_sbuxv"]
+[ext_resource type="Texture2D" uid="uid://jy7y30fgn861" path="res://Level_3_race/race sprites/ship bank left/bank right0002.png" id="5_oh8wk"]
+[ext_resource type="Texture2D" uid="uid://bu6b3abxiatkc" path="res://Level_3_race/race sprites/ship bank left/bank right0003.png" id="6_lxcjl"]
+[ext_resource type="Texture2D" uid="uid://cl60wad4xj0cn" path="res://Level_3_race/race sprites/ship bank left/bank right0004.png" id="7_52mb6"]
+[ext_resource type="Texture2D" uid="uid://gr2g8b5w25e0" path="res://Level_3_race/race sprites/ship bank left/bank right0005.png" id="8_dl5ug"]
+[ext_resource type="Texture2D" uid="uid://cmtwvejwovj2u" path="res://Level_3_race/race sprites/ship bank left/bank right0006.png" id="9_uage5"]
+[ext_resource type="Texture2D" uid="uid://bnv14ig5usum0" path="res://Level_3_race/race sprites/ship bank right/bank right0001.png" id="10_6n6et"]
+[ext_resource type="Texture2D" uid="uid://u0ijml7uynyl" path="res://Level_3_race/race sprites/ship bank right/bank right0002.png" id="11_w7w7y"]
+[ext_resource type="Texture2D" uid="uid://bout0rf55to8q" path="res://Level_3_race/race sprites/ship bank right/bank right0003.png" id="12_yals2"]
+[ext_resource type="Texture2D" uid="uid://c5h22kjw4p1pg" path="res://Level_3_race/race sprites/ship bank right/bank right0004.png" id="13_82kso"]
+[ext_resource type="Texture2D" uid="uid://cj80jsxga7gq" path="res://Level_3_race/race sprites/ship bank right/bank right0005.png" id="14_sjexk"]
+[ext_resource type="Texture2D" uid="uid://xncrpf4uoekk" path="res://Level_3_race/race sprites/ship bank right/bank right0006.png" id="15_67272"]
+[ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="16_eymd3"]
+[ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="17_op4hn"]
+[ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="18_12tkg"]
+[ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="19_hwr1w"]
+[ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="20_35qdn"]
+[ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="21_cyrpb"]
+[ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="22_dkvuf"]
+[ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="23_esc7y"]
+[ext_resource type="Texture2D" uid="uid://dnwcc1u6uw736" path="res://Level_3_race/race sprites/plants/plant3.png" id="24_sgr7k"]
+[ext_resource type="Texture2D" uid="uid://d1s2kqirrohhm" path="res://Level_3_race/race sprites/plants/plant4.png" id="25_41i7o"]
+[ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/car_path_follow.gd" id="26_gvokg"]
+[ext_resource type="PackedScene" uid="uid://cpym6ti1don5u" path="res://models/race/cuba_car_cabriolet.glb" id="27_8ouit"]
+[ext_resource type="ArrayMesh" uid="uid://bu6q7u4hisoqh" path="res://models/race/map_loop_mesh.obj" id="28_hjcqg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_omr42")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sbuxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oh8wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lxcjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_52mb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dl5ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uage5")
+}],
+"loop": false,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_6n6et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w7w7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yals2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_82kso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sjexk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_67272")
+}],
+"loop": false,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
+sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
+sky_horizon_color = Color(0.530495, 0.669348, 0.823281, 1)
+sky_energy_multiplier = 1.41
+ground_horizon_color = Color(0.643137, 0.843137, 1, 1)
+energy_multiplier = 1.8
+
+[sub_resource type="Sky" id="Sky_neu27"]
+sky_material = SubResource("ProceduralSkyMaterial_23tvb")
+
+[sub_resource type="Environment" id="Environment_mggcm"]
+background_mode = 2
+sky = SubResource("Sky_neu27")
+sky_custom_fov = 7.0
+
+[sub_resource type="Curve3D" id="Curve3D_8ouit"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.7904, -0.00753102, 9.45749, 0, 0, 0, 0, 0, 0, -10.839, -0.00629077, 7.90051, 0, 0, 0, 0, 0, 0, -10.8321, -0.0045918, 5.76662, 0, 0, 0, 0, 0, 0, -10.0258, -0.00313601, 3.93857, 0, 0, 0, 0, 0, 0, -8.58003, -0.00246653, 3.09752, 0, 0, 0, 0, 0, 0, -6.34188, -0.00217852, 2.73608, 0, 0, 0, 0, 0, 0, -4.43736, -0.00185237, 2.32599, 0, 0, 0, 0, 0, 0, -2.1019, -0.00203547, 2.55536, 0, 0, 0, 0, 0, 0, 1.97741, -0.00244508, 3.0672, 0, 0, 0, 0, 0, 0, 4.4955, -0.00303159, 3.80222, 0, 0, 0, 0, 0, 0, 5.7069, -0.00458131, 5.74863, 0, 0, 0, 0, 0, 0, 5.72051, -0.00641236, 8.04894, 0, 0, 0, 0, 0, 0, 6.22413, -0.00831017, 10.4309, 0, 0, 0, 0, 0, 0, 5.36662, -0.00970826, 12.1868, 0, 0, 0, 0, 0, 0, 1.32407, -0.0106076, 13.3165, 0, 0, 0, 0, 0, 0, -3.26294, -0.0106295, 13.3437, 0, 0, 0, 0, 0, 0, -6.59771, -0.0108355, 13.6024, 0, 0, 0, 0, 0, 0, -9.12941, -0.0101956, 12.7993, 0, 0, 0, 0, 0, 0, -10.3408, -0.00862489, 10.8256),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 19
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hjcqg"]
+data = PackedVector3Array(-7.1388, 0.1, 1.7416, -8.9585, 0.1, 1.7416, -7.4806, 0.1, -0.1044, -7.4806, 0.1, -0.1044, -8.9585, 0.1, 1.7416, -9.2594, 0.1, -0.1044, -7.4806, 0.1, -0.1044, -9.2594, 0.1, -0.1044, -7.4406, 0.1, -2.715, -7.4406, 0.1, -2.715, -9.2594, 0.1, -0.1044, -9.2144, 0.1, -2.8464, -7.4406, 0.1, -2.715, -9.2144, 0.1, -2.8464, -7.0695, 0.1, -3.7549, -7.0695, 0.1, -3.7549, -9.2144, 0.1, -2.8464, -8.7131, 0.1, -4.4352, -7.0695, 0.1, -3.7549, -8.7131, 0.1, -4.4352, -6.4914, 0.1, -4.2339, -6.4914, 0.1, -4.2339, -8.7131, 0.1, -4.4352, -7.6068, 0.1, -5.6197, -6.4914, 0.1, -4.2339, -7.6068, 0.1, -5.6197, -4.2789, 0.1, -4.9469, -4.2789, 0.1, -4.9469, -7.6068, 0.1, -5.6197, -4.9572, 0.1, -6.5913, -4.2789, 0.1, -4.9469, -4.9572, 0.1, -6.5913, -1.9611, 0.1, -5.0088, -1.9611, 0.1, -5.0088, -4.9572, 0.1, -6.5913, -1.7604, 0.1, -6.7762, -1.9611, 0.1, -5.0088, -1.7604, 0.1, -6.7762, 0.6529, 0.1, -4.5924, 0.6529, 0.1, -4.5924, -1.7604, 0.1, -6.7762, 0.7285, 0.1, -6.3697, 0.6529, 0.1, -4.5924, 0.7285, 0.1, -6.3697, 3.7459, 0.1, -4.2923, 3.7459, 0.1, -4.2923, 0.7285, 0.1, -6.3697, 4.0827, 0.1, -6.0389, 3.7459, 0.1, -4.2923, 4.0827, 0.1, -6.0389, 6.0321, 0.1, -3.4713, 6.0321, 0.1, -3.4713, 4.0827, 0.1, -6.0389, 7.0368, 0.1, -4.9392, 6.0321, 0.1, -3.4713, 7.0368, 0.1, -4.9392, 6.9719, 0.1, -1.2729, 6.9719, 0.1, -1.2729, 7.0368, 0.1, -4.9392, 8.5936, 0.1, -2.0622, 6.9719, 0.1, -1.2729, 8.5936, 0.1, -2.0622, 7.0335, 0.1, 1.8308, 7.0335, 0.1, 1.8308, 8.5936, 0.1, -2.0622, 8.8338, 0.1, 1.7204, 7.0335, 0.1, 1.8308, 8.8338, 0.1, 1.7204, 6.4893, 0.1, 3.1506, 6.4893, 0.1, 3.1506, 8.8338, 0.1, 1.7204, 8.171, 0.1, 3.8025, 6.4893, 0.1, 3.1506, 8.171, 0.1, 3.8025, 5.3151, 0.1, 3.5746, 5.3151, 0.1, 3.5746, 8.171, 0.1, 3.8025, 5.9979, 0.1, 5.244, 5.3151, 0.1, 3.5746, 5.9979, 0.1, 5.244, 3.0244, 0.1, 3.7307, 3.0244, 0.1, 3.7307, 5.9979, 0.1, 5.244, 3.1854, 0.1, 5.527, 3.0244, 0.1, 3.7307, 3.1854, 0.1, 5.527, -1.42, 0.1, 4.0187, -1.42, 0.1, 4.0187, 3.1854, 0.1, 5.527, -1.259, 0.1, 5.815, -1.42, 0.1, 4.0187, -1.259, 0.1, 5.815, -4.6472, 0.1, 4.0665, -4.6472, 0.1, 4.0665, -1.259, 0.1, 5.815, -4.918, 0.1, 5.8497, -4.6472, 0.1, 4.0665, -4.918, 0.1, 5.8497, -6.6096, 0.1, 3.3467, -6.6096, 0.1, 3.3467, -4.918, 0.1, 5.8497, -7.6198, 0.1, 4.841, -6.6096, 0.1, 3.3467, -7.6198, 0.1, 4.841, -6.9964, 0.1, 2.4951, -6.9964, 0.1, 2.4951, -7.6198, 0.1, 4.841, -8.7418, 0.1, 2.949, -8.7418, 0.1, 2.949, -8.9585, 0.1, 1.7416, -6.9964, 0.1, 2.4951, -6.9964, 0.1, 2.4951, -8.9585, 0.1, 1.7416, -7.1388, 0.1, 1.7416)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Map" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_8ouit")
+
+[node name="Plant2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911082, 0.0230841, 0.143307)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Plant" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.601815, 0.0259995, 0.33032)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Ship" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, -2.00994, 0.0255188, 0.387646)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_c5xsm")
+animation = &"left"
+autoplay = "default"
+script = ExtResource("16_eymd3")
+acceleration = 0.5
+drag = 0.96
+turn_acceleration = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="Ship"]
+transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
+environment = SubResource("Environment_mggcm")
+near = 0.002
+
+[node name="OnTrackRaycast3D" type="RayCast3D" parent="Ship"]
+target_position = Vector3(0, -4, 0)
+collision_mask = 128
+
+[node name="Rock" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911816, 0.0202881, -0.598538)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("17_op4hn")
+
+[node name="Rock2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.628911, 0.0200267, -0.832914)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("17_op4hn")
+
+[node name="Rock3" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.594348, 0.0231438, -0.045045)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("17_op4hn")
+
+[node name="Gate" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.747086, 0.0570454, -0.0502055)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("18_12tkg")
+
+[node name="Cloud" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93888, 0.801123, -1.51399)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("19_hwr1w")
+
+[node name="Cloud2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196034, 0.801123, -1.51399)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("20_35qdn")
+
+[node name="Plant3" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.585505, 0.0230841, -0.222628)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Plant4" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821252, 0.0230842, -0.427114)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Plant5" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.94, 0.0230842, -0.726711)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Plant6" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.870156, 0.0230842, -0.510856)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Cloud3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206367, 0.801123, -2.86508)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("19_hwr1w")
+
+[node name="Cloud4" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.304357, 0.801123, 0.218313)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("19_hwr1w")
+
+[node name="Cloud5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.366121, 1.34244, -4.90844)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("19_hwr1w")
+
+[node name="Pole1" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821173, 0.0596129, -0.498092)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("21_cyrpb")
+
+[node name="Plant7" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.821252, 0.0230842, -0.427114)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_hjcqg")
+
+[node name="Pole2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.427276, 0.0596129, -1.88443)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("22_dkvuf")
+
+[node name="Plant8" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.387505, 0.0230842, -2.27825)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("23_esc7y")
+
+[node name="Plant9" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.387505, 0.0194702, -2.08304)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_sgr7k")
+
+[node name="Plant10" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.453523, 0.0194702, -2.00446)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_sgr7k")
+
+[node name="Plant11" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.453523, 0.0194702, -2.38785)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_sgr7k")
+
+[node name="Plant12" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.522824, 0.0194702, -2.18324)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("25_41i7o")
+
+[node name="Plant13" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.522824, 0.0194702, -2.0728)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("25_41i7o")
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0264438, -2.0728)
+curve = SubResource("Curve3D_8ouit")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.079961, 1.98723e-06, 0.00249593, 7.27595e-14, 0.0799998, -6.36948e-05, -0.00249593, 6.36637e-05, 0.079961, -10.7904, -0.00753102, 9.45749)
+script = ExtResource("26_gvokg")
+speed = 0.04
+
+[node name="cuba_car_cabriolet" parent="Path3D/PathFollow3D" instance=ExtResource("27_8ouit")]
+transform = Transform3D(1, 0, -7.45058e-09, 1.81899e-12, 1, -1.16415e-10, -3.72529e-09, 0, 1, 8.10174, 0.000201583, 0.253174)
+
+[node name="MapLoopMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 0.00783189, -0.137688, -0.00925798)
+mesh = ExtResource("28_hjcqg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MapLoopMesh"]
+collision_layer = 128
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MapLoopMesh/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hjcqg")

@@ -141,6 +141,7 @@ turn_acceleration = 10.0
 [node name="Camera3D" type="Camera3D" parent="Ship"]
 transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
 environment = SubResource("Environment_mggcm")
+current = true
 near = 0.002
 
 [node name="Rock" type="Sprite3D" parent="."]
@@ -286,14 +287,14 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547,
 curve = SubResource("Curve3D_6fev4")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0799997, 2.77859e-08, -0.000211166, 2.27374e-15, 0.0799998, 1.05267e-05, 0.000211166, -1.05266e-05, 0.0799997, 1.0131, 0.0002442, 10.7228)
+transform = Transform3D(0.0799997, 2.77948e-08, -0.000211228, 3.4106e-15, 0.0799998, 1.0527e-05, 0.000211228, -1.05269e-05, 0.0799997, 1.0131, 0.0002442, 10.7228)
 script = ExtResource("26_62tid")
 speed = 0.02
 
 [node name="cuba_cars" parent="Path3D/PathFollow3D" instance=ExtResource("26_6fev4")]
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0777374, 0.0188892, -0.000291255, -0.0188893, 0.0777378, 1.45496e-05, 0.000286455, 5.46319e-05, 0.0799995, 1.01784, 7.04391e-06, 9.72284)
+transform = Transform3D(0.0777373, 0.0188896, -0.000291315, -0.0188897, 0.0777377, 1.45496e-05, 0.000286513, 5.46474e-05, 0.0799995, 1.01784, 7.0382e-06, 9.72279)
 progress = 1.0
 script = ExtResource("26_62tid")
 speed = 0.02
@@ -302,7 +303,7 @@ speed = 0.02
 transform = Transform3D(1, 0, -2.32831e-10, -3.63798e-12, 1, 0, 0, -9.31323e-10, 1, 0, 0, 0)
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0549801, 0.0528166, -0.0242385, -0.0545953, 0.0583775, 0.00336726, 0.0199103, 0.0142273, 0.0761653, 1.05791, -0.0506733, 7.73306)
+transform = Transform3D(0.054979, 0.0528167, -0.024241, -0.0545959, 0.0583769, 0.00336713, 0.0199119, 0.0142293, 0.0761645, 1.05793, -0.0506752, 7.73301)
 progress = 3.0
 script = ExtResource("26_62tid")
 speed = 0.02
