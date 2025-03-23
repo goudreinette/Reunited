@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsektt6174gg4"]
+
+[ext_resource type="Script" uid="uid://bqpapvgkx6yoc" path="res://bullet_circle_test.gd" id="1_joibo"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_e7bfi"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(112, 77)
+script = ExtResource("1_joibo")
+bullet_scene = ExtResource("2_e7bfi")
+bullet_amount = 80.0

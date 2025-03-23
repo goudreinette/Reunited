@@ -24,21 +24,26 @@ position = Vector2(92, 73)
 position = Vector2(72, 75)
 
 [node name="Justin" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("4_qogwo")]
-position = Vector2(34, 13)
+position = Vector2(-21, -23)
+move_time = 4
 next_position = NodePath("../next_pos")
 
 [node name="Koen" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("5_u673w")]
-position = Vector2(95, -6)
+position = Vector2(95, -44)
+move_time = 4
 next_position = NodePath("../next_pos2")
 
 [node name="Frank" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("1_bf7fn")]
-position = Vector2(207, 26)
+position = Vector2(285, -3)
+move_time = 4
 next_position = NodePath("../next_pos3")
 
 [node name="Guus" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("2_ajslg")]
-position = Vector2(201, 114)
+position = Vector2(267, 167)
+move_time = 4
 next_position = NodePath("../next_pos4")
 
 [node name="Igor" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("3_8bxej")]
-position = Vector2(56, 158)
+position = Vector2(38, 177)
+move_time = 3
 next_position = NodePath("../next_pos5")

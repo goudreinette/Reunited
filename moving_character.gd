@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 var direction : Vector2 = Vector2.ZERO
 @export var move_speed = 40.0
+@export var move_time = 2
 @export var next_position : Node2D
 
 
@@ -15,6 +16,7 @@ var direction : Vector2 = Vector2.ZERO
 var is_moving = false
 var last_pos : Vector2
 var pos_dif :  Vector2
+
 
 func _ready() -> void:
 	if sprite_sheet != null:
@@ -27,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	#direction = direction.normalized()
 	#velocity = direction * move_speed
 	#move_and_slide()
-	move_to(next_position.position)
+	move_to(next_position.position, move_time)
 	
 	pos_dif = position - last_pos
 	last_pos = position
@@ -68,8 +70,8 @@ func get_vel(position : Vector2) -> Vector2:
 
 
 	
-func move_to(next_pos : Vector2):
+func move_to(next_pos : Vector2, time):
 	var tween = create_tween()
 	if next_position != null:
-		tween.tween_property(self,"position", next_pos, 1)
+		tween.tween_property(self,"position", next_pos, time)
 	

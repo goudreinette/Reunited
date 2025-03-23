@@ -10,3 +10,9 @@ func update_score(value):
 func update_shield(max_value, value):
 	shield_bar.max_value = max_value
 	shield_bar.value = value
+
+
+
+func _on_player_shield_changed(max_value, value):
+	shield_bar.max_value = max_value
+	shield_bar.value = value

@@ -1,0 +1,183 @@
+[gd_scene load_steps=27 format=3 uid="uid://cx3nl2r3jior2"]
+
+[ext_resource type="Texture2D" uid="uid://uw6ajyrn8rdh" path="res://Level_4_wormhole/Black hole.png" id="1_aswgb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yfmw"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(0, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyghk"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(480, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwkef"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(960, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfm6v"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(1440, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcfjc"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(1920, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbbmm"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(2400, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tnxj"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(2880, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r72kc"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(3360, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cgqw"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(3840, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uahr7"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(4320, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utg47"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(4800, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ljy2"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(5280, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdn3h"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(5760, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6phbi"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(6240, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdf1v"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(6720, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcibb"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(7200, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7k6s"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(7680, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugvho"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(8160, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7bco"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(8640, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p53ua"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(9120, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu2sb"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(9600, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m55mc"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(10080, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r6v7"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(10560, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3rt1"]
+atlas = ExtResource("1_aswgb")
+region = Rect2(11040, 0, 480, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epbor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yfmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyghk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwkef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfm6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcfjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbbmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tnxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r72kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cgqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uahr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utg47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ljy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdn3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6phbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdf1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcibb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7k6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugvho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7bco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p53ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu2sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m55mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r6v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3rt1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="BlackHole" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_epbor")
+frame_progress = 0.165657

@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cilh4epxlw7sx"]
+
+[ext_resource type="Script" uid="uid://cb3sbcncpj78j" path="res://Level_2_wasteland/moving_platform.gd" id="1_in6sv"]
+[ext_resource type="Texture2D" uid="uid://s1nm65t4amof" path="res://Level_5 Prison/Moving_platform-hi-tec.png" id="2_rw1fr"]
+
+[sub_resource type="Animation" id="Animation_0kgt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_n0cw3"]
+resource_name = "path"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.5, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1fxty"]
+_data = {
+&"RESET": SubResource("Animation_0kgt5"),
+&"path": SubResource("Animation_n0cw3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaxfr"]
+size = Vector2(32, 32)
+
+[node name="moving platform" type="Path2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_in6sv")
+loop = false
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../Area2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1fxty")
+}
+autoplay = "path"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = -1
+position = Vector2(-0.79665, 8)
+texture = ExtResource("2_rw1fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.79665, 0)
+shape = SubResource("RectangleShape2D_oaxfr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
