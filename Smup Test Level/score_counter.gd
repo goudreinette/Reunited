@@ -14,7 +14,7 @@ var digit_coords = {
 }
 
 func _ready():
-	display_digits(123)
+	display_digits(0)
 
 func display_digits(n):
 	var s = "%08d" % n

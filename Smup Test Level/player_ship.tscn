@@ -121,6 +121,7 @@ current_weapon_type = 2
 bullet_scene = ExtResource("2_kqyt4")
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("3_lbx87")]
+frame_progress = 0.0
 
 [node name="Boosters" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 16)
@@ -156,4 +157,5 @@ libraries = {
 autoplay = "RESET"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

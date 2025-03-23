@@ -38,6 +38,7 @@ func start():
 	$GunCooldown.wait_time = cooldown
 	
 func _process(delta):
+	print(barelling)
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
@@ -60,7 +61,7 @@ func _process(delta):
 	if Input.is_action_pressed("dodge"):
 		barelling = true
 		$AnimatedSprite2D.play("barrel roll")
-		
+	
 		
 	if Input.is_action_pressed("shoot"):
 		#$AnimatedSprite2D.animation = "barrel roll"
@@ -152,10 +153,6 @@ func _on_area_entered(area):
 		$Hit.play()
 		shield -= 8
 		
-		
-
-
-
 func _on_animated_sprite_2d_animation_finished():
 	if barelling:
 		barelling = false

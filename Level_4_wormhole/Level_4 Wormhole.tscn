@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://dc84xukp6rnfr"]
+
+[ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
+[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_uewx8"]
+[ext_resource type="PackedScene" uid="uid://cx3nl2r3jior2" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
+[ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="3_hbhgp"]
+[ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://Smup Test Level/level_position.gd" id="4_c8juj"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="5_arypi"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="6_t7ibp"]
+[ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://Smup Test Level/ship_Camera2D.gd" id="7_uewx8"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="8_t7ibp"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="9_uewx8"]
+[ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="10_pfj2u"]
+[ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="11_rg5ho"]
+[ext_resource type="AudioStream" uid="uid://wbx08luua2y6" path="res://sounds/music/lava lamp 11 feb met gitaar.wav" id="13_0gg3a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gg3a"]
+shader = ExtResource("10_pfj2u")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.213
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 54.597
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = -0.00999995
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.396
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.6
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t7ibp"]
+
+[node name="Level4Wormhole" type="Node2D"]
+script = ExtResource("1_uewx8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("8_t7ibp")]
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("9_uewx8")
+
+[node name="Special FX" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_0gg3a")
+offset_right = 241.0
+offset_bottom = 160.0
+
+[node name="SpaceBGBlue" parent="." instance=ExtResource("1_cu4q0")]
+
+[node name="GreenBg240x" parent="SpaceBGBlue/Parallax2D 0_25" index="0"]
+z_index = -5
+
+[node name="Parallax2D" type="Parallax2D" parent="SpaceBGBlue"]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(7, 7)
+
+[node name="BlackHole" parent="SpaceBGBlue/Parallax2D" instance=ExtResource("2_dajic")]
+z_index = -1
+position = Vector2(110, 79)
+autoplay = "default"
+
+[node name="Astroid-1" parent="SpaceBGBlue" instance=ExtResource("11_rg5ho")]
+position = Vector2(126, 80)
+
+[node name="LevelPosition2" type="Node2D" parent="."]
+position = Vector2(7, 169)
+script = ExtResource("4_c8juj")
+levelspeed = 20.0
+
+[node name="Player" parent="LevelPosition2" instance=ExtResource("5_arypi")]
+position = Vector2(120, 120)
+max_shield = 20
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition2/Player"]
+stream = ExtResource("6_t7ibp")
+
+[node name="Camera2D" type="Camera2D" parent="LevelPosition2"]
+position = Vector2(120, 80)
+script = ExtResource("7_uewx8")
+noise = SubResource("FastNoiseLite_t7ibp")
+
+[node name="Hallucigenia" parent="LevelPosition2" instance=ExtResource("3_hbhgp")]
+position = Vector2(118, 31)
+bullet_speed = 50
+
+[node name="LavaLamp11FebMetGitaar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_0gg3a")
+autoplay = true
+
+[connection signal="shield_changed" from="LevelPosition2/Player" to="CanvasLayer/UI" method="_on_player_shield_changed"]
+
+[editable path="SpaceBGBlue"]

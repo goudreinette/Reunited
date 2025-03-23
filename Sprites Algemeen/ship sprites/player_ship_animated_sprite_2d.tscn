@@ -1,51 +1,6 @@
-[gd_scene load_steps=111 format=3 uid="uid://cgrhhyg53474k"]
+[gd_scene load_steps=82 format=3 uid="uid://cgrhhyg53474k"]
 
-[ext_resource type="Texture2D" uid="uid://gn1d46wcqrdw" path="res://Sprites Algemeen/ship sprites/barrel roll/0001.png" id="1_emnxg"]
-[ext_resource type="Texture2D" uid="uid://dwspei628xtk0" path="res://Sprites Algemeen/ship sprites/barrel roll/0002.png" id="2_0oogo"]
-[ext_resource type="Texture2D" uid="uid://loa4k5xdqspc" path="res://Sprites Algemeen/ship sprites/barrel roll/0003.png" id="3_xf23c"]
-[ext_resource type="Texture2D" uid="uid://cgbbc3t54p4tj" path="res://Sprites Algemeen/ship sprites/barrel roll/0004.png" id="4_eve5a"]
-[ext_resource type="Texture2D" uid="uid://cefsxd1218qd5" path="res://Sprites Algemeen/ship sprites/barrel roll/0005.png" id="5_xctiu"]
-[ext_resource type="Texture2D" uid="uid://bp63kgikvt2pq" path="res://Sprites Algemeen/ship sprites/barrel roll/0006.png" id="6_bh1t2"]
-[ext_resource type="Texture2D" uid="uid://d02bwnf75e7ei" path="res://Sprites Algemeen/ship sprites/barrel roll/0007.png" id="7_falpg"]
-[ext_resource type="Texture2D" uid="uid://d2oafnc2mryue" path="res://Sprites Algemeen/ship sprites/barrel roll/0008.png" id="8_q5vgp"]
-[ext_resource type="Texture2D" uid="uid://iibdenufaw8v" path="res://Sprites Algemeen/ship sprites/barrel roll/0009.png" id="9_cjgbk"]
-[ext_resource type="Texture2D" uid="uid://ca7cx62gibcuh" path="res://Sprites Algemeen/ship sprites/barrel roll/0010.png" id="10_efunp"]
-[ext_resource type="Texture2D" uid="uid://ctq8kn0kheini" path="res://Sprites Algemeen/ship sprites/barrel roll/0011.png" id="11_raame"]
-[ext_resource type="Texture2D" uid="uid://cnkyg3oolklun" path="res://Sprites Algemeen/ship sprites/barrel roll/0012.png" id="12_btnh3"]
-[ext_resource type="Texture2D" uid="uid://bisqv5jrtweqk" path="res://Sprites Algemeen/ship sprites/barrel roll/0013.png" id="13_spw05"]
-[ext_resource type="Texture2D" uid="uid://bj8gogix7sgy5" path="res://Sprites Algemeen/ship sprites/barrel roll/0014.png" id="14_ea2n3"]
-[ext_resource type="Texture2D" uid="uid://c2sb4f1hftul2" path="res://Sprites Algemeen/ship sprites/barrel roll/0015.png" id="15_j0fcq"]
-[ext_resource type="Texture2D" uid="uid://bgrcsj6b5sg6x" path="res://Sprites Algemeen/ship sprites/barrel roll/0016.png" id="16_lflfp"]
-[ext_resource type="Texture2D" uid="uid://dw8kh60vq11n7" path="res://Sprites Algemeen/ship sprites/barrel roll/0017.png" id="17_4oya6"]
-[ext_resource type="Texture2D" uid="uid://dsvlfpan4l46f" path="res://Sprites Algemeen/ship sprites/barrel roll/0018.png" id="18_nk4io"]
-[ext_resource type="Texture2D" uid="uid://r3ut7i4mqvrf" path="res://Sprites Algemeen/ship sprites/barrel roll/0019.png" id="19_st8hl"]
-[ext_resource type="Texture2D" uid="uid://o64ok4qtqmrr" path="res://Sprites Algemeen/ship sprites/barrel roll/0020.png" id="20_vhjhw"]
-[ext_resource type="Texture2D" uid="uid://b4dts15jaq28i" path="res://Sprites Algemeen/ship sprites/barrel roll/0021.png" id="21_s3epq"]
-[ext_resource type="Texture2D" uid="uid://csbmkxp61vlo1" path="res://Sprites Algemeen/ship sprites/barrel roll/0022.png" id="22_pbxiy"]
-[ext_resource type="Texture2D" uid="uid://d62rq22p2qpf" path="res://Sprites Algemeen/ship sprites/barrel roll/0023.png" id="23_waabs"]
-[ext_resource type="Texture2D" uid="uid://lqfjlar6s32j" path="res://Sprites Algemeen/ship sprites/barrel roll/0024.png" id="24_kcacp"]
-[ext_resource type="Texture2D" uid="uid://emkkga5du0d0" path="res://Sprites Algemeen/ship sprites/barrel roll/0025.png" id="25_6gjn8"]
-[ext_resource type="Texture2D" uid="uid://d08oyw71il8v1" path="res://Sprites Algemeen/ship sprites/barrel roll/0026.png" id="26_02031"]
-[ext_resource type="Texture2D" uid="uid://cqldy61erbqgi" path="res://Sprites Algemeen/ship sprites/barrel roll/0027.png" id="27_awkfo"]
-[ext_resource type="Texture2D" uid="uid://26k1ak6oh6kj" path="res://Sprites Algemeen/ship sprites/barrel roll/0028.png" id="28_nfajt"]
-[ext_resource type="Texture2D" uid="uid://dg8jdrm7hvajb" path="res://Sprites Algemeen/ship sprites/barrel roll/0029.png" id="29_wujx0"]
-[ext_resource type="Texture2D" uid="uid://bc00d546qylxe" path="res://Sprites Algemeen/ship sprites/barrel roll/0030.png" id="30_2g13g"]
-[ext_resource type="Texture2D" uid="uid://dsqmieug1uqq7" path="res://Sprites Algemeen/ship sprites/barrel roll/0031.png" id="31_02npu"]
-[ext_resource type="Texture2D" uid="uid://cnyujknfh06tt" path="res://Sprites Algemeen/ship sprites/barrel roll/0032.png" id="32_h8r7a"]
-[ext_resource type="Texture2D" uid="uid://blu7dnr7t4ki1" path="res://Sprites Algemeen/ship sprites/barrel roll/0033.png" id="33_2lrji"]
-[ext_resource type="Texture2D" uid="uid://c0sx213migvwd" path="res://Sprites Algemeen/ship sprites/barrel roll/0034.png" id="34_df5x6"]
-[ext_resource type="Texture2D" uid="uid://oeftpxdsiofg" path="res://Sprites Algemeen/ship sprites/barrel roll/0035.png" id="35_5mp52"]
-[ext_resource type="Texture2D" uid="uid://c6nka8ibf5cl1" path="res://Sprites Algemeen/ship sprites/barrel roll/0036.png" id="36_blurh"]
-[ext_resource type="Texture2D" uid="uid://clmbbkf8mioev" path="res://Sprites Algemeen/ship sprites/barrel roll/0037.png" id="37_ltrva"]
-[ext_resource type="Texture2D" uid="uid://c1x0hacbb84ao" path="res://Sprites Algemeen/ship sprites/barrel roll/0038.png" id="38_iakpm"]
-[ext_resource type="Texture2D" uid="uid://px0byqxvfimq" path="res://Sprites Algemeen/ship sprites/barrel roll/0039.png" id="39_txkd2"]
-[ext_resource type="Texture2D" uid="uid://4hw5tiu1dg5m" path="res://Sprites Algemeen/ship sprites/barrel roll/0040.png" id="40_6ntxr"]
-[ext_resource type="Texture2D" uid="uid://bowptdcad22ap" path="res://Sprites Algemeen/ship sprites/barrel roll/0041.png" id="41_qknt8"]
-[ext_resource type="Texture2D" uid="uid://dvbhp6mmpb0jp" path="res://Sprites Algemeen/ship sprites/barrel roll/0042.png" id="42_14660"]
-[ext_resource type="Texture2D" uid="uid://sreicgm1gnn7" path="res://Sprites Algemeen/ship sprites/barrel roll/0043.png" id="43_wntud"]
-[ext_resource type="Texture2D" uid="uid://c1sm0ydqaauyc" path="res://Sprites Algemeen/ship sprites/barrel roll/0044.png" id="44_unoe0"]
-[ext_resource type="Texture2D" uid="uid://cjyxevdulg73u" path="res://Sprites Algemeen/ship sprites/barrel roll/0045.png" id="45_wifcd"]
-[ext_resource type="Texture2D" uid="uid://bta8po8gvnjol" path="res://Sprites Algemeen/ship sprites/barrel roll/0046.png" id="46_fhst7"]
+[ext_resource type="Texture2D" uid="uid://c25nm8tk1t7qf" path="res://Sprites Algemeen/ship sprites/ship sheet barrelroll..png" id="1_204kx"]
 [ext_resource type="Texture2D" uid="uid://cmrq44b58nc31" path="res://Sprites Algemeen/ship sprites/ship left.png" id="47_83t66"]
 [ext_resource type="Texture2D" uid="uid://cnaya3api5jej" path="res://Sprites Algemeen/ship sprites/ship neutral.png" id="48_ab7ys"]
 [ext_resource type="Texture2D" uid="uid://ck0fhjufga468" path="res://Sprites Algemeen/ship sprites/ship right.png" id="49_komw7"]
@@ -110,150 +65,124 @@
 [ext_resource type="Texture2D" uid="uid://b5bbdxkiguifr" path="res://Sprites Algemeen/ship sprites/spin/spin0059.png" id="108_peffk"]
 [ext_resource type="Texture2D" uid="uid://b85ou7p0lde2h" path="res://Sprites Algemeen/ship sprites/spin/spin0060.png" id="109_ar4ur"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpp5t"]
+atlas = ExtResource("1_204kx")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aodsp"]
+atlas = ExtResource("1_204kx")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h062h"]
+atlas = ExtResource("1_204kx")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utgqb"]
+atlas = ExtResource("1_204kx")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqfnt"]
+atlas = ExtResource("1_204kx")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olycd"]
+atlas = ExtResource("1_204kx")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oja42"]
+atlas = ExtResource("1_204kx")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qp5jq"]
+atlas = ExtResource("1_204kx")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rueki"]
+atlas = ExtResource("1_204kx")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w85om"]
+atlas = ExtResource("1_204kx")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af03f"]
+atlas = ExtResource("1_204kx")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np0ar"]
+atlas = ExtResource("1_204kx")
+region = Rect2(360, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7yk6"]
+atlas = ExtResource("1_204kx")
+region = Rect2(384, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ustse"]
+atlas = ExtResource("1_204kx")
+region = Rect2(408, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d64q0"]
+atlas = ExtResource("1_204kx")
+region = Rect2(432, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hddyn"]
+atlas = ExtResource("1_204kx")
+region = Rect2(456, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_umdk1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_emnxg")
+"texture": SubResource("AtlasTexture_fpp5t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_0oogo")
+"texture": SubResource("AtlasTexture_aodsp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_xf23c")
+"texture": SubResource("AtlasTexture_h062h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_eve5a")
+"texture": SubResource("AtlasTexture_utgqb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_xctiu")
+"texture": SubResource("AtlasTexture_cqfnt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_bh1t2")
+"texture": SubResource("AtlasTexture_olycd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_falpg")
+"texture": SubResource("AtlasTexture_oja42")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_q5vgp")
+"texture": SubResource("AtlasTexture_qp5jq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_cjgbk")
+"texture": SubResource("AtlasTexture_rueki")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_efunp")
+"texture": SubResource("AtlasTexture_w85om")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_raame")
+"texture": SubResource("AtlasTexture_af03f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_btnh3")
+"texture": SubResource("AtlasTexture_np0ar")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_spw05")
+"texture": SubResource("AtlasTexture_a7yk6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_ea2n3")
+"texture": SubResource("AtlasTexture_ustse")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_j0fcq")
+"texture": SubResource("AtlasTexture_d64q0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_lflfp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_4oya6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_nk4io")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_st8hl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_vhjhw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_s3epq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_pbxiy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_waabs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_kcacp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_6gjn8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_02031")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_awkfo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_nfajt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_wujx0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_2g13g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_02npu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_h8r7a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_2lrji")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_df5x6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_5mp52")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_blurh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_ltrva")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_iakpm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_txkd2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_6ntxr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_qknt8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_14660")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_wntud")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_unoe0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_wifcd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_fhst7")
+"texture": SubResource("AtlasTexture_hddyn")
 }],
 "loop": false,
 "name": &"barrel roll",
-"speed": 24.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -467,5 +396,7 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_umdk1")
-animation = &"spin"
+animation = &"barrel roll"
 autoplay = "normal"
+frame = 15
+frame_progress = 1.0

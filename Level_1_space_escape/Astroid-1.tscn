@@ -62,7 +62,7 @@ _data = {
 [node name="Astroid-1" type="Area2D" groups=["astroids"]]
 light_mask = 0
 z_index = -1
-collision_layer = 2
+collision_layer = 18
 script = ExtResource("1_iss2k")
 maxhealth = 6
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=68 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://xa7e0tejyntx" path="res://Sprites Algemeen/Characters/Koen.png" id="12_oyuui"]
 [ext_resource type="Script" uid="uid://ckou11wnxn13e" path="res://Level_2_wasteland/Koen.gd" id="13_o7xex"]
 [ext_resource type="Texture2D" uid="uid://cayrl3demeaxb" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Crashed_Engine_Room_BG.png" id="14_h470e"]
+[ext_resource type="Texture2D" uid="uid://dfxxa71dky262" path="res://Level_2_wasteland/carnivorous plant/Koen stuck in plant.png" id="15_0y5bb"]
 [ext_resource type="Texture2D" uid="uid://d0n4awy53qogp" path="res://Sprites Algemeen/Characters/Frank.png" id="15_r6ua3"]
 [ext_resource type="Script" uid="uid://vg35qwkwtutj" path="res://Level_2_wasteland/TalkboxFrank.gd" id="16_wcqd4"]
 [ext_resource type="Texture2D" uid="uid://1tg65x2u4fj4" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Engine Room.png" id="17_5m1uk"]
@@ -414,14 +415,53 @@ size = Vector2(2, 2)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4exxo"]
 size = Vector2(14, 20.875)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc5fr"]
-size = Vector2(28, 33)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xual3"]
 size = Vector2(20, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo8ub"]
 size = Vector2(4, 1.375)
+
+[sub_resource type="Animation" id="Animation_0rdyc"]
+resource_name = "Idle"
+length = 1.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_idsa3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cn70h"]
+_data = {
+&"Idle": SubResource("Animation_0rdyc"),
+&"RESET": SubResource("Animation_idsa3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc5fr"]
+size = Vector2(28, 33)
 
 [sub_resource type="Animation" id="Animation_vlksy"]
 resource_name = "Door opens"
@@ -553,7 +593,7 @@ _data = {
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(-7, -291)
+position = Vector2(65, 154)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
@@ -647,41 +687,57 @@ shape = SubResource("RectangleShape2D_4exxo")
 position = Vector2(0, 7)
 texture = ExtResource("11_8fg72")
 
-[node name="Koen" type="Sprite2D" parent="."]
+[node name="Koen Scene" type="Node2D" parent="."]
+script = ExtResource("13_o7xex")
+
+[node name="Talkbox dialoog 3 en 4" parent="Koen Scene" instance=ExtResource("10_8jjql")]
+position = Vector2(153, -51)
+convos = ["Koen_Dialogue_3", "Koen_Dialogue_4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen Scene/Talkbox dialoog 3 en 4"]
+position = Vector2(6, -11.5)
+shape = SubResource("RectangleShape2D_xual3")
+
+[node name="PressX" type="Sprite2D" parent="Koen Scene/Talkbox dialoog 3 en 4"]
+position = Vector2(11, 9)
+texture = ExtResource("11_8fg72")
+
+[node name="Koen" type="Sprite2D" parent="Koen Scene"]
+visible = false
 position = Vector2(153, -51)
 texture = ExtResource("12_oyuui")
 offset = Vector2(1, -8)
 vframes = 2
-script = ExtResource("13_o7xex")
+frame = 1
 
-[node name="Talkbox dialoog 1 en 2" parent="Koen" instance=ExtResource("10_8jjql")]
-position = Vector2(0, -5)
+[node name="StaticBody2D" type="StaticBody2D" parent="Koen Scene/Koen"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen Scene/Koen/StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lo8ub")
+
+[node name="KoenStuckInPlant" type="Sprite2D" parent="Koen Scene"]
+position = Vector2(147, -67)
+texture = ExtResource("15_0y5bb")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Koen Scene/KoenStuckInPlant"]
+libraries = {
+&"": SubResource("AnimationLibrary_cn70h")
+}
+autoplay = "Idle"
+
+[node name="Talkbox dialoog 1 en 2" parent="Koen Scene" instance=ExtResource("10_8jjql")]
+position = Vector2(153, -56)
 convos = ["Koen_Dialogue_1", "Koen_Dialogue_2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen/Talkbox dialoog 1 en 2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen Scene/Talkbox dialoog 1 en 2"]
 position = Vector2(7, 72.5)
 shape = SubResource("RectangleShape2D_yc5fr")
 
-[node name="PressX" type="Sprite2D" parent="Koen/Talkbox dialoog 1 en 2"]
+[node name="PressX" type="Sprite2D" parent="Koen Scene/Talkbox dialoog 1 en 2"]
 position = Vector2(11, 85)
 texture = ExtResource("11_8fg72")
-
-[node name="Talkbox dialoog 3 en 4" parent="Koen" instance=ExtResource("10_8jjql")]
-convos = ["Koen_Dialogue_3", "Koen_Dialogue_4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen/Talkbox dialoog 3 en 4"]
-position = Vector2(6, -11.5)
-shape = SubResource("RectangleShape2D_xual3")
-
-[node name="PressX" type="Sprite2D" parent="Koen/Talkbox dialoog 3 en 4"]
-position = Vector2(11, 9)
-texture = ExtResource("11_8fg72")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Koen"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Koen/StaticBody2D"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_lo8ub")
 
 [node name="CrashedEngineRoomBg" type="Sprite2D" parent="."]
 position = Vector2(-171, -254)

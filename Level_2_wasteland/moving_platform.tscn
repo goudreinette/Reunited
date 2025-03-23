@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bucppmtn2uka"]
 
 [ext_resource type="Script" uid="uid://cb3sbcncpj78j" path="res://Level_2_wasteland/moving_platform.gd" id="1_hrpga"]
-[ext_resource type="Texture2D" uid="uid://b24rn1ktbvdtk" path="res://Level_2_wasteland/Level_2_wasteland_sprites/moving_platform_1.png" id="2_f8lbu"]
+[ext_resource type="Texture2D" uid="uid://b24rn1ktbvdtk" path="res://Level_2_wasteland/Level_2_wasteland_sprites/moving_platform.png" id="2_f8lbu"]
 
 [sub_resource type="Curve2D" id="Curve2D_hrpga"]
 _data = {

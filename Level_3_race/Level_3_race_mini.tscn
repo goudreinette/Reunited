@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dham88id4j25"]
+[gd_scene load_steps=30 format=3 uid="uid://dham88id4j25"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Texture2D" uid="uid://blxxep5f331iq" path="res://Level_3_race/race sprites/race map big.png" id="2_pkk10"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="21_wtnat"]
 [ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="22_2txuc"]
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="23_2txuc"]
+[ext_resource type="Texture2D" uid="uid://dnwcc1u6uw736" path="res://Level_3_race/race sprites/plants/plant3.png" id="24_kwgqw"]
+[ext_resource type="Texture2D" uid="uid://d1s2kqirrohhm" path="res://Level_3_race/race sprites/plants/plant4.png" id="25_6fev4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
 animations = [{
@@ -238,3 +240,33 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.387505, 0.0230842,
 billboard = 2
 texture_filter = 0
 texture = ExtResource("23_2txuc")
+
+[node name="Plant9" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.387505, 0.0194702, -2.08304)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_kwgqw")
+
+[node name="Plant10" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.453523, 0.0194702, -2.00446)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_kwgqw")
+
+[node name="Plant11" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.453523, 0.0194702, -2.38785)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("24_kwgqw")
+
+[node name="Plant12" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.522824, 0.0194702, -2.18324)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("25_6fev4")
+
+[node name="Plant13" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.522824, 0.0194702, -2.0728)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("25_6fev4")

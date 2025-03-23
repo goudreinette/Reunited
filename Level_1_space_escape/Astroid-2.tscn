@@ -15,7 +15,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Ship:material:shader_parameter/active")
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,11 +31,11 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Ship:material:shader_parameter/active")
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.100417),
+"times": PackedFloat32Array(0, 0.114396),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -48,7 +48,7 @@ _data = {
 }
 
 [node name="Astroid-2" type="Area2D" groups=["astroids"]]
-collision_layer = 2
+collision_layer = 18
 script = ExtResource("1_m74j2")
 maxhealth = 6
 
