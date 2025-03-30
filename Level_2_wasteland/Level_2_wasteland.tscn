@@ -1,9 +1,9 @@
-[gd_scene load_steps=73 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=79 format=3 uid="uid://byo7134utnix0"]
 
-[ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tileset.png" id="1_d6lv5"]
+[ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
-[ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Ravijn.png" id="2_mqm2j"]
-[ext_resource type="Texture2D" uid="uid://2nyydriqcu7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tiles_PixelCrawler.png" id="3_0y5bb"]
+[ext_resource type="Texture2D" uid="uid://5sp0n4wt6o1o" path="res://Level_2_wasteland/Tileset/Ravijn.png" id="2_mqm2j"]
+[ext_resource type="Texture2D" uid="uid://2nyydriqcu7" path="res://Level_2_wasteland/Tileset/Tiles_PixelCrawler.png" id="3_0y5bb"]
 [ext_resource type="AudioStream" uid="uid://bmao6k1v8lc6l" path="res://music/Chill Wasteland/Relaxed in t midden neo-soul 2025-02-02 1840.wav" id="4_0rdyc"]
 [ext_resource type="Script" path="res://Level_2_wasteland/music.gd" id="5_jlab0"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes TEST/Player/player.tscn" id="6_51cn4"]
@@ -35,12 +35,17 @@
 [ext_resource type="Texture2D" uid="uid://btsjpabkrhv7u" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tentje.png" id="31_00uxk"]
 [ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Campfire_base.png" id="32_h8mwf"]
 [ext_resource type="PackedScene" uid="uid://dgbc31b6g0pmw" path="res://Level_2_wasteland/gloopy_plant_1.tscn" id="33_ma2wb"]
-[ext_resource type="Texture2D" uid="uid://ptc8jv5cvbji" path="res://Level_2_wasteland/Level_2_wasteland_sprites/ship concept test (side).png" id="34_hyrea"]
 [ext_resource type="Texture2D" uid="uid://bgaxuqsjod4au" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-sheet.png" id="36_0rdyc"]
+[ext_resource type="Texture2D" uid="uid://bb082bbayyc1g" path="res://Level_2_wasteland/ship crash.png" id="36_0y5bb"]
 [ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://Level_2_wasteland/card.gd" id="36_yxs4w"]
 [ext_resource type="PackedScene" uid="uid://bucppmtn2uka" path="res://Level_2_wasteland/moving_platform.tscn" id="37_hbigv"]
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="38_g6r0j"]
 [ext_resource type="PackedScene" uid="uid://d2yxubepkj848" path="res://Effects/fire_with_smoke.tscn" id="39_jashp"]
+[ext_resource type="Script" uid="uid://b4blhpt77076i" path="res://Level_2_wasteland/cutscene.gd" id="42_cn70h"]
+[ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="43_3fwvb"]
+[ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="44_8jjql"]
+[ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
+[ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]
 texture = ExtResource("1_d6lv5")
@@ -624,11 +629,14 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o7xex"]
+radius = 27.8927
+
 [node name="Wasteland" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(149, 231)
+position = Vector2(-521, 106)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
@@ -650,10 +658,10 @@ layer_0/tile_data = PackedInt32Array(262151, 524288, 6, 327687, 589824, 6, 32768
 
 [node name="Backgroundcolor" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -25019.0
-offset_top = -24990.0
-offset_right = 24981.0
-offset_bottom = 25010.0
+offset_left = -25030.0
+offset_top = -24981.0
+offset_right = 24970.0
+offset_bottom = 25019.0
 color = Color(0.317647, 0.227451, 0.239216, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -933,48 +941,55 @@ texture = ExtResource("11_8fg72")
 
 [node name="Gloopy-plant-1" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(98, 191)
+range = 50.0
 
 [node name="Gloopy-plant-2" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(214, 272)
+range = 50.0
 
 [node name="Gloopy-plant-3" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-298, -167)
+range = 50.0
 
 [node name="Gloopy-plant-4" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-478, -338)
 frame_progress = 0.551015
+range = 50.0
 
 [node name="Gloopy-plant-4" parent="Gloopy-plant-4" instance=ExtResource("33_ma2wb")]
 position = Vector2(-479, -340)
 frame_progress = 0.551015
+range = 50.0
 
 [node name="Gloopy-plant-9" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-487, -237)
 frame_progress = 0.551015
+range = 50.0
 
 [node name="Gloopy-plant-10" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-574, -248)
 frame_progress = 0.551015
-
-[node name="Gloopy-plant-11" parent="." instance=ExtResource("33_ma2wb")]
-position = Vector2(-520, 177)
-frame_progress = 0.551015
+range = 50.0
 
 [node name="Gloopy-plant-5" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-80, -354)
+range = 50.0
 
 [node name="Gloopy-plant-6" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-41, -363)
+range = 50.0
 
 [node name="Gloopy-plant-7" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-17, -323)
+range = 50.0
 
 [node name="Gloopy-plant-8" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-47, -226)
+range = 50.0
 
 [node name="ShipConceptTest(side)" type="Sprite2D" parent="."]
 position = Vector2(15, 104)
-texture = ExtResource("34_hyrea")
+texture = ExtResource("36_0y5bb")
 offset = Vector2(-13, -16)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ShipConceptTest(side)"]
@@ -982,7 +997,7 @@ position = Vector2(0, -7)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ShipConceptTest(side)/StaticBody2D"]
 position = Vector2(-4, 10)
-polygon = PackedVector2Array(-33, -22, 30, -6, 36, 2, 33, 9, 8, 6, -27, -6, -38, -8)
+polygon = PackedVector2Array(-48, -20, -14, -39, 44, 4, 18, 14, -14, 3, -19, 14, -51, 10)
 
 [node name="Card" type="Sprite2D" parent="."]
 position = Vector2(-46, -346)
@@ -1106,6 +1121,44 @@ curve = SubResource("Curve2D_51cn4")
 position = Vector2(-559, -16)
 curve = SubResource("Curve2D_idsa3")
 
+[node name="Cutscene" type="Area2D" parent="." node_paths=PackedStringArray("characters")]
+position = Vector2(-389, 195)
+collision_layer = 0
+script = ExtResource("42_cn70h")
+characters = [NodePath("Frank2"), NodePath("Igor"), NodePath("Koen"), NodePath("Guus")]
+
+[node name="Frank2" parent="Cutscene" node_paths=PackedStringArray("next_position") instance=ExtResource("43_3fwvb")]
+position = Vector2(-129, 109)
+next_position = NodePath("../FrankPos")
+
+[node name="Igor" parent="Cutscene" node_paths=PackedStringArray("next_position") instance=ExtResource("44_8jjql")]
+position = Vector2(119, -107)
+next_position = NodePath("../IgorPos")
+
+[node name="Koen" parent="Cutscene" node_paths=PackedStringArray("next_position") instance=ExtResource("45_8fg72")]
+position = Vector2(155, 126)
+next_position = NodePath("../KoenPos")
+
+[node name="Guus" parent="Cutscene" node_paths=PackedStringArray("next_position") instance=ExtResource("46_oyuui")]
+position = Vector2(46, -113)
+next_position = NodePath("../guusPos")
+
+[node name="FrankPos" type="Node2D" parent="Cutscene"]
+position = Vector2(-43, 25)
+
+[node name="guusPos" type="Node2D" parent="Cutscene"]
+position = Vector2(-14, -33)
+
+[node name="IgorPos" type="Node2D" parent="Cutscene"]
+position = Vector2(54, -20)
+
+[node name="KoenPos" type="Node2D" parent="Cutscene"]
+position = Vector2(22, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene"]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_o7xex")
+
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 4" to="Respawn Point 4" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 2" to="Respawn Point 2" method="_on_body_entered"]
@@ -1114,6 +1167,7 @@ curve = SubResource("Curve2D_idsa3")
 [connection signal="timeout" from="Guus en Igor/EndOfConvoTimer" to="Guus en Igor" method="_on_end_of_convo_timer_timeout"]
 [connection signal="body_entered" from="Card/CardArea" to="Player" method="_on_card_area_body_entered"]
 [connection signal="body_entered" from="Card/CardArea" to="Card" method="_on_card_area_body_entered"]
+[connection signal="body_entered" from="Cutscene" to="Cutscene" method="_on_body_entered"]
 
 [editable path="moving platform"]
 [editable path="moving platform4"]

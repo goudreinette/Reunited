@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crhp5os33ekia"
-path="res://.godot/imported/Tileset.png-cefaf6634e539124e4818c1269948d5a.ctex"
+uid="uid://5sp0n4wt6o1o"
+path="res://.godot/imported/Ravijn.png-58ca648fb7b3b7661f13cad3f8ed2a00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-cefaf6634e539124e4818c1269948d5a.ctex"]
+source_file="res://Level_2_wasteland/Tileset/Ravijn.png"
+dest_files=["res://.godot/imported/Ravijn.png-58ca648fb7b3b7661f13cad3f8ed2a00.ctex"]
 
 [params]
 

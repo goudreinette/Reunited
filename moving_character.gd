@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	#direction = direction.normalized()
 	#velocity = direction * move_speed
 	#move_and_slide()
-	move_to(next_position.position, move_time)
+	#move_to(next_position.position, move_time)
 	
 	pos_dif = position - last_pos
 	last_pos = position

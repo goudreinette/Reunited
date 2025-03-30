@@ -6,7 +6,7 @@ signal died
 enum FiringPatterns {
 	Single
 }
-@export var range : int = 50
+@export var range : float = 50
 @export var firing_pattern = FiringPatterns.Single
 @export var rate_of_fire = 2
 var player : Player
@@ -45,7 +45,7 @@ func shoot():
 
 func _on_shoot_timer_timeout():
 	if player:
-		if abs(player.global_position.y - global_position.y) < range:
+		if global_position.distance_to(player.global_position) < range:
 			if firing_pattern == FiringPatterns.Single:
 				shoot()
 				$ShootTimer.start()
