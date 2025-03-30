@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bbexjbew52p5k"]
+[gd_scene load_steps=17 format=3 uid="uid://dc84xukp6rnfr"]
 
-[ext_resource type="PackedScene" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
+[ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_uewx8"]
-[ext_resource type="PackedScene" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
+[ext_resource type="PackedScene" uid="uid://cx3nl2r3jior2" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
 [ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="3_hbhgp"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://Smup Test Level/level_position.gd" id="4_c8juj"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="5_arypi"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="8_t7ibp"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="9_uewx8"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="10_pfj2u"]
-[ext_resource type="PackedScene" path="res://Level_1_space_escape/Astroid-1.tscn" id="11_rg5ho"]
+[ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="11_rg5ho"]
 [ext_resource type="AudioStream" uid="uid://wbx08luua2y6" path="res://sounds/music/lava lamp 11 feb met gitaar.wav" id="13_0gg3a"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="13_ircnx"]
 
