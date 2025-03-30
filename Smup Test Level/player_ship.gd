@@ -12,6 +12,8 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var gatling_cooldown = 0.025
 @export var current_weapon_type = WeaponTypes.SCATTER
 
+@export var weapon_disabled = false
+
 @export var bullet_scene: PackedScene
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
@@ -20,6 +22,7 @@ var shield = max_shield:
 var in_lazer = false
 
 var can_shoot = true
+
 
 var barelling = false
 
@@ -38,7 +41,7 @@ func start():
 	$GunCooldown.wait_time = cooldown
 	
 func _process(delta):
-	print(barelling)
+	#print(barelling)
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
@@ -63,7 +66,7 @@ func _process(delta):
 		$AnimatedSprite2D.play("barrel roll")
 	
 		
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and not weapon_disabled:
 		#$AnimatedSprite2D.animation = "barrel roll"
 		
 		#if get_parent():
