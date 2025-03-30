@@ -159,3 +159,7 @@ func _on_scan_detect_area_entered(area: Area2D) -> void:
 	in_scan = true
 func _on_scan_detect_area_exited(area: Area2D) -> void:
 	in_scan = false
+
+
+func _on_projectile_detect_area_entered(area: Area2D) -> void:
+	if not is_dead: dead()

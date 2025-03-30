@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func start(pos):
 	position = pos
 	$AnimatedSprite2D.play("normal")
@@ -9,9 +8,10 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "hit":
 		$AnimationPlayer.play("crash")
 		$AnimatedSprite2D.play("spin")
-	if anim_name == "crash":
-		$AnimatedSprite2D.visible = false
-		$"Explosion impact".play("impact")
+		$Timer.start()
+	#if anim_name == "crash":
+		#$AnimatedSprite2D.visible = false
+		#$"Main planet/Explosion impact".play("impact")
 
 
 # Ship hit
@@ -29,5 +29,10 @@ func _on_area_2d_area_entered(area):
 
 # Crash on planet
 func _on_explosion_impact_animation_finished():
-	$"Explosion impact".play("fire")
+	$"Main planet/Explosion impact".play("fire")
 	
+
+
+func _on_timer_timeout() -> void:
+	$AnimatedSprite2D.visible = false
+	$"Main planet/Explosion impact".play("impact")

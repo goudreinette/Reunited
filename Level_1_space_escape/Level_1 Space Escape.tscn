@@ -60,7 +60,7 @@ shader_parameter/vignette_opacity = 0.6
 script = ExtResource("1_g0tbl")
 
 [node name="CrashSceneDetect" type="Node2D" parent="." node_paths=PackedStringArray("UI")]
-position = Vector2(0, -1519)
+position = Vector2(0, -1452)
 script = ExtResource("3_yhv07")
 scene = ExtResource("4_avks8")
 UI = NodePath("../CanvasLayer/UI")
@@ -82,14 +82,14 @@ scroll_scale = Vector2(0.75, 0.75)
 position = Vector2(214, -1223)
 texture = ExtResource("4_5kg8n")
 
+[node name="DryPlanet2" type="Sprite2D" parent="Parallax2D 0_75"]
+position = Vector2(-16, 874)
+rotation = 3.14159
+texture = ExtResource("4_5kg8n")
+
 [node name="StandaardPlaneet128x" type="Sprite2D" parent="Parallax2D 0_75"]
 position = Vector2(21, -287)
 texture = ExtResource("3_lcmmd")
-
-[node name="IcePlanet100x2" type="Sprite2D" parent="Parallax2D 0_75"]
-position = Vector2(30, 1146)
-texture = ExtResource("4_bur0m")
-offset = Vector2(7, 13)
 
 [node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
 z_index = -1
@@ -184,7 +184,7 @@ position = Vector2(-65, -100)
 position = Vector2(63, -41)
 
 [node name="LevelPosition" type="Node2D" parent="."]
-position = Vector2(-2, 1242)
+position = Vector2(-2, 1565)
 script = ExtResource("13_4j8lc")
 levelspeed = 50.0
 

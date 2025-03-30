@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dgdfahpdeft6k"]
+[gd_scene load_steps=69 format=3 uid="uid://dgdfahpdeft6k"]
 
 [ext_resource type="Script" uid="uid://d1ako1kfljv0p" path="res://Level_1_space_escape/test_level_1_shrink_crash.gd" id="1_owjmi"]
 [ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="2_lb3ue"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://4nsv8l6yppaf" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_left (16 x 16).png" id="14_1vonq"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="15_em3od"]
 [ext_resource type="Texture2D" uid="uid://vtgnp04evjex" path="res://Level_1_space_escape/level_1_space_escape_sprites/Small fire.png" id="16_roipu"]
+[ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="18_bqkpq"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="19_ns6ep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0erl"]
@@ -421,10 +422,22 @@ tracks/2/keys = {
 "points": PackedFloat32Array(105, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main planet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, -100)]
+}
 
 [sub_resource type="Animation" id="Animation_n6xjs"]
 resource_name = "crash"
-length = 6.0
+length = 13.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -432,7 +445,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0666666, 0.0697169, 5.06667),
+"times": PackedFloat32Array(0.0666666, 0.0697169, 5.03333),
 "transitions": PackedFloat32Array(2, 1, 2),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(0, 0)]
@@ -446,7 +459,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(167, -0.25, 0, 0.25, 0, 24, -3.18996, -44.5, 0.543373, 41.5),
-"times": PackedFloat32Array(0.0666666, 5.06667)
+"times": PackedFloat32Array(0.0666666, 5.03333)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -457,25 +470,48 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(127, -0.25, 0, 0.25, 0, 24, -1.25663, -8.5, 0.25, 0),
-"times": PackedFloat32Array(0.0666666, 5.06667)
+"times": PackedFloat32Array(0.0666666, 5.03333)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main planet:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.03333, 12.5028),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -100), Vector2(40, 20), Vector2(40, 200)]
 }
 
 [sub_resource type="Animation" id="Animation_s2g4h"]
 resource_name = "hit"
 length = 3.0
 
+[sub_resource type="Animation" id="Animation_bqkpq"]
+resource_name = "move_on"
+length = 7.5
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n5y7i"]
 _data = {
 &"RESET": SubResource("Animation_n5y7i"),
 &"crash": SubResource("Animation_n6xjs"),
-&"hit": SubResource("Animation_s2g4h")
+&"hit": SubResource("Animation_s2g4h"),
+&"move_on": SubResource("Animation_bqkpq")
 }
 
 [node name="TestLevel1ShrinkCrash" type="Node2D"]
 script = ExtResource("1_owjmi")
 
-[node name="Explosion impact" type="AnimatedSprite2D" parent="."]
-position = Vector2(21, 16)
+[node name="Main planet" type="Sprite2D" parent="."]
+position = Vector2(40, -100)
+texture = ExtResource("18_bqkpq")
+offset = Vector2(7, 13)
+
+[node name="Explosion impact" type="AnimatedSprite2D" parent="Main planet"]
+z_index = 5
+position = Vector2(-14, 2.16223)
 sprite_frames = SubResource("SpriteFrames_q4r5u")
 animation = &"nothing"
 autoplay = "nothing"
@@ -483,6 +519,8 @@ autoplay = "nothing"
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("12_vnd6m")]
 position = Vector2(169, 105)
 animation = &"normal"
+frame = 0
+frame_progress = 0.0
 
 [node name="Boosters" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 position = Vector2(0, 16)
@@ -513,9 +551,13 @@ libraries = {
 position = Vector2(169, 165)
 speed = -40
 
-[connection signal="animation_finished" from="Explosion impact" to="." method="_on_explosion_impact_animation_finished"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="animation_finished" from="Main planet/Explosion impact" to="." method="_on_explosion_impact_animation_finished"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2d" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="AnimatedSprite2D/Area2d" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_shape_entered" from="AnimatedSprite2D/Area2d" to="." method="_on_area_2d_body_shape_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D/Ship explosion" to="." method="_on_ship_explosion_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

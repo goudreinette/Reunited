@@ -38,7 +38,7 @@ func start():
 	$GunCooldown.wait_time = cooldown
 	
 func _process(delta):
-	print(barelling)
+	##print(barelling)
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
@@ -71,7 +71,7 @@ func _process(delta):
 				#$".."._on_start_pressed()
 		shoot()
 	##damage in lazer
-	if in_lazer:
+	if in_lazer and not barelling:
 		$HitAnimation.play("hit")
 		shield -=0.5
 

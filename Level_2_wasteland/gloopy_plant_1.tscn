@@ -1,6 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://dgbc31b6g0pmw"]
+[gd_scene load_steps=41 format=3 uid="uid://dgbc31b6g0pmw"]
 
 [ext_resource type="Texture2D" uid="uid://bo81ax7bwgb64" path="res://Level_2_wasteland/Level_2_wasteland_sprites/gloopy-plant-1.png" id="1_avrft"]
+[ext_resource type="Script" uid="uid://daadtq0htg4lo" path="res://Smup Test Level/enemies/Goop-shoot.gd" id="2_fwcu6"]
+[ext_resource type="PackedScene" uid="uid://0am6wpvkaciw" path="res://Smup Test Level/enemies/goopy_bullet.tscn" id="3_q2oss"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yc5fr"]
 atlas = ExtResource("1_avrft")
@@ -263,6 +265,10 @@ sprite_frames = SubResource("SpriteFrames_e0we5")
 autoplay = "default"
 frame_progress = 0.109199
 offset = Vector2(0, -15)
+script = ExtResource("2_fwcu6")
+range = 30
+rate_of_fire = 1
+bullet_scene = ExtResource("3_q2oss")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -271,3 +277,11 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_hn1bu")
+
+[node name="ShootTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="ShootinPosition" type="Node2D" parent="."]
+position = Vector2(-2, -25)
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

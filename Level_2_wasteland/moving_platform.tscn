@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b24rn1ktbvdtk" path="res://Level_2_wasteland/Level_2_wasteland_sprites/moving_platform.png" id="2_f8lbu"]
 
 [sub_resource type="Curve2D" id="Curve2D_hrpga"]
+resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -20, -1, 0, 0, 0, 0, 57, -1)
 }
@@ -57,8 +58,7 @@ script = ExtResource("1_hrpga")
 loop = false
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(45.7966, -1)
-progress = 65.912
+position = Vector2(-20, -1)
 rotates = false
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]

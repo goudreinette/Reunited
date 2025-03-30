@@ -44,7 +44,6 @@ size = Vector2(4, 4)
 
 [node name="EnemyBullet" type="Area2D"]
 script = ExtResource("1_gk4vk")
-speed = 30
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aappp")

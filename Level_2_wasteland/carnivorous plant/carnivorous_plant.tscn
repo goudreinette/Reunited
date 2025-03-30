@@ -98,7 +98,7 @@ _data = {
 radius = 1.0
 
 [node name="Plant" type="Sprite2D"]
-position = Vector2(-31, 19)
+position = Vector2(-27, 19)
 texture = ExtResource("1_055h5")
 offset = Vector2(31, -19)
 hframes = 15

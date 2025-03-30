@@ -15,8 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player:
 		##see if formation is on screen/player is in range and start moving
-		if player.get_parent().global_position.y < global_position.y:
+		if player.get_parent().global_position.y < global_position.y and not has_spawned:
 			move_to_scene()
+		else: position.y = player.get_parent().global_position.y
 
 ##move the player to the starting point of the scene	
 func move_to_scene():
@@ -25,7 +26,7 @@ func move_to_scene():
 	if not has_spawned:
 		UI.visible = false
 		var tween = create_tween()
-		player.get_parent().levelspeed = 0
+		#player.get_parent().levelspeed = 0
 		tween.tween_property(player,"position", $ship_position.position, 1.0)
 		tween.tween_callback(spawn_scene)
 		has_spawned = true
@@ -35,8 +36,8 @@ func spawn_scene():
 	player.visible = false
 	player
 	var s = scene.instantiate()
-	get_tree().get_root().add_child(s)
-	s.start(global_position)
+	add_child(s)
+	s.start(Vector2(0,0))
 
 func check_for_player():
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
