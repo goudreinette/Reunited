@@ -41,7 +41,7 @@ func _process(delta):
 	turn_speed += input.x * remap(-speed, 0, .05, 0, turn_acceleration) * delta
 	turn_speed *= turn_drag
 	
-	#rotation_degrees.y -= turn_speed
+	rotation_degrees.y -= turn_speed
 	
 	#if turn_speed > .5:
 		#

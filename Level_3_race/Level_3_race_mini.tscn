@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dham88id4j25"]
+[gd_scene load_steps=41 format=3 uid="uid://dham88id4j25"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_74xix"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="4_neu27"]
 [ext_resource type="Texture2D" uid="uid://b3xn3fiqlj86q" path="res://Level_3_race/race sprites/ship bank left/bank right0001.png" id="4_pkk10"]
+[ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/race_camera.gd" id="5_63ub1"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Texture2D" uid="uid://jy7y30fgn861" path="res://Level_3_race/race sprites/ship bank left/bank right0002.png" id="5_on2dk"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
@@ -31,6 +32,21 @@
 [ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/car_path_follow.gd" id="26_62tid"]
 [ext_resource type="PackedScene" uid="uid://bt0h820c3kuh0" path="res://models/race/cuba_car_blue.glb" id="27_62tid"]
 [ext_resource type="PackedScene" uid="uid://cpym6ti1don5u" path="res://models/race/cuba_car_cabriolet.glb" id="28_pp4r8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
+sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
+sky_horizon_color = Color(0.530495, 0.669348, 0.823281, 1)
+sky_energy_multiplier = 1.41
+ground_horizon_color = Color(0.643137, 0.843137, 1, 1)
+energy_multiplier = 1.8
+
+[sub_resource type="Sky" id="Sky_neu27"]
+sky_material = SubResource("ProceduralSkyMaterial_23tvb")
+
+[sub_resource type="Environment" id="Environment_mggcm"]
+background_mode = 2
+sky = SubResource("Sky_neu27")
+sky_custom_fov = 7.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5xsm"]
 animations = [{
@@ -89,21 +105,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
-sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
-sky_horizon_color = Color(0.530495, 0.669348, 0.823281, 1)
-sky_energy_multiplier = 1.41
-ground_horizon_color = Color(0.643137, 0.843137, 1, 1)
-energy_multiplier = 1.8
-
-[sub_resource type="Sky" id="Sky_neu27"]
-sky_material = SubResource("ProceduralSkyMaterial_23tvb")
-
-[sub_resource type="Environment" id="Environment_mggcm"]
-background_mode = 2
-sky = SubResource("Sky_neu27")
-sky_custom_fov = 7.0
-
 [sub_resource type="Animation" id="Animation_6ha66"]
 length = 0.001
 tracks/0/type = "value"
@@ -133,7 +134,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D/Countdown:frame")
+tracks/2/path = NodePath("../../Camera3D/Countdown:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -145,7 +146,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Camera3D/Countdown:visible")
+tracks/3/path = NodePath("../../Camera3D/Countdown:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -180,12 +181,12 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 3, 20), Vector3(0, 0, 0)]
+"values": [Vector3(0, 3, 20), Vector3(0, 0.5, 1.3)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D/Countdown:frame")
+tracks/2/path = NodePath("../../Camera3D/Countdown:frame")
 tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -197,7 +198,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Camera3D/Countdown:visible")
+tracks/3/path = NodePath("../../Camera3D/Countdown:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -258,6 +259,23 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target", "look_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829251, 0.0410339, 0.958284)
+environment = SubResource("Environment_mggcm")
+current = true
+near = 0.002
+script = ExtResource("5_63ub1")
+follow_target = NodePath("../Ship/CameraOffset")
+look_target = NodePath("../Ship")
+follow_offset = Vector3(0, 0, 0)
+
+[node name="Countdown" type="Sprite3D" parent="Camera3D"]
+transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0, -0.0013027, -0.0849719)
+layers = 65537
+texture_filter = 0
+texture = ExtResource("18_0adhr")
+hframes = 4
+
 [node name="Ship" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.829251, 0.0255188, 0.621312)
 billboard = 2
@@ -272,19 +290,6 @@ turn_acceleration = 10.0
 
 [node name="CameraOffset" type="Node3D" parent="Ship"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-
-[node name="Camera3D" type="Camera3D" parent="Ship/CameraOffset"]
-transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
-environment = SubResource("Environment_mggcm")
-current = true
-near = 0.002
-
-[node name="Countdown" type="Sprite3D" parent="Ship/CameraOffset/Camera3D"]
-transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0, -0.0013027, -0.0849719)
-layers = 65537
-texture_filter = 0
-texture = ExtResource("18_0adhr")
-hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ship/CameraOffset"]
 libraries = {
@@ -482,7 +487,7 @@ visible = false
 transform = Transform3D(1, -2.21444e-08, 6.40284e-10, 2.26555e-08, 1, -3.72529e-09, 1.74623e-10, -5.58794e-09, 1, 8.28671, 0.0818219, -0.00891113)
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0701869, 0.0375996, 0.00775076, -0.0377058, 0.070552, -0.000812559, -0.00721732, -0.00294021, 0.0796196, 1.00715, 0.0438174, 8.72543)
+transform = Transform3D(0.0701869, 0.0375996, 0.00775076, -0.0377058, 0.070552, -0.000812559, -0.00721732, -0.0029402, 0.0796196, 1.00715, 0.0438174, 8.72543)
 progress = 2.0
 script = ExtResource("26_62tid")
 

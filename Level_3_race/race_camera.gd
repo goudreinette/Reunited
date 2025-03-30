@@ -5,5 +5,6 @@ extends Camera3D
 @export var follow_offset = Vector3(0,0,1) 
 
 func _process(delta):
-  global_position = lerp(follow_target.global_position + follow_offset, global_position + follow_offset, 0.1)
-  look_at(look_target.position)
+	global_position = lerp(follow_target.global_position, global_position, 0.9)
+	rotation_degrees.y = follow_target.rotation_degrees.y
+	look_at(look_target.position)
