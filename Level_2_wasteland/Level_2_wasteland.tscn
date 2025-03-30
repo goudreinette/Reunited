@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=80 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
@@ -46,6 +46,7 @@
 [ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="44_8jjql"]
 [ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
 [ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]
+[ext_resource type="Texture2D" uid="uid://dicf2yu17auj6" path="res://Level_2_wasteland/ship fixed.png" id="47_3fwvb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]
 texture = ExtResource("1_d6lv5")
@@ -941,51 +942,40 @@ texture = ExtResource("11_8fg72")
 
 [node name="Gloopy-plant-1" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(98, 191)
-range = 50.0
 
 [node name="Gloopy-plant-2" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(214, 272)
-range = 50.0
 
 [node name="Gloopy-plant-3" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-298, -167)
-range = 50.0
 
 [node name="Gloopy-plant-4" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-478, -338)
 frame_progress = 0.551015
-range = 50.0
 
 [node name="Gloopy-plant-4" parent="Gloopy-plant-4" instance=ExtResource("33_ma2wb")]
 position = Vector2(-479, -340)
 frame_progress = 0.551015
-range = 50.0
 
 [node name="Gloopy-plant-9" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-487, -237)
 frame_progress = 0.551015
-range = 50.0
 
 [node name="Gloopy-plant-10" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-574, -248)
 frame_progress = 0.551015
-range = 50.0
 
 [node name="Gloopy-plant-5" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-80, -354)
-range = 50.0
 
 [node name="Gloopy-plant-6" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-41, -363)
-range = 50.0
 
 [node name="Gloopy-plant-7" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-17, -323)
-range = 50.0
 
 [node name="Gloopy-plant-8" parent="." instance=ExtResource("33_ma2wb")]
 position = Vector2(-47, -226)
-range = 50.0
 
 [node name="ShipConceptTest(side)" type="Sprite2D" parent="."]
 position = Vector2(15, 104)
@@ -1158,6 +1148,10 @@ position = Vector2(22, 36)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene"]
 position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_o7xex")
+
+[node name="ShipFixed" type="Sprite2D" parent="Cutscene"]
+position = Vector2(-107, -1)
+texture = ExtResource("47_3fwvb")
 
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 4" to="Respawn Point 4" method="_on_body_entered"]
