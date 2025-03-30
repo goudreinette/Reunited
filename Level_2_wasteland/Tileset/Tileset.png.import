@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2nyydriqcu7"
-path="res://.godot/imported/Tiles_PixelCrawler.png-3c5601b342b1c4542e414ed5ebc65b53.ctex"
+uid="uid://crhp5os33ekia"
+path="res://.godot/imported/Tileset.png-680199d210657eb104f45c60b03603ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/Tileset/Tiles_PixelCrawler.png"
-dest_files=["res://.godot/imported/Tiles_PixelCrawler.png-3c5601b342b1c4542e414ed5ebc65b53.ctex"]
+source_file="res://Level_2_wasteland/Tileset/Tileset.png"
+dest_files=["res://.godot/imported/Tileset.png-680199d210657eb104f45c60b03603ca.ctex"]
 
 [params]
 

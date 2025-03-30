@@ -266,7 +266,6 @@ autoplay = "default"
 frame_progress = 0.109199
 offset = Vector2(0, -15)
 script = ExtResource("2_fwcu6")
-range = 30
 rate_of_fire = 1
 bullet_scene = ExtResource("3_q2oss")
 
