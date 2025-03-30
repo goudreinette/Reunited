@@ -1,4 +1,4 @@
-class_name RacePlayer extends AnimatedSprite3D
+class_name RacePlayer extends Node3D #extends AnimatedSprite3D
 
 @export var acceleration: float = 1
 @export var top_speed: float = 1
@@ -43,12 +43,15 @@ func _process(delta):
 	
 	rotation_degrees.y -= turn_speed
 	
-	if turn_speed > .5:
-		animation = "right"
-		frame = remap(abs(turn_speed), 0, 2, 0, 6)
-	elif turn_speed < -.5:
-		animation = "left"
-		frame = remap(abs(turn_speed), 0, 2, 0, 6)
-	else: 
-		animation = "default"
-		frame = 0
+	$"reunited ship".rotation_degrees.y = remap(turn_speed, -2, 2, 30, -30)
+	
+	#if turn_speed > .5:
+		#
+		##animation = "right"
+		##frame = remap(abs(turn_speed), 0, 2, 0, 6)
+	#elif turn_speed < -.5:
+		##animation = "left"
+		##frame = remap(abs(turn_speed), 0, 2, 0, 6)
+	#else: 
+		##animation = "default"
+		##frame = 0
