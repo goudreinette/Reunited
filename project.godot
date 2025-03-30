@@ -45,6 +45,7 @@ directories/dtl_directory={
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
+"Ship_fixed": "res://addons/dialogic/dialogue/Ship_fixed.dtl",
 "Take_this": "res://addons/dialogic/characters/Take_this.dtl",
 "Walking Scenes/timeline": "res://Walking Scenes TEST/timeline.dtl",
 "Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",

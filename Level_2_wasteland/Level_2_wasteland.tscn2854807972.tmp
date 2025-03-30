@@ -637,7 +637,7 @@ radius = 27.8927
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(-363, -338)
+position = Vector2(-521, 106)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
@@ -1154,7 +1154,6 @@ position = Vector2(-114, 24)
 texture = ExtResource("47_3fwvb")
 
 [node name="MoveTimer" type="Timer" parent="Cutscene"]
-one_shot = true
 
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 4" to="Respawn Point 4" method="_on_body_entered"]

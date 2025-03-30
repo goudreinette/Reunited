@@ -15,8 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player:
 		##see if formation is on screen/player is in range and start moving
-		if player.get_parent().global_position.y < global_position.y and not has_spawned:
+		if player.get_parent().global_position.y < position.y and not has_spawned:
 			move_to_scene()
+			print("move_to_Scene")
 		else: position.y = player.get_parent().global_position.y
 
 ##move the player to the starting point of the scene	

@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnbgilkdhtvd3"]
+
+[ext_resource type="Script" uid="uid://b4blhpt77076i" path="res://Level_2_wasteland/cutscene.gd" id="1_p30sb"]
+[ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="2_53jq0"]
+[ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="3_3q24f"]
+[ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="4_8ye5a"]
+[ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="5_qcoa3"]
+[ext_resource type="Texture2D" uid="uid://dicf2yu17auj6" path="res://Level_2_wasteland/ship fixed.png" id="6_pvbl2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o7xex"]
+radius = 27.8927
+
+[node name="Cutscene" type="Area2D" node_paths=PackedStringArray("characters")]
+collision_layer = 0
+script = ExtResource("1_p30sb")
+characters = [NodePath("Frank2"), NodePath("Igor"), NodePath("Koen"), NodePath("Guus")]
+
+[node name="Frank2" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("2_53jq0")]
+position = Vector2(-129, 109)
+next_position = NodePath("../FrankPos")
+
+[node name="Igor" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("3_3q24f")]
+position = Vector2(119, -107)
+next_position = NodePath("../IgorPos")
+
+[node name="Koen" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("4_8ye5a")]
+position = Vector2(155, 126)
+next_position = NodePath("../KoenPos")
+
+[node name="Guus" parent="." node_paths=PackedStringArray("next_position") instance=ExtResource("5_qcoa3")]
+position = Vector2(46, -113)
+next_position = NodePath("../guusPos")
+
+[node name="FrankPos" type="Node2D" parent="."]
+position = Vector2(-43, 25)
+
+[node name="guusPos" type="Node2D" parent="."]
+position = Vector2(-14, -33)
+
+[node name="IgorPos" type="Node2D" parent="."]
+position = Vector2(54, -20)
+
+[node name="KoenPos" type="Node2D" parent="."]
+position = Vector2(22, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_o7xex")
+
+[node name="ShipFixed" type="Sprite2D" parent="."]
+position = Vector2(-114, 24)
+texture = ExtResource("6_pvbl2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
