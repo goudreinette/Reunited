@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://kcq0p54fkt7j"]
+
+[ext_resource type="Texture2D" uid="uid://buvruegjrpq3s" path="res://Level_4_wormhole/anglerfish/anglerfish_side.png" id="1_4e42a"]
+
+[node name="Anglerfish" type="Sprite2D"]
+texture = ExtResource("1_4e42a")
+hframes = 30
