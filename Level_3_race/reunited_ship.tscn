@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cubm16nmpf0sr"]
+
+[ext_resource type="PackedScene" uid="uid://b8mgsrtwmbbb7" path="res://models/reunited ship.glb" id="1_cpjq5"]
+
+[node name="reunited ship" instance=ExtResource("1_cpjq5")]
+
+[node name="Plane" parent="." index="1"]
+visible = false
+
+[node name="Booster image" parent="Ship" index="0"]
+visible = false
