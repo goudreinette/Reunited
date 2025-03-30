@@ -289,7 +289,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0264438,
 curve = SubResource("Curve3D_8ouit")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.079961, 1.98723e-06, 0.00249593, 7.27595e-14, 0.0799998, -6.36948e-05, -0.00249593, 6.36637e-05, 0.079961, -10.7904, -0.00753102, 9.45749)
+transform = Transform3D(0.079961, 1.98723e-06, 0.00249593, 7.27595e-14, 0.0799998, -6.36949e-05, -0.00249593, 6.36637e-05, 0.079961, -10.7904, -0.00753102, 9.45749)
 script = ExtResource("26_gvokg")
 
 [node name="cuba_car_cabriolet" parent="Path3D/PathFollow3D" instance=ExtResource("27_8ouit")]
