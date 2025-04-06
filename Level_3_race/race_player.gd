@@ -11,6 +11,10 @@ var turn_speed = 0
 @export var turn_drag = 0.9
 
 
+var can_move = false
+
+
+
 func _ready():
 	pass
 	
@@ -21,6 +25,9 @@ func _process(delta):
 	
 	#print(on_track)
 	
+	if not can_move:
+		return
+		
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var thrust = Input.is_action_pressed("race_thruster")
 	var reverse = Input.is_action_pressed("race_reverse")
