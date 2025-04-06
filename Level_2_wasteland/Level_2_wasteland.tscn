@@ -637,7 +637,7 @@ radius = 27.8927
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(-363, -338)
+position = Vector2(-2, -143)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
