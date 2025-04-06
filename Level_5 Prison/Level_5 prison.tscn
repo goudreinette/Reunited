@@ -1275,7 +1275,7 @@ _data = {
 }
 point_count = 5
 
-[node name="Prison Test" type="Node2D"]
+[node name="Level 5 - Prison" type="Node2D"]
 y_sort_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]

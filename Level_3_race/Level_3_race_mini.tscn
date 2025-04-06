@@ -163,7 +163,7 @@ _data = {
 }
 point_count = 53
 
-[node name="Main" type="Node3D"]
+[node name="Level 3 - Race" type="Node3D"]
 script = ExtResource("1_74xix")
 
 [node name="Map" type="Sprite3D" parent="."]
