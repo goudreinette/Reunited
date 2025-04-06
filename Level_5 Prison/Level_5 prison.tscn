@@ -1,15 +1,15 @@
 [gd_scene load_steps=16 format=3 uid="uid://ulsdrc2iokn2"]
 
-[ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_4e1aa"]
-[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes TEST/Player/player.tscn" id="2_2m818"]
-[ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="3_4foun"]
-[ext_resource type="Script" uid="uid://6wsqjt1ogbar" path="res://detected.gd" id="4_ajlim"]
-[ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://path_follow_2d.gd" id="5_ajlim"]
-[ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://drone.tscn" id="5_l2e30"]
-[ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_mrld7"]
+[ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
+[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
+[ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="3_63ava"]
+[ext_resource type="Script" uid="uid://6wsqjt1ogbar" path="res://Level_5 Prison/detected.gd" id="4_8tl4s"]
+[ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://Level_5 Prison/path_follow_2d.gd" id="5_ddlk5"]
+[ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://Level_5 Prison/drone.tscn" id="6_tkkrf"]
+[ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_etoha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
-texture = ExtResource("1_4e1aa")
+texture = ExtResource("1_3bkdr")
 4:0/0 = 0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
@@ -1239,7 +1239,7 @@ physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_kywup")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojn15"]
-font = ExtResource("3_4foun")
+font = ExtResource("3_63ava")
 font_size = 10
 font_color = Color(0.73, 0.219, 0.219, 1)
 shadow_color = Color(0, 0, 0, 0.266667)
@@ -1250,7 +1250,7 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="Curve2D" id="Curve2D_mrld7"]
+[sub_resource type="Curve2D" id="Curve2D_3bkdr"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1297,7 +1297,7 @@ layer_1/tile_data = PackedInt32Array(-65536, 262144, 20, 0, 262144, 21, -65535, 
 [node name="RespawnPoint" type="Node2D" parent="."]
 position = Vector2(131, 32)
 
-[node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_2m818")]
+[node name="Player" parent="." node_paths=PackedStringArray("respawnnode") instance=ExtResource("2_1hlrn")]
 position = Vector2(23, 144)
 respawnnode = NodePath("../RespawnPoint")
 
@@ -1312,7 +1312,7 @@ offset_right = 25.0
 offset_bottom = -6.0
 text = "DETECTED"
 label_settings = SubResource("LabelSettings_ojn15")
-script = ExtResource("4_ajlim")
+script = ExtResource("4_8tl4s")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_l2e30")
@@ -1321,9 +1321,9 @@ curve = SubResource("Curve2D_l2e30")
 position = Vector2(-15, 28)
 rotation = 0.0307595
 rotates = false
-script = ExtResource("5_ajlim")
+script = ExtResource("5_ddlk5")
 
-[node name="Drone" parent="Path2D/PathFollow2D" instance=ExtResource("5_l2e30")]
+[node name="Drone" parent="Path2D/PathFollow2D" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
@@ -1331,9 +1331,9 @@ position = Vector2(239.539, -89.6065)
 rotation = 0.0307595
 progress = 385.837
 rotates = false
-script = ExtResource("5_ajlim")
+script = ExtResource("5_ddlk5")
 
-[node name="Drone" parent="Path2D/PathFollow2D2" instance=ExtResource("5_l2e30")]
+[node name="Drone" parent="Path2D/PathFollow2D2" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="Path2D"]
@@ -1341,18 +1341,18 @@ position = Vector2(150.817, -189.953)
 rotation = 0.0307595
 progress = 766.67
 rotates = false
-script = ExtResource("5_ajlim")
+script = ExtResource("5_ddlk5")
 
-[node name="Drone" parent="Path2D/PathFollow2D3" instance=ExtResource("5_l2e30")]
+[node name="Drone" parent="Path2D/PathFollow2D3" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
 
-[node name="moving platform" parent="." instance=ExtResource("7_mrld7")]
+[node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_mrld7")
+curve = SubResource("Curve2D_3bkdr")
 speed = 0.5
 speed_scale = 0.5
 
-[node name="moving platform2" parent="." instance=ExtResource("7_mrld7")]
+[node name="moving platform2" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(347, 30)
 curve = SubResource("Curve2D_v45vn")
 speed = 0.5
@@ -1364,7 +1364,7 @@ position = Vector2(-71, 5)
 [node name="Area2D" parent="moving platform2" index="2"]
 position = Vector2(-71, 5)
 
-[node name="moving platform3" parent="." instance=ExtResource("7_mrld7")]
+[node name="moving platform3" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(573, 11)
 curve = SubResource("Curve2D_63ar2")
 speed_scale = 0.5
@@ -1386,9 +1386,9 @@ curve = SubResource("Curve2D_wp5f1")
 position = Vector2(-2, -2)
 rotation = 0.0307595
 rotates = false
-script = ExtResource("5_ajlim")
+script = ExtResource("5_ddlk5")
 
-[node name="Drone" parent="Path2D2/PathFollow2D" instance=ExtResource("5_l2e30")]
+[node name="Drone" parent="Path2D2/PathFollow2D" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Path2D2"]
@@ -1396,9 +1396,9 @@ position = Vector2(43.8467, 31.0831)
 rotation = 0.0307595
 progress = 79.8095
 rotates = false
-script = ExtResource("5_ajlim")
+script = ExtResource("5_ddlk5")
 
-[node name="Drone" parent="Path2D2/PathFollow2D2" instance=ExtResource("5_l2e30")]
+[node name="Drone" parent="Path2D2/PathFollow2D2" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
 
 [editable path="moving platform2"]

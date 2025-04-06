@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ju14khh54xsd"
-path="res://.godot/imported/Hallucigenia.blend-037de898961d5a594691a6c09912e211.scn"
+valid=false
 
 [deps]
 
 source_file="res://models/wormhole/Hallucigenia.blend"
-dest_files=["res://.godot/imported/Hallucigenia.blend-037de898961d5a594691a6c09912e211.scn"]
 
 [params]
 
