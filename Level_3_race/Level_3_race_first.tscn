@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://w22tae8g2nnp"]
+
+[ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
+[ext_resource type="Texture2D" uid="uid://dxvbaa5kgauep" path="res://Level_3_race/race sprites/race map.png" id="1_i4egl"]
+[ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
+[ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
+[ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="4_neu27"]
+[ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
+[ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
+[ext_resource type="Texture2D" uid="uid://dn32p1poxcu6p" path="res://Level_3_race/race sprites/ship back.png" id="7_k3syp"]
+[ext_resource type="PackedScene" uid="uid://c6hcvg4np3f8" path="res://models/race/cuba_cars.blend" id="9_v7jaj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_23tvb"]
+sky_top_color = Color(0.199004, 0.526503, 0.833327, 1)
+sky_horizon_color = Color(0.530495, 0.669348, 0.823281, 1)
+sky_energy_multiplier = 1.41
+ground_horizon_color = Color(0.643137, 0.843137, 1, 1)
+energy_multiplier = 1.8
+
+[sub_resource type="Sky" id="Sky_neu27"]
+sky_material = SubResource("ProceduralSkyMaterial_23tvb")
+
+[sub_resource type="Environment" id="Environment_mggcm"]
+background_mode = 2
+sky = SubResource("Sky_neu27")
+sky_custom_fov = 7.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Plant2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.911082, 0.0230841, 0.143307)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Map" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_i4egl")
+
+[node name="Plant" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.601815, 0.0259995, 0.33032)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Ship" type="Sprite3D" parent="."]
+transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.764893, 0.0255188, 0.621312)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("7_k3syp")
+script = ExtResource("3_x61kf")
+acceleration = 0.5
+drag = 0.96
+
+[node name="Camera3D" type="Camera3D" parent="Ship"]
+transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0.246271, 1.34876)
+environment = SubResource("Environment_mggcm")
+current = true
+
+[node name="Rock" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.945303, 0.0202881, 0.249356)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_23tvb")
+
+[node name="Rock2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.979147, 0.0200267, -0.145502)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_23tvb")
+
+[node name="Rock3" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.594348, 0.0231438, -0.045045)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_23tvb")
+
+[node name="Gate" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.747086, 0.0570454, -0.0502055)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_neu27")
+
+[node name="Gate2" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.77026, 0.0570454, 0.621869)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_neu27")
+
+[node name="Cloud" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93888, 0.801123, -1.51399)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("5_mggcm")
+
+[node name="Cloud2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196034, 0.801123, -1.51399)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("6_5j82x")
+
+[node name="cuba_cars" parent="." instance=ExtResource("9_v7jaj")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.561506, 0, 0.481505)
