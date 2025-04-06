@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vdxrlsk2p6wl"
+path="res://.godot/imported/Carrera Montuno 31-3.mp3-197a259befa1d33497d66c0e3f992d1e.mp3str"
+
+[deps]
+
+source_file="res://music/Carrera Montuno 31-3.mp3"
+dest_files=["res://.godot/imported/Carrera Montuno 31-3.mp3-197a259befa1d33497d66c0e3f992d1e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
