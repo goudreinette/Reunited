@@ -10,6 +10,94 @@ enum RACE_STATE {
 var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 
+@export var last_nearest_point_index: int = 0
+
+
+
+@onready var other_racers = [
+	$Path3D/Racer1,
+	$Path3D/Racer2,
+	$Path3D/Racer3
+]
+
+@onready var position_label = $Camera3D/UI/PositionLabel
+@onready var lap_label = $Camera3D/UI/LapLabel
+
+
+func _process(delta):
+	# check nearest point by looping over every point and checking distance
+	var player = $Ship
+	
+	#var closest_point = find_closest_point($Path3D, player.global_position)
+	# get list of points
+	#var points: PackedVector3Array = $Path3D.curve.get_baked_points()
+	var player_offset = $Path3D.curve.get_closest_offset($Path3D.to_local($Ship.global_transform.origin))
+	#var closest_offset = $Path3D.curve.get_closest_offset($Path3D.transform * $Ship.global_transform.origin)
+	var player_progress_ratio = player_offset / $Path3D.curve.get_baked_length()
+	
+	print("player offset: ", player_progress_ratio);
+	
+	#var progress_ratios = []
+	var position = 4
+	
+	for i in other_racers.size():
+		var r = other_racers.get(i)
+		#print("racer", i," offset: ", r.progress_ratio)
+		#progress_ratios.push_back(r.progress_ratio)
+		if r.progress_ratio < player_progress_ratio:
+			position -= 1
+		
+	#print(position)
+	
+	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", 4)
+	
+	#for i in points.size():
+		#var p: Vector3 = points.get(i)
+		#if p == closest_point:
+			#pass
+		
+		
+	
+	#for p in points:
+		#print(p)	
+	
+	
+	#for point in $Path3D.curve.points.size():
+		#pass
+	#print(player)
+	# points have to be in sequence
+
+
+
+func find_closest_point( # find_closest_index
+  path: Path3D,
+  global_pos: Vector3
+):
+	var curve: Curve3D = path.curve
+	# transform the target position to local space
+	var path_transform: Transform3D = path.global_transform
+	var local_pos: Vector3 = global_pos * path_transform
+	# get the nearest offset on the curve
+	var closest_point: Vector3 = curve.get_closest_point(local_pos)
+	return closest_point
+	
+
+
+func find_closest_abs_pos(
+  path: Path3D,
+  global_pos: Vector3
+):
+	var curve: Curve3D = path.curve
+	# transform the target position to local space
+	var path_transform: Transform3D = path.global_transform
+	var local_pos: Vector3 = global_pos * path_transform
+	# get the nearest offset on the curve
+	var offset: float = curve.get_closest_offset(local_pos)
+	# get the local position at this offset
+	var curve_pos: Vector3 = curve.sample_baked(offset, true)
+	# transform it back to world space
+	curve_pos = path_transform * curve_pos
+	return curve_pos
 
 
 func _on_start_countdown_timer_timeout():

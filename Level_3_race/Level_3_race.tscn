@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://w22tae8g2nnp"]
+[gd_scene load_steps=36 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
 [ext_resource type="Texture2D" uid="uid://buvj5kjdrruux" path="res://Level_3_race/countdown/countdown.png" id="6_tf762"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="7_vmoy4"]
-[ext_resource type="PackedScene" path="res://Level_3_race/reunited_ship.tscn" id="9_kd54t"]
+[ext_resource type="PackedScene" uid="uid://cubm16nmpf0sr" path="res://Level_3_race/reunited_ship.tscn" id="9_kd54t"]
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="14_ev6ad"]
 [ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="15_0oy6m"]
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="16_8vcgt"]
@@ -175,101 +175,54 @@ transform = Transform3D(-0.28731, -0.957838, -4.18684e-08, 0, -4.37114e-08, 1, -
 texture_filter = 0
 texture = ExtResource("2_g3r7i")
 
-[node name="House" parent="Map" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0540086, -1.06581e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, -3.3588, 3.43915, 1.5033e-07)
+[node name="City" type="Node3D" parent="Map"]
+transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 1.9984e-15, 8.88178e-16, 1.33227e-15, 1, -3.42826, 2.92919, 1.28039e-07)
 
-[node name="House2" parent="Map" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0540086, -1.06581e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, -3.42326, 1.73866, 1.95209e-07)
+[node name="House" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(-0.0540086, -1.07518e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, 0.0694551, 0.509955, 2.22908e-08)
 
-[node name="House3" parent="Map" instance=ExtResource("22_53t51")]
-transform = Transform3D(0.0410914, -1.06581e-14, -0.999155, -0.999155, -4.37114e-08, -0.0410914, -4.36745e-08, 1, -1.79616e-09, -4.57515, 3.05772, 2.52867e-07)
+[node name="House2" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(-0.0540086, -1.07518e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, 0.00499517, -1.19053, 6.71698e-08)
 
-[node name="House4" parent="Map" instance=ExtResource("22_53t51")]
-transform = Transform3D(0.999994, -1.06581e-14, -0.00321084, -0.00321084, -4.37114e-08, -0.999994, -1.4035e-10, 1, -4.37112e-08, -2.0791, 3.17813, 1.97114e-08)
+[node name="House3" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(0.0410915, -1.07518e-14, -0.999155, -0.999155, -4.37114e-08, -0.0410915, -4.36745e-08, 1, -1.79616e-09, -1.1469, 0.128525, 1.24828e-07)
 
-[node name="House5" parent="Map" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0642183, -1.06581e-14, -0.997936, -0.997936, -4.37114e-08, 0.0642183, -4.36212e-08, 1, 2.80707e-09, -1.94013, 2.23769, -0.0566302)
+[node name="House4" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(0.999994, -1.07518e-14, -0.00321081, -0.00321081, -4.37114e-08, -0.999994, -1.4035e-10, 1, -4.37112e-08, 1.34916, 0.248936, -1.08328e-07)
 
-[node name="mountain" parent="Map" instance=ExtResource("23_7epou")]
-transform = Transform3D(0.724737, -1.06581e-14, -0.689025, -0.689025, -4.37114e-08, -0.724737, -3.01182e-08, 1, -3.16793e-08, 2.53667, 0.94213, -0.0461936)
+[node name="House5" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(-0.0642182, -1.07518e-14, -0.997936, -0.997936, -4.37114e-08, 0.0642182, -4.36212e-08, 1, 2.80707e-09, 1.48812, -0.691505, -0.0566303)
 
-[node name="mountain4" parent="Map" instance=ExtResource("23_7epou")]
-transform = Transform3D(0.724737, -1.06581e-14, -0.689025, -0.689025, -4.37114e-08, -0.724737, -3.01182e-08, 1, -3.16793e-08, -2.93167, 0.103414, -0.433988)
+[node name="Mountains" type="Node3D" parent="Map"]
 
-[node name="mountain2" parent="Map" instance=ExtResource("23_7epou")]
-transform = Transform3D(-0.244122, -1.06581e-14, -0.969744, -0.969744, -4.37114e-08, 0.244122, -4.23889e-08, 1, 1.06709e-08, -0.924183, 0.729767, -0.266531)
+[node name="mountain" parent="Map/Mountains" instance=ExtResource("23_7epou")]
+transform = Transform3D(0.724737, -1.09967e-14, -0.689025, -0.689025, -4.37114e-08, -0.724737, -3.01182e-08, 1, -3.16793e-08, 2.53667, 0.94213, -0.0461936)
 
-[node name="mountain3" parent="Map" instance=ExtResource("23_7epou")]
-transform = Transform3D(-0.1737, -1.06581e-14, 0.984798, 0.984798, -4.37114e-08, 0.1737, 4.30469e-08, 1, 7.59268e-09, -0.308834, 0.0846384, -0.0461937)
+[node name="mountain4" parent="Map/Mountains" instance=ExtResource("23_7epou")]
+transform = Transform3D(0.724737, -1.09967e-14, -0.689025, -0.689025, -4.37114e-08, -0.724737, -3.01182e-08, 1, -3.16793e-08, -2.93167, 0.103414, -0.433988)
 
-[node name="Plant2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.21086, 2.26089, 0.0230842)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
+[node name="mountain2" parent="Map/Mountains" instance=ExtResource("23_7epou")]
+transform = Transform3D(-0.244122, -1.09967e-14, -0.969744, -0.969744, -4.37114e-08, 0.244122, -4.23889e-08, 1, 1.06709e-08, -0.924183, 0.729767, -0.266531)
 
-[node name="Palmtree" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.75992, -2.56288, 0.120311)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
+[node name="mountain3" parent="Map/Mountains" instance=ExtResource("23_7epou")]
+transform = Transform3D(-0.1737, -1.09967e-14, 0.984798, 0.984798, -4.37114e-08, 0.1737, 4.30469e-08, 1, 7.59268e-09, -0.308834, 0.0846386, -0.0461937)
 
-[node name="Palmtree2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.75384, -3.53575, 0.120311)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
+[node name="Rocks" type="Node3D" parent="Map"]
 
-[node name="Palmtree3" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.53648, -2.43538, 0.120311)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
-
-[node name="Palmtree4" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -4.51362, -1.67957, -0.0460455)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
-
-[node name="Palmtree5" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.53703e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.89206, -2.53709, -0.0460455)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
-
-[node name="Palmtree6" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.53703e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.6747, -1.43672, -0.0460455)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_7epou")
-
-[node name="Plant" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.30113, 2.61084, 0.0259996)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Rock" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.5005, 2.04704, 0.0202882)
+[node name="Rock" type="Sprite3D" parent="Map/Rocks"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.5005, 2.04704, 0.0202882)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
 
-[node name="Plant14" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -3.70826, 2.79364, 0.0324995)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Rock2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.19473, 2.25068, 0.0200268)
+[node name="Rock2" type="Sprite3D" parent="Map/Rocks"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.19473, 2.25068, 0.0200268)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
 
-[node name="Rock3" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.93945, 2.51015, 0.0231439)
+[node name="Rock3" type="Sprite3D" parent="Map/Rocks"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.93945, 2.51015, 0.0231439)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
@@ -286,68 +239,46 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("4_neu27")
 
-[node name="Cloud" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -1.91873, 0.800266, 0.801123)
+[node name="Clouds" type="Node3D" parent="Map"]
+
+[node name="Cloud" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.09967e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -1.91873, 0.800266, 0.801123)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
 
-[node name="Cloud2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -1.30535, 2.84517, 0.801123)
+[node name="Cloud2" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.09967e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -1.30535, 2.84517, 0.801123)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("6_5j82x")
 
-[node name="Plant3" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.76681, 2.4676, 0.0230842)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Plant4" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Plant5" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.38583, 1.98322, 0.0230843)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Plant6" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.57252, 2.11214, 0.0230843)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
-[node name="Cloud3" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -0.126842, 2.07155, 0.801123)
+[node name="Cloud3" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.16774e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -0.126842, 2.07155, 0.801123)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
 
-[node name="Cloud6" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -4.14425, 2.88785, 0.338806)
+[node name="Cloud6" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.16774e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -4.14425, 2.88785, 0.338806)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
 
-[node name="Cloud4" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -2.93349, 3.44663, 0.801123)
+[node name="Cloud4" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.16774e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -2.93349, 3.44663, 0.801123)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
 
-[node name="Cloud5" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, 1.78447, 1.33145, 1.34244)
+[node name="Cloud5" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.16774e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, 1.78447, 1.33145, 1.34244)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
 
-[node name="Cloud7" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -4.12141, 2.17582, 0.288603)
+[node name="Cloud7" type="Sprite3D" parent="Map/Clouds"]
+transform = Transform3D(-0.28731, -1.16774e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -4.12141, 2.17582, 0.288603)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("5_mggcm")
@@ -358,305 +289,385 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("14_ev6ad")
 
-[node name="Plant7" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_4xktc")
-
 [node name="Pole2" type="Sprite3D" parent="Map"]
 transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.12961, 2.14171, 0.059613)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("15_0oy6m")
 
-[node name="Plant8" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.36073, 3.19487, 0.0230843)
+[node name="Plants" type="Node3D" parent="Map"]
+
+[node name="Plant8" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.36073, 3.19487, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant9" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.17375, 3.25095, 0.0194703)
+[node name="Plant9" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.17375, 3.25095, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant10" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.07951, 3.21029, 0.0194703)
+[node name="Plant10" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.07951, 3.21029, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant11" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.44674, 3.10014, 0.0194703)
+[node name="Plant11" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.44674, 3.10014, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant12" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.23084, 3.09255, 0.0194703)
+[node name="Plant12" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.23084, 3.09255, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant13" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.62203e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.12506, 3.12428, 0.0194703)
+[node name="Plant13" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.12506, 3.12428, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant15" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.24248, 2.73767, 0.0230843)
+[node name="Plant15" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.24248, 2.73767, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant16" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.09675, 2.60779, 0.0194703)
+[node name="Plant16" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.09675, 2.60779, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant17" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.08201, 2.50622, 0.0194703)
+[node name="Plant17" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.08201, 2.50622, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant18" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.36823, 2.7613, 0.0194703)
+[node name="Plant18" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.36823, 2.7613, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant19" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.26158, 2.57343, 0.0194703)
+[node name="Plant19" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.26158, 2.57343, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant20" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27879e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.17914, 2.49995, 0.0194703)
+[node name="Plant20" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 1.17914, 2.49995, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant21" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.19926, 2.38496, 0.0230843)
+[node name="Plant21" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.19926, 2.38496, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant22" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.05352, 2.25509, 0.0194703)
+[node name="Plant22" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.05352, 2.25509, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant23" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.03878, 2.15352, 0.0194703)
+[node name="Plant23" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.03878, 2.15352, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant24" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.325, 2.4086, 0.0194703)
+[node name="Plant24" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.325, 2.4086, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant25" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.21836, 2.22073, 0.0194703)
+[node name="Plant25" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.21836, 2.22073, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant26" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27454e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.13591, 2.14725, 0.0194703)
+[node name="Plant26" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 2.13591, 2.14725, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant27" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.45028, 1.91508, 0.0230843)
+[node name="Plant27" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.45028, 1.91508, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant28" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.304545, 1.78521, 0.0194703)
+[node name="Plant28" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.304545, 1.78521, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant29" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.289805, 1.68364, 0.0194703)
+[node name="Plant29" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.289805, 1.68364, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant30" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.576026, 1.93872, 0.0194703)
+[node name="Plant30" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.576026, 1.93872, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant31" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.469381, 1.75085, 0.0194703)
+[node name="Plant31" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.469381, 1.75085, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant32" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.27029e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.386932, 1.67737, 0.0194703)
+[node name="Plant32" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.386932, 1.67737, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant33" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.468204, 0.817934, 0.0230842)
+[node name="Plant33" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.468204, 0.817934, 0.0230842)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant34" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.322469, 0.688057, 0.0194702)
+[node name="Plant34" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.322469, 0.688057, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant35" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.307729, 0.58649, 0.0194702)
+[node name="Plant35" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.307729, 0.58649, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant36" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.59395, 0.841566, 0.0194702)
+[node name="Plant36" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.59395, 0.841566, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant37" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.487305, 0.653699, 0.0194702)
+[node name="Plant37" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.487305, 0.653699, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant38" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26604e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.404856, 0.580221, 0.0194702)
+[node name="Plant38" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.27046e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 0.404856, 0.580221, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant39" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.24172, 1.06487, 0.0230843)
+[node name="Plant39" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.24172, 1.06487, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant40" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.09598, 0.934989, 0.0194702)
+[node name="Plant40" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.09598, 0.934989, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant41" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.08124, 0.833422, 0.0194702)
+[node name="Plant41" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.08124, 0.833422, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant42" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.36746, 1.0885, 0.0194703)
+[node name="Plant42" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.36746, 1.0885, 0.0194703)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant43" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.26082, 0.900632, 0.0194702)
+[node name="Plant43" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.26082, 0.900632, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant44" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.26179e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.17837, 0.827153, 0.0194702)
+[node name="Plant44" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.17837, 0.827153, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant45" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9325, -1.23111, 0.0230842)
+[node name="Plant45" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9325, -1.23111, 0.0230842)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant46" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.78677, -1.36099, 0.0194701)
+[node name="Plant46" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.78677, -1.36099, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant47" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.77203, -1.46256, 0.0194701)
+[node name="Plant47" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.77203, -1.46256, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant48" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 4.05825, -1.20748, 0.0194702)
+[node name="Plant48" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 4.05825, -1.20748, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant49" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9516, -1.39535, 0.0194701)
+[node name="Plant49" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9516, -1.39535, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant50" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.86916, -1.46883, 0.0194701)
+[node name="Plant50" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.86916, -1.46883, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant51" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9325, -1.23111, 0.0230842)
+[node name="Plant51" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9325, -1.23111, 0.0230842)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("16_8vcgt")
 
-[node name="Plant52" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.78677, -1.36099, 0.0194701)
+[node name="Plant52" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.78677, -1.36099, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant53" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.77203, -1.46256, 0.0194701)
+[node name="Plant53" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.77203, -1.46256, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant54" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 4.05825, -1.20748, 0.0194702)
+[node name="Plant54" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 4.05825, -1.20748, 0.0194702)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("17_7pqpo")
 
-[node name="Plant55" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9516, -1.39535, 0.0194701)
+[node name="Plant55" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.9516, -1.39535, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
 
-[node name="Plant56" type="Sprite3D" parent="Map"]
-transform = Transform3D(0.16633, -1.25754e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.86916, -1.46883, 0.0194701)
+[node name="Plant56" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(0.16633, -1.24919e-14, -0.186639, -0.186639, -1.09278e-08, -0.16633, -8.15825e-09, 0.25, -7.27054e-09, 3.86916, -1.46883, 0.0194701)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("18_3smau")
+
+[node name="Plant7" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant3" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.76681, 2.4676, 0.0230842)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant4" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant5" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.38583, 1.98322, 0.0230843)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant6" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.57252, 2.11214, 0.0230843)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant2" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.21086, 2.26089, 0.0230842)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Palmtree" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.75992, -2.56288, 0.120311)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree2" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.75384, -3.53575, 0.120311)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree3" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.53648, -2.43538, 0.120311)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree4" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -4.51362, -1.67957, -0.0460455)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree5" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.89206, -2.53709, -0.0460455)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree6" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.6747, -1.43672, -0.0460455)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Plant14" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.28731, -1.09967e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -3.70826, 2.79364, 0.0324995)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
+[node name="Plant" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.30113, 2.61084, 0.0259996)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target", "look_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829251, 0.0410339, 0.958284)
@@ -675,7 +686,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_tf762")
 hframes = 4
 
-[node name="Label" type="Label" parent="Camera3D/UI"]
+[node name="PositionLabel" type="Label" parent="Camera3D/UI"]
 texture_filter = 1
 texture_repeat = 1
 offset_left = 8.0
@@ -685,7 +696,7 @@ offset_bottom = 31.0
 theme = SubResource("Theme_wtnat")
 text = "pos. 1/6 "
 
-[node name="Label2" type="Label" parent="Camera3D/UI"]
+[node name="LapLabel" type="Label" parent="Camera3D/UI"]
 texture_filter = 1
 texture_repeat = 1
 offset_left = 189.0
@@ -699,7 +710,7 @@ horizontal_alignment = 2
 [node name="Ship" type="Node3D" parent="."]
 transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0.829251, 0.0255188, 0.621312)
 script = ExtResource("3_x61kf")
-acceleration = 0.38
+acceleration = 0.45
 drag = 0.96
 turn_acceleration = 10.0
 
@@ -747,36 +758,36 @@ autostart = true
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547, -2.0728)
 curve = SubResource("Curve3D_wpt2s")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+[node name="Racer1" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.0799811, 0, -0.00173869, 0, 0.0799998, 0, 0.00173865, 0, 0.0799828, 0.862035, 1.63577e-05, 9.79951)
 script = ExtResource("19_wuivs")
 
-[node name="cuba_car_blue" parent="Path3D/PathFollow3D" instance=ExtResource("20_0n72s")]
+[node name="cuba_car_blue" parent="Path3D/Racer1" instance=ExtResource("20_0n72s")]
 
-[node name="PathFollow3D2" type="PathFollow3D" parent="Path3D"]
+[node name="Racer2" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.0777216, 0, -0.0189565, 0, 0.0799998, 0, 0.0189565, 0, 0.0777216, 1.16603, 1.63577e-05, 6.8306)
 progress = 3.0
 script = ExtResource("19_wuivs")
 
-[node name="cuba_car_blue" parent="Path3D/PathFollow3D2" instance=ExtResource("20_0n72s")]
+[node name="cuba_car_blue" parent="Path3D/Racer2" instance=ExtResource("20_0n72s")]
 visible = false
 
-[node name="cuba_car_cabriolet" parent="Path3D/PathFollow3D2" instance=ExtResource("21_10a0x")]
+[node name="cuba_car_cabriolet" parent="Path3D/Racer2" instance=ExtResource("21_10a0x")]
 transform = Transform3D(1, -2.21444e-08, 6.40284e-10, 2.26555e-08, 1, -3.72529e-09, 1.74623e-10, -5.58794e-09, 1, 8.28671, 0.0818219, -0.00891113)
 
-[node name="PathFollow3D3" type="PathFollow3D" parent="Path3D"]
+[node name="Racer3" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.0777217, 0, -0.0189566, 0, 0.0799998, 0, 0.0189566, 0, 0.0777217, 0.927328, 1.63577e-05, 7.80927)
 progress = 2.0
 script = ExtResource("19_wuivs")
 
-[node name="cuba_car_blue" parent="Path3D/PathFollow3D3" instance=ExtResource("20_0n72s")]
+[node name="cuba_car_blue" parent="Path3D/Racer3" instance=ExtResource("20_0n72s")]
 
 [node name="CarreraMontuno31-3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_tf762")
 autoplay = true
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
-[connection signal="timeout" from="RaceStartTimer" to="Path3D/PathFollow3D" method="_on_timer_timeout"]
-[connection signal="timeout" from="RaceStartTimer" to="Path3D/PathFollow3D2" method="_on_timer_timeout"]
-[connection signal="timeout" from="RaceStartTimer" to="Path3D/PathFollow3D3" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer1" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer2" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer3" method="_on_timer_timeout"]
 [connection signal="timeout" from="StartCountdownTimer" to="." method="_on_start_countdown_timer_timeout"]

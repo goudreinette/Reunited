@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 		if speed < max_speed:
 			speed += acceleration
 		
-	print(speed)
+	#print(speed)
 	progress += speed
 
 
