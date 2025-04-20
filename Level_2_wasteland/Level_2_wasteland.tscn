@@ -637,7 +637,7 @@ radius = 27.8927
 y_sort_enabled = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(-2, -143)
+position = Vector2(69, 147)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
@@ -659,10 +659,10 @@ layer_0/tile_data = PackedInt32Array(262151, 524288, 6, 327687, 589824, 6, 32768
 
 [node name="Backgroundcolor" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -25030.0
-offset_top = -24981.0
-offset_right = 24970.0
-offset_bottom = 25019.0
+offset_left = -25009.0
+offset_top = -24986.0
+offset_right = 24991.0
+offset_bottom = 25014.0
 color = Color(0.317647, 0.227451, 0.239216, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

@@ -25,7 +25,7 @@ func move_to_scene():
 	#scene.visible = true
 #	scene.PROCESS_MODE_INHERIT
 	if not has_spawned:
-		UI.visible = false
+#		UI.visible = false
 		var tween = create_tween()
 		#player.get_parent().levelspeed = 0
 		tween.tween_property(player,"position", $ship_position.position, 1.0)
