@@ -20,13 +20,13 @@ overrides = {
 "box_size": "Vector2(220, 66)",
 "italics_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
 "name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
-"name_label_custom_font_size": "10.0",
-"name_label_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
+"name_label_custom_font_size": "16.0",
+"name_label_font": "\"res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf\"",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "next_indicator_size": "Vector2(10, 10)",
-"normal_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
-"text_size": "10.0",
+"normal_font": "\"res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf\"",
+"text_size": "16.0",
 "text_use_global_font": "false",
 "text_use_global_size": "false"
 }
