@@ -40,7 +40,7 @@ func _process(delta):
 	#var closest_offset = $Path3D.curve.get_closest_offset($Path3D.transform * $Ship.global_transform.origin)
 	var player_progress_ratio = player_offset / $Path3D.curve.get_baked_length()
 	
-	print("player offset: ", player_progress_ratio);
+	#print("player offset: ", player_progress_ratio);
 	
 	#var progress_ratios = []
 	var position = 4
@@ -60,9 +60,12 @@ func _process(delta):
 			laps+=1
 			can_lap = false
 			$CanLapTimer.start()
-			if laps == max_laps:
+			if laps == max_laps + 1:
 				race_state = RACE_STATE.FINISH
-			
+				$Ship/CameraOffset/AnimationPlayer.play("finish")
+				$Camera3D/UI/LapLabel.visible = false
+			else: 
+				$Ship/CameraOffset/AnimationPlayer.play("new_lap")
 	
 	
 	#print(position)

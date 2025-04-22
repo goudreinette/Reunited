@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=39 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
-[ext_resource type="Texture2D" uid="uid://buvj5kjdrruux" path="res://Level_3_race/countdown/countdown.png" id="6_tf762"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="7_vmoy4"]
 [ext_resource type="PackedScene" uid="uid://cubm16nmpf0sr" path="res://Level_3_race/reunited_ship.tscn" id="9_kd54t"]
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="14_ev6ad"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://h8cnxrokgdw5" path="res://Sprites Algemeen/sprite_packs/ocean-and-clouds-free-pixel-art-backgrounds/Ocean_1/1.png" id="16_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dnwcc1u6uw736" path="res://Level_3_race/race sprites/plants/plant3.png" id="17_7pqpo"]
 [ext_resource type="Texture2D" uid="uid://d1s2kqirrohhm" path="res://Level_3_race/race sprites/plants/plant4.png" id="18_3smau"]
+[ext_resource type="Texture2D" uid="uid://dvo8vgqfc5i4j" path="res://Level_3_race/race sprites/countdown.png" id="18_vmoy4"]
 [ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/car_path_follow.gd" id="19_wuivs"]
 [ext_resource type="PackedScene" uid="uid://bt0h820c3kuh0" path="res://models/race/cuba_car_blue.glb" id="20_0n72s"]
 [ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="20_kd54t"]
@@ -148,9 +148,69 @@ tracks/3/keys = {
 "values": [false, true, false]
 }
 
+[sub_resource type="Animation" id="Animation_vmoy4"]
+resource_name = "new_lap"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Camera3D/UI/Countdown:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Camera3D/UI/Countdown:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_kd54t"]
+resource_name = "finish"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Camera3D/UI/Countdown:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Camera3D/UI/Countdown:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ha66"]
 _data = {
 &"RESET": SubResource("Animation_6ha66"),
+&"finish": SubResource("Animation_kd54t"),
+&"new_lap": SubResource("Animation_vmoy4"),
 &"race_intro": SubResource("Animation_pp4r8")
 }
 
@@ -682,10 +742,9 @@ look_target = NodePath("../Ship")
 [node name="UI" type="Node2D" parent="Camera3D"]
 
 [node name="Countdown" type="Sprite2D" parent="Camera3D/UI"]
-position = Vector2(120, 42)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_tf762")
-hframes = 4
+position = Vector2(120, 61)
+texture = ExtResource("18_vmoy4")
+hframes = 6
 
 [node name="PositionLabel" type="Label" parent="Camera3D/UI"]
 texture_filter = 1
@@ -786,6 +845,9 @@ progress = 2.0
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="Path3D/Racer3" instance=ExtResource("20_0n72s")]
+
+[node name="PlayerPathFollow" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.999764, 0, -0.0217331, 0, 1, 0, 0.0217331, 0, 0.999764, 0.862035, 1.63577e-05, 9.79951)
 
 [node name="CarreraMontuno31-3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_tf762")
