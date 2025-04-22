@@ -12,9 +12,13 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 @export var last_nearest_point_index: int = 0
 
+@export var laps: int = 1
+@export var max_laps: int = 3
+@export var can_lap: bool = false
+@export var last_progress_ratio = 0
 
 
-@onready var other_racers = [
+@onready var other_racers: Array[RaceCompetitor] = [
 	$Path3D/Racer1,
 	$Path3D/Racer2,
 	$Path3D/Racer3
@@ -22,6 +26,7 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 @onready var position_label = $Camera3D/UI/PositionLabel
 @onready var lap_label = $Camera3D/UI/LapLabel
+
 
 
 func _process(delta):
@@ -40,16 +45,32 @@ func _process(delta):
 	#var progress_ratios = []
 	var position = 4
 	
+	# Determining position
 	for i in other_racers.size():
 		var r = other_racers.get(i)
 		#print("racer", i," offset: ", r.progress_ratio)
 		#progress_ratios.push_back(r.progress_ratio)
-		if r.progress_ratio < player_progress_ratio:
+		if r.progress_ratio < player_progress_ratio and r.laps < laps:
 			position -= 1
 		
+		
+	# Laps 	
+	if player_progress_ratio > 0.999:
+		if can_lap and last_progress_ratio < player_progress_ratio:
+			laps+=1
+			can_lap = false
+			$CanLapTimer.start()
+			if laps == max_laps:
+				race_state = RACE_STATE.FINISH
+			
+	
+	
 	#print(position)
 	
 	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", 4)
+	$Camera3D/UI/LapLabel.text = str("lap ", laps, "/", max_laps)
+
+	#if player_progress_ratio > 
 	
 	#for i in points.size():
 		#var p: Vector3 = points.get(i)
@@ -66,7 +87,7 @@ func _process(delta):
 		#pass
 	#print(player)
 	# points have to be in sequence
-
+	last_progress_ratio = player_progress_ratio
 
 
 func find_closest_point( # find_closest_index
@@ -109,3 +130,7 @@ func _on_start_countdown_timer_timeout():
 func _on_race_start_timer_timeout():
 	race_state = RACE_STATE.RACING
 	$Ship.can_move = true
+
+
+func _on_can_lap_timer_timeout():
+	can_lap = true
