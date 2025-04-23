@@ -1,4 +1,4 @@
-extends Camera3D
+class_name RaceCamera extends Camera3D
 
 @export var follow_target: Node3D
 @export var look_target: Node3D

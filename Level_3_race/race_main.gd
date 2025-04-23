@@ -17,6 +17,8 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 @export var can_lap: bool = false
 @export var last_progress_ratio = 0
 
+@export var auto_speed = 0.02
+
 
 @onready var other_racers: Array[RaceCompetitor] = [
 	$Path3D/Racer1,
@@ -27,16 +29,16 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 @onready var position_label = $Camera3D/UI/PositionLabel
 @onready var lap_label = $Camera3D/UI/LapLabel
 
+@onready var player = $Ship
 
 
 func _process(delta):
 	# check nearest point by looping over every point and checking distance
-	var player = $Ship
 	
 	#var closest_point = find_closest_point($Path3D, player.global_position)
 	# get list of points
 	#var points: PackedVector3Array = $Path3D.curve.get_baked_points()
-	var player_offset = $Path3D.curve.get_closest_offset($Path3D.to_local($Ship.global_transform.origin))
+	var player_offset = $Path3D.curve.get_closest_offset($Path3D.to_local(player.global_transform.origin))
 	#var closest_offset = $Path3D.curve.get_closest_offset($Path3D.transform * $Ship.global_transform.origin)
 	var player_progress_ratio = player_offset / $Path3D.curve.get_baked_length()
 	
@@ -64,6 +66,10 @@ func _process(delta):
 				race_state = RACE_STATE.FINISH
 				$Ship/CameraOffset/AnimationPlayer.play("finish")
 				$Camera3D/UI/LapLabel.visible = false
+				player.can_move = false
+				
+				$Camera3D.spectator_mode = true
+				#player.reparent($Path3D/PlayerPathFollow)
 			else: 
 				$Ship/CameraOffset/AnimationPlayer.play("new_lap")
 	
@@ -72,6 +78,13 @@ func _process(delta):
 	
 	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", 4)
 	$Camera3D/UI/LapLabel.text = str("lap ", laps, "/", max_laps)
+
+
+	if race_state == RACE_STATE.FINISH:
+		$Path3D/PlayerPathFollow.progress += auto_speed
+		player.global_position = $Path3D/PlayerPathFollow.global_position
+		player.global_rotation = lerp(player.global_rotation, $Path3D/PlayerPathFollow.global_rotation, 0.3)
+		
 
 	#if player_progress_ratio > 
 	
