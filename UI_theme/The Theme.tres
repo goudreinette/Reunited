@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://byrvt86176nm"]
 
-[ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="1_5xles"]
+[ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="1_uyi6q"]
 
 [resource]
-default_font = ExtResource("1_5xles")
+default_font = ExtResource("1_uyi6q")
 default_font_size = 10

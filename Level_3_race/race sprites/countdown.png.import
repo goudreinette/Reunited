@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b324qb7tuxm8c"
-path="res://.godot/imported/countdown.png-cffbf5f5a809299957c529ceb2ea1f49.ctex"
+uid="uid://dvo8vgqfc5i4j"
+path="res://.godot/imported/countdown.png-82ac2488f89f4b3ab7b8fa66e44842ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_3_race/countdown/countdown.png"
-dest_files=["res://.godot/imported/countdown.png-cffbf5f5a809299957c529ceb2ea1f49.ctex"]
+source_file="res://Level_3_race/race sprites/countdown.png"
+dest_files=["res://.godot/imported/countdown.png-82ac2488f89f4b3ab7b8fa66e44842ea.ctex"]
 
 [params]
 

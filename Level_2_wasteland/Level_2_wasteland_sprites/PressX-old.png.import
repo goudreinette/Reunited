@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b324qb7tuxm8c"
-path="res://.godot/imported/countdown.png-cffbf5f5a809299957c529ceb2ea1f49.ctex"
+uid="uid://bvyogp3t32f1p"
+path="res://.godot/imported/PressX-old.png-a6c1ceb650be1739ed7b55790c6a9bcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level_3_race/countdown/countdown.png"
-dest_files=["res://.godot/imported/countdown.png-cffbf5f5a809299957c529ceb2ea1f49.ctex"]
+source_file="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX-old.png"
+dest_files=["res://.godot/imported/PressX-old.png-a6c1ceb650be1739ed7b55790c6a9bcc.ctex"]
 
 [params]
 
