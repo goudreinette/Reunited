@@ -2,6 +2,8 @@ extends Area2D
 
 
 signal died 
+signal health_reduced
+
 @export var maxhealth : int = 5
 @export var health : int  
 var healthratio : float 
@@ -50,9 +52,11 @@ func _process(delta: float) -> void:
 
 func reduce_health(amount):
 	health -= amount
+	health_reduced.emit(amount)
 	if health > 0:
 		$HitAnimation.play("hit")
 	else: explode()
+	
 	
 func explode():
 	isdead = true

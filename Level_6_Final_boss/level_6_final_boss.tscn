@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=19 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="3_2i3f6"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_ust2t"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="4_yow3e"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="5_ccr0g"]
 [ext_resource type="Script" uid="uid://c7kmc37d60p8n" path="res://Level_6_Final_boss/lazergroup.gd" id="5_ht0pr"]
@@ -15,6 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://b18s82l0qn7ny" path="res://Level_6_Final_boss/Stage 1 boss/port.tscn" id="10_nnvje"]
 [ext_resource type="Texture2D" uid="uid://c4jxl8sjaklun" path="res://Level_6_Final_boss/bar_background-export.png" id="11_ust2t"]
 [ext_resource type="Texture2D" uid="uid://dqd7xanf223m1" path="res://Level_6_Final_boss/vertical_bar_foreground-export.png" id="12_1h2ys"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
+resource_local_to_scene = true
+shader = ExtResource("3_ust2t")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ht0pr"]
 shader = ExtResource("5_ccr0g")
@@ -48,19 +55,16 @@ speaker1 = NodePath("Speaker group/Speaker 1")
 speaker2 = NodePath("Speaker group/Speaker 2")
 lazers = NodePath("Final Boss/Lazergroup")
 
-[node name="Final Boss" parent="." node_paths=PackedStringArray("main") instance=ExtResource("1_fcd1t")]
+[node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts") instance=ExtResource("1_fcd1t")]
 position = Vector2(119, 31)
+collision_layer = 0
 main = NodePath("..")
+shipparts = [NodePath("Turret1"), NodePath("Turret2"), NodePath("Turret3"), NodePath("Turret4"), NodePath("Port 1"), NodePath("Port 2")]
 
-[node name="Turret3" parent="Final Boss" instance=ExtResource("9_nnvje")]
-position = Vector2(-41, -11)
-collision_layer = 16
-turret_range = 300
-burst_time = 1.0
-aim_speed = 12
-bullet_speed = 75.0
+[node name="EnemyFixedWingDrone" parent="Final Boss" index="0"]
+material = SubResource("ShaderMaterial_1h2ys")
 
-[node name="Turret4" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret1" parent="Final Boss" instance=ExtResource("9_nnvje")]
 position = Vector2(-64, -21)
 collision_layer = 16
 turret_range = 300
@@ -68,24 +72,24 @@ burst_time = 1.0
 aim_speed = 12
 bullet_speed = 75.0
 
-[node name="Turret5" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret2" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(-41, -11)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret3" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(40, -11)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret4" parent="Final Boss" instance=ExtResource("9_nnvje")]
 position = Vector2(63, -22)
-collision_layer = 16
-turret_range = 300
-burst_time = 1.0
-aim_speed = 12
-bullet_speed = 75.0
-
-[node name="Turret6" parent="Final Boss" instance=ExtResource("9_nnvje")]
-position = Vector2(40, -11)
-collision_layer = 16
-turret_range = 300
-burst_time = 1.0
-aim_speed = 12
-bullet_speed = 75.0
-
-[node name="Turret7" parent="Final Boss" instance=ExtResource("9_nnvje")]
-position = Vector2(40, -11)
 collision_layer = 16
 turret_range = 300
 burst_time = 1.0
@@ -174,7 +178,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 script = ExtResource("10_ab0ce")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/Boss_UI"]
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer/Boss_UI"]
 layout_mode = 2
 value = 60.0
 fill_mode = 3
@@ -218,8 +222,15 @@ position = Vector2(283, 65)
 attack_pos = NodePath("../Speaker attack_pos 2")
 wait_pos = NodePath("../Speaker wait pos 2")
 
-[connection signal="health_changed" from="Final Boss" to="CanvasLayer/Ship_UI/HBoxContainer/ScoreCounter" method="_on_final_boss_health_changed"]
+[connection signal="health_changed" from="Final Boss" to="CanvasLayer/Boss_UI" method="_on_final_boss_health_changed"]
+[connection signal="health_reduced" from="Final Boss/Turret1" to="Final Boss" method="_on_turret_1_health_reduced"]
+[connection signal="health_reduced" from="Final Boss/Turret2" to="Final Boss" method="_on_turret_2_health_reduced"]
+[connection signal="health_reduced" from="Final Boss/Turret3" to="Final Boss" method="_on_turret_3_health_reduced"]
+[connection signal="health_reduced" from="Final Boss/Turret4" to="Final Boss" method="_on_turret_4_health_reduced"]
+[connection signal="health_reduced" from="Final Boss/Port 1" to="Final Boss" method="_on_port_1_health_reduced"]
+[connection signal="health_reduced" from="Final Boss/Port 2" to="Final Boss" method="_on_port_2_health_reduced"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="Player" to="CanvasLayer/Ship_UI" method="_on_player_shield_changed"]
 
+[editable path="Final Boss"]
 [editable path="CanvasLayer/Ship_UI"]
