@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://c46xbdsunpjyv"]
+
+[ext_resource type="Script" uid="uid://bojhn823a1frh" path="res://Level_6_Final_boss/final_boss.gd" id="1_egote"]
+[ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_wx1ne"]
+[ext_resource type="Texture2D" uid="uid://2cbdw4x60fb6" path="res://Level_6_Final_boss/Stage 1 boss/Boss Plane stage 1.png" id="3_8xgjx"]
+[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/Big explosion.wav" id="5_21rke"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skvdi"]
+resource_local_to_scene = true
+shader = ExtResource("2_wx1ne")
+shader_parameter/active = false
+shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_iqs3q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("EnemyFixedWingDrone:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_g3nya"]
+resource_name = "hit"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyFixedWingDrone:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_02tj8"]
+_data = {
+&"RESET": SubResource("Animation_iqs3q"),
+&"hit": SubResource("Animation_g3nya")
+}
+
+[node name="Final Boss" type="Area2D" groups=["enemies"]]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_egote")
+
+[node name="EnemyFixedWingDrone" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_skvdi")
+texture = ExtResource("3_8xgjx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_21rke")
+
+[node name="HitAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_02tj8")
+}
+autoplay = "RESET"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(46.1167, 20.0385)
+polygon = PackedVector2Array(-112.117, 7.96146, -70.1167, -12.0385, -59.1167, -4.03854, -50.1167, -4.03854, -50.1167, -10.0385, -42.1167, -10.0385, -42.1167, -4.03854, -34.1167, -4.03854, -22.1167, -12.0385, 20.8833, 7.96146, 24.8833, 4.96146, -17.1167, -21.0385, 64.8833, -20.0385, 69.8833, -29.0385, -15.1167, -61.0385, -46.1167, -97.0385, -77.1167, -62.0385, -160.117, -31.0385, -156.117, -21.0385, -76.1167, -21.0385, -117.117, 4.96146)

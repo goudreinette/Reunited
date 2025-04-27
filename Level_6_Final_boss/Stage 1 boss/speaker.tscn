@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3cjqohlq37cm"]
+
+[ext_resource type="Texture2D" uid="uid://2l63y5blp7ix" path="res://Level_6_Final_boss/Stage 1 boss/Speaker.png" id="1_nygju"]
+[ext_resource type="Script" uid="uid://devtf876qfo3b" path="res://Level_6_Final_boss/Stage 1 boss/speaker.gd" id="1_wslkn"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_tp1bk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxfm"]
+size = Vector2(29.7188, 48)
+
+[node name="Speaker" type="Area2D" node_paths=PackedStringArray("shoot_pos")]
+script = ExtResource("1_wslkn")
+bullet_scene = ExtResource("2_tp1bk")
+shoot_pos = NodePath("Shooting_Position")
+
+[node name="SpeakerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_nygju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.140625, 2)
+shape = SubResource("RectangleShape2D_rwxfm")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Shooting_Position" type="Node2D" parent="."]
+position = Vector2(0, 13)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

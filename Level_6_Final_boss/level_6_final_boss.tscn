@@ -1,3 +1,225 @@
-[gd_scene format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=17 format=3 uid="uid://dbityatjf3g0b"]
 
-[node name="Level6FinalBoss" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
+[ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="3_2i3f6"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="4_yow3e"]
+[ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="5_ccr0g"]
+[ext_resource type="Script" uid="uid://c7kmc37d60p8n" path="res://Level_6_Final_boss/lazergroup.gd" id="5_ht0pr"]
+[ext_resource type="PackedScene" uid="uid://dlyxihjj0lu4f" path="res://Level_1_space_escape/Fat_Lazer_boss.tscn" id="5_mqkve"]
+[ext_resource type="PackedScene" uid="uid://d3cjqohlq37cm" path="res://Level_6_Final_boss/Stage 1 boss/speaker.tscn" id="6_mqkve"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="6_nnvje"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_mqkve"]
+[ext_resource type="PackedScene" uid="uid://ruwsfqk86704" path="res://Smup Test Level/enemies/boss_turret.tscn" id="9_nnvje"]
+[ext_resource type="Script" uid="uid://do5jv74uqlbxa" path="res://Level_6_Final_boss/boss_ui.gd" id="10_ab0ce"]
+[ext_resource type="PackedScene" uid="uid://b18s82l0qn7ny" path="res://Level_6_Final_boss/Stage 1 boss/port.tscn" id="10_nnvje"]
+[ext_resource type="Texture2D" uid="uid://c4jxl8sjaklun" path="res://Level_6_Final_boss/bar_background-export.png" id="11_ust2t"]
+[ext_resource type="Texture2D" uid="uid://dqd7xanf223m1" path="res://Level_6_Final_boss/vertical_bar_foreground-export.png" id="12_1h2ys"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ht0pr"]
+shader = ExtResource("5_ccr0g")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.213
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 54.597
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = -0.00999995
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.396
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.6
+
+[node name="Level6_main" type="Node2D" node_paths=PackedStringArray("port1", "port2", "speaker1", "speaker2", "lazers")]
+script = ExtResource("1_nnvje")
+port1 = NodePath("Final Boss/Port 1")
+port2 = NodePath("Final Boss/Port 2")
+speaker1 = NodePath("Speaker group/Speaker 1")
+speaker2 = NodePath("Speaker group/Speaker 2")
+lazers = NodePath("Final Boss/Lazergroup")
+
+[node name="Final Boss" parent="." node_paths=PackedStringArray("main") instance=ExtResource("1_fcd1t")]
+position = Vector2(119, 31)
+main = NodePath("..")
+
+[node name="Turret3" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(-41, -11)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret4" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(-64, -21)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret5" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(63, -22)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret6" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(40, -11)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Turret7" parent="Final Boss" instance=ExtResource("9_nnvje")]
+position = Vector2(40, -11)
+collision_layer = 16
+turret_range = 300
+burst_time = 1.0
+aim_speed = 12
+bullet_speed = 75.0
+
+[node name="Port 1" parent="Final Boss" instance=ExtResource("10_nnvje")]
+position = Vector2(-40, -24)
+move_time = 1.0
+rows = 2
+global_formation_offset = Vector2(20, 65)
+
+[node name="Port 2" parent="Final Boss" instance=ExtResource("10_nnvje")]
+position = Vector2(40, -24)
+move_time = 1.0
+rows = 2
+global_formation_offset = Vector2(140, 65)
+
+[node name="Lazergroup" type="Node2D" parent="Final Boss"]
+script = ExtResource("5_ht0pr")
+
+[node name="FatLazer" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(-72, -2)
+
+[node name="FatLazer2" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(-66, -2)
+
+[node name="FatLazer3" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(-59, -2)
+
+[node name="FatLazer4" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(59, -2)
+
+[node name="FatLazer5" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(66, -2)
+
+[node name="FatLazer6" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
+position = Vector2(72, -2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Ship_UI" parent="CanvasLayer" instance=ExtResource("3_2i3f6")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -26.0
+offset_bottom = 0.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" parent="CanvasLayer/Ship_UI" index="0"]
+size_flags_vertical = 8
+
+[node name="ShieldBar" parent="CanvasLayer/Ship_UI/HBoxContainer" index="0"]
+value = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("4_yow3e")
+
+[node name="Special FX" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_ht0pr")
+offset_right = 241.0
+offset_bottom = 160.0
+
+[node name="Boss_UI" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 8
+size_flags_vertical = 4
+script = ExtResource("10_ab0ce")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/Boss_UI"]
+layout_mode = 2
+value = 60.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("11_ust2t")
+texture_progress = ExtResource("12_1h2ys")
+
+[node name="Player" parent="." instance=ExtResource("6_nnvje")]
+position = Vector2(120, 120)
+current_weapon_type = 0
+max_shield = 200
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("7_mqkve")
+
+[node name="Speaker group" type="Node2D" parent="."]
+
+[node name="Speaker wait pos 1" type="Node2D" parent="Speaker group"]
+position = Vector2(-41, 65)
+
+[node name="Speaker attack_pos 1" type="Node2D" parent="Speaker group"]
+position = Vector2(87, 65)
+
+[node name="Speaker 1" parent="Speaker group" node_paths=PackedStringArray("attack_pos", "wait_pos") instance=ExtResource("6_mqkve")]
+position = Vector2(-41, 65)
+attack_pos = NodePath("../Speaker attack_pos 1")
+wait_pos = NodePath("../Speaker wait pos 1")
+
+[node name="Speaker wait pos 2" type="Node2D" parent="Speaker group"]
+position = Vector2(283, 65)
+
+[node name="Speaker attack_pos 2" type="Node2D" parent="Speaker group"]
+position = Vector2(157, 65)
+
+[node name="Speaker 2" parent="Speaker group" node_paths=PackedStringArray("attack_pos", "wait_pos") instance=ExtResource("6_mqkve")]
+position = Vector2(283, 65)
+attack_pos = NodePath("../Speaker attack_pos 2")
+wait_pos = NodePath("../Speaker wait pos 2")
+
+[connection signal="health_changed" from="Final Boss" to="CanvasLayer/Ship_UI/HBoxContainer/ScoreCounter" method="_on_final_boss_health_changed"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="shield_changed" from="Player" to="CanvasLayer/Ship_UI" method="_on_player_shield_changed"]
+
+[editable path="CanvasLayer/Ship_UI"]

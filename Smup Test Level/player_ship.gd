@@ -53,7 +53,7 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "right"
 			$Boosters.animation = "right"
 		elif input.x < 0:
-			#$Ship.frame = 0
+			#$Ship.frame = 0 
 			$AnimatedSprite2D.animation = "left"
 			$Boosters.animation = "left"
 		else:
@@ -63,7 +63,7 @@ func _process(delta):
 	
 	if Input.is_action_pressed("dodge"):
 		barelling = true
-		$AnimatedSprite2D.play("barrel 	roll")
+		$AnimatedSprite2D.play("barrel roll")
 	
 		
 	if Input.is_action_pressed("shoot") and not weapon_disabled:

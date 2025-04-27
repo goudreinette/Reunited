@@ -13,8 +13,8 @@ func circle_shot(scn,amt,spd):
 	for n in amt:
 		var b = scn.instantiate()
 		get_tree().root.add_child.call_deferred(b)
-		## elke 60 graden schieten want PI = 180 radians
-		var d = PI/(amt/2.0) 
+		## PI = 180 graden in radians. dus als je 2*pi deelt door de hoeveelheid kogels verdeelt hij de kogels gelijkmakig
+		var d = PI*2/amt
 		b.start(shoot_pos.global_position, n * d,spd)
 
 

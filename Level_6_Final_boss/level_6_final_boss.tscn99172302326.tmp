@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://dbityatjf3g0b"]
+
+[ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
+[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_wcxc7"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://Smup Test Level/ship_ui.tscn" id="3_2i3f6"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="4_yow3e"]
+[ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="5_ccr0g"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="6_nnvje"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_mqkve"]
+[ext_resource type="Texture2D" uid="uid://2l63y5blp7ix" path="res://Level_6_Final_boss/Stage 1 boss/Speaker.png" id="8_ccr0g"]
+[ext_resource type="PackedScene" uid="uid://ruwsfqk86704" path="res://Smup Test Level/enemies/boss_turret.tscn" id="9_nnvje"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ht0pr"]
+shader = ExtResource("5_ccr0g")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.213
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 54.597
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = -0.00999995
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.396
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.6
+
+[node name="Level6_main" type="Node2D"]
+script = ExtResource("1_wcxc7")
+
+[node name="Final Boss" parent="." instance=ExtResource("1_fcd1t")]
+position = Vector2(121, 40)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("3_2i3f6")]
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("4_yow3e")
+
+[node name="Special FX" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_ht0pr")
+offset_right = 241.0
+offset_bottom = 160.0
+
+[node name="Player" parent="." instance=ExtResource("6_nnvje")]
+position = Vector2(120, 120)
+max_shield = 20
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("7_mqkve")
+
+[node name="Speaker" type="Sprite2D" parent="."]
+position = Vector2(101, 84)
+texture = ExtResource("8_ccr0g")
+
+[node name="Speaker2" type="Sprite2D" parent="."]
+position = Vector2(145, 85)
+texture = ExtResource("8_ccr0g")
+
+[node name="Turret" parent="." instance=ExtResource("9_nnvje")]
+position = Vector2(101, 64)
+maxhealth = 5
+turret_range = 200
+firing_pattern = 1
+burst_time = 2.0
+cooldown_time = 2.0
+aim_speed = 16
+
+[node name="Turret2" parent="." instance=ExtResource("9_nnvje")]
+position = Vector2(145, 65)
+maxhealth = 5
+turret_range = 200
+firing_pattern = 1
+burst_time = 2.0
+cooldown_time = 2.0
+aim_speed = 16
+
+[node name="Turret3" parent="." instance=ExtResource("9_nnvje")]
+position = Vector2(156, 30)
+maxhealth = 5
+turret_range = 200
+firing_pattern = 1
+burst_time = 2.0
+cooldown_time = 2.0
+aim_speed = 16

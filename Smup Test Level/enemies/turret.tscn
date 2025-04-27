@@ -1,7 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://sboq8omi1aii"]
+[gd_scene load_steps=27 format=3 uid="uid://sboq8omi1aii"]
 
 [ext_resource type="Script" uid="uid://djmqlfsg4mym4" path="res://Smup Test Level/enemies/turret.gd" id="1_tgbef"]
-[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_kjxed"]
 [ext_resource type="Texture2D" uid="uid://buhu0rv5lp60u" path="res://Smup Test Level/test_shmup_sprites/turret.png" id="2_wmswj"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_f7h8c"]
 [ext_resource type="Texture2D" uid="uid://bhnwa5btw4bwp" path="res://Effects/charging.png" id="5_ibv0s"]
@@ -259,10 +258,8 @@ _data = {
 script = ExtResource("1_tgbef")
 health = 1
 rate_of_fire = 0.125
-bullet_scene = ExtResource("2_kjxed")
 
 [node name="Base" type="Sprite2D" parent="."]
-z_index = -1
 material = SubResource("ShaderMaterial_qrvj6")
 texture = ExtResource("2_wmswj")
 hframes = 5
@@ -270,7 +267,6 @@ vframes = 2
 frame = 5
 
 [node name="Canon" type="Sprite2D" parent="."]
-z_index = -1
 material = SubResource("ShaderMaterial_mfnu6")
 texture = ExtResource("2_wmswj")
 hframes = 5

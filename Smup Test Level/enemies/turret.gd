@@ -17,10 +17,11 @@ enum FiringPatterns {
 @export var turret_range : int = 200
 
 @export var firing_pattern = FiringPatterns.Burst
-@export var burst_time = 2.0
-@export var cooldown_time = 2.0
-@export var rate_of_fire = 0.25
+@export var burst_time: float = 2.0
+@export var cooldown_time: float = 3.0
+@export var rate_of_fire: float = 0.25
 @export var aim_speed = 16
+@export var bullet_speed = 100.0
 var player : ShipPlayer
 
 
@@ -33,9 +34,10 @@ var is_cooling_down: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+#	await get_tree().create_timer(randf_range(0.0,2))
 	$ShootTimer.wait_time = rate_of_fire
 	$BurstTimer.wait_time = burst_time
-	$CooldownTimer.wait_time = cooldown_time
+	$CooldownTimer.wait_time = cooldown_time + randf_range(0.0,2)
 	#find the player if it exists
 	#so it doesnt crash while testing only the turret
 	var nodes_in_player_group = get_tree().get_nodes_in_group("Player")
@@ -80,42 +82,52 @@ func explode():
 	var e = explode_scene.instantiate()
 	get_tree().root.add_child(e)
 	e.start(global_position)
-	
+	$CollisionShape2D.queue_free()
 	died.emit(5)
 	await $HitAnimation.animation_finished # Needed to 
-	await $Canon/ChargeAnimation.animation_finished
+	$"Canon/ChargeAnimation".queue_free()
+		
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
 	#queue_free()
 
-func shoot():
+func shoot(spd):
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start($Canon/ShootPos.global_position,$Canon.rotation)
+	b.start($Canon/ShootPos.global_position,$Canon.rotation,spd)
 	
+## in case of burst mode first wait for cooldown	
+func _on_cooldown_timer_timeout() -> void:
+	$Canon/ChargeAnimation.play()
+	is_cooling_down = false
+	$CooldownTimer.wait_time = cooldown_time ##in case of an offset
 
+
+##Then the charge animation plays
+func _on_charge_animation_animation_finished() -> void:
+	shoot(bullet_speed)
+	$BurstTimer.start()
+	$ShootTimer.start()
+
+## then the burst timer starts and the shooting
+##or when no burst is selected this is always playing
 func _on_shoot_timer_timeout():
 	if player:
 		if abs(player.global_position.y - global_position.y) < turret_range and not isdead:
 			if firing_pattern == FiringPatterns.Continuous:
-				shoot()
+				shoot(bullet_speed)
 				$ShootTimer.start()
 			elif firing_pattern == FiringPatterns.Burst:
 				if not is_cooling_down:
-					shoot()
+					shoot(bullet_speed)
 					$ShootTimer.start()
 
 #	$ShootTimer.wait_time = rate_of_fire
 
-
+## then when the burst timer ends the Cooldown timer starts again
 func _on_burst_timer_timeout() -> void:
 	is_cooling_down = true
 	$CooldownTimer.start()
-	if firing_pattern == FiringPatterns.Burst:
-		$Canon/ChargeAnimation.play()
 
-func _on_cooldown_timer_timeout() -> void:
-	is_cooling_down = false
-	$BurstTimer.start()
-	$ShootTimer.start()
+
 	
