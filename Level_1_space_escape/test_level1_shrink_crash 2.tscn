@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="15_em3od"]
 [ext_resource type="Texture2D" uid="uid://vtgnp04evjex" path="res://Level_1_space_escape/level_1_space_escape_sprites/Small fire.png" id="16_roipu"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="18_bqkpq"]
-[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="19_ns6ep"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://test levels/Smup Test Level/enemies/enemy_bullet.tscn" id="19_ns6ep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0erl"]
 atlas = ExtResource("10_23fxl")

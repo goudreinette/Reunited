@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://0am6wpvkaciw"]
+
+[ext_resource type="Script" uid="uid://d3vcr8uo5sef2" path="res://test levels/Smup Test Level/enemies/goopy_bullet.gd" id="1_mgbek"]
+[ext_resource type="PackedScene" uid="uid://c1exqem33yoah" path="res://Level_2_wasteland/goop_splat.tscn" id="2_2avqy"]
+[ext_resource type="Texture2D" uid="uid://c2s7q3iotigh2" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Goop bullet.png" id="2_mgbek"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgbek"]
+radius = 3.53553
+
+[node name="GoopyBullet" type="Area2D"]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_mgbek")
+time = 1.5
+target = Vector2(20, 20)
+splash_scene = ExtResource("2_2avqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("CircleShape2D_mgbek")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mgbek")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

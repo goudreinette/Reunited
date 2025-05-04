@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/gunship/Gunship.png" id="1_3x5xb"]
 [ext_resource type="Script" uid="uid://dwq6phtd73l0x" path="res://Level_1_space_escape/gunship/gunship.gd" id="1_t080n"]
-[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://Smup Test Level/enemies/rocket.tscn" id="2_j2qot"]
+[ext_resource type="PackedScene" uid="uid://cgcsjb12gfvmk" path="res://test levels/Smup Test Level/enemies/rocket.tscn" id="2_j2qot"]
 [ext_resource type="PackedScene" uid="uid://c86radmxegrq5" path="res://Effects/Smal explosion.tscn" id="2_uau5r"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="4_j2qot"]
 

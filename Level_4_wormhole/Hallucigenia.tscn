@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dkkxuf2a58gpi" path="res://Level_4_wormhole/hallucigenia.gd" id="1_d4526"]
 [ext_resource type="Texture2D" uid="uid://cpgvjq18koju0" path="res://Level_4_wormhole/hallucigenia/hallucigenia0001.png" id="1_skd7y"]
 [ext_resource type="Texture2D" uid="uid://bvs6vogx7nc6m" path="res://Level_4_wormhole/hallucigenia/hallucigenia0002.png" id="2_d4526"]
-[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://Smup Test Level/enemies/enemy_bullet.tscn" id="2_sdysa"]
+[ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://test levels/Smup Test Level/enemies/enemy_bullet.tscn" id="2_sdysa"]
 [ext_resource type="Texture2D" uid="uid://05rypadjjgu8" path="res://Level_4_wormhole/hallucigenia/hallucigenia0003.png" id="3_sdysa"]
 [ext_resource type="Texture2D" uid="uid://dfkccve68fn8e" path="res://Level_4_wormhole/hallucigenia/hallucigenia0004.png" id="4_tuu22"]
 [ext_resource type="Texture2D" uid="uid://bn0wqn0qjpem0" path="res://Level_4_wormhole/hallucigenia/hallucigenia0005.png" id="5_cw03s"]
