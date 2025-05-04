@@ -19,6 +19,9 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 @export var auto_speed = 0.02
 
+@export var next_level: PackedScene
+@export var finish_waiting_time: float = 6.0
+
 
 @onready var other_racers: Array[RaceCompetitor] = [
 	$Path3D/Racer1,
@@ -69,6 +72,8 @@ func _process(delta):
 				player.can_move = false
 				
 				$Camera3D.spectator_mode = true
+				await get_tree().create_timer(finish_waiting_time).timeout
+				get_tree().change_scene_to_packed(next_level)
 				#player.reparent($Path3D/PlayerPathFollow)
 			else: 
 				$Ship/CameraOffset/AnimationPlayer.play("new_lap")

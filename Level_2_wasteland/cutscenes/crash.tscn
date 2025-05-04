@@ -1,8 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://3akmuibfcw5i"]
+[gd_scene load_steps=27 format=3 uid="uid://3akmuibfcw5i"]
 
+[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_dxg6i"]
 [ext_resource type="Texture2D" uid="uid://8iqgnx5goc0g" path="res://Level_2_wasteland/cutscenes/crash.png" id="1_jv7d0"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="2_ehv5w"]
 [ext_resource type="Texture2D" uid="uid://8onrpxwc35pn" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 2/Smoke Dark - 2.png" id="2_yocie"]
+[ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_ysk30"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ds4e"]
 atlas = ExtResource("2_ehv5w")
@@ -132,6 +134,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_cyqq3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_xou6c"]
 resource_name = "crash"
 length = 5.0
@@ -149,21 +166,6 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_cyqq3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Crash:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
 _data = {
 &"RESET": SubResource("Animation_cyqq3"),
@@ -171,6 +173,9 @@ _data = {
 }
 
 [node name="Crash" type="Node2D"]
+script = ExtResource("1_dxg6i")
+next_level = ExtResource("2_ysk30")
+waiting_time = 8.0
 
 [node name="Crash" type="Sprite2D" parent="."]
 position = Vector2(120, 80)

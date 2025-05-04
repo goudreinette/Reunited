@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="2_nfsms"]
 [ext_resource type="Texture2D" uid="uid://vtgnp04evjex" path="res://Level_1_space_escape/level_1_space_escape_sprites/Small fire.png" id="2_npa8y"]
 [ext_resource type="Texture2D" uid="uid://ctqgf6pwmwv8n" path="res://Effects/Explosion_spritepack_2/Explosion VFX 14/Explosion VFX 14(48x48).png" id="3_kgu1h"]
-[ext_resource type="PackedScene" path="res://Level_1_space_escape/SpaceBG.tscn" id="3_n5y7i"]
+[ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="3_n5y7i"]
 [ext_resource type="Texture2D" uid="uid://bxf722bi6nv1t" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-2.png" id="3_rttxq"]
 [ext_resource type="Texture2D" uid="uid://co86d8feexdsc" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-3.png" id="4_qpy3c"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_sk71u"]

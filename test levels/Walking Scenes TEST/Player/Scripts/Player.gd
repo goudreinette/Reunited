@@ -164,3 +164,9 @@ func _on_scan_detect_area_exited(area: Area2D) -> void:
 
 func _on_projectile_detect_area_entered(area: Area2D) -> void:
 	if not is_dead: dead()
+
+
+func _on_platform_detect_body_entered(body: Node2D) -> void:
+	above_platform = true
+func _on_platform_detect_body_exited(body: Node2D) -> void:
+	above_platform = false
