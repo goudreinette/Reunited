@@ -1,11 +1,13 @@
 [gd_scene load_steps=55 format=3 uid="uid://3akmuibfcw5i"]
 
+[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_dxg6i"]
 [ext_resource type="Texture2D" uid="uid://8iqgnx5goc0g" path="res://Level_2_wasteland/cutscenes/crash.png" id="1_jv7d0"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="2_ehv5w"]
 [ext_resource type="Texture2D" uid="uid://8onrpxwc35pn" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 2/Smoke Dark - 2.png" id="2_yocie"]
 [ext_resource type="Texture2D" uid="uid://urqrfsjv7e0g" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 4/Smoke Dark - 4.png" id="3_odp4l"]
 [ext_resource type="Texture2D" uid="uid://b2pexum1ifns4" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 4/Fire 4 - 4.png" id="4_ysk30"]
 [ext_resource type="Texture2D" uid="uid://cv66dcp11dq83" path="res://Effects/Pixel Fire Asset Pack V1/Fire 7 - 2/Fire 7 - 2.png" id="5_odp4l"]
+[ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_ysk30"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ds4e"]
 atlas = ExtResource("2_ehv5w")
@@ -366,6 +368,9 @@ _data = {
 }
 
 [node name="Crash" type="Node2D"]
+script = ExtResource("1_dxg6i")
+next_level = ExtResource("2_ysk30")
+waiting_time = 8.0
 
 [node name="Crash" type="Sprite2D" parent="."]
 position = Vector2(120, 80)

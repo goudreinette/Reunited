@@ -1,8 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=40 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
 [ext_resource type="Texture2D" uid="uid://bu6tg466u7f8p" path="res://Level_3_race/race sprites/race map new.png" id="2_g3r7i"]
+[ext_resource type="PackedScene" uid="uid://dc84xukp6rnfr" path="res://Level_4_wormhole/Level_4 Wormhole.tscn" id="2_kd54t"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
@@ -11,7 +12,7 @@
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="7_vmoy4"]
-[ext_resource type="PackedScene" uid="uid://cubm16nmpf0sr" path="res://Level_3_race/reunited_ship.tscn" id="9_kd54t"]
+[ext_resource type="PackedScene" path="res://Level_3_race/reunited_ship.tscn" id="9_kd54t"]
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="14_ev6ad"]
 [ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="15_0oy6m"]
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="16_8vcgt"]
@@ -230,6 +231,7 @@ point_count = 55
 
 [node name="Level 3 - Race" type="Node3D"]
 script = ExtResource("1_g3r7i")
+next_level = ExtResource("2_kd54t")
 
 [node name="Map" type="Sprite3D" parent="."]
 transform = Transform3D(-0.28731, -0.957838, -4.18684e-08, 0, -4.37114e-08, 1, -0.957838, 0.28731, 1.25587e-08, 2.15413, 0, -3.58175)

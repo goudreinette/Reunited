@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=21 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://Level_5 Prison/path_follow_2d.gd" id="5_ddlk5"]
 [ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://Level_5 Prison/drone.tscn" id="6_tkkrf"]
 [ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_etoha"]
+[ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
+[ext_resource type="PackedScene" uid="uid://dbityatjf3g0b" path="res://Level_6_Final_boss/level_6_final_boss.tscn" id="10_ddlk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
 texture = ExtResource("1_3bkdr")
@@ -1604,7 +1606,7 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="Curve2D" id="Curve2D_1hlrn"]
+[sub_resource type="Curve2D" id="Curve2D_tkkrf"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1628,6 +1630,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -2, -2, 0, 0, 0, 0, -2, 32, 0, 0, 0, 0, 48, 31, 0, 0, 0, 0, 48, -3, 0, 0, 0, 0, -2, -2)
 }
 point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etoha"]
+size = Vector2(63, 54)
 
 [node name="Level 5 - Prison" type="Node2D"]
 y_sort_enabled = true
@@ -1708,7 +1713,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_1hlrn")
+curve = SubResource("Curve2D_tkkrf")
 speed = 0.5
 speed_scale = 0.5
 
@@ -1760,6 +1765,19 @@ script = ExtResource("5_ddlk5")
 
 [node name="Drone" parent="Path2D2/PathFollow2D2" instance=ExtResource("6_tkkrf")]
 rotation = -0.0307595
+
+[node name="Next level trigger" type="Area2D" parent="."]
+position = Vector2(263, -20)
+script = ExtResource("9_8tl4s")
+next_level = ExtResource("10_ddlk5")
+waiting_time = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Next level trigger"]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_etoha")
+
+[connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
+[connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
 
 [editable path="moving platform2"]
 [editable path="moving platform3"]
