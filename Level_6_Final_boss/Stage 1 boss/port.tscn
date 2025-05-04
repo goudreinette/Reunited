@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c5x8kw8cm2wt5" path="res://Level_6_Final_boss/Stage 1 boss/port.png" id="1_c2ecc"]
 [ext_resource type="Script" uid="uid://cxuj25ecqfqwf" path="res://Level_6_Final_boss/Stage 1 boss/port.gd" id="1_o4ur4"]
-[ext_resource type="PackedScene" uid="uid://cdtclau4u03vj" path="res://Smup Test Level/enemies/fw_drone_boss.tscn" id="2_mhwyk"]
+[ext_resource type="PackedScene" uid="uid://cdtclau4u03vj" path="res://test levels/Smup Test Level/enemies/fw_drone_boss.tscn" id="2_mhwyk"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_jvadh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mke5j"]

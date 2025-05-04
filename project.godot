@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Reunited"
-run/main_scene="res://Smup Test Level/Shmup Test Level.tscn"
+run/main_scene="res://test levels/Smup Test Level/Shmup Test Level.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Sprites Algemeen/icon.png"
 
@@ -47,7 +47,7 @@ directories/dtl_directory={
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
 "Ship_fixed": "res://addons/dialogic/dialogue/Ship_fixed.dtl",
 "Take_this": "res://addons/dialogic/characters/Take_this.dtl",
-"Walking Scenes/timeline": "res://Walking Scenes TEST/timeline.dtl",
+"Walking Scenes/timeline": "res://test levels/Walking Scenes TEST/timeline.dtl",
 "Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",
 "frank 2": "res://addons/dialogic/dialogue/frank 2.dtl",
 "frank_1": "res://addons/dialogic/dialogue/frank_1.dtl",

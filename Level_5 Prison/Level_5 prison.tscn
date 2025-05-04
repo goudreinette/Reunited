@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
-[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
+[ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
 [ext_resource type="Texture2D" uid="uid://dke6j3pmcowfu" path="res://Sprites Algemeen/sprite_packs/Pixel Crawler - Sewer/Assets/Tiles - recolored.png" id="2_63ava"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="3_63ava"]
 [ext_resource type="Script" uid="uid://6wsqjt1ogbar" path="res://Level_5 Prison/detected.gd" id="4_8tl4s"]
@@ -1604,7 +1604,7 @@ _data = {
 }
 point_count = 7
 
-[sub_resource type="Curve2D" id="Curve2D_3bkdr"]
+[sub_resource type="Curve2D" id="Curve2D_1hlrn"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1708,7 +1708,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_3bkdr")
+curve = SubResource("Curve2D_1hlrn")
 speed = 0.5
 speed_scale = 0.5
 
