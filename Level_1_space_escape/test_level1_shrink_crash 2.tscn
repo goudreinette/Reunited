@@ -1,7 +1,8 @@
-[gd_scene load_steps=69 format=3 uid="uid://dgdfahpdeft6k"]
+[gd_scene load_steps=70 format=3 uid="uid://dgdfahpdeft6k"]
 
 [ext_resource type="Script" uid="uid://d1ako1kfljv0p" path="res://Level_1_space_escape/test_level_1_shrink_crash.gd" id="1_owjmi"]
 [ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="2_lb3ue"]
+[ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_owjmi"]
 [ext_resource type="Texture2D" uid="uid://bxf722bi6nv1t" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-2.png" id="3_pekw0"]
 [ext_resource type="Texture2D" uid="uid://co86d8feexdsc" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-3.png" id="4_3hovc"]
 [ext_resource type="Texture2D" uid="uid://bclf00ul0i1m7" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-4.png" id="5_2iqvl"]
@@ -503,6 +504,7 @@ _data = {
 
 [node name="TestLevel1ShrinkCrash" type="Node2D"]
 script = ExtResource("1_owjmi")
+next_level = ExtResource("2_owjmi")
 
 [node name="Main planet" type="Sprite2D" parent="."]
 position = Vector2(40, -100)

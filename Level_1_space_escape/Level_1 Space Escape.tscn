@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://b2t1sgtcnnfj2"]
+[gd_scene load_steps=33 format=3 uid="uid://b2t1sgtcnnfj2"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
 [ext_resource type="Script" uid="uid://bmhi5uhs8dxjn" path="res://Level_1_space_escape/crash_scene_detect.gd" id="2_avks8"]
+[ext_resource type="PackedScene" uid="uid://dgdfahpdeft6k" path="res://Level_1_space_escape/test_level1_shrink_crash 2.tscn" id="3_8olhq"]
 [ext_resource type="Texture2D" uid="uid://bnrvlasath23p" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 128x.png" id="3_lcmmd"]
 [ext_resource type="Texture2D" uid="uid://dq0sdbie55g5" path="res://Level_1_space_escape/level_1_space_escape_sprites/Dry planet.png" id="4_5kg8n"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_bur0m"]
@@ -28,6 +29,9 @@
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://Smup Test Level/enemies/turret.tscn" id="25_nk3iq"]
 [ext_resource type="Texture2D" uid="uid://b1olkfqakakq0" path="res://Level_4_wormhole/marella/marella 32px grey.png" id="29_ubutc"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8olhq"]
+size = Vector2(530, 126)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
 shader = ExtResource("9_g2ecq")
@@ -58,13 +62,20 @@ shader_parameter/vignette_opacity = 0.6
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g0tbl")
 
-[node name="CrashSceneDetect" type="Node2D" parent="."]
-process_mode = 4
-position = Vector2(0, -1452)
+[node name="CrashSceneDetect" type="Node2D" parent="." node_paths=PackedStringArray("UI")]
+position = Vector2(0, 1604)
 script = ExtResource("2_avks8")
+scene = ExtResource("3_8olhq")
+UI = NodePath("../CanvasLayer/UI")
 
 [node name="ship_position" type="Node2D" parent="CrashSceneDetect"]
 position = Vector2(170, 105)
+
+[node name="Area2D" type="Area2D" parent="CrashSceneDetect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrashSceneDetect/Area2D"]
+position = Vector2(106, 63)
+shape = SubResource("RectangleShape2D_8olhq")
 
 [node name="Parallax2D 0_5" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
@@ -249,6 +260,10 @@ visible = false
 position = Vector2(165, 1271)
 texture = ExtResource("29_ubutc")
 
+[node name="Astroid-1" parent="." instance=ExtResource("14_x6pma")]
+position = Vector2(76, -1346)
+
+[connection signal="area_entered" from="CrashSceneDetect/Area2D" to="CrashSceneDetect" method="_on_area_2d_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
 

@@ -131,8 +131,10 @@ func shoot_gattling():
 	pass
 	
 func set_shield(value):
-	shield = min(max_shield, value)
-	shield_changed.emit(max_shield, shield)
+	if not barelling :
+		shield = min(max_shield, value)
+		shield_changed.emit(max_shield, shield)
+	
 	if shield <= 0:
 		if is_dead == false :
 			var e = explode_scene.instantiate()
