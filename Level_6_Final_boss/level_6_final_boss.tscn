@@ -192,7 +192,6 @@ texture_progress = ExtResource("12_1h2ys")
 
 [node name="Player" parent="." instance=ExtResource("6_nnvje")]
 position = Vector2(120, 120)
-current_weapon_type = 0
 max_shield = 200
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]

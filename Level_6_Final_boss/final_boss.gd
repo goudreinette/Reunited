@@ -14,7 +14,13 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var main: Node
 @export var shipparts: Array[Area2D] = []
 
-
+func _physics_process(delta: float) -> void:
+	var destroyed_shipparts_count = 0
+	for part in shipparts:
+		if part.isdead:
+			destroyed_shipparts_count+=1
+	if destroyed_shipparts_count == shipparts.size():
+		set_collision_layer_value(5,true)
 		
 # Called when the node enters the scene tree for the first time.
 func explode():
