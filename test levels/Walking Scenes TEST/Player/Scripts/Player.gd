@@ -41,6 +41,7 @@ var detected: bool = false
 func _ready() -> void:
 	if respawnnode : respawnpoint = respawnnode.position 
 	else : respawnpoint = Vector2(0,0)
+	update_animation()
 	#Dialogic.start("timeline")
 	
 func _process(delta: float) -> void:
