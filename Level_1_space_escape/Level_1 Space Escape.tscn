@@ -199,7 +199,7 @@ levelspeed = 50.0
 
 [node name="Player" parent="LevelPosition" instance=ExtResource("14_u8xkq")]
 position = Vector2(120, 120)
-max_shield = 20
+max_shield = 150
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
 stream = ExtResource("15_7obxh")
