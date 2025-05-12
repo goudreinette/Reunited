@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqosqmoya68kj"]
+
+[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_p7cm6"]
+[ext_resource type="PackedScene" uid="uid://c0npwlyangqo8" path="res://Level_3_race/Level_3_race.tscn" id="2_mkqxc"]
+[ext_resource type="Texture2D" uid="uid://da0gluf1js03i" path="res://Sprites Algemeen/Cutscenes/island.png" id="3_mkqxc"]
+
+[sub_resource type="Animation" id="Animation_cyqq3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("island:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xou6c"]
+resource_name = "crash"
+length = 6.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("island:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.01546, 5, 5.99702),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
+_data = {
+&"RESET": SubResource("Animation_cyqq3"),
+&"crash": SubResource("Animation_xou6c")
+}
+
+[node name="Crash" type="Node2D"]
+script = ExtResource("1_p7cm6")
+next_level = ExtResource("2_mkqxc")
+waiting_time = 8.0
+
+[node name="island" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+texture = ExtResource("3_mkqxc")
+
+[node name="CrashAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pbp3c")
+}
+autoplay = "crash"
