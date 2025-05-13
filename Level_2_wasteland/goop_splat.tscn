@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c1exqem33yoah"]
 
-[ext_resource type="Script" uid="uid://b2ob06vukdjpw" path="res://goop_splat.gd" id="1_gl2in"]
+[ext_resource type="Script" uid="uid://b2ob06vukdjpw" path="res://Level_2_wasteland/goop_splat.gd" id="1_gl2in"]
 [ext_resource type="Texture2D" uid="uid://c4ccefesgdjgb" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Goop splat.png" id="1_n83jo"]
 
 [sub_resource type="Animation" id="Animation_xuyhr"]

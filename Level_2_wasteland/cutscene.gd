@@ -9,7 +9,7 @@ var is_talking = false
 
 func _ready():
 	$MoveTimer.wait_time = move_time
-	#Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -26,5 +26,7 @@ func _on_move_timer_timeout() -> void:
 		Dialogic.start("Ship_fixed")
 		is_talking = true
 ### for going to the next scene
-#func _on_timeline_ended():
-	#get_tree().change_scene_to_packed(next_level)
+func _on_timeline_ended():
+	if is_talking:
+		get_tree().change_scene_to_packed(next_level)
+	

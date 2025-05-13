@@ -13,7 +13,8 @@ var turn_speed = 0
 
 var can_move = false
 
-
+var on_track = true
+@export var racetracktrigger : Area3D 
 
 func _ready():
 	pass
@@ -21,9 +22,16 @@ func _ready():
 	
 func _process(delta):
 	# check on track
-	var on_track = true #$OnTrackRaycast3D.is_colliding()
+	if $OnTrackRaycast3D.is_colliding():
+		on_track = true
+	else:
+		on_track = false
+
 	
-	#print(on_track)
+	print(on_track)	#if racetracktrigger.has_overlapping_areas():
+		#on_track = true
+	#else:
+		#on_track = false
 	
 	if not can_move:
 		return
@@ -62,3 +70,15 @@ func _process(delta):
 	#else: 
 		##animation = "default"
 		##frame = 0
+
+
+#func _on_area_3d_area_entered(area: Area3D) -> void:
+		#if area.is_in_group("race_track"):
+			#on_track = true
+	#
+##
+##
+#func _on_area_3d_area_exited(area: Area3D) -> void:
+		#if area.is_in_group("race_track"):
+			#on_track = false
+		#

@@ -102,6 +102,7 @@ enemies=""
 astroids=""
 enemy_rocket=""
 moving_platform=""
+race_track=""
 
 [gui]
 

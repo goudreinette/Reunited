@@ -22,7 +22,7 @@ func start(pos = position,tar = Vector2(20,20), tim = time):
 func _on_area_entered(area):
 	if area.name == "Player" and not area.barelling:
 		queue_free()
-		#area.shield -= 1
+		area.shield -= 1
 
 func _on_death_timer_timeout() -> void:
 	queue_free()

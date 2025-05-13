@@ -8,7 +8,7 @@ enum FiringPatterns {
 }
 @export var range : float = 50
 @export var firing_pattern = FiringPatterns.Single
-@export var rate_of_fire = 2
+@export var rate_of_fire : float = 3.0
 var player : Player
 var angle_to_player: float 
 var player_in_range
