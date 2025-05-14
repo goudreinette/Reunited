@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpv6j2k42d65x"]
+
+[ext_resource type="Texture2D" uid="uid://dm6lbpo1uh2od" path="res://Level_3_race/race sprites/Jungle Tree.png" id="1_d78l5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bj0ql"]
+size = Vector2(30.5, 4)
+
+[node name="JungleTree" type="Sprite2D"]
+texture = ExtResource("1_d78l5")
+offset = Vector2(5, -55)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.75, -3)
+shape = SubResource("RectangleShape2D_bj0ql")

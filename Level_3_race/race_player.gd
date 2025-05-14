@@ -28,7 +28,7 @@ func _process(delta):
 		on_track = false
 
 	
-	print(on_track)	#if racetracktrigger.has_overlapping_areas():
+	#print(on_track)	#if racetracktrigger.has_overlapping_areas():
 		#on_track = true
 	#else:
 		#on_track = false

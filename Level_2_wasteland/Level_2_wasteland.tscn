@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=86 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
 [ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]
 [ext_resource type="Texture2D" uid="uid://dicf2yu17auj6" path="res://Level_2_wasteland/ship fixed.png" id="47_3fwvb"]
+[ext_resource type="PackedScene" uid="uid://dpv6j2k42d65x" path="res://jungle_tree.tscn" id="50_oyuui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]
 texture = ExtResource("1_d6lv5")
@@ -1388,10 +1389,10 @@ layer_1/tile_data = PackedInt32Array(327676, 262147, 1, 393212, 262147, 2, 45874
 
 [node name="Backgroundcolor" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -24903.0
-offset_top = -24860.0
-offset_right = 25097.0
-offset_bottom = 25140.0
+offset_left = -24805.0
+offset_top = -24931.0
+offset_right = 25195.0
+offset_bottom = 25069.0
 color = Color(0.317647, 0.227451, 0.239216, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -1900,6 +1901,36 @@ shape = SubResource("RectangleShape2D_oyuui")
 position = Vector2(-116, -223)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_oyuui")
+
+[node name="JungleTree" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(-36, 134)
+
+[node name="JungleTree2" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(59, 43)
+
+[node name="JungleTree5" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(88, -216)
+
+[node name="JungleTree6" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(-174, -85)
+
+[node name="JungleTree3" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(129, 231)
+
+[node name="JungleTree4" parent="." instance=ExtResource("50_oyuui")]
+position = Vector2(-36, 283)
+
+[node name="Monstera14" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-28, 141)
+texture = ExtResource("38_g6r0j")
+offset = Vector2(-1, -11)
+
+[node name="Monstera15" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-40, 141)
+texture = ExtResource("38_g6r0j")
+offset = Vector2(-1, -11)
 
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 4" to="Respawn Point 4" method="_on_body_entered"]

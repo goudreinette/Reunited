@@ -153,7 +153,7 @@ pixel_size = 0.0006
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_w55oa")
 autoplay = "default"
-frame_progress = 0.923689
+frame_progress = 0.234845
 
 [node name="flame side view" type="AnimatedSprite3D" parent="." index="7"]
 transform = Transform3D(0.0340273, 0, -0.999421, -0.999421, 0, -0.0340273, 0, 1, 0, 0, 0.00666924, 0.0400914)
@@ -161,7 +161,7 @@ pixel_size = 0.0006
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_w55oa")
 autoplay = "default"
-frame_progress = 0.786937
+frame_progress = 0.0980935
 
 [node name="flame back view" type="AnimatedSprite3D" parent="." index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00628278, 0.0300942)
@@ -171,7 +171,7 @@ alpha_cut = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_wieg6")
 autoplay = "default"
-frame_progress = 0.645383
+frame_progress = 0.26769
 
 [node name="base Thrust" type="Node3D" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.000151685, 0.00589978, 0.0295358)
