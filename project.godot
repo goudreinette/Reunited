@@ -93,7 +93,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/UniParticles3D/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [global_group]
 
@@ -212,6 +212,7 @@ Test={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Object"
+3d_physics/layer_2="Object"
 2d_physics/layer_3="Pit"
 2d_physics/layer_4="Talkbox"
 2d_physics/layer_5="Enemy"

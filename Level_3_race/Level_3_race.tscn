@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=42 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
@@ -198,12 +198,6 @@ _data = {
 &"race_intro": SubResource("Animation_pp4r8")
 }
 
-[sub_resource type="SphereMesh" id="SphereMesh_pkk10"]
-
-[sub_resource type="Curve" id="Curve_pkk10"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0305907, 1), 0.0, 0.0, 0, 0, Vector2(0.349156, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tf762"]
 panorama = ExtResource("16_wpt2s")
 filter = false
@@ -230,17 +224,24 @@ _data = {
 }
 point_count = 55
 
+[sub_resource type="BoxMesh" id="BoxMesh_ev6ad"]
+lightmap_size_hint = Vector2i(14, 21)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0oy6m"]
+albedo_color = Color(0.678431, 0.2, 0.192157, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ev6ad"]
+
 [node name="Level 3 - Race" type="Node3D"]
 script = ExtResource("1_g3r7i")
 next_level = ExtResource("2_kd54t")
 
-[node name="Ship" type="Node3D" parent="." node_paths=PackedStringArray("racetracktrigger")]
+[node name="Ship" type="Node3D" parent="."]
 transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.82985, 0.0255188, 0.345203)
 script = ExtResource("3_x61kf")
 acceleration = 0.45
 drag = 0.96
 turn_acceleration = 10.0
-racetracktrigger = NodePath("")
 
 [node name="OnTrackRaycast3D" type="RayCast3D" parent="Ship"]
 transform = Transform3D(15, 0, 1.19209e-07, 0, 15, 0, -1.19209e-07, 0, 15, 0, 0, 0)
@@ -258,22 +259,6 @@ autoplay = "race_intro"
 
 [node name="reunited ship" parent="Ship" groups=["Player"] instance=ExtResource("9_kd54t")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
-
-[node name="CPUParticles3D" type="CPUParticles3D" parent="Ship/reunited ship"]
-transform = Transform3D(1, 0, 0, 0, -0.00235621, 0.999997, 0, -0.999997, -0.00235621, 0.000297368, 0.00633076, 0.038872)
-visible = false
-amount = 10
-lifetime = 0.12
-mesh = SubResource("SphereMesh_pkk10")
-direction = Vector3(0, -2, 0)
-spread = 14.65
-gravity = Vector3(0, 0, 0)
-initial_velocity_min = 1.0
-initial_velocity_max = 1.0
-scale_amount_min = 0.01
-scale_amount_max = 0.01
-scale_amount_curve = SubResource("Curve_pkk10")
-color = Color(0, 0.500557, 0.628922, 1)
 
 [node name="Road boundry race" parent="." groups=["race_track"] instance=ExtResource("3_ev6ad")]
 transform = Transform3D(-0.164224, 0, 0.556265, 0, 0.58, 0, -0.556265, 0, -0.164224, 8.47149, -0.319093, -0.126348)
@@ -704,31 +689,31 @@ texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant3" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.76681, 2.4676, 0.0230842)
+transform = Transform3D(-0.0718274, -2.49601e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.55306, 2.95412, 0.023084)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant4" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.45025, 1.27437, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant5" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.38583, 1.98322, 0.0230843)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 0.293086, 1.40724, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant6" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.57252, 2.11214, 0.0230843)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 0.106396, 1.53616, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant2" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.21086, 2.26089, 0.0230842)
+transform = Transform3D(-0.0718274, -2.49601e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.10901, 2.74741, 0.023084)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
@@ -752,31 +737,43 @@ texture_filter = 0
 texture = ExtResource("4_7epou")
 
 [node name="Palmtree4" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -4.51362, -1.67957, -0.0460455)
+transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -2.6999, -2.68008, 0.129963)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree7" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -2.32045, -1.85988, 0.129963)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_7epou")
+
+[node name="Palmtree8" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -0.00918815, -0.239283, -0.239459, 0.00275604, 0.0717746, -9.98346e-09, 0.249816, -0.00959259, -1.52408, -2.43585, 0.129963)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("4_7epou")
 
 [node name="Palmtree5" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.89206, -2.53709, -0.0460455)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.89206, -2.53709, 0.129963)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("4_7epou")
 
 [node name="Palmtree6" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.6747, -1.43672, -0.0460455)
+transform = Transform3D(-0.0718274, -2.53851e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.61161, -1.7556, 0.129963)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("4_7epou")
 
 [node name="Plant14" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.28731, -1.09967e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -3.70826, 2.79364, 0.0324995)
+transform = Transform3D(-0.0861931, -1.6881e-08, -0.287351, -0.287351, -1.25605e-08, 0.0861931, -1.6881e-08, 0.3, -1.25605e-08, 0.864846, 2.36706, 0.0276176)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
 [node name="Plant" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.30113, 2.61084, 0.0259996)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 3.12718, 2.89719, 0.0259996)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
@@ -871,7 +868,33 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Bridge side 1" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0383033, 0, -0.935893, 0, 0.121509, 0, 0.0327326, 0, 1.09517, 0.0398238, -0.0211955, -7.16426)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Bridge Side" type="MeshInstance3D" parent="Bridge side 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.86265e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_ev6ad")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0oy6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bridge side 1"]
+shape = SubResource("BoxShape3D_ev6ad")
+
+[node name="Bridge side 2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0383033, 0, -0.935893, 0, 0.121509, 0, 0.0327326, 0, 1.09517, 0.500181, -0.0211955, -6.9477)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Bridge Side" type="MeshInstance3D" parent="Bridge side 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.86265e-09, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_ev6ad")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0oy6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bridge side 2"]
+shape = SubResource("BoxShape3D_ev6ad")
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer1" method="_on_timer_timeout"]

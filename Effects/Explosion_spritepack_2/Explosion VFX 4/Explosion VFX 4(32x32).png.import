@@ -3,25 +3,27 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvhxqdsfywstu"
-path="res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.ctex"
+path.s3tc="res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.s3tc.ctex"
+path.etc2="res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Effects/Explosion_spritepack_2/Explosion VFX 4/Explosion VFX 4(32x32).png"
-dest_files=["res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.ctex"]
+dest_files=["res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.s3tc.ctex", "res://.godot/imported/Explosion VFX 4(32x32).png-d9bcaeed6763fb21e4a171ef971205fc.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +33,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
