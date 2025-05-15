@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=24 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://c4jxl8sjaklun" path="res://Level_6_Final_boss/bar_background-export.png" id="11_ust2t"]
 [ext_resource type="Texture2D" uid="uid://dqd7xanf223m1" path="res://Level_6_Final_boss/vertical_bar_foreground-export.png" id="12_1h2ys"]
 [ext_resource type="Texture2D" uid="uid://bcrb5e5h7wpg0" path="res://test levels/Smup Test Level/test_shmup_sprites/Test Level.png" id="17_1h2ys"]
+[ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 1.png" id="18_oy7pc"]
+[ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 2.png" id="19_2u2u0"]
+[ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 3.png" id="20_4oc06"]
+[ext_resource type="Texture2D" uid="uid://cxg8dhv0o5ryg" path="res://y4k4r1 castle/sprites/Wolk 1.png" id="21_smoym"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
 resource_local_to_scene = true
@@ -224,11 +228,47 @@ wait_pos = NodePath("../Speaker wait pos 2")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 z_index = -5
-autoscroll = Vector2(0, 5)
+repeat_size = Vector2(1, 1280)
+autoscroll = Vector2(0, 40)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(120, 0)
 texture = ExtResource("17_1h2ys")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+z_index = -5
+repeat_size = Vector2(1, 640)
+autoscroll = Vector2(0, 80)
+
+[node name="Wolk1" type="Sprite2D" parent="Parallax2D2"]
+z_index = 9
+position = Vector2(56, 22)
+texture = ExtResource("18_oy7pc")
+
+[node name="Wolk2" type="Sprite2D" parent="Parallax2D2"]
+z_index = 9
+position = Vector2(226, -47)
+texture = ExtResource("19_2u2u0")
+
+[node name="Wolk3" type="Sprite2D" parent="Parallax2D2"]
+z_index = 9
+position = Vector2(47, -240)
+texture = ExtResource("20_4oc06")
+
+[node name="Wolk4" type="Sprite2D" parent="Parallax2D2"]
+z_index = 9
+position = Vector2(257, 216)
+texture = ExtResource("21_smoym")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+z_index = -5
+repeat_size = Vector2(1, 1280)
+autoscroll = Vector2(0, 160)
+
+[node name="Wolk3" type="Sprite2D" parent="Parallax2D3"]
+z_index = 9
+position = Vector2(24, 125)
+texture = ExtResource("20_4oc06")
 
 [connection signal="health_changed" from="Final Boss" to="CanvasLayer/Boss_UI" method="_on_final_boss_health_changed"]
 [connection signal="health_reduced" from="Final Boss/Turret1" to="Final Boss" method="_on_turret_1_health_reduced"]

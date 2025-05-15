@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq1as4k3qc7id"]
+
+[ext_resource type="Texture2D" uid="uid://baoo6ygpkhlxb" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Boom 2.png" id="1_fupr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms76t"]
+size = Vector2(27, 4)
+
+[node name="BloemBoom" type="Sprite2D"]
+position = Vector2(-1, 36)
+texture = ExtResource("1_fupr7")
+offset = Vector2(1, -36)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_ms76t")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.478431)
+z_index = -1
+position = Vector2(37, 0)
+rotation = 1.57079
+scale = Vector2(0.43884, 1.10424)
+texture = ExtResource("1_fupr7")

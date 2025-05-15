@@ -9,6 +9,14 @@ size = Vector2(30.5, 4)
 texture = ExtResource("1_d78l5")
 offset = Vector2(5, -55)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.494118)
+z_index = -1
+position = Vector2(55, -3)
+rotation = 1.5708
+scale = Vector2(0.480001, 1.01212)
+texture = ExtResource("1_d78l5")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
