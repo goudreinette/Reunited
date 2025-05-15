@@ -30,8 +30,10 @@ directories/dch_directory={
 "Guus": "res://addons/dialogic/characters/Guus.dch",
 "Guus_en_Igor_2": "res://addons/dialogic/characters/Guus_en_Igor_2.dch",
 "Igor": "res://addons/dialogic/characters/Igor.dch",
+"Justin": "res://Sprites Algemeen/Characters/Justin.dch",
 "Koen": "res://addons/dialogic/characters/Koen.dch",
 "Mr Sloppy": "res://addons/dialogic/characters/Mr Sloppy.dch",
+"Rein": "res://Sprites Algemeen/Characters/Rein.dch",
 "ander_mannetje": "res://addons/dialogic/characters/ander_mannetje.dch",
 "stephan": "res://addons/dialogic/characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"

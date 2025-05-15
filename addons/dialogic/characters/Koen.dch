@@ -17,7 +17,7 @@
 &"portraits": {
 "Koen": {
 "export_overrides": {
-"image": "\"res://Sprites/Characters/Koen.png\""
+"image": "\"res://Sprites Algemeen/Characters/Koen Detailed.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,
