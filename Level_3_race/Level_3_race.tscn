@@ -983,6 +983,7 @@ autostart = true
 
 [node name="Bridge side 1" type="StaticBody3D" parent="."]
 transform = Transform3D(0.0383033, 0, -0.935893, 0, 0.121509, 0, 0.0327326, 0, 1.09517, 0.0398238, -0.0211955, -7.16426)
+visible = false
 collision_layer = 2
 collision_mask = 0
 
@@ -997,6 +998,7 @@ shape = SubResource("BoxShape3D_ev6ad")
 
 [node name="Bridge side 2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.0383033, 0, -0.935893, 0, 0.121509, 0, 0.0327326, 0, 1.09517, 0.500181, -0.0211955, -6.9477)
+visible = false
 collision_layer = 2
 collision_mask = 0
 
@@ -1010,7 +1012,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0oy6m")
 shape = SubResource("BoxShape3D_ev6ad")
 
 [node name="bridge" parent="." instance=ExtResource("31_7pqpo")]
-transform = Transform3D(0.145382, 0, 0.165118, 0, 0.22, 0, -0.165118, 0, 0.145382, 0.268098, 0, -7.05136)
+transform = Transform3D(0.145382, 0, 0.165118, 0, 0.22, 0, -0.165118, 0, 0.145382, 0.231593, 0, -7.04608)
 
 [node name="race beach assets" parent="." instance=ExtResource("32_3smau")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 3.93407, 0, -0.608036)
