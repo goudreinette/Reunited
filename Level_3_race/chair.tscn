@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhxo14f8aaghw"]
+
+[ext_resource type="PackedScene" uid="uid://boe8o82r1wusw" path="res://Level_3_race/race beach assets.blend" id="1_2qjfy"]
+
+[node name="race beach assets" instance=ExtResource("1_2qjfy")]
+
+[node name="Bridge" parent="." index="1"]
+visible = false
+
+[node name="Empty" parent="." index="2"]
+visible = false
+
+[node name="Parasol" parent="." index="3"]
+visible = false
+
+[node name="Cube" parent="." index="4"]
+transform = Transform3D(-0.309444, 0.514333, 0, -0.0940845, -1.69164, 0, 0, 0, -1.41438, 0, 0.241515, -0.0309072)

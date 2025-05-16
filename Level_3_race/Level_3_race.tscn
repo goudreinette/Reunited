@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=47 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
@@ -30,6 +30,9 @@
 [ext_resource type="PackedScene" uid="uid://d241g37y3wlvs" path="res://Level_3_race/House.blend" id="22_53t51"]
 [ext_resource type="PackedScene" uid="uid://qeuqvmwb83of" path="res://Level_3_race/mountain.blend" id="23_7epou"]
 [ext_resource type="AudioStream" uid="uid://vdxrlsk2p6wl" path="res://music/Carrera Montuno 31-3.mp3" id="25_tf762"]
+[ext_resource type="PackedScene" uid="uid://d4hkkds761ax1" path="res://Level_3_race/bridge.tscn" id="31_7pqpo"]
+[ext_resource type="PackedScene" uid="uid://3wq62iep80rl" path="res://Level_3_race/parasol.tscn" id="32_3smau"]
+[ext_resource type="PackedScene" uid="uid://dhxo14f8aaghw" path="res://Level_3_race/chair.tscn" id="33_wuivs"]
 
 [sub_resource type="Animation" id="Animation_6ha66"]
 length = 0.001
@@ -1005,6 +1008,27 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0oy6m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bridge side 2"]
 shape = SubResource("BoxShape3D_ev6ad")
+
+[node name="bridge" parent="." instance=ExtResource("31_7pqpo")]
+transform = Transform3D(0.145382, 0, 0.165118, 0, 0.22, 0, -0.165118, 0, 0.145382, 0.268098, 0, -7.05136)
+
+[node name="race beach assets" parent="." instance=ExtResource("32_3smau")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 3.93407, 0, -0.608036)
+
+[node name="race beach assets2" parent="." instance=ExtResource("32_3smau")]
+transform = Transform3D(-0.0980795, 0, 0.0774946, 0, 0.125, 0, -0.0774946, 0, -0.0980795, 3.61089, -1.19209e-07, -1.43295)
+
+[node name="race beach assets3" parent="." instance=ExtResource("32_3smau")]
+transform = Transform3D(-0.0980795, 0, 0.0774946, 0, 0.125, 0, -0.0774946, 0, -0.0980795, 4.64361, -1.19209e-07, -0.903675)
+
+[node name="race beach assets4" parent="." instance=ExtResource("32_3smau")]
+transform = Transform3D(-0.196159, 0, 0.154989, 0, 0.25, 0, -0.154989, 0, -0.196159, 5.94726, -1.19209e-07, -2.44291)
+
+[node name="race beach assets5" parent="." instance=ExtResource("33_wuivs")]
+transform = Transform3D(0.0347125, 0, 0.120083, 0, 0.125, 0, -0.120083, 0, 0.0347125, 4.5039, -0.0104793, -0.881606)
+
+[node name="race beach assets6" parent="." instance=ExtResource("33_wuivs")]
+transform = Transform3D(0.0141634, 0, 0.124195, 0, 0.125, 0, -0.124195, 0, 0.0141634, 4.10729, -0.0104793, -0.5549)
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer1" method="_on_timer_timeout"]
