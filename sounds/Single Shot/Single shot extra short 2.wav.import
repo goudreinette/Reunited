@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1sgsn5qqv2ys"
+path="res://.godot/imported/Single shot extra short 2.wav-dbcbe1379296354b8969638854b45d8b.sample"
+
+[deps]
+
+source_file="res://sounds/Single Shot/Single shot extra short 2.wav"
+dest_files=["res://.godot/imported/Single shot extra short 2.wav-dbcbe1379296354b8969638854b45d8b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
