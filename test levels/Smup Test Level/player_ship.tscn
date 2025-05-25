@@ -142,8 +142,8 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_cxsww")
-volume_db = 24.0
-pitch_scale = 4.0
+volume_db = 12.0
+pitch_scale = 3.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-6, 0, -3, -1, -3, -9, 3, -9, 3, -1, 6, 0, 6, 3, 4, 5, 4, 8, -4, 8, -4, 5, -6, 3)
