@@ -1,9 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq2pxsol18uaa"]
+[gd_scene load_steps=6 format=4 uid="uid://dq2pxsol18uaa"]
 
-[ext_resource type="PackedScene" uid="uid://scbdlytj3cne" path="res://Level_3_race/models/PSX_Island_Assets/plant_flowers1fbx.fbx" id="1_pyarv"]
+[ext_resource type="Texture2D" uid="uid://b5pallt2sxvdy" path="res://Level_3_race/models/PSX_Island_Assets/foliage_atlas1.png" id="2_pyarv"]
 [ext_resource type="Material" uid="uid://cpgoeul22rjgt" path="res://Level_3_race/foliage/new_standard_material_3d.tres" id="2_xgk6h"]
 
-[node name="plant_flowers1fbx" instance=ExtResource("1_pyarv")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tccq1"]
+resource_name = "Material.034"
+transparency = 4
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_pyarv")
+emission_enabled = true
+emission_energy_multiplier = 0.75
+emission_texture = ExtResource("2_pyarv")
 
-[node name="plant_flowers1" parent="." index="0"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_fhsfv"]
+_surfaces = [{
+"aabb": AABB(-49.0248, -48.0296, -81.4326, 98.0496, 100.742, 85.6957),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAAFAAAABgAHAAgACAAJAAYACQAIAAoACgALAAkA"),
+"name": "Material.034",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAALqZC8GA3aLCYBlEQkX1+TWA3aLCYBlEQkX1+bWWx3FAAAAAAL6ZC8GUx3FAYBlEwkX1+bWWx3FAYBlEwkX1+TWA3aLCLBpdwcQYNcICm6DC3FViQU8eQMKzVhA+tB3kQC5IjD85a4hAlrCmwdN8dkB7XJjCgraEQW3UR0ITeClAAwM2wfzZUkJvl5vC")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x0ehy"]
+resource_name = "Plane_008"
+_surfaces = [{
+"aabb": AABB(-49.0248, -48.0296, -81.4326, 98.0496, 100.742, 85.6957),
+"attribute_data": PackedByteArray("4BW9PgCgyDvrc/g+AKDIO+tz+D4svXM+4BW9Piy9cz7Wt4E+LL1zPta3gT4AoMg763P4PgCgyDvrc/g+LL1zPuAVvT4svXM+4BW9PgCgyDvWt4E+LL1zPta3gT4AoMg7"),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAAFAAAABgAHAAgACAAJAAYACQAIAAoACgALAAkA"),
+"material": SubResource("StandardMaterial3D_tccq1"),
+"name": "Material.034",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAALqZC8GA3aLCYBlEQkX1+TWA3aLCYBlEQkX1+bWWx3FAAAAAAL6ZC8GUx3FAYBlEwkX1+bWWx3FAYBlEwkX1+TWA3aLCLBpdwcQYNcICm6DC3FViQU8eQMKzVhA+tB3kQC5IjD85a4hAlrCmwdN8dkB7XJjCgraEQW3UR0ITeClAAwM2wfzZUkJvl5vC/3///////7+obKjsqOyqyahsqOyo7KrJ/3///////79Wk6jsqOxTtlaTqOyo7FO2fPFpq6iXc4d88WmrqJdzh37+013XeYSBfv7TXdd5hIEl7wxSy2vTiyXvDFLLa9OL")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fhsfv")
+
+[node name="plant_flowers1fbx" type="Node3D"]
+
+[node name="plant_flowers1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, -1.19209e-09, -0.01, 0, 0.01, -1.19209e-09, 0, 0, 0)
 material_override = ExtResource("2_xgk6h")
+mesh = SubResource("ArrayMesh_x0ehy")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_xgk6h")

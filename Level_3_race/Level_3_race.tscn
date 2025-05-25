@@ -275,7 +275,7 @@ shader_parameter/scroll_speed2 = Vector2(-0.03, 0)
 shader_parameter/blend_factor = 0.5
 shader_parameter/scale1 = Vector2(40, 40)
 shader_parameter/scale2 = Vector2(40, 40)
-shader_parameter/wave_strength = 0.1
+shader_parameter/wave_strength = 0.0
 shader_parameter/wave_scale = 0.0002
 shader_parameter/pixelation_level = 64
 shader_parameter/FoamSize = 0.0
@@ -1178,19 +1178,55 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.479415, -0.0542804, 
 [node name="plant_flowers1fbx3" parent="." instance=ExtResource("43_edlfe")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.40917, 0.0140615, -0.552373)
 
-[node name="plant_flowers1fbx" parent="." instance=ExtResource("44_vwiwq")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.429269, -0.0144398, -3.31178)
-
-[node name="plant_flowers1fbx4" parent="." instance=ExtResource("44_vwiwq")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 1.65068, -0.0144398, -3.67428)
-
 [node name="plant_flowers1fbx5" parent="." instance=ExtResource("44_vwiwq")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.62011, -0.0144398, -0.50751)
 
 [node name="water" type="MeshInstance3D" parent="."]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 7, 2.2807, -0.154987, -3.36292)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 7, 2.2807, -0.0346814, -3.36292)
 mesh = SubResource("PlaneMesh_6a58m")
 surface_material_override/0 = SubResource("ShaderMaterial_p7n4p")
+
+[node name="plant_flowers1fbx" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.41751, 0.0140616, -3.76272)
+
+[node name="plant_flowers1fbx2" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.857673, 0.0140616, -3.27049)
+
+[node name="plant_flowers1fbx7" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.146894, 0.0140616, -3.68722)
+
+[node name="plant_flowers1fbx8" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.386785, 0.0140616, -4.2306)
+
+[node name="plant_flowers1fbx9" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.941513, 0.0140616, -4.17744)
+
+[node name="plant_flowers1fbx10" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.123186, 0.0140616, -3.07373)
+
+[node name="plant_flowers1fbx11" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.262625, 0.0140616, -2.97611)
+
+[node name="plant_flowers1fbx12" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.8209, 0.0140616, -1.58257)
+
+[node name="plant_flowers1fbx13" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.84127, 0.0140616, -2.19272)
+
+[node name="plant_flowers1fbx14" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.55175, 0.0140616, -1.36269)
+
+[node name="plant_flowers1fbx15" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.55175, 0.0140616, -1.36269)
+
+[node name="plant_flowers1fbx16" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.91758, 0.0149222, -2.28051)
+
+[node name="plant_flowers1fbx4" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.24942, 0.0140616, -3.17702)
+
+[node name="plant_flowers1fbx6" parent="." instance=ExtResource("44_vwiwq")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.449506, 0.0140616, -3.48811)
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer1" method="_on_timer_timeout"]
