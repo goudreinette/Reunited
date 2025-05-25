@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=67 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/race_main.gd" id="1_g3r7i"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cw70b3g82u73a" path="res://Level_3_race/Road boundry race.blend" id="3_ev6ad"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
-[ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="4_neu27"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
@@ -47,6 +46,8 @@
 [ext_resource type="Shader" uid="uid://est0qyiopiev" path="res://shaders/water_3d.gdshader" id="45_qjeq3"]
 [ext_resource type="Texture2D" uid="uid://diefv0fay6x40" path="res://Level_3_race/race sprites/water.png" id="46_6a58m"]
 [ext_resource type="Texture2D" uid="uid://c1n5n1dkqlyop" path="res://Level_3_race/race sprites/water2.png" id="47_p7n4p"]
+[ext_resource type="PackedScene" uid="uid://baov6xc03vyj6" path="res://Level_3_race/models/PSX_Island_Assets/plant_palm_fan.fbx" id="48_m5o28"]
+[ext_resource type="PackedScene" uid="uid://ceccqhhv3prde" path="res://Level_3_race/models/PSX_Island_Assets/plant_leafy.fbx" id="49_samuu"]
 
 [sub_resource type="Animation" id="Animation_6ha66"]
 length = 0.001
@@ -245,7 +246,7 @@ default_font_size = 10
 [sub_resource type="Curve3D" id="Curve3D_wpt2s"]
 closed = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.862035, 1.63577e-05, 9.79951, 0, 0, 0, 0, 0, 0, 0.903144, 1.63577e-05, 7.90842, 0, 0, 0, 0, 0, 0, 1.31425, 1.63577e-05, 6.22289, 0, 0, 0, 0, 0, 0, 2.48591, 1.63577e-05, 5.62678, 0, 0, 0, 0, 0, 0, 4.15089, 1.63577e-05, 5.01012, 0, 0, 0, 0, 0, 0, 6.18586, 1.63577e-05, 4.29069, 0, 0, 0, 0, 0, 0, 7.41918, 1.63577e-05, 3.79736, 0, 0, 0, 0, 0, 0, 8.50861, 1.63577e-05, 2.58459, 0, 0, 0, 0, 0, 0, 8.2414, 1.63577e-05, 1.4335, 0, 0, 0, 0, 0, 0, 7.37807, 1.63577e-05, -0.416482, 0, 0, 0, 0, 0, 0, 6.59697, 1.63577e-05, -2.36924, 0, 0, 0, 0, 0, 0, 5.42532, 1.63577e-05, -4.03422, 0, 0, 0, 0, 0, 0, 3.78089, 1.63577e-05, -5.20587, 0, 0, 0, 0, 0, 0, -0.698934, 1.63577e-05, -7.03217, 0, 0, 0, 0, 0, 0, -2.38447, 1.63577e-05, -7.71049, 0, 0, 0, 0, 0, 0, -4.17278, 1.63577e-05, -8.82048, 0, 0, 0, 0, 0, 0, -6.35165, 1.63577e-05, -10.4649, 0, 0, 0, 0, 0, 0, -6.39276, 1.63577e-05, -12.4999, 0, 0, 0, 0, 0, 0, -5.13888, 1.63577e-05, -14.6582, 0, 0, 0, 0, 0, 0, -3.66453, 1.63577e-05, -16.7777, 0, 0, 0, 0, 0, 0, -2.12288, 1.63577e-05, -18.5454, 0, 0, 0, 0, 0, 0, -0.622339, 1.63577e-05, -20.1693, 0, 0, 0, 0, 0, 0, 1.18653, 1.63577e-05, -21.5465, 0, 0, 0, 0, 0, 0, 2.74873, 1.63577e-05, -23.0676, 0, 0, 0, 0, 0, 0, 3.89983, 1.63577e-05, -23.7254, 0, 0, 0, 0, 0, 0, 5.29759, 1.63577e-05, -24.157, 0, 0, 0, 0, 0, 0, 7.37368, 1.63577e-05, -24.7531, 0, 0, 0, 0, 0, 0, 9.14144, 1.63577e-05, -24.7326, 0, 0, 0, 0, 0, 0, 10.5392, 1.63577e-05, -23.7048, 0, 0, 0, 0, 0, 0, 11.6286, 1.63577e-05, -22.492, 0, 0, 0, 0, 0, 0, 12.2247, 1.63577e-05, -20.6626, 0, 0, 0, 0, 0, 0, 12.9853, 1.63577e-05, -19.0387, 0, 0, 0, 0, 0, 0, 13.441, 1.63577e-05, -16.6423, 0, 0, 0, 0, 0, 0, 13.8521, 1.63577e-05, -15.039, 0, 0, 0, 0, 0, 0, 15.106, 1.63577e-05, -12.4079, 0, 0, 0, 0, 0, 0, 15.4555, 1.63577e-05, -10.2701, 0, 0, 0, 0, 0, 0, 16.2366, 1.63577e-05, -8.70791, 0, 0, 0, 0, 0, 0, 17.3671, 1.63577e-05, -7.22793, 0, 0, 0, 0, 0, 0, 18.9292, 1.63577e-05, -5.04554, 0, 0, 0, 0, 0, 0, 19.9364, 1.63577e-05, -3.40111, 0, 0, 0, 0, 0, 0, 20.1625, 1.63577e-05, -1.90058, 0, 0, 0, 0, 0, 0, 19.0319, 1.63577e-05, -0.338372, 0, 0, 0, 0, 0, 0, 17.9219, 1.63577e-05, 0.70995, 0, 0, 0, 0, 0, 0, 17.9014, 1.63577e-05, 2.04605, 0, 0, 0, 0, 0, 0, 18.4769, 1.63577e-05, 4.14269, 0, 0, 0, 0, 0, 0, 18.7018, 1.63577e-05, 6.59029, 0, 0, 0, 0, 0, 0, 18.4346, 1.63577e-05, 8.33749, 0, 0, 0, 0, 0, 0, 17.0574, 1.63577e-05, 9.61192, 0, 0, 0, 0, 0, 0, 14.7141, 1.63577e-05, 10.5986, 0, 0, 0, 0, 0, 0, 11.8569, 1.63577e-05, 11.133, 0, 0, 0, 0, 0, 0, 8.67082, 1.63577e-05, 11.6058, 0, 0, 0, 0, 0, 0, 5.38196, 1.63577e-05, 11.9963, 0, 0, 0, 0, 0, 0, 3.40865, 1.63577e-05, 12.1197, 0, 0, 0, 0, 0, 0, 1.80534, 1.63577e-05, 11.4619, 0, 0, 0, 0, 0, 0, 1.14757, 1.63577e-05, 10.763),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.29139, 1.63577e-05, 9.30739, 0, 0, 0, 0, 0, 0, -1.67793, 1.63577e-05, 6.94317, 0, 0, 0, 0, 0, 0, 0.781227, 1.63577e-05, 6.18756, 0, 0, 0, 0, 0, 0, 2.48591, 1.63577e-05, 5.62678, 0, 0, 0, 0, 0, 0, 4.15089, 1.63577e-05, 5.01012, 0, 0, 0, 0, 0, 0, 6.18586, 1.63577e-05, 4.29069, 0, 0, 0, 0, 0, 0, 7.41918, 1.63577e-05, 3.79736, 0, 0, 0, 0, 0, 0, 8.50861, 1.63577e-05, 2.58459, 0, 0, 0, 0, 0, 0, 8.2414, 1.63577e-05, 1.4335, 0, 0, 0, 0, 0, 0, 7.37807, 1.63577e-05, -0.416482, 0, 0, 0, 0, 0, 0, 6.59697, 1.63577e-05, -2.36924, 0, 0, 0, 0, 0, 0, 5.42532, 1.63577e-05, -4.03422, 0, 0, 0, 0, 0, 0, 3.78089, 1.63577e-05, -5.20587, 0, 0, 0, 0, 0, 0, -0.698934, 1.63577e-05, -7.03217, 0, 0, 0, 0, 0, 0, -2.38447, 1.63577e-05, -7.71049, 0, 0, 0, 0, 0, 0, -4.17278, 1.63577e-05, -8.82048, 0, 0, 0, 0, 0, 0, -6.35165, 1.63577e-05, -10.4649, 0, 0, 0, 0, 0, 0, -6.39276, 1.63577e-05, -12.4999, 0, 0, 0, 0, 0, 0, -5.13888, 1.63577e-05, -14.6582, 0, 0, 0, 0, 0, 0, -3.66453, 1.63577e-05, -16.7777, 0, 0, 0, 0, 0, 0, -2.12288, 1.63577e-05, -18.5454, 0, 0, 0, 0, 0, 0, -0.622339, 1.63577e-05, -20.1693, 0, 0, 0, 0, 0, 0, 1.18653, 1.63577e-05, -21.5465, 0, 0, 0, 0, 0, 0, 2.74873, 1.63577e-05, -23.0676, 0, 0, 0, 0, 0, 0, 3.89983, 1.63577e-05, -23.7254, 0, 0, 0, 0, 0, 0, 5.29759, 1.63577e-05, -24.157, 0, 0, 0, 0, 0, 0, 7.37368, 1.63577e-05, -24.7531, 0, 0, 0, 0, 0, 0, 9.14144, 1.63577e-05, -24.7326, 0, 0, 0, 0, 0, 0, 10.5392, 1.63577e-05, -23.7048, 0, 0, 0, 0, 0, 0, 11.6286, 1.63577e-05, -22.492, 0, 0, 0, 0, 0, 0, 12.2247, 1.63577e-05, -20.6626, 0, 0, 0, 0, 0, 0, 12.9853, 1.63577e-05, -19.0387, 0, 0, 0, 0, 0, 0, 13.441, 1.63577e-05, -16.6423, 0, 0, 0, 0, 0, 0, 13.8521, 1.63577e-05, -15.039, 0, 0, 0, 0, 0, 0, 15.106, 1.63577e-05, -12.4079, 0, 0, 0, 0, 0, 0, 15.4555, 1.63577e-05, -10.2701, 0, 0, 0, 0, 0, 0, 16.2366, 1.63577e-05, -8.70791, 0, 0, 0, 0, 0, 0, 17.3671, 1.63577e-05, -7.22793, 0, 0, 0, 0, 0, 0, 18.9292, 1.63577e-05, -5.04554, 0, 0, 0, 0, 0, 0, 19.9364, 1.63577e-05, -3.40111, 0, 0, 0, 0, 0, 0, 20.1625, 1.63577e-05, -1.90058, 0, 0, 0, 0, 0, 0, 19.0319, 1.63577e-05, -0.338372, 0, 0, 0, 0, 0, 0, 17.9219, 1.63577e-05, 0.70995, 0, 0, 0, 0, 0, 0, 17.9014, 1.63577e-05, 2.04605, 0, 0, 0, 0, 0, 0, 18.4769, 1.63577e-05, 4.14269, 0, 0, 0, 0, 0, 0, 18.7018, 1.63577e-05, 6.59029, 0, 0, 0, 0, 0, 0, 18.4346, 1.63577e-05, 8.33749, 0, 0, 0, 0, 0, 0, 17.0574, 1.63577e-05, 9.61192, 0, 0, 0, 0, 0, 0, 14.7141, 1.63577e-05, 10.5986, 0, 0, 0, 0, 0, 0, 11.8569, 1.63577e-05, 11.133, 0, 0, 0, 0, 0, 0, 8.67082, 1.63577e-05, 11.6058, 0, 0, 0, 0, 0, 0, 5.38196, 1.63577e-05, 11.9963, 0, 0, 0, 0, 0, 0, 2.39734, 1.63577e-05, 12.7331, 0, 0, 0, 0, 0, 0, 0.0516986, 1.63577e-05, 12.738, 0, 0, 0, 0, 0, 0, -0.684606, 1.63577e-05, 11.2575),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 55
@@ -287,7 +288,7 @@ script = ExtResource("1_g3r7i")
 next_level = ExtResource("2_kd54t")
 
 [node name="Ship" type="Node3D" parent="."]
-transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.82985, 0.0255188, 0.345203)
+transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.246998, 0.0255188, 0.486174)
 script = ExtResource("3_x61kf")
 acceleration = 0.45
 drag = 0.96
@@ -309,7 +310,7 @@ libraries = {
 autoplay = "race_intro"
 
 [node name="reunited ship" parent="Ship" groups=["Player"] instance=ExtResource("9_kd54t")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+transform = Transform3D(15, 0, 2.38419e-07, 0, 15, 0, -2.38419e-07, 0, 15, -0.0105991, 0, 0.00504017)
 
 [node name="Road boundry race" parent="." groups=["race_track"] instance=ExtResource("3_ev6ad")]
 transform = Transform3D(-0.164224, 0, 0.556265, 0, 0.58, 0, -0.556265, 0, -0.164224, 8.47149, -0.319093, -0.126348)
@@ -322,7 +323,7 @@ collision_layer = 128
 transform = Transform3D(-0.28731, -0.957838, -4.18684e-08, 0, -4.37114e-08, 1, -0.957838, 0.28731, 1.25587e-08, 2.15413, 0, -3.58175)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map"]
-transform = Transform3D(5.09997, -2.04259e-06, -0.0167577, -0.0167577, 8.80733e-05, -5.09997, 1.16652e-05, 1.02, 0.000440331, 0.0068481, 0.00493455, -0.00771701)
+transform = Transform3D(5.09997, -2.04259e-06, -0.0167576, -0.0167576, 8.80733e-05, -5.09997, 1.16652e-05, 1.02, 0.000440331, 0.00632787, 0.00631881, -0.00771725)
 material_override = SubResource("StandardMaterial3D_gb7p7")
 mesh = SubResource("PlaneMesh_fqjbo")
 skeleton = NodePath("../..")
@@ -331,19 +332,28 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, -8.88178e-16, 0, 1, 1.9984e-15, 8.88178e-16, 1.33227e-15, 1, -3.42826, 2.92919, 1.28039e-07)
 
 [node name="House" parent="Map/City" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0540086, -1.07518e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, 0.0694551, 0.509955, 2.22908e-08)
+transform = Transform3D(-0.0712544, -1.3304e-14, -1.69644, -3.0036, -4.37114e-08, 0.0402448, -1.31292e-07, 1, 1.75915e-09, 0.160232, 0.741384, 3.24069e-08)
+
+[node name="House6" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(-0.0712543, -1.3304e-14, -1.69644, -3.0036, -4.37114e-08, 0.0402448, -1.31292e-07, 1, 1.75915e-09, -0.585735, 0.754647, 3.29867e-08)
+
+[node name="House7" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(-0.0767424, -1.3304e-14, -1.22006, -3.23494, -4.37114e-08, 0.0289437, -1.41404e-07, 1, 1.26516e-09, 0.918279, 0.689105, 3.01217e-08)
 
 [node name="House2" parent="Map/City" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0540086, -1.07518e-14, -0.99854, -0.99854, -4.37114e-08, 0.0540086, -4.36476e-08, 1, 2.36079e-09, 0.00499517, -1.19053, 6.71698e-08)
+transform = Transform3D(0.0854276, -1.24532e-14, -1.2007, -2.1381, -4.37114e-08, -0.047974, -9.34594e-08, 1, -2.09701e-09, -0.0592793, -1.15407, 6.87635e-08)
 
 [node name="House3" parent="Map/City" instance=ExtResource("22_53t51")]
-transform = Transform3D(0.0410915, -1.07518e-14, -0.999155, -0.999155, -4.37114e-08, -0.0410915, -4.36745e-08, 1, -1.79616e-09, -1.1469, 0.128525, 1.24828e-07)
+transform = Transform3D(1.78803, -1.21125e-14, -0.371758, -0.923027, -4.37114e-08, -0.720145, -4.03469e-08, 1, -3.14785e-08, -1.20749, 0.139788, 1.2532e-07)
+
+[node name="House8" parent="Map/City" instance=ExtResource("22_53t51")]
+transform = Transform3D(2.0121, -1.43247e-14, -0.00893891, -0.022194, -4.37114e-08, -0.81039, -9.70223e-10, 1, -3.54233e-08, -1.24983, -0.824325, 8.31776e-08)
 
 [node name="House4" parent="Map/City" instance=ExtResource("22_53t51")]
 transform = Transform3D(0.999994, -1.07518e-14, -0.00321081, -0.00321081, -4.37114e-08, -0.999994, -1.4035e-10, 1, -4.37112e-08, 1.34916, 0.248936, -1.08328e-07)
 
 [node name="House5" parent="Map/City" instance=ExtResource("22_53t51")]
-transform = Transform3D(-0.0642182, -1.07518e-14, -0.997936, -0.997936, -4.37114e-08, 0.0642182, -4.36212e-08, 1, 2.80707e-09, 1.48812, -0.691505, -0.0566303)
+transform = Transform3D(-2.61937, 4.39065e-15, 0.00594446, 0.0149475, -4.37114e-08, 1.04168, 6.53316e-10, 1, 4.55333e-08, 1.43131, -0.649329, -0.0023767)
 
 [node name="Mountains" type="Node3D" parent="Map"]
 
@@ -378,18 +388,6 @@ transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278
 billboard = 2
 texture_filter = 0
 texture = ExtResource("3_23tvb")
-
-[node name="Gate" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.97839, 2.36237, 0.0570455)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_neu27")
-
-[node name="Gate2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.62878, 2.53327, 0.0570455)
-billboard = 2
-texture_filter = 0
-texture = ExtResource("4_neu27")
 
 [node name="Clouds" type="Node3D" parent="Map"]
 
@@ -436,13 +434,13 @@ texture_filter = 0
 texture = ExtResource("5_mggcm")
 
 [node name="Pole1" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.57067, 2.16272, 0.059613)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.85367, 2.07232, 0.059613)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("14_ev6ad")
 
 [node name="Pole2" type="Sprite3D" parent="Map"]
-transform = Transform3D(-0.0718274, -2.66453e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.12961, 2.14171, 0.059613)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.39568, 2.01051, 0.059613)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("15_0oy6m")
@@ -738,7 +736,7 @@ texture_filter = 0
 texture = ExtResource("18_3smau")
 
 [node name="Plant7" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.63868, 2.18304, 0.0230843)
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -2.88782, 2.17282, 0.0230843)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
@@ -996,14 +994,14 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547,
 curve = SubResource("Curve3D_wpt2s")
 
 [node name="Racer1" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0799811, 0, -0.00173869, 0, 0.0799998, 0, 0.00173865, 0, 0.0799828, 0.862035, 1.63577e-05, 9.79951)
+transform = Transform3D(0.0789517, 0, 0.0129086, 0, 0.0799998, 0, -0.0129083, 0, 0.0789535, -1.29139, 1.63577e-05, 9.30739)
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="Path3D/Racer1" instance=ExtResource("20_0n72s")]
 
 [node name="Racer2" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0777216, 0, -0.0189565, 0, 0.0799998, 0, 0.0189565, 0, 0.0777216, 1.16603, 1.63577e-05, 6.8306)
-progress = 3.0
+transform = Transform3D(0.0789517, 0, 0.0129083, 0, 0.0799998, 0, -0.0129083, 0, 0.0789517, -1.45272, 1.63577e-05, 8.32063)
+progress = 1.0
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="Path3D/Racer2" instance=ExtResource("20_0n72s")]
@@ -1013,14 +1011,14 @@ visible = false
 transform = Transform3D(1, -2.21444e-08, 6.40284e-10, 2.26555e-08, 1, -3.72529e-09, 1.74623e-10, -5.58794e-09, 1, 8.28671, 0.0818219, -0.00891113)
 
 [node name="Racer3" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0777217, 0, -0.0189566, 0, 0.0799998, 0, 0.0189566, 0, 0.0777217, 0.927328, 1.63577e-05, 7.80927)
-progress = 2.0
+transform = Transform3D(0.0789518, 0, 0.0129083, 0, 0.0799998, 0, -0.0129083, 0, 0.0789518, -1.37289, 1.63577e-05, 8.80886)
+progress = 0.5
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="Path3D/Racer3" instance=ExtResource("20_0n72s")]
 
 [node name="PlayerPathFollow" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999764, 0, -0.0217331, 0, 1, 0, 0.0217331, 0, 0.999764, 0.862035, 1.63577e-05, 9.79951)
+transform = Transform3D(0.986894, 0, 0.161354, 0, 1, 0, -0.161354, 0, 0.986894, -1.29139, 1.63577e-05, 9.30739)
 
 [node name="CarreraMontuno31-3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_tf762")
@@ -1227,6 +1225,15 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.24942, 0.0140616, -3.
 
 [node name="plant_flowers1fbx6" parent="." instance=ExtResource("44_vwiwq")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.449506, 0.0140616, -3.48811)
+
+[node name="plant_palm_fan" parent="." instance=ExtResource("48_m5o28")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.618445, 1.19209e-07, 0.202963)
+
+[node name="plant_palm_fan2" parent="." instance=ExtResource("48_m5o28")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.172015, 0, -0.917332)
+
+[node name="plant_leafy" parent="." instance=ExtResource("49_samuu")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.668734, 5.96046e-08, 0.479961)
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="Path3D/Racer1" method="_on_timer_timeout"]
