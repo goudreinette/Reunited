@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://Level_5 Prison/path_follow_2d.gd" id="5_ddlk5"]
 [ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://Level_5 Prison/drone.tscn" id="6_tkkrf"]
 [ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_etoha"]
-[ext_resource type="Script" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
+[ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
 [ext_resource type="PackedScene" uid="uid://dbityatjf3g0b" path="res://Level_6_Final_boss/level_6_final_boss.tscn" id="10_ddlk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]

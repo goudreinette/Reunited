@@ -5,6 +5,7 @@ var player_inside : bool = false
 var is_talking : bool = false
 @export var convos : = ["convo_1","convo_2"]
 
+
 #@export var pressx : Sprite2D 
 
 func _ready():
@@ -37,3 +38,16 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body is Player :
 		player_inside = false 
+		
+func _on_area_entered(area: Node2D) -> void:
+	if area.is_in_group("Player") :
+		player_inside = true
+func _on_area_exited(area: Node2D) -> void:
+	if area.is_in_group("Player") :
+		player_inside = false 
+	
+
+
+
+func _on_player_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

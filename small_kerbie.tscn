@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1n61vtdmjme3"]
+
+[ext_resource type="Texture2D" uid="uid://b8vl45omrbs1x" path="res://Sprites Algemeen/Small Kerbie.png" id="1_k5eyt"]
+[ext_resource type="Script" uid="uid://cal57yaisrykx" path="res://small_kerbie.gd" id="1_ng5rq"]
+[ext_resource type="Texture2D" uid="uid://cgvpd8vj4wo7s" path="res://Sprites Algemeen/sprite_packs/Shield Spritesheets/Shield Small size Green/Shield Round Hexagon Green/Shield Round Hex 1 Single 128x128 Green.png" id="3_mrufn"]
+
+[sub_resource type="Animation" id="Animation_1hld7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kvibj"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ifml8"]
+_data = {
+&"RESET": SubResource("Animation_1hld7"),
+&"idle": SubResource("Animation_kvibj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5eyt"]
+radius = 21.0238
+
+[node name="SmallKerbie" type="Area2D" node_paths=PackedStringArray("shield") groups=["Kerbie"]]
+script = ExtResource("1_ng5rq")
+shield = NodePath("Shield")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ifml8")
+}
+autoplay = "idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k5eyt")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k5eyt")
+
+[node name="Shield" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_mrufn")

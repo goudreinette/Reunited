@@ -43,6 +43,7 @@ directories/dtl_directory={
 "Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
 "Guus_en_Igor_1": "res://addons/dialogic/dialogue/Guus_en_Igor_1.dtl",
 "Guus_en_Igor_2": "res://addons/dialogic/dialogue/Guus_en_Igor_2.dtl",
+"Kerby_1": "res://Kerby_1.dtl",
 "Koen_Dialogue 1": "res://addons/dialogic/dialogue/Koen_Dialogue 1.dtl",
 "Koen_Dialogue_1": "res://addons/dialogic/dialogue/Koen_Dialogue_1.dtl",
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
@@ -94,6 +95,11 @@ window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="C:/Users/Rein van der Woerd/Desktop/butano/Reunited/recording.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/UniParticles3D/plugin.cfg", "res://addons/dialogic/plugin.cfg")
@@ -106,6 +112,7 @@ astroids=""
 enemy_rocket=""
 moving_platform=""
 race_track=""
+Kerbie=""
 
 [gui]
 
