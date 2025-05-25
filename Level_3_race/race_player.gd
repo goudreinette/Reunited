@@ -52,6 +52,7 @@ func _process(delta):
 		speed *= drag_off_track
 		
 	translate(Vector3(0, 0, speed))
+
 	
 	turn_speed += input.x * remap(-speed, 0, .05, 0, turn_acceleration) * delta
 	turn_speed *= turn_drag

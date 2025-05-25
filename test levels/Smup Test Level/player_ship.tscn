@@ -8,8 +8,8 @@
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_ux7ms"]
 [ext_resource type="Texture2D" uid="uid://b1jinxtgd3rv0" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Player ship/Boosters_right (16 x 16).png" id="4_bbrn4"]
 [ext_resource type="Texture2D" uid="uid://dytla7ybrsc1x" path="res://Sprites Algemeen/ship sprites/ship sheet smol.png" id="4_ux7ms"]
-[ext_resource type="AudioStream" uid="uid://wiwbctp75u5d" path="res://sounds/blast new.wav" id="6_k3t33"]
 [ext_resource type="AudioStream" uid="uid://deudjeyrwefb1" path="res://sounds/hit.wav" id="7_xm18q"]
+[ext_resource type="AudioStream" uid="uid://smp3crb5ah1c" path="res://sounds/Shingle shot Extra short 4.wav" id="9_cxsww"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbfoc"]
 atlas = ExtResource("2_6cdot")
@@ -141,7 +141,9 @@ frame = 1
 one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_k3t33")
+stream = ExtResource("9_cxsww")
+volume_db = 24.0
+pitch_scale = 4.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-6, 0, -3, -1, -3, -9, 3, -9, 3, -1, 6, 0, 6, 3, 4, 5, 4, 8, -4, 8, -4, 5, -6, 3)

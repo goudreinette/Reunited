@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmcugtnblaun7"
+path="res://.godot/imported/bush01.obj-84454f97f57c008f0d58b6ba9d4e121f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bush01.obj-84454f97f57c008f0d58b6ba9d4e121f.mesh"]
+
+source_file="res://Level_3_race/models/retro_nature_pack/models/OBJ/bushes/bush01.obj"
+dest_files=["res://.godot/imported/bush01.obj-84454f97f57c008f0d58b6ba9d4e121f.mesh", "res://.godot/imported/bush01.obj-84454f97f57c008f0d58b6ba9d4e121f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
