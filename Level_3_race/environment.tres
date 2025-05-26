@@ -1,0 +1,17 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bt0l4cxk1vg1w"]
+
+[ext_resource type="Texture2D" uid="uid://h8cnxrokgdw5" path="res://Sprites Algemeen/sprite_packs/ocean-and-clouds-free-pixel-art-backgrounds/Ocean_1/1.png" id="1_il83r"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tf762"]
+panorama = ExtResource("1_il83r")
+filter = false
+
+[sub_resource type="Sky" id="Sky_neu27"]
+sky_material = SubResource("PanoramaSkyMaterial_tf762")
+
+[resource]
+background_mode = 2
+background_color = Color(0.403093, 0.860715, 1, 1)
+sky = SubResource("Sky_neu27")
+ambient_light_source = 2
+ambient_light_color = Color(0.903598, 0.903598, 0.903598, 1)
