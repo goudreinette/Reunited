@@ -1,5 +1,4 @@
 join "Kerby Banrock" left
-[wait time="3.0"]
 "Kerby Banrock": Hey guys, bedankt voor het helpen.
 join Igor rightmost
 Igor: WOww het is Kerby Banrock!!
@@ -7,3 +6,4 @@ Igor: WOww het is Kerby Banrock!!
 stephan: Ja! we zoeken alleen nog wel echt een gig
 "Kerby Banrock": Ik zoek nog een voorprogramma voor mijn optreden op planeet Odeon is dat iets voor jullie?
 Frank: Wow ja dat lijkt ons geweldig Mr. Banrock!
+[signal arg="Move_Away"]

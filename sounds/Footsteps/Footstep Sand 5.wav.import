@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4qamob441g5d"
+path="res://.godot/imported/Footstep Sand 5.wav-9921c280a61177111d563fc2e1a27e6b.sample"
+
+[deps]
+
+source_file="res://sounds/Footsteps/Footstep Sand 5.wav"
+dest_files=["res://.godot/imported/Footstep Sand 5.wav-9921c280a61177111d563fc2e1a27e6b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

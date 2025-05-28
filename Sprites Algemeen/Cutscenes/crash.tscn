@@ -1,7 +1,7 @@
 [gd_scene load_steps=58 format=3 uid="uid://3akmuibfcw5i"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_4uckj"]
-[ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_g45rt"]
+[ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_4uckj"]
 [ext_resource type="Texture2D" uid="uid://8iqgnx5goc0g" path="res://Level_2_wasteland/cutscenes/crash.png" id="3_86ngo"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="4_jkcuf"]
 [ext_resource type="Texture2D" uid="uid://urqrfsjv7e0g" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 4/Smoke Dark - 4.png" id="5_kcjir"]
@@ -442,7 +442,7 @@ _data = {
 
 [node name="Crash" type="Node2D"]
 script = ExtResource("1_4uckj")
-next_level = ExtResource("2_g45rt")
+next_level = ExtResource("2_4uckj")
 waiting_time = 8.0
 
 [node name="Crash" type="Sprite2D" parent="."]

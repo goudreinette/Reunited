@@ -17,10 +17,10 @@
 &"portraits": {
 "Default": {
 "export_overrides": {
-"image": ""
+"image": "\"res://Sprites Algemeen/Characters/Sloppy detailed.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 10),
 "scale": 1,
 "scene": ""
 }

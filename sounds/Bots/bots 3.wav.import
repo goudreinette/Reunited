@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clo3iuavchwfw"
+path="res://.godot/imported/bots 3.wav-12e9506a6a0bfec99e74e3b26638cc2d.sample"
+
+[deps]
+
+source_file="res://sounds/Bots/bots 3.wav"
+dest_files=["res://.godot/imported/bots 3.wav-12e9506a6a0bfec99e74e3b26638cc2d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
