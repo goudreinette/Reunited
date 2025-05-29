@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://u5llxuf5r6ke"]
+
+[ext_resource type="PackedScene" uid="uid://dhf0wk7p48jjn" path="res://Level_3_race/models/PSX_Island_Assets/cliff2.fbx" id="1_bf78s"]
+[ext_resource type="Material" uid="uid://cpgoeul22rjgt" path="res://Level_3_race/foliage/new_standard_material_3d.tres" id="2_bqhty"]
+
+[node name="cliff2" instance=ExtResource("1_bf78s")]
+
+[node name="cliff2" parent="." index="0"]
+material_override = ExtResource("2_bqhty")

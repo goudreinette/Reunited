@@ -4,6 +4,9 @@
 
 [node name="race beach assets" instance=ExtResource("1_ptph8")]
 
+[node name="Camera" parent="." index="0"]
+visible = false
+
 [node name="Bridge" parent="." index="1"]
 visible = false
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2fqn6jppcvn1"]
+
+[ext_resource type="Shader" uid="uid://dwmhp3c4kwa0i" path="res://shaders/water.gdshader" id="1_a6gv5"]
+[ext_resource type="Texture2D" uid="uid://c5etavhissrlr" path="res://Sprites Algemeen/icon big.png" id="2_1cmf7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbg31"]
+shader = ExtResource("1_a6gv5")
+shader_parameter/DISTORTION_SPEED = 5.0
+shader_parameter/DISTORTION_STRENGTH = 0.08
+shader_parameter/SCALE = 30.0
+
+[node name="SEA" type="Sprite2D"]
+z_index = -1
+material = SubResource("ShaderMaterial_nbg31")
+position = Vector2(88, 66)
+scale = Vector2(1.88281, 2.02386)
+texture = ExtResource("2_1cmf7")
