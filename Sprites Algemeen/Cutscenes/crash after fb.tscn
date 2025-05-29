@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://j1anb815cc65"]
+
+[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_cuoeh"]
+[ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_s6x7u"]
+[ext_resource type="Texture2D" uid="uid://bol1rqtotyvyq" path="res://Sprites Algemeen/Cutscenes/jungle.png" id="9_yubpu"]
+
+[sub_resource type="Animation" id="Animation_cyqq3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Crash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xou6c"]
+resource_name = "crash"
+length = 6.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.01546, 5, 5.99702),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Crash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.01553),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
+_data = {
+&"RESET": SubResource("Animation_cyqq3"),
+&"crash": SubResource("Animation_xou6c")
+}
+
+[node name="Crash" type="Node2D"]
+script = ExtResource("1_cuoeh")
+next_level = ExtResource("2_s6x7u")
+
+[node name="Crash" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+texture = ExtResource("9_yubpu")
+
+[node name="CrashAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pbp3c")
+}
+autoplay = "crash"
+
+[connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]

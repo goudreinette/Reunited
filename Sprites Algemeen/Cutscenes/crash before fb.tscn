@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://3akmuibfcw5i"]
+[gd_scene load_steps=58 format=3 uid="uid://6gpo7fhdxlhv"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_4uckj"]
 [ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_4uckj"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://8onrpxwc35pn" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 2/Smoke Dark - 2.png" id="6_4wxpv"]
 [ext_resource type="Texture2D" uid="uid://b2pexum1ifns4" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 4/Fire 4 - 4.png" id="7_txucv"]
 [ext_resource type="Texture2D" uid="uid://cv66dcp11dq83" path="res://Effects/Pixel Fire Asset Pack V1/Fire 7 - 2/Fire 7 - 2.png" id="8_rxpbq"]
-[ext_resource type="Texture2D" uid="uid://bol1rqtotyvyq" path="res://Sprites Algemeen/Cutscenes/jungle.png" id="9_qtofl"]
+[ext_resource type="Texture2D" uid="uid://hrg32giy8osy" path="res://Sprites Algemeen/Cutscenes/4 Hours Earlier.png" id="9_g5k0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ds4e"]
 atlas = ExtResource("4_jkcuf")
@@ -359,7 +359,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Jungle:visible")
+tracks/2/path = NodePath("4_Hours_Earlier:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -371,7 +371,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Jungle:modulate")
+tracks/3/path = NodePath("4_Hours_Earlier:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -383,7 +383,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_xou6c"]
 resource_name = "crash"
-length = 10.0
+length = 8.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -392,7 +392,7 @@ tracks/0/path = NodePath("Crash:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.01546, 5, 5.99702, 7.07056, 9.02426),
+"times": PackedFloat32Array(0, 3.01546, 4, 5, 6.05503, 6.98447),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
@@ -404,7 +404,7 @@ tracks/1/path = NodePath("Crash:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.01553),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -412,11 +412,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Jungle:visible")
+tracks/2/path = NodePath("4_Hours_Earlier:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 6.01553),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -424,11 +424,11 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Jungle:modulate")
+tracks/3/path = NodePath("4_Hours_Earlier:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(6.07105, 7.07056, 9.02426, 10),
+"times": PackedFloat32Array(5.05552, 5.98447, 6.98447, 7.98447),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
@@ -443,7 +443,6 @@ _data = {
 [node name="Crash" type="Node2D"]
 script = ExtResource("1_4uckj")
 next_level = ExtResource("2_4uckj")
-waiting_time = 8.0
 
 [node name="Crash" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
@@ -490,8 +489,10 @@ libraries = {
 }
 autoplay = "crash"
 
-[node name="Jungle" type="Sprite2D" parent="."]
+[node name="4_Hours_Earlier" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
-texture = ExtResource("9_qtofl")
+texture = ExtResource("9_g5k0k")
+
+[connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]
