@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d22f7he36q0bm"
-path="res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"
+uid="uid://4mktipceb0g0"
+path="res://.godot/imported/Doodgaan.wav-8401afda4aa9661e40d2d6fbf82035de.sample"
 
 [deps]
 
-source_file="res://sounds/Countdown laps and win/Lose.wav"
-dest_files=["res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"]
+source_file="res://sounds/Doodgaan/Doodgaan.wav"
+dest_files=["res://.godot/imported/Doodgaan.wav-8401afda4aa9661e40d2d6fbf82035de.sample"]
 
 [params]
 
