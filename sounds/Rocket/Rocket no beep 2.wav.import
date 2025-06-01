@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bsilmj86o5fkh"
+path="res://.godot/imported/Rocket no beep 2.wav-c69502601fb9e40df205e1f006298672.sample"
+
+[deps]
+
+source_file="res://sounds/Rocket/Rocket no beep 2.wav"
+dest_files=["res://.godot/imported/Rocket no beep 2.wav-c69502601fb9e40df205e1f006298672.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

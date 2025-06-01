@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bsua3q5rltfeu"
+path="res://.godot/imported/Gloop shot 4.wav-264ff8ba1c5d7aa16478e4ddba289cbd.sample"
+
+[deps]
+
+source_file="res://sounds/PLant Gloop/PLant gloop shot/Gloop shot 4.wav"
+dest_files=["res://.godot/imported/Gloop shot 4.wav-264ff8ba1c5d7aa16478e4ddba289cbd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

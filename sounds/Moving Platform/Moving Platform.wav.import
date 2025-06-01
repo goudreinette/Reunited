@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cug3fpj5vqwb1"
+path="res://.godot/imported/Moving Platform.wav-12b826ead8fbd1113ce46f251cf76487.sample"
+
+[deps]
+
+source_file="res://sounds/Moving Platform/Moving Platform.wav"
+dest_files=["res://.godot/imported/Moving Platform.wav-12b826ead8fbd1113ce46f251cf76487.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

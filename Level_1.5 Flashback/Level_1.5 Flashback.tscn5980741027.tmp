@@ -1,0 +1,369 @@
+[gd_scene load_steps=26 format=3 uid="uid://bcc65hoaaqri8"]
+
+[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_ssfjq"]
+[ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_8ws1y"]
+[ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="7_lbi0f"]
+[ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="8_54fgb"]
+[ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="9_t0i5o"]
+[ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="10_cwotl"]
+[ext_resource type="PackedScene" uid="uid://dgfl508rc28p8" path="res://test levels/Smup Test Level/enemies/Cutscene_Drone.tscn" id="11_ifml8"]
+[ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="12_kvibj"]
+[ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="12_otrsx"]
+[ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="13_1hld7"]
+[ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="15_otrsx"]
+[ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="16_f6rc0"]
+[ext_resource type="Script" uid="uid://yuvx41wfwo4k" path="res://Level_1.5 Flashback/boss_front.gd" id="17_2xa2x"]
+[ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="19_6mppc"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="20_4bdh8"]
+[ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="21_7ndxm"]
+[ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://test levels/Smup Test Level/ship_Camera2D.gd" id="22_t60yq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
+shader = ExtResource("10_cwotl")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.213
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 54.597
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.16
+shader_parameter/aberration = -0.00999995
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.396
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.6
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uf0tv"]
+
+[sub_resource type="Curve2D" id="Curve2D_4sibg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 173, 0)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_otrsx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SmallKerbie:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SmallKerbie/Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ifml8"]
+resource_name = "idle"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SmallKerbie:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SmallKerbie/Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.01106),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_285p5"]
+_data = {
+&"RESET": SubResource("Animation_otrsx"),
+&"idle": SubResource("Animation_ifml8")
+}
+
+[sub_resource type="GDScript" id="GDScript_otrsx"]
+script/source = "extends Area2D
+
+var player_inside : bool = false
+@export var next_convo : int = 0
+var is_talking : bool = false
+@export var convos : = [\"convo_1\",\"convo_2\"]
+@export var enemies: =[] as Array[Area2D]
+@export var Kerbie: Area2D
+@export var Sloppy_Ship: Sprite2D 
+#@export var pressx : Sprite2D 
+
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+
+func _process(delta: float) -> void:
+	if player_inside and not is_talking and zijn_allemaal_verwijderd(enemies):
+		$PressX.visible = true
+		if  Input.is_action_just_pressed(\"dialogic_default_action\"):
+			is_talking = true
+			Dialogic.start(convos[next_convo])
+			#has_entered = true
+	else: 
+		$PressX.visible = false	
+		
+		
+	if zijn_allemaal_verwijderd(enemies):
+		$\"Help Hem Label\".visible = false
+	else:
+		$\"Help Hem Label\".visible = true
+func _on_timeline_ended():
+	## To check if it is OUR timeline
+	if is_talking :
+		$end_of_convo_timer.start()
+		if next_convo < convos.size()-1: next_convo += 1
+func _on_dialogic_signal(argument:String):
+##kerbie verdwijnt aan t einde van t gesprek
+	if argument == \"Move_Away\":
+		Kerbie.move_away()
+		##wait 2 seconds
+		get_tree().create_timer(2)
+		Sloppy_Ship.move()
+		
+	
+	
+
+func _on_end_of_convo_timer_timeout() -> void:
+	is_talking = false
+	
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player :
+		player_inside = true
+func _on_body_exited(body: Node2D) -> void:
+	if body is Player :
+		player_inside = false 
+		
+func _on_area_entered(area: Node2D) -> void:
+	if area.is_in_group(\"Player\") :
+		player_inside = true
+func _on_area_exited(area: Node2D) -> void:
+	if area.is_in_group(\"Player\") :
+		player_inside = false 
+func _on_player_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
+
+func zijn_allemaal_verwijderd(area_array: Array) -> bool:
+	for area in area_array:
+		if is_instance_valid(area):
+			return false  # Zodra er één nog bestaat, return false
+	return true  # Alle zijn ongeldig
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hld7"]
+size = Vector2(256, 72)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ssfjq")
+
+[node name="Parallax2D 0_5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="IcePlanet100x" type="Sprite2D" parent="Parallax2D 0_5"]
+position = Vector2(240, -79)
+texture = ExtResource("4_8ws1y")
+
+[node name="Parallax2D 0_75" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.75, 0.75)
+
+[node name="SpaceBG" parent="." instance=ExtResource("7_lbi0f")]
+z_index = -1
+
+[node name="Parallax2D2 0_50" parent="SpaceBG" index="1"]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="Parallax2D3 0_60" parent="SpaceBG" index="2"]
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(60, -543)
+
+[node name="GreenBg240x" parent="SpaceBG/Parallax2D3 0_60" index="0"]
+position = Vector2(56, 7)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("8_54fgb")]
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("9_t0i5o")
+
+[node name="Special FX" type="ColorRect" parent="CanvasLayer"]
+visible = false
+material = SubResource("ShaderMaterial_820i1")
+offset_right = 241.0
+offset_bottom = 160.0
+
+[node name="LevelPosition" type="Node2D" parent="."]
+position = Vector2(-3, -47)
+script = ExtResource("19_6mppc")
+levelspeed = 0.0
+
+[node name="Player" parent="LevelPosition" instance=ExtResource("20_4bdh8")]
+position = Vector2(120, 120)
+max_shield = 150
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
+stream = ExtResource("21_7ndxm")
+
+[node name="Camera2D" type="Camera2D" parent="LevelPosition"]
+position = Vector2(120, 80)
+script = ExtResource("22_t60yq")
+noise = SubResource("FastNoiseLite_uf0tv")
+
+[node name="Turret" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ifml8")]
+position = Vector2(11, -32)
+maxhealth = 2
+burst_time = 0.6
+cooldown_time = 1.0
+rate_of_fire = 0.2
+target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
+
+[node name="Turret2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ifml8")]
+position = Vector2(94, -32)
+maxhealth = 2
+burst_time = 0.6
+cooldown_time = 1.0
+rate_of_fire = 0.2
+target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
+
+[node name="Turret3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ifml8")]
+position = Vector2(19, 73)
+maxhealth = 2
+burst_time = 0.6
+cooldown_time = 1.0
+rate_of_fire = 0.2
+target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
+
+[node name="Turret4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ifml8")]
+position = Vector2(182, -24)
+maxhealth = 2
+burst_time = 0.6
+cooldown_time = 1.0
+rate_of_fire = 0.2
+target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_4sibg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(36, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_285p5")
+}
+autoplay = "idle"
+
+[node name="SmallKerbie" parent="Path2D/PathFollow2D" instance=ExtResource("12_otrsx")]
+position = Vector2(-9, 0)
+
+[node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies", "Kerbie", "Sloppy_Ship") instance=ExtResource("12_kvibj")]
+script = SubResource("GDScript_otrsx")
+convos = ["Kerby_1", "Sloppy_1"]
+enemies = [NodePath("../../Turret"), NodePath("../../Turret2"), NodePath("../../Turret3"), NodePath("../../Turret4")]
+Kerbie = NodePath("../PathFollow2D/SmallKerbie")
+Sloppy_Ship = NodePath("BossFrontSketch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Talkbox"]
+position = Vector2(118, 26)
+shape = SubResource("RectangleShape2D_1hld7")
+
+[node name="PressX" type="Sprite2D" parent="Path2D/Talkbox"]
+position = Vector2(121, 26)
+texture = ExtResource("13_1hld7")
+
+[node name="Help Hem Label" type="Label" parent="Path2D/Talkbox"]
+visible = false
+offset_left = 84.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 49.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("15_otrsx")
+text = "Help Him!"
+
+[node name="BossFrontSketch" type="Sprite2D" parent="Path2D/Talkbox" node_paths=PackedStringArray("target")]
+position = Vector2(-125, -47)
+texture = ExtResource("16_f6rc0")
+script = ExtResource("17_2xa2x")
+target = NodePath("target")
+
+[node name="target" type="Node2D" parent="Path2D/Talkbox/BossFrontSketch"]
+position = Vector2(246, 79)
+
+[connection signal="area_entered" from="LevelPosition/Player" to="Path2D/Talkbox" method="_on_player_area_entered"]
+[connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
+[connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
+[connection signal="area_entered" from="Path2D/Talkbox" to="Path2D/Talkbox" method="_on_area_entered"]
+[connection signal="area_exited" from="Path2D/Talkbox" to="Path2D/Talkbox" method="_on_area_exited"]
+
+[editable path="SpaceBG"]
+[editable path="Path2D/PathFollow2D/SmallKerbie"]

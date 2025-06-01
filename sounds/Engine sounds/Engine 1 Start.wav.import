@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dj60kwefj8kdo"
+path="res://.godot/imported/Engine 1 Start.wav-8eb6f137b199c5afc3ca1852066cf103.sample"
+
+[deps]
+
+source_file="res://sounds/Engine sounds/Engine 1 Start.wav"
+dest_files=["res://.godot/imported/Engine 1 Start.wav-8eb6f137b199c5afc3ca1852066cf103.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

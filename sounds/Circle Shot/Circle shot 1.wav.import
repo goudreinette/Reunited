@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2fvatfn60pco"
+path="res://.godot/imported/Circle shot 1.wav-9f04525d0b3583a5962b31ab8acef158.sample"
+
+[deps]
+
+source_file="res://sounds/Circle Shot/Circle shot 1.wav"
+dest_files=["res://.godot/imported/Circle shot 1.wav-9f04525d0b3583a5962b31ab8acef158.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

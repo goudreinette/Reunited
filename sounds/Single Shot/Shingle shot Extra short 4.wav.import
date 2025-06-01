@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://y2lywsd580p3"
+path="res://.godot/imported/Shingle shot Extra short 4.wav-f114de5d1f4c388d260fb91633b5dd8f.sample"
+
+[deps]
+
+source_file="res://sounds/Single Shot/Shingle shot Extra short 4.wav"
+dest_files=["res://.godot/imported/Shingle shot Extra short 4.wav-f114de5d1f4c388d260fb91633b5dd8f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

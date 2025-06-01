@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dim8a4473fojg"
+path="res://.godot/imported/Fat Lazer 4.wav-9cc17d0d33e64dc5edca3413f53b2b2d.sample"
+
+[deps]
+
+source_file="res://sounds/Fat Lazer/Fat Lazer 4.wav"
+dest_files=["res://.godot/imported/Fat Lazer 4.wav-9cc17d0d33e64dc5edca3413f53b2b2d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

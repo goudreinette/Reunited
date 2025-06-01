@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbepkm37tc3x7"
+path="res://.godot/imported/Lap 2.wav-193eaa8dbac9cc0a6d3dfbc34c660a51.sample"
+
+[deps]
+
+source_file="res://sounds/laps and win/Lap 2.wav"
+dest_files=["res://.godot/imported/Lap 2.wav-193eaa8dbac9cc0a6d3dfbc34c660a51.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

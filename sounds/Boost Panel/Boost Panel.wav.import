@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u2ofo6sqhb63"
+path="res://.godot/imported/Boost Panel.wav-190c52a2ef9df004bc99062a8a6162df.sample"
+
+[deps]
+
+source_file="res://sounds/Boost Panel/Boost Panel.wav"
+dest_files=["res://.godot/imported/Boost Panel.wav-190c52a2ef9df004bc99062a8a6162df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

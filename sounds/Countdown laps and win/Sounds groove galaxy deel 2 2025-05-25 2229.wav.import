@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dw3mhguphvc2a"
+path="res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-b8f696b7d7681dc1cf5b17144e568d4e.sample"
+
+[deps]
+
+source_file="res://sounds/laps and win/Sounds groove galaxy deel 2 2025-05-25 2229.wav"
+dest_files=["res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-b8f696b7d7681dc1cf5b17144e568d4e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

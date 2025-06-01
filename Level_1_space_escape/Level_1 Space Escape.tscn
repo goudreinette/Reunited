@@ -63,7 +63,7 @@ shader_parameter/vignette_opacity = 0.6
 script = ExtResource("1_g0tbl")
 
 [node name="CrashSceneDetect" type="Node2D" parent="." node_paths=PackedStringArray("UI")]
-position = Vector2(160, 1592)
+position = Vector2(160, -1579)
 script = ExtResource("2_avks8")
 scene = ExtResource("3_8olhq")
 UI = NodePath("../CanvasLayer/UI")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bcc65hoaaqri8"]
+[gd_scene load_steps=27 format=3 uid="uid://bcc65hoaaqri8"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_ssfjq"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_8ws1y"]
@@ -10,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="12_kvibj"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="12_otrsx"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="13_1hld7"]
+[ext_resource type="PackedScene" uid="uid://j1anb815cc65" path="res://Sprites Algemeen/Cutscenes/crash after fb.tscn" id="14_2xa2x"]
 [ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="15_otrsx"]
+[ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="16_f6rc0"]
+[ext_resource type="Script" uid="uid://yuvx41wfwo4k" path="res://Level_1.5 Flashback/boss_front.gd" id="17_2xa2x"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="19_6mppc"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="20_4bdh8"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="21_7ndxm"]
@@ -142,15 +145,17 @@ var player_inside : bool = false
 var is_talking : bool = false
 @export var convos : = [\"convo_1\",\"convo_2\"]
 @export var enemies: =[] as Array[Area2D]
+@export var Kerbie: Area2D
+@export var Sloppy_Ship: Sprite2D 
 
+
+@export var next_level: PackedScene
 #@export var pressx : Sprite2D 
 
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
-func _on_dialogic_signal(argument:String):
-	pass
-	
+
 func _process(delta: float) -> void:
 	if player_inside and not is_talking and zijn_allemaal_verwijderd(enemies):
 		$PressX.visible = true
@@ -171,6 +176,25 @@ func _on_timeline_ended():
 	if is_talking :
 		$end_of_convo_timer.start()
 		if next_convo < convos.size()-1: next_convo += 1
+		
+		
+func _on_dialogic_signal(argument:String):
+	
+##Kerbie verdwijnt aan t einde van t gesprek en Sloppy komt in beeld
+
+	if argument == \"Move_Away\":
+		Kerbie.move_away()
+		###wait 2 seconds
+		#await get_tree().create_timer(2).timeout
+		Sloppy_Ship.move()
+		
+	if argument == \"Sloppy move away\":
+		Sloppy_Ship.move_away()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_packed(next_level)
+##Naar het volgende level
+		
+
 func _on_end_of_convo_timer_timeout() -> void:
 	is_talking = false
 	
@@ -312,10 +336,13 @@ autoplay = "idle"
 [node name="SmallKerbie" parent="Path2D/PathFollow2D" instance=ExtResource("12_otrsx")]
 position = Vector2(-9, 0)
 
-[node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies") instance=ExtResource("12_kvibj")]
+[node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies", "Kerbie", "Sloppy_Ship") instance=ExtResource("12_kvibj")]
 script = SubResource("GDScript_otrsx")
-convos = ["Kerby_1"]
+convos = ["Kerby_1", "Sloppy_1"]
 enemies = [NodePath("../../Turret"), NodePath("../../Turret2"), NodePath("../../Turret3"), NodePath("../../Turret4")]
+Kerbie = NodePath("../PathFollow2D/SmallKerbie")
+Sloppy_Ship = NodePath("BossFrontSketch")
+next_level = ExtResource("14_2xa2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Talkbox"]
 position = Vector2(118, 26)
@@ -335,6 +362,15 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("15_otrsx")
 text = "Help Him!"
+
+[node name="target" type="Node2D" parent="Path2D/Talkbox"]
+position = Vector2(121, 32)
+
+[node name="BossFrontSketch" type="Sprite2D" parent="Path2D/Talkbox" node_paths=PackedStringArray("target")]
+position = Vector2(-125, -47)
+texture = ExtResource("16_f6rc0")
+script = ExtResource("17_2xa2x")
+target = NodePath("../target")
 
 [connection signal="area_entered" from="LevelPosition/Player" to="Path2D/Talkbox" method="_on_player_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
