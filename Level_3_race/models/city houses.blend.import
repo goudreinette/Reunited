@@ -16,7 +16,7 @@ dest_files=["res://.godot/imported/city houses.blend-42a6c131937e418696bc099ca2a
 nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.05
 nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
@@ -32,7 +32,25 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Camera": {
+"import/skip_import": true
+},
+"PATH:Cube_001": {
+"import/skip_import": true
+},
+"PATH:Cube_002": {
+"import/skip_import": true
+},
+"PATH:Cube_003": {
+"import/skip_import": true
+},
+"PATH:Light": {
+"import/skip_import": true
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true
