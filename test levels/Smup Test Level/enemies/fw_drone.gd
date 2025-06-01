@@ -5,7 +5,10 @@ signal died
 var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var main: Node
 
+@export var pickup_scene : PackedScene
+@export var pickupchance: int = 4
 
+var pickup_has_spawned:bool = false
 func start(pos):
 	position = pos
 
@@ -28,6 +31,15 @@ func explode():
 	#$AudioStreamPlayer2D.play()
 	#set_deferred("monitorable", false)
 	#await $AnimationPlayer.animation_finished
+	if pickup_has_spawned == false:
+		pickup_has_spawned = true
+		var i = randi_range(1,pickupchance)
+		if i == 1: 
+			var p = pickup_scene.instantiate()
+			get_parent().get_parent().get_parent().add_child(p)
+			p.start(global_position)
+		
+	
 	$HitAnimation.play("RESET")
 	died.emit(5)
 	##spawn explosion

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b2t1sgtcnnfj2"]
+[gd_scene load_steps=34 format=3 uid="uid://b2t1sgtcnnfj2"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://test levels/Smup Test Level/enemies/turret.tscn" id="25_nk3iq"]
 [ext_resource type="Texture2D" uid="uid://b1olkfqakakq0" path="res://Level_4_wormhole/marella/marella 32px grey.png" id="29_ubutc"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
+[ext_resource type="PackedScene" uid="uid://56vh6md8gpqf" path="res://Level_1_space_escape/pickup.tscn" id="30_ubutc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8olhq"]
 size = Vector2(530, 126)
@@ -263,6 +264,32 @@ texture = ExtResource("29_ubutc")
 
 [node name="Astroid-1" parent="." instance=ExtResource("14_x6pma")]
 position = Vector2(76, -1346)
+
+[node name="Pickups" type="Node2D" parent="."]
+position = Vector2(207, 1297)
+
+[node name="Pickup" parent="Pickups" instance=ExtResource("30_ubutc")]
+
+[node name="Pickup2" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-149, 159)
+
+[node name="Pickup3" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-12, 351)
+
+[node name="Pickup4" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-188, -145)
+
+[node name="Pickup5" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(0, -1738)
+
+[node name="Pickup6" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-149, -1579)
+
+[node name="Pickup7" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-12, -1387)
+
+[node name="Pickup8" parent="Pickups" instance=ExtResource("30_ubutc")]
+position = Vector2(-188, -1883)
 
 [connection signal="area_entered" from="CrashSceneDetect/Area2D" to="CrashSceneDetect" method="_on_area_2d_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]

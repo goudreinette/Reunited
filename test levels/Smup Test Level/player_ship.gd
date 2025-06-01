@@ -165,3 +165,21 @@ func _on_area_entered(area):
 func _on_animated_sprite_2d_animation_finished():
 	if barelling:
 		barelling = false
+
+###PICKUPS###
+
+
+func shield_pickup(amt):
+	shield += amt
+	if shield > max_shield: shield = max_shield
+
+func scatter_pickup(time):
+	current_weapon_type = 1
+	await get_tree().create_timer(time).timeout
+	current_weapon_type = 0
+		
+func gattling_pickup(time):
+	current_weapon_type = 2
+	await get_tree().create_timer(time).timeout
+	current_weapon_type = 0
+	pass
