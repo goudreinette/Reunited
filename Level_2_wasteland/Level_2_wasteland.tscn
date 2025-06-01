@@ -49,7 +49,7 @@
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]
 [ext_resource type="Texture2D" uid="uid://dicf2yu17auj6" path="res://Level_2_wasteland/ship fixed.png" id="47_3fwvb"]
-[ext_resource type="PackedScene" uid="uid://dpv6j2k42d65x" path="res://Level_2_wasteland/jungle_tree.tscn" id="50_oyuui"]
+[ext_resource type="PackedScene" path="res://Level_2_wasteland/jungle_tree.tscn" id="50_oyuui"]
 [ext_resource type="PackedScene" uid="uid://cq1as4k3qc7id" path="res://Level_2_wasteland/bloem_boom.tscn" id="51_o7xex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]

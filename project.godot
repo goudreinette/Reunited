@@ -42,6 +42,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Cubania Bar": "res://Cubania Bar.dtl",
 "Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
+"Garage": "res://Garage.dtl",
 "Guus_en_Igor_1": "res://addons/dialogic/dialogue/Guus_en_Igor_1.dtl",
 "Guus_en_Igor_2": "res://addons/dialogic/dialogue/Guus_en_Igor_2.dtl",
 "Kerby_1": "res://Kerby_1.dtl",
