@@ -4,10 +4,9 @@ It'll make you a lot of money.
 join stephan right
 stephan: hanks for the offer, but we'd rather perform. We just got a great gig!
 "Mr Sloppy": From that old fart Kerby?! You know he won’t bring you anywhere.
-"Mr Sloppy": You know we're working on the future of music. Making music is hard and nobody really enjoys it. \
-With your help music will be easy
-stephan: Whatever man! We like making music ourselfs! \
-Besides we've got a gig to go to and we need to leave.
+"Mr Sloppy": You know we're working on the future of music. Making music is hard and nobody really enjoys it. 
+"Mr Sloppy": With your help making music will be easy!
+stephan: Whatever man! We like making music ourselfs! Besides we've got a gig to go to and we need to leave.
 "Mr Sloppy": You'll come to regret this
 [wait time="1.0"]
 [signal arg="Sloppy move away"]

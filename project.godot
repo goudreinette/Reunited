@@ -40,6 +40,7 @@ directories/dch_directory={
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Cubania Bar": "res://Cubania Bar.dtl",
 "Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
 "Guus_en_Igor_1": "res://addons/dialogic/dialogue/Guus_en_Igor_1.dtl",
 "Guus_en_Igor_2": "res://addons/dialogic/dialogue/Guus_en_Igor_2.dtl",
