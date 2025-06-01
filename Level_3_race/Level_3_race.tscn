@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=63 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/scripts/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="7_vmoy4"]
-[ext_resource type="PackedScene" uid="uid://cxga6eduqi063" path="res://Level_3_race/race player ship.tscn" id="9_kd54t"]
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="14_ev6ad"]
 [ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="15_0oy6m"]
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="16_8vcgt"]
@@ -298,8 +297,18 @@ libraries = {
 }
 autoplay = "race_intro"
 
-[node name="reunited ship" parent="Ship" groups=["Player"] instance=ExtResource("9_kd54t")]
+[node name="reunited ship" parent="Ship" groups=["Player"]]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(15, 0, 2.38419e-07, 0, 15, 0, -2.38419e-07, 0, 15, -0.0105991, 0, 0.00504017)
+script = null
 
 [node name="Road boundry race" parent="." groups=["race_track"] instance=ExtResource("3_ev6ad")]
 transform = Transform3D(-0.164224, 0, 0.556265, 0, 0.58, 0, -0.556265, 0, -0.164224, 8.47149, -0.319093, -0.126348)
