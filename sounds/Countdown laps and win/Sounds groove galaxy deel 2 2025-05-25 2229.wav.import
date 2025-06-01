@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dw3mhguphvc2a"
-path="res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-b8f696b7d7681dc1cf5b17144e568d4e.sample"
+path="res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-23394cba55778e8576c90e166db53be8.sample"
 
 [deps]
 
-source_file="res://sounds/laps and win/Sounds groove galaxy deel 2 2025-05-25 2229.wav"
-dest_files=["res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-b8f696b7d7681dc1cf5b17144e568d4e.sample"]
+source_file="res://sounds/Countdown laps and win/Sounds groove galaxy deel 2 2025-05-25 2229.wav"
+dest_files=["res://.godot/imported/Sounds groove galaxy deel 2 2025-05-25 2229.wav-23394cba55778e8576c90e166db53be8.sample"]
 
 [params]
 

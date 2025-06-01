@@ -33,7 +33,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_xou6c"]
 resource_name = "crash"
-length = 6.0
+length = 8.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -42,7 +42,7 @@ tracks/0/path = NodePath("Crash:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.01546, 5, 5.99702),
+"times": PackedFloat32Array(0, 2, 7, 7.99702),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
@@ -54,7 +54,7 @@ tracks/1/path = NodePath("Crash:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6.01553),
+"times": PackedFloat32Array(0, 8.01553),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]

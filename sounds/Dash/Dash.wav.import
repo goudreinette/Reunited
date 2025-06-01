@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d22f7he36q0bm"
-path="res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"
+uid="uid://b3g7nt20t8rrm"
+path="res://.godot/imported/Dash.wav-78401d26a1881ea763970b56e2058a06.sample"
 
 [deps]
 
-source_file="res://sounds/Countdown laps and win/Lose.wav"
-dest_files=["res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"]
+source_file="res://sounds/Dash/Dash.wav"
+dest_files=["res://.godot/imported/Dash.wav-78401d26a1881ea763970b56e2058a06.sample"]
 
 [params]
 

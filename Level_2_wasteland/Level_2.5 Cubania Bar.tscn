@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkw3edwkuuvad"]
+
+[ext_resource type="Script" uid="uid://b6aduh83hadbc" path="res://Level_2_wasteland/level_2.5_cubania_bar.gd" id="1_t45cu"]
+[ext_resource type="Texture2D" uid="uid://dwkqb2wqka807" path="res://Level_2_wasteland/cutscenes/Temporary Bar.jpg" id="2_01qka"]
+[ext_resource type="PackedScene" uid="uid://c0npwlyangqo8" path="res://Level_3_race/Level_3_race.tscn" id="2_hs73k"]
+
+[node name="Level2_5CubaniaBar" type="Node2D"]
+script = ExtResource("1_t45cu")
+next_level = ExtResource("2_hs73k")
+
+[node name="Background(temporary)" type="Sprite2D" parent="."]
+position = Vector2(143, 82)
+scale = Vector2(0.481519, 0.487919)
+texture = ExtResource("2_01qka")

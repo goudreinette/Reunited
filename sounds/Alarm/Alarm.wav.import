@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d22f7he36q0bm"
-path="res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"
+uid="uid://ctat4mh73rsm4"
+path="res://.godot/imported/Alarm.wav-06c3f959b461537aca635f8dd4298b9b.sample"
 
 [deps]
 
-source_file="res://sounds/Countdown laps and win/Lose.wav"
-dest_files=["res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"]
+source_file="res://sounds/Alarm/Alarm.wav"
+dest_files=["res://.godot/imported/Alarm.wav-06c3f959b461537aca635f8dd4298b9b.sample"]
 
 [params]
 

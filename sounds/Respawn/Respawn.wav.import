@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d22f7he36q0bm"
-path="res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"
+uid="uid://b7aq3jlpjl2gt"
+path="res://.godot/imported/Respawn.wav-91121986d22928b8f8768dd013c98f52.sample"
 
 [deps]
 
-source_file="res://sounds/Countdown laps and win/Lose.wav"
-dest_files=["res://.godot/imported/Lose.wav-d4b88efea06d5890488f96992e6d7a75.sample"]
+source_file="res://sounds/Respawn/Respawn.wav"
+dest_files=["res://.godot/imported/Respawn.wav-91121986d22928b8f8768dd013c98f52.sample"]
 
 [params]
 

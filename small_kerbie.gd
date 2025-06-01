@@ -19,6 +19,8 @@ func showshield():
 	
 func move_away():
 	var tween = create_tween()
+	##zorgen dat hij de goede kant op kijkt
+	$Sprite2D.flip_h = false
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self,"position",Vector2(240,0), move_away_time)
