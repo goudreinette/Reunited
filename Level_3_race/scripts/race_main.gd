@@ -24,9 +24,9 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 
 @onready var other_racers: Array[RaceCompetitor] = [
-	$Path3D/Racer1,
-	$Path3D/Racer2,
-	$Path3D/Racer3
+	$RacePath/Racer1,
+	$RacePath/Racer2,
+	$RacePath/Racer3
 ]
 
 @onready var position_label = $Camera3D/UI/PositionLabel
@@ -41,9 +41,9 @@ func _process(delta):
 	#var closest_point = find_closest_point($Path3D, player.global_position)
 	# get list of points
 	#var points: PackedVector3Array = $Path3D.curve.get_baked_points()
-	var player_offset = $Path3D.curve.get_closest_offset($Path3D.to_local(player.global_transform.origin))
+	var player_offset = $RacePath.curve.get_closest_offset($RacePath.to_local(player.global_transform.origin))
 	#var closest_offset = $Path3D.curve.get_closest_offset($Path3D.transform * $Ship.global_transform.origin)
-	var player_progress_ratio = player_offset / $Path3D.curve.get_baked_length()
+	var player_progress_ratio = player_offset / $RacePath.curve.get_baked_length()
 	
 	#print("player offset: ", player_progress_ratio);
 	
@@ -86,9 +86,9 @@ func _process(delta):
 
 
 	if race_state == RACE_STATE.FINISH:
-		$Path3D/PlayerPathFollow.progress += auto_speed
-		player.global_position = $Path3D/PlayerPathFollow.global_position
-		player.global_rotation = lerp(player.global_rotation, $Path3D/PlayerPathFollow.global_rotation, 0.3)
+		$RacePath/PlayerPathFollow.progress += auto_speed
+		player.global_position = $RacePath/PlayerPathFollow.global_position
+		player.global_rotation = lerp(player.global_rotation, $RacePath/PlayerPathFollow.global_rotation, 0.3)
 		
 
 	#if player_progress_ratio > 

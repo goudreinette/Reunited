@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://svwmn6uue5f2"]
+
+[ext_resource type="PackedScene" uid="uid://qeuqvmwb83of" path="res://Level_3_race/models/mountain.blend" id="1_tnfxo"]
+
+[node name="mountain" instance=ExtResource("1_tnfxo")]
