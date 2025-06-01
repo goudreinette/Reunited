@@ -1,14 +1,15 @@
-[gd_scene load_steps=63 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=64 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
 [ext_resource type="Texture2D" uid="uid://bu6tg466u7f8p" path="res://Level_3_race/race sprites/race map new.png" id="2_g3r7i"]
-[ext_resource type="PackedScene" uid="uid://dc84xukp6rnfr" path="res://Level_4_wormhole/Level_4 Wormhole.tscn" id="2_kd54t"]
+[ext_resource type="PackedScene" uid="uid://cmv3bo1hr68gx" path="res://Level_3_race/Cutscenes/3.5 Garage.tscn" id="2_m5o28"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
 [ext_resource type="PackedScene" uid="uid://cw70b3g82u73a" path="res://Level_3_race/Road boundry race.blend" id="3_ev6ad"]
 [ext_resource type="Environment" uid="uid://bt0l4cxk1vg1w" path="res://Level_3_race/environment.tres" id="3_m5o28"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/scripts/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
+[ext_resource type="PackedScene" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/scripts/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
@@ -270,7 +271,7 @@ shader_parameter/FoamGlowIntensity = -0.04
 
 [node name="Level 3 - Race" type="Node3D"]
 script = ExtResource("1_g3r7i")
-next_level = ExtResource("2_kd54t")
+next_level = ExtResource("2_m5o28")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_m5o28")
@@ -297,18 +298,8 @@ libraries = {
 }
 autoplay = "race_intro"
 
-[node name="reunited ship" parent="Ship" groups=["Player"]]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(15, 0, 2.38419e-07, 0, 15, 0, -2.38419e-07, 0, 15, -0.0105991, 0, 0.00504017)
-script = null
+[node name="reunited ship" parent="Ship" instance=ExtResource("5_m5o28")]
+transform = Transform3D(15.873, 0, 0, 0, 15.873, 0, 0, 0, 15.873, 0, 0, 0)
 
 [node name="Road boundry race" parent="." groups=["race_track"] instance=ExtResource("3_ev6ad")]
 transform = Transform3D(-0.164224, 0, 0.556265, 0, 0.58, 0, -0.556265, 0, -0.164224, 8.47149, -0.319093, -0.126348)

@@ -30,6 +30,7 @@ var barelling = false
 @onready var screensize = get_viewport_rect().size
 
 
+@export var show_boosters: bool = true
 
 func _ready():
 	start()
@@ -77,6 +78,9 @@ func _process(delta):
 	if in_lazer:
 		$HitAnimation.play("hit")
 		shield -=0.5
+	
+	if show_boosters == false:
+		$Boosters.visible = false
 
 func shoot():
 	if not can_shoot:

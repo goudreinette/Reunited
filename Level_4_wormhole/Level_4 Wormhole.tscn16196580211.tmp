@@ -527,18 +527,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [Vector2(-2, 89.045), Vector2(20, 89.045)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Net/Player_stuck_pos:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.93957),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(-14.2624, 87.5305), Vector2(42.137, 88.5295)]
-}
 
 [sub_resource type="Animation" id="Animation_0i06f"]
 length = 0.001
@@ -589,18 +577,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Net/Player_stuck_pos:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(30.4618, 88.3294)]
 }
 
 [sub_resource type="Animation" id="Animation_akr3w"]
@@ -772,17 +748,13 @@ autoplay = "default"
 script = ExtResource("15_23or8")
 speed = 36
 
-[node name="Sloppy schipmet net" type="Area2D" parent="LevelPosition2" node_paths=PackedStringArray("player", "Player_stuck_pos", "sloppy_trigger", "screen_pos")]
+[node name="Sloppy schipmet net" type="Area2D" parent="LevelPosition2" node_paths=PackedStringArray("sloppy_trigger", "screen_pos")]
 position = Vector2(109, -68)
 script = ExtResource("17_0i06f")
-player = NodePath("../Player")
-Player_stuck_pos = NodePath("Net/Player_stuck_pos")
 sloppy_trigger = NodePath("../../Sloppy Trigger")
 screen_pos = NodePath("../Sloppy position")
-next_level = ExtResource("19_cl4cq")
 
 [node name="Net" type="Area2D" parent="LevelPosition2/Sloppy schipmet net"]
-collision_layer = 0
 script = ExtResource("20_akr3w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelPosition2/Sloppy schipmet net/Net"]
@@ -803,9 +775,6 @@ offset = Vector2(16, 47)
 position = Vector2(-2, 89.045)
 rotation = -1.47147
 shape = SubResource("CapsuleShape2D_k4ooe")
-
-[node name="Player_stuck_pos" type="Node2D" parent="LevelPosition2/Sloppy schipmet net/Net"]
-position = Vector2(30.4618, 88.3294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelPosition2/Sloppy schipmet net"]
 shape = SubResource("RectangleShape2D_2q645")
@@ -838,9 +807,7 @@ script = ExtResource("24_uebwq")
 position = Vector2(142, 0)
 shape = SubResource("RectangleShape2D_akr3w")
 
-[connection signal="died" from="LevelPosition2/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition2/Player" to="CanvasLayer/UI" method="_on_player_shield_changed"]
-[connection signal="area_entered" from="LevelPosition2/Sloppy schipmet net/Net" to="LevelPosition2/Sloppy schipmet net" method="_on_net_area_entered"]
 [connection signal="animation_finished" from="LevelPosition2/Sloppy schipmet net/Net/AnimationPlayer" to="LevelPosition2/Sloppy schipmet net/Net" method="_on_animation_player_animation_finished"]
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="area_entered" from="Sloppy Trigger" to="Sloppy Trigger" method="_on_area_entered"]
