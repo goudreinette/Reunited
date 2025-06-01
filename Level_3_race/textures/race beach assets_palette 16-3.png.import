@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwttm361dev6p"
-path.s3tc="res://.godot/imported/race beach assets_palette 16-3.png-ad764aa075f61f7968001b3e7f43b057.s3tc.ctex"
-path.etc2="res://.godot/imported/race beach assets_palette 16-3.png-ad764aa075f61f7968001b3e7f43b057.etc2.ctex"
+path.s3tc="res://.godot/imported/race beach assets_palette 16-3.png-2615287c34653844ec27aac900354d1a.s3tc.ctex"
+path.etc2="res://.godot/imported/race beach assets_palette 16-3.png-2615287c34653844ec27aac900354d1a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Level_3_race/race beach assets_palette 16-3.png"
-dest_files=["res://.godot/imported/race beach assets_palette 16-3.png-ad764aa075f61f7968001b3e7f43b057.s3tc.ctex", "res://.godot/imported/race beach assets_palette 16-3.png-ad764aa075f61f7968001b3e7f43b057.etc2.ctex"]
+source_file="res://Level_3_race/textures/race beach assets_palette 16-3.png"
+dest_files=["res://.godot/imported/race beach assets_palette 16-3.png-2615287c34653844ec27aac900354d1a.s3tc.ctex", "res://.godot/imported/race beach assets_palette 16-3.png-2615287c34653844ec27aac900354d1a.etc2.ctex"]
 
 [params]
 

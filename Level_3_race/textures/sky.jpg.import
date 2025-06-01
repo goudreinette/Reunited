@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpcovig2prp2k"
-path.s3tc="res://.godot/imported/sky.jpg-15274cb80b9772e3f79cbf3aae9fbf20.s3tc.ctex"
-path.etc2="res://.godot/imported/sky.jpg-15274cb80b9772e3f79cbf3aae9fbf20.etc2.ctex"
+path.s3tc="res://.godot/imported/sky.jpg-f7e00d7404d20a1d3a640333b0cd4ba9.s3tc.ctex"
+path.etc2="res://.godot/imported/sky.jpg-f7e00d7404d20a1d3a640333b0cd4ba9.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Level_3_race/sky.jpg"
-dest_files=["res://.godot/imported/sky.jpg-15274cb80b9772e3f79cbf3aae9fbf20.s3tc.ctex", "res://.godot/imported/sky.jpg-15274cb80b9772e3f79cbf3aae9fbf20.etc2.ctex"]
+source_file="res://Level_3_race/textures/sky.jpg"
+dest_files=["res://.godot/imported/sky.jpg-f7e00d7404d20a1d3a640333b0cd4ba9.s3tc.ctex", "res://.godot/imported/sky.jpg-f7e00d7404d20a1d3a640333b0cd4ba9.etc2.ctex"]
 
 [params]
 

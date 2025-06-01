@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4hkkds761ax1"]
 
-[ext_resource type="PackedScene" uid="uid://boe8o82r1wusw" path="res://Level_3_race/race beach assets.blend" id="1_jicvy"]
+[ext_resource type="PackedScene" uid="uid://boe8o82r1wusw" path="res://Level_3_race/world props/race beach assets.blend" id="1_jicvy"]
 
 [node name="race beach assets" instance=ExtResource("1_jicvy")]
 

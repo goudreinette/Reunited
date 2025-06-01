@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c5h22kjw4p1pg" path="res://Level_3_race/race sprites/ship bank right/bank right0004.png" id="13_82kso"]
 [ext_resource type="Texture2D" uid="uid://cj80jsxga7gq" path="res://Level_3_race/race sprites/ship bank right/bank right0005.png" id="14_sjexk"]
 [ext_resource type="Texture2D" uid="uid://xncrpf4uoekk" path="res://Level_3_race/race sprites/ship bank right/bank right0006.png" id="15_67272"]
-[ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/race_player.gd" id="16_eymd3"]
+[ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/scripts/race_player.gd" id="16_eymd3"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="17_op4hn"]
 [ext_resource type="Texture2D" uid="uid://dlhkpjyuisu2l" path="res://Level_3_race/race sprites/gate.png" id="18_12tkg"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="19_hwr1w"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c28hgr81vlg6n" path="res://Level_3_race/race sprites/plants/plant1.png" id="23_esc7y"]
 [ext_resource type="Texture2D" uid="uid://dnwcc1u6uw736" path="res://Level_3_race/race sprites/plants/plant3.png" id="24_sgr7k"]
 [ext_resource type="Texture2D" uid="uid://d1s2kqirrohhm" path="res://Level_3_race/race sprites/plants/plant4.png" id="25_41i7o"]
-[ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/car_path_follow.gd" id="26_gvokg"]
+[ext_resource type="Script" uid="uid://cmhhxg4tqnswj" path="res://Level_3_race/scripts/car_path_follow.gd" id="26_gvokg"]
 [ext_resource type="PackedScene" uid="uid://cpym6ti1don5u" path="res://models/race/cuba_car_cabriolet.glb" id="27_8ouit"]
 [ext_resource type="ArrayMesh" uid="uid://bu6q7u4hisoqh" path="res://models/race/map_loop_mesh.obj" id="28_hjcqg"]
 
