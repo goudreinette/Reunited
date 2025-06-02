@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=68 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
@@ -9,7 +9,7 @@
 [ext_resource type="Environment" uid="uid://bt0l4cxk1vg1w" path="res://Level_3_race/environment.tres" id="3_m5o28"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/scripts/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
-[ext_resource type="PackedScene" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
+[ext_resource type="PackedScene" uid="uid://cxga6eduqi063" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/scripts/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://d4hkkds761ax1" path="res://Level_3_race/world props/bridge.tscn" id="31_7pqpo"]
 [ext_resource type="PackedScene" uid="uid://3wq62iep80rl" path="res://Level_3_race/world props/parasol.tscn" id="32_3smau"]
 [ext_resource type="PackedScene" uid="uid://eo5xgd0dipsp" path="res://Level_3_race/foliage props/plant_palm_fan.tscn" id="32_4i5su"]
+[ext_resource type="PackedScene" uid="uid://m8f6qkypamka" path="res://Level_3_race/models/boat.blend" id="33_m4yvn"]
 [ext_resource type="PackedScene" uid="uid://dhxo14f8aaghw" path="res://Level_3_race/world props/chair.tscn" id="33_wuivs"]
 [ext_resource type="PackedScene" uid="uid://du10rxgs02cwn" path="res://Level_3_race/models/PSX_Island_Assets/palm3.fbx" id="34_10a0x"]
 [ext_resource type="PackedScene" uid="uid://b7etqv02rfgex" path="res://Level_3_race/models/PSX_Island_Assets/bush.fbx" id="35_n4qax"]
@@ -50,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://baov6xc03vyj6" path="res://Level_3_race/models/PSX_Island_Assets/plant_palm_fan.fbx" id="48_m5o28"]
 [ext_resource type="PackedScene" uid="uid://ck5re204ocxfq" path="res://Level_3_race/models/city houses.blend" id="49_4i5su"]
 [ext_resource type="PackedScene" uid="uid://ceccqhhv3prde" path="res://Level_3_race/models/PSX_Island_Assets/plant_leafy.fbx" id="49_samuu"]
+[ext_resource type="PackedScene" uid="uid://m1s7sed31fdh" path="res://Level_3_race/foliage props/bush.tscn" id="52_txvjk"]
 
 [sub_resource type="Animation" id="Animation_6ha66"]
 length = 0.001
@@ -464,6 +466,12 @@ texture = ExtResource("14_ev6ad")
 
 [node name="Pole2" type="Sprite3D" parent="Map"]
 transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -1.39568, 2.01051, 0.059613)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("15_0oy6m")
+
+[node name="Pole3" type="Sprite3D" parent="Map"]
+transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, -3.79663, 0.891341, 0.059613)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("15_0oy6m")
@@ -995,20 +1003,11 @@ transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31
 [node name="bush4" parent="Map/Plants" instance=ExtResource("35_n4qax")]
 transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -2.9721, -0.0335717, 0.00944167)
 
-[node name="bush5" parent="Map/Plants" instance=ExtResource("35_n4qax")]
-transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -3.76314, 0.844858, 0.00944171)
-
-[node name="bush6" parent="Map/Plants" instance=ExtResource("35_n4qax")]
-transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -3.19364, 1.09961, 0.00944172)
-
 [node name="bush9" parent="Map/Plants" instance=ExtResource("35_n4qax")]
 transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -4.3375, 3.69459, 0.00944183)
 
 [node name="bush7" parent="Map/Plants" instance=ExtResource("35_n4qax")]
 transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -3.90662, -1.08944, 0.00944162)
-
-[node name="bush8" parent="Map/Plants" instance=ExtResource("35_n4qax")]
-transform = Transform3D(-0.00861929, -3.19744e-16, -0.0287351, -0.0287351, -1.31134e-09, 0.00861929, -1.25605e-09, 0.03, 3.76761e-10, -4.86179, -0.227825, 0.00944166)
 
 [node name="plant_bush1" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 4.75294, -0.758655, -0.0203995)
@@ -1033,6 +1032,9 @@ transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.3711
 
 [node name="plant_bush7" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -4.46425, 3.58774, -0.0542803)
+
+[node name="plant_bush9" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
+transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -1.91556, 2.41077, -0.0542804)
 
 [node name="plant_flowers1fbx3" parent="Map/Plants" instance=ExtResource("43_edlfe")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -2.97493, 0.626083, 0.0140615)
@@ -1122,6 +1124,9 @@ transform = Transform3D(0.240726, 2.59093e-09, 0.179027, 0.179027, -7.82553e-09,
 
 [node name="plant_palm_fan2" parent="Map" instance=ExtResource("32_4i5su")]
 transform = Transform3D(0.0666944, 2.59093e-09, -0.292492, -0.292492, -7.82553e-09, -0.0666944, -8.2057e-09, 0.3, 7.86359e-10, -3.20029, 2.4344, 1.70042e-08)
+
+[node name="boat" parent="Map" instance=ExtResource("33_m4yvn")]
+transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -6.39453, 2.80188, 1.22474e-07)
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target", "look_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829251, 0.0410339, 0.958284)
@@ -1307,6 +1312,18 @@ surface_material_override/0 = SubResource("ShaderMaterial_p7n4p")
 
 [node name="city houses" parent="." instance=ExtResource("49_4i5su")]
 transform = Transform3D(-0.286123, 0, 0.958193, 0, 1, 0, -0.958193, 0, -0.286123, 0.0914649, -0.0100172, 1.39614)
+
+[node name="bush" parent="." instance=ExtResource("52_txvjk")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 3.71826, 1.49012e-08, 0.934981)
+
+[node name="bush2" parent="." instance=ExtResource("52_txvjk")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 3.18208, 0, 1.24423)
+
+[node name="bush4" parent="." instance=ExtResource("52_txvjk")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 1.92398, 0, -0.218961)
+
+[node name="bush3" parent="." instance=ExtResource("52_txvjk")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 2.19141, -1.19209e-07, 0.315465)
 
 [connection signal="timeout" from="RaceStartTimer" to="." method="_on_race_start_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer1" method="_on_timer_timeout"]
