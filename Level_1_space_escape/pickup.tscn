@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://56vh6md8gpqf"]
+
+[ext_resource type="Texture2D" uid="uid://0mnwee0egrl5" path="res://Level_1_space_escape/level_1_space_escape_sprites/pickups/gattling.png" id="1_dox5b"]
+[ext_resource type="Script" uid="uid://j8r6te4qoie" path="res://Level_1_space_escape/pickup.gd" id="1_envx6"]
+[ext_resource type="Texture2D" uid="uid://cjqwrsbxr3c1i" path="res://Level_1_space_escape/level_1_space_escape_sprites/pickups/Shield.png" id="3_7dwuf"]
+[ext_resource type="Texture2D" uid="uid://c7ej8m3gnb2xq" path="res://Level_1_space_escape/level_1_space_escape_sprites/pickups/Scatter.png" id="3_m2a50"]
+[ext_resource type="AudioStream" uid="uid://dx1empbembpwc" path="res://sounds/item/Item 2.wav" id="4_7dwuf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_envx6"]
+radius = 14.0357
+
+[sub_resource type="Animation" id="Animation_icmm5"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.406649, 0.783257),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_fha60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8jdp6"]
+_data = {
+&"RESET": SubResource("Animation_fha60"),
+&"idle": SubResource("Animation_icmm5")
+}
+
+[node name="Pickup" type="Area2D"]
+visible = false
+collision_layer = 256
+script = ExtResource("1_envx6")
+
+[node name="Gattling" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_dox5b")
+
+[node name="Scatter" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_m2a50")
+
+[node name="Shield" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_7dwuf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_envx6")
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7dwuf")
+volume_db = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8jdp6")
+}
+autoplay = "idle"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

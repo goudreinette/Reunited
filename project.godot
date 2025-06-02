@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Reunited"
-run/main_scene="res://test levels/Smup Test Level/Shmup Test Level.tscn"
+run/main_scene="uid://crwl6bnt6ly2u"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Sprites Algemeen/icon.png"
 
@@ -93,6 +93,7 @@ glossary/glossary_files=[]
 
 window/size/viewport_width=240
 window/size/viewport_height=160
+window/size/mode=3
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
@@ -233,6 +234,7 @@ Test={
 2d_physics/layer_7="Scan"
 2d_physics/layer_8="enemy projectile"
 3d_physics/layer_8="Race track"
+2d_physics/layer_9="Pickup"
 
 [rendering]
 
