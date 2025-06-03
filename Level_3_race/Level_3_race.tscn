@@ -1028,7 +1028,7 @@ transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.3711
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 0.820637, 2.50331, -0.0542803)
 
 [node name="plant_bush8" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
-transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -1.36952, 3.03944, -0.0542802)
+transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -0.635736, 2.12089, -0.0542802)
 
 [node name="plant_bush7" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, -4.46425, 3.58774, -0.0542803)
@@ -1127,6 +1127,9 @@ transform = Transform3D(0.0666944, 2.59093e-09, -0.292492, -0.292492, -7.82553e-
 
 [node name="boat" parent="Map" instance=ExtResource("33_m4yvn")]
 transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -6.39453, 2.80188, 1.22474e-07)
+
+[node name="boat2" parent="Map" instance=ExtResource("33_m4yvn")]
+transform = Transform3D(0.655506, -1.06581e-14, -0.75519, -0.75519, -4.37114e-08, -0.655506, -3.30104e-08, 1, -2.8653e-08, -10.9669, 21.4816, 9.38991e-07)
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target", "look_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829251, 0.0410339, 0.958284)
