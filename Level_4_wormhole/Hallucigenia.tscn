@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ds8182okwply0"]
+[gd_scene load_steps=36 format=3 uid="uid://ds8182okwply0"]
 
 [ext_resource type="Script" uid="uid://dkkxuf2a58gpi" path="res://Level_4_wormhole/hallucigenia.gd" id="1_d4526"]
 [ext_resource type="Texture2D" uid="uid://cpgvjq18koju0" path="res://Level_4_wormhole/hallucigenia/hallucigenia0001.png" id="1_skd7y"]
@@ -135,6 +135,9 @@ animations = [{
 radius = 13.0
 height = 26.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdysa"]
+size = Vector2(548, 206)
+
 [node name="Hallucigenia" type="Area2D" node_paths=PackedStringArray("shoot_pos")]
 script = ExtResource("1_d4526")
 bullet_scene = ExtResource("2_sdysa")
@@ -156,5 +159,14 @@ autostart = true
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_sdysa")
 
+[node name="player in range?" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player in range?"]
+visible = false
+position = Vector2(11, 57)
+shape = SubResource("RectangleShape2D_sdysa")
+
 [connection signal="animation_looped" from="Hallucigenia" to="." method="_on_hallucigenia_animation_looped"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="player in range?" to="." method="_on_player_in_range_area_entered"]
+[connection signal="area_exited" from="player in range?" to="." method="_on_player_in_range_area_exited"]

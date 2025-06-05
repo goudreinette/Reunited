@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dcg0htonpigku"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_pycws"]
-[ext_resource type="PackedScene" uid="uid://c0npwlyangqo8" path="res://Level_3_race/Level_3_race.tscn" id="2_get3s"]
-[ext_resource type="Texture2D" uid="uid://da0gluf1js03i" path="res://Sprites Algemeen/Cutscenes/island.png" id="3_lvs57"]
+[ext_resource type="PackedScene" uid="uid://ulsdrc2iokn2" path="res://Level_5 Prison/Level_5 prison.tscn" id="2_pycws"]
+[ext_resource type="Texture2D" uid="uid://d14gm0qpi4kvm" path="res://Sprites Algemeen/Cutscenes/prison.png" id="3_get3s"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
 length = 0.001
@@ -44,12 +44,11 @@ _data = {
 
 [node name="Prison" type="Node2D"]
 script = ExtResource("1_pycws")
-next_level = ExtResource("2_get3s")
-waiting_time = 8.0
+next_level = ExtResource("2_pycws")
 
 [node name="Prison" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
-texture = ExtResource("3_lvs57")
+texture = ExtResource("3_get3s")
 
 [node name="CrashAnimation" type="AnimationPlayer" parent="."]
 libraries = {

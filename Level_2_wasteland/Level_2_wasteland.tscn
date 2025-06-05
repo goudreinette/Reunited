@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=82 format=3 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="2_0y5bb"]
@@ -36,11 +36,10 @@
 [ext_resource type="Texture2D" uid="uid://btsjpabkrhv7u" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Tentje.png" id="31_00uxk"]
 [ext_resource type="Texture2D" uid="uid://dvb3iftdhff8h" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Campfire_base.png" id="32_h8mwf"]
 [ext_resource type="PackedScene" uid="uid://dgbc31b6g0pmw" path="res://Level_2_wasteland/gloopy_plant_1.tscn" id="33_ma2wb"]
-[ext_resource type="Texture2D" uid="uid://bgaxuqsjod4au" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-sheet.png" id="36_0rdyc"]
 [ext_resource type="Texture2D" uid="uid://bb082bbayyc1g" path="res://Level_2_wasteland/ship crash.png" id="36_0y5bb"]
-[ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://Level_2_wasteland/card.gd" id="36_yxs4w"]
 [ext_resource type="PackedScene" uid="uid://bucppmtn2uka" path="res://Level_2_wasteland/moving_platform.tscn" id="37_hbigv"]
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="38_g6r0j"]
+[ext_resource type="PackedScene" uid="uid://bfwfeyaetohbf" path="res://card.tscn" id="38_oyuui"]
 [ext_resource type="PackedScene" uid="uid://d2yxubepkj848" path="res://Effects/fire_with_smoke.tscn" id="39_jashp"]
 [ext_resource type="Script" uid="uid://b4blhpt77076i" path="res://Level_2_wasteland/cutscene.gd" id="42_cn70h"]
 [ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="43_3fwvb"]
@@ -49,7 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
 [ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]
 [ext_resource type="Texture2D" uid="uid://dicf2yu17auj6" path="res://Level_2_wasteland/ship fixed.png" id="47_3fwvb"]
-[ext_resource type="PackedScene" uid="uid://dpv6j2k42d65x" path="res://Level_2_wasteland/jungle_tree.tscn" id="50_oyuui"]
+[ext_resource type="PackedScene" path="res://Level_2_wasteland/jungle_tree.tscn" id="50_oyuui"]
 [ext_resource type="PackedScene" uid="uid://cq1as4k3qc7id" path="res://Level_2_wasteland/bloem_boom.tscn" id="51_o7xex"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv2e4"]
@@ -1275,48 +1274,6 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vlksy"]
-radius = 5.0
-
-[sub_resource type="Animation" id="Animation_51cn4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_jlab0"]
-resource_name = "idle"
-length = 2.0
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6, 1.70019, 1.80038, 1.90056),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_idsa3"]
-_data = {
-&"RESET": SubResource("Animation_51cn4"),
-&"idle": SubResource("Animation_jlab0")
-}
-
 [sub_resource type="Curve2D" id="Curve2D_0y5bb"]
 resource_local_to_scene = true
 _data = {
@@ -1726,22 +1683,8 @@ position = Vector2(0, -7)
 position = Vector2(-4, 10)
 polygon = PackedVector2Array(-48, -20, -14, -39, 44, 4, 18, 14, -14, 3, -19, 14, -51, 10)
 
-[node name="Card" type="Sprite2D" parent="."]
+[node name="Card" parent="." instance=ExtResource("38_oyuui")]
 position = Vector2(-46, -346)
-texture = ExtResource("36_0rdyc")
-hframes = 5
-script = ExtResource("36_yxs4w")
-
-[node name="CardArea" type="Area2D" parent="Card"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Card/CardArea"]
-shape = SubResource("CircleShape2D_vlksy")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Card"]
-libraries = {
-&"": SubResource("AnimationLibrary_idsa3")
-}
-autoplay = "idle"
 
 [node name="moving platform" parent="." instance=ExtResource("37_hbigv")]
 position = Vector2(248, -282)
@@ -1978,8 +1921,6 @@ position = Vector2(27, -285)
 [connection signal="body_entered" from="Guus en Igor" to="Guus en Igor" method="_on_body_entered"]
 [connection signal="body_exited" from="Guus en Igor" to="Guus en Igor" method="_on_body_exited"]
 [connection signal="timeout" from="Guus en Igor/EndOfConvoTimer" to="Guus en Igor" method="_on_end_of_convo_timer_timeout"]
-[connection signal="body_entered" from="Card/CardArea" to="Player" method="_on_card_area_body_entered"]
-[connection signal="body_entered" from="Card/CardArea" to="Card" method="_on_card_area_body_entered"]
 [connection signal="body_entered" from="Cutscene" to="Cutscene" method="_on_body_entered"]
 [connection signal="timeout" from="Cutscene/MoveTimer" to="Cutscene" method="_on_move_timer_timeout"]
 

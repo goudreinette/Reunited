@@ -5,6 +5,8 @@ extends Area2D
 @export var bullet_speed = 100
 @export var shoot_pos: Node2D
 
+var player_in_range: bool = false
+
 func _on_timer_timeout() -> void:
 	#circle_shot(bullet_scene,bullet_amount,bullet_speed)
 	pass
@@ -21,4 +23,14 @@ func circle_shot(scn,amt,spd):
 
 
 func _on_hallucigenia_animation_looped() -> void:
-	circle_shot(bullet_scene,bullet_amount,bullet_speed)
+	if player_in_range:
+		circle_shot(bullet_scene,bullet_amount,bullet_speed)
+
+
+func _on_player_in_range_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		player_in_range = true
+
+func _on_player_in_range_area_exited(area: Area2D) -> void:
+	if area.is_in_group("Player"):
+		player_in_range = false

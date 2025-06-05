@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://clivvshj3khfy"]
+
+[ext_resource type="Script" uid="uid://cgpxvylxmarvv" path="res://Level_5 Prison/spray.gd" id="1_stwbq"]
+[ext_resource type="Texture2D" uid="uid://cwp68xrnuifu1" path="res://Level_5 Prison/Spray.png" id="2_a8lfm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02slx"]
+size = Vector2(20, 30.2733)
+
+[sub_resource type="Animation" id="Animation_5wl8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spray:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_2fvj2"]
+resource_name = "retract"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spray:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_02slx"]
+resource_name = "spraying"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spray:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [5, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8rnq1"]
+_data = {
+&"RESET": SubResource("Animation_5wl8w"),
+&"retract": SubResource("Animation_2fvj2"),
+&"spraying": SubResource("Animation_02slx")
+}
+
+[node name="Spray" type="Area2D"]
+script = ExtResource("1_stwbq")
+
+[node name="Spray" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.54902)
+position = Vector2(0.594604, 18.1511)
+texture = ExtResource("2_a8lfm")
+hframes = 5
+vframes = 2
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.594604, 18.8633)
+shape = SubResource("RectangleShape2D_02slx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8rnq1")
+}
+autoplay = "spraying"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

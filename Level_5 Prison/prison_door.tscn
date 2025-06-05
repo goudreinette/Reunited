@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1qhv35delpt1"]
+
+[ext_resource type="Script" uid="uid://dv3nmegcln4nk" path="res://Level_5 Prison/prison_door.gd" id="1_3duc8"]
+[ext_resource type="Texture2D" uid="uid://bf5ktg31ro1ey" path="res://Level_5 Prison/Prison Door.png" id="1_fns6n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qouk"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3duc8"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5l1vo"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7klc"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnqqj"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e5c5"]
+atlas = ExtResource("1_fns6n")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qouk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qouk")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3duc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5l1vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7klc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnqqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e5c5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vddf"]
+size = Vector2(16, 32)
+
+[node name="prison door" type="StaticBody2D"]
+script = ExtResource("1_3duc8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 16)
+sprite_frames = SubResource("SpriteFrames_2qouk")
+animation = &"Open"
+autoplay = "default"
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_8vddf")

@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfwfeyaetohbf"]
+
+[ext_resource type="Texture2D" uid="uid://bgaxuqsjod4au" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-sheet.png" id="1_rjlel"]
+[ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://Level_2_wasteland/card.gd" id="2_q5obu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vlksy"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_51cn4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jlab0"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.70019, 1.80038, 1.90056),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idsa3"]
+_data = {
+&"RESET": SubResource("Animation_51cn4"),
+&"idle": SubResource("Animation_jlab0")
+}
+
+[node name="Card" type="Sprite2D"]
+texture = ExtResource("1_rjlel")
+hframes = 5
+script = ExtResource("2_q5obu")
+
+[node name="CardArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
+shape = SubResource("CircleShape2D_vlksy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_idsa3")
+}
+autoplay = "idle"
+
+[connection signal="body_entered" from="CardArea" to="." method="_on_card_area_body_entered"]
