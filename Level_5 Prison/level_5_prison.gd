@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var SpeakerSprite: AnimatedSprite2D
 @export var prison_door_1:StaticBody2D
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -15,7 +14,3 @@ func _on_dialogic_signal(argument:String):
 	if argument == "Open Door" and not door_opened:
 		prison_door_1.open_door()
 		door_opened = true
-	if argument == "Speaker":
-		SpeakerSprite.play("Speaking")
-	if argument == "Stop Speaker":
-		SpeakerSprite.play("Idle")
