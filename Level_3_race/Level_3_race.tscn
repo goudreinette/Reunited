@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=69 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://m8f6qkypamka" path="res://Level_3_race/models/boat.blend" id="33_m4yvn"]
 [ext_resource type="PackedScene" uid="uid://dhxo14f8aaghw" path="res://Level_3_race/world props/chair.tscn" id="33_wuivs"]
 [ext_resource type="PackedScene" uid="uid://du10rxgs02cwn" path="res://Level_3_race/models/PSX_Island_Assets/palm3.fbx" id="34_10a0x"]
+[ext_resource type="PackedScene" uid="uid://c4fkd6tvlwajy" path="res://Level_3_race/models/sandcastle.blend" id="34_f8te2"]
 [ext_resource type="PackedScene" uid="uid://b7etqv02rfgex" path="res://Level_3_race/models/PSX_Island_Assets/bush.fbx" id="35_n4qax"]
 [ext_resource type="PackedScene" uid="uid://nnxtaj1yfaat" path="res://Level_3_race/models/PSX_Island_Assets/island1.fbx" id="38_cp8rn"]
 [ext_resource type="PackedScene" uid="uid://b5liu6klf7eic" path="res://Level_3_race/models/PSX_Island_Assets/parasol2.fbx" id="39_y778p"]
@@ -784,6 +785,12 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("1_4xktc")
 
+[node name="Plant59" type="Sprite3D" parent="Map/Plants"]
+transform = Transform3D(-0.0718274, -2.49601e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.34857, 3.06975, 0.023084)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_4xktc")
+
 [node name="Plant4" type="Sprite3D" parent="Map/Plants"]
 transform = Transform3D(-0.0718274, -2.58101e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.45025, 1.27437, 0.0230843)
 billboard = 2
@@ -905,7 +912,7 @@ texture_filter = 0
 texture = ExtResource("21_8vcgt")
 
 [node name="Jungle Tree14" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -2.96405e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.15472, 3.04492, 0.0988805)
+transform = Transform3D(-0.0718274, -2.96405e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.14382, 3.04819, 0.0991082)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("21_8vcgt")
@@ -977,13 +984,13 @@ texture_filter = 0
 texture = ExtResource("20_0oy6m")
 
 [node name="Jungle Tree8" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -3.81478e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.61293, 3.36024, 0.1456)
+transform = Transform3D(-0.0718274, -3.81478e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 1.61418, 3.36439, 0.110257)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("20_0oy6m")
 
 [node name="Jungle Tree9" type="Sprite3D" parent="Map/Plants"]
-transform = Transform3D(-0.0718274, -3.77228e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 2.19254, 3.61644, 0.1456)
+transform = Transform3D(-0.0718274, -3.77228e-15, -0.239459, -0.239459, -1.09278e-08, 0.0718274, -1.04671e-08, 0.25, 3.13968e-09, 2.18595, 3.59447, 0.122573)
 billboard = 2
 texture_filter = 0
 texture = ExtResource("20_0oy6m")
@@ -1022,7 +1029,7 @@ transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.3711
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 4.6952, 0.0667503, 0.487162)
 
 [node name="plant_bush5" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
-transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 1.56222, 3.27324, -0.0542803)
+transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 1.34751, 3.34403, -0.0542803)
 
 [node name="plant_bush6" parent="Map/Plants" instance=ExtResource("42_fqjbo")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 0.820637, 2.50331, -0.0542803)
@@ -1065,6 +1072,9 @@ transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.3711
 
 [node name="plant_flowers1fbx9" parent="Map/Plants" instance=ExtResource("44_vwiwq")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 0.918971, 0.990342, 0.0140616)
+
+[node name="plant_flowers1fbx20" parent="Map/Plants" instance=ExtResource("44_vwiwq")]
+transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 4.30629, -2.63592, 0.0140614)
 
 [node name="plant_flowers1fbx10" parent="Map/Plants" instance=ExtResource("44_vwiwq")]
 transform = Transform3D(-0.028731, -1.06581e-15, -0.0957837, -0.0957837, -4.37114e-09, 0.028731, -4.18684e-09, 0.1, 1.25587e-09, 0.167695, 2.32726, 0.0140617)
@@ -1128,8 +1138,23 @@ transform = Transform3D(0.0666944, 2.59093e-09, -0.292492, -0.292492, -7.82553e-
 [node name="boat" parent="Map" instance=ExtResource("33_m4yvn")]
 transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -6.39453, 2.80188, 1.22474e-07)
 
+[node name="boat3" parent="Map" instance=ExtResource("33_m4yvn")]
+transform = Transform3D(0.842987, -1.06581e-14, -0.537932, -0.537932, -4.37114e-08, -0.842987, -2.35138e-08, 1, -3.68482e-08, 3.45808, -4.1792, -1.82679e-07)
+
 [node name="boat2" parent="Map" instance=ExtResource("33_m4yvn")]
 transform = Transform3D(0.655506, -1.06581e-14, -0.75519, -0.75519, -4.37114e-08, -0.655506, -3.30104e-08, 1, -2.8653e-08, -10.9669, 21.4816, 9.38991e-07)
+
+[node name="sandcastle" parent="Map" instance=ExtResource("34_f8te2")]
+transform = Transform3D(-0.28731, -1.06581e-14, -0.957837, -0.957837, -4.37114e-08, 0.28731, -4.18684e-08, 1, 1.25587e-08, -3.22695, -2.20782, 5958.14)
+
+[node name="sandcastle2" parent="Map" instance=ExtResource("34_f8te2")]
+transform = Transform3D(-0.0057462, -1.1254e-09, -0.0191568, -0.0191568, -8.37368e-10, 0.0057462, -1.1254e-09, 0.02, -8.37368e-10, -2.60871, -2.79806, 0.00573683)
+
+[node name="sandcastle4" parent="Map" instance=ExtResource("34_f8te2")]
+transform = Transform3D(-0.0057462, -1.1254e-09, -0.0191568, -0.0191568, -8.37368e-10, 0.0057462, -1.1254e-09, 0.02, -8.37368e-10, -2.90314, -0.767151, 0.00866968)
+
+[node name="sandcastle3" parent="Map" instance=ExtResource("34_f8te2")]
+transform = Transform3D(-0.0057462, -1.1254e-09, -0.0191568, -0.0191568, -8.37368e-10, 0.0057462, -1.1254e-09, 0.02, -8.37368e-10, -1.12046, -2.51314, 0.0107059)
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("follow_target", "look_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.829251, 0.0410339, 0.958284)
@@ -1309,7 +1334,7 @@ transform = Transform3D(0.985943, 0, -0.167061, 0, 1, 0, 0.167061, 0, 0.985943, 
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 5.99916, 0.0350683, -5.49945)
 
 [node name="water" type="MeshInstance3D" parent="."]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 7, 2.2807, -0.0346814, -3.36292)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 7, 2.28289, -0.0463267, -3.37294)
 mesh = SubResource("PlaneMesh_6a58m")
 surface_material_override/0 = SubResource("ShaderMaterial_p7n4p")
 
@@ -1318,6 +1343,9 @@ transform = Transform3D(-0.286123, 0, 0.958193, 0, 1, 0, -0.958193, 0, -0.286123
 
 [node name="bush" parent="." instance=ExtResource("52_txvjk")]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 3.71826, 1.49012e-08, 0.934981)
+
+[node name="bush5" parent="." instance=ExtResource("52_txvjk")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 3.99911, 1.49012e-08, -7.47046)
 
 [node name="bush2" parent="." instance=ExtResource("52_txvjk")]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 3.18208, 0, 1.24423)
