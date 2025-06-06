@@ -25,7 +25,7 @@ var above_platform: bool = false
 var respawnpoint: Vector2
 
 ##getting the keycard
-var has_card: bool = false
+@export var has_card: bool = false
 @export var ui_card: Sprite2D
 
 ##getting detected

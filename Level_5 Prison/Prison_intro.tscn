@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_il1vc"]
 [ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_sc6vl"]
-[ext_resource type="Texture2D" uid="uid://d14gm0qpi4kvm" path="res://Level_5 Prison/prison.png" id="3_k8qvj"]
+[ext_resource type="Texture2D" uid="uid://d14gm0qpi4kvm" path="res://Sprites Algemeen/Cutscenes/prison.png" id="3_k8qvj"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
 length = 0.001

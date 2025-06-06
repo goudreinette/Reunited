@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2nftg6om35gl"]
+
+[ext_resource type="Script" uid="uid://cjavi6e721hlp" path="res://Level_4_wormhole/first_convo_wormhole.gd" id="1_jpfhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4ooe"]
+size = Vector2(796, 20)
+
+[node name="SimpleTalkbox" type="Area2D"]
+script = ExtResource("1_jpfhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(129.583, 0)
+shape = SubResource("RectangleShape2D_k4ooe")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

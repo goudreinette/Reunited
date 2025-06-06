@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsktqrndctbe3"]
+
+[ext_resource type="Texture2D" uid="uid://37fopp1p6i2g" path="res://Level_5 Prison/Bedje.png" id="1_rlq32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gjve"]
+size = Vector2(20, 26)
+
+[node name="Bedje horizontaal" type="StaticBody2D"]
+rotation = -1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rlq32")
+offset = Vector2(13.335, 14.6734)
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(9, 14)
+shape = SubResource("RectangleShape2D_6gjve")

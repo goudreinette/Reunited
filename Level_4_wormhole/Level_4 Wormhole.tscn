@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://dc84xukp6rnfr"]
+[gd_scene load_steps=101 format=3 uid="uid://dc84xukp6rnfr"]
 
 [ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_uewx8"]
@@ -19,11 +19,12 @@
 [ext_resource type="Script" uid="uid://b2ncpd86sen3u" path="res://Level_4_wormhole/anglerfish/anglerfish.gd" id="15_23or8"]
 [ext_resource type="Script" uid="uid://ca8vix5bhbd1t" path="res://Level_4_wormhole/sloppy_schipmet_net.gd" id="17_0i06f"]
 [ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="18_23or8"]
-[ext_resource type="PackedScene" uid="uid://ulsdrc2iokn2" path="res://Level_5 Prison/Level_5 prison.tscn" id="19_cl4cq"]
 [ext_resource type="Script" uid="uid://drxsb6gmi1l6p" path="res://Level_4_wormhole/net.gd" id="20_akr3w"]
 [ext_resource type="Texture2D" uid="uid://bm2plvuwnucjv" path="res://Level_4_wormhole/Mr.Sloppy Net.png" id="20_xdy6w"]
 [ext_resource type="Texture2D" uid="uid://cacyuvnblyffb" path="res://Level_4_wormhole/Mr.sloppy schip front met hoofd.png" id="21_akr3w"]
+[ext_resource type="PackedScene" uid="uid://dcg0htonpigku" path="res://Sprites Algemeen/Cutscenes/prison.tscn" id="23_k4ooe"]
 [ext_resource type="Script" uid="uid://bjnkwhjyjepaw" path="res://Level_4_wormhole/sloppy_trigger.gd" id="24_uebwq"]
+[ext_resource type="PackedScene" uid="uid://d2nftg6om35gl" path="res://simple_talkbox.tscn" id="25_uebwq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0gg3a"]
 shader = ExtResource("10_pfj2u")
@@ -50,6 +51,172 @@ shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.6
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_t7ibp"]
+
+[sub_resource type="Animation" id="Animation_akr3w"]
+resource_name = "Deploy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Net:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0i06f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Net:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Net/AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Net/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, 89.045)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Net:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Net/Player_stuck_pos:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30.4618, 88.3294)]
+}
+
+[sub_resource type="Animation" id="Animation_t3pnh"]
+resource_name = "swing"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Net:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(2.07053, 2),
+"update": 0,
+"values": [1.55683, -1.33518]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Net/AnimatedSprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Net/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(-2, 89.045), Vector2(20, 89.045)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Net/Player_stuck_pos:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.93957),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(-14.2624, 87.5305), Vector2(42.137, 88.5295)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uebwq"]
+_data = {
+&"Deploy": SubResource("Animation_akr3w"),
+&"RESET": SubResource("Animation_0i06f"),
+&"swing": SubResource("Animation_t3pnh")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ec0n"]
+atlas = ExtResource("20_xdy6w")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3qcr"]
+atlas = ExtResource("20_xdy6w")
+region = Rect2(0, 200, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vlve8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ec0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3qcr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4ooe"]
+radius = 29.0213
+height = 68.9628
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q645"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4eb32"]
 atlas = ExtResource("15_4eb32")
@@ -487,172 +654,6 @@ animations = [{
 "speed": 60.0
 }]
 
-[sub_resource type="Animation" id="Animation_t3pnh"]
-resource_name = "swing"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Net:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(2.07053, 2),
-"update": 0,
-"values": [1.55683, -1.33518]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Net/AnimatedSprite2D:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.93333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Net/CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(-2, 89.045), Vector2(20, 89.045)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Net/Player_stuck_pos:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.93957),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(-14.2624, 87.5305), Vector2(42.137, 88.5295)]
-}
-
-[sub_resource type="Animation" id="Animation_0i06f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Net:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Net/AnimatedSprite2D:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Net/CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-2, 89.045)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Net:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Net/Player_stuck_pos:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(30.4618, 88.3294)]
-}
-
-[sub_resource type="Animation" id="Animation_akr3w"]
-resource_name = "Deploy"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Net:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.1, 0.1), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_uebwq"]
-_data = {
-&"Deploy": SubResource("Animation_akr3w"),
-&"RESET": SubResource("Animation_0i06f"),
-&"swing": SubResource("Animation_t3pnh")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ec0n"]
-atlas = ExtResource("20_xdy6w")
-region = Rect2(0, 0, 200, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u3qcr"]
-atlas = ExtResource("20_xdy6w")
-region = Rect2(0, 200, 200, 200)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vlve8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1ec0n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u3qcr")
-}],
-"loop": true,
-"name": &"default",
-"speed": 6.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4ooe"]
-radius = 29.0213
-height = 68.9628
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q645"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cl4cq"]
 size = Vector2(812, 54)
 
@@ -684,13 +685,23 @@ material = SubResource("ShaderMaterial_0gg3a")
 offset_right = 241.0
 offset_bottom = 160.0
 
+[node name="Astroid-1" parent="." instance=ExtResource("11_rg5ho")]
+position = Vector2(178, -63)
+
+[node name="Astroid-2" parent="." instance=ExtResource("11_rg5ho")]
+position = Vector2(213, 167)
+
+[node name="Astroid-3" parent="." instance=ExtResource("11_rg5ho")]
+position = Vector2(44, -17)
+
 [node name="SpaceBGBlue" parent="." instance=ExtResource("1_cu4q0")]
+z_index = -4
 
 [node name="GreenBg240x" parent="SpaceBGBlue/Parallax2D 0_25" index="0"]
 z_index = -5
 
 [node name="Parallax2D" type="Parallax2D" parent="SpaceBGBlue"]
-scroll_scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.2, 0.2)
 scroll_offset = Vector2(7, 7)
 
 [node name="BlackHole" parent="SpaceBGBlue/Parallax2D" instance=ExtResource("2_dajic")]
@@ -698,13 +709,10 @@ z_index = -1
 position = Vector2(110, 79)
 autoplay = "default"
 
-[node name="Astroid-1" parent="SpaceBGBlue" instance=ExtResource("11_rg5ho")]
-position = Vector2(126, 80)
-
 [node name="LevelPosition2" type="Node2D" parent="."]
 position = Vector2(7, 169)
 script = ExtResource("4_c8juj")
-levelspeed = 20.0
+levelspeed = 10.0
 
 [node name="Player" parent="LevelPosition2" instance=ExtResource("5_arypi")]
 position = Vector2(120, 120)
@@ -719,67 +727,19 @@ position = Vector2(120, 80)
 script = ExtResource("7_uewx8")
 noise = SubResource("FastNoiseLite_t7ibp")
 
-[node name="Hallucigenia" parent="LevelPosition2" instance=ExtResource("3_hbhgp")]
-position = Vector2(118, 31)
-bullet_speed = 50
-
 [node name="Marella64PxGrey" type="Sprite2D" parent="LevelPosition2"]
 visible = false
 position = Vector2(190, 35)
 texture = ExtResource("13_ircnx")
 
-[node name="Anglerfish School" type="Node2D" parent="LevelPosition2"]
-
-[node name="AnglerfishBig" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(53, 35)
-sprite_frames = SubResource("SpriteFrames_rsp1v")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 40
-
-[node name="AnglerfishSmall" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(23, 73)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
-
-[node name="AnglerfishSmall2" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(5, 14)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 42
-
-[node name="AnglerfishSmall3" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(-30, 37)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 38
-
-[node name="AnglerfishSmall4" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(-64, 19)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
-
-[node name="AnglerfishSmall5" type="AnimatedSprite2D" parent="LevelPosition2/Anglerfish School"]
-position = Vector2(-106, 51)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
-
 [node name="Sloppy schipmet net" type="Area2D" parent="LevelPosition2" node_paths=PackedStringArray("player", "Player_stuck_pos", "sloppy_trigger", "screen_pos")]
-position = Vector2(109, -68)
+position = Vector2(-110, -153)
 script = ExtResource("17_0i06f")
 player = NodePath("../Player")
 Player_stuck_pos = NodePath("Net/Player_stuck_pos")
 sloppy_trigger = NodePath("../../Sloppy Trigger")
 screen_pos = NodePath("../Sloppy position")
-next_level = ExtResource("19_cl4cq")
+next_level = ExtResource("23_k4ooe")
 
 [node name="Net" type="Area2D" parent="LevelPosition2/Sloppy schipmet net"]
 collision_layer = 0
@@ -821,22 +781,137 @@ position = Vector2(118, 35)
 stream = ExtResource("13_0gg3a")
 autoplay = true
 
+[node name="Anglerfish School" type="Node2D" parent="."]
+position = Vector2(-56, -251)
+
+[node name="AnglerfishBig" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(53, 35)
+sprite_frames = SubResource("SpriteFrames_rsp1v")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 40
+
+[node name="AnglerfishSmall" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(23, 73)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
+[node name="AnglerfishSmall2" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(5, 14)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 42
+
+[node name="AnglerfishSmall3" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(-30, 37)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 38
+
+[node name="AnglerfishSmall4" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(-64, 19)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
+[node name="AnglerfishSmall5" type="AnimatedSprite2D" parent="Anglerfish School"]
+position = Vector2(-106, 51)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
+[node name="Anglerfish School2" type="Node2D" parent="."]
+position = Vector2(-32, 204)
+
+[node name="AnglerfishBig" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(53, 35)
+sprite_frames = SubResource("SpriteFrames_rsp1v")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 40
+
+[node name="AnglerfishSmall" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(23, 73)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
+[node name="AnglerfishSmall2" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(5, 14)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 42
+
+[node name="AnglerfishSmall3" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(-30, 37)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 38
+
+[node name="AnglerfishSmall4" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(-64, 19)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
+[node name="AnglerfishSmall5" type="AnimatedSprite2D" parent="Anglerfish School2"]
+position = Vector2(-106, 51)
+sprite_frames = SubResource("SpriteFrames_1ec0n")
+autoplay = "default"
+script = ExtResource("15_23or8")
+speed = 36
+
 [node name="Next level trigger" type="Area2D" parent="."]
 position = Vector2(2, -721)
 script = ExtResource("18_23or8")
-next_level = ExtResource("19_cl4cq")
+next_level = ExtResource("23_k4ooe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Next level trigger"]
-position = Vector2(114, -17)
+position = Vector2(114, -72)
 shape = SubResource("RectangleShape2D_cl4cq")
 
 [node name="Sloppy Trigger" type="Area2D" parent="."]
-position = Vector2(8, 81)
+position = Vector2(3, -382)
 script = ExtResource("24_uebwq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sloppy Trigger"]
 position = Vector2(142, 0)
 shape = SubResource("RectangleShape2D_akr3w")
+
+[node name="SimpleTalkbox" parent="." instance=ExtResource("25_uebwq")]
+position = Vector2(1, 249)
+
+[node name="HallucigeniaGroup" type="Node2D" parent="."]
+
+[node name="Hallucigenia" parent="HallucigeniaGroup" instance=ExtResource("3_hbhgp")]
+position = Vector2(64, 169)
+bullet_amount = 8.0
+bullet_speed = 50
+
+[node name="Hallucigenia2" parent="HallucigeniaGroup" instance=ExtResource("3_hbhgp")]
+position = Vector2(199, 39)
+bullet_amount = 12.0
+bullet_speed = 50
+
+[node name="Hallucigenia3" parent="HallucigeniaGroup" instance=ExtResource("3_hbhgp")]
+position = Vector2(74, -96)
+bullet_amount = 16.0
+bullet_speed = 50
+
+[node name="Hallucigenia4" parent="HallucigeniaGroup" instance=ExtResource("3_hbhgp")]
+position = Vector2(179, -252)
+bullet_amount = 60.0
+bullet_speed = 50
 
 [connection signal="died" from="LevelPosition2/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition2/Player" to="CanvasLayer/UI" method="_on_player_shield_changed"]

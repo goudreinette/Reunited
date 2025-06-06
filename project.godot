@@ -35,6 +35,7 @@ directories/dch_directory={
 "Koen": "res://addons/dialogic/characters/Koen.dch",
 "Mr Sloppy": "res://addons/dialogic/characters/Mr Sloppy.dch",
 "Rein": "res://Sprites Algemeen/Characters/Rein.dch",
+"Speaker Voice": "res://Speaker Voice.dch",
 "ander_mannetje": "res://addons/dialogic/characters/ander_mannetje.dch",
 "stephan": "res://addons/dialogic/characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
@@ -51,10 +52,18 @@ directories/dtl_directory={
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
+"Prison 1": "res://Prison 1.dtl",
+"Prison 2 Igor": "res://Prison 2 Igor.dtl",
+"Prison 3 Igor": "res://Prison 3 Igor.dtl",
+"Prison 4 Igor vrij": "res://Prison 4 Igor vrij.dtl",
+"Prison 4 igor": "res://Prison 4 igor.dtl",
 "Ship_fixed": "res://addons/dialogic/dialogue/Ship_fixed.dtl",
 "Sloppy_1": "res://Sloppy_1.dtl",
 "Take_this": "res://addons/dialogic/characters/Take_this.dtl",
 "Wasteland_cave_warning 2": "res://addons/dialogic/dialogue/Wasteland_cave_warning 2.dtl",
+"Worhole 3": "res://Worhole 3.dtl",
+"Wormhole 1": "res://Wormhole 1.dtl",
+"Wormhole 2": "res://Wormhole 2.dtl",
 "frank 2": "res://addons/dialogic/dialogue/frank 2.dtl",
 "frank_1": "res://addons/dialogic/dialogue/frank_1.dtl",
 "frank_vrij_2": "res://addons/dialogic/dialogue/frank_vrij_2.dtl",
@@ -93,7 +102,6 @@ glossary/glossary_files=[]
 
 window/size/viewport_width=240
 window/size/viewport_height=160
-window/size/mode=3
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
