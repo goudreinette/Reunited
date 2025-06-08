@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=46 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
 [ext_resource type="Script" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://drfcxfk0ul1ld" path="res://Level_5 Prison/toilet.png" id="25_5wl8w"]
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
 [ext_resource type="Texture2D" uid="uid://d01tamjuskm4x" path="res://Sprites Algemeen/Characters/rein small.png" id="28_ffbxl"]
+[ext_resource type="Texture2D" uid="uid://bjxdxf5jqa850" path="res://Level_5 Prison/sprites/lab/control panel 1.png" id="29_3nl0a"]
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
@@ -2072,6 +2073,14 @@ position = Vector2(-33, 117)
 [node name="ReinSmall" type="Sprite2D" parent="."]
 position = Vector2(774, -388)
 texture = ExtResource("28_ffbxl")
+
+[node name="ControlPanel1" type="Sprite2D" parent="."]
+position = Vector2(553, -375)
+texture = ExtResource("29_3nl0a")
+
+[node name="ControlPanel2" type="Sprite2D" parent="."]
+position = Vector2(792, -471)
+texture = ExtResource("29_3nl0a")
 
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
