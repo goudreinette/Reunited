@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=50 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
 [ext_resource type="Script" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
@@ -31,6 +31,8 @@
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
 [ext_resource type="Texture2D" uid="uid://cqd721uo6lm0p" path="res://Level_5 Prison/sprites/lab/rat cage.png" id="30_5e1p1"]
 [ext_resource type="Texture2D" uid="uid://2asy6dmu4mws" path="res://Level_5 Prison/sprites/lab/rat cage 2.png" id="31_72pgs"]
+[ext_resource type="Texture2D" uid="uid://d1wvqip85k5cs" path="res://Level_5 Prison/sprites/lab/reactor.png" id="32_tsfoj"]
+[ext_resource type="Texture2D" uid="uid://dipjp4a56rdqd" path="res://Level_5 Prison/sprites/lab/vats.png" id="33_gutvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
 texture = ExtResource("1_3bkdr")
@@ -1779,7 +1781,7 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_8rnq1"]
+[sub_resource type="Curve2D" id="Curve2D_72pgs"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1837,7 +1839,7 @@ layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array(-196594, 1638401, 0, -196593, 1638401, 0, -196590, 1638401, 0, -196591, 1376257, 1, -196589, 1376257, 2, -720890, 1638401, 0, -720889, 1638401, 0, -851963, 1114113, 1, -786427, 1114113, 2, 327675, 1638401, 0, 393211, 1638401, 0, 327676, 1507329, 4, 393212, 1441793, 3, 393210, 1376257, 3, 327674, 1376257, 1, -983051, 1441793, 1, -983052, 1376257, 0, -917516, 1507329, 4, -917517, 1441793, 2, -851980, 1114113, 1, -786444, 1048577, 1, -720908, 1507329, 4, -393228, 1507329, 4, -327692, 1048577, 1, -262156, 1048577, 2, -196620, 1114113, 3, -131084, 1376257, 3, -131083, 1441793, 0, -65547, 1048577, 1, -10, 1441793, 0, 65526, 1376257, 4, 131062, 1441793, 3, 131061, 1376257, 0, 196597, 1048577, 2, 262133, 1376257, 3, 262134, 1441793, 0, 327670, 1441793, 4, 327669, 1441793, 2, 327671, 1638401, 0, 327672, 1245185, 1, 327673, 1441793, 1, -393229, 1441793, 1, -393230, 1376257, 3, -458766, 1441793, 0, -458767, 1376257, 3, -524303, 1114113, 1, -589839, 1048577, 1, -655375, 1048577, 1, -720911, 1376257, 0, -720910, 1441793, 1, -720909, 1245185, 1, -458764, 1048577, 2, -524300, 1048577, 2, -589836, 1376257, 4, -655372, 1114113, 1, -589835, 1441793, 1, -589834, 1638401, 0, -589833, 1245185, 1, -589832, 1245185, 1, -589831, 1441793, 3, -655367, 1048577, 1, -720903, 1114113, 2, -786439, 1114113, 2, -851975, 1048577, 2, -917511, 1114113, 2, -983047, 1114113, 0, -983048, 1441793, 1, -983049, 1245185, 1, -11, 1376257, 3, 65527, 1376257, 2, 262140, 1114113, 1, 196604, 1114113, 1, 131068, 1114113, 3, 65532, 1507329, 4, -4, 1114113, 3, -65540, 1376257, 0, -393220, 1441793, 4, -458756, 1114113, 1, -524292, 1114113, 1, -589828, 1048577, 2, -655364, 1376257, 0, -851972, 1376257, 3, -917508, 1048577, 2, -983044, 1441793, 0, -983045, 1245185, 1, -983046, 1245185, 2, -655363, 1441793, 3, -720899, 1114113, 3, -786435, 1114113, 1, -851971, 1441793, 0, -65539, 1441793, 3, -131075, 1114113, 2, -196611, 1048577, 2, -262147, 1048577, 1, -327683, 1048577, 2, -393219, 1441793, 0, -393221, 1441793, 2, 65531, 1441793, 2)
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("2_1hlrn")]
-position = Vector2(-100, -51)
+position = Vector2(454, -189)
 respawnnode = NodePath("../RespawnPoint")
 has_card = true
 ui_card = NodePath("UI Card")
@@ -1893,10 +1895,10 @@ script = ExtResource("11_2fvj2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -9364.0
-offset_top = -10277.0
-offset_right = 10636.0
-offset_bottom = 9723.0
+offset_left = -9314.0
+offset_top = -10295.0
+offset_right = 10686.0
+offset_bottom = 9705.0
 color = Color(0.0896, 0.106027, 0.16, 1)
 
 [node name="RespawnPoint" type="Node2D" parent="."]
@@ -1936,7 +1938,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_8rnq1")
+curve = SubResource("Curve2D_72pgs")
 speed = 0.5
 speed_scale = 0.5
 
@@ -2095,6 +2097,14 @@ texture = ExtResource("30_5e1p1")
 [node name="RatCage2" type="Sprite2D" parent="."]
 position = Vector2(610, -384)
 texture = ExtResource("31_72pgs")
+
+[node name="Reactor" type="Sprite2D" parent="."]
+position = Vector2(823, -605)
+texture = ExtResource("32_tsfoj")
+
+[node name="Vats" type="Sprite2D" parent="."]
+position = Vector2(511, -375)
+texture = ExtResource("33_gutvj")
 
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
