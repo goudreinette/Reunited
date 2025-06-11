@@ -1,33 +1,33 @@
-[gd_scene load_steps=45 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=46 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
-[ext_resource type="Script" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
+[ext_resource type="Script" uid="uid://bjyvymfe5cnql" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
 [ext_resource type="Texture2D" uid="uid://dke6j3pmcowfu" path="res://Sprites Algemeen/sprite_packs/Pixel Crawler - Sewer/Assets/Tiles - recolored.png" id="2_63ava"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="3_63ava"]
 [ext_resource type="Script" uid="uid://6wsqjt1ogbar" path="res://Level_5 Prison/detected.gd" id="4_8tl4s"]
-[ext_resource type="PackedScene" path="res://spray.tscn" id="5_02slx"]
+[ext_resource type="PackedScene" uid="uid://clivvshj3khfy" path="res://spray.tscn" id="5_02slx"]
 [ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://Level_5 Prison/path_follow_2d.gd" id="5_ddlk5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="5_eew0t"]
 [ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://Level_5 Prison/drone.tscn" id="6_tkkrf"]
-[ext_resource type="PackedScene" path="res://valve.tscn" id="7_3nl0a"]
+[ext_resource type="PackedScene" uid="uid://sp86g88mx34y" path="res://valve.tscn" id="7_3nl0a"]
 [ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_etoha"]
-[ext_resource type="Script" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
+[ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
 [ext_resource type="PackedScene" uid="uid://dbityatjf3g0b" path="res://Level_6_Final_boss/level_6_final_boss.tscn" id="10_ddlk5"]
-[ext_resource type="Script" path="res://Level_5 Prison/tiny_speaker.gd" id="11_2fvj2"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Frank.tscn" id="11_ddlk5"]
-[ext_resource type="PackedScene" path="res://Level_5 Prison/prison_door.tscn" id="12_tkkrf"]
+[ext_resource type="Script" uid="uid://c120twmy84akj" path="res://Level_5 Prison/tiny_speaker.gd" id="11_2fvj2"]
+[ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="11_ddlk5"]
+[ext_resource type="PackedScene" uid="uid://c1qhv35delpt1" path="res://Level_5 Prison/prison_door.tscn" id="12_tkkrf"]
 [ext_resource type="Texture2D" uid="uid://bh6ufsdk8d8wo" path="res://Level_5 Prison/tiny speaker.png" id="13_etoha"]
-[ext_resource type="PackedScene" path="res://bedje_verticaal.tscn" id="15_yafd2"]
-[ext_resource type="PackedScene" path="res://bedje_horizontaal.tscn" id="16_epeo8"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Igor.tscn" id="17_epeo8"]
+[ext_resource type="PackedScene" uid="uid://c47e3u0higtdi" path="res://bedje_verticaal.tscn" id="15_yafd2"]
+[ext_resource type="PackedScene" uid="uid://bsktqrndctbe3" path="res://bedje_horizontaal.tscn" id="16_epeo8"]
+[ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="17_epeo8"]
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="18_7tf5c"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="19_av07t"]
-[ext_resource type="PackedScene" path="res://card.tscn" id="23_46se3"]
+[ext_resource type="PackedScene" uid="uid://bfwfeyaetohbf" path="res://card.tscn" id="23_46se3"]
 [ext_resource type="Texture2D" uid="uid://drfcxfk0ul1ld" path="res://Level_5 Prison/toilet.png" id="25_5wl8w"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
+[ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
 [ext_resource type="Texture2D" uid="uid://d01tamjuskm4x" path="res://Sprites Algemeen/Characters/rein small.png" id="28_ffbxl"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
+[ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
 texture = ExtResource("1_3bkdr")
@@ -1776,7 +1776,7 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_8rnq1"]
+[sub_resource type="Curve2D" id="Curve2D_ffbxl"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1809,6 +1809,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, -53, 0, 0, 0, 0, 0, -111)
 }
 point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nl0a"]
+radius = 44.0114
 
 [node name="Level 5 - Prison" type="Node2D" node_paths=PackedStringArray("prison_door_1")]
 y_sort_enabled = true
@@ -1933,7 +1936,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_8rnq1")
+curve = SubResource("Curve2D_ffbxl")
 speed = 0.5
 speed_scale = 0.5
 
@@ -2072,6 +2075,16 @@ position = Vector2(-33, 117)
 [node name="ReinSmall" type="Sprite2D" parent="."]
 position = Vector2(774, -388)
 texture = ExtResource("28_ffbxl")
+
+[node name="Talkbox2" parent="." instance=ExtResource("18_7tf5c")]
+position = Vector2(773, -374)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talkbox2"]
+shape = SubResource("CircleShape2D_3nl0a")
+
+[node name="PressX" type="Sprite2D" parent="Talkbox2"]
+position = Vector2(-2, -5)
+texture = ExtResource("19_av07t")
 
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
