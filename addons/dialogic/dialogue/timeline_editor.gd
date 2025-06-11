@@ -235,5 +235,3 @@ func _on_search_up_pressed() -> void:
 	get_current_editor()._search_navigate_up()
 
 #endregion
-
-

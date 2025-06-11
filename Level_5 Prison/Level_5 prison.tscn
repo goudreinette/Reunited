@@ -2076,13 +2076,14 @@ position = Vector2(-33, 117)
 position = Vector2(774, -388)
 texture = ExtResource("28_ffbxl")
 
-[node name="Talkbox2" parent="." instance=ExtResource("18_7tf5c")]
+[node name="Talkbox2 Rein" parent="." instance=ExtResource("18_7tf5c")]
 position = Vector2(773, -374)
+convos = ["Prison 5 rein", ""]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Talkbox2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talkbox2 Rein"]
 shape = SubResource("CircleShape2D_3nl0a")
 
-[node name="PressX" type="Sprite2D" parent="Talkbox2"]
+[node name="PressX" type="Sprite2D" parent="Talkbox2 Rein"]
 position = Vector2(-2, -5)
 texture = ExtResource("19_av07t")
 
