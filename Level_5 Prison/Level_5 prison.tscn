@@ -1,38 +1,33 @@
-[gd_scene load_steps=50 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=46 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
-[ext_resource type="Script" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
+[ext_resource type="Script" uid="uid://bjyvymfe5cnql" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="2_1hlrn"]
 [ext_resource type="Texture2D" uid="uid://dke6j3pmcowfu" path="res://Sprites Algemeen/sprite_packs/Pixel Crawler - Sewer/Assets/Tiles - recolored.png" id="2_63ava"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="3_63ava"]
 [ext_resource type="Script" uid="uid://6wsqjt1ogbar" path="res://Level_5 Prison/detected.gd" id="4_8tl4s"]
-[ext_resource type="PackedScene" path="res://spray.tscn" id="5_02slx"]
+[ext_resource type="PackedScene" uid="uid://clivvshj3khfy" path="res://spray.tscn" id="5_02slx"]
 [ext_resource type="Script" uid="uid://ciykgpa44giqi" path="res://Level_5 Prison/path_follow_2d.gd" id="5_ddlk5"]
 [ext_resource type="Texture2D" uid="uid://dq20o4u0gn1i7" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-simple-export.png" id="5_eew0t"]
 [ext_resource type="PackedScene" uid="uid://gkmpt6cy36fr" path="res://Level_5 Prison/drone.tscn" id="6_tkkrf"]
-[ext_resource type="PackedScene" path="res://valve.tscn" id="7_3nl0a"]
+[ext_resource type="PackedScene" uid="uid://sp86g88mx34y" path="res://valve.tscn" id="7_3nl0a"]
 [ext_resource type="PackedScene" uid="uid://iirungr037sy" path="res://Level_5 Prison/moving_platform_hi-tec.tscn" id="7_etoha"]
-[ext_resource type="Script" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
+[ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="9_8tl4s"]
 [ext_resource type="PackedScene" uid="uid://dbityatjf3g0b" path="res://Level_6_Final_boss/level_6_final_boss.tscn" id="10_ddlk5"]
-[ext_resource type="Script" path="res://Level_5 Prison/tiny_speaker.gd" id="11_2fvj2"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Frank.tscn" id="11_ddlk5"]
-[ext_resource type="PackedScene" path="res://Level_5 Prison/prison_door.tscn" id="12_tkkrf"]
+[ext_resource type="Script" uid="uid://c120twmy84akj" path="res://Level_5 Prison/tiny_speaker.gd" id="11_2fvj2"]
+[ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="11_ddlk5"]
+[ext_resource type="PackedScene" uid="uid://c1qhv35delpt1" path="res://Level_5 Prison/prison_door.tscn" id="12_tkkrf"]
 [ext_resource type="Texture2D" uid="uid://bh6ufsdk8d8wo" path="res://Level_5 Prison/tiny speaker.png" id="13_etoha"]
-[ext_resource type="PackedScene" path="res://bedje_verticaal.tscn" id="15_yafd2"]
-[ext_resource type="PackedScene" path="res://bedje_horizontaal.tscn" id="16_epeo8"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Igor.tscn" id="17_epeo8"]
+[ext_resource type="PackedScene" uid="uid://c47e3u0higtdi" path="res://bedje_verticaal.tscn" id="15_yafd2"]
+[ext_resource type="PackedScene" uid="uid://bsktqrndctbe3" path="res://bedje_horizontaal.tscn" id="16_epeo8"]
+[ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="17_epeo8"]
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="18_7tf5c"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="19_av07t"]
-[ext_resource type="PackedScene" path="res://card.tscn" id="23_46se3"]
+[ext_resource type="PackedScene" uid="uid://bfwfeyaetohbf" path="res://card.tscn" id="23_46se3"]
 [ext_resource type="Texture2D" uid="uid://drfcxfk0ul1ld" path="res://Level_5 Prison/toilet.png" id="25_5wl8w"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
+[ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
 [ext_resource type="Texture2D" uid="uid://d01tamjuskm4x" path="res://Sprites Algemeen/Characters/rein small.png" id="28_ffbxl"]
-[ext_resource type="Texture2D" uid="uid://bjxdxf5jqa850" path="res://Level_5 Prison/sprites/lab/control panel 1.png" id="29_3nl0a"]
-[ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
-[ext_resource type="Texture2D" uid="uid://cqd721uo6lm0p" path="res://Level_5 Prison/sprites/lab/rat cage.png" id="30_5e1p1"]
-[ext_resource type="Texture2D" uid="uid://2asy6dmu4mws" path="res://Level_5 Prison/sprites/lab/rat cage 2.png" id="31_72pgs"]
-[ext_resource type="Texture2D" uid="uid://d1wvqip85k5cs" path="res://Level_5 Prison/sprites/lab/reactor.png" id="32_tsfoj"]
-[ext_resource type="Texture2D" uid="uid://dipjp4a56rdqd" path="res://Level_5 Prison/sprites/lab/vats.png" id="33_gutvj"]
+[ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
 texture = ExtResource("1_3bkdr")
@@ -1781,7 +1776,7 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_gutvj"]
+[sub_resource type="Curve2D" id="Curve2D_ffbxl"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1815,6 +1810,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nl0a"]
+radius = 44.0114
+
 [node name="Level 5 - Prison" type="Node2D" node_paths=PackedStringArray("prison_door_1")]
 y_sort_enabled = true
 script = ExtResource("1_ia3l8")
@@ -1839,7 +1837,7 @@ layer_3/z_index = 2
 layer_3/tile_data = PackedInt32Array(-196594, 1638401, 0, -196593, 1638401, 0, -196590, 1638401, 0, -196591, 1376257, 1, -196589, 1376257, 2, -720890, 1638401, 0, -720889, 1638401, 0, -851963, 1114113, 1, -786427, 1114113, 2, 327675, 1638401, 0, 393211, 1638401, 0, 327676, 1507329, 4, 393212, 1441793, 3, 393210, 1376257, 3, 327674, 1376257, 1, -983051, 1441793, 1, -983052, 1376257, 0, -917516, 1507329, 4, -917517, 1441793, 2, -851980, 1114113, 1, -786444, 1048577, 1, -720908, 1507329, 4, -393228, 1507329, 4, -327692, 1048577, 1, -262156, 1048577, 2, -196620, 1114113, 3, -131084, 1376257, 3, -131083, 1441793, 0, -65547, 1048577, 1, -10, 1441793, 0, 65526, 1376257, 4, 131062, 1441793, 3, 131061, 1376257, 0, 196597, 1048577, 2, 262133, 1376257, 3, 262134, 1441793, 0, 327670, 1441793, 4, 327669, 1441793, 2, 327671, 1638401, 0, 327672, 1245185, 1, 327673, 1441793, 1, -393229, 1441793, 1, -393230, 1376257, 3, -458766, 1441793, 0, -458767, 1376257, 3, -524303, 1114113, 1, -589839, 1048577, 1, -655375, 1048577, 1, -720911, 1376257, 0, -720910, 1441793, 1, -720909, 1245185, 1, -458764, 1048577, 2, -524300, 1048577, 2, -589836, 1376257, 4, -655372, 1114113, 1, -589835, 1441793, 1, -589834, 1638401, 0, -589833, 1245185, 1, -589832, 1245185, 1, -589831, 1441793, 3, -655367, 1048577, 1, -720903, 1114113, 2, -786439, 1114113, 2, -851975, 1048577, 2, -917511, 1114113, 2, -983047, 1114113, 0, -983048, 1441793, 1, -983049, 1245185, 1, -11, 1376257, 3, 65527, 1376257, 2, 262140, 1114113, 1, 196604, 1114113, 1, 131068, 1114113, 3, 65532, 1507329, 4, -4, 1114113, 3, -65540, 1376257, 0, -393220, 1441793, 4, -458756, 1114113, 1, -524292, 1114113, 1, -589828, 1048577, 2, -655364, 1376257, 0, -851972, 1376257, 3, -917508, 1048577, 2, -983044, 1441793, 0, -983045, 1245185, 1, -983046, 1245185, 2, -655363, 1441793, 3, -720899, 1114113, 3, -786435, 1114113, 1, -851971, 1441793, 0, -65539, 1441793, 3, -131075, 1114113, 2, -196611, 1048577, 2, -262147, 1048577, 1, -327683, 1048577, 2, -393219, 1441793, 0, -393221, 1441793, 2, 65531, 1441793, 2)
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("2_1hlrn")]
-position = Vector2(454, -189)
+position = Vector2(-100, -51)
 respawnnode = NodePath("../RespawnPoint")
 has_card = true
 ui_card = NodePath("UI Card")
@@ -1895,10 +1893,10 @@ script = ExtResource("11_2fvj2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -10
-offset_left = -9314.0
-offset_top = -10295.0
-offset_right = 10686.0
-offset_bottom = 9705.0
+offset_left = -9364.0
+offset_top = -10277.0
+offset_right = 10636.0
+offset_bottom = 9723.0
 color = Color(0.0896, 0.106027, 0.16, 1)
 
 [node name="RespawnPoint" type="Node2D" parent="."]
@@ -1938,7 +1936,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_gutvj")
+curve = SubResource("Curve2D_ffbxl")
 speed = 0.5
 speed_scale = 0.5
 
@@ -2078,33 +2076,15 @@ position = Vector2(-33, 117)
 position = Vector2(774, -388)
 texture = ExtResource("28_ffbxl")
 
-[node name="ControlPanel1" type="Sprite2D" parent="."]
-position = Vector2(553, -375)
-texture = ExtResource("29_3nl0a")
+[node name="Talkbox2" parent="." instance=ExtResource("18_7tf5c")]
+position = Vector2(773, -374)
 
-[node name="ControlPanel2" type="Sprite2D" parent="."]
-position = Vector2(792, -471)
-texture = ExtResource("29_3nl0a")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talkbox2"]
+shape = SubResource("CircleShape2D_3nl0a")
 
-[node name="ControlPanel3" type="Sprite2D" parent="."]
-position = Vector2(730, -471)
-texture = ExtResource("29_3nl0a")
-
-[node name="RatCage" type="Sprite2D" parent="."]
-position = Vector2(666, -471)
-texture = ExtResource("30_5e1p1")
-
-[node name="RatCage2" type="Sprite2D" parent="."]
-position = Vector2(610, -384)
-texture = ExtResource("31_72pgs")
-
-[node name="Reactor" type="Sprite2D" parent="."]
-position = Vector2(823, -605)
-texture = ExtResource("32_tsfoj")
-
-[node name="Vats" type="Sprite2D" parent="."]
-position = Vector2(511, -375)
-texture = ExtResource("33_gutvj")
+[node name="PressX" type="Sprite2D" parent="Talkbox2"]
+position = Vector2(-2, -5)
+texture = ExtResource("19_av07t")
 
 [node name="Vats2" type="Sprite2D" parent="."]
 position = Vector2(786, -663)
