@@ -1781,7 +1781,7 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_72pgs"]
+[sub_resource type="Curve2D" id="Curve2D_gutvj"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -1938,7 +1938,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_72pgs")
+curve = SubResource("Curve2D_gutvj")
 speed = 0.5
 speed_scale = 0.5
 
@@ -2105,6 +2105,18 @@ texture = ExtResource("32_tsfoj")
 [node name="Vats" type="Sprite2D" parent="."]
 position = Vector2(511, -375)
 texture = ExtResource("33_gutvj")
+
+[node name="Vats2" type="Sprite2D" parent="."]
+position = Vector2(786, -663)
+texture = ExtResource("33_gutvj")
+
+[node name="Vats3" type="Sprite2D" parent="."]
+position = Vector2(913, -471)
+texture = ExtResource("33_gutvj")
+
+[node name="ControlPanel4" type="Sprite2D" parent="."]
+position = Vector2(850, -663)
+texture = ExtResource("29_3nl0a")
 
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
