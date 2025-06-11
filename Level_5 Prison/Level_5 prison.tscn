@@ -2087,6 +2087,18 @@ shape = SubResource("CircleShape2D_3nl0a")
 position = Vector2(-2, -5)
 texture = ExtResource("19_av07t")
 
+[node name="Vats2" type="Sprite2D" parent="."]
+position = Vector2(786, -663)
+texture = ExtResource("33_gutvj")
+
+[node name="Vats3" type="Sprite2D" parent="."]
+position = Vector2(913, -471)
+texture = ExtResource("33_gutvj")
+
+[node name="ControlPanel4" type="Sprite2D" parent="."]
+position = Vector2(850, -663)
+texture = ExtResource("29_3nl0a")
+
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
 
