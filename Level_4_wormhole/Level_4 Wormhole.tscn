@@ -606,7 +606,7 @@ position = Vector2(-56, -251)
 position = Vector2(53, 35)
 sprite_frames = SubResource("SpriteFrames_rsp1v")
 autoplay = "default"
-frame_progress = 0.608888
+frame_progress = 0.796047
 script = ExtResource("15_23or8")
 speed = 40
 
@@ -614,8 +614,7 @@ speed = 40
 position = Vector2(23, 73)
 sprite_frames = SubResource("SpriteFrames_1ec0n")
 autoplay = "default"
-frame = 23
-frame_progress = 0.181793
+frame_progress = 0.825172
 script = ExtResource("15_23or8")
 speed = 36
 
