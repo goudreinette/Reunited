@@ -26,6 +26,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Artist": "res://Artist.dch",
 "Frank": "res://addons/dialogic/characters/Frank.dch",
 "Guus": "res://addons/dialogic/characters/Guus.dch",
 "Guus_en_Igor_2": "res://addons/dialogic/characters/Guus_en_Igor_2.dch",
@@ -58,6 +59,10 @@ directories/dtl_directory={
 "Prison 4 Igor vrij": "res://Prison 4 Igor vrij.dtl",
 "Prison 4 igor": "res://Prison 4 igor.dtl",
 "Prison 5 rein": "res://Prison 5 rein.dtl",
+"Prison 6 Rein 2": "res://Prison 6 Rein 2.dtl",
+"Prison 7 tortured artist 1": "res://Prison 7 tortured artist 1.dtl",
+"Prison 8 tortured artist 2": "res://Prison 8 tortured artist 2.dtl",
+"Prison 9 tortured artist 3": "res://Prison 9 tortured artist 3.dtl",
 "Ship_fixed": "res://addons/dialogic/dialogue/Ship_fixed.dtl",
 "Sloppy_1": "res://Sloppy_1.dtl",
 "Take_this": "res://addons/dialogic/characters/Take_this.dtl",

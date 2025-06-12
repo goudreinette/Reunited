@@ -8,22 +8,12 @@
 "sound_moods": {},
 "style": "new_style"
 },
-&"default_portrait": "Default",
+&"default_portrait": "",
 &"description": "",
-&"display_name": "Rein",
+&"display_name": "Artist",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {
-"Default": {
-"export_overrides": {
-"image": "\"res://Sprites Algemeen/Characters/Rein Detailed.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-}
-},
+&"portraits": {},
 &"scale": 1.0
 }
