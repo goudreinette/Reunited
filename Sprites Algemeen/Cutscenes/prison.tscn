@@ -55,3 +55,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_pbp3c")
 }
 autoplay = "crash"
+
+[connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]

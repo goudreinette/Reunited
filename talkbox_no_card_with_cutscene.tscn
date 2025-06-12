@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://d25d3fxvawsbs"]
+
+[ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="1_em1uu"]
+
+[sub_resource type="GDScript" id="GDScript_vimrd"]
+script/source = "extends Area2D
+
+var player_inside : bool = false
+@export var next_convo : int = 0
+var is_talking : bool = false
+@export var convos : = [\"convo_1\",\"convo_2\"]
+var player : Player
+
+#@export var pressx : Sprite2D 
+
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+func _on_dialogic_signal(argument:String):
+	pass
+	
+func _process(delta: float) -> void:
+	if player_inside and not is_talking :
+		$PressX.visible = true
+		if  Input.is_action_just_pressed(\"dialogic_default_action\"):
+			is_talking = true
+			player.cutscenes.show_cutscene(0)
+			Dialogic.start(convos[next_convo])	
+			#has_entered = true
+	else: $PressX.visible = false	
+	
+	
+func _on_timeline_ended():
+	## To check if it is OUR timeline
+	if is_talking :
+		await get_tree().create_timer(0.3).timeout
+		is_talking = false
+		if next_convo < convos.size(): 
+			next_convo += 1
+#func _on_end_of_convo_timer_timeout() -> void:
+	#is_talking = false
+	#
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group(\"Player\") :
+		player_inside = true
+		##SHOW STILL CUTSCENE
+		player = body
+func _on_body_exited(body: Node2D) -> void:
+	if body is Player :
+		player_inside = false 
+	
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vimrd"]
+size = Vector2(32, 14)
+
+[node name="Talkbox_no_card_with_cutscene" type="Area2D"]
+collision_layer = 8
+script = SubResource("GDScript_vimrd")
+convos = ["Prison 7 tortured artist 1", "Prison 8 tortured artist 2", "Prison 9 tortured artist 3"]
+
+[node name="end_of_convo_timer" type="Timer" parent="."]
+wait_time = 1.305
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("RectangleShape2D_vimrd")
+
+[node name="PressX" type="Sprite2D" parent="."]
+position = Vector2(17, -6)
+texture = ExtResource("1_em1uu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="end_of_convo_timer" to="." method="_on_end_of_convo_timer_timeout"]

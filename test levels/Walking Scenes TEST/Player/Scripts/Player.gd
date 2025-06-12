@@ -34,8 +34,13 @@ var detected: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@export var cutscenes : Sprite2D
+
+
 ##setting the next scene to load.
 @export var scene_to_load: PackedScene
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

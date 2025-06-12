@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bksakdpmqc18c"]
+
+[ext_resource type="Script" uid="uid://b20pwuwv10pwi" path="res://Level_2_wasteland/talkbox_no_card.gd" id="1_0kf5x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vimrd"]
+size = Vector2(32, 14)
+
+[node name="Talkbox_no_card" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_0kf5x")
+
+[node name="end_of_convo_timer" type="Timer" parent="."]
+wait_time = 1.305
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("RectangleShape2D_vimrd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="end_of_convo_timer" to="." method="_on_end_of_convo_timer_timeout"]
