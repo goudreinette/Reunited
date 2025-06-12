@@ -35,7 +35,7 @@ func _on_timeline_ended():
 	if is_talking :
 		await get_tree().create_timer(0.3).timeout
 		is_talking = false
-		if next_convo < convos.size(): 
+		if next_convo < convos.size()-1: 
 			next_convo += 1
 #func _on_end_of_convo_timer_timeout() -> void:
 	#is_talking = false

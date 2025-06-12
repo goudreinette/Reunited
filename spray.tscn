@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwp68xrnuifu1" path="res://Level_5 Prison/Spray.png" id="2_a8lfm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02slx"]
-size = Vector2(20, 30.2733)
+size = Vector2(12, 12.1367)
 
 [sub_resource type="Animation" id="Animation_5wl8w"]
 length = 0.001
@@ -73,7 +73,7 @@ vframes = 2
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.594604, 18.8633)
+position = Vector2(1, 27.0683)
 shape = SubResource("RectangleShape2D_02slx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

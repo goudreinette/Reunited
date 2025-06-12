@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dqosqmoya68kj"]
 
-[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_orlp4"]
-[ext_resource type="PackedScene" uid="uid://dkw3edwkuuvad" path="res://Level_2_wasteland/Level_2.5 Cubania Bar.tscn" id="2_orlp4"]
-[ext_resource type="Texture2D" uid="uid://da0gluf1js03i" path="res://Sprites Algemeen/Cutscenes/island.png" id="3_lkuiy"]
+[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_8f018"]
+[ext_resource type="PackedScene" uid="uid://dkw3edwkuuvad" path="res://Level_2_wasteland/Level_2.5 Cubania Bar.tscn" id="2_ndp5a"]
+[ext_resource type="Texture2D" uid="uid://da0gluf1js03i" path="res://Sprites Algemeen/Cutscenes/island.png" id="3_ijsni"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
 length = 0.001
@@ -43,12 +43,12 @@ _data = {
 }
 
 [node name="Crash" type="Node2D"]
-script = ExtResource("1_orlp4")
-next_level = ExtResource("2_orlp4")
+script = ExtResource("1_8f018")
+next_level = ExtResource("2_ndp5a")
 
 [node name="island" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
-texture = ExtResource("3_lkuiy")
+texture = ExtResource("3_ijsni")
 
 [node name="CrashAnimation" type="AnimationPlayer" parent="."]
 libraries = {

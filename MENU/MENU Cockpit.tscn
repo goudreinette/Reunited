@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://dqi6vvtc8fs0v"]
 
-[ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="1_j83wl"]
-[ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="2_2y81u"]
-[ext_resource type="Texture2D" uid="uid://b3v7sv2ddqa64" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 64x.png" id="3_2eo3p"]
-[ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="3_co16r"]
-[ext_resource type="Texture2D" uid="uid://d1y010d3dthcf" path="res://Level_1_space_escape/level_1_space_escape_sprites/Rode Planeet.png" id="4_danwm"]
-[ext_resource type="Texture2D" uid="uid://dnvv56ur0yx04" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small.png" id="4_gunsu"]
-[ext_resource type="Texture2D" uid="uid://c5qxw8cutxmr2" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 2.png" id="5_lmfh8"]
-[ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="8_48u2s"]
-[ext_resource type="Texture2D" uid="uid://b2rkgm2axyjrk" path="res://Sprites Algemeen/Cutscenes/spaceship new no bg.png" id="9_gunsu"]
+[ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="1_fyk1t"]
+[ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="2_lp5x2"]
+[ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="3_0bk2y"]
+[ext_resource type="Texture2D" uid="uid://dnvv56ur0yx04" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small.png" id="4_v5qyp"]
+[ext_resource type="Texture2D" uid="uid://b3v7sv2ddqa64" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 64x.png" id="5_ttsov"]
+[ext_resource type="Texture2D" uid="uid://d1y010d3dthcf" path="res://Level_1_space_escape/level_1_space_escape_sprites/Rode Planeet.png" id="6_3vnts"]
+[ext_resource type="Texture2D" uid="uid://c5qxw8cutxmr2" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 2.png" id="7_ds0ii"]
+[ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="8_pdfht"]
+[ext_resource type="Texture2D" uid="uid://b2rkgm2axyjrk" path="res://Sprites Algemeen/Cutscenes/spaceship new no bg.png" id="9_05g27"]
 
 [node name="Cockpit" type="Node2D"]
 
@@ -27,20 +27,20 @@ repeat_times = 3
 [node name="StandaardPlaneet16x" type="Sprite2D" parent="SpaceBG/Parallax2D 0_25"]
 position = Vector2(-68, 14)
 rotation = 1.5708
-texture = ExtResource("2_2y81u")
+texture = ExtResource("1_fyk1t")
 
 [node name="StandaardPlaneet16x2" type="Sprite2D" parent="SpaceBG/Parallax2D 0_25"]
 position = Vector2(-5, -113)
 rotation = 1.5708
-texture = ExtResource("2_2y81u")
+texture = ExtResource("1_fyk1t")
 
 [node name="StandaardPlaneet16x3" type="Sprite2D" parent="SpaceBG/Parallax2D 0_25"]
 position = Vector2(20, 274)
 rotation = 1.5708
-texture = ExtResource("2_2y81u")
+texture = ExtResource("1_fyk1t")
 
 [node name="GreenBg240x" type="Sprite2D" parent="SpaceBG/Parallax2D 0_25"]
-texture = ExtResource("1_j83wl")
+texture = ExtResource("2_lp5x2")
 hframes = 3
 
 [node name="Parallax2D2 0_50" type="Parallax2D" parent="SpaceBG"]
@@ -51,21 +51,21 @@ autoscroll = Vector2(0, 10)
 repeat_times = 3
 
 [node name="GreenBg240x" type="Sprite2D" parent="SpaceBG/Parallax2D2 0_50"]
-texture = ExtResource("1_j83wl")
+texture = ExtResource("2_lp5x2")
 hframes = 3
 frame = 1
 
 [node name="AstroidSmall2" type="Sprite2D" parent="SpaceBG/Parallax2D2 0_50"]
 position = Vector2(-38, 109)
-texture = ExtResource("3_co16r")
+texture = ExtResource("3_0bk2y")
 
 [node name="AstroidSmall" type="Sprite2D" parent="SpaceBG/Parallax2D2 0_50"]
 position = Vector2(17, -95)
-texture = ExtResource("4_gunsu")
+texture = ExtResource("4_v5qyp")
 
 [node name="AstroidSmall3" type="Sprite2D" parent="SpaceBG/Parallax2D2 0_50"]
 position = Vector2(-31, -33)
-texture = ExtResource("4_gunsu")
+texture = ExtResource("4_v5qyp")
 
 [node name="Parallax2D3 0_60" type="Parallax2D" parent="SpaceBG"]
 scroll_scale = Vector2(0.4, 0.4)
@@ -76,19 +76,19 @@ repeat_times = 4
 
 [node name="GreenBg240x" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_60"]
 position = Vector2(56, 7)
-texture = ExtResource("1_j83wl")
+texture = ExtResource("2_lp5x2")
 hframes = 3
 frame = 2
 
 [node name="StandaardPlaneet64x" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_60"]
 position = Vector2(85, 388)
 rotation = 1.56798
-texture = ExtResource("3_2eo3p")
+texture = ExtResource("5_ttsov")
 
 [node name="RodePlaneet" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_60"]
 position = Vector2(70, 85)
 rotation = 1.5708
-texture = ExtResource("4_danwm")
+texture = ExtResource("6_3vnts")
 hframes = 50
 
 [node name="Parallax2D3 0_80" type="Parallax2D" parent="SpaceBG"]
@@ -100,18 +100,18 @@ repeat_times = 4
 
 [node name="Astroid4" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_80"]
 position = Vector2(64, 596)
-texture = ExtResource("5_lmfh8")
+texture = ExtResource("7_ds0ii")
 
 [node name="Astroid5" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_80"]
 position = Vector2(64, 730)
 rotation = 1.19686
-texture = ExtResource("5_lmfh8")
+texture = ExtResource("7_ds0ii")
 
 [node name="Astroid1" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_80"]
 position = Vector2(-29, -41)
 rotation = 2.25396
-texture = ExtResource("8_48u2s")
+texture = ExtResource("8_pdfht")
 
 [node name="SpaceshipNewNoBg" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
-texture = ExtResource("9_gunsu")
+texture = ExtResource("9_05g27")

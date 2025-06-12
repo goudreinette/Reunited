@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="1_elxp7"]
 [ext_resource type="Texture2D" uid="uid://cc2mgjh00k36y" path="res://Level_1_space_escape/level_1_space_escape_sprites/ship concept small.png" id="2_85bin"]
-[ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/level_1_space_escape_sprites/Gunship.png" id="3_gitqg"]
+[ext_resource type="Texture2D" uid="uid://dnfxdvv1bxgdt" path="res://Level_1_space_escape/gunship/Gunship.png" id="3_gitqg"]
 [ext_resource type="Texture2D" uid="uid://btpxkpcah6kgd" path="res://Level_1_space_escape/level_1_space_escape_sprites/Enemy-Space-ship.png" id="4_x37dq"]
 [ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="5_dtryo"]
 [ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="6_np8r2"]
