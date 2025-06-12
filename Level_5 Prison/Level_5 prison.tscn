@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ulsdrc2iokn2"]
+[gd_scene load_steps=44 format=3 uid="uid://ulsdrc2iokn2"]
 
 [ext_resource type="Texture2D" uid="uid://csy3x5lhtqild" path="res://Sprites Algemeen/sprite_packs/Tech Dungeon Roguelite - Asset Pack (v7)/tileset x1.png" id="1_3bkdr"]
 [ext_resource type="Script" path="res://Level_5 Prison/level_5_prison.gd" id="1_ia3l8"]
@@ -26,13 +26,7 @@
 [ext_resource type="PackedScene" path="res://card.tscn" id="23_46se3"]
 [ext_resource type="Texture2D" uid="uid://drfcxfk0ul1ld" path="res://Level_5 Prison/toilet.png" id="25_5wl8w"]
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Koen.tscn" id="28_5e1p1"]
-[ext_resource type="Texture2D" uid="uid://d01tamjuskm4x" path="res://Sprites Algemeen/Characters/rein small.png" id="28_ffbxl"]
-[ext_resource type="Texture2D" uid="uid://bjxdxf5jqa850" path="res://Level_5 Prison/sprites/lab/control panel 1.png" id="29_3nl0a"]
 [ext_resource type="PackedScene" path="res://Sprites Algemeen/Characters/Guus.tscn" id="29_72pgs"]
-[ext_resource type="Texture2D" uid="uid://cqd721uo6lm0p" path="res://Level_5 Prison/sprites/lab/rat cage.png" id="30_5e1p1"]
-[ext_resource type="Texture2D" uid="uid://2asy6dmu4mws" path="res://Level_5 Prison/sprites/lab/rat cage 2.png" id="31_72pgs"]
-[ext_resource type="Texture2D" uid="uid://d1wvqip85k5cs" path="res://Level_5 Prison/sprites/lab/reactor.png" id="32_tsfoj"]
-[ext_resource type="Texture2D" uid="uid://dipjp4a56rdqd" path="res://Level_5 Prison/sprites/lab/vats.png" id="33_gutvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kywup"]
 texture = ExtResource("1_3bkdr")
@@ -2073,50 +2067,6 @@ position = Vector2(-49, 117)
 
 [node name="Spray5" parent="valve4" instance=ExtResource("5_02slx")]
 position = Vector2(-33, 117)
-
-[node name="ReinSmall" type="Sprite2D" parent="."]
-position = Vector2(774, -388)
-texture = ExtResource("28_ffbxl")
-
-[node name="ControlPanel1" type="Sprite2D" parent="."]
-position = Vector2(553, -375)
-texture = ExtResource("29_3nl0a")
-
-[node name="ControlPanel2" type="Sprite2D" parent="."]
-position = Vector2(792, -471)
-texture = ExtResource("29_3nl0a")
-
-[node name="ControlPanel3" type="Sprite2D" parent="."]
-position = Vector2(730, -471)
-texture = ExtResource("29_3nl0a")
-
-[node name="RatCage" type="Sprite2D" parent="."]
-position = Vector2(666, -471)
-texture = ExtResource("30_5e1p1")
-
-[node name="RatCage2" type="Sprite2D" parent="."]
-position = Vector2(610, -384)
-texture = ExtResource("31_72pgs")
-
-[node name="Reactor" type="Sprite2D" parent="."]
-position = Vector2(823, -605)
-texture = ExtResource("32_tsfoj")
-
-[node name="Vats" type="Sprite2D" parent="."]
-position = Vector2(511, -375)
-texture = ExtResource("33_gutvj")
-
-[node name="Vats2" type="Sprite2D" parent="."]
-position = Vector2(786, -663)
-texture = ExtResource("33_gutvj")
-
-[node name="Vats3" type="Sprite2D" parent="."]
-position = Vector2(913, -471)
-texture = ExtResource("33_gutvj")
-
-[node name="ControlPanel4" type="Sprite2D" parent="."]
-position = Vector2(850, -663)
-texture = ExtResource("29_3nl0a")
 
 [connection signal="area_entered" from="Next level trigger" to="Next level trigger" method="_on_area_entered"]
 [connection signal="body_entered" from="Next level trigger" to="Next level trigger" method="_on_body_entered"]
