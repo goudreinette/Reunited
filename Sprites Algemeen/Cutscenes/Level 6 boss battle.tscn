@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://xachrn2a5ncb"]
+
+[ext_resource type="Texture2D" uid="uid://cgc2sncco48fw" path="res://Sprites Algemeen/Cutscenes/title texts/boss battle.png" id="1_t3a42"]
+
+[sub_resource type="Animation" id="Animation_pq084"]
+resource_name = "fade in out"
+length = 10.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BossBattle:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g5gub"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BossBattle:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nmqn4"]
+_data = {
+&"RESET": SubResource("Animation_g5gub"),
+&"fade in out": SubResource("Animation_pq084")
+}
+
+[node name="Level6BossBattle" type="Node2D"]
+
+[node name="BossBattle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(120, 80)
+texture = ExtResource("1_t3a42")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nmqn4")
+}
