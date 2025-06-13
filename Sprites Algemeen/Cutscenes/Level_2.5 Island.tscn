@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqosqmoya68kj"]
+[gd_scene load_steps=7 format=3 uid="uid://dicr8htuo78mk"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_8f018"]
 [ext_resource type="PackedScene" uid="uid://dkw3edwkuuvad" path="res://Level_2_wasteland/Level_2.5 Cubania Bar.tscn" id="2_ndp5a"]

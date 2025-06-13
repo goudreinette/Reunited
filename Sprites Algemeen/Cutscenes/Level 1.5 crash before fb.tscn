@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://6gpo7fhdxlhv"]
+[gd_scene load_steps=58 format=3 uid="uid://evbymmldyj1w"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_4uckj"]
 [ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_4uckj"]
