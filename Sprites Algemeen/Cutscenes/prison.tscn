@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcg0htonpigku"]
+[gd_scene load_steps=8 format=3 uid="uid://dcg0htonpigku"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_pycws"]
 [ext_resource type="PackedScene" uid="uid://ulsdrc2iokn2" path="res://Level_5 Prison/Level_5 prison.tscn" id="2_pycws"]
 [ext_resource type="Texture2D" uid="uid://d14gm0qpi4kvm" path="res://Sprites Algemeen/Cutscenes/prison.png" id="3_get3s"]
+[ext_resource type="Texture2D" uid="uid://p4p0x4g1a6nr" path="res://Sprites Algemeen/Cutscenes/title texts/prison.png" id="4_get3s"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
 length = 0.001
@@ -18,10 +19,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Prison2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_xou6c"]
 resource_name = "crash"
-length = 6.0
+length = 20.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -30,10 +43,22 @@ tracks/0/path = NodePath("Prison:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.01546, 5, 5.99702),
+"times": PackedFloat32Array(0, 2, 19, 19.997),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Prison2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 4, 17, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
@@ -55,5 +80,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_pbp3c")
 }
 autoplay = "crash"
+
+[node name="Prison2" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+texture = ExtResource("4_get3s")
 
 [connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]
