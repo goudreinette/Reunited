@@ -1,3 +1,117 @@
-[gd_scene format=3 uid="uid://cvx1np4um1dwj"]
+[gd_scene load_steps=8 format=3 uid="uid://cvx1np4um1dwj"]
+
+[ext_resource type="Texture2D" uid="uid://bol1rqtotyvyq" path="res://Sprites Algemeen/Cutscenes/jungle.png" id="1_fvkg8"]
+[ext_resource type="Texture2D" uid="uid://blqmxd1d2klel" path="res://Sprites Algemeen/Cutscenes/aftiteling.png" id="2_wbsj4"]
+[ext_resource type="Texture2D" uid="uid://dlng6qfr3cyru" path="res://Sprites Algemeen/Cutscenes/Blokfluit les.png" id="3_wbsj4"]
+[ext_resource type="Texture2D" uid="uid://b5fi8ggpnk4ac" path="res://Sprites Algemeen/Cutscenes/creditsbg.png" id="4_kqbew"]
+
+[sub_resource type="Animation" id="Animation_wbsj4"]
+resource_name = "aftiteling"
+length = 30.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Aftiteling:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Aftiteling:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(120, 400), Vector2(120, -81)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Creditsbg:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kqbew"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Aftiteling:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Aftiteling:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(120, 240)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Creditsbg:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aya2s"]
+_data = {
+&"RESET": SubResource("Animation_kqbew"),
+&"aftiteling": SubResource("Animation_wbsj4")
+}
 
 [node name="Aftiteling" type="Node2D"]
+
+[node name="Jungle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, 80)
+texture = ExtResource("1_fvkg8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../BlokfluitLes")
+libraries = {
+&"": SubResource("AnimationLibrary_aya2s")
+}
+
+[node name="BlokfluitLes" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+texture = ExtResource("3_wbsj4")
+
+[node name="Creditsbg" type="Sprite2D" parent="."]
+position = Vector2(120, 80)
+texture = ExtResource("4_kqbew")
+
+[node name="Aftiteling" type="Sprite2D" parent="."]
+position = Vector2(120, 240)
+texture = ExtResource("2_wbsj4")
