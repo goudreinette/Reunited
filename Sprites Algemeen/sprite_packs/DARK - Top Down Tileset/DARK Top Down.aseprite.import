@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn5ksujj48kfi"
-valid=false
+path="res://.godot/imported/DARK Top Down.aseprite-3b4f4fdefd16ab7e908fa3cafd7c330e.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/DARK - Top Down Tileset/DARK Top Down.aseprite"
+source_file="res://Sprites Algemeen/sprite_packs/DARK - Top Down Tileset/DARK Top Down.aseprite"
+dest_files=["res://.godot/imported/DARK Top Down.aseprite-3b4f4fdefd16ab7e908fa3cafd7c330e.ctex"]
 
 [params]
 

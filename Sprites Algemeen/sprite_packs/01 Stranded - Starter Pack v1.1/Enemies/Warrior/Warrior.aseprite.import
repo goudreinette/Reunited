@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dga7a71qt0ij0"
-valid=false
+path="res://.godot/imported/Warrior.aseprite-3f1bc058545f3f7fc49cf3dccaa2a1c5.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/01 Stranded - Starter Pack v1.1/Enemies/Warrior/Warrior.aseprite"
+source_file="res://Sprites Algemeen/sprite_packs/01 Stranded - Starter Pack v1.1/Enemies/Warrior/Warrior.aseprite"
+dest_files=["res://.godot/imported/Warrior.aseprite-3f1bc058545f3f7fc49cf3dccaa2a1c5.ctex"]
 
 [params]
 

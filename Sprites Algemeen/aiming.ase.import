@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brdieipxdmdhx"
-valid=false
+path="res://.godot/imported/aiming.ase-7e463a846715f5b1d71ab65fe1df01f1.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/aiming.ase"
+source_file="res://Sprites Algemeen/aiming.ase"
+dest_files=["res://.godot/imported/aiming.ase-7e463a846715f5b1d71ab65fe1df01f1.ctex"]
 
 [params]
 

@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnjmmjocyx4a0"
-valid=false
+path="res://.godot/imported/Enemy fixed wing drone.aseprite-9b8d080f1c327749f0c7e0b0e05865fa.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/Enemy fixed wing drone.aseprite"
+source_file="res://Sprites Algemeen/Enemy fixed wing drone.aseprite"
+dest_files=["res://.godot/imported/Enemy fixed wing drone.aseprite-9b8d080f1c327749f0c7e0b0e05865fa.ctex"]
 
 [params]
 
