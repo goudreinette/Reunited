@@ -1,14 +1,166 @@
-[gd_scene load_steps=63 format=3 uid="uid://evbymmldyj1w"]
+[gd_scene load_steps=70 format=3 uid="uid://evbymmldyj1w"]
 
-[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_4uckj"]
-[ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_4uckj"]
+[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_wne10"]
 [ext_resource type="Texture2D" uid="uid://be6fxmnp5jom3" path="res://Sprites Algemeen/Cutscenes/animated/spaceship broken animated.png" id="3_kppso"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="4_jkcuf"]
 [ext_resource type="Texture2D" uid="uid://urqrfsjv7e0g" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 4/Smoke Dark - 4.png" id="5_kcjir"]
 [ext_resource type="Texture2D" uid="uid://8onrpxwc35pn" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 2/Smoke Dark - 2.png" id="6_4wxpv"]
 [ext_resource type="Texture2D" uid="uid://b2pexum1ifns4" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 4/Fire 4 - 4.png" id="7_txucv"]
+[ext_resource type="Texture2D" uid="uid://cqxnicm64cn2d" path="res://Sprites Algemeen/Cutscenes/animated/jungle animated.png" id="8_kppso"]
 [ext_resource type="Texture2D" uid="uid://cv66dcp11dq83" path="res://Effects/Pixel Fire Asset Pack V1/Fire 7 - 2/Fire 7 - 2.png" id="8_rxpbq"]
 [ext_resource type="Texture2D" uid="uid://hrg32giy8osy" path="res://Sprites Algemeen/Cutscenes/4 Hours Earlier.png" id="9_g5k0k"]
+
+[sub_resource type="Animation" id="Animation_cyqq3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CrashAnimation/Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CrashAnimation/4_Hours_Earlier:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CrashAnimation/4_Hours_Earlier:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CrashAnimation/Jungle:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xou6c"]
+resource_name = "crash"
+length = 30.0
+step = 1.0
+
+[sub_resource type="Animation" id="Animation_wne10"]
+resource_name = "fadein"
+length = 50.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CrashAnimation/Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CrashAnimation/4_Hours_Earlier:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dyj2p"]
+resource_name = "fadeout"
+length = 30.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CrashAnimation/4_Hours_Earlier:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CrashAnimation/4_Hours_Earlier:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dlrrw"]
+resource_name = "jungle"
+length = 15.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CrashAnimation/Crash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CrashAnimation/Jungle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
+_data = {
+&"RESET": SubResource("Animation_cyqq3"),
+&"crash": SubResource("Animation_xou6c"),
+&"fadein": SubResource("Animation_wne10"),
+&"fadeout": SubResource("Animation_dyj2p"),
+&"jungle": SubResource("Animation_dlrrw")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wne10"]
 atlas = ExtResource("3_kppso")
@@ -366,142 +518,61 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_cyqq3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Crash:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Crash:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("4_Hours_Earlier:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("4_Hours_Earlier:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbpod"]
+atlas = ExtResource("8_kppso")
+region = Rect2(0, 0, 240, 160)
 
-[sub_resource type="Animation" id="Animation_xou6c"]
-resource_name = "crash"
-length = 30.0
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Crash:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 24, 26),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Crash:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 26),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("4_Hours_Earlier:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 26),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("4_Hours_Earlier:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(26.0555, 26.9845, 29, 30),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gh41"]
+atlas = ExtResource("8_kppso")
+region = Rect2(240, 0, 240, 160)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
-_data = {
-&"RESET": SubResource("Animation_cyqq3"),
-&"crash": SubResource("Animation_xou6c")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f2cx"]
+atlas = ExtResource("8_kppso")
+region = Rect2(480, 0, 240, 160)
 
-[node name="Crash" type="Node2D"]
-script = ExtResource("1_4uckj")
-next_level = ExtResource("2_4uckj")
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjdbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbpod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gh41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f2cx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="CrashAnimation" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_pbp3c")
+}
+autoplay = "fadein"
+script = ExtResource("1_wne10")
+cutscene_animations = Array[String](["jungle", "fadeout"])
 
 [node name="Crash" type="AnimatedSprite2D" parent="."]
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_lbpod")
 autoplay = "default"
-frame_progress = 0.543628
+frame_progress = 0.45603
 
 [node name="Smoke 1" type="AnimatedSprite2D" parent="Crash"]
-visible = false
 position = Vector2(-59.0001, -16)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_k2rix")
 autoplay = "default"
 
 [node name="Smoke 5" type="AnimatedSprite2D" parent="Crash"]
 position = Vector2(-99.0001, 29)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_m2kmi")
 autoplay = "default"
 
 [node name="Smoke 2" type="AnimatedSprite2D" parent="Crash"]
 position = Vector2(64.0001, -11)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_5ds4e")
 autoplay = "default"
 frame_progress = 0.0158295
@@ -520,16 +591,16 @@ sprite_frames = SubResource("SpriteFrames_t0njc")
 autoplay = "default"
 frame_progress = 0.0208124
 
-[node name="CrashAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_pbp3c")
-}
-autoplay = "crash"
+[node name="Jungle" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_mjdbx")
+autoplay = "default"
+frame_progress = 0.914486
 
 [node name="4_Hours_Earlier" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0, 0, 0, 0)
 position = Vector2(120, 80)
 texture = ExtResource("9_g5k0k")
 
-[connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
