@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcg0htonpigku"]
+[gd_scene load_steps=7 format=3 uid="uid://dcg0htonpigku"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_pycws"]
-[ext_resource type="PackedScene" uid="uid://ulsdrc2iokn2" path="res://Level_5 Prison/Level_5 prison.tscn" id="2_pycws"]
 [ext_resource type="Texture2D" uid="uid://d14gm0qpi4kvm" path="res://Sprites Algemeen/Cutscenes/prison.png" id="3_get3s"]
 [ext_resource type="Texture2D" uid="uid://p4p0x4g1a6nr" path="res://Sprites Algemeen/Cutscenes/title texts/prison.png" id="4_get3s"]
 
@@ -69,7 +68,6 @@ _data = {
 
 [node name="Prison" type="Node2D"]
 script = ExtResource("1_pycws")
-next_level = ExtResource("2_pycws")
 
 [node name="Prison" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
