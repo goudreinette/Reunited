@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b32476hejmrnj"]
+[gd_scene load_steps=23 format=3 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" uid="uid://b8o7btpimdaxc" path="res://test levels/Smup Test Level/player_ship.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/Boosters (16 x 16).png" id="2_6cdot"]
@@ -91,6 +91,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_g3nya"]
 resource_name = "hit"
@@ -108,8 +120,26 @@ tracks/0/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_cxsww"]
+resource_name = "Blinking"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_02tj8"]
 _data = {
+&"Blinking": SubResource("Animation_cxsww"),
 &"RESET": SubResource("Animation_iqs3q"),
 &"hit": SubResource("Animation_g3nya")
 }

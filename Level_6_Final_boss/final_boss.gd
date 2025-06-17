@@ -21,7 +21,11 @@ func _physics_process(delta: float) -> void:
 			destroyed_shipparts_count+=1
 	if destroyed_shipparts_count == shipparts.size():
 		set_collision_layer_value(5,true)
-		
+
+func move_in():
+
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func explode():
 	#get_parent().speed
