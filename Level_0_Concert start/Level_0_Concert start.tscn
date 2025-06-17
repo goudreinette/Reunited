@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxs35wh5fummu"]
+[gd_scene load_steps=16 format=3 uid="uid://dxs35wh5fummu"]
 
 [ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="1_5tr1o"]
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_bycxu"]
 [ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="2_bycxu"]
+[ext_resource type="PackedScene" uid="uid://cmq2k3ck1s3q0" path="res://Sprites Algemeen/Cutscenes/Level_0.5_Introductie.tscn" id="2_g1qas"]
 [ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="3_g1qas"]
 [ext_resource type="Texture2D" uid="uid://dnvv56ur0yx04" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small.png" id="4_o3d1y"]
 [ext_resource type="Texture2D" uid="uid://b3v7sv2ddqa64" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 64x.png" id="5_t0mhp"]
@@ -97,6 +98,7 @@ libraries = {
 }
 script = ExtResource("1_bycxu")
 cutscene_animations = Array[String](["lightson", "fadeout"])
+next_level = ExtResource("2_g1qas")
 
 [node name="SpaceBG" type="Node2D" parent="."]
 z_index = -1
