@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmq2k3ck1s3q0"]
+[gd_scene load_steps=7 format=3 uid="uid://cmq2k3ck1s3q0"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_ktr6u"]
-[ext_resource type="PackedScene" uid="uid://b2t1sgtcnnfj2" path="res://Level_1_space_escape/Level_1 Space Escape.tscn" id="2_uc8fj"]
 [ext_resource type="Texture2D" uid="uid://b3nop5ntvh4er" path="res://Sprites Algemeen/Cutscenes/spaceship space.png" id="3_3ejko"]
 [ext_resource type="Texture2D" uid="uid://5wvfylg3do4g" path="res://Sprites Algemeen/Cutscenes/title texts/achtervolging in de ruimte.png" id="4_wvf3y"]
 
@@ -93,7 +92,6 @@ _data = {
 
 [node name="Intro_level_1" type="Node2D"]
 script = ExtResource("1_ktr6u")
-next_level = ExtResource("2_uc8fj")
 
 [node name="Chase" type="Sprite2D" parent="."]
 position = Vector2(120, 80)

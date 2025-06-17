@@ -1,0 +1,146 @@
+[gd_scene load_steps=15 format=3 uid="uid://d05q84erx8g5j"]
+
+[ext_resource type="Texture2D" uid="uid://cpvdsoluwor40" path="res://Sprites Algemeen/Cutscenes/animated/fish animated.png" id="1_a6p0i"]
+[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_jq7om"]
+[ext_resource type="PackedScene" uid="uid://bo6k1qdjm2e5e" path="res://Sprites Algemeen/Cutscenes/Level 4 Fish.tscn" id="2_dyu3c"]
+[ext_resource type="Texture2D" uid="uid://icbro5g7ue8j" path="res://Sprites Algemeen/Cutscenes/title texts/fish.png" id="2_trfb2"]
+[ext_resource type="Texture2D" uid="uid://c3qhgiygcsfv" path="res://Sprites Algemeen/Cutscenes/garage.png" id="4_dfofd"]
+
+[sub_resource type="Animation" id="Animation_dfofd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level3_5Garage/Fish:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level3_5Garage/Garage:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jq7om"]
+resource_name = "fadein"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level3_5Garage/Fish:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level3_5Garage/Garage:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dyu3c"]
+resource_name = "fadeout"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Level3_5Garage/Garage:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfofd"]
+_data = {
+&"RESET": SubResource("Animation_dfofd"),
+&"fadein": SubResource("Animation_jq7om"),
+&"fadeout": SubResource("Animation_dyu3c")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trfb2"]
+atlas = ExtResource("1_a6p0i")
+region = Rect2(0, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq7om"]
+atlas = ExtResource("1_a6p0i")
+region = Rect2(240, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfofd"]
+atlas = ExtResource("1_a6p0i")
+region = Rect2(480, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyu3c"]
+atlas = ExtResource("1_a6p0i")
+region = Rect2(720, 0, 240, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2qgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trfb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq7om")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfofd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyu3c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level3_5Garage" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_dfofd")
+}
+autoplay = "fadein"
+script = ExtResource("1_jq7om")
+cutscene_animations = Array[String](["fadeout"])
+next_level = ExtResource("2_dyu3c")
+
+[node name="Fish" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_m2qgu")
+
+[node name="Text" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, 80)
+texture = ExtResource("2_trfb2")
+
+[node name="Garage" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(120, 80)
+texture = ExtResource("4_dfofd")
