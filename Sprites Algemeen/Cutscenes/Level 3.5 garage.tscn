@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://d05q84erx8g5j"]
+[gd_scene load_steps=16 format=3 uid="uid://d05q84erx8g5j"]
 
 [ext_resource type="Texture2D" uid="uid://cpvdsoluwor40" path="res://Sprites Algemeen/Cutscenes/animated/fish animated.png" id="1_a6p0i"]
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_jq7om"]
 [ext_resource type="PackedScene" uid="uid://bo6k1qdjm2e5e" path="res://Sprites Algemeen/Cutscenes/Level 4 Fish.tscn" id="2_dyu3c"]
 [ext_resource type="Texture2D" uid="uid://icbro5g7ue8j" path="res://Sprites Algemeen/Cutscenes/title texts/fish.png" id="2_trfb2"]
 [ext_resource type="Texture2D" uid="uid://c3qhgiygcsfv" path="res://Sprites Algemeen/Cutscenes/garage.png" id="4_dfofd"]
+[ext_resource type="Script" uid="uid://dx5qvx6vofkd7" path="res://Sprites Algemeen/Cutscenes/dialogic_starter.gd" id="6_m2qgu"]
 
 [sub_resource type="Animation" id="Animation_dfofd"]
 length = 0.001
@@ -141,6 +142,8 @@ position = Vector2(120, 80)
 texture = ExtResource("2_trfb2")
 
 [node name="Garage" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 texture = ExtResource("4_dfofd")
+
+[node name="DialogicStarter" type="Node2D" parent="."]
+script = ExtResource("6_m2qgu")

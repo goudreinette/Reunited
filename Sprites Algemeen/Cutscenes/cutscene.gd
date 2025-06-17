@@ -8,6 +8,8 @@ class_name Cutscene extends AnimationPlayer
 var faded_in: bool = false
 
 
+
+
 func _input(event):
 	if event.is_action_pressed("Level trigger q"):
 		if next_animation == cutscene_animations.size():
