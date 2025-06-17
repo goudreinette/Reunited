@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://dc84xukp6rnfr"]
 
+[ext_resource type="Script" uid="uid://dtkk1gemnh64l" path="res://Level_4_wormhole/wormhole.gd" id="1_0i06f"]
 [ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
-[ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_uewx8"]
 [ext_resource type="PackedScene" uid="uid://cx3nl2r3jior2" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
 [ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="3_hbhgp"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="4_c8juj"]
@@ -16,9 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="13_ircnx"]
 [ext_resource type="Script" uid="uid://ca8vix5bhbd1t" path="res://Level_4_wormhole/sloppy_schipmet_net.gd" id="17_0i06f"]
 [ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="18_23or8"]
-[ext_resource type="PackedScene" uid="uid://r2kc1kkdbyf5" path="res://anglerfish_big.tscn" id="19_yderj"]
+[ext_resource type="PackedScene" uid="uid://r2kc1kkdbyf5" path="res://Level_4_wormhole/anglerfish_big.tscn" id="19_yderj"]
 [ext_resource type="Script" uid="uid://drxsb6gmi1l6p" path="res://Level_4_wormhole/net.gd" id="20_akr3w"]
-[ext_resource type="PackedScene" uid="uid://ckolwdbi486d7" path="res://anglerfish_small.tscn" id="20_cq875"]
+[ext_resource type="PackedScene" uid="uid://ckolwdbi486d7" path="res://Level_4_wormhole/anglerfish_small.tscn" id="20_cq875"]
 [ext_resource type="Texture2D" uid="uid://bm2plvuwnucjv" path="res://Level_4_wormhole/Mr.Sloppy Net.png" id="20_xdy6w"]
 [ext_resource type="Texture2D" uid="uid://cacyuvnblyffb" path="res://Level_4_wormhole/Mr.sloppy schip front met hoofd.png" id="21_akr3w"]
 [ext_resource type="PackedScene" uid="uid://dcg0htonpigku" path="res://Sprites Algemeen/Cutscenes/prison.tscn" id="23_k4ooe"]
@@ -224,7 +224,8 @@ size = Vector2(812, 54)
 size = Vector2(640, 20)
 
 [node name="Level4Wormhole" type="Node2D"]
-script = ExtResource("1_uewx8")
+script = ExtResource("1_0i06f")
+angler = ExtResource("20_cq875")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
