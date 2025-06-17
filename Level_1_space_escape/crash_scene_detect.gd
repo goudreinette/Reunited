@@ -4,6 +4,7 @@ extends Node2D
 @export var UI : Control
 var has_spawned = false
 var player : ShipPlayer
+@export var level_position: Node2D
 
 
 func _ready() -> void:
@@ -26,6 +27,7 @@ func move_to_scene():
 	#scene.visible = true
 #	scene.PROCESS_MODE_INHERIT
 	if not has_spawned:
+		global_position = level_position.global_position
 #		UI.visible = false
 		var tween = create_tween()
 		#player.get_parent().levelspeed = 0
@@ -36,6 +38,7 @@ func move_to_scene():
 ##spawn the s
 func spawn_scene():
 	player.visible = false
+	player.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	var s = scene.instantiate()
 	player.get_parent().add_child(s)
@@ -46,8 +49,12 @@ func check_for_player():
 	if nodes_in_player_group.size() > 0:
 		player = nodes_in_player_group[0]
 
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Player"):
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Level trigger q"):
 		move_to_scene()
 		print("move_to_Scene")
+
+#func _on_area_2d_area_entered(area: Area2D) -> void:
+	#if area.is_in_group("Player"):
+		#move_to_scene()
+		#print("move_to_Scene")

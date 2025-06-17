@@ -43,7 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://d2yxubepkj848" path="res://Effects/fire_with_smoke.tscn" id="39_jashp"]
 [ext_resource type="Script" uid="uid://b4blhpt77076i" path="res://Level_2_wasteland/cutscene.gd" id="42_cn70h"]
 [ext_resource type="PackedScene" uid="uid://ck3jiq4iowm6o" path="res://Sprites Algemeen/Characters/Frank.tscn" id="43_3fwvb"]
-[ext_resource type="PackedScene" uid="uid://dqosqmoya68kj" path="res://Sprites Algemeen/Cutscenes/Level_2.5 Island.tscn" id="44_8fg72"]
+[ext_resource type="PackedScene" uid="uid://dicr8htuo78mk" path="res://Sprites Algemeen/Cutscenes/Level_2.5 Island.tscn" id="44_8fg72"]
 [ext_resource type="PackedScene" uid="uid://sfpitmyjhi5b" path="res://Sprites Algemeen/Characters/Igor.tscn" id="44_8jjql"]
 [ext_resource type="PackedScene" uid="uid://bn7rwebavxib6" path="res://Sprites Algemeen/Characters/Koen.tscn" id="45_8fg72"]
 [ext_resource type="PackedScene" uid="uid://dhsnuf8gjt11u" path="res://Sprites Algemeen/Characters/Guus.tscn" id="46_oyuui"]

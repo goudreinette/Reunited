@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b2t1sgtcnnfj2"]
+[gd_scene load_steps=35 format=3 uid="uid://b2t1sgtcnnfj2"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bnrvlasath23p" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 128x.png" id="3_lcmmd"]
 [ext_resource type="Texture2D" uid="uid://dq0sdbie55g5" path="res://Level_1_space_escape/level_1_space_escape_sprites/Dry planet.png" id="4_5kg8n"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_bur0m"]
+[ext_resource type="PackedScene" uid="uid://cnx1ewly12pjh" path="res://Level_1_space_escape/Big_planet.tscn" id="7_i8h2o"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="7_xq0x3"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="8_pqtwk"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="9_g2ecq"]
@@ -63,11 +64,12 @@ shader_parameter/vignette_opacity = 0.6
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g0tbl")
 
-[node name="CrashSceneDetect" type="Node2D" parent="." node_paths=PackedStringArray("UI")]
+[node name="CrashSceneDetect" type="Node2D" parent="." node_paths=PackedStringArray("UI", "level_position")]
 position = Vector2(160, -1857)
 script = ExtResource("2_avks8")
 scene = ExtResource("3_8olhq")
 UI = NodePath("../CanvasLayer/UI")
+level_position = NodePath("../LevelPosition")
 
 [node name="ship_position" type="Node2D" parent="CrashSceneDetect"]
 position = Vector2(170, 105)
@@ -85,11 +87,19 @@ scroll_scale = Vector2(0.5, 0.5)
 position = Vector2(226, 338)
 texture = ExtResource("4_bur0m")
 
+[node name="IcePlanet100x2" type="Sprite2D" parent="Parallax2D 0_5"]
+position = Vector2(217, -2833)
+texture = ExtResource("4_bur0m")
+
 [node name="Parallax2D 0_75" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.75, 0.75)
 
 [node name="DryPlanet" type="Sprite2D" parent="Parallax2D 0_75"]
 position = Vector2(214, -1223)
+texture = ExtResource("4_5kg8n")
+
+[node name="DryPlanet4" type="Sprite2D" parent="Parallax2D 0_75"]
+position = Vector2(28, -3593)
 texture = ExtResource("4_5kg8n")
 
 [node name="DryPlanet2" type="Sprite2D" parent="Parallax2D 0_75"]
@@ -100,6 +110,9 @@ texture = ExtResource("4_5kg8n")
 [node name="StandaardPlaneet128x" type="Sprite2D" parent="Parallax2D 0_75"]
 position = Vector2(21, -287)
 texture = ExtResource("3_lcmmd")
+
+[node name="BigPlanet" parent="Parallax2D 0_75" instance=ExtResource("7_i8h2o")]
+position = Vector2(-107, -2326)
 
 [node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
 z_index = -1
@@ -149,6 +162,12 @@ position = Vector2(32, -784)
 [node name="Formation Test3" parent="." instance=ExtResource("21_oqn25")]
 position = Vector2(30, 1018)
 
+[node name="Formation Test3" parent="Formation Test3" instance=ExtResource("21_oqn25")]
+position = Vector2(4.977, -2416.99)
+
+[node name="Formation Test4" parent="Formation Test3" instance=ExtResource("21_oqn25")]
+position = Vector2(36.8298, -3453.9)
+
 [node name="AstroidField" type="Node2D" parent="."]
 z_index = -1
 position = Vector2(157, -39)
@@ -193,8 +212,97 @@ position = Vector2(-65, -100)
 [node name="Astroid-4" parent="AstroidField2" instance=ExtResource("17_08rlv")]
 position = Vector2(63, -41)
 
+[node name="AstroidField3" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(169, -2971)
+
+[node name="Astroid-1" parent="AstroidField3" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField3" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField3" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField3" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField3" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField3" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField4" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(191, -4265)
+
+[node name="Astroid-1" parent="AstroidField4" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField4" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField4" instance=ExtResource("15_k8f57")]
+position = Vector2(-121, -10)
+
+[node name="Small-Astroid-1" parent="AstroidField4" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField4" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField4" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField5" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(126, -6093)
+
+[node name="Astroid-1" parent="AstroidField5" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField5" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField5" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField5" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField5" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField5" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField6" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-18, -7996)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField6" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField6" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField6" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField6" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField6" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField6" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
 [node name="LevelPosition" type="Node2D" parent="."]
-position = Vector2(-2, 1733)
+position = Vector2(0, 1733)
 script = ExtResource("13_4j8lc")
 levelspeed = 50.0
 
@@ -212,7 +320,7 @@ script = ExtResource("16_g0b6g")
 noise = SubResource("FastNoiseLite_uf0tv")
 
 [node name="FatLazerGroup2" parent="." instance=ExtResource("20_40mj3")]
-position = Vector2(20, 195)
+position = Vector2(-8, -3410)
 
 [node name="FatLazer" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
 
@@ -231,14 +339,60 @@ position = Vector2(228, 0)
 [node name="FatLazer6" parent="FatLazerGroup2" instance=ExtResource("21_yqnux")]
 position = Vector2(228, 0)
 
+[node name="FatLazerGroup3" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(-10, -1346)
+
+[node name="FatLazer" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup3" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazerGroup4" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(-10, -6343)
+
+[node name="FatLazer" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
 [node name="GunshipGroup" parent="." instance=ExtResource("22_yqnux")]
 position = Vector2(-2, 287)
 
 [node name="Gunship" parent="GunshipGroup" instance=ExtResource("23_85ifg")]
 position = Vector2(128, 61)
 
+[node name="GunshipGroup4" parent="." instance=ExtResource("22_yqnux")]
+position = Vector2(104, -2684)
+
+[node name="Gunship" parent="GunshipGroup4" instance=ExtResource("23_85ifg")]
+position = Vector2(128, 61)
+
 [node name="GunshipGroup2" parent="." instance=ExtResource("22_yqnux")]
-position = Vector2(12, -1256)
+position = Vector2(12, -7147)
 
 [node name="Gunship" parent="GunshipGroup2" instance=ExtResource("23_85ifg")]
 position = Vector2(128, 61)
@@ -246,8 +400,23 @@ position = Vector2(128, 61)
 [node name="Gunship2" parent="GunshipGroup2" instance=ExtResource("23_85ifg")]
 position = Vector2(162, 114)
 
+[node name="GunshipGroup3" parent="." instance=ExtResource("22_yqnux")]
+position = Vector2(54, -5563)
+
+[node name="Gunship" parent="GunshipGroup3" instance=ExtResource("23_85ifg")]
+position = Vector2(128, 61)
+
+[node name="Gunship2" parent="GunshipGroup3" instance=ExtResource("23_85ifg")]
+position = Vector2(162, 114)
+
 [node name="Turret" parent="." instance=ExtResource("25_nk3iq")]
 position = Vector2(92, -136)
+
+[node name="Turret2" parent="." instance=ExtResource("25_nk3iq")]
+position = Vector2(128, -6093)
+
+[node name="Turret3" parent="." instance=ExtResource("25_nk3iq")]
+position = Vector2(35, -8289)
 
 [node name="Formation Test4" parent="." instance=ExtResource("21_oqn25")]
 position = Vector2(-24.625, -453)

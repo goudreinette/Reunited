@@ -8,7 +8,7 @@
 scroll_scale = Vector2(0.25, 0.25)
 scroll_offset = Vector2(121, 0)
 repeat_size = Vector2(0, 540)
-repeat_times = 3
+repeat_times = 8
 
 [node name="GreenBg240x" type="Sprite2D" parent="Parallax2D 0_25"]
 texture = ExtResource("1_gux30")
@@ -18,7 +18,7 @@ hframes = 3
 scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(121, 0)
 repeat_size = Vector2(0, 540)
-repeat_times = 3
+repeat_times = 8
 
 [node name="GreenBg240x" type="Sprite2D" parent="Parallax2D2 0_50"]
 texture = ExtResource("1_gux30")
@@ -29,6 +29,7 @@ frame = 1
 scroll_scale = Vector2(0.6, 0.6)
 scroll_offset = Vector2(121, 0)
 repeat_size = Vector2(0, 540)
+repeat_times = 8
 
 [node name="GreenBg240x" type="Sprite2D" parent="Parallax2D3 0_60"]
 texture = ExtResource("1_gux30")
