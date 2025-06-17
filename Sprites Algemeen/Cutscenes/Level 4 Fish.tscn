@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dpvwincjyi5i0"]
 
-[ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_xlcus"]
+[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_xlcus"]
 [ext_resource type="PackedScene" uid="uid://dc84xukp6rnfr" path="res://Level_4_wormhole/Level_4 Wormhole.tscn" id="2_j4bux"]
 [ext_resource type="Texture2D" uid="uid://cpvdsoluwor40" path="res://Sprites Algemeen/Cutscenes/animated/fish animated.png" id="3_3cleg"]
 [ext_resource type="Texture2D" uid="uid://icbro5g7ue8j" path="res://Sprites Algemeen/Cutscenes/title texts/fish.png" id="4_3cleg"]
