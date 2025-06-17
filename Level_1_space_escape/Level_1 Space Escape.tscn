@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://sboq8omi1aii" path="res://test levels/Smup Test Level/enemies/turret.tscn" id="25_nk3iq"]
 [ext_resource type="Texture2D" uid="uid://b1olkfqakakq0" path="res://Level_4_wormhole/marella/marella 32px grey.png" id="29_ubutc"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
-[ext_resource type="PackedScene" path="res://Level_1_space_escape/pickup.tscn" id="30_ubutc"]
+[ext_resource type="PackedScene" uid="uid://56vh6md8gpqf" path="res://Level_1_space_escape/pickup.tscn" id="30_ubutc"]
 [ext_resource type="Texture2D" uid="uid://bgs6lnivs6knk" path="res://Level_1_space_escape/level_1_space_escape_sprites/Very big Red Planet.png" id="32_3jrtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8olhq"]

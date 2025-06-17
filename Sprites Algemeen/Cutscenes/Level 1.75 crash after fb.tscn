@@ -163,7 +163,7 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="CrashAnimation" type="AnimationPlayer"]
+[node name="CrashAnimation2" type="AnimationPlayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_pbp3c")
 }
