@@ -1,8 +1,7 @@
-[gd_scene load_steps=63 format=3 uid="uid://evbymmldyj1w"]
+[gd_scene load_steps=62 format=3 uid="uid://evbymmldyj1w"]
 
 [ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_4uckj"]
 [ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_4uckj"]
-[ext_resource type="Texture2D" uid="uid://be6fxmnp5jom3" path="res://Sprites Algemeen/Cutscenes/animated/spaceship broken animated.png" id="3_kppso"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="4_jkcuf"]
 [ext_resource type="Texture2D" uid="uid://urqrfsjv7e0g" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 4/Smoke Dark - 4.png" id="5_kcjir"]
 [ext_resource type="Texture2D" uid="uid://8onrpxwc35pn" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 2/Smoke Dark - 2.png" id="6_4wxpv"]
@@ -11,19 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://hrg32giy8osy" path="res://Sprites Algemeen/Cutscenes/4 Hours Earlier.png" id="9_g5k0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wne10"]
-atlas = ExtResource("3_kppso")
 region = Rect2(0, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dyj2p"]
-atlas = ExtResource("3_kppso")
 region = Rect2(240, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yrnqs"]
-atlas = ExtResource("3_kppso")
 region = Rect2(480, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6eci"]
-atlas = ExtResource("3_kppso")
 region = Rect2(720, 0, 240, 160)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lbpod"]
@@ -476,7 +471,7 @@ _data = {
 &"crash": SubResource("Animation_xou6c")
 }
 
-[node name="Crash" type="Node2D"]
+[node name="Crash2" type="Node2D"]
 script = ExtResource("1_4uckj")
 next_level = ExtResource("2_4uckj")
 
@@ -489,19 +484,16 @@ frame_progress = 0.543628
 [node name="Smoke 1" type="AnimatedSprite2D" parent="Crash"]
 visible = false
 position = Vector2(-59.0001, -16)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_k2rix")
 autoplay = "default"
 
 [node name="Smoke 5" type="AnimatedSprite2D" parent="Crash"]
 position = Vector2(-99.0001, 29)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_m2kmi")
 autoplay = "default"
 
 [node name="Smoke 2" type="AnimatedSprite2D" parent="Crash"]
 position = Vector2(64.0001, -11)
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_5ds4e")
 autoplay = "default"
 frame_progress = 0.0158295

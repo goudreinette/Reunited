@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b2t1sgtcnnfj2"]
+[gd_scene load_steps=67 format=3 uid="uid://b2t1sgtcnnfj2"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -31,9 +31,228 @@
 [ext_resource type="Texture2D" uid="uid://b1olkfqakakq0" path="res://Level_4_wormhole/marella/marella 32px grey.png" id="29_ubutc"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
 [ext_resource type="PackedScene" uid="uid://56vh6md8gpqf" path="res://Level_1_space_escape/pickup.tscn" id="30_ubutc"]
+[ext_resource type="Texture2D" uid="uid://bgs6lnivs6knk" path="res://Level_1_space_escape/level_1_space_escape_sprites/Very big Red Planet.png" id="32_3jrtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8olhq"]
 size = Vector2(530, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nb5x"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(0, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na7x0"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(480, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8naj"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(960, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk1g4"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(1440, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g21l"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(1920, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73dhy"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(2400, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt5ys"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(2880, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3epah"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(3360, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr1l7"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(3840, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhchr"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(4320, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du3al"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(4800, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrbtd"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(5280, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k38u1"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(5760, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eurpo"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(6240, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvdry"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(6720, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvh02"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(7200, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogera"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(7680, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nata0"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(8160, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjp2d"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(8640, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf1ha"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(9120, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hko0q"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(9600, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5yxx"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(10080, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuudy"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(10560, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi7a3"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(11040, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3ysn"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(11520, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkwca"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(12000, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q606l"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(12480, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8imtj"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(12960, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3tr0"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(13440, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgtu3"]
+atlas = ExtResource("32_3jrtn")
+region = Rect2(13920, 0, 480, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0c5g6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nb5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na7x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8naj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk1g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g21l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73dhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt5ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3epah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr1l7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhchr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du3al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrbtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k38u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eurpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvdry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvh02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogera")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nata0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjp2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf1ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hko0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5yxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuudy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi7a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3ysn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkwca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q606l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8imtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3tr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgtu3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
 shader = ExtResource("9_g2ecq")
@@ -113,6 +332,16 @@ texture = ExtResource("3_lcmmd")
 
 [node name="BigPlanet" parent="Parallax2D 0_75" instance=ExtResource("7_i8h2o")]
 position = Vector2(-107, -2326)
+
+[node name="BigPlanet2" parent="Parallax2D 0_75" instance=ExtResource("7_i8h2o")]
+position = Vector2(416, -4849)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Parallax2D 0_75"]
+z_index = -1
+position = Vector2(142, -6506)
+sprite_frames = SubResource("SpriteFrames_0c5g6")
+autoplay = "default"
+frame_progress = 0.692348
 
 [node name="SpaceBG" parent="." instance=ExtResource("2_3shfn")]
 z_index = -1
@@ -301,6 +530,397 @@ position = Vector2(-65, -100)
 [node name="Astroid-4" parent="AstroidField6" instance=ExtResource("17_08rlv")]
 position = Vector2(63, -41)
 
+[node name="AstroidField7" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-65, -7470)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField7" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField7" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField7" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField7" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField7" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField7" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField8" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(100, -7007)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField8" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField8" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField8" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField8" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField8" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField8" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField9" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-26, -6652)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField9" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField9" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField9" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField9" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField9" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField9" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField10" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(133, -6089)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField10" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField10" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField10" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField10" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField10" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField10" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField11" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-43, -5673)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField11" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField11" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField11" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField11" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField11" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField11" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField12" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(30, -4841)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField12" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField12" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField12" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField12" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField12" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField12" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField13" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(12, -4028)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField13" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField13" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField13" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField13" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField13" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField13" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField14" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(12, -4028)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField14" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField14" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField14" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField14" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField14" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField14" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField15" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-18, -9176)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField15" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField15" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField15" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField15" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField15" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField15" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField16" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-65, -8650)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField16" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField16" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField16" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField16" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField16" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField16" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField17" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(100, -8187)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField17" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField17" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField17" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField17" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField17" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField17" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField18" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-26, -7832)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField18" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField18" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField18" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField18" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField18" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField18" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField19" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(133, -7269)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField19" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField19" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField19" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField19" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField19" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField19" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField20" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(-43, -6853)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField20" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField20" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField20" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField20" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField20" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField20" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField21" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(30, -6021)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField21" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField21" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField21" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField21" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField21" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField21" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField22" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(12, -5208)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField22" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField22" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField22" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField22" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField22" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField22" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
+[node name="AstroidField23" type="Node2D" parent="."]
+z_as_relative = false
+position = Vector2(12, -5208)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField23" instance=ExtResource("14_x6pma")]
+position = Vector2(2, 1)
+
+[node name="Astroid-3" parent="AstroidField23" instance=ExtResource("14_x6pma")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField23" instance=ExtResource("15_k8f57")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField23" instance=ExtResource("16_lcmmd")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField23" instance=ExtResource("17_08rlv")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField23" instance=ExtResource("17_08rlv")]
+position = Vector2(63, -41)
+
 [node name="LevelPosition" type="Node2D" parent="."]
 position = Vector2(0, 1733)
 script = ExtResource("13_4j8lc")
@@ -377,6 +997,46 @@ position = Vector2(172, 0)
 position = Vector2(228, 0)
 
 [node name="FatLazer6" parent="FatLazerGroup4" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazerGroup5" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(-10, -4609)
+
+[node name="FatLazer" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup5" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazerGroup6" parent="." instance=ExtResource("20_40mj3")]
+position = Vector2(3, -8594)
+
+[node name="FatLazer" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
+
+[node name="FatLazer2" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
+position = Vector2(46, 0)
+
+[node name="FatLazer3" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
+position = Vector2(104, 0)
+
+[node name="FatLazer4" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
+position = Vector2(172, 0)
+
+[node name="FatLazer5" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
+position = Vector2(228, 0)
+
+[node name="FatLazer6" parent="FatLazerGroup6" instance=ExtResource("21_yqnux")]
 position = Vector2(228, 0)
 
 [node name="GunshipGroup" parent="." instance=ExtResource("22_yqnux")]
@@ -459,6 +1119,12 @@ position = Vector2(-12, -1387)
 
 [node name="Pickup8" parent="Pickups" instance=ExtResource("30_ubutc")]
 position = Vector2(-188, -1883)
+
+[node name="Formation Test5" parent="." instance=ExtResource("23_46uc2")]
+position = Vector2(-47.625, -7467)
+
+[node name="Formation Test6" parent="." instance=ExtResource("21_oqn25")]
+position = Vector2(136.375, -5684)
 
 [connection signal="area_entered" from="CrashSceneDetect/Area2D" to="CrashSceneDetect" method="_on_area_2d_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]

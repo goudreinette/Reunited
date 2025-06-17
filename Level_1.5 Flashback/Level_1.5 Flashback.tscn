@@ -1,7 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://bcc65hoaaqri8"]
+[gd_scene load_steps=35 format=3 uid="uid://bcc65hoaaqri8"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_ssfjq"]
+[ext_resource type="Texture2D" uid="uid://tyf0cxxqnsrm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 32x.png" id="3_hub3a"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="4_8ws1y"]
+[ext_resource type="Texture2D" uid="uid://b3v7sv2ddqa64" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 64x.png" id="4_f4ha2"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="7_lbi0f"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="8_54fgb"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="9_t0i5o"]
@@ -10,14 +12,19 @@
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="12_kvibj"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="12_otrsx"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="13_1hld7"]
-[ext_resource type="PackedScene" uid="uid://j1anb815cc65" path="res://Sprites Algemeen/Cutscenes/Level 1.75 crash after fb.tscn" id="14_2xa2x"]
+[ext_resource type="PackedScene" uid="uid://0frbqy2ff4g7" path="res://Sprites Algemeen/Cutscenes/Level 1.75 crash after fb.tscn" id="14_2xa2x"]
+[ext_resource type="PackedScene" uid="uid://bo50n707rvom4" path="res://Level_1_space_escape/Small_Astroid-2.tscn" id="14_30peg"]
+[ext_resource type="PackedScene" uid="uid://cxnypv2veh8uu" path="res://Level_1_space_escape/Small_Astroid-1.tscn" id="15_nh7q7"]
 [ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="15_otrsx"]
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="16_f6rc0"]
 [ext_resource type="Script" uid="uid://yuvx41wfwo4k" path="res://Level_1.5 Flashback/boss_front.gd" id="17_2xa2x"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="19_6mppc"]
+[ext_resource type="AudioStream" uid="uid://dwsqc2msr04tv" path="res://Level_1.5 Flashback/Makaya intermezzo 28-05 2.mp3" id="19_wnr8i"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="20_4bdh8"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="21_7ndxm"]
+[ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="22_30peg"]
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://test levels/Smup Test Level/ship_Camera2D.gd" id="22_t60yq"]
+[ext_resource type="PackedScene" uid="uid://dvy2vtjncyrel" path="res://Level_1_space_escape/Astroid-2.tscn" id="23_nh7q7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
 shader = ExtResource("10_cwotl")
@@ -147,6 +154,7 @@ var is_talking : bool = false
 @export var enemies: =[] as Array[Area2D]
 @export var Kerbie: Area2D
 @export var Sloppy_Ship: Sprite2D 
+var has_entered = false
 
 
 @export var next_level: PackedScene
@@ -157,14 +165,16 @@ func _ready():
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func _process(delta: float) -> void:
-	if player_inside and not is_talking and zijn_allemaal_verwijderd(enemies):
+	if player_inside and not is_talking and zijn_allemaal_verwijderd(enemies) and not has_entered:
 		$PressX.visible = true
 		if  Input.is_action_just_pressed(\"dialogic_default_action\"):
 			is_talking = true
 			Dialogic.start(convos[next_convo])
-			#has_entered = true
-	else: 
+			has_entered = true
+			
+	else :
 		$PressX.visible = false	
+	
 		
 		
 	if zijn_allemaal_verwijderd(enemies):
@@ -181,12 +191,11 @@ func _on_timeline_ended():
 func _on_dialogic_signal(argument:String):
 	
 ##Kerbie verdwijnt aan t einde van t gesprek en Sloppy komt in beeld
-
 	if argument == \"Move_Away\":
 		Kerbie.move_away()
 		###wait 2 seconds
 		#await get_tree().create_timer(2).timeout
-		Sloppy_Ship.move()
+		#Sloppy_Ship.move()
 		
 	if argument == \"Sloppy move away\":
 		Sloppy_Ship.move_away()
@@ -222,10 +231,85 @@ func zijn_allemaal_verwijderd(area_array: Array) -> bool:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hld7"]
-size = Vector2(256, 72)
+size = Vector2(256, 110)
+
+[sub_resource type="GDScript" id="GDScript_nh7q7"]
+script/source = "extends Area2D
+
+var player_inside : bool = false
+@export var next_convo : int = 0
+var is_talking : bool = false
+var has_entered: bool = false
+@export var convos : = [\"convo_1\",\"convo_2\"]
+
+@export var Sloppy_Ship: Sprite2D 
+
+
+@export var next_level: PackedScene
+#@export var pressx : Sprite2D 
+
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+
+func _process(delta: float) -> void:
+	if player_inside and not is_talking:
+			is_talking = true
+			Dialogic.start(convos[next_convo])
+			has_entered = true
+			Sloppy_Ship.move()
+		
+	#if zijn_allemaal_verwijderd(enemies):
+		#$\"Help Hem Label\".visible = false
+	#else:
+		#$\"Help Hem Label\".visible = true
+func _on_timeline_ended():
+	## To check if it is OUR timeline
+	if is_talking :
+		$end_of_convo_timer.start()
+		if next_convo < convos.size()-1: next_convo += 1
+		
+		
+func _on_dialogic_signal(argument:String):
+	
+##Kerbie verdwijnt aan t einde van t gesprek en Sloppy komt in beeld
+
+	if argument == \"Sloppy move away\":
+		Sloppy_Ship.move_away()
+		await get_tree().create_timer(2).timeout
+		get_tree().change_scene_to_packed(next_level)
+##Naar het volgende level
+		
+
+func _on_end_of_convo_timer_timeout() -> void:
+	is_talking = false
+	
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player :
+		player_inside = true
+func _on_body_exited(body: Node2D) -> void:
+	if body is Player :
+		player_inside = false 
+		
+func _on_area_entered(area: Node2D) -> void:
+	if area.is_in_group(\"Player\") :
+		player_inside = true
+func _on_area_exited(area: Node2D) -> void:
+	if area.is_in_group(\"Player\") :
+		player_inside = false 
+func _on_player_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
+
+func zijn_allemaal_verwijderd(area_array: Array) -> bool:
+	for area in area_array:
+		if is_instance_valid(area):
+			return false  # Zodra er één nog bestaat, return false
+	return true  # Alle zijn ongeldig
+"
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ssfjq")
+starting_dialogue = "Level 15 begin"
 
 [node name="Parallax2D 0_5" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0.5)
@@ -233,6 +317,10 @@ scroll_scale = Vector2(0.5, 0.5)
 [node name="IcePlanet100x" type="Sprite2D" parent="Parallax2D 0_5"]
 position = Vector2(240, -79)
 texture = ExtResource("4_8ws1y")
+
+[node name="StandaardPlaneet32x" type="Sprite2D" parent="Parallax2D 0_5"]
+position = Vector2(3, 106)
+texture = ExtResource("3_hub3a")
 
 [node name="Parallax2D 0_75" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.75, 0.75)
@@ -249,6 +337,10 @@ scroll_offset = Vector2(60, -543)
 
 [node name="GreenBg240x" parent="SpaceBG/Parallax2D3 0_60" index="0"]
 position = Vector2(56, 7)
+
+[node name="StandaardPlaneet64x" type="Sprite2D" parent="SpaceBG/Parallax2D3 0_60" index="1"]
+position = Vector2(180, 243)
+texture = ExtResource("4_f4ha2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -272,13 +364,107 @@ material = SubResource("ShaderMaterial_820i1")
 offset_right = 241.0
 offset_bottom = 160.0
 
-[node name="LevelPosition" type="Node2D" parent="."]
-position = Vector2(-3, -47)
+[node name="AstroidField" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(15, 694)
+
+[node name="Astroid-1" parent="AstroidField" instance=ExtResource("22_30peg")]
+z_index = 0
+
+[node name="Astroid-3" parent="AstroidField" instance=ExtResource("22_30peg")]
+z_index = 0
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField" instance=ExtResource("14_30peg")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField" instance=ExtResource("15_nh7q7")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(63, -41)
+
+[node name="AstroidField" type="Node2D" parent="AstroidField"]
+position = Vector2(71, -270)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField/AstroidField" instance=ExtResource("22_30peg")]
+z_index = 0
+
+[node name="Astroid-3" parent="AstroidField/AstroidField" instance=ExtResource("22_30peg")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField/AstroidField" instance=ExtResource("14_30peg")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField/AstroidField" instance=ExtResource("15_nh7q7")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField/AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField/AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(63, -41)
+
+[node name="AstroidField2" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(-50, -187)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField2" instance=ExtResource("22_30peg")]
+z_index = 0
+
+[node name="Astroid-3" parent="AstroidField2" instance=ExtResource("22_30peg")]
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField2" instance=ExtResource("14_30peg")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField2" instance=ExtResource("15_nh7q7")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField2" instance=ExtResource("23_nh7q7")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField2" instance=ExtResource("23_nh7q7")]
+position = Vector2(63, -41)
+
+[node name="AstroidField" type="Node2D" parent="AstroidField2"]
+position = Vector2(71, -270)
+rotation = 1.57079
+
+[node name="Astroid-1" parent="AstroidField2/AstroidField" instance=ExtResource("22_30peg")]
+z_index = 0
+
+[node name="Astroid-3" parent="AstroidField2/AstroidField" instance=ExtResource("22_30peg")]
+z_index = 0
+position = Vector2(54, -184)
+
+[node name="Small-Astroid-2" parent="AstroidField2/AstroidField" instance=ExtResource("14_30peg")]
+position = Vector2(-103, -18)
+
+[node name="Small-Astroid-1" parent="AstroidField2/AstroidField" instance=ExtResource("15_nh7q7")]
+position = Vector2(48, -105)
+
+[node name="Astroid-2" parent="AstroidField2/AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(-65, -100)
+
+[node name="Astroid-4" parent="AstroidField2/AstroidField" instance=ExtResource("23_nh7q7")]
+position = Vector2(63, -41)
+
+[node name="LevelPosition" type="Node2D" parent="." node_paths=PackedStringArray("goal1", "goal2")]
+position = Vector2(0, 715)
 script = ExtResource("19_6mppc")
-levelspeed = 0.0
+levelspeed = 25.0
+goal1 = NodePath("../goal1")
+goal2 = NodePath("../Goal 2")
 
 [node name="Player" parent="LevelPosition" instance=ExtResource("20_4bdh8")]
-position = Vector2(120, 120)
+position = Vector2(106, 124)
+current_weapon_type = 0
 max_shield = 150
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
@@ -338,14 +524,14 @@ position = Vector2(-9, 0)
 
 [node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies", "Kerbie", "Sloppy_Ship") instance=ExtResource("12_kvibj")]
 script = SubResource("GDScript_otrsx")
-convos = ["Kerby_1", "Sloppy_1"]
+convos = ["Kerby_1"]
 enemies = [NodePath("../../Turret"), NodePath("../../Turret2"), NodePath("../../Turret3"), NodePath("../../Turret4")]
 Kerbie = NodePath("../PathFollow2D/SmallKerbie")
-Sloppy_Ship = NodePath("BossFrontSketch")
+Sloppy_Ship = NodePath("../Talkbox2/BossFrontSketch")
 next_level = ExtResource("14_2xa2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Talkbox"]
-position = Vector2(118, 26)
+position = Vector2(118, 27)
 shape = SubResource("RectangleShape2D_1hld7")
 
 [node name="PressX" type="Sprite2D" parent="Path2D/Talkbox"]
@@ -363,20 +549,63 @@ theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("15_otrsx")
 text = "Help Him!"
 
-[node name="target" type="Node2D" parent="Path2D/Talkbox"]
-position = Vector2(121, 32)
+[node name="Talkbox2" parent="Path2D" node_paths=PackedStringArray("Sloppy_Ship") instance=ExtResource("12_kvibj")]
+position = Vector2(-5, -423)
+script = SubResource("GDScript_nh7q7")
+convos = ["Sloppy_1"]
+Sloppy_Ship = NodePath("BossFrontSketch")
+next_level = ExtResource("14_2xa2x")
 
-[node name="BossFrontSketch" type="Sprite2D" parent="Path2D/Talkbox" node_paths=PackedStringArray("target")]
-position = Vector2(-125, -47)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Talkbox2"]
+position = Vector2(118, 44)
+shape = SubResource("RectangleShape2D_1hld7")
+
+[node name="Help Hem Label" type="Label" parent="Path2D/Talkbox2"]
+visible = false
+offset_left = 84.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 49.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("15_otrsx")
+text = "Help Him!"
+
+[node name="target" type="Node2D" parent="Path2D/Talkbox2"]
+position = Vector2(118, 44)
+
+[node name="BossFrontSketch" type="Sprite2D" parent="Path2D/Talkbox2" node_paths=PackedStringArray("target")]
+position = Vector2(-117, 49)
 texture = ExtResource("16_f6rc0")
 script = ExtResource("17_2xa2x")
 target = NodePath("../target")
+
+[node name="goal1" type="Node2D" parent="."]
+position = Vector2(-3, -47)
+
+[node name="Goal 2" type="Node2D" parent="."]
+position = Vector2(-5, -423)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_wnr8i")
+autoplay = true
+
+[node name="Astroid-1" parent="." instance=ExtResource("22_30peg")]
+position = Vector2(200, 173)
+
+[node name="Astroid-2" parent="." instance=ExtResource("22_30peg")]
+position = Vector2(90, 121)
+
+[node name="Astroid-3" parent="." instance=ExtResource("23_nh7q7")]
+position = Vector2(41, 228)
 
 [connection signal="area_entered" from="LevelPosition/Player" to="Path2D/Talkbox" method="_on_player_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="LevelPosition/Player" to="CanvasLayer/UI" method="update_shield"]
 [connection signal="area_entered" from="Path2D/Talkbox" to="Path2D/Talkbox" method="_on_area_entered"]
 [connection signal="area_exited" from="Path2D/Talkbox" to="Path2D/Talkbox" method="_on_area_exited"]
+[connection signal="area_entered" from="Path2D/Talkbox2" to="Path2D/Talkbox2" method="_on_area_entered"]
+[connection signal="area_exited" from="Path2D/Talkbox2" to="Path2D/Talkbox2" method="_on_area_exited"]
 
 [editable path="SpaceBG"]
 [editable path="Path2D/PathFollow2D/SmallKerbie"]
