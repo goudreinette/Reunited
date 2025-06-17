@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" path="res://small_kerbie.tscn" id="12_otrsx"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="13_1hld7"]
 [ext_resource type="PackedScene" uid="uid://0frbqy2ff4g7" path="res://Sprites Algemeen/Cutscenes/Level 1.75 crash after fb.tscn" id="14_2xa2x"]
-[ext_resource type="PackedScene" uid="uid://bo50n707rvom4" path="res://Level_1_space_escape/Small_Astroid-2.tscn" id="14_30peg"]
-[ext_resource type="PackedScene" uid="uid://cxnypv2veh8uu" path="res://Level_1_space_escape/Small_Astroid-1.tscn" id="15_nh7q7"]
+[ext_resource type="PackedScene" path="res://Level_1_space_escape/Small_Astroid-2.tscn" id="14_30peg"]
+[ext_resource type="PackedScene" path="res://Level_1_space_escape/Small_Astroid-1.tscn" id="15_nh7q7"]
 [ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="15_otrsx"]
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="16_f6rc0"]
 [ext_resource type="Script" path="res://Level_1.5 Flashback/boss_front.gd" id="17_2xa2x"]
@@ -22,9 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://dwsqc2msr04tv" path="res://Level_1.5 Flashback/Makaya intermezzo 28-05 2.mp3" id="19_wnr8i"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="20_4bdh8"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="21_7ndxm"]
-[ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="22_30peg"]
+[ext_resource type="PackedScene" path="res://Level_1_space_escape/Astroid-1.tscn" id="22_30peg"]
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://test levels/Smup Test Level/ship_Camera2D.gd" id="22_t60yq"]
-[ext_resource type="PackedScene" uid="uid://dvy2vtjncyrel" path="res://Level_1_space_escape/Astroid-2.tscn" id="23_nh7q7"]
+[ext_resource type="PackedScene" path="res://Level_1_space_escape/Astroid-2.tscn" id="23_nh7q7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_820i1"]
 shader = ExtResource("10_cwotl")
