@@ -23,7 +23,7 @@ func _ready():
 	#Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func _physics_process(delta: float) -> void:
-	if sloppy_trigger.player_in_range ==true and has_moved == false:
+	if Input.is_action_just_pressed("Level trigger q"):
 		move_to_screen()
 		has_moved = true
 		Dialogic.start(convo_1)
