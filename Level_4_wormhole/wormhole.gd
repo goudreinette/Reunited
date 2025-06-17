@@ -7,23 +7,36 @@ var score = 0
 #@onready var start_button = $CanvasLayer/CenterContainer/Start
 @onready var game_over = $CanvasLayer/CenterContainer/GameOver
 @export var starting_dialogue:String
-
-
-@export var formation_1 : PackedScene
-@export var formation_2 : PackedScene
-@export var formation_3 : PackedScene
-@export var formation_4 : PackedScene
-@export var turret : PackedScene
-
-@export var cloud1 : PackedScene
-@export var cloud2 : PackedScene
-@export var cloud3 : PackedScene
+#
+#
+#@export var formation_1 : PackedScene
+#@export var formation_2 : PackedScene
+#@export var formation_3 : PackedScene
+#@export var formation_4 : PackedScene
+#@export var turret : PackedScene
+#
+#@export var cloud1 : PackedScene
+#@export var cloud2 : PackedScene
+#@export var cloud3 : PackedScene
 
 #@onready var mission_start = $CanvasLayer/CenterContainer/GameOver
 
 # Implement here: spawning logic
 @export var ring_pickup : PackedScene
 @export var angler : PackedScene
+@export var hallucigenia : PackedScene
+@export var asteroid : PackedScene
+@export var asteroid2 : PackedScene
+
+
+
+func _ready():
+	game_over.hide()
+#	spawn_enemies()	
+	if starting_dialogue != null:
+		Dialogic.start(starting_dialogue)
+	
+
 
 
 func random_position_just_outside_frame():
@@ -31,21 +44,31 @@ func random_position_just_outside_frame():
 		randf_range(-get_viewport_rect().size.x * 2, 0), 
 		$LevelPosition2/Player.global_position.y - get_viewport_rect().size.y
 	)
-	
+
 
 
 
 func _process(delta):
 	 #Spawning logic
-	if randi_range(0, 125) == 1:
+	if randi_range(0, 500) == 1:
 		var r = angler.instantiate()
 		add_child(r)
 		r.global_position = random_position_just_outside_frame()
 		
-	#if randi_range(0, 10000) == 1:
-		#var r = cloud1.instantiate()
-		#add_child(r)
-		#r.global_position = random_position_just_outside_frame()
+	if randi_range(0, 10000) == 1:
+		var r = asteroid.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+	#
+	if randi_range(0, 20000) == 1:
+		var r = asteroid2.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
+		
+	if randi_range(0, 40000) == 1:
+		var r = hallucigenia.instantiate()
+		add_child(r)
+		r.global_position = random_position_just_outside_frame()
 	#
 	#if randi_range(0, 10000) == 1:
 		#var r = cloud2.instantiate()
@@ -92,11 +115,6 @@ func _process(delta):
 
 
 
-func _ready():
-	game_over.hide()
-#	spawn_enemies()	
-	if starting_dialogue != null:
-		Dialogic.start(starting_dialogue)
 
 func _on_enemy_died(value):
 	score += value

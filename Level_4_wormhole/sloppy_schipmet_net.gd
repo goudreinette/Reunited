@@ -18,12 +18,18 @@ var to_next_level_has_been_called = false
 @export var convo_1 : String = "Wormhole 2"
 @export var convo_2 : String = "Wormhole 3"
 
+
+var sloppy_callable = false
+
+
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	#Dialogic.timeline_ended.connect(_on_timeline_ended)
+	await get_tree().create_timer(5).timeout
+	sloppy_callable = true
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Level trigger q"):
+	if Input.is_action_just_pressed("Level trigger q") and sloppy_callable:
 		move_to_screen()
 		has_moved = true
 		Dialogic.start(convo_1)

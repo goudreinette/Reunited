@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dc84xukp6rnfr"]
+[gd_scene load_steps=39 format=3 uid="uid://dc84xukp6rnfr"]
 
 [ext_resource type="Script" uid="uid://dtkk1gemnh64l" path="res://Level_4_wormhole/wormhole.gd" id="1_0i06f"]
 [ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="3_hbhgp"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="4_c8juj"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="5_arypi"]
+[ext_resource type="PackedScene" uid="uid://dvy2vtjncyrel" path="res://Level_1_space_escape/Astroid-2.tscn" id="5_uebwq"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="6_t7ibp"]
 [ext_resource type="Script" uid="uid://rni2hax3ot6e" path="res://test levels/Smup Test Level/ship_Camera2D.gd" id="7_uewx8"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="8_t7ibp"]
@@ -226,6 +227,9 @@ size = Vector2(640, 20)
 [node name="Level4Wormhole" type="Node2D"]
 script = ExtResource("1_0i06f")
 angler = ExtResource("20_cq875")
+hallucigenia = ExtResource("3_hbhgp")
+asteroid = ExtResource("11_rg5ho")
+asteroid2 = ExtResource("5_uebwq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
