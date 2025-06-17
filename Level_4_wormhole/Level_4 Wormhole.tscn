@@ -1,8 +1,8 @@
-[gd_scene load_steps=99 format=3 uid="uid://dc84xukp6rnfr"]
+[gd_scene load_steps=38 format=3 uid="uid://dc84xukp6rnfr"]
 
-[ext_resource type="PackedScene" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
+[ext_resource type="PackedScene" uid="uid://djg2dpl1nryr7" path="res://Level_4_wormhole/SpaceBGBlue.tscn" id="1_cu4q0"]
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_uewx8"]
-[ext_resource type="PackedScene" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
+[ext_resource type="PackedScene" uid="uid://cx3nl2r3jior2" path="res://Level_4_wormhole/black_hole.tscn" id="2_dajic"]
 [ext_resource type="PackedScene" uid="uid://ds8182okwply0" path="res://Level_4_wormhole/Hallucigenia.tscn" id="3_hbhgp"]
 [ext_resource type="Script" uid="uid://demqr81qrgu2o" path="res://test levels/Smup Test Level/level_position.gd" id="4_c8juj"]
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="5_arypi"]
@@ -11,78 +11,19 @@
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="8_t7ibp"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="9_uewx8"]
 [ext_resource type="Shader" uid="uid://cy5av0mbcegqk" path="res://shaders/vhs.gdshader" id="10_pfj2u"]
-[ext_resource type="PackedScene" path="res://Level_1_space_escape/Astroid-1.tscn" id="11_rg5ho"]
+[ext_resource type="PackedScene" uid="uid://blj0d6imf4ndu" path="res://Level_1_space_escape/Astroid-1.tscn" id="11_rg5ho"]
 [ext_resource type="AudioStream" uid="uid://wbx08luua2y6" path="res://sounds/music/lava lamp 11 feb met gitaar.wav" id="13_0gg3a"]
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="13_ircnx"]
-[ext_resource type="Script" uid="uid://b2ncpd86sen3u" path="res://Level_4_wormhole/anglerfish/anglerfish.gd" id="15_23or8"]
 [ext_resource type="Script" uid="uid://ca8vix5bhbd1t" path="res://Level_4_wormhole/sloppy_schipmet_net.gd" id="17_0i06f"]
-[ext_resource type="Script" path="res://Level_4_wormhole/next_level_trigger.gd" id="18_23or8"]
-[ext_resource type="Texture2D" uid="uid://bbyoahf1rqotq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0001.png" id="19_tbvcd"]
-[ext_resource type="Script" path="res://Level_4_wormhole/net.gd" id="20_akr3w"]
-[ext_resource type="Texture2D" uid="uid://cro7vlis68a8x" path="res://Level_4_wormhole/anglerfish/side big/angler side big0002.png" id="20_k14gb"]
+[ext_resource type="Script" uid="uid://hymj30lq60kd" path="res://Level_4_wormhole/next_level_trigger.gd" id="18_23or8"]
+[ext_resource type="PackedScene" uid="uid://r2kc1kkdbyf5" path="res://anglerfish_big.tscn" id="19_yderj"]
+[ext_resource type="Script" uid="uid://drxsb6gmi1l6p" path="res://Level_4_wormhole/net.gd" id="20_akr3w"]
+[ext_resource type="PackedScene" uid="uid://ckolwdbi486d7" path="res://anglerfish_small.tscn" id="20_cq875"]
 [ext_resource type="Texture2D" uid="uid://bm2plvuwnucjv" path="res://Level_4_wormhole/Mr.Sloppy Net.png" id="20_xdy6w"]
 [ext_resource type="Texture2D" uid="uid://cacyuvnblyffb" path="res://Level_4_wormhole/Mr.sloppy schip front met hoofd.png" id="21_akr3w"]
-[ext_resource type="Texture2D" uid="uid://dd00fsyxcq6xy" path="res://Level_4_wormhole/anglerfish/side/angler side0001.png" id="21_mtlke"]
-[ext_resource type="Texture2D" uid="uid://doh8uiui0y3p6" path="res://Level_4_wormhole/anglerfish/side big/angler side big0003.png" id="21_yderj"]
-[ext_resource type="Texture2D" uid="uid://bd8jhxvh16xt1" path="res://Level_4_wormhole/anglerfish/side big/angler side big0004.png" id="22_cq875"]
-[ext_resource type="Texture2D" uid="uid://cye4scg7ck314" path="res://Level_4_wormhole/anglerfish/side/angler side0002.png" id="22_d62uh"]
-[ext_resource type="Texture2D" uid="uid://bjir3ybevtctf" path="res://Level_4_wormhole/anglerfish/side big/angler side big0005.png" id="23_2pklr"]
 [ext_resource type="PackedScene" uid="uid://dcg0htonpigku" path="res://Sprites Algemeen/Cutscenes/prison.tscn" id="23_k4ooe"]
-[ext_resource type="Texture2D" uid="uid://c5dendsvgrnn1" path="res://Level_4_wormhole/anglerfish/side/angler side0003.png" id="23_l6lss"]
-[ext_resource type="Texture2D" uid="uid://c4d1d17x2dol5" path="res://Level_4_wormhole/anglerfish/side/angler side0004.png" id="24_7mepi"]
-[ext_resource type="Texture2D" uid="uid://comgybho3vaa" path="res://Level_4_wormhole/anglerfish/side big/angler side big0006.png" id="24_dwqrc"]
-[ext_resource type="Script" path="res://Level_4_wormhole/sloppy_trigger.gd" id="24_uebwq"]
-[ext_resource type="Texture2D" uid="uid://plv7k8tssx02" path="res://Level_4_wormhole/anglerfish/side/angler side0005.png" id="25_sqyn0"]
-[ext_resource type="PackedScene" path="res://simple_talkbox.tscn" id="25_uebwq"]
-[ext_resource type="Texture2D" uid="uid://2w8ysw7ldv6h" path="res://Level_4_wormhole/anglerfish/side big/angler side big0007.png" id="25_visik"]
-[ext_resource type="Texture2D" uid="uid://ptf205qce6ob" path="res://Level_4_wormhole/anglerfish/side big/angler side big0008.png" id="26_1xuwe"]
-[ext_resource type="Texture2D" uid="uid://dhwi1ic8sitjq" path="res://Level_4_wormhole/anglerfish/side/angler side0006.png" id="26_ebxpq"]
-[ext_resource type="Texture2D" uid="uid://dwja1i6c8ncf2" path="res://Level_4_wormhole/anglerfish/side big/angler side big0009.png" id="27_8oy01"]
-[ext_resource type="Texture2D" uid="uid://dlogluukn1svp" path="res://Level_4_wormhole/anglerfish/side/angler side0007.png" id="27_ntj47"]
-[ext_resource type="Texture2D" uid="uid://cgv61dmsq414w" path="res://Level_4_wormhole/anglerfish/side/angler side0008.png" id="28_2ufnd"]
-[ext_resource type="Texture2D" uid="uid://n2u0duh7kvxq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0010.png" id="28_v2ll7"]
-[ext_resource type="Texture2D" uid="uid://86msbegyqsn4" path="res://Level_4_wormhole/anglerfish/side big/angler side big0011.png" id="29_eqfmp"]
-[ext_resource type="Texture2D" uid="uid://degfm80w6t413" path="res://Level_4_wormhole/anglerfish/side/angler side0009.png" id="29_go6vd"]
-[ext_resource type="Texture2D" uid="uid://f23l2lgacdgq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0012.png" id="30_6sjry"]
-[ext_resource type="Texture2D" uid="uid://y7ljld5urbx3" path="res://Level_4_wormhole/anglerfish/side/angler side0010.png" id="30_7i2xo"]
-[ext_resource type="Texture2D" uid="uid://cxthatixtyo8l" path="res://Level_4_wormhole/anglerfish/side big/angler side big0013.png" id="31_85oiy"]
-[ext_resource type="Texture2D" uid="uid://difeypb2bah6o" path="res://Level_4_wormhole/anglerfish/side/angler side0011.png" id="31_s7tat"]
-[ext_resource type="Texture2D" uid="uid://cjt22b7vg520t" path="res://Level_4_wormhole/anglerfish/side/angler side0012.png" id="32_dcu55"]
-[ext_resource type="Texture2D" uid="uid://devdwk35jav" path="res://Level_4_wormhole/anglerfish/side big/angler side big0014.png" id="32_hg40u"]
-[ext_resource type="Texture2D" uid="uid://d10rcqcce04d" path="res://Level_4_wormhole/anglerfish/side big/angler side big0015.png" id="33_78q3s"]
-[ext_resource type="Texture2D" uid="uid://lvepg458g5dk" path="res://Level_4_wormhole/anglerfish/side/angler side0013.png" id="33_aowj1"]
-[ext_resource type="Texture2D" uid="uid://kfhj01xbboby" path="res://Level_4_wormhole/anglerfish/side big/angler side big0016.png" id="34_jw1ei"]
-[ext_resource type="Texture2D" uid="uid://dtjwrire1cis5" path="res://Level_4_wormhole/anglerfish/side/angler side0014.png" id="34_yhjts"]
-[ext_resource type="Texture2D" uid="uid://b3nkee7gjmme0" path="res://Level_4_wormhole/anglerfish/side/angler side0015.png" id="35_6dhut"]
-[ext_resource type="Texture2D" uid="uid://dad86cpuwvmh3" path="res://Level_4_wormhole/anglerfish/side big/angler side big0017.png" id="35_t3cgr"]
-[ext_resource type="Texture2D" uid="uid://c8wnnpri54bh7" path="res://Level_4_wormhole/anglerfish/side/angler side0016.png" id="36_1eou5"]
-[ext_resource type="Texture2D" uid="uid://c5oycp66mlyr7" path="res://Level_4_wormhole/anglerfish/side big/angler side big0018.png" id="36_8ryxh"]
-[ext_resource type="Texture2D" uid="uid://c6dypi04vpp6h" path="res://Level_4_wormhole/anglerfish/side big/angler side big0019.png" id="37_dp31e"]
-[ext_resource type="Texture2D" uid="uid://cfv1fiys4oatu" path="res://Level_4_wormhole/anglerfish/side/angler side0017.png" id="37_wcsra"]
-[ext_resource type="Texture2D" uid="uid://eimlytcrxc3d" path="res://Level_4_wormhole/anglerfish/side/angler side0018.png" id="38_k7ryh"]
-[ext_resource type="Texture2D" uid="uid://dqllo5rdds07l" path="res://Level_4_wormhole/anglerfish/side big/angler side big0020.png" id="38_qph6g"]
-[ext_resource type="Texture2D" uid="uid://crhvkbl2u7wbe" path="res://Level_4_wormhole/anglerfish/side/angler side0019.png" id="39_h0e5p"]
-[ext_resource type="Texture2D" uid="uid://bi3xhrfduwoaq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0021.png" id="39_l6qe2"]
-[ext_resource type="Texture2D" uid="uid://b3eeim2y3ksg3" path="res://Level_4_wormhole/anglerfish/side/angler side0020.png" id="40_g0dyk"]
-[ext_resource type="Texture2D" uid="uid://dx1a8flgrriwk" path="res://Level_4_wormhole/anglerfish/side big/angler side big0022.png" id="40_qbmd3"]
-[ext_resource type="Texture2D" uid="uid://wmg10vjnxshr" path="res://Level_4_wormhole/anglerfish/side big/angler side big0023.png" id="41_kcd66"]
-[ext_resource type="Texture2D" uid="uid://cuuprubefn3cb" path="res://Level_4_wormhole/anglerfish/side/angler side0021.png" id="41_t3qu2"]
-[ext_resource type="Texture2D" uid="uid://cpqt7cvsk88hp" path="res://Level_4_wormhole/anglerfish/side/angler side0022.png" id="42_1ec0n"]
-[ext_resource type="Texture2D" uid="uid://bskhx8lfr0sxf" path="res://Level_4_wormhole/anglerfish/side big/angler side big0024.png" id="42_7ci5q"]
-[ext_resource type="Texture2D" uid="uid://u6v5dih55yao" path="res://Level_4_wormhole/anglerfish/side big/angler side big0025.png" id="43_2fbro"]
-[ext_resource type="Texture2D" uid="uid://di60i8r0dwnkj" path="res://Level_4_wormhole/anglerfish/side/angler side0023.png" id="43_u3qcr"]
-[ext_resource type="Texture2D" uid="uid://b6yl6nx7kxbhj" path="res://Level_4_wormhole/anglerfish/side big/angler side big0026.png" id="44_kgbbr"]
-[ext_resource type="Texture2D" uid="uid://dqge2q4i4uudr" path="res://Level_4_wormhole/anglerfish/side/angler side0024.png" id="44_vlve8"]
-[ext_resource type="Texture2D" uid="uid://67wonogcn6ky" path="res://Level_4_wormhole/anglerfish/side/angler side0025.png" id="45_2q645"]
-[ext_resource type="Texture2D" uid="uid://bxwi6xyq0jh4i" path="res://Level_4_wormhole/anglerfish/side big/angler side big0027.png" id="45_044nl"]
-[ext_resource type="Texture2D" uid="uid://bdho6jw7ns4hu" path="res://Level_4_wormhole/anglerfish/side big/angler side big0028.png" id="46_gqix0"]
-[ext_resource type="Texture2D" uid="uid://cvbuni35iujqi" path="res://Level_4_wormhole/anglerfish/side/angler side0026.png" id="46_hylw7"]
-[ext_resource type="Texture2D" uid="uid://dqhgmcejmdwr0" path="res://Level_4_wormhole/anglerfish/side big/angler side big0029.png" id="47_esd5w"]
-[ext_resource type="Texture2D" uid="uid://qf5728kqbk5q" path="res://Level_4_wormhole/anglerfish/side/angler side0027.png" id="47_h8ovu"]
-[ext_resource type="Texture2D" uid="uid://do10pciac3oeb" path="res://Level_4_wormhole/anglerfish/side big/angler side big0030.png" id="48_oqmta"]
-[ext_resource type="Texture2D" uid="uid://sieq37blo3ym" path="res://Level_4_wormhole/anglerfish/side/angler side0028.png" id="48_ot1v8"]
-[ext_resource type="Texture2D" uid="uid://bo2mq1w7wis01" path="res://Level_4_wormhole/anglerfish/side/angler side0029.png" id="49_u47d5"]
-[ext_resource type="Texture2D" uid="uid://p7cwj1vepoa7" path="res://Level_4_wormhole/anglerfish/side/angler side0030.png" id="50_tbvcd"]
+[ext_resource type="Script" uid="uid://bjnkwhjyjepaw" path="res://Level_4_wormhole/sloppy_trigger.gd" id="24_uebwq"]
+[ext_resource type="PackedScene" uid="uid://d2nftg6om35gl" path="res://simple_talkbox.tscn" id="25_uebwq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0gg3a"]
 shader = ExtResource("10_pfj2u")
@@ -276,202 +217,6 @@ height = 68.9628
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q645"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rsp1v"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_tbvcd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_k14gb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_yderj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_cq875")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_2pklr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_dwqrc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_visik")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_1xuwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_8oy01")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_v2ll7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_eqfmp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_6sjry")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_85oiy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_hg40u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_78q3s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_jw1ei")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_t3cgr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_8ryxh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_dp31e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_qph6g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_l6qe2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_qbmd3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_kcd66")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_7ci5q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_2fbro")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_kgbbr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_044nl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_gqix0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_esd5w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_oqmta")
-}],
-"loop": true,
-"name": &"default",
-"speed": 24.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1ec0n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("21_mtlke")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_d62uh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_l6lss")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_7mepi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_sqyn0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_ebxpq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_ntj47")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_2ufnd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_go6vd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_7i2xo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_s7tat")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_dcu55")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_aowj1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_yhjts")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_6dhut")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_1eou5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_wcsra")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_k7ryh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_h0e5p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_g0dyk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_t3qu2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_1ec0n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_u3qcr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_vlve8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_2q645")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_hylw7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_h8ovu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_ot1v8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_u47d5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_tbvcd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 24.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cl4cq"]
 size = Vector2(812, 54)
 
@@ -602,94 +347,44 @@ autoplay = true
 [node name="Anglerfish School" type="Node2D" parent="."]
 position = Vector2(-56, -251)
 
-[node name="AnglerfishBig" type="AnimatedSprite2D" parent="Anglerfish School"]
+[node name="AnglerfishBig" parent="Anglerfish School" instance=ExtResource("19_yderj")]
 position = Vector2(53, 35)
-sprite_frames = SubResource("SpriteFrames_rsp1v")
-autoplay = "default"
-frame_progress = 0.796047
-script = ExtResource("15_23or8")
-speed = 40
 
-[node name="AnglerfishSmall" type="AnimatedSprite2D" parent="Anglerfish School"]
+[node name="AnglerfishSmall" parent="Anglerfish School" instance=ExtResource("20_cq875")]
 position = Vector2(23, 73)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-frame_progress = 0.825172
-script = ExtResource("15_23or8")
-speed = 36
 
-[node name="AnglerfishSmall2" type="AnimatedSprite2D" parent="Anglerfish School"]
-position = Vector2(5, 14)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 42
+[node name="AnglerfishSmall2" parent="Anglerfish School" instance=ExtResource("20_cq875")]
+position = Vector2(-27, 13)
 
-[node name="AnglerfishSmall3" type="AnimatedSprite2D" parent="Anglerfish School"]
-position = Vector2(-30, 37)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 38
+[node name="AnglerfishSmall3" parent="Anglerfish School" instance=ExtResource("20_cq875")]
+position = Vector2(-5, 48)
 
-[node name="AnglerfishSmall4" type="AnimatedSprite2D" parent="Anglerfish School"]
-position = Vector2(-64, 19)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
+[node name="AnglerfishSmall4" parent="Anglerfish School" instance=ExtResource("20_cq875")]
+position = Vector2(-57, 66)
 
-[node name="AnglerfishSmall5" type="AnimatedSprite2D" parent="Anglerfish School"]
-position = Vector2(-106, 51)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
+[node name="AnglerfishSmall5" parent="Anglerfish School" instance=ExtResource("20_cq875")]
+position = Vector2(-103, 36)
 
 [node name="Anglerfish School2" type="Node2D" parent="."]
-position = Vector2(-32, 204)
+position = Vector2(-83, 215)
 
-[node name="AnglerfishBig" type="AnimatedSprite2D" parent="Anglerfish School2"]
+[node name="AnglerfishBig" parent="Anglerfish School2" instance=ExtResource("19_yderj")]
 position = Vector2(53, 35)
-sprite_frames = SubResource("SpriteFrames_rsp1v")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 40
 
-[node name="AnglerfishSmall" type="AnimatedSprite2D" parent="Anglerfish School2"]
+[node name="AnglerfishSmall" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
 position = Vector2(23, 73)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
 
-[node name="AnglerfishSmall2" type="AnimatedSprite2D" parent="Anglerfish School2"]
-position = Vector2(5, 14)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 42
+[node name="AnglerfishSmall2" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
+position = Vector2(-27, 13)
 
-[node name="AnglerfishSmall3" type="AnimatedSprite2D" parent="Anglerfish School2"]
-position = Vector2(-30, 37)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 38
+[node name="AnglerfishSmall3" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
+position = Vector2(-5, 48)
 
-[node name="AnglerfishSmall4" type="AnimatedSprite2D" parent="Anglerfish School2"]
-position = Vector2(-64, 19)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
+[node name="AnglerfishSmall4" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
+position = Vector2(-57, 66)
 
-[node name="AnglerfishSmall5" type="AnimatedSprite2D" parent="Anglerfish School2"]
-position = Vector2(-106, 51)
-sprite_frames = SubResource("SpriteFrames_1ec0n")
-autoplay = "default"
-script = ExtResource("15_23or8")
-speed = 36
+[node name="AnglerfishSmall5" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
+position = Vector2(-103, 36)
 
 [node name="Next level trigger" type="Area2D" parent="."]
 position = Vector2(2, -721)

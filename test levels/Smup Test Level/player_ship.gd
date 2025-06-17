@@ -13,6 +13,8 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var current_weapon_type = WeaponTypes.SCATTER
 
 @export var weapon_disabled = false
+@export var respawn_time: float = 3.0
+
 
 @export var bullet_scene: PackedScene
 #@export var bullet_scene : PackedScene
@@ -47,6 +49,12 @@ func _process(delta):
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
 	
+	
+	if recharching_shield:
+		if shield == max_shield:
+			recharching_shield = false
+		else:
+			shield+= 1
 	
 	if not barelling:
 		if input.x > 0:
@@ -145,23 +153,40 @@ func set_shield(value):
 			get_tree().root.add_child(e)
 			e.start(global_position)
 			hide()
-			died.emit()
+			#died.emit()
+			_respawning()
 			is_dead = true
-		
+
+			
+var recharching_shield = false
+func _respawning():
+	$HitAnimation.play("Blinking")
+	await get_tree().create_timer(respawn_time).timeout
+	$HitAnimation.play("RESET")
+	recharching_shield = true
+	is_dead = false
+	
+
 func _on_gun_cooldown_timeout():
 	can_shoot = true
 
 func _on_area_entered(area):
-	if area.is_in_group("enemies"):
-		area.reduce_health(4)
-		$Hit.play()
-		shield -= 4
-	if area.is_in_group("astroids"):
-		area.reduce_health(4)
-		area.explode()
-		$Hit.play()
-		shield -= 8
-		
+	if not recharching_shield:
+		if area.is_in_group("enemies"):
+			area.reduce_health(4)
+			$Hit.play()
+			shield -= 4
+		if area.is_in_group("Angler"):
+			shield -= 100
+			#$Hit.play()
+			print("angler hit")
+			
+		if area.is_in_group("astroids"):
+			area.reduce_health(4)
+			area.explode()
+			$Hit.play()
+			shield -= 8					
+			
 func _on_animated_sprite_2d_animation_finished():
 	if barelling:
 		barelling = false
