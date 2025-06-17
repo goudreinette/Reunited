@@ -156,6 +156,11 @@ func _on_area_entered(area):
 		area.reduce_health(4)
 		$Hit.play()
 		shield -= 4
+	if area.is_in_group("Angler"):
+		shield -= 100
+		#$Hit.play()
+		print("angler hit")
+		
 	if area.is_in_group("astroids"):
 		area.reduce_health(4)
 		area.explode()

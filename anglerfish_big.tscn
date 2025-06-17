@@ -1,0 +1,149 @@
+[gd_scene load_steps=34 format=3 uid="uid://r2kc1kkdbyf5"]
+
+[ext_resource type="Texture2D" uid="uid://bbyoahf1rqotq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0001.png" id="1_4qbev"]
+[ext_resource type="Texture2D" uid="uid://cro7vlis68a8x" path="res://Level_4_wormhole/anglerfish/side big/angler side big0002.png" id="2_q77mr"]
+[ext_resource type="Texture2D" uid="uid://doh8uiui0y3p6" path="res://Level_4_wormhole/anglerfish/side big/angler side big0003.png" id="3_2fdc0"]
+[ext_resource type="Texture2D" uid="uid://bd8jhxvh16xt1" path="res://Level_4_wormhole/anglerfish/side big/angler side big0004.png" id="4_6i8qc"]
+[ext_resource type="Texture2D" uid="uid://bjir3ybevtctf" path="res://Level_4_wormhole/anglerfish/side big/angler side big0005.png" id="5_q3lfj"]
+[ext_resource type="Texture2D" uid="uid://comgybho3vaa" path="res://Level_4_wormhole/anglerfish/side big/angler side big0006.png" id="6_j0ioe"]
+[ext_resource type="Texture2D" uid="uid://2w8ysw7ldv6h" path="res://Level_4_wormhole/anglerfish/side big/angler side big0007.png" id="7_2s0x7"]
+[ext_resource type="Texture2D" uid="uid://ptf205qce6ob" path="res://Level_4_wormhole/anglerfish/side big/angler side big0008.png" id="8_4vrtx"]
+[ext_resource type="Texture2D" uid="uid://dwja1i6c8ncf2" path="res://Level_4_wormhole/anglerfish/side big/angler side big0009.png" id="9_ildhm"]
+[ext_resource type="Texture2D" uid="uid://n2u0duh7kvxq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0010.png" id="10_yowy8"]
+[ext_resource type="Texture2D" uid="uid://86msbegyqsn4" path="res://Level_4_wormhole/anglerfish/side big/angler side big0011.png" id="11_h6mg7"]
+[ext_resource type="Texture2D" uid="uid://f23l2lgacdgq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0012.png" id="12_ix7kk"]
+[ext_resource type="Texture2D" uid="uid://cxthatixtyo8l" path="res://Level_4_wormhole/anglerfish/side big/angler side big0013.png" id="13_ifnlc"]
+[ext_resource type="Texture2D" uid="uid://devdwk35jav" path="res://Level_4_wormhole/anglerfish/side big/angler side big0014.png" id="14_t70r8"]
+[ext_resource type="Texture2D" uid="uid://d10rcqcce04d" path="res://Level_4_wormhole/anglerfish/side big/angler side big0015.png" id="15_hn72d"]
+[ext_resource type="Texture2D" uid="uid://kfhj01xbboby" path="res://Level_4_wormhole/anglerfish/side big/angler side big0016.png" id="16_rfoh3"]
+[ext_resource type="Texture2D" uid="uid://dad86cpuwvmh3" path="res://Level_4_wormhole/anglerfish/side big/angler side big0017.png" id="17_1fqgb"]
+[ext_resource type="Texture2D" uid="uid://c5oycp66mlyr7" path="res://Level_4_wormhole/anglerfish/side big/angler side big0018.png" id="18_1f7pk"]
+[ext_resource type="Texture2D" uid="uid://c6dypi04vpp6h" path="res://Level_4_wormhole/anglerfish/side big/angler side big0019.png" id="19_e3ku1"]
+[ext_resource type="Texture2D" uid="uid://dqllo5rdds07l" path="res://Level_4_wormhole/anglerfish/side big/angler side big0020.png" id="20_ksdgq"]
+[ext_resource type="Texture2D" uid="uid://bi3xhrfduwoaq" path="res://Level_4_wormhole/anglerfish/side big/angler side big0021.png" id="21_fmr28"]
+[ext_resource type="Texture2D" uid="uid://dx1a8flgrriwk" path="res://Level_4_wormhole/anglerfish/side big/angler side big0022.png" id="22_dixk2"]
+[ext_resource type="Texture2D" uid="uid://wmg10vjnxshr" path="res://Level_4_wormhole/anglerfish/side big/angler side big0023.png" id="23_jsa76"]
+[ext_resource type="Texture2D" uid="uid://bskhx8lfr0sxf" path="res://Level_4_wormhole/anglerfish/side big/angler side big0024.png" id="24_lq207"]
+[ext_resource type="Texture2D" uid="uid://u6v5dih55yao" path="res://Level_4_wormhole/anglerfish/side big/angler side big0025.png" id="25_1cny1"]
+[ext_resource type="Texture2D" uid="uid://b6yl6nx7kxbhj" path="res://Level_4_wormhole/anglerfish/side big/angler side big0026.png" id="26_b3plp"]
+[ext_resource type="Texture2D" uid="uid://bxwi6xyq0jh4i" path="res://Level_4_wormhole/anglerfish/side big/angler side big0027.png" id="27_b6yo8"]
+[ext_resource type="Texture2D" uid="uid://bdho6jw7ns4hu" path="res://Level_4_wormhole/anglerfish/side big/angler side big0028.png" id="28_5rgha"]
+[ext_resource type="Texture2D" uid="uid://dqhgmcejmdwr0" path="res://Level_4_wormhole/anglerfish/side big/angler side big0029.png" id="29_w42yl"]
+[ext_resource type="Texture2D" uid="uid://do10pciac3oeb" path="res://Level_4_wormhole/anglerfish/side big/angler side big0030.png" id="30_hqhbm"]
+[ext_resource type="Script" uid="uid://b2ncpd86sen3u" path="res://Level_4_wormhole/anglerfish/anglerfish.gd" id="31_1q48t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rsp1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4qbev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q77mr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2fdc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6i8qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q3lfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j0ioe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2s0x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4vrtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ildhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yowy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_h6mg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ix7kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ifnlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_t70r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hn72d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rfoh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1fqgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1f7pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_e3ku1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ksdgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fmr28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dixk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jsa76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lq207")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1cny1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_b3plp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_b6yo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5rgha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_w42yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hqhbm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p8on"]
+radius = 14.0357
+
+[node name="AnglerfishBig" type="AnimatedSprite2D" groups=["Angler"]]
+sprite_frames = SubResource("SpriteFrames_rsp1v")
+autoplay = "default"
+frame_progress = 0.796047
+script = ExtResource("31_1q48t")
+speed = 40
+
+[node name="Area2D" type="Area2D" parent="." groups=["Angler"]]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 3)
+shape = SubResource("CircleShape2D_2p8on")
