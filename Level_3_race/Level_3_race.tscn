@@ -2,14 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
+[ext_resource type="PackedScene" uid="uid://cmv3bo1hr68gx" path="res://Level_3_race/Cutscenes/3.5 Garage.tscn" id="2_f8te2"]
 [ext_resource type="Texture2D" uid="uid://bu6tg466u7f8p" path="res://Level_3_race/race sprites/race map new.png" id="2_g3r7i"]
-[ext_resource type="PackedScene" uid="uid://dc84xukp6rnfr" path="res://Level_4_wormhole/Level_4 Wormhole.tscn" id="2_kd54t"]
 [ext_resource type="Texture2D" uid="uid://bmo3moghsulqi" path="res://Level_3_race/race sprites/rock.png" id="3_23tvb"]
 [ext_resource type="PackedScene" uid="uid://cw70b3g82u73a" path="res://Level_3_race/Road boundry race.blend" id="3_ev6ad"]
 [ext_resource type="Environment" uid="uid://bt0l4cxk1vg1w" path="res://Level_3_race/environment.tres" id="3_m5o28"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/scripts/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
-[ext_resource type="PackedScene" uid="uid://cxga6eduqi063" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
+[ext_resource type="PackedScene" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/scripts/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
@@ -276,13 +276,15 @@ shader_parameter/FoamGlowIntensity = -0.04
 
 [node name="Level 3 - Race" type="Node3D"]
 script = ExtResource("1_g3r7i")
-next_level = ExtResource("2_kd54t")
+laps = 0
+max_laps = 4
+next_level = ExtResource("2_f8te2")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_m5o28")
 
 [node name="Ship" type="Node3D" parent="."]
-transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.246998, 0.0255188, 0.486174)
+transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.340349, 0.0255188, 0.726725)
 script = ExtResource("3_x61kf")
 acceleration = 0.45
 drag = 0.96
@@ -304,7 +306,7 @@ libraries = {
 autoplay = "race_intro"
 
 [node name="reunited ship" parent="Ship" instance=ExtResource("5_m5o28")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+transform = Transform3D(15, 0, 1.19209e-07, 0, 15, 0, -1.19209e-07, 0, 15, 0, 0, 0)
 
 [node name="Road boundry race" parent="." groups=["race_track"] instance=ExtResource("3_ev6ad")]
 transform = Transform3D(-0.164224, 0, 0.556265, 0, 0.58, 0, -0.556265, 0, -0.164224, 8.47149, -0.319093, -0.126348)
@@ -1211,15 +1213,15 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547,
 curve = SubResource("Curve3D_wpt2s")
 
 [node name="Racer1" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0481924, 0, 0.0638567, 0, 0.0799998, 0, -0.0638553, 0, 0.0481934, -6.31468, 1.63577e-05, -10.4313)
-progress = 34.471
+transform = Transform3D(0.0716304, 0, 0.0356251, 0, 0.0799998, 0, -0.0356243, 0, 0.0716319, -0.0227679, 1.63577e-05, 12.5883)
+progress = 114.002
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="RacePath/Racer1" instance=ExtResource("20_0n72s")]
 
 [node name="Racer2" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0481924, 0, 0.0638553, 0, 0.0799998, 0, -0.0638553, 0, 0.0481924, -4.42222, 1.63577e-05, -9.00873)
-progress = 32.1087
+transform = Transform3D(0.0763877, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763877, -0.942098, 1.63577e-05, 10.43)
+progress = 116.353
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="RacePath/Racer2" instance=ExtResource("20_0n72s")]
@@ -1243,7 +1245,7 @@ stream = ExtResource("25_tf762")
 autoplay = true
 
 [node name="CanLapTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 20.0
 one_shot = true
 autostart = true
 

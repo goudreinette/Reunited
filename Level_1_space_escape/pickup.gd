@@ -13,15 +13,16 @@ var picked_up:bool = false
 func _ready() -> void:
 	start()
 	
-func start(pos:Vector2 = position):
+func start(pos:Vector2 = position,is_random = true):
 	position = pos
 	
 	$Shield.visible = false 
 	$Scatter.visible = false 
 	$Gattling.visible = false
 	
-	var t:int =  randi_range(0,2)
-	CurrentType = t
+	if is_random:
+		var t:int =  randi_range(0,2)
+		CurrentType = t
 	
 	if CurrentType == 0: $Shield.visible =true 
 	elif CurrentType == 1: $Scatter.visible =true 

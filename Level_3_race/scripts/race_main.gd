@@ -34,6 +34,9 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 
 @onready var player = $Ship
 
+func _ready() -> void:
+	$CanLapTimer.start
+	can_lap =false
 
 func _process(delta):
 	# check nearest point by looping over every point and checking distance
@@ -72,8 +75,12 @@ func _process(delta):
 				player.can_move = false
 				
 				$Camera3D.spectator_mode = true
-				await get_tree().create_timer(finish_waiting_time).timeout
-				get_tree().change_scene_to_packed(next_level)
+				### to next level with timer
+				#await get_tree().create_timer(finish_waiting_time).timeout
+				#get_tree().change_scene_to_packed(next_level)
+				#### to next level with button
+				
+				
 				#player.reparent($Path3D/PlayerPathFollow)
 			else: 
 				$Ship/CameraOffset/AnimationPlayer.play("new_lap")
@@ -89,7 +96,8 @@ func _process(delta):
 		$RacePath/PlayerPathFollow.progress += auto_speed
 		player.global_position = $RacePath/PlayerPathFollow.global_position
 		player.global_rotation = lerp(player.global_rotation, $RacePath/PlayerPathFollow.global_rotation, 0.3)
-		
+		if Input.is_action_just_pressed("Level trigger q"): 
+			get_tree().change_scene_to_packed(next_level)
 
 	#if player_progress_ratio > 
 	
