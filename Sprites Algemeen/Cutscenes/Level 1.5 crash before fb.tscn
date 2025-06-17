@@ -1,6 +1,7 @@
-[gd_scene load_steps=70 format=3 uid="uid://evbymmldyj1w"]
+[gd_scene load_steps=71 format=3 uid="uid://evbymmldyj1w"]
 
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_wne10"]
+[ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_wne10"]
 [ext_resource type="Texture2D" uid="uid://be6fxmnp5jom3" path="res://Sprites Algemeen/Cutscenes/animated/spaceship broken animated.png" id="3_kppso"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="4_jkcuf"]
 [ext_resource type="Texture2D" uid="uid://urqrfsjv7e0g" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 4/Smoke Dark - 4.png" id="5_kcjir"]
@@ -554,12 +555,13 @@ libraries = {
 autoplay = "fadein"
 script = ExtResource("1_wne10")
 cutscene_animations = Array[String](["jungle", "fadeout"])
+next_level = ExtResource("2_wne10")
 
 [node name="Crash" type="AnimatedSprite2D" parent="."]
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_lbpod")
 autoplay = "default"
-frame_progress = 0.45603
+frame_progress = 0.417635
 
 [node name="Smoke 1" type="AnimatedSprite2D" parent="Crash"]
 position = Vector2(-59.0001, -16)
@@ -596,10 +598,10 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_mjdbx")
 autoplay = "default"
-frame_progress = 0.914486
+frame_progress = 0.699322
 
 [node name="4_Hours_Earlier" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 texture = ExtResource("9_g5k0k")
 
