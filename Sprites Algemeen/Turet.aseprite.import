@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://odvyq4q85wtl"
-valid=false
+path="res://.godot/imported/Turet.aseprite-99cc00ac53f84d448b4634bc1133d561.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/Turet.aseprite"
+source_file="res://Sprites Algemeen/Turet.aseprite"
+dest_files=["res://.godot/imported/Turet.aseprite-99cc00ac53f84d448b4634bc1133d561.ctex"]
 
 [params]
 

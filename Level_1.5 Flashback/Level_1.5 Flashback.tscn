@@ -251,14 +251,14 @@ var has_entered: bool = false
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
-
+var has_talked = false
 func _process(delta: float) -> void:
-	if player_inside and not is_talking:
+	if player_inside and not is_talking and not has_talked:
 			is_talking = true
 			Dialogic.start(convos[next_convo])
 			has_entered = true
 			Sloppy_Ship.move()
-		
+			has_talked = true
 	#if zijn_allemaal_verwijderd(enemies):
 		#$\"Help Hem Label\".visible = false
 	#else:

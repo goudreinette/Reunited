@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vqlq1qjbtpjs"
-valid=false
+path="res://.godot/imported/Sky pallet test 2.ase-51bd5aace975ee161b910d4b3078f2e0.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Sprites/Sky pallet test 2.ase"
+source_file="res://Sprites Algemeen/Sky pallet test 2.ase"
+dest_files=["res://.godot/imported/Sky pallet test 2.ase-51bd5aace975ee161b910d4b3078f2e0.ctex"]
 
 [params]
 
