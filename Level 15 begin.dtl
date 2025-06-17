@@ -1,0 +1,12 @@
+join Koen leftmost
+Koen: Super handig dat we kunnen repeteren in ons nieuwe ruimteschip!
+join Igor rightmost
+Igor: Ja de rode comeet is super handig voor een band!
+join stephan left
+stephan: Jo guus, wat een goeie groove trouwens 
+join Guus right
+Guus: Thanks, het zou alleen wel nice zijn als we binnenkort eens kunnen optreden!
+Koen: ja hoe gaan we dat eens oplossen
+Igor: hey wat gebeurt daar in de verte?
+Koen: Dat kleine scheepje wordt belaagt. Laten we hem helpen!
+[signal arg="help"]

@@ -164,19 +164,15 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wne10"]
-atlas = ExtResource("3_kppso")
 region = Rect2(0, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dyj2p"]
-atlas = ExtResource("3_kppso")
 region = Rect2(240, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yrnqs"]
-atlas = ExtResource("3_kppso")
 region = Rect2(480, 0, 240, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6eci"]
-atlas = ExtResource("3_kppso")
 region = Rect2(720, 0, 240, 160)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lbpod"]

@@ -53,6 +53,7 @@ directories/dtl_directory={
 "Koen_Dialogue_2": "res://addons/dialogic/dialogue/Koen_Dialogue_2.dtl",
 "Koen_Dialogue_3": "res://addons/dialogic/dialogue/Koen_Dialogue_3.dtl",
 "Koen_Dialogue_4": "res://addons/dialogic/dialogue/Koen_Dialogue_4.dtl",
+"Level 15 begin": "res://Level 15 begin.dtl",
 "Prison 1": "res://Prison 1.dtl",
 "Prison 2 Igor": "res://Prison 2 Igor.dtl",
 "Prison 3 Igor": "res://Prison 3 Igor.dtl",

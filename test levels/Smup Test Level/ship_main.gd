@@ -6,12 +6,13 @@ var score = 0
 
 #@onready var start_button = $CanvasLayer/CenterContainer/Start
 @onready var game_over = $CanvasLayer/CenterContainer/GameOver
-
+@export var starting_dialogue:String
 
 func _ready():
 	game_over.hide()
 #	spawn_enemies()	
-	
+	if starting_dialogue != null:
+		Dialogic.start(starting_dialogue)
 
 func _on_enemy_died(value):
 	score += value
