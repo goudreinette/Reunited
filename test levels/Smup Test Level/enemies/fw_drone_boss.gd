@@ -10,6 +10,7 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var hover_amplitude_y = 1.0
 @export var hover_speed_x = 1.0 
 @export var hover_speed_y = 1.0
+@export var pickup_scene: PackedScene
 	# hoe snel hij beweegt
 var base_position = Vector2.ZERO
 var time_passed = 0.0
@@ -47,12 +48,22 @@ func _process(delta: float) -> void:
 	
 
 # Called when the node enters the scene tree for the first time.
+var pickup_has_spawned = false
 func explode():
 	#get_parent().speed
 	#$AnimationPlayer.play("explode")
 	#$AudioStreamPlayer2D.play()
 	#set_deferred("monitorable", false)
 	#await $AnimationPlayer.animation_finished
+	
+	if pickup_has_spawned == false:
+		pickup_has_spawned = true
+		var i = randi_range(1,2)
+		if i == 1: 
+			var p = pickup_scene.instantiate()
+			get_tree().root.add_child(p)
+			p.start(global_position,false,true)
+		
 	$HitAnimation.play("RESET")
 	died.emit(5)
 	##spawn explosion

@@ -3,7 +3,8 @@ extends Area2D
 signal died 
 signal health_reduced
 
-@export var maxhealth : int = 5 
+@export var maxhealth : int = 20
+ 
 @export var health : int  
 var healthratio : float 
 var explode_scene = preload("res://Effects/Big Explosion.tscn")
@@ -24,6 +25,8 @@ enum FiringPatterns {
 @export var aim_speed = 16
 @export var bullet_speed = 100.0
 var player : ShipPlayer
+
+@export var boss:Area2D
 
 
 
@@ -94,9 +97,10 @@ func explode():
 	#queue_free()
 
 func shoot(spd):
-	var b = bullet_scene.instantiate()
-	get_tree().root.add_child(b)
-	b.start($Canon/ShootPos.global_position,$Canon.rotation,spd)
+	if boss.can_fire:
+		var b = bullet_scene.instantiate()
+		get_tree().root.add_child(b)
+		b.start($Canon/ShootPos.global_position,$Canon.rotation,spd)
 	
 ## in case of burst mode first wait for cooldown	
 func _on_cooldown_timer_timeout() -> void:
@@ -107,8 +111,9 @@ func _on_cooldown_timer_timeout() -> void:
 
 ##Then the charge animation plays
 func _on_charge_animation_animation_finished() -> void:
+	
 	shoot(bullet_speed)
-	$BurstTimer.start()
+	$BurstTimer.start()	
 	$ShootTimer.start()
 
 ## then the burst timer starts and the shooting

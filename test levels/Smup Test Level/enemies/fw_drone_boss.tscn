@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdtclau4u03vj"]
+[gd_scene load_steps=15 format=3 uid="uid://cdtclau4u03vj"]
 
 [ext_resource type="Script" uid="uid://cxvwhcu5yoe8i" path="res://test levels/Smup Test Level/enemies/fw_drone_boss.gd" id="1_iifmp"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="2_nh3ld"]
+[ext_resource type="PackedScene" uid="uid://56vh6md8gpqf" path="res://Level_1_space_escape/pickup.tscn" id="2_usmaa"]
 [ext_resource type="Texture2D" uid="uid://btpxkpcah6kgd" path="res://Level_1_space_escape/level_1_space_escape_sprites/Enemy-Space-ship.png" id="3_kobdm"]
 [ext_resource type="Texture2D" uid="uid://ccaggb3urcv2f" path="res://test levels/Smup Test Level/test_shmup_sprites/Enemy fixed wing drone.png" id="4_t7e6m"]
 [ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/Big explosion.wav" id="5_dt50q"]
@@ -189,6 +190,7 @@ _data = {
 [node name="FW_Drone" type="Area2D" groups=["enemies"]]
 collision_layer = 16
 script = ExtResource("1_iifmp")
+pickup_scene = ExtResource("2_usmaa")
 
 [node name="EnemyFixedWingDrone" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_skvdi")

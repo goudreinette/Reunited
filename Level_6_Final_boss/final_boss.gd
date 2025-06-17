@@ -14,6 +14,14 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var main: Node
 @export var shipparts: Array[Area2D] = []
 
+@export var target_pos: Node2D
+@export var move_in_time: float = 6.0
+var can_fire = false
+
+
+func _ready() -> void:
+	health = max_health
+
 func _physics_process(delta: float) -> void:
 	var destroyed_shipparts_count = 0
 	for part in shipparts:
@@ -22,9 +30,13 @@ func _physics_process(delta: float) -> void:
 	if destroyed_shipparts_count == shipparts.size():
 		set_collision_layer_value(5,true)
 
+func move(target:Node2D,move_time: float):
+	var tween = create_tween()
+	tween.tween_property(self,"global_position",target.global_position,move_time)
+	
 func move_in():
-
-	pass
+	can_fire = true
+	move(target_pos,move_in_time)
 
 # Called when the node enters the scene tree for the first time.
 func explode():

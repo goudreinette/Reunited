@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=29 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://ceirn0ynm16s7" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 2.png" id="19_2u2u0"]
 [ext_resource type="Texture2D" uid="uid://dg1uwmn6q1dev" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 3.png" id="20_4oc06"]
 [ext_resource type="Texture2D" uid="uid://cxg8dhv0o5ryg" path="res://y4k4r1 castle/sprites/Wolk 1.png" id="21_smoym"]
+[ext_resource type="Texture2D" uid="uid://2cbdw4x60fb6" path="res://Level_6_Final_boss/Stage 1 boss/Boss Plane stage 1.png" id="22_4oc06"]
+[ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="23_smoym"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
 resource_local_to_scene = true
@@ -52,6 +54,67 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.6
 
+[sub_resource type="Animation" id="Animation_0d8d2"]
+resource_name = "level start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.63333, 4.03503, 5.83333, 7.03354, 10.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(48, 321), Vector2(70, -199), Vector2(70, -199), Vector2(234, 305), Vector2(234, 305), Vector2(221, -191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.07255, 3.51677, 6.10807, 6.77441),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("22_4oc06"), ExtResource("22_4oc06"), ExtResource("23_smoym"), ExtResource("23_smoym"), ExtResource("22_4oc06")]
+}
+
+[sub_resource type="Animation" id="Animation_2avng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, 321)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_4oc06")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lht2s"]
+_data = {
+&"RESET": SubResource("Animation_2avng"),
+&"level start": SubResource("Animation_0d8d2")
+}
+
 [node name="Level6_main" type="Node2D" node_paths=PackedStringArray("port1", "port2", "speaker1", "speaker2", "lazers")]
 script = ExtResource("1_nnvje")
 port1 = NodePath("Final Boss/Port 1")
@@ -60,55 +123,68 @@ speaker1 = NodePath("Speaker group/Speaker 1")
 speaker2 = NodePath("Speaker group/Speaker 2")
 lazers = NodePath("Final Boss/Lazergroup")
 
-[node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts") instance=ExtResource("1_fcd1t")]
-position = Vector2(119, 31)
+[node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts", "target_pos") instance=ExtResource("1_fcd1t")]
+position = Vector2(120, -34)
 collision_layer = 0
+max_health = 200
+health = 200
 main = NodePath("..")
 shipparts = [NodePath("Turret1"), NodePath("Turret2"), NodePath("Turret3"), NodePath("Turret4"), NodePath("Port 1"), NodePath("Port 2")]
+target_pos = NodePath("../Boss target poss")
 
 [node name="EnemyFixedWingDrone" parent="Final Boss" index="0"]
 material = SubResource("ShaderMaterial_1h2ys")
 
-[node name="Turret1" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret1" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(-64, -21)
 collision_layer = 16
+maxhealth = 20
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
 bullet_speed = 75.0
+boss = NodePath("..")
 
-[node name="Turret2" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret2" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(-41, -11)
 collision_layer = 16
+maxhealth = 20
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
 bullet_speed = 75.0
+boss = NodePath("..")
 
-[node name="Turret3" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret3" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(40, -11)
 collision_layer = 16
+maxhealth = 20
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
 bullet_speed = 75.0
+boss = NodePath("..")
 
-[node name="Turret4" parent="Final Boss" instance=ExtResource("9_nnvje")]
+[node name="Turret4" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(63, -22)
 collision_layer = 16
+maxhealth = 20
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
 bullet_speed = 75.0
+boss = NodePath("..")
 
 [node name="Port 1" parent="Final Boss" instance=ExtResource("10_nnvje")]
 position = Vector2(-40, -24)
+maxhealth = 30
 move_time = 1.0
 rows = 2
 global_formation_offset = Vector2(20, 65)
 
 [node name="Port 2" parent="Final Boss" instance=ExtResource("10_nnvje")]
 position = Vector2(40, -24)
+maxhealth = 30
 move_time = 1.0
 rows = 2
 global_formation_offset = Vector2(140, 65)
@@ -197,6 +273,7 @@ texture_progress = ExtResource("12_1h2ys")
 
 [node name="Player" parent="." instance=ExtResource("6_nnvje")]
 position = Vector2(120, 120)
+current_weapon_type = 0
 max_shield = 200
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
@@ -270,6 +347,18 @@ z_index = 9
 position = Vector2(24, 125)
 texture = ExtResource("20_4oc06")
 
+[node name="Boss target poss" type="Node2D" parent="."]
+position = Vector2(118.276, 32.2769)
+
+[node name="Fake Boss" type="Sprite2D" parent="."]
+position = Vector2(48, 321)
+texture = ExtResource("22_4oc06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fake Boss"]
+libraries = {
+&"": SubResource("AnimationLibrary_lht2s")
+}
+
 [connection signal="health_changed" from="Final Boss" to="CanvasLayer/Boss_UI" method="_on_final_boss_health_changed"]
 [connection signal="health_reduced" from="Final Boss/Turret1" to="Final Boss" method="_on_turret_1_health_reduced"]
 [connection signal="health_reduced" from="Final Boss/Turret2" to="Final Boss" method="_on_turret_2_health_reduced"]
@@ -279,6 +368,7 @@ texture = ExtResource("20_4oc06")
 [connection signal="health_reduced" from="Final Boss/Port 2" to="Final Boss" method="_on_port_2_health_reduced"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="shield_changed" from="Player" to="CanvasLayer/Ship_UI" method="_on_player_shield_changed"]
+[connection signal="animation_finished" from="Fake Boss/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Final Boss"]
 [editable path="CanvasLayer/Ship_UI"]

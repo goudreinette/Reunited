@@ -9,11 +9,14 @@ var picked_up:bool = false
 @export var gattling_time: float = 10.0
 @export var death_time: float = 10.0
 
+var has_speed = false
+@export var speed: float = 10
+
 
 func _ready() -> void:
 	start()
 	
-func start(pos:Vector2 = position,is_random = true):
+func start(pos:Vector2 = position,is_random = true,has_speed= false):
 	position = pos
 	
 	$Shield.visible = false 
@@ -31,6 +34,8 @@ func start(pos:Vector2 = position,is_random = true):
 	queue_free()
 func _physics_process(delta: float) -> void:
 	if picked_up: visible =false
+	if has_speed: position.y +=speed
+	
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Player"):

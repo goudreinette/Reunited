@@ -16,10 +16,13 @@ var score = 0
 
 @export var lazers : Node2D 
 
+@export var start_wait: float = 6.0
+
 func _ready():
 	game_over.hide()
-#	spawn_enemies()	
-	
+	await get_tree().create_timer(start_wait).timeout
+	$"Fake Boss/AnimationPlayer".play("level start")
+
 
 func _input(event):
 	if event.is_action_pressed("1"):
@@ -28,6 +31,8 @@ func _input(event):
 		attack_speakers()
 	if event.is_action_pressed("3"):
 		attack_lazers()
+
+
 
 
 func _on_enemy_died(value):
@@ -71,3 +76,10 @@ func _on_start_pressed():
 func _on_player_shield_changed() -> void:
 	pass # Replace with function body.
 	
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+		$"Final Boss".move_in()
+		attack_drones()
+		attack_speakers()
+		attack_lazers()
