@@ -42,6 +42,7 @@ directories/dch_directory={
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Boss Intro": "res://Boss Intro.dtl",
 "Cubania Bar": "res://Cubania Bar.dtl",
 "Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
 "Garage": "res://Garage.dtl",

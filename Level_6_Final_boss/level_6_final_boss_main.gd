@@ -16,13 +16,33 @@ var score = 0
 
 @export var lazers : Node2D 
 
-@export var start_wait: float = 6.0
+@export var start_wait: float = 4.0
 
 func _ready():
 	game_over.hide()
 	await get_tree().create_timer(start_wait).timeout
-	$"Fake Boss/AnimationPlayer".play("level start")
+	Dialogic.start("Boss Intro")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
+func _on_dialogic_signal(argument:String):
+	if argument =="Start":
+		$"Fake Boss/AnimationPlayer".play("level start")
+	if argument == "Move_in":
+		$"Final Boss".move_in()
+		attack_drones()
+		attack_speakers()
+		attack_lazers()
+
+	
+func _physics_process(delta: float) -> void:
+	if $"Final Boss".can_fire:
+		if randi_range(0, 5000)==1:
+			attack_drones()
+		if randi_range(0, 5000)==1:
+			attack_lazers()
+		if randi_range(0, 5000)==1:
+			attack_speakers()
+	
 
 func _input(event):
 	if event.is_action_pressed("1"):
@@ -79,7 +99,5 @@ func _on_player_shield_changed() -> void:
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-		$"Final Boss".move_in()
-		attack_drones()
-		attack_speakers()
-		attack_lazers()
+	pass
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxs35wh5fummu"]
+[gd_scene load_steps=15 format=3 uid="uid://dxs35wh5fummu"]
 
 [ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="1_5tr1o"]
 [ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_bycxu"]
@@ -11,86 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="8_cj02f"]
 [ext_resource type="Texture2D" uid="uid://b2rkgm2axyjrk" path="res://Sprites Algemeen/Cutscenes/spaceship new no bg.png" id="9_g3fok"]
 [ext_resource type="Texture2D" uid="uid://ch6yhn3mcvf7a" path="res://Sprites Algemeen/Cutscenes/level0 led.png" id="11_o3d1y"]
-
-[sub_resource type="Animation" id="Animation_g1qas"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Level0Walkin/SpaceBG:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Level0Walkin/SpaceshipNewNoBg:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_bycxu"]
-resource_name = "fadeout"
-length = 5.0
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Level0Walkin/SpaceBG:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Level0Walkin/SpaceshipNewNoBg:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_o3d1y"]
-resource_name = "lightson"
-length = 5.0
-step = 1.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Level0Walkin/SpaceshipNewNoBg:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g1qas"]
-_data = {
-&"RESET": SubResource("Animation_g1qas"),
-&"fadeout": SubResource("Animation_bycxu"),
-&"lightson": SubResource("Animation_o3d1y")
-}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0mhp"]
 atlas = ExtResource("11_o3d1y")
