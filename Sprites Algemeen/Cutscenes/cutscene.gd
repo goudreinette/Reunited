@@ -5,10 +5,6 @@ class_name Cutscene extends AnimationPlayer
 @export var next_animation = 0
 @export var next_level: PackedScene
 
-var faded_in: bool = false
-
-
-
 
 func _input(event):
 	if event.is_action_pressed("Level trigger q"):
@@ -18,8 +14,3 @@ func _input(event):
 			play(cutscene_animations[next_animation])
 
 		next_animation+=1
-
-
-
-func _on_animation_finished(anim_name):
-	pass

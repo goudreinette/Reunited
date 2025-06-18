@@ -224,7 +224,7 @@ rotation = 2.25396
 texture = ExtResource("8_cj02f")
 
 [node name="SpaceshipNewNoBg" type="Sprite2D" parent="."]
-modulate = Color(0.621074, 0.621074, 0.621074, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 texture = ExtResource("9_g3fok")
 

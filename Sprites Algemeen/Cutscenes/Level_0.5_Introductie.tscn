@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://crwl6bnt6ly2u"]
 
-[ext_resource type="Script" uid="uid://cgccvqla5vps7" path="res://Level_2_wasteland/cutscenes/crashed_scrpit.gd" id="1_ktr6u"]
+[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_tf4s8"]
 [ext_resource type="Texture2D" uid="uid://b3nop5ntvh4er" path="res://Sprites Algemeen/Cutscenes/spaceship space.png" id="3_3ejko"]
 [ext_resource type="Texture2D" uid="uid://5wvfylg3do4g" path="res://Sprites Algemeen/Cutscenes/title texts/achtervolging in de ruimte.png" id="4_wvf3y"]
 
@@ -90,22 +90,18 @@ _data = {
 &"crash": SubResource("Animation_xou6c")
 }
 
-[node name="Intro_level_1" type="Node2D"]
-script = ExtResource("1_ktr6u")
+[node name="CrashAnimation" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_pbp3c")
+}
+autoplay = "crash"
+script = ExtResource("1_tf4s8")
 
 [node name="Chase" type="Sprite2D" parent="."]
 position = Vector2(120, 80)
 texture = ExtResource("3_3ejko")
 
-[node name="CrashAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_pbp3c")
-}
-autoplay = "crash"
-
 [node name="AchtervolgingInDeRuimte" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 texture = ExtResource("4_wvf3y")
-
-[connection signal="animation_finished" from="CrashAnimation" to="." method="_on_crash_animation_animation_finished"]
