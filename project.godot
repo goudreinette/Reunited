@@ -43,6 +43,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Boss Intro": "res://Boss Intro.dtl",
+"Boss battle Rescue": "res://Boss battle Rescue.dtl",
 "Cubania Bar": "res://Cubania Bar.dtl",
 "Frank_vrij_1": "res://addons/dialogic/dialogue/Frank_vrij_1.dtl",
 "Garage": "res://Garage.dtl",

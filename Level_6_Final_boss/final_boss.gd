@@ -15,7 +15,8 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var shipparts: Array[Area2D] = []
 
 @export var target_pos: Node2D
-@export var move_in_time: float = 6.0
+@export var move_in_time: float = 5
+@export var next_scene: PackedScene
 var can_fire = false
 
 
@@ -58,6 +59,8 @@ func reduce_health(amount):
 	$HitAnimation.play("hit")
 	if health<=0 :
 		explode()
+		await get_tree().create_timer(4.0).timeout 
+		
 		
 func reduce_health_no_blink(amount):
 	health -= amount
@@ -65,6 +68,7 @@ func reduce_health_no_blink(amount):
 	#$HitAnimation.play("hit")
 	if health<=0 :
 		explode()
+		get_tree().change_scene_to_packed(next_scene)
 	
 	##signals from children for reducing health
 func _on_turret_1_health_reduced(amount) -> void:

@@ -1213,14 +1213,14 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.497838, 0.0152547,
 curve = SubResource("Curve3D_wpt2s")
 
 [node name="Racer1" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0716304, 0, 0.0356251, 0, 0.0799998, 0, -0.0356243, 0, 0.0716319, -0.0227679, 1.63577e-05, 12.5883)
+transform = Transform3D(0.0716304, 0, 0.0356251, 0, 0.0799998, 0, -0.0356243, 0, 0.0716319, -0.0226535, 1.63577e-05, 12.5885)
 progress = 114.002
 script = ExtResource("19_wuivs")
 
 [node name="cuba_car_blue" parent="RacePath/Racer1" instance=ExtResource("20_0n72s")]
 
 [node name="Racer2" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0763877, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763877, -0.942098, 1.63577e-05, 10.43)
+transform = Transform3D(0.0763877, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763877, -0.942159, 1.63577e-05, 10.4298)
 progress = 116.353
 script = ExtResource("19_wuivs")
 

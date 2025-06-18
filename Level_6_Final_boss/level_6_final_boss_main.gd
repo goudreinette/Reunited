@@ -33,15 +33,19 @@ func _on_dialogic_signal(argument:String):
 		attack_speakers()
 		attack_lazers()
 
-	
+var jenkmovedin = false	
 func _physics_process(delta: float) -> void:
 	if $"Final Boss".can_fire:
-		if randi_range(0, 5000)==1:
+		if randi_range(0, 2000)==1:
 			attack_drones()
-		if randi_range(0, 5000)==1:
+		if randi_range(0, 2000)==1:
 			attack_lazers()
-		if randi_range(0, 5000)==1:
+		if randi_range(0, 2000)==1:
 			attack_speakers()
+	if $Player.low_health==true and jenkmovedin == false: 
+		$"Kerby en Justin".move_in_both()
+		jenkmovedin = true
+	
 	
 
 func _input(event):

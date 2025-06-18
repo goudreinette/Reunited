@@ -19,6 +19,10 @@ enum WeaponTypes {DEFAULT, SCATTER, GATTLING}
 @export var bullet_scene: PackedScene
 #@export var bullet_scene : PackedScene
 @export var max_shield = 10
+var shield_percentage:float
+var low_health: bool = false
+
+
 var shield = max_shield:
 	set = set_shield
 var in_lazer = false
@@ -44,17 +48,22 @@ func start():
 	$GunCooldown.wait_time = cooldown
 	
 func _process(delta):
-	#print(barelling)
+
+
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += input * speed * delta
 	position = position.clamp(Vector2(8, 8), screensize-Vector2(8, 8))
-	
 	
 	if recharching_shield:
 		if shield == max_shield:
 			recharching_shield = false
 		else:
 			shield+= 1
+	
+	shield_percentage = (shield / max_shield)*100
+	if shield_percentage<33:
+		low_health = true
+		
 	
 	if not barelling:
 		if input.x > 0:

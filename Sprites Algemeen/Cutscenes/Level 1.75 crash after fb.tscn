@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://0frbqy2ff4g7"]
 
-[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_25ii2"]
+[ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_25ii2"]
 [ext_resource type="Texture2D" uid="uid://cqxnicm64cn2d" path="res://Sprites Algemeen/Cutscenes/animated/jungle animated.png" id="2_5fmnx"]
 [ext_resource type="PackedScene" uid="uid://byo7134utnix0" path="res://Level_2_wasteland/Level_2_wasteland.tscn" id="2_s6x7u"]
 [ext_resource type="Texture2D" uid="uid://cn7ehlpprlt0l" path="res://Sprites Algemeen/Cutscenes/title texts/gestrand in de wildernis.png" id="4_5fmnx"]

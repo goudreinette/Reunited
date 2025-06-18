@@ -54,7 +54,7 @@ shader_parameter/vignette_opacity = 0.6
 
 [sub_resource type="Curve2D" id="Curve2D_4sibg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 173, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 195, 1)
 }
 point_count = 2
 
@@ -156,6 +156,8 @@ var is_talking : bool = false
 @export var Sloppy_Ship: Sprite2D 
 var has_entered = false
 
+@export var follow_ani_player: AnimationPlayer
+
 
 @export var next_level: PackedScene
 #@export var pressx : Sprite2D 
@@ -171,6 +173,7 @@ func _process(delta: float) -> void:
 			is_talking = true
 			Dialogic.start(convos[next_convo])
 			has_entered = true
+			follow_ani_player.play(\"RESET\")
 			
 	else :
 		$PressX.visible = false	
@@ -259,10 +262,8 @@ func _process(delta: float) -> void:
 			has_entered = true
 			Sloppy_Ship.move()
 			has_talked = true
-	#if zijn_allemaal_verwijderd(enemies):
-		#$\"Help Hem Label\".visible = false
-	#else:
-		#$\"Help Hem Label\".visible = true
+	
+	#if Input.is_action_pressed(\"Level trigger q\"):		get_tree().change_scene_to_packed(next_level)
 func _on_timeline_ended():
 	## To check if it is OUR timeline
 	if is_talking :
@@ -277,8 +278,9 @@ func _on_dialogic_signal(argument:String):
 	if argument == \"Sloppy move away\":
 		Sloppy_Ship.move_away()
 		await get_tree().create_timer(2).timeout
+### Naar het volgende level ###	
 		get_tree().change_scene_to_packed(next_level)
-##Naar het volgende level
+
 		
 
 func _on_end_of_convo_timer_timeout() -> void:
@@ -508,10 +510,13 @@ rate_of_fire = 0.2
 target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(10, 0)
 curve = SubResource("Curve2D_4sibg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(36, 0)
+position = Vector2(123.015, 0.547264)
+rotation = 0.00628923
+progress = 87.0165
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
 libraries = {
@@ -522,12 +527,13 @@ autoplay = "idle"
 [node name="SmallKerbie" parent="Path2D/PathFollow2D" instance=ExtResource("12_otrsx")]
 position = Vector2(-9, 0)
 
-[node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies", "Kerbie", "Sloppy_Ship") instance=ExtResource("12_kvibj")]
+[node name="Talkbox" parent="Path2D" node_paths=PackedStringArray("enemies", "Kerbie", "Sloppy_Ship", "follow_ani_player") instance=ExtResource("12_kvibj")]
 script = SubResource("GDScript_otrsx")
 convos = ["Kerby_1"]
 enemies = [NodePath("../../Turret"), NodePath("../../Turret2"), NodePath("../../Turret3"), NodePath("../../Turret4")]
 Kerbie = NodePath("../PathFollow2D/SmallKerbie")
 Sloppy_Ship = NodePath("../Talkbox2/BossFrontSketch")
+follow_ani_player = NodePath("../PathFollow2D/AnimationPlayer")
 next_level = ExtResource("14_2xa2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Talkbox"]

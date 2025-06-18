@@ -1,6 +1,6 @@
 [gd_scene load_steps=71 format=3 uid="uid://evbymmldyj1w"]
 
-[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_wne10"]
+[ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_wne10"]
 [ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_wne10"]
 [ext_resource type="Texture2D" uid="uid://be6fxmnp5jom3" path="res://Sprites Algemeen/Cutscenes/animated/spaceship broken animated.png" id="3_kppso"]
 [ext_resource type="Texture2D" uid="uid://b3m65hpaleddf" path="res://Effects/Pixel Fire Asset Pack V1/Smoke Dark - 3/Smoke Dark - 3.png" id="4_jkcuf"]

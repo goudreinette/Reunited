@@ -44,6 +44,7 @@ _data = {
 
 [node name="BossBattle" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 3
 position = Vector2(120, 80)
 texture = ExtResource("1_t3a42")
 
@@ -51,3 +52,4 @@ texture = ExtResource("1_t3a42")
 libraries = {
 &"": SubResource("AnimationLibrary_nmqn4")
 }
+autoplay = "fade in out"

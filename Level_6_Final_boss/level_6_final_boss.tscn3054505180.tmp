@@ -1,8 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=31 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
-[ext_resource type="PackedScene" uid="uid://chetvfl1i84ox" path="res://Sprites Algemeen/Cutscenes/aftiteling.tscn" id="3_0d8d2"]
+[ext_resource type="PackedScene" path="res://Sprites Algemeen/Cutscenes/aftiteling.tscn" id="3_0d8d2"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="3_2i3f6"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_ust2t"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="4_yow3e"]
@@ -25,10 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://cxg8dhv0o5ryg" path="res://y4k4r1 castle/sprites/Wolk 1.png" id="21_smoym"]
 [ext_resource type="Texture2D" uid="uid://2cbdw4x60fb6" path="res://Level_6_Final_boss/Stage 1 boss/Boss Plane stage 1.png" id="22_4oc06"]
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="23_smoym"]
-[ext_resource type="PackedScene" uid="uid://caxaaimgvaoln" path="res://Sprites Algemeen/Cutscenes/Level 6 boss battle.tscn" id="26_2avng"]
-[ext_resource type="PackedScene" uid="uid://c4nsuf0mnd4hx" path="res://small_Justin.tscn" id="27_4oo36"]
-[ext_resource type="Script" uid="uid://5bxmrqhe2yb1" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
-[ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="28_6kgbc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
 resource_local_to_scene = true
@@ -280,7 +276,7 @@ texture_progress = ExtResource("12_1h2ys")
 
 [node name="Player" parent="." instance=ExtResource("6_nnvje")]
 position = Vector2(120, 120)
-max_shield = 30
+max_shield = 200
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("7_mqkve")
@@ -368,28 +364,6 @@ texture = ExtResource("22_4oc06")
 libraries = {
 &"": SubResource("AnimationLibrary_lht2s")
 }
-
-[node name="Titel_Level6BossBattle" parent="." instance=ExtResource("26_2avng")]
-
-[node name="Kerby en Justin" type="Node2D" parent="." node_paths=PackedStringArray("justin_target", "kerbie_target")]
-position = Vector2(115, 41)
-script = ExtResource("27_6kgbc")
-justin_target = NodePath("TargetJustin")
-kerbie_target = NodePath("TargetKerby")
-
-[node name="SmallJustin" parent="Kerby en Justin" instance=ExtResource("27_4oo36")]
-position = Vector2(203.022, 50)
-does_hover = true
-
-[node name="TargetJustin" type="Node2D" parent="Kerby en Justin"]
-position = Vector2(40.022, 50)
-
-[node name="SmallKerbie" parent="Kerby en Justin" instance=ExtResource("28_6kgbc")]
-position = Vector2(-190.978, 50)
-does_hover = true
-
-[node name="TargetKerby" type="Node2D" parent="Kerby en Justin"]
-position = Vector2(-26.978, 50)
 
 [connection signal="health_changed" from="Final Boss" to="CanvasLayer/Boss_UI" method="_on_final_boss_health_changed"]
 [connection signal="health_reduced" from="Final Boss/Turret1" to="Final Boss" method="_on_turret_1_health_reduced"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dxs35wh5fummu"]
 
 [ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="1_5tr1o"]
-[ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_bycxu"]
+[ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_bycxu"]
 [ext_resource type="Texture2D" uid="uid://cq1f6u1yp731g" path="res://Level_1_space_escape/level_1_space_escape_sprites/Green bg 240x.png" id="2_bycxu"]
 [ext_resource type="PackedScene" uid="uid://crwl6bnt6ly2u" path="res://Sprites Algemeen/Cutscenes/Level_0.5_Introductie.tscn" id="2_g1qas"]
 [ext_resource type="Texture2D" uid="uid://csy1js4i0kw0y" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid small 2.png" id="3_g1qas"]
@@ -224,7 +224,7 @@ rotation = 2.25396
 texture = ExtResource("8_cj02f")
 
 [node name="SpaceshipNewNoBg" type="Sprite2D" parent="."]
-modulate = Color(0.621074, 0.621074, 0.621074, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 texture = ExtResource("9_g3fok")
 
