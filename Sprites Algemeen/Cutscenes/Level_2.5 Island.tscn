@@ -114,6 +114,10 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ijsni"]
+resource_name = "fadeout"
+length = 3.0
+
 [sub_resource type="Animation" id="Animation_ndp5a"]
 resource_name = "text"
 length = 3.0
@@ -130,10 +134,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_ijsni"]
-resource_name = "fadeout"
-length = 3.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
 _data = {

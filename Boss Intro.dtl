@@ -1,10 +1,10 @@
 Frank: Man, ik ben blij dat we daar weg zijn
-Igor: Wat een geluk met die wetenscchapper zeg!
+Igor: Wat een geluk met die wetenschapper zeg!
 Guus: Ja laten we snel naar Odeon gaan! ik denk dat we nog net optijd kunnen komen!
 stephan: Ja we kunnen daar vertellen wat er gebeurt bij Sloppify
 [signal arg="Start"]
 Igor: Hey wat hoor ik?
-Koen: oh oh....
-stephan: zet je schrap jongens
+Koen: Oh oh....
+stephan: Zet je schrap jongens
 [wait time="2.0"]
 [signal arg="Move_in"]
