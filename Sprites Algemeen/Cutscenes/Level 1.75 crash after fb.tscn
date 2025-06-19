@@ -137,6 +137,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CrashAnimation/Crash:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_5fmnx"]
 resource_name = "text"
@@ -589,7 +601,6 @@ cutscene_animations = Array[String](["jungle", "text", "fadeout"])
 next_level = ExtResource("2_s6x7u")
 
 [node name="Jungle" type="AnimatedSprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_eompn")
 autoplay = "default"
@@ -597,6 +608,7 @@ frame = 1
 frame_progress = 0.89747
 
 [node name="Crash" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_mlxe4")
 autoplay = "default"
@@ -629,6 +641,5 @@ sprite_frames = SubResource("SpriteFrames_jp04v")
 autoplay = "default"
 
 [node name="GestrandInDeWildernis" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
 position = Vector2(120, 80)
 texture = ExtResource("4_5fmnx")
