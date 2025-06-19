@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dicr8htuo78mk"]
+[gd_scene load_steps=18 format=3 uid="uid://dicr8htuo78mk"]
 
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_8f018"]
 [ext_resource type="PackedScene" uid="uid://dkw3edwkuuvad" path="res://Level_2_wasteland/Level_2.5 Cubania Bar.tscn" id="2_ndp5a"]
-[ext_resource type="Texture2D" uid="uid://da0gluf1js03i" path="res://Sprites Algemeen/Cutscenes/island.png" id="3_ijsni"]
+[ext_resource type="Texture2D" uid="uid://d4hnlyl7tb5cx" path="res://Sprites Algemeen/Cutscenes/animated/island animated.png" id="3_ndp5a"]
 [ext_resource type="Texture2D" uid="uid://daqxicu5bueju" path="res://Sprites Algemeen/Cutscenes/title texts/racen op cubania.png" id="4_ndp5a"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
@@ -144,6 +144,56 @@ _data = {
 &"text": SubResource("Animation_ndp5a")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijsni"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(0, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pypuj"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(240, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hak0g"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(480, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evnjm"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(720, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4g1j"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(960, 0, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3ymg"]
+atlas = ExtResource("3_ndp5a")
+region = Rect2(1200, 0, 240, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6misu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijsni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pypuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hak0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evnjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4g1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3ymg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="CrashAnimation" type="AnimationPlayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_pbp3c")
@@ -153,9 +203,10 @@ script = ExtResource("1_8f018")
 cutscene_animations = Array[String](["text"])
 next_level = ExtResource("2_ndp5a")
 
-[node name="island" type="Sprite2D" parent="."]
+[node name="island" type="AnimatedSprite2D" parent="."]
 position = Vector2(120, 80)
-texture = ExtResource("3_ijsni")
+sprite_frames = SubResource("SpriteFrames_6misu")
+autoplay = "default"
 
 [node name="RacenOpCubania" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)

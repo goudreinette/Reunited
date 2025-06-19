@@ -3,5 +3,6 @@ Igor: Hey how did you get out?!
 stephan: Some guy helped us.
 [signal arg="Speaker"]
 "Speaker Voice": That would be me.
-"Speaker Voice": I don't have acces to your cell. You will need to get the key card I think the guard left it in his office. it is around the corner
+"Speaker Voice": I don't have access to your cell.
+"Speaker Voice":  You will need to get the key card, I think the guard left it in his office. It's around the corner.
 [signal arg="Stop Speaker"]

@@ -58,5 +58,6 @@ texture = SubResource("AtlasTexture_xn21l")
 stretch_mode = 2
 
 [node name="ScoreCounter" parent="HBoxContainer" instance=ExtResource("2_hbnwe")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3

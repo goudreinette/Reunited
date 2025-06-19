@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
-[ext_resource type="PackedScene" uid="uid://chetvfl1i84ox" path="res://Sprites Algemeen/Cutscenes/aftiteling.tscn" id="3_0d8d2"]
+[ext_resource type="PackedScene" uid="uid://cvx1np4um1dwj" path="res://Sprites Algemeen/Cutscenes/aftiteling.tscn" id="3_0d8d2"]
 [ext_resource type="PackedScene" uid="uid://b54c7ad6cogrm" path="res://test levels/Smup Test Level/ship_ui.tscn" id="3_2i3f6"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_ust2t"]
 [ext_resource type="Texture2D" uid="uid://cr7usmfo6apt8" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/UI objects/GAME_OVER (72 x 8).png" id="4_yow3e"]
@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="23_smoym"]
 [ext_resource type="PackedScene" uid="uid://caxaaimgvaoln" path="res://Sprites Algemeen/Cutscenes/Level 6 boss battle.tscn" id="26_2avng"]
 [ext_resource type="PackedScene" uid="uid://c4nsuf0mnd4hx" path="res://small_Justin.tscn" id="27_4oo36"]
-[ext_resource type="Script" uid="uid://5bxmrqhe2yb1" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
+[ext_resource type="Script" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="28_6kgbc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
