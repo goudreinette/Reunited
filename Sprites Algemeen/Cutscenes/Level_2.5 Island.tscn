@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dicr8htuo78mk"]
+[gd_scene load_steps=11 format=3 uid="uid://dicr8htuo78mk"]
 
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_8f018"]
 [ext_resource type="PackedScene" uid="uid://dkw3edwkuuvad" path="res://Level_2_wasteland/Level_2.5 Cubania Bar.tscn" id="2_ndp5a"]
@@ -131,15 +131,20 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ijsni"]
+resource_name = "fadeout"
+length = 3.0
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pbp3c"]
 _data = {
 &"RESET": SubResource("Animation_cyqq3"),
 &"crash": SubResource("Animation_xou6c"),
 &"fadein": SubResource("Animation_8f018"),
+&"fadeout": SubResource("Animation_ijsni"),
 &"text": SubResource("Animation_ndp5a")
 }
 
-[node name="CrashAnimation2" type="AnimationPlayer"]
+[node name="CrashAnimation" type="AnimationPlayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_pbp3c")
 }
@@ -149,7 +154,6 @@ cutscene_animations = Array[String](["text"])
 next_level = ExtResource("2_ndp5a")
 
 [node name="island" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 texture = ExtResource("3_ijsni")
 

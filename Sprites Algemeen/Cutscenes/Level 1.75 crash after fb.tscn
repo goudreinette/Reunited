@@ -641,5 +641,6 @@ sprite_frames = SubResource("SpriteFrames_jp04v")
 autoplay = "default"
 
 [node name="GestrandInDeWildernis" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 texture = ExtResource("4_5fmnx")
