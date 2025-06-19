@@ -111,6 +111,7 @@ glossary/glossary_files=[]
 
 window/size/viewport_width=240
 window/size/viewport_height=160
+window/size/mode=3
 window/size/initial_position_type=0
 window/size/initial_position=Vector2i(2000, 0)
 window/size/initial_screen=1
