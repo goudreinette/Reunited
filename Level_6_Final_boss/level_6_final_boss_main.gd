@@ -42,9 +42,13 @@ func _physics_process(delta: float) -> void:
 			attack_lazers()
 		if randi_range(0, 2000)==1:
 			attack_speakers()
-	if $Player.low_health==true and jenkmovedin == false: 
-		$"Kerby en Justin".move_in_both()
-		jenkmovedin = true
+	
+	#if $Player.low_health==true and jenkmovedin == false: 
+		#$"Kerby en Justin".move_in_both()
+		#jenkmovedin = true
+		
+
+	
 	
 	
 
@@ -55,6 +59,10 @@ func _input(event):
 		attack_speakers()
 	if event.is_action_pressed("3"):
 		attack_lazers()
+
+	if event.is_action_pressed("Level trigger q") == true and jenkmovedin == false: 
+		$"Kerby en Justin".move_in_both()
+		jenkmovedin = true
 
 
 
