@@ -11,6 +11,7 @@ func _on_animation_player_animation_finished(anim_name):
 		$AnimationPlayer.play("crash")
 		$AnimatedSprite2D.play("spin")
 		$Timer.start()
+		$Crash3.play()
 	#if anim_name == "crash":
 		#$AnimatedSprite2D.visible = false
 		#$"Main planet/Explosion impact".play("impact")
@@ -23,10 +24,12 @@ func _on_ship_explosion_animation_finished():
 #bullet detect
 func _on_area_2d_area_entered(area):
 	if area == $EnemyBullet:
+		$Explosion2.play()
 		$AnimationPlayer.play("hit")
 		$EnemyBullet.queue_free()
 		$AnimatedSprite2D/Boosters.queue_free()
 		$"AnimatedSprite2D/Ship explosion".play("hit")
+		
 	
 
 # Crash on planet
@@ -38,4 +41,5 @@ func _on_explosion_impact_animation_finished():
 func _on_timer_timeout() -> void:
 	$AnimatedSprite2D.visible = false
 	$"Main planet/Explosion impact".play("impact")
+	$BigExplosion1.play()
 	

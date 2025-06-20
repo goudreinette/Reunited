@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhl5ng17x1lny"]
+[gd_scene load_steps=15 format=3 uid="uid://bhl5ng17x1lny"]
 
 [ext_resource type="Script" uid="uid://bff5tuepavseu" path="res://test levels/Walking Scenes TEST/Player/Scripts/Player.gd" id="1_n8ajk"]
 [ext_resource type="Texture2D" uid="uid://dj8uibotctv5v" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Stephan_Walk-cycle front & sides.png" id="2_sr2un"]
 [ext_resource type="Texture2D" uid="uid://17wbobtvnie8" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Dashing Lines.png" id="3_ohg2k"]
+[ext_resource type="AudioStream" uid="uid://b3g7nt20t8rrm" path="res://sounds/Dash/Dash.wav" id="4_26rq3"]
+[ext_resource type="AudioStream" uid="uid://caabrmd0vnx75" path="res://sounds/Vallen/Vallen.wav" id="5_v5dxh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni5tt"]
 radius = 4.0
@@ -297,6 +299,14 @@ collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="projectile detect"]
 shape = SubResource("CircleShape2D_ohg2k")
+
+[node name="Dash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_26rq3")
+volume_db = 24.0
+
+[node name="Vallen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v5dxh")
+volume_db = 12.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

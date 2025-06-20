@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1exqem33yoah"]
+[gd_scene load_steps=8 format=3 uid="uid://c1exqem33yoah"]
 
 [ext_resource type="Script" uid="uid://b2ob06vukdjpw" path="res://Level_2_wasteland/goop_splat.gd" id="1_gl2in"]
 [ext_resource type="Texture2D" uid="uid://c4ccefesgdjgb" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Goop splat.png" id="1_n83jo"]
+[ext_resource type="AudioStream" uid="uid://b1wodt2v7wyji" path="res://sounds/PLant Gloop/PLant gloop shot/Plant Gloop shot.wav" id="2_5duvk"]
 
 [sub_resource type="Animation" id="Animation_xuyhr"]
 length = 0.001
@@ -97,6 +98,10 @@ z_index = -1
 collision_layer = 128
 collision_mask = 0
 script = ExtResource("1_gl2in")
+
+[node name="PlantGloopShot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5duvk")
+autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_n83jo")

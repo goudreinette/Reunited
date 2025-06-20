@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ciobmqppsmx11"]
+[gd_scene load_steps=12 format=3 uid="uid://ciobmqppsmx11"]
 
 [ext_resource type="Texture2D" uid="uid://da0scgdlmj6dx" path="res://Level_2_wasteland/carnivorous plant/plant.png" id="1_055h5"]
 [ext_resource type="Script" uid="uid://cmm0djbnwpcy0" path="res://Level_2_wasteland/carnivorous plant/carnivorous_plant.gd" id="2_bgmqw"]
+[ext_resource type="AudioStream" uid="uid://swpum22i237f" path="res://sounds/Plant Bite/Plant Bite.wav" id="3_ayw1c"]
 [ext_resource type="Texture2D" uid="uid://ccjwmgce3adll" path="res://Level_2_wasteland/carnivorous plant/carnivorous_plant_shadow.png" id="3_sd5p6"]
+[ext_resource type="AudioStream" uid="uid://p7oygtfxkk0i" path="res://sounds/Plant Bite/Plant Bite 2.wav" id="4_cgjra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jisbi"]
 size = Vector2(42, 9)
@@ -103,6 +105,14 @@ texture = ExtResource("1_055h5")
 offset = Vector2(31, -19)
 hframes = 15
 script = ExtResource("2_bgmqw")
+
+[node name="PlantBite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ayw1c")
+volume_db = 12.0
+
+[node name="PlantBite2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cgjra")
+volume_db = 12.0
 
 [node name="TrapArea" type="Area2D" parent="."]
 position = Vector2(40, -19)
