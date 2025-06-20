@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="23_smoym"]
 [ext_resource type="PackedScene" uid="uid://caxaaimgvaoln" path="res://Sprites Algemeen/Cutscenes/Level 6 boss battle.tscn" id="26_2avng"]
 [ext_resource type="PackedScene" uid="uid://c4nsuf0mnd4hx" path="res://small_Justin.tscn" id="27_4oo36"]
-[ext_resource type="Script" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
+[ext_resource type="Script" uid="uid://5bxmrqhe2yb1" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="28_6kgbc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
