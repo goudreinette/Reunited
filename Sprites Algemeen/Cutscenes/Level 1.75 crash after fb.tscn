@@ -601,6 +601,7 @@ cutscene_animations = Array[String](["jungle", "text", "fadeout"])
 next_level = ExtResource("2_s6x7u")
 
 [node name="Jungle" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_eompn")
 autoplay = "default"
@@ -608,7 +609,7 @@ frame = 1
 frame_progress = 0.89747
 
 [node name="Crash" type="AnimatedSprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_mlxe4")
 autoplay = "default"

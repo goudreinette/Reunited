@@ -79,9 +79,10 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "normal"
 			$Boosters.animation = "forward"	
 	
-	if Input.is_action_pressed("dodge"):
+	if Input.is_action_just_pressed("dodge"):
 		barelling = true
 		$AnimatedSprite2D.play("barrel roll")
+		$DodgeRoll.play()
 	
 		
 	if Input.is_action_pressed("shoot") and not weapon_disabled:

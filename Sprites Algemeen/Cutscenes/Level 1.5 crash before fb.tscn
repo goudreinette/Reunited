@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://evbymmldyj1w"]
+[gd_scene load_steps=73 format=3 uid="uid://evbymmldyj1w"]
 
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_wne10"]
 [ext_resource type="PackedScene" uid="uid://bcc65hoaaqri8" path="res://Level_1.5 Flashback/Level_1.5 Flashback.tscn" id="2_wne10"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cqxnicm64cn2d" path="res://Sprites Algemeen/Cutscenes/animated/jungle animated.png" id="8_kppso"]
 [ext_resource type="Texture2D" uid="uid://cv66dcp11dq83" path="res://Effects/Pixel Fire Asset Pack V1/Fire 7 - 2/Fire 7 - 2.png" id="8_rxpbq"]
 [ext_resource type="Texture2D" uid="uid://hrg32giy8osy" path="res://Sprites Algemeen/Cutscenes/4 Hours Earlier.png" id="9_g5k0k"]
+[ext_resource type="AudioStream" uid="uid://ddcndygo0xkkm" path="res://sounds/vuur/Vuur kort 1.wav" id="11_dyj2p"]
+[ext_resource type="AudioStream" uid="uid://cgc8crowg1vyx" path="res://sounds/Spaceship ambient/Ambient Space Sound.wav" id="12_yrnqs"]
 
 [sub_resource type="Animation" id="Animation_cyqq3"]
 length = 0.001
@@ -606,7 +608,6 @@ autoplay = "default"
 frame_progress = 0.0208124
 
 [node name="Jungle" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_mjdbx")
 autoplay = "default"
@@ -616,5 +617,14 @@ frame_progress = 0.699322
 modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 texture = ExtResource("9_g5k0k")
+
+[node name="VuurKort1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_dyj2p")
+autoplay = true
+
+[node name="AmbientSpaceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_yrnqs")
+volume_db = -9.842
+autoplay = true
 
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

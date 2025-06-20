@@ -392,6 +392,7 @@ position = Vector2(-57, 66)
 position = Vector2(-103, 36)
 
 [node name="Next level trigger" type="Area2D" parent="."]
+process_mode = 4
 position = Vector2(2, -721)
 script = ExtResource("18_23or8")
 next_level = ExtResource("23_k4ooe")
@@ -401,6 +402,7 @@ position = Vector2(114, -72)
 shape = SubResource("RectangleShape2D_cl4cq")
 
 [node name="Sloppy Trigger" type="Area2D" parent="."]
+process_mode = 4
 position = Vector2(3, -382)
 script = ExtResource("24_uebwq")
 

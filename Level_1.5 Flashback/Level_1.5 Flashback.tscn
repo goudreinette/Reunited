@@ -200,10 +200,10 @@ func _on_dialogic_signal(argument:String):
 		#await get_tree().create_timer(2).timeout
 		#Sloppy_Ship.move()
 		
-	if argument == \"Sloppy move away\":
-		Sloppy_Ship.move_away()
-		await get_tree().create_timer(2).timeout
-		get_tree().change_scene_to_packed(next_level)
+	#if argument == \"Sloppy move away\":
+		#Sloppy_Ship.move_away()
+		#await get_tree().create_timer(2).timeout
+		#get_tree().change_scene_to_packed(next_level)
 ##Naar het volgende level
 		
 
@@ -249,19 +249,26 @@ var has_entered: bool = false
 
 
 @export var next_level: PackedScene
+
+var sloppy_moved_away = false
 #@export var pressx : Sprite2D 
 
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+
 var has_talked = false
+
 func _process(delta: float) -> void:
-	if player_inside and not is_talking and not has_talked:
-			is_talking = true
-			Dialogic.start(convos[next_convo])
-			has_entered = true
-			Sloppy_Ship.move()
-			has_talked = true
+	if Input.is_action_just_pressed(\"Level trigger q\") and not is_talking and not has_talked:
+		is_talking = true
+		Dialogic.start(convos[next_convo])
+		has_entered = true
+		Sloppy_Ship.move()
+		has_talked = true
+
+	if sloppy_moved_away and Input.is_action_just_pressed(\"Level trigger q\"):
+		get_tree().change_scene_to_packed(next_level)
 	
 	#if Input.is_action_pressed(\"Level trigger q\"):		get_tree().change_scene_to_packed(next_level)
 func _on_timeline_ended():
@@ -277,9 +284,10 @@ func _on_dialogic_signal(argument:String):
 
 	if argument == \"Sloppy move away\":
 		Sloppy_Ship.move_away()
-		await get_tree().create_timer(2).timeout
+		sloppy_moved_away = true
+		#await get_tree().create_timer(2).timeout
 ### Naar het volgende level ###	
-		get_tree().change_scene_to_packed(next_level)
+		
 
 		
 

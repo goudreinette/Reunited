@@ -8,6 +8,10 @@ var player_in_mouth : bool = false
 
 func _on_trap_area_body_entered(body):
 	$AnimationPlayer.play("Attack")
+	if randi_range(0, 1) == 0:
+		$PlantBite.play()
+	else:
+		$PlantBite2.play()
 	
 	
 

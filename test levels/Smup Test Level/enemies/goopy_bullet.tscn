@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0am6wpvkaciw"]
+[gd_scene load_steps=6 format=3 uid="uid://0am6wpvkaciw"]
 
 [ext_resource type="Script" uid="uid://d3vcr8uo5sef2" path="res://test levels/Smup Test Level/enemies/goopy_bullet.gd" id="1_mgbek"]
 [ext_resource type="PackedScene" uid="uid://c1exqem33yoah" path="res://Level_2_wasteland/goop_splat.tscn" id="2_2avqy"]
 [ext_resource type="Texture2D" uid="uid://c2s7q3iotigh2" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Goop bullet.png" id="2_mgbek"]
+[ext_resource type="AudioStream" uid="uid://bsua3q5rltfeu" path="res://sounds/PLant Gloop/PLant gloop shot/Gloop shot 4.wav" id="3_2yjr8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgbek"]
 radius = 3.53553
@@ -22,6 +23,10 @@ shape = SubResource("CircleShape2D_mgbek")
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
+
+[node name="GloopShot4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2yjr8")
+autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_mgbek")

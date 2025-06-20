@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dgdfahpdeft6k"]
+[gd_scene load_steps=73 format=3 uid="uid://dgdfahpdeft6k"]
 
 [ext_resource type="Script" uid="uid://d1ako1kfljv0p" path="res://Level_1_space_escape/test_level_1_shrink_crash.gd" id="1_owjmi"]
 [ext_resource type="Texture2D" uid="uid://bp8s7vxpbcbkh" path="res://Effects/Pixel Fire Asset Pack V1/Fire 4 - 1/Fire 4_1-1.png" id="2_lb3ue"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://vtgnp04evjex" path="res://Level_1_space_escape/level_1_space_escape_sprites/Small fire.png" id="16_roipu"]
 [ext_resource type="Texture2D" uid="uid://q7sliuto7gjm" path="res://Level_1_space_escape/level_1_space_escape_sprites/Ice_planet_100x.png" id="18_bqkpq"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://test levels/Smup Test Level/enemies/enemy_bullet.tscn" id="19_ns6ep"]
+[ext_resource type="AudioStream" uid="uid://yhk35kw8ifxq" path="res://sounds/Crash/Crash 3.wav" id="20_lb3ue"]
+[ext_resource type="AudioStream" uid="uid://dxfoa4k61qo5b" path="res://sounds/Explosions/Big explosion 1.wav" id="21_pekw0"]
+[ext_resource type="AudioStream" uid="uid://b5w542upckcdj" path="res://sounds/Explosions/Explosion 2.wav" id="22_3hovc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0erl"]
 atlas = ExtResource("10_23fxl")
@@ -555,6 +558,18 @@ speed = -40
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="Crash3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_lb3ue")
+volume_db = 6.0
+
+[node name="BigExplosion1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_pekw0")
+volume_db = 6.0
+
+[node name="Explosion2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_3hovc")
+volume_db = 6.0
 
 [connection signal="animation_finished" from="Main planet/Explosion impact" to="." method="_on_explosion_impact_animation_finished"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2d" to="." method="_on_area_2d_area_entered"]

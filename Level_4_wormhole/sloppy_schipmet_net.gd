@@ -29,20 +29,23 @@ func _ready():
 	sloppy_callable = true
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Level trigger q") and sloppy_callable:
-		move_to_screen()
-		has_moved = true
-		Dialogic.start(convo_1)
 	if player_in_net:
-		
 		player.global_position = Player_stuck_pos.global_position
 		player.shield = 30
 		player.show_boosters = false
+		
 		Dialogic.start(convo_2)
 		
-		if to_next_level_has_been_called == false:
-			to_next_level()
+		if Input.is_action_just_pressed("Level trigger q"):
 			to_next_level_has_been_called = true
+			get_tree().change_scene_to_packed(next_level)
+			
+			
+	if Input.is_action_just_pressed("Level trigger q") and sloppy_callable and not to_next_level_has_been_called:
+		move_to_screen()
+		has_moved = true
+		Dialogic.start(convo_1)
+	
 
 
 func move_to_screen():
@@ -61,6 +64,7 @@ func _on_net_area_entered(area: Area2D) -> void:
 		if area.is_in_group("Player"):
 			player_in_net = true
 
-func to_next_level():
-	await get_tree().create_timer(6).timeout
-	get_tree().change_scene_to_packed(next_level)
+
+#func to_next_level():
+	#await get_tree().create_timer(6).timeout
+	#get_tree().change_scene_to_packed(next_level)

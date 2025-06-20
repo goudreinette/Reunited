@@ -72,12 +72,14 @@ func _process(delta: float) -> void:
 		$"DashingLines".visible = true
 		$DashTimer.start()
 		can_dash = false
+		$Dash.play()
 		$DashRegenTimer.start()
 	
 	##falling
 	if above_pit and not is_dashing and not above_platform:
 		if not is_falling and not is_dead :	
 			fall()
+			$Vallen.play()
 	
 	##beeing detected
 	if in_scan and not is_dashing: detected = true
