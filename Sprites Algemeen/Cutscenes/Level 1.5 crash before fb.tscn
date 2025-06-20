@@ -606,7 +606,6 @@ autoplay = "default"
 frame_progress = 0.0208124
 
 [node name="Jungle" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_mjdbx")
 autoplay = "default"
