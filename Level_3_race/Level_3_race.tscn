@@ -290,7 +290,7 @@ script = ExtResource("3_x61kf")
 acceleration = 0.45
 drag = 0.96
 drag_off_track = 0.91
-turn_acceleration = 10.0
+turn_acceleration = 5.0
 
 [node name="OnTrackRaycast3D" type="RayCast3D" parent="Ship"]
 transform = Transform3D(15, 0, 1.19209e-07, 0, 15, 0, -1.19209e-07, 0, 15, 0, 0, 0)

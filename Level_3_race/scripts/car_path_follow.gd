@@ -14,7 +14,7 @@ var noise = FastNoiseLite.new()
 func _init():
 	noise.set_seed(randi_range(0, 1000))
 
-func _physics_process(delta: float) -> void:
+func _process(delta):
 	if is_started:
 		$cuba_car_blue.position.x = noise.get_noise_1d(Time.get_ticks_msec() / 100) * 8.0
 		

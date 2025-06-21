@@ -63,6 +63,8 @@ func _process(delta):
 	
 	$"reunited ship".rotation_degrees.y = remap(turn_speed, -2, 2, 30, -30)
 	
+	$"reunited ship".rotation_degrees.z = remap(turn_speed, -2, 2, 30, -30)
+	
 	#if turn_speed > .5:
 		#
 		##animation = "right"
