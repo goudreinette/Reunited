@@ -1,13 +1,15 @@
-stephan: Okay so what now??
-Frank: I don't think there is anything that we can do unfortunately
-stephan: Okay well let's wait and see. I hope the others are okay.
+stephan: Oke dus wat nu?
+Frank: Ik denk niet dat er iets is wat we kunnen doen behalve wachten
+stephan: Oke hopelijk gaat et goed met de rest.
 [wait time="1.0"]
 [signal arg="Speaker"]
-"Speaker Voice" (Dark Rein): Hello? hello? Can you guys hear me?
+"Speaker Voice" (Dark Rein): Hallo? hallo? Kunnen jullie me horen?
 join stephan leftmost
 stephan: Ehmm....
-stephan: Who is this?
-"Speaker Voice": I cannot say. But listen. The things going on here are really bad so I decided to help you guys.
+stephan: Wie is dit?
+"Speaker Voice": Dat kan ik niet zeggen helaas. Maar luister. 
+"Speaker Voice": Ik kwam er achter dat Mr. Sloppy kwade bedoelingen heeft dus ik besloot te helpen.
+"Speaker Voice": De AI is niet wat het lijkt.
 [signal arg="Open Door"]
-"Speaker Voice": I'll open up the door fo you. Come find me in the lab. Watch out for the guard drones though!
+"Speaker Voice": Ik heb de deur voor jullie open gedaan. Help je vrienden onsnappen en kom me daarna opzoeken in het Lab
 [signal arg="Stop Speaker"]

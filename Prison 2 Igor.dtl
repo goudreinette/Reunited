@@ -1,8 +1,11 @@
 join Igor left
-Igor: Hey how did you get out?!
-stephan: Some guy helped us.
+Igor: Hey, je bent ontsnapt! Hoe heb je dat kunnen doen?
+stephan: Een vreemde man op de speakers heeft ons geholpen.
 [signal arg="Speaker"]
-"Speaker Voice": That would be me.
-"Speaker Voice": I don't have access to your cell.
-"Speaker Voice":  You will need to get the key card, I think the guard left it in his office. It's around the corner.
+"Speaker Voice": Dat ben ik
+[signal arg="Stop Speaker"]
+Igor: kan je mij er ook even uithalen?
+[signal arg="Speaker"]
+"Speaker Voice": Ik heb helaas geen toegang tot deze cel...
+"Speaker Voice": Je moet een toegangskaartje zoeken. Ik denk dat de bewaker er een heeft achtergelaten om de hoek.  
 [signal arg="Stop Speaker"]

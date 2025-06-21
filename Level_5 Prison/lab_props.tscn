@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgswyv78ajai8"]
+[gd_scene load_steps=6 format=3 uid="uid://bgswyv78ajai8"]
 
-[ext_resource type="Texture2D" uid="uid://d01tamjuskm4x" path="res://Sprites Algemeen/Characters/rein small.png" id="1_m5yn5"]
 [ext_resource type="Texture2D" uid="uid://bjxdxf5jqa850" path="res://Level_5 Prison/sprites/lab/control panel 1.png" id="2_e85da"]
 [ext_resource type="Texture2D" uid="uid://cqd721uo6lm0p" path="res://Level_5 Prison/sprites/lab/rat cage.png" id="3_qpsuy"]
 [ext_resource type="Texture2D" uid="uid://2asy6dmu4mws" path="res://Level_5 Prison/sprites/lab/rat cage 2.png" id="4_2p4iu"]
@@ -8,10 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dipjp4a56rdqd" path="res://Level_5 Prison/sprites/lab/vats.png" id="6_77sqy"]
 
 [node name="Lab props" type="Node2D"]
-
-[node name="ReinSmall" type="Sprite2D" parent="."]
-position = Vector2(774, -388)
-texture = ExtResource("1_m5yn5")
 
 [node name="ControlPanel1" type="Sprite2D" parent="."]
 position = Vector2(553, -375)

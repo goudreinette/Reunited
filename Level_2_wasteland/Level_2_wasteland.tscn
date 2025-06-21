@@ -1456,7 +1456,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o7xex"]
-radius = 27.8927
+radius = 53.0377
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fg72"]
 size = Vector2(20, 510)
@@ -1482,7 +1482,7 @@ pitch_scale = 1.06
 autoplay = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(129, 107)
+position = Vector2(-480, 125)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 
@@ -2018,7 +2018,7 @@ position = Vector2(54, -20)
 position = Vector2(22, 36)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene"]
-position = Vector2(-2, 0)
+position = Vector2(-6, 1)
 shape = SubResource("CircleShape2D_o7xex")
 
 [node name="ShipFixed" type="Sprite2D" parent="Cutscene"]
@@ -2027,6 +2027,12 @@ texture = ExtResource("47_3fwvb")
 
 [node name="MoveTimer" type="Timer" parent="Cutscene"]
 one_shot = true
+
+[node name="Press X" type="Sprite2D" parent="Cutscene"]
+position = Vector2(-2, -1)
+texture = ExtResource("11_8fg72")
+region_enabled = true
+region_rect = Rect2(0, 0, 45.8606, 17)
 
 [node name="Invisible Wall" type="StaticBody2D" parent="."]
 position = Vector2(-118, 208)
@@ -2155,6 +2161,7 @@ curve = SubResource("Curve2D_o7xex")
 [connection signal="body_exited" from="Guus en Igor" to="Guus en Igor" method="_on_body_exited"]
 [connection signal="timeout" from="Guus en Igor/EndOfConvoTimer" to="Guus en Igor" method="_on_end_of_convo_timer_timeout"]
 [connection signal="body_entered" from="Cutscene" to="Cutscene" method="_on_body_entered"]
+[connection signal="body_exited" from="Cutscene" to="Cutscene" method="_on_body_exited"]
 [connection signal="timeout" from="Cutscene/MoveTimer" to="Cutscene" method="_on_move_timer_timeout"]
 
 [editable path="Bordje/TalkboxBordje"]
