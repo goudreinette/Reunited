@@ -377,7 +377,7 @@ position = Vector2(-83, 215)
 position = Vector2(53, 35)
 
 [node name="AnglerfishSmall" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
-position = Vector2(23, 73)
+position = Vector2(37, 65)
 
 [node name="AnglerfishSmall2" parent="Anglerfish School2" instance=ExtResource("20_cq875")]
 position = Vector2(-27, 13)
@@ -411,7 +411,7 @@ position = Vector2(142, 0)
 shape = SubResource("RectangleShape2D_akr3w")
 
 [node name="SimpleTalkbox" parent="." instance=ExtResource("25_uebwq")]
-position = Vector2(1, 249)
+position = Vector2(0, 248)
 
 [node name="HallucigeniaGroup" type="Node2D" parent="."]
 

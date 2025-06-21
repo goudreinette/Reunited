@@ -134,6 +134,7 @@ animations = [{
 radius = 14.0357
 
 [node name="AnglerfishBig" type="AnimatedSprite2D" groups=["Angler"]]
+z_index = 3
 sprite_frames = SubResource("SpriteFrames_rsp1v")
 autoplay = "default"
 frame_progress = 0.796047
