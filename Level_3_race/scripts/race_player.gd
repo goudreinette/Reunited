@@ -46,6 +46,8 @@ func _process(delta):
 	if reverse:
 		speed += acceleration * delta
 		
+	acceleration -= input.y / 1000.0
+		
 	if on_track:
 		speed *= drag
 	else: 
@@ -60,6 +62,8 @@ func _process(delta):
 	rotation_degrees.y -= turn_speed
 	
 	$"reunited ship".rotation_degrees.y = remap(turn_speed, -2, 2, 30, -30)
+	
+	$"reunited ship".rotation_degrees.z = remap(turn_speed, -2, 2, 30, -30)
 	
 	#if turn_speed > .5:
 		#

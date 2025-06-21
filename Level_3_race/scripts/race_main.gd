@@ -26,7 +26,13 @@ var race_state: RACE_STATE = RACE_STATE.COUNTDOWN
 @onready var other_racers: Array[RaceCompetitor] = [
 	$RacePath/Racer1,
 	$RacePath/Racer2,
-	$RacePath/Racer3
+	$RacePath/Racer3,
+	$RacePath/Racer4,
+	$RacePath/Racer5,
+	$RacePath/Racer6,
+	$RacePath/Racer7,
+	$RacePath/Racer8
+	
 ]
 
 @onready var position_label = $Camera3D/UI/PositionLabel
@@ -51,7 +57,7 @@ func _process(delta):
 	#print("player offset: ", player_progress_ratio);
 	
 	#var progress_ratios = []
-	var position = 4
+	var position = other_racers.size()
 	
 	# Determining position
 	for i in other_racers.size():
@@ -88,7 +94,7 @@ func _process(delta):
 	
 	#print(position)
 	
-	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", 4)
+	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", other_racers.size())
 	$Camera3D/UI/LapLabel.text = str("lap ", laps, "/", max_laps)
 
 
