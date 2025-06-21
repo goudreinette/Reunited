@@ -46,6 +46,8 @@ func _process(delta):
 	if reverse:
 		speed += acceleration * delta
 		
+	acceleration -= input.y / 1000.0
+		
 	if on_track:
 		speed *= drag
 	else: 

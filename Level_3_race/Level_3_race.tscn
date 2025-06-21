@@ -1241,6 +1241,46 @@ max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer3" instance=ExtResource("20_0n72s")]
 
+[node name="Racer4" type="PathFollow3D" parent="RacePath"]
+transform = Transform3D(0.0789518, 0, 0.0129083, 0, 0.0799998, 0, -0.0129083, 0, 0.0789518, -1.53346, 1.63577e-05, 7.82681)
+progress = 1.5
+script = ExtResource("19_wuivs")
+max_speed = 0.05
+
+[node name="cuba_car_blue" parent="RacePath/Racer4" instance=ExtResource("20_0n72s")]
+
+[node name="Racer5" type="PathFollow3D" parent="RacePath"]
+transform = Transform3D(0.0295228, 0, -0.0743533, 0, 0.0799998, 0, 0.0743533, 0, 0.0295228, -1.57871, 1.63577e-05, 6.91253)
+progress = 2.5
+script = ExtResource("19_wuivs")
+max_speed = 0.05
+
+[node name="cuba_car_blue" parent="RacePath/Racer5" instance=ExtResource("20_0n72s")]
+
+[node name="Racer6" type="PathFollow3D" parent="RacePath"]
+transform = Transform3D(0.0234969, 0, -0.0764716, 0, 0.0799998, 0, 0.0764716, 0, 0.0234969, -0.622421, 1.63577e-05, 6.61885)
+progress = 3.5
+script = ExtResource("19_wuivs")
+max_speed = 0.05
+
+[node name="cuba_car_blue" parent="RacePath/Racer6" instance=ExtResource("20_0n72s")]
+
+[node name="Racer7" type="PathFollow3D" parent="RacePath"]
+transform = Transform3D(0.0234969, 0, -0.0764716, 0, 0.0799998, 0, 0.0764716, 0, 0.0234969, 0.332549, 1.63577e-05, 6.32542)
+progress = 4.5
+script = ExtResource("19_wuivs")
+max_speed = 0.05
+
+[node name="cuba_car_blue" parent="RacePath/Racer7" instance=ExtResource("20_0n72s")]
+
+[node name="Racer8" type="PathFollow3D" parent="RacePath"]
+transform = Transform3D(0.0249992, 0, -0.0759937, 0, 0.0799998, 0, 0.0759937, 0, 0.0249992, 1.28535, 1.63577e-05, 6.02172)
+progress = 5.5
+script = ExtResource("19_wuivs")
+max_speed = 0.05
+
+[node name="cuba_car_blue" parent="RacePath/Racer8" instance=ExtResource("20_0n72s")]
+
 [node name="PlayerPathFollow" type="PathFollow3D" parent="RacePath"]
 transform = Transform3D(0.986894, 0, 0.161353, 0, 1, 0, -0.161353, 0, 0.986894, -1.29139, 1.63577e-05, 9.30739)
 
@@ -1366,6 +1406,11 @@ transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 2.19141, -1.19209e-0
 [connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer1" method="_on_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer2" method="_on_timer_timeout"]
 [connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer3" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer4" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer5" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer6" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer7" method="_on_timer_timeout"]
+[connection signal="timeout" from="RaceStartTimer" to="RacePath/Racer8" method="_on_timer_timeout"]
 [connection signal="timeout" from="StartCountdownTimer" to="." method="_on_start_countdown_timer_timeout"]
 [connection signal="timeout" from="CanLapTimer" to="." method="_on_can_lap_timer_timeout"]
 
