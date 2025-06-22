@@ -41,7 +41,7 @@ func _ready():
 
 func random_position_just_outside_frame():
 	return Vector2(
-		randf_range(-get_viewport_rect().size.x * 2, 0), 
+		randf_range(0, get_viewport_rect().size.x), 
 		$LevelPosition2/Player.global_position.y - get_viewport_rect().size.y
 	)
 
@@ -65,7 +65,7 @@ func _process(delta):
 		add_child(r)
 		r.global_position = random_position_just_outside_frame()
 		
-	if randi_range(0, 2000) == 1:
+	if randi_range(0, 1500) == 1:
 		var r = hallucigenia.instantiate()
 		add_child(r)
 		r.global_position = random_position_just_outside_frame()

@@ -21,6 +21,7 @@ overrides = {
 "box_color_custom": "Color(0.133333, 0.12549, 0.203922, 0.784314)",
 "box_color_use_global": "false",
 "box_margin_bottom": "6.0",
+"box_panel": "\"vn_textbox_default_panel.tres\"",
 "box_size": "Vector2(220, 54)",
 "italics_font": "\"res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf\"",
 "name_label_box_modulate": "Color(0.133333, 0.12549, 0.203922, 0.784314)",

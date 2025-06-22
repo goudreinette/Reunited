@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ccmulbl2rdl5o"
+path="res://.godot/imported/Countdown cropped.wav-97e9dc5988732892b32978634ad71ab9.sample"
+
+[deps]
+
+source_file="res://sounds/Countdown laps and win/Countdown cropped.wav"
+dest_files=["res://.godot/imported/Countdown cropped.wav-97e9dc5988732892b32978634ad71ab9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

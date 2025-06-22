@@ -346,6 +346,7 @@ offset = Vector2(0, 50)
 position = Vector2(118, 35)
 
 [node name="LavaLamp11FebMetGitaar" type="AudioStreamPlayer" parent="."]
+process_mode = 4
 stream = ExtResource("13_0gg3a")
 autoplay = true
 
