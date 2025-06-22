@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfwfeyaetohbf"]
+[gd_scene load_steps=8 format=3 uid="uid://bfwfeyaetohbf"]
 
 [ext_resource type="Texture2D" uid="uid://bgaxuqsjod4au" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Card-sheet.png" id="1_rjlel"]
 [ext_resource type="Script" uid="uid://b1s8ndocfd6tw" path="res://Level_2_wasteland/card.gd" id="2_q5obu"]
+[ext_resource type="AudioStream" uid="uid://b5b1qb7iace1e" path="res://sounds/item/Item.wav" id="3_q5obu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vlksy"]
 radius = 5.0
@@ -50,6 +51,10 @@ texture = ExtResource("1_rjlel")
 hframes = 5
 script = ExtResource("2_q5obu")
 
+[node name="Item" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q5obu")
+volume_db = 12.0
+
 [node name="CardArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
@@ -61,4 +66,5 @@ libraries = {
 }
 autoplay = "idle"
 
+[connection signal="finished" from="Item" to="." method="_on_item_finished"]
 [connection signal="body_entered" from="CardArea" to="." method="_on_card_area_body_entered"]

@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 		$PressX.visible = true
 		if  Input.is_action_just_pressed("dialogic_default_action"):
 			is_talking = true
-			if has_card == false:
+			if has_card == false and next_convo < convos.size():
 				Dialogic.start(convos[next_convo])
 			else: 
 				Dialogic.start(card_convos[next_card_convo])

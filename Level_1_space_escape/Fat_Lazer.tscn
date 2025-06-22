@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cf37c61r1glsh"]
+[gd_scene load_steps=12 format=3 uid="uid://cf37c61r1glsh"]
 
 [ext_resource type="Script" uid="uid://bucwh0ej543il" path="res://Level_1_space_escape/fat_lazer.gd" id="1_yexdv"]
 [ext_resource type="Texture2D" uid="uid://dfvpksgb6ehuj" path="res://Level_1_space_escape/level_1_space_escape_sprites/Fat Lazer.png" id="2_3bej0"]
+[ext_resource type="AudioStream" uid="uid://04rejksk01h0" path="res://sounds/Fat Lazer/Fat Lazer 1.wav" id="3_3bej0"]
 
 [sub_resource type="Animation" id="Animation_0k2a5"]
 length = 0.001
@@ -431,6 +432,9 @@ one_shot = true
 
 [node name="HoldTimer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="FatLazer1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3bej0")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

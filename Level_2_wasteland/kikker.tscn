@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcx70hy7vk0by"]
+
+[ext_resource type="Texture2D" uid="uid://d3s5jtdmj6a2j" path="res://Level_2_wasteland/Level_2_wasteland_sprites/kikker.png" id="1_5xvbr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m1uk"]
+atlas = ExtResource("1_5xvbr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk51o"]
+atlas = ExtResource("1_5xvbr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84m42"]
+atlas = ExtResource("1_5xvbr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii6hs"]
+atlas = ExtResource("1_5xvbr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6ua3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m1uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk51o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84m42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii6hs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Kikker" type="AnimatedSprite2D"]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_r6ua3")
+autoplay = "default"

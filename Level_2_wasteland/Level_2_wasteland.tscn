@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=4 uid="uid://byo7134utnix0"]
+[gd_scene load_steps=93 format=4 uid="uid://byo7134utnix0"]
 
 [ext_resource type="Texture2D" uid="uid://crhp5os33ekia" path="res://Level_2_wasteland/Tileset/Tileset.png" id="1_d6lv5"]
 [ext_resource type="Script" uid="uid://c4myevfe2r40f" path="res://Level_2_wasteland/level_2_wasteland.gd" id="1_o7xex"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bsavta1nnwkgr" path="res://Level_2_wasteland/Level_2_wasteland_sprites/TX Tileset Grass.png" id="6_8fg72"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="6_51cn4"]
 [ext_resource type="Script" uid="uid://ccdq8qg6yvkvx" path="res://Level_2_wasteland/respawn_point_2.gd" id="7_idsa3"]
+[ext_resource type="PackedScene" uid="uid://dcx70hy7vk0by" path="res://Level_2_wasteland/kikker.tscn" id="8_5m1uk"]
 [ext_resource type="PackedScene" uid="uid://ciobmqppsmx11" path="res://Level_2_wasteland/carnivorous plant/carnivorous_plant.tscn" id="8_cn70h"]
+[ext_resource type="Texture2D" uid="uid://d3s5jtdmj6a2j" path="res://Level_2_wasteland/Level_2_wasteland_sprites/kikker.png" id="8_wcqd4"]
 [ext_resource type="Texture2D" uid="uid://5hr8ueamjvai" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Bordje.png" id="9_3fwvb"]
 [ext_resource type="PackedScene" uid="uid://co1vj4gup45om" path="res://Level_2_wasteland/talkbox.tscn" id="10_8jjql"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="11_8fg72"]
@@ -1288,6 +1290,42 @@ sources/1 = SubResource("TileSetAtlasSource_ic5xy")
 sources/2 = SubResource("TileSetAtlasSource_wttwr")
 sources/3 = SubResource("TileSetAtlasSource_oyuui")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m1uk"]
+atlas = ExtResource("8_wcqd4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk51o"]
+atlas = ExtResource("8_wcqd4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84m42"]
+atlas = ExtResource("8_wcqd4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii6hs"]
+atlas = ExtResource("8_wcqd4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6ua3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m1uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk51o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84m42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii6hs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co6og"]
 size = Vector2(113, 47)
 
@@ -1523,6 +1561,25 @@ offset_top = -24631.0
 offset_right = 24438.0
 offset_bottom = 25369.0
 color = Color(0.317647, 0.227451, 0.239216, 1)
+
+[node name="Kikker" parent="." instance=ExtResource("8_5m1uk")]
+position = Vector2(313, -10)
+
+[node name="Kikker4" type="AnimatedSprite2D" parent="."]
+position = Vector2(-648, -67)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_r6ua3")
+autoplay = "default"
+
+[node name="Kikker2" type="AnimatedSprite2D" parent="."]
+position = Vector2(246, -27)
+sprite_frames = SubResource("SpriteFrames_r6ua3")
+autoplay = "default"
+
+[node name="Kikker3" type="AnimatedSprite2D" parent="."]
+position = Vector2(292, -106)
+sprite_frames = SubResource("SpriteFrames_r6ua3")
+autoplay = "default"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 4
@@ -2175,6 +2232,7 @@ volume_db = 18.0
 autoplay = true
 max_distance = 300.0
 
+[connection signal="finished" from="BosAmbient" to="." method="_on_bos_ambient_finished"]
 [connection signal="body_entered" from="Respawn Point 3" to="Respawn Point 3" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 5" to="Respawn Point 5" method="_on_body_entered"]
 [connection signal="body_entered" from="Respawn Point 6" to="Respawn Point 6" method="_on_body_entered"]
