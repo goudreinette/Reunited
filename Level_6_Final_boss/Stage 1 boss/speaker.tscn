@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3cjqohlq37cm"]
+[gd_scene load_steps=6 format=3 uid="uid://d3cjqohlq37cm"]
 
 [ext_resource type="Texture2D" uid="uid://2l63y5blp7ix" path="res://Level_6_Final_boss/Stage 1 boss/Speaker.png" id="1_nygju"]
 [ext_resource type="Script" uid="uid://devtf876qfo3b" path="res://Level_6_Final_boss/Stage 1 boss/speaker.gd" id="1_wslkn"]
 [ext_resource type="PackedScene" uid="uid://iqys12s5srvb" path="res://test levels/Smup Test Level/enemies/enemy_bullet.tscn" id="2_tp1bk"]
+[ext_resource type="AudioStream" uid="uid://bgkclb0f6a07s" path="res://sounds/Big Speakers/Big Speakers.wav" id="4_tp1bk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxfm"]
 size = Vector2(29.7188, 48)
@@ -14,6 +15,9 @@ shoot_pos = NodePath("Shooting_Position")
 
 [node name="SpeakerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_nygju")
+
+[node name="BigSpeakers" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_tp1bk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.140625, 2)

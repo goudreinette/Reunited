@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b18s82l0qn7ny"]
+[gd_scene load_steps=11 format=3 uid="uid://b18s82l0qn7ny"]
 
 [ext_resource type="Texture2D" uid="uid://c5x8kw8cm2wt5" path="res://Level_6_Final_boss/Stage 1 boss/port.png" id="1_c2ecc"]
 [ext_resource type="Script" uid="uid://cxuj25ecqfqwf" path="res://Level_6_Final_boss/Stage 1 boss/port.gd" id="1_o4ur4"]
 [ext_resource type="PackedScene" uid="uid://cdtclau4u03vj" path="res://test levels/Smup Test Level/enemies/fw_drone_boss.tscn" id="2_mhwyk"]
 [ext_resource type="Shader" uid="uid://8kgbdswagks1" path="res://shaders/hit.gdshader" id="3_jvadh"]
+[ext_resource type="AudioStream" uid="uid://1a5tagng48xh" path="res://sounds/Dodge Roll/Dodge Roll 2.wav" id="5_1ou46"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mke5j"]
 resource_local_to_scene = true
@@ -75,5 +76,8 @@ libraries = {
 process_callback = 0
 wait_time = 10.0
 autostart = true
+
+[node name="DodgeRoll2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1ou46")
 
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

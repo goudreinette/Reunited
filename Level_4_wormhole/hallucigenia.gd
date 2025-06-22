@@ -17,7 +17,7 @@ func circle_shot(scn,amt,spd):
 		get_tree().root.add_child.call_deferred(b)
 		## PI = 180 graden in radians. dus als je 2*pi deelt door de hoeveelheid kogels verdeelt hij de kogels gelijkmakig
 		var d = PI*2/amt
-		b.start(shoot_pos.global_position, n * d,spd)
+		b.start(shoot_pos.global_position, n * d,spd, false)
 
 
 
