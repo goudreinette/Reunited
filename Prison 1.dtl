@@ -1,14 +1,14 @@
 stephan: Oke dus wat nu?
 Frank: Ik denk niet dat er iets is wat we kunnen doen behalve wachten
-stephan: Oke hopelijk gaat et goed met de rest.
+stephan: Oke hopelijk gaat het goed met de rest.
 [wait time="1.0"]
 [signal arg="Speaker"]
 "Speaker Voice" (Dark Rein): Hallo? hallo? Kunnen jullie me horen?
 join stephan leftmost
 stephan: Ehmm....
 stephan: Wie is dit?
-"Speaker Voice": Dat kan ik niet zeggen helaas. Maar luister. 
-"Speaker Voice": Ik kwam er achter dat Mr. Sloppy kwade bedoelingen heeft dus ik besloot te helpen.
+"Speaker Voice": Dat kan ik niet zeggen helaas. Maar luister.
+"Speaker Voice": Ik kwam erachter dat Mr. Sloppy kwade bedoelingen heeft dus ik besloot te helpen.
 "Speaker Voice": De AI is niet wat het lijkt.
 [signal arg="Open Door"]
 "Speaker Voice": Ik heb de deur voor jullie open gedaan. Help je vrienden onsnappen en kom me daarna opzoeken in het Lab

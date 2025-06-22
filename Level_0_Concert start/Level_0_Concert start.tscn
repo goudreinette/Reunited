@@ -971,22 +971,22 @@ texture = ExtResource("9_g3fok")
 [node name="Blinking lights 1" type="AnimatedSprite2D" parent="SpaceshipNewNoBg"]
 sprite_frames = SubResource("SpriteFrames_cj02f")
 autoplay = "default"
-frame_progress = 0.441084
+frame_progress = 0.0200294
 
 [node name="Blinking lights 2" type="AnimatedSprite2D" parent="SpaceshipNewNoBg"]
 sprite_frames = SubResource("SpriteFrames_tbbwi")
 autoplay = "default"
-frame_progress = 0.76917
+frame_progress = 0.506027
 
 [node name="Radar" type="AnimatedSprite2D" parent="SpaceshipNewNoBg"]
 sprite_frames = SubResource("SpriteFrames_1mr72")
 autoplay = "default"
-frame_progress = 0.544697
+frame_progress = 0.334234
 
 [node name="Alarm sign" type="AnimatedSprite2D" parent="SpaceshipNewNoBg"]
 sprite_frames = SubResource("SpriteFrames_g3fok")
 autoplay = "default"
-frame_progress = 0.224147
+frame_progress = 0.118917
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(120, 80)
