@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.521115, 0.2457, 0.63, 1),
+&"color": Color(0.727907, 0.3432, 0.88, 1),
 &"custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
