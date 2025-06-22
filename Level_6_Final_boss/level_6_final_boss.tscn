@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=45 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
@@ -13,10 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="6_nnvje"]
 [ext_resource type="AudioStream" uid="uid://dhxxm3c8om7tr" path="res://sounds/blast.wav" id="7_mqkve"]
 [ext_resource type="PackedScene" uid="uid://ruwsfqk86704" path="res://test levels/Smup Test Level/enemies/boss_turret.tscn" id="9_nnvje"]
+[ext_resource type="Texture2D" uid="uid://48oblj6kxcxw" path="res://Effects/Explosion_spritepack_2/Explosion VFX 1/Explosion VFX 1(32x32) Thruster.png" id="9_rphwm"]
 [ext_resource type="Script" uid="uid://do5jv74uqlbxa" path="res://Level_6_Final_boss/boss_ui.gd" id="10_ab0ce"]
 [ext_resource type="PackedScene" uid="uid://b18s82l0qn7ny" path="res://Level_6_Final_boss/Stage 1 boss/port.tscn" id="10_nnvje"]
+[ext_resource type="Texture2D" uid="uid://ctqgf6pwmwv8n" path="res://Effects/Explosion_spritepack_2/Explosion VFX 14/Explosion VFX 14(48x48).png" id="10_u6c6o"]
+[ext_resource type="AudioStream" uid="uid://dxfoa4k61qo5b" path="res://sounds/Explosions/Big explosion 1.wav" id="11_nw64i"]
 [ext_resource type="Texture2D" uid="uid://c4jxl8sjaklun" path="res://Level_6_Final_boss/bar_background-export.png" id="11_ust2t"]
 [ext_resource type="Texture2D" uid="uid://dqd7xanf223m1" path="res://Level_6_Final_boss/vertical_bar_foreground-export.png" id="12_1h2ys"]
+[ext_resource type="AudioStream" uid="uid://dw68plnxqe8bq" path="res://sounds/Explosions/Big explosion 2.wav" id="12_to1pe"]
+[ext_resource type="AudioStream" uid="uid://b5w542upckcdj" path="res://sounds/Explosions/Explosion 2.wav" id="13_7b6fo"]
+[ext_resource type="AudioStream" uid="uid://co6p16melva7s" path="res://sounds/Explosions/Big explosion 3.wav" id="14_5aui6"]
 [ext_resource type="AudioStream" uid="uid://d1dw43a1wmwa2" path="res://Level_6_Final_boss/Boss Gepruts V2.mp3" id="16_smoym"]
 [ext_resource type="Texture2D" uid="uid://bcrb5e5h7wpg0" path="res://test levels/Smup Test Level/test_shmup_sprites/Test Level.png" id="17_1h2ys"]
 [ext_resource type="Texture2D" uid="uid://dvmqcxre37jf1" path="res://test levels/Smup Test Level/test_shmup_sprites/Wolk 1.png" id="18_oy7pc"]
@@ -27,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dj5oav3h1th36" path="res://Level_6_Final_boss/Boss front sketch.png" id="23_smoym"]
 [ext_resource type="PackedScene" uid="uid://caxaaimgvaoln" path="res://Sprites Algemeen/Cutscenes/Level 6 boss battle.tscn" id="26_2avng"]
 [ext_resource type="PackedScene" uid="uid://c4nsuf0mnd4hx" path="res://small_Justin.tscn" id="27_4oo36"]
-[ext_resource type="Script" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
+[ext_resource type="Script" uid="uid://5bxmrqhe2yb1" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="28_6kgbc"]
 [ext_resource type="PackedScene" uid="uid://b4cnu1flkfk3m" path="res://y4k4r1 castle/bullet.tscn" id="29_y8n6x"]
 
@@ -36,6 +42,404 @@ resource_local_to_scene = true
 shader = ExtResource("3_ust2t")
 shader_parameter/active = false
 shader_parameter/hit_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_fmnhb"]
+resource_name = "Big Explosion"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Explosion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.333333, 1.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explosion:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.333333, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Explosion2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.633333, 1.76667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Explosion2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.664553, 1.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Explosion3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.26635, 2.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Explosion3:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.26635, 2.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Explosion4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.47687, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Explosion4:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.47687, 2.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 10]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Explosion5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.0186603, 0.766667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Explosion5:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.676436),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Explosion6:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.766667, 1.57088),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Explosion6:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.777814, 1.50682),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Explosion7:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.466667, 1.2506),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Explosion7:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.423985, 1.1774),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 9]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Explosion8:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.36667, 2.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Explosion8:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.31161, 2.2),
+"transitions": PackedFloat32Array(1, 0.757858),
+"update": 1,
+"values": [0, 10]
+}
+
+[sub_resource type="Animation" id="Animation_qm7xj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Explosion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explosion:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Explosion2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Explosion2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Explosion3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Explosion3:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Explosion4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Explosion4:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Explosion5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Explosion5:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Explosion6:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Explosion6:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Explosion7:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Explosion7:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Explosion8:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Explosion8:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nw64i"]
+_data = {
+&"Big Explosion": SubResource("Animation_fmnhb"),
+&"RESET": SubResource("Animation_qm7xj")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ht0pr"]
 shader = ExtResource("5_ccr0g")
@@ -129,6 +533,7 @@ port2 = NodePath("Final Boss/Port 2")
 speaker1 = NodePath("Speaker group/Speaker 1")
 speaker2 = NodePath("Speaker group/Speaker 2")
 lazers = NodePath("Final Boss/Lazergroup")
+next_scene = ExtResource("3_0d8d2")
 
 [node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts", "target_pos") instance=ExtResource("1_fcd1t")]
 position = Vector2(120, -34)
@@ -136,7 +541,6 @@ collision_layer = 0
 main = NodePath("..")
 shipparts = [NodePath("Turret1"), NodePath("Turret2"), NodePath("Turret3"), NodePath("Turret4"), NodePath("Port 1"), NodePath("Port 2")]
 target_pos = NodePath("../Boss target poss")
-next_scene = ExtResource("3_0d8d2")
 
 [node name="EnemyFixedWingDrone" parent="Final Boss" index="0"]
 material = SubResource("ShaderMaterial_1h2ys")
@@ -216,7 +620,72 @@ position = Vector2(66, -2)
 [node name="FatLazer6" parent="Final Boss/Lazergroup" instance=ExtResource("5_mqkve")]
 position = Vector2(72, -2)
 
+[node name="Explosion" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(-69, -17)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="Explosion2" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(5, -33)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="Explosion3" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(53, -14)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="Explosion4" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(28, -22)
+texture = ExtResource("10_u6c6o")
+hframes = 11
+
+[node name="Explosion5" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(-91, -15)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="BigExplosion1" type="AudioStreamPlayer" parent="Final Boss"]
+stream = ExtResource("11_nw64i")
+
+[node name="Explosion6" type="Sprite2D" parent="Final Boss"]
+position = Vector2(-14, -35)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="BigExplosion2" type="AudioStreamPlayer" parent="Final Boss"]
+stream = ExtResource("12_to1pe")
+
+[node name="Explosion7" type="Sprite2D" parent="Final Boss"]
+visible = false
+position = Vector2(-24, -17)
+texture = ExtResource("9_rphwm")
+hframes = 10
+
+[node name="Explosion9" type="AudioStreamPlayer" parent="Final Boss"]
+stream = ExtResource("13_7b6fo")
+
+[node name="Explosion8" type="Sprite2D" parent="Final Boss"]
+position = Vector2(-15, -28)
+texture = ExtResource("10_u6c6o")
+hframes = 11
+
+[node name="BigExplosion3" type="AudioStreamPlayer" parent="Final Boss"]
+stream = ExtResource("14_5aui6")
+
+[node name="EXplosionAnimation 1" type="AnimationPlayer" parent="Final Boss"]
+libraries = {
+&"": SubResource("AnimationLibrary_nw64i")
+}
+autoplay = "RESET"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Ship_UI" parent="CanvasLayer" instance=ExtResource("3_2i3f6")]
 anchors_preset = 12
@@ -287,6 +756,7 @@ max_shield = 30
 stream = ExtResource("7_mqkve")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+process_mode = 4
 stream = ExtResource("16_smoym")
 autoplay = true
 

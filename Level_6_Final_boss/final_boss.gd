@@ -16,7 +16,7 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 
 @export var target_pos: Node2D
 @export var move_in_time: float = 5
-@export var next_scene: PackedScene
+
 var can_fire = false
 var can_die = false
 
@@ -60,10 +60,10 @@ func explode():
 	var e = explode_scene.instantiate()
 	get_tree().root.add_child(e)
 	e.start(global_position)
-	$HitAnimation.play("RESET")
+	$"EXplosionAnimation 1".play("Big Explosion")
 	
-	await get_tree().create_timer(4.0).timeout
-	get_tree().change_scene_to_packed(next_scene)
+
+	
 	#queue_free()
 var has_exploded = false
 func reduce_health(amount):

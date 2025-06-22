@@ -18,6 +18,8 @@ var score = 0
 
 @export var start_wait: float = 4.0
 
+@export var next_scene: PackedScene
+
 var q_counter: int = 0
 var is_talking = false
 
@@ -66,10 +68,13 @@ func _input(event):
 		
 	
 	if event.is_action_pressed("Level trigger q") == true:
+		if $"Final Boss".has_exploded: 
+			get_tree().change_scene_to_packed(next_scene)
 		if q_counter == 0 and not is_talking:
 			Dialogic.start("Boss Battle Sloppy 2")
 			q_counter =1
 			is_talking = true
+			
 		if jenkmovedin == false and q_counter == 1 and not is_talking: 
 			$"Kerby en Justin".move_in_both()
 			jenkmovedin = true
