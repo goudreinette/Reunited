@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxs35wh5fummu"]
+[gd_scene load_steps=22 format=3 uid="uid://dxs35wh5fummu"]
 
 [ext_resource type="Texture2D" uid="uid://d4i0yq1wpvocn" path="res://Level_1_space_escape/level_1_space_escape_sprites/Standaard planeet 16x.png" id="1_5tr1o"]
 [ext_resource type="Script" uid="uid://hi1b1pbq4760" path="res://Sprites Algemeen/Cutscenes/cutscene.gd" id="1_bycxu"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://i38uubj47dog" path="res://Level_1_space_escape/level_1_space_escape_sprites/Astroid 1.png" id="8_cj02f"]
 [ext_resource type="Texture2D" uid="uid://b2rkgm2axyjrk" path="res://Sprites Algemeen/Cutscenes/spaceship new no bg.png" id="9_g3fok"]
 [ext_resource type="Texture2D" uid="uid://ch6yhn3mcvf7a" path="res://Sprites Algemeen/Cutscenes/level0 led.png" id="11_o3d1y"]
+[ext_resource type="AudioStream" uid="uid://cgc8crowg1vyx" path="res://sounds/Spaceship ambient/Ambient Space Sound.wav" id="13_t0mhp"]
+[ext_resource type="Script" uid="uid://i0wyjfmdt8ra" path="res://Level_0_Concert start/ambient_space_sound.gd" id="14_h65qy"]
 
 [sub_resource type="Animation" id="Animation_g1qas"]
 length = 0.001
@@ -233,3 +235,9 @@ position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_glm35")
 autoplay = "default"
 frame_progress = 0.161776
+
+[node name="AmbientSpaceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_t0mhp")
+script = ExtResource("14_h65qy")
+
+[connection signal="current_animation_changed" from="." to="AmbientSpaceSound" method="_on_level_0_walkin_current_animation_changed"]

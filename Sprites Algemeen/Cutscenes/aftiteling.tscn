@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cvx1np4um1dwj"]
 
-[ext_resource type="Script" uid="uid://btxibmopblpwu" path="res://Sprites Algemeen/Cutscenes/aftiteling.gd" id="1_aya2s"]
+[ext_resource type="Script" path="res://Sprites Algemeen/Cutscenes/aftiteling.gd" id="1_aya2s"]
 [ext_resource type="Texture2D" uid="uid://bol1rqtotyvyq" path="res://Sprites Algemeen/Cutscenes/jungle.png" id="1_fvkg8"]
 [ext_resource type="PackedScene" uid="uid://hq011qmeiihl" path="res://test levels/Walking Scenes TEST/level_1.tscn" id="2_glh5x"]
 [ext_resource type="Texture2D" uid="uid://blqmxd1d2klel" path="res://Sprites Algemeen/Cutscenes/aftiteling.png" id="2_wbsj4"]

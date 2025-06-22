@@ -1985,7 +1985,7 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_6ejj0"]
+[sub_resource type="Curve2D" id="Curve2D_vimrd"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -19, -1, 0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 120, -2, 0, 0, 0, 0, 121, -91)
@@ -2358,7 +2358,7 @@ rotation = -0.0307595
 
 [node name="moving platform" parent="." instance=ExtResource("7_etoha")]
 position = Vector2(343, -28)
-curve = SubResource("Curve2D_6ejj0")
+curve = SubResource("Curve2D_vimrd")
 speed = 0.5
 speed_scale = 0.5
 
