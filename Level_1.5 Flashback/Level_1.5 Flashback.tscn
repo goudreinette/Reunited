@@ -600,6 +600,7 @@ position = Vector2(-3, -47)
 position = Vector2(-5, -423)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 4
 stream = ExtResource("19_wnr8i")
 autoplay = true
 
