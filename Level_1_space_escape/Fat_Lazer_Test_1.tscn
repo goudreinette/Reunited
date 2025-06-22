@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ri6c5mypbl0f"]
 
 [ext_resource type="PackedScene" uid="uid://cf37c61r1glsh" path="res://Level_1_space_escape/Fat_Lazer.tscn" id="1_8x0mx"]
-[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://Smup Test Level/player_ship.tscn" id="2_eiv4o"]
+[ext_resource type="PackedScene" uid="uid://b32476hejmrnj" path="res://test levels/Smup Test Level/player_ship.tscn" id="2_eiv4o"]
 
 [node name="FatLazerTest1" type="Node2D"]
 

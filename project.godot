@@ -39,6 +39,7 @@ directories/dch_directory={
 "Rein": "res://Sprites Algemeen/Characters/Rein.dch",
 "Speaker Voice": "res://Speaker Voice.dch",
 "ander_mannetje": "res://addons/dialogic/characters/ander_mannetje.dch",
+"bordje": "res://bordje.dch",
 "stephan": "res://addons/dialogic/characters/stephan.dch",
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
@@ -135,7 +136,7 @@ movie_writer/movie_file="C:/Users/Rein van der Woerd/Desktop/butano/Reunited/rec
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/UniParticles3D/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/GPUTrail/plugin.cfg", "res://addons/UniParticles3D/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [global_group]
 
