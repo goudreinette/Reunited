@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b2t1sgtcnnfj2"]
+[gd_scene load_steps=68 format=3 uid="uid://b2t1sgtcnnfj2"]
 
 [ext_resource type="Script" uid="uid://gfpm5ca7yyix" path="res://test levels/Smup Test Level/ship_main.gd" id="1_g0tbl"]
 [ext_resource type="PackedScene" uid="uid://cv2erjvwdhfm3" path="res://Level_1_space_escape/SpaceBG.tscn" id="2_3shfn"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c7svftlmputi8" path="res://Level_4_wormhole/marella/marella 64px grey.png" id="30_i8h2o"]
 [ext_resource type="PackedScene" uid="uid://56vh6md8gpqf" path="res://Level_1_space_escape/pickup.tscn" id="30_ubutc"]
 [ext_resource type="Texture2D" uid="uid://bgs6lnivs6knk" path="res://Level_1_space_escape/level_1_space_escape_sprites/Very big Red Planet.png" id="32_3jrtn"]
+[ext_resource type="PackedScene" uid="uid://dn16xy7juu10v" path="res://Effects/Big Explosion.tscn" id="33_4nb5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8olhq"]
 size = Vector2(530, 126)
@@ -379,6 +380,7 @@ offset_right = 241.0
 offset_bottom = 160.0
 
 [node name="3-11-24GameMusic2024-12-222105" type="AudioStreamPlayer" parent="."]
+process_mode = 4
 stream = ExtResource("10_oxmdt")
 autoplay = true
 
@@ -1125,6 +1127,12 @@ position = Vector2(-47.625, -7467)
 
 [node name="Formation Test6" parent="." instance=ExtResource("21_oqn25")]
 position = Vector2(136.375, -5684)
+
+[node name="Explosion2" parent="." instance=ExtResource("33_4nb5x")]
+position = Vector2(73, 1750)
+
+[node name="Explosion3" parent="." instance=ExtResource("33_4nb5x")]
+position = Vector2(197, 1726)
 
 [connection signal="area_entered" from="CrashSceneDetect/Area2D" to="CrashSceneDetect" method="_on_area_2d_area_entered"]
 [connection signal="died" from="LevelPosition/Player" to="." method="_on_player_died"]

@@ -4,8 +4,8 @@ stephan: Een vreemde man op de speakers heeft ons geholpen.
 [signal arg="Speaker"]
 "Speaker Voice": Dat ben ik
 [signal arg="Stop Speaker"]
-Igor: kan je mij er ook even uithalen?
+Igor: Kan je mij er ook even uithalen?
 [signal arg="Speaker"]
 "Speaker Voice": Ik heb helaas geen toegang tot deze cel...
-"Speaker Voice": Je moet een toegangskaartje zoeken. Ik denk dat de bewaker er een heeft achtergelaten om de hoek.  
+"Speaker Voice": Je moet een toegangskaartje zoeken. Ik denk dat de bewaker er een heeft achtergelaten om de hoek.
 [signal arg="Stop Speaker"]

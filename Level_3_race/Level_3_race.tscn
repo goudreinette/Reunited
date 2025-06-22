@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://c0npwlyangqo8"]
+[gd_scene load_steps=72 format=3 uid="uid://c0npwlyangqo8"]
 
 [ext_resource type="Texture2D" uid="uid://buxmeughkuy0t" path="res://Level_2_wasteland/Level_2_wasteland_sprites/Monstera.png" id="1_4xktc"]
 [ext_resource type="Script" uid="uid://bi05nkuawhav4" path="res://Level_3_race/scripts/race_main.gd" id="1_g3r7i"]
@@ -9,10 +9,13 @@
 [ext_resource type="Environment" uid="uid://bt0l4cxk1vg1w" path="res://Level_3_race/environment.tres" id="3_m5o28"]
 [ext_resource type="Script" uid="uid://bs3m3ipy8xr3g" path="res://Level_3_race/scripts/race_player.gd" id="3_x61kf"]
 [ext_resource type="Texture2D" uid="uid://bgi6lf0lu46nt" path="res://Level_3_race/race sprites/Palmboom.png" id="4_7epou"]
+[ext_resource type="AudioStream" uid="uid://ccmulbl2rdl5o" path="res://sounds/Countdown laps and win/Countdown cropped.wav" id="4_8ncyu"]
 [ext_resource type="PackedScene" uid="uid://cxga6eduqi063" path="res://Level_3_race/race player ship.tscn" id="5_m5o28"]
 [ext_resource type="Texture2D" uid="uid://dmhx4kxvbdyiv" path="res://Level_3_race/race sprites/cloud.png" id="5_mggcm"]
 [ext_resource type="Script" uid="uid://d3i3oa6gnu2hk" path="res://Level_3_race/scripts/race_camera.gd" id="5_wpt2s"]
 [ext_resource type="Texture2D" uid="uid://dkaaw4xpt0h03" path="res://Level_3_race/race sprites/sun.png" id="6_5j82x"]
+[ext_resource type="AudioStream" uid="uid://dj60kwefj8kdo" path="res://sounds/Engine sounds/Engine 1 Start.wav" id="6_ehnep"]
+[ext_resource type="AudioStream" uid="uid://b3ccwnr1gpnfi" path="res://sounds/Engine sounds/Engine 2.wav" id="7_c8ltl"]
 [ext_resource type="FontFile" uid="uid://c82t30pq6my1l" path="res://addons/dialogic/Styles/ark-pixel-10px-proportional-latin.ttf" id="7_vmoy4"]
 [ext_resource type="Texture2D" uid="uid://c5m3dpetduwl7" path="res://Level_3_race/race sprites/plants/pole1.png" id="14_ev6ad"]
 [ext_resource type="Texture2D" uid="uid://d36gf5eoqhg74" path="res://Level_3_race/race sprites/plants/pole2.png" id="15_0oy6m"]
@@ -104,6 +107,78 @@ tracks/3/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Countdown:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Engine1Start:autoplay")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Engine1Start:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Engine1Start:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [12.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Engine2:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Engine2:volume_db")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_kd54t"]
 resource_name = "finish"
@@ -166,6 +241,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_pp4r8"]
 resource_name = "race_intro"
 length = 14.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = false
@@ -213,6 +289,78 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Countdown:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("../Engine1Start:autoplay")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Engine1Start:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Engine1Start:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 6, 7, 13, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -80.0, -50.953, -40.178, -59.603]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Engine2:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(13),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Engine2:volume_db")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(13, 14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, -10.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ha66"]
@@ -284,13 +432,25 @@ next_level = ExtResource("2_f8te2")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_m5o28")
 
+[node name="Countdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8ncyu")
+volume_db = 12.0
+
 [node name="Ship" type="Node3D" parent="."]
 transform = Transform3D(0.062589, 0, 0.00718424, 0, 0.063, 0, -0.00718424, 0, 0.062589, 0.340349, 0.0255188, 0.726725)
 script = ExtResource("3_x61kf")
 acceleration = 0.45
 drag = 0.96
 drag_off_track = 0.91
-turn_acceleration = 5.0
+turn_acceleration = 3.0
+
+[node name="Engine1Start" type="AudioStreamPlayer3D" parent="Ship"]
+stream = ExtResource("6_ehnep")
+volume_db = 12.0
+max_distance = 100.0
+
+[node name="Engine2" type="AudioStreamPlayer" parent="Ship"]
+stream = ExtResource("7_c8ltl")
 
 [node name="OnTrackRaycast3D" type="RayCast3D" parent="Ship"]
 transform = Transform3D(15, 0, 1.19209e-07, 0, 15, 0, -1.19209e-07, 0, 15, 0, 0, 0)
@@ -1217,15 +1377,15 @@ curve = SubResource("Curve3D_wpt2s")
 transform = Transform3D(0.0716304, 0, 0.0356251, 0, 0.0799998, 0, -0.0356243, 0, 0.0716319, -0.0226535, 1.63577e-05, 12.5885)
 progress = 114.002
 script = ExtResource("19_wuivs")
-max_speed = 0.05
+max_speed = 0.06
 
 [node name="cuba_car_blue" parent="RacePath/Racer1" instance=ExtResource("20_0n72s")]
 
 [node name="Racer2" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0763877, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763877, -0.942159, 1.63577e-05, 10.4298)
-progress = 116.353
+transform = Transform3D(0.0763877, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763877, -0.826912, 1.63577e-05, 10.8002)
+progress = 115.965
 script = ExtResource("19_wuivs")
-max_speed = 0.05
+max_speed = 0.06
 
 [node name="cuba_car_blue" parent="RacePath/Racer2" instance=ExtResource("20_0n72s")]
 visible = false
@@ -1234,50 +1394,48 @@ visible = false
 transform = Transform3D(1, -2.21444e-08, 6.40284e-10, 2.26555e-08, 1, -3.72529e-09, 1.74623e-10, -5.58794e-09, 1, 8.28671, 0.0818219, -0.00891113)
 
 [node name="Racer3" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0789518, 0, 0.0129083, 0, 0.0799998, 0, -0.0129083, 0, 0.0789518, -1.3729, 1.63577e-05, 8.80886)
-progress = 0.5
+transform = Transform3D(0.0716304, 0, 0.0356243, 0, 0.0799998, 0, -0.0356243, 0, 0.0716304, -0.354005, 1.63577e-05, 11.9222)
+progress = 114.743
 script = ExtResource("19_wuivs")
-max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer3" instance=ExtResource("20_0n72s")]
 
 [node name="Racer4" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0789518, 0, 0.0129083, 0, 0.0799998, 0, -0.0129083, 0, 0.0789518, -1.53346, 1.63577e-05, 7.82681)
-progress = 1.5
+transform = Transform3D(-0.000167125, 0, 0.0799999, 0, 0.0799998, 0, -0.0799999, 0, -0.000167125, 1.02185, 1.63577e-05, 12.736)
+progress = 112.862
 script = ExtResource("19_wuivs")
 max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer4" instance=ExtResource("20_0n72s")]
 
 [node name="Racer5" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0295228, 0, -0.0743533, 0, 0.0799998, 0, 0.0743533, 0, 0.0295228, -1.57871, 1.63577e-05, 6.91253)
-progress = 2.5
+transform = Transform3D(-0.000167125, 0, 0.0799999, 0, 0.0799998, 0, -0.0799999, 0, -0.000167125, 1.95298, 1.63577e-05, 12.734)
+progress = 111.934
 script = ExtResource("19_wuivs")
 max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer5" instance=ExtResource("20_0n72s")]
 
 [node name="Racer6" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0234969, 0, -0.0764716, 0, 0.0799998, 0, 0.0764716, 0, 0.0234969, -0.622421, 1.63577e-05, 6.61885)
-progress = 3.5
+transform = Transform3D(-0.0191737, 0, 0.0776684, 0, 0.0799998, 0, -0.0776684, 0, -0.0191737, 2.8552, 1.63577e-05, 12.6201)
+progress = 111.017
 script = ExtResource("19_wuivs")
 max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer6" instance=ExtResource("20_0n72s")]
 
 [node name="Racer7" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0234969, 0, -0.0764716, 0, 0.0799998, 0, 0.0764716, 0, 0.0234969, 0.332549, 1.63577e-05, 6.32542)
-progress = 4.5
+transform = Transform3D(-0.0191737, 0, 0.0776684, 0, 0.0799998, 0, -0.0776684, 0, -0.0191737, 3.75419, 1.63577e-05, 12.3981)
+progress = 110.089
 script = ExtResource("19_wuivs")
-max_speed = 0.05
 
 [node name="cuba_car_blue" parent="RacePath/Racer7" instance=ExtResource("20_0n72s")]
 
 [node name="Racer8" type="PathFollow3D" parent="RacePath"]
-transform = Transform3D(0.0249992, 0, -0.0759937, 0, 0.0799998, 0, 0.0759937, 0, 0.0249992, 1.28535, 1.63577e-05, 6.02172)
-progress = 5.5
+transform = Transform3D(0.0763876, 0, 0.0237683, 0, 0.0799998, 0, -0.0237683, 0, 0.0763876, -1.0925, 1.63577e-05, 9.9466)
+progress = 116.858
 script = ExtResource("19_wuivs")
-max_speed = 0.05
+max_speed = 0.03
 
 [node name="cuba_car_blue" parent="RacePath/Racer8" instance=ExtResource("20_0n72s")]
 
@@ -1285,6 +1443,7 @@ max_speed = 0.05
 transform = Transform3D(0.986894, 0, 0.161353, 0, 1, 0, -0.161353, 0, 0.986894, -1.29139, 1.63577e-05, 9.30739)
 
 [node name="CarreraMontuno31-3" type="AudioStreamPlayer" parent="."]
+process_mode = 4
 stream = ExtResource("25_tf762")
 autoplay = true
 

@@ -94,7 +94,7 @@ func _process(delta):
 	
 	#print(position)
 	
-	$Camera3D/UI/PositionLabel.text = str("pos. ", position, "/", other_racers.size())
+	$Camera3D/UI/PositionLabel.text = ""# str("pos. ", position + 1, "/", other_racers.size() + 1)
 	$Camera3D/UI/LapLabel.text = str("lap ", laps, "/", max_laps)
 
 

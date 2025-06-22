@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgcsjb12gfvmk"]
+[gd_scene load_steps=10 format=3 uid="uid://cgcsjb12gfvmk"]
 
 [ext_resource type="Script" uid="uid://gb4xu3oscb56" path="res://test levels/Smup Test Level/enemies/rocket.gd" id="1_n4ir4"]
 [ext_resource type="Texture2D" uid="uid://bogavg3c4n2iv" path="res://test levels/Smup Test Level/test_shmup_sprites/Rocket.png" id="2_le00s"]
+[ext_resource type="AudioStream" uid="uid://b4bpyrah5emqe" path="res://sounds/Rocket/Rocket with beep 1.wav" id="3_w10q5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74hye"]
 atlas = ExtResource("2_le00s")
@@ -73,6 +74,10 @@ scale_amount_curve = SubResource("Curve_xghrf")
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="RocketWithBeep1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w10q5")
+autoplay = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Deathtimer" to="." method="_on_deathtimer_timeout"]
