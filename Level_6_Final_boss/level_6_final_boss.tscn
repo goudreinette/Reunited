@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dbityatjf3g0b"]
+[gd_scene load_steps=36 format=3 uid="uid://dbityatjf3g0b"]
 
 [ext_resource type="PackedScene" uid="uid://c46xbdsunpjyv" path="res://Level_6_Final_boss/Final boss.tscn" id="1_fcd1t"]
 [ext_resource type="Script" uid="uid://pgh8b1qhseol" path="res://Level_6_Final_boss/level_6_final_boss_main.gd" id="1_nnvje"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://c4nsuf0mnd4hx" path="res://small_Justin.tscn" id="27_4oo36"]
 [ext_resource type="Script" uid="uid://5bxmrqhe2yb1" path="res://Level_6_Final_boss/kerby_en_justin.gd" id="27_6kgbc"]
 [ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="28_6kgbc"]
+[ext_resource type="PackedScene" uid="uid://b4cnu1flkfk3m" path="res://y4k4r1 castle/bullet.tscn" id="29_y8n6x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1h2ys"]
 resource_local_to_scene = true
@@ -132,8 +133,6 @@ lazers = NodePath("Final Boss/Lazergroup")
 [node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts", "target_pos") instance=ExtResource("1_fcd1t")]
 position = Vector2(120, -34)
 collision_layer = 0
-max_health = 200
-health = 200
 main = NodePath("..")
 shipparts = [NodePath("Turret1"), NodePath("Turret2"), NodePath("Turret3"), NodePath("Turret4"), NodePath("Port 1"), NodePath("Port 2")]
 target_pos = NodePath("../Boss target poss")
@@ -256,9 +255,10 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -16.0
+offset_left = -17.0
 offset_top = 10.0
-offset_bottom = 10.0
+offset_right = -1.0
+offset_bottom = 16.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.8, 0.8)
@@ -280,6 +280,7 @@ texture_progress = ExtResource("12_1h2ys")
 
 [node name="Player" parent="." instance=ExtResource("6_nnvje")]
 position = Vector2(120, 120)
+current_weapon_type = 0
 max_shield = 30
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
@@ -380,6 +381,7 @@ kerbie_target = NodePath("TargetKerby")
 [node name="SmallJustin" parent="Kerby en Justin" instance=ExtResource("27_4oo36")]
 position = Vector2(203.022, 50)
 does_hover = true
+bullet_scene = ExtResource("29_y8n6x")
 
 [node name="TargetJustin" type="Node2D" parent="Kerby en Justin"]
 position = Vector2(40.022, 50)
@@ -387,6 +389,7 @@ position = Vector2(40.022, 50)
 [node name="SmallKerbie" parent="Kerby en Justin" instance=ExtResource("28_6kgbc")]
 position = Vector2(-190.978, 50)
 does_hover = true
+bullet_scene = ExtResource("29_y8n6x")
 
 [node name="TargetKerby" type="Node2D" parent="Kerby en Justin"]
 position = Vector2(-26.978, 50)

@@ -89,3 +89,7 @@ shape = SubResource("CircleShape2D_k5eyt")
 [node name="Shield" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_mrufn")
+
+[node name="reload timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="reload timer" to="." method="_on_reload_timer_timeout"]

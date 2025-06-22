@@ -8,8 +8,8 @@ signal health_changed
 
 enum stage{ONE,STAGE_TWO, STAGE_THREE}
 @export var current_stage = stage.ONE
-@export var max_health : int = 100
-@export var health : int = 100
+@export var max_health : float = 200
+@export var health : float = 100
 var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var main: Node
 @export var shipparts: Array[Area2D] = []
@@ -18,10 +18,13 @@ var explode_scene = preload("res://Effects/Smal explosion.tscn")
 @export var move_in_time: float = 5
 @export var next_scene: PackedScene
 var can_fire = false
+var can_die = false
 
 
 func _ready() -> void:
 	health = max_health
+	await get_tree().create_timer(0.1).timeout
+	health_changed.emit(max_health, health)
 
 func _physics_process(delta: float) -> void:
 	var destroyed_shipparts_count = 0
@@ -30,6 +33,10 @@ func _physics_process(delta: float) -> void:
 			destroyed_shipparts_count+=1
 	if destroyed_shipparts_count == shipparts.size():
 		set_collision_layer_value(5,true)
+	
+	if not can_die and health <20 :
+		health = 20 
+	
 
 func move(target:Node2D,move_time: float):
 	var tween = create_tween()
@@ -38,8 +45,10 @@ func move(target:Node2D,move_time: float):
 func move_in():
 	can_fire = true
 	move(target_pos,move_in_time)
-
+	await get_tree().create_timer(move_in_time).timeout
+	Dialogic.start("Boss Battle Sloppy 1")
 # Called when the node enters the scene tree for the first time.
+
 func explode():
 	#get_parent().speed
 	#$AnimationPlayer.play("explode")
@@ -52,23 +61,28 @@ func explode():
 	get_tree().root.add_child(e)
 	e.start(global_position)
 	$HitAnimation.play("RESET")
+	
+	await get_tree().create_timer(4.0).timeout
+	get_tree().change_scene_to_packed(next_scene)
 	#queue_free()
+var has_exploded = false
 func reduce_health(amount):
 	health -= amount
 	health_changed.emit(max_health, health)
 	$HitAnimation.play("hit")
-	if health<=0 :
+	if health<=0 and not has_exploded:
 		explode()
-		await get_tree().create_timer(4.0).timeout 
+		has_exploded = true
+
 		
 		
 func reduce_health_no_blink(amount):
 	health -= amount
 	health_changed.emit(max_health, health)
 	#$HitAnimation.play("hit")
-	if health<=0 :
+	if health<=0 and not has_exploded :
 		explode()
-		get_tree().change_scene_to_packed(next_scene)
+		has_exploded = true
 	
 	##signals from children for reducing health
 func _on_turret_1_health_reduced(amount) -> void:

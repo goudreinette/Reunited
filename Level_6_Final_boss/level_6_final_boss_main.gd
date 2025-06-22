@@ -18,20 +18,28 @@ var score = 0
 
 @export var start_wait: float = 4.0
 
+var q_counter: int = 0
+var is_talking = false
+
 func _ready():
 	game_over.hide()
 	await get_tree().create_timer(start_wait).timeout
 	Dialogic.start("Boss Intro")
+	is_talking = true
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+var moved_in = false
 func _on_dialogic_signal(argument:String):
 	if argument =="Start":
 		$"Fake Boss/AnimationPlayer".play("level start")
 	if argument == "Move_in":
 		$"Final Boss".move_in()
+		moved_in = true
 		attack_drones()
 		attack_speakers()
-		attack_lazers()
+		#attack_lazers()
+	if argument == "Boss can die":
+		$"Final Boss".can_die = true
 
 var jenkmovedin = false	
 func _physics_process(delta: float) -> void:
@@ -42,15 +50,11 @@ func _physics_process(delta: float) -> void:
 			attack_lazers()
 		if randi_range(0, 2000)==1:
 			attack_speakers()
-	
+
 	#if $Player.low_health==true and jenkmovedin == false: 
 		#$"Kerby en Justin".move_in_both()
 		#jenkmovedin = true
 		
-
-	
-	
-	
 
 func _input(event):
 	if event.is_action_pressed("1"):
@@ -59,13 +63,25 @@ func _input(event):
 		attack_speakers()
 	if event.is_action_pressed("3"):
 		attack_lazers()
+		
+	
+	if event.is_action_pressed("Level trigger q") == true:
+		if q_counter == 0 and not is_talking:
+			Dialogic.start("Boss Battle Sloppy 2")
+			q_counter =1
+			is_talking = true
+		if jenkmovedin == false and q_counter == 1 and not is_talking: 
+			$"Kerby en Justin".move_in_both()
+			jenkmovedin = true
+			q_counter = 2
+			is_talking = true
+		if q_counter == 2 and not is_talking:
+			Dialogic.start("Boss Battle Sloppy 3")
+			q_counter =2
+			is_talking = true
 
-	if event.is_action_pressed("Level trigger q") == true and jenkmovedin == false: 
-		$"Kerby en Justin".move_in_both()
-		jenkmovedin = true
-
-
-
+func _on_timeline_ended():
+		is_talking = false
 
 func _on_enemy_died(value):
 	score += value
@@ -91,8 +107,6 @@ func attack_speakers():
 func attack_lazers():
 	if lazers != null : lazers.shoot_lazers()
 	
-
-
 func _on_player_died():
 #	print("game over")
 #	get_tree().call_group("enemies", "queue_free")

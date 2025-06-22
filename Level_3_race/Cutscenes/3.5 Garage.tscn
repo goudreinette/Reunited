@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmv3bo1hr68gx"]
 
-[ext_resource type="PackedScene" uid="uid://dc84xukp6rnfr" path="res://Level_4_wormhole/Level_4 Wormhole.tscn" id="1_4wb3p"]
+[ext_resource type="PackedScene" uid="uid://dpvwincjyi5i0" path="res://Sprites Algemeen/Cutscenes/Level 4 Fish.tscn" id="1_4wb3p"]
 [ext_resource type="Texture2D" uid="uid://c3qhgiygcsfv" path="res://Sprites Algemeen/Cutscenes/garage.png" id="2_4wb3p"]
 
 [sub_resource type="GDScript" id="GDScript_2mi4q"]

@@ -43,6 +43,9 @@ directories/dch_directory={
 "unit_test_character": "res://addons/dialogic/Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Boss Battle Sloppy 1": "res://Boss Battle Sloppy 1.dtl",
+"Boss Battle Sloppy 2": "res://Boss Battle Sloppy 2.dtl",
+"Boss Battle Sloppy 3": "res://Boss Battle Sloppy 3.dtl",
 "Boss Intro": "res://Boss Intro.dtl",
 "Boss battle Rescue": "res://Boss battle Rescue.dtl",
 "Cubania Bar": "res://Cubania Bar.dtl",
@@ -270,6 +273,7 @@ Test={
 2d_physics/layer_8="enemy projectile"
 3d_physics/layer_8="Race track"
 2d_physics/layer_9="Pickup"
+2d_physics/layer_10="Boss"
 
 [rendering]
 

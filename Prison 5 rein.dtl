@@ -1,13 +1,13 @@
 join Rein right
-Rein: Good you made it!
+Rein: Fijn je hebt het gevonden
 join stephan center
-stephan: So you're the voice in the speaker. Why did you help us?
-Rein: I'm doctor R. Odent, and I'm the scientist working on the AI of Sloppify.
-Rein: I really enjoy my work! But things have taken a dark turn.
-Rein: Turns out the training data for the AI has not been obtained very ethically....
-stephan: You don't say..
-Rein: Turns out the training data we've been feeding to the AI has been from artists who were kidnapped..
-Rein: You have to tell the world and go to the transmission tower!
-stephan: Okay we'll have to go to our ship for that
-Rein: Your ship and crew is to the RIGHT! Hurry up though I think sloppy might be on to us!
+stephan: Dus jij bent de stem in the speaker. Waarom help je ons?
+Rein: Ik ben dokter  R. Odent,  ik ben de wetenschapper die aan de AI werkt van Sloppify
+Rein: Ik houd van mijn werk, maar ik kan niet meer werken voor Sloppify
+Rein: Het blijkt dat de trainingsdata waar de AI op wordt getraint niet heel ethisch wordt verzamelt
+stephan: Je meent het...
+Rein: De data wordt verzamelt van gekidnapte muzikanten
+Rein: Je moet het aan de wereld vertellen.  Jullie hebben concert met Kerbie Banrock toch
+stephan: klopt! Ik hoop wel dat we het redden het is al bijna namelijk!
+Rein: Ga snel naar je schips het is de rechterkant op!
 [signal arg="hide"]

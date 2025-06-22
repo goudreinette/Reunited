@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvx1np4um1dwj"]
+[gd_scene load_steps=10 format=3 uid="uid://cvx1np4um1dwj"]
 
+[ext_resource type="Script" uid="uid://btxibmopblpwu" path="res://Sprites Algemeen/Cutscenes/aftiteling.gd" id="1_aya2s"]
 [ext_resource type="Texture2D" uid="uid://bol1rqtotyvyq" path="res://Sprites Algemeen/Cutscenes/jungle.png" id="1_fvkg8"]
+[ext_resource type="PackedScene" uid="uid://hq011qmeiihl" path="res://test levels/Walking Scenes TEST/level_1.tscn" id="2_glh5x"]
 [ext_resource type="Texture2D" uid="uid://blqmxd1d2klel" path="res://Sprites Algemeen/Cutscenes/aftiteling.png" id="2_wbsj4"]
 [ext_resource type="Texture2D" uid="uid://dlng6qfr3cyru" path="res://Sprites Algemeen/Cutscenes/Blokfluit les.png" id="3_wbsj4"]
 [ext_resource type="Texture2D" uid="uid://b5fi8ggpnk4ac" path="res://Sprites Algemeen/Cutscenes/creditsbg.png" id="4_kqbew"]
@@ -116,6 +118,8 @@ _data = {
 }
 
 [node name="Aftiteling" type="Node2D"]
+script = ExtResource("1_aya2s")
+next_scene = ExtResource("2_glh5x")
 
 [node name="Jungle" type="Sprite2D" parent="."]
 visible = false

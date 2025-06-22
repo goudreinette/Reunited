@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://hq011qmeiihl"]
+[gd_scene load_steps=21 format=3 uid="uid://hq011qmeiihl"]
 
 [ext_resource type="TileSet" uid="uid://c481tvwmhidax" path="res://test levels/Walking Scenes TEST/Tilemaps/Stage_tiles.tres" id="1_1qn5b"]
 [ext_resource type="Texture2D" uid="uid://dfvmk685m4xuj" path="res://Sprites Algemeen/Walking_Test_Sprites/clouds.png" id="1_o23tv"]
@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://4farufrl7eyk" path="res://Sprites Algemeen/Walking_Test_Sprites/sail with pole.png" id="15_flnlg"]
 [ext_resource type="Texture2D" uid="uid://bqvix7eyd81nn" path="res://Sprites Algemeen/Walking_Test_Sprites/flag.png" id="16_0ifqt"]
 [ext_resource type="PackedScene" uid="uid://bhl5ng17x1lny" path="res://test levels/Walking Scenes TEST/Player/player.tscn" id="16_nobk4"]
+[ext_resource type="FontFile" uid="uid://bveviesa0u3tu" path="res://addons/dialogic/Styles/WhisperTenalpha-Medium.otf" id="18_uwfq8"]
+[ext_resource type="PackedScene" uid="uid://c1n61vtdmjme3" path="res://small_kerbie.tscn" id="20_8f0s4"]
+[ext_resource type="PackedScene" uid="uid://dadqubsdexqvt" path="res://Sprites Algemeen/Characters/Justin.tscn" id="20_af0mp"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -52,7 +55,7 @@ position = Vector2(-46, 4)
 texture = ExtResource("5_gpj73")
 
 [node name="Keyboard" type="Sprite2D" parent="Band/Igor"]
-position = Vector2(2, 7)
+position = Vector2(1, 9)
 texture = ExtResource("6_jaxlu")
 
 [node name="Koen" type="Sprite2D" parent="Band"]
@@ -117,9 +120,11 @@ position = Vector2(140, 0)
 texture = ExtResource("15_flnlg")
 
 [node name="Player" parent="." instance=ExtResource("16_nobk4")]
-position = Vector2(88, 137)
+visible = false
+position = Vector2(129, 87)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-10, -19)
 position_smoothing_speed = 20.0
 
 [node name="Flag" type="Sprite2D" parent="."]
@@ -129,3 +134,17 @@ texture = ExtResource("16_0ifqt")
 [node name="Flag2" type="Sprite2D" parent="."]
 position = Vector2(261, 117)
 texture = ExtResource("16_0ifqt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 57.0
+offset_top = 77.0
+offset_right = 190.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("18_uwfq8")
+text = "BEDANKT VOOR HET KOMEN!!"
+
+[node name="SmallKerbie" parent="." instance=ExtResource("20_8f0s4")]
+position = Vector2(71, 31)
+
+[node name="Justin" parent="." instance=ExtResource("20_af0mp")]
+position = Vector2(155, 31)

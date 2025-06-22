@@ -1482,7 +1482,7 @@ pitch_scale = 1.06
 autoplay = true
 
 [node name="Player" parent="." node_paths=PackedStringArray("respawnnode", "ui_card") instance=ExtResource("6_51cn4")]
-position = Vector2(-480, 125)
+position = Vector2(87, 85)
 respawnnode = NodePath("../Respawn Point 1")
 ui_card = NodePath("UI Card")
 

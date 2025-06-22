@@ -90,3 +90,7 @@ shape = SubResource("CircleShape2D_k5eyt")
 position = Vector2(0, 2)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("3_lb0um")
+
+[node name="reload timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="reload timer" to="." method="_on_reload_timer_timeout"]

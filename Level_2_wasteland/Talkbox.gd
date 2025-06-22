@@ -14,8 +14,9 @@ var has_card = false
 #@export var pressx : Sprite2D 
 
 func _ready():
-	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
 func _on_dialogic_signal(argument:String):
 	pass
 	
