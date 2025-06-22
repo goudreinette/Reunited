@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dn1edfs6n7tjr" path="res://Sprites Algemeen/sprite_packs/Mini Pixel Pack 3/Effects/Explosion (16 x 16).png" id="1_ik1is"]
 [ext_resource type="Texture2D" uid="uid://bmnb2rk76wp87" path="res://Effects/Explosion_spritepack_2/Explosion VFX 1/Explosion VFX 1(32x32).png" id="2_t11dg"]
 [ext_resource type="Script" uid="uid://crqy8ofoj1bg8" path="res://Effects/explosion.gd" id="3_vj1cj"]
-[ext_resource type="AudioStream" uid="uid://cpugvrh865cur" path="res://sounds/Big explosion.wav" id="4_8opf0"]
+[ext_resource type="AudioStream" uid="uid://dxfoa4k61qo5b" path="res://sounds/Explosions/Big explosion 1.wav" id="4_ik1is"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7sx56"]
 atlas = ExtResource("1_ik1is")
@@ -119,6 +119,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_08s2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08s2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08s2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08s2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08s2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08s2s")
 }],
 "loop": false,
 "name": &"default",
@@ -133,5 +148,7 @@ frame_progress = 1.0
 script = ExtResource("3_vj1cj")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_8opf0")
+stream = ExtResource("4_ik1is")
+volume_db = 12.0
 autoplay = true
+attenuation = 6.06286
