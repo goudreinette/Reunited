@@ -12,7 +12,6 @@ func _input(event: InputEvent) -> void:
 			aftiteling_started = true
 			$AnimationPlayer.play("aftiteling")
 		if aftiteling_done and not fadeout_done:
-			fadeout_done = true
 			$AnimationPlayer.play("fadeout")
 		if fadeout_done:
 			get_tree().change_scene_to_packed(next_scene)
@@ -21,3 +20,5 @@ func _input(event: InputEvent) -> void:
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "aftiteling":
 		aftiteling_done = true
+	if anim_name == "fadeout":
+		fadeout_done = true

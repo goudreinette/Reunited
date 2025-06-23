@@ -212,7 +212,7 @@ libraries = {
 position = Vector2(120, 80)
 sprite_frames = SubResource("SpriteFrames_aya2s")
 autoplay = "default"
-frame_progress = 0.39831
+frame_progress = 0.351343
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="BlokfluitLes"]
 position = Vector2(46, -11)
