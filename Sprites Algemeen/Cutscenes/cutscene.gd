@@ -4,6 +4,7 @@ class_name Cutscene extends AnimationPlayer
 @export var cutscene_animations: Array[String]
 @export var next_animation = 0
 @export var next_level: PackedScene
+@export var previous_level: PackedScene
 
 
 func _init():

@@ -538,6 +538,7 @@ next_scene = ExtResource("3_0d8d2")
 [node name="Final Boss" parent="." node_paths=PackedStringArray("main", "shipparts", "target_pos") instance=ExtResource("1_fcd1t")]
 position = Vector2(120, -34)
 collision_layer = 0
+max_health = 250.0
 main = NodePath("..")
 shipparts = [NodePath("Turret1"), NodePath("Turret2"), NodePath("Turret3"), NodePath("Turret4"), NodePath("Port 1"), NodePath("Port 2")]
 target_pos = NodePath("../Boss target poss")
@@ -548,7 +549,7 @@ material = SubResource("ShaderMaterial_1h2ys")
 [node name="Turret1" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(-64, -21)
 collision_layer = 16
-maxhealth = 20
+maxhealth = 40
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
@@ -558,7 +559,7 @@ boss = NodePath("..")
 [node name="Turret2" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(-41, -11)
 collision_layer = 16
-maxhealth = 20
+maxhealth = 40
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
@@ -568,7 +569,7 @@ boss = NodePath("..")
 [node name="Turret3" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(40, -11)
 collision_layer = 16
-maxhealth = 20
+maxhealth = 40
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
@@ -578,7 +579,7 @@ boss = NodePath("..")
 [node name="Turret4" parent="Final Boss" node_paths=PackedStringArray("boss") instance=ExtResource("9_nnvje")]
 position = Vector2(63, -22)
 collision_layer = 16
-maxhealth = 20
+maxhealth = 40
 turret_range = 300
 burst_time = 1.0
 aim_speed = 12
@@ -587,14 +588,14 @@ boss = NodePath("..")
 
 [node name="Port 1" parent="Final Boss" instance=ExtResource("10_nnvje")]
 position = Vector2(-40, -24)
-maxhealth = 30
+maxhealth = 60
 move_time = 1.0
 rows = 2
 global_formation_offset = Vector2(20, 65)
 
 [node name="Port 2" parent="Final Boss" instance=ExtResource("10_nnvje")]
 position = Vector2(40, -24)
-maxhealth = 30
+maxhealth = 60
 move_time = 1.0
 rows = 2
 global_formation_offset = Vector2(140, 65)
