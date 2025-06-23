@@ -5,7 +5,7 @@ signal died
 @export var maxhealth : int = 5 
 @export var health : int  
 var healthratio : float 
-var explode_scene = preload("res://Effects/Big Explosion.tscn")
+var explode_scene = preload("res://Effects/Medium Explosion.tscn")
 var isdead : bool = false
 
 func _ready() -> void:

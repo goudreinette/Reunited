@@ -516,6 +516,7 @@ target = NodePath("../Path2D/PathFollow2D/SmallKerbie")
 [node name="Turret4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ifml8")]
 position = Vector2(182, -24)
 maxhealth = 2
+explode_scene = ExtResource("18_nh7q7")
 burst_time = 0.6
 cooldown_time = 1.0
 rate_of_fire = 0.2

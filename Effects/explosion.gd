@@ -7,8 +7,7 @@ func start(pos):
 
 
 func _ready():
-	pass
-	#animation_finished.connect(queue_free)	
+	animation_finished.connect(queue_free)	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,6 +15,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_frame_changed():
-	if frame == 12:
-		$BigExplosion.play()
+#func _on_frame_changed():
+	#if frame == 12:
+		#$BigExplosion.play()
