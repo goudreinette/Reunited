@@ -61,7 +61,8 @@ func half_circle_shot(scn,amt,spd):
 		## PI = 180 graden 
 		var d = PI/amt
 		
-		b.start(shoot_pos.global_position, -PI/2 + n * d,spd) #PI/2 om hem een offset van 90 graden te geven
+		b.start(shoot_pos.global_position, -PI/2 + n * d,spd, false) #PI/2 om hem een offset van 90 graden te geven
+		$BigSpeakers.play()
 
 func shoot():
 	half_circle_shot(bullet_scene,bullet_amount,bullet_speed)

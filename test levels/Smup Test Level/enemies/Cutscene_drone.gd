@@ -6,7 +6,7 @@ signal health_reduced
 @export var maxhealth : int = 2
 @export var health : int  
 var healthratio : float 
-var explode_scene = preload("res://Effects/Big Explosion.tscn")
+@export var explode_scene:PackedScene = preload("res://Effects/Big Explosion.tscn")
 var isdead : bool = false
 
 enum FiringPatterns {

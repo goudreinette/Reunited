@@ -104,6 +104,7 @@ func spawn_ship_with_delay(row: int, col: int, offset: float) -> void:
 	target_pos.y += (row - 1) * row_spacing  # Rij 1: y=-1, Rij 2: z=0, Rij 3: z=1
 	get_tree().root.add_child(ship)
 	ship.start(global_position,rot,target_pos+global_formation_offset,move_time)
+	$DodgeRoll2.play()
 	
 #func _on_wait_timer_timeout() -> void:
 	#if not isdead:

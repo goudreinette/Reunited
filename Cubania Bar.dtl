@@ -1,19 +1,19 @@
 join stephan left
-stephan: Wat een drukte, hoe gaan we die vriend van jou ooit vinden Igor.
+stephan: Wat een drukte, hoe gaan we die vriend van jou ooit vinden Igor...
 join Igor center
 Igor: Tjah meestal is hij bij de pokertafel. Hij houdt wel van een gokje.
 join Frank leftmost [z_index="-1"]
 Frank: En waarom gaan we dan naar hem voor onze Hyperdrive, is hij wel betrouwbaar?
 join Justin rightmost
 Justin: Omdat 'ie de beste Hyperdrives van 't heelal maakt klojos!
-Igor: Ey Justin , hoe is het ermee? Zoals je waarschijnlijk net hoorde zoeken we een hyperdrive.
-Justin: Zoiets dacht ik al ja wat heb je met de Rode Comeet  gedaan? Ga voorzichtig om met dat schip
+Igor: Ey Justin, hoe is het ermee? Zoals je waarschijnlijk net hoorde zoeken we een hyperdrive.
+Justin: Zoiets dacht ik al ja, wat heb je met de Rode Comeet gedaan? Ga voorzichtig om met dat schip!
 Igor: We werden oppeens achternagezeten door die techguru Sloppy. We zijn maar net ontsnapt.
 Justin: Oh die mafkees? Ik kan je wel helpen hoor. Maar voor wat hoort wat...
 stephan: Vertel....
 Justin: Door morgen van me te winnen in de Cubania Grand Prix. Ik kan jullie nog wel even inschrijven.
 Justin: Als jullie winnen verdienen jullie het om de Rode Comeet te hebben en help ik jullie.
 Justin: Zo niet? Dan is de Rode Comeet van mij...
-Igor: Moet dat echt zo man? We hebben haast weet je. Kerbie Banrock heeft on uitge..
+Igor: Moet dat echt zo man? We hebben haast weet je. Kerby Banrock heeft ons uitge..
 Justin: Ja ja ja... Zorg dan maar dat je morgen goed racet. Zie je morgen.
 [wait time="2.0"]

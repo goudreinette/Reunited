@@ -1,16 +1,17 @@
 join "Mr Sloppy" left
-"Mr Sloppy": Pardon,  kan ik julliie wat vragen?
+"Mr Sloppy": Pardon, kan ik jullie wat vragen?
 join stephan right
-stephan: Tuurlijk
-"Mr Sloppy": Jullie hebben wat lekkere nummers zeg, willen jullie voor sloppify komen werken?
-"Mr Sloppy": We maken een nieuwe AI. Je kan er goed geld mee verdienen
-stephan: Dankjewel voor het aanbod maar we gaan liever spelen.  We hebben net een goed optreden aangeboden gekregen.
-stephan: We spelen in het voorprogramma van Kerbie Banrock op planeet Odeon!
-"Mr Sloppy": Van die ouwe Kerby? Hij gaat je nergens brengen..
-"Mr Sloppy": Wij werken aan de toekomst van muziek. Muziek maken is moeilijk en frustrerend niemand houdt ervan.
+stephan: Tuurlijk!
+"Mr Sloppy": Jullie hebben wat lekkere nummers zeg, willen jullie voor mijn bedrijf Sloppify komen werken?
+"Mr Sloppy": We maken een nieuwe AI. Je kan er goed geld mee verdienen...
+stephan: Dankjewel voor het aanbod, maar we gaan liever spelen.
+stephan:  We hebben net een goed optreden aangeboden gekregen.
+stephan: We spelen in het voorprogramma van Kerby Banrock op planeet Odeon!
+"Mr Sloppy": Van die ouwe Kerby? Hij gaat je nergens brengen...
+"Mr Sloppy": Wij werken aan de toekomst van muziek! Muziek maken is moeilijk en frustrerend, niemand houdt ervan!
 "Mr Sloppy": Als je meehelpt aan mijn AI wordt muziek maken makkelijk voor iedereen!
-"Mr Sloppy": 1 zin en je hebt een liedje. Veel leuker dan met instrumenten toch?
-stephan: Het zal wel man! Wij vinden het leuk om zelf muziek te maken 
+"Mr Sloppy": Één zin en je hebt een liedje. Veel leuker dan met instrumenten toch?
+stephan: Het zal wel man! Wij vinden het leuk om zelf muziek te maken.
 "Mr Sloppy": Je zal hier spijt van krijgen...
 [wait time="1.0"]
 [signal arg="Sloppy move away"]
