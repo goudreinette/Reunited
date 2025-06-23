@@ -1517,7 +1517,6 @@ script = ExtResource("1_o7xex")
 
 [node name="BosAmbient" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamWAV_oyuui")
-volume_db = 24.0
 pitch_scale = 1.06
 autoplay = true
 

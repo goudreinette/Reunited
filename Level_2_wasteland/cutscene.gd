@@ -8,6 +8,8 @@ extends Area2D
 var is_talking = false
 var player_inside = false
 
+var can_go_to_next_scene: bool = false
+
 func _ready():
 	$"Press X".visible = false
 	$MoveTimer.wait_time = move_time
@@ -28,6 +30,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("dialogic_default_action") and player_inside and x_pressed == false :
 		start_cutscene()
 		x_pressed = true
+		
+	if can_go_to_next_scene and event.is_action_pressed("Level trigger q"):
+		get_tree().change_scene_to_packed(next_level)
 
 
 func start_cutscene():
@@ -43,5 +48,6 @@ func _on_move_timer_timeout() -> void:
 ### for going to the next scene
 func _on_timeline_ended():
 	if is_talking:
-		get_tree().change_scene_to_packed(next_level)
+		can_go_to_next_scene = true
+		
 	
