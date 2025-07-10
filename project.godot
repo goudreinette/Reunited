@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Groove Galaxy"
 run/main_scene="uid://dxs35wh5fummu"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=60
 config/icon="uid://bbnx1g3bif0hx"
 
@@ -130,8 +130,8 @@ window/stretch/mode="viewport"
 
 [editor]
 
-movie_writer/mjpeg_quality=1.0
 movie_writer/movie_file="C:/Users/Rein van der Woerd/Desktop/butano/Reunited/recording.avi"
+movie_writer/mjpeg_quality=1.0
 
 [editor_plugins]
 

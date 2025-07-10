@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b32476hejmrnj"]
+[gd_scene load_steps=25 format=4 uid="uid://b32476hejmrnj"]
 
 [ext_resource type="Script" uid="uid://b8o7btpimdaxc" path="res://test levels/Smup Test Level/player_ship.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://y4k4r1 castle/sprites/Boosters (16 x 16).png" id="2_6cdot"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dytla7ybrsc1x" path="res://Sprites Algemeen/ship sprites/ship sheet smol.png" id="4_ux7ms"]
 [ext_resource type="AudioStream" uid="uid://deudjeyrwefb1" path="res://sounds/hit.wav" id="7_xm18q"]
 [ext_resource type="AudioStream" uid="uid://smp3crb5ah1c" path="res://sounds/Shingle shot Extra short 4.wav" id="9_cxsww"]
+[ext_resource type="AudioStream" uid="uid://bfpuw44fn8m7f" path="res://sounds/Doodgaan/Doodgaan.wav" id="11_v5bop"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbfoc"]
 atlas = ExtResource("2_6cdot")
@@ -198,6 +199,9 @@ autoplay = "RESET"
 stream = SubResource("AudioStreamWAV_cxsww")
 volume_db = 24.0
 pitch_scale = 1.38
+
+[node name="Doodgaan" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_v5bop")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

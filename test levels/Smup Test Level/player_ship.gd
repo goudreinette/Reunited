@@ -166,6 +166,7 @@ func set_shield(value):
 			#died.emit()
 			_respawning()
 			is_dead = true
+			$Doodgaan.play()
 
 			
 var recharching_shield = false

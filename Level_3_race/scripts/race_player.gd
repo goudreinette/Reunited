@@ -34,6 +34,7 @@ func _process(delta):
 		#on_track = false
 	
 	if not can_move:
+		$"reunited ship".rotation_degrees.z = lerp(0.0, $"reunited ship".rotation_degrees.z, .5)
 		return
 		
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

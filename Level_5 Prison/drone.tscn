@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://gkmpt6cy36fr"]
+[gd_scene load_steps=7 format=3 uid="uid://gkmpt6cy36fr"]
 
 [ext_resource type="Texture2D" uid="uid://cmtjr2p2no646" path="res://Level_5 Prison/Drone.png" id="1_uvgqj"]
+[ext_resource type="AudioStream" uid="uid://btot2iibsvl4v" path="res://sounds/Guard Drone/Guard Drone.wav" id="2_v1wni"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d5du7"]
 radius = 3.99115
@@ -71,3 +72,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_puw62")
 }
 autoplay = "Idle"
+
+[node name="GuardDrone" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_v1wni")
+volume_db = 6.0
+autoplay = true
+max_distance = 200.0
+attenuation = 3.73213

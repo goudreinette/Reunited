@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://sp86g88mx34y"]
+[gd_scene load_steps=9 format=3 uid="uid://sp86g88mx34y"]
 
 [ext_resource type="Script" uid="uid://clwl5nh1lujkt" path="res://Level_5 Prison/valve.gd" id="1_85wf7"]
 [ext_resource type="Texture2D" uid="uid://d0ho6481cjl6" path="res://Level_2_wasteland/Level_2_wasteland_sprites/PressX.png" id="2_elngg"]
 [ext_resource type="Texture2D" uid="uid://1l3aqgqvqu1b" path="res://Level_5 Prison/Valve.png" id="3_t0k6h"]
+[ext_resource type="AudioStream" uid="uid://cs534wxba5snr" path="res://sounds/Mist/Mist spray long 1.wav" id="4_elngg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46se3"]
 size = Vector2(28, 23)
@@ -58,6 +59,9 @@ region_rect = Rect2(0, 0, 47, 17)
 z_index = -1
 texture = ExtResource("3_t0k6h")
 hframes = 5
+
+[node name="MistSprayLong1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_elngg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 15.5)

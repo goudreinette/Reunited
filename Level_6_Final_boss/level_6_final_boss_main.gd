@@ -82,7 +82,7 @@ func _input(event):
 			is_talking = true
 		if q_counter == 2 and not is_talking:
 			Dialogic.start("Boss Battle Sloppy 3")
-			q_counter =2
+			q_counter = 3
 			is_talking = true
 
 func _on_timeline_ended():

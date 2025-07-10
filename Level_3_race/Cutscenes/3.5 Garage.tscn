@@ -9,6 +9,8 @@ script/source = "extends Node2D
 @export var next_level: PackedScene
 @export var wait_time : float = 1.0
 
+var can_go_to_next_scene = false
+
 func _ready():
 	await get_tree().create_timer(wait_time).timeout
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -19,7 +21,12 @@ func _on_dialogic_signal():
 	pass
 	
 func _on_timeline_ended():
-	get_tree().change_scene_to_packed(next_level)
+	can_go_to_next_scene = true
+	
+	
+func _input(event):
+	if event.is_action_pressed(\"Level trigger q\") and can_go_to_next_scene:
+		get_tree().change_scene_to_packed(next_level)
 "
 
 [node name="3_5Garage" type="Node2D"]

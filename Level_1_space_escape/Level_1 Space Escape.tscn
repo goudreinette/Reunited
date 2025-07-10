@@ -934,6 +934,7 @@ max_shield = 150
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="LevelPosition/Player"]
 stream = ExtResource("15_7obxh")
+volume_db = 8.0
 
 [node name="Camera2D" type="Camera2D" parent="LevelPosition"]
 position = Vector2(120, 80)

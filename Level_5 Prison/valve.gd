@@ -23,6 +23,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 func turn_valve():
 	$AnimationPlayer.play("turn")
+	$MistSprayLong1.play()
 	has_been_turned = true
 	for i in sprays:
 		i.retract()
