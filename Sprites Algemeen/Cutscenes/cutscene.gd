@@ -12,7 +12,8 @@ func _init():
 
 
 func _input(event):
-	if event.is_action_pressed("Level trigger q"):
+	
+	if event.is_action_pressed("Level trigger q") or event.is_action_pressed("dialogic_default_action") :
 		if next_animation == cutscene_animations.size():
 			get_tree().change_scene_to_packed(next_level)
 		else:
